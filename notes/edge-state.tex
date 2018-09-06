@@ -1,0 +1,91 @@
+\chapter{Edge State}
+\section{Semi-Infinite Plane}
+
+To determine the edge state Hamiltonian we start by looking at the previous Hamiltonian we seperate it into $k_x$ and $k_y$ parts. To simplify we look at a semi-infinite lattice in the region of $y>0$ and group the applied magnetic field terms with the $k_x$ terms. The bulk Hamiltonian then looks like
+
+\begin{align}
+  H &= H_0(k_y) + H_1(k_x) \\
+  H &= 
+  \begin{bmatrix}
+    \epsilon(k_y) & 2\Delta(k_y) \\
+    2\Delta(k_y) & -\epsilon(k_y)
+  \end{bmatrix}
+  +
+  \begin{bmatrix}
+    \epsilon(k_x) & 2\Delta(k_x) \\
+    2\Delta(k_x) & -\epsilon(-k_x)
+  \end{bmatrix}
+\end{align}
+
+Where the following exressions are defined by
+
+\begin{align}
+  \epsilon(k_y) &= k_y^2\left(\dfrac{1}{2m}-\dfrac{\alpha^2}{2V_z}\right) - (\mu +V_z) = \dfrac{k_y^2}{2m_{eff}} - \mu_{eff} \\
+  \epsilon(\pm k_x) &= \dfrac{k_x^2}{2m_{eff}} -\dfrac{V_y^2}{2V_z} \pm \dfrac{\alpha k_x V_y}{V_z} \\
+  \Delta(k_y) &= -\dfrac{\alpha \Delta k_y}{2V_z} \\
+  \Delta(k_x) &= \dfrac{i\Delta}{2V_z}(\alpha k_x - V_y)
+\end{align}
+
+We start by letting $k_y \rightarrow -i\partial_y$, $k_x=0$, and turn off the applied magnetic field. We want to transform from the bulk basis to the edge basis using the spinor $\psi = e^{\lambda y}\phi$ which is a two component vector. We let $H_0(-i\partial_y)$ act upon the edge spinor to find
+
+\begin{align}
+  -\left(\dfrac{\lambda^2}{2m_{eff}}+\mu_{eff}\right)\sigma_z\phi+i\dfrac{\alpha\Delta\lambda}{V_z}\sigma_x\phi = 0 \\
+  \left(\dfrac{\lambda^2}{2m_{eff}}+\mu_{eff}\right)\sigma_y\phi+\dfrac{\alpha\Delta\lambda}{V_z}\phi = 0
+\end{align}
+
+We then see that $\phi$ is an eigenvector of $\sigma_y$ which is
+
+\begin{align}
+  \phi_{\pm} = \dfrac{1}{\sqrt{2}}
+  \begin{bmatrix}
+    1 \\
+    \pm i
+  \end{bmatrix}
+\end{align}
+
+with eigenvalues $-\lambda_{\pm}$ corresponding to the $\phi_+$ and $\lambda_{\pm}$ to $\phi_-$. The eigenvalues themselves are
+
+\begin{align}
+  \lambda_{\pm} = \dfrac{m_{eff}\alpha\Delta}{V_z} \pm i\sqrt{m_{eff}\mu_{eff}-\dfrac{m_{eff}^2\alpha^2\Delta^2}{V_z^2}} \\
+  \lambda_{\pm} = m_{eff}\Delta_{eff} \pm i\sqrt{m_{eff}\mu_{eff}-m_{eff}^2\Delta_{eff}^2}
+\end{align}
+
+The spinor wave function then has the general solution of
+
+\begin{align}
+  \Psi(y) = (ae^{-\lambda_+y}+be^{-\lambda_-y})\phi_+ + (ce^{\lambda_+y}+de^{\lambda_-y})\phi_-
+\end{align}
+
+Implementing boundary conditions $\Psi(0)=0$ and $\Psi(\pm\infty)=0$ and knowing we are interested in the solution for $y\geq0$, the wave function becomes
+
+\begin{align}
+  \Psi(y) &= a(e^{-\lambda_+y}-e^{-\lambda_-y})\phi_+ \\
+  \Psi(y) &= \hat{a}(y)\phi_+
+\end{align}
+
+Now that we have the wavefunction describing the edge state we can transform the bulk Hamiltonian to the edge Hamiltonian. This gives the following
+
+\begin{align}
+  H_{edge}(k_x) &= \matrixelement{\Psi^{\dagger}(y)}{H_0}{\Psi(y)} + \matrixelement{\Psi^{\dagger}(y)}{H_1}{\Psi(y)} \\
+  H_{edge}(k_x) &= \dfrac{1}{2}
+    \begin{bmatrix}
+      1 & -i
+    \end{bmatrix}
+    \begin{bmatrix}
+    \epsilon(k_x) & 2\Delta(k_x) \\
+    2\Delta(k_x) & -\epsilon(-k_x)
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 \\
+      i
+    \end{bmatrix}
+    \int\limits_0^{\infty} \abs{\hat{a}(y)}^2 dy \\
+  H_{edge}(k_x) &= \dfrac{1}{2}(\epsilon(k_x)-\epsilon(-k_x) + 2i(\Delta-\Delta^{\dagger})) \\
+  H_{edge}(k_x) &= \dfrac{\alpha k_x}{V_z}\left(V_y-\dfrac{\Delta}{2}\right)+\dfrac{\Delta V_y}{2V_z}
+\end{align}
+
+
+\section{Equilateral Triangle}
+
+
+

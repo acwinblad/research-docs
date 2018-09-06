@@ -1,0 +1,96 @@
+\chapter{Tight binding model using Rashba spin orbit coupling, Zeeman field, and applied magnetic field}
+\section{Developing the Hamiltonian for a traingular lattice}
+
+Recall that before we found for a simple tight binding model the Hamiltonian looked like
+
+\begin{align}
+  \mathcal{H} = \sum\limits_{i} (6t-\mu)c^{\dagger}_{i}c_{i} + \sum\limits_{<i,j>} -tc^{\dagger}_{i}c_{j} + h.c.
+\end{align}
+
+However we will say that the creation/annihilation operator is two fold consisting of spin up/down. Including the Zeeman field effect is simple 
+
+\begin{align}
+  \mathcal{H}_Z = V_z\sum\limits_ic^{\dagger}_i \sigma_z c_i
+\end{align}
+
+I think it is a simple guess to say the in plane applied magnetic field induces yet another Zeeman field effect and the overall Zeeman field looks like 
+\begin{align}
+  \mathcal{H}_Z = \sum\limits_i c^{\dagger}_i (\vec{V}+V_z\hat{z})\cdot \vec{\sigma} c_i
+\end{align}
+
+Where $\vec{V} = <V_x,V_y,0>$. Now for the Rashba effect we look at the following to help 
+
+\begin{align}
+  \mathcal{H}_R &= \alpha (\vec{\sigma}\times \vec{p}) \cdot \hat{z} \\
+\end{align}
+
+If we think about the square lattice we recall that there are four nearest neighbors and with the way the Hamiltonian is built using h.c. we only need two vectors to describe that whole system (x and y). For a triangular lattice there are six nearest neighbors to consider, we need three vectors to describe the whole system. Depeding how we want the Hamiltonian to guide through the triangular lattice we will pick appropriate vectors. In this approach we will build the triangular lattice starting with the top vertex along the positive y-axis and moving down by rows to the x-axis that'll consist of the remiaing two vertices of the triangle. This gives us three vectors that look like
+
+\begin{align}
+  \hat{e}_1 &= <1,0> \\
+  \hat{e}_2 &= \dfrac{1}{2}<1,-\sqrt{3}> \\
+  \hat{e}_3 &= \dfrac{1}{2}<-1,-\sqrt{3}>
+\end{align}
+
+This leads me to think that the Hamiltonian for Rashba spin orbit coupling to look like
+
+\begin{align}
+  \mathcal{H}_R = -i\alpha\sum_{<i,j>} c^{\dagger}_i (\sigma \times \hat{e}_j)\cdot \hat{z} c_j
+\end{align}
+
+Let's now add s-wave pairing to the system. This is simply
+
+\begin{align}
+  \mathcal{H}_{SW} = \sum\limits_i \Delta c^{\dagger}_{i,\uparrow} c^{\dagger}_{i,\downarrow} + h.c.
+\end{align}
+
+\section{Explicit algebra}
+
+For the $i$-th lattice point the Rashba term without the h.c. looks like
+\begin{align}
+  \mathcal{H}_R &= i\alpha c^{\dagger}_i \left[ \sigma_y c_{i+\hat{e}_1} +\dfrac{1}{2}(\sqrt{3}\sigma_x +\sigma_y) c_{i+\hat{e}_2}+\dfrac{1}{2}(\sqrt{3}\sigma_x -\sigma_y) c_{i+\hat{e}_3}\right] \\
+  \mathcal{H}_R &= i\alpha c^{\dagger}_{i,\uparrow} \left[ -i c_{j_1,\downarrow} +\dfrac{1}{2}(\sqrt{3}-i) c_{j_2,\downarrow}+\dfrac{1}{2}(\sqrt{3}+i) c_{j_3,\downarrow}\right] \\
+   &+ i\alpha c^{\dagger}_{i,\downarrow} \left[ i c_{j_1,\uparrow} +\dfrac{1}{2}(\sqrt{3}+i) c_{j_2,\uparrow}+\dfrac{1}{2}(\sqrt{3}-i) c_{j_3,\uparrow}\right] \\
+   \mathcal{H}_R &= \alpha c^{\dagger}_{i,\uparrow} \left[ c_{j_1,\downarrow} +ie^{-i\pi/6} c_{j_2,\downarrow}+ie^{i\pi/6} c_{j_3,\downarrow}\right] \\
+   &+ \alpha c^{\dagger}_{i,\downarrow} \left[ -c_{j_1,\uparrow} +ie^{i\pi/6} c_{j_2,\uparrow}+ie^{-i\pi/6} c_{j_3,\uparrow}\right]
+\end{align}
+
+Using a Nambu spinor
+
+\begin{align}
+  \Psi = (c_{i,\uparrow}, \cdots, c^{\dagger}_{i,\uparrow}, \cdots, c_{i,\downarrow}, \cdots, c^{\dagger}_{i,\downarrow})^T
+\end{align}
+The notation of $\mathcal{H}_R$ in correspondence to matrix form looks like
+
+\begin{align}
+  &c^{\dagger}_{i,\uparrow}c_{j,\downarrow} : [i,j+2n] \\
+  &c^{\dagger}_{i,\downarrow}c_{j,\uparrow} : [i+2n,j] \\ 
+  &c_{j,\downarrow}c^{\dagger}_{i,\uparrow} : [j+3n,i+n] \\
+  &c_{j,\uparrow}  c^{\dagger}_{i,\downarrow} : [j+n,i+3n]
+\end{align}
+
+Where $n$ is the number of lattice points in the triangle. Looking at the $i$-th pairing term without h.c the matrix notation looks like
+\begin{align}
+  &c^{\dagger}_{i,\uparrow}c^{\dagger}_{i,\downarrow}: [i,i+3n] \\
+  &c^{\dagger}_{i,\downarrow}c^{\dagger}_{i,\uparrow}: [i+2n,i+n]
+\end{align}
+
+The in plane Zeeman effect is the same matrix notation as the Rashba. The out of plane is
+
+\begin{align}
+  &c^{\dagger}_{i,\uparrow}c_{i,\uparrow} : [i,i] \\
+  &c_{i,\uparrow}c^{\dagger}_{i,\uparrow} : [i+n,i+n] \\
+  &c^{\dagger}_{i,\downarrow}c_{i,\downarrow} : [i+2n,i+2n] \\
+  &c_{i,\downarrow}c^{\dagger}_{i,\downarrow} : [i+3n,i+3n]
+\end{align}
+
+The chemical potential term shares the same matrix notation. The hopping term is similar to out of plane Zeeman but slightly different.
+
+\begin{align}
+  &c^{\dagger}_{i,\uparrow}c_{j,\uparrow} : [i,j] \\
+  &c_{j,\uparrow}c^{\dagger}_{i,\uparrow} : [j+n,i+n] \\
+  &c^{\dagger}_{i,\downarrow}c_{j,\downarrow} : [i+2n,j+2n] \\
+  &c_{j,\downarrow}c^{\dagger}_{i,\downarrow} : [j+3n,i+3n]
+\end{align}
+
+
