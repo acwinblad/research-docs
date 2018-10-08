@@ -1,0 +1,139 @@
+\chapter{Tight binding model using Rashba spin orbit coupling, Zeeman field, and applied magnetic field}
+\section{Developing the Hamiltonian for a traingular lattice}
+
+Recall that before we found for a simple tight binding model the Hamiltonian looked like
+
+\begin{align}
+  \mathcal{H}_0 = \sum\limits_{i} (6t-\mu)c^{\dagger}_{i}c_{i} + \sum\limits_{<i,j>} -tc^{\dagger}_{i}c_{j} + h.c.
+\end{align}
+
+However we will say that the creation/annihilation operator is two fold consisting of spin up/down. Including the Zeeman field effect is simple 
+
+\begin{align}
+  \mathcal{H}_Z = V_z\sum\limits_ic^{\dagger}_i \sigma_z c_i
+\end{align}
+
+I think it is a simple guess to say the in plane applied magnetic field induces yet another Zeeman field effect and the overall Zeeman field looks like 
+\begin{align}
+  \mathcal{H}_Z = \sum\limits_i c^{\dagger}_i (\vec{V}+V_z\hat{z})\cdot \vec{\sigma} c_i
+\end{align}
+
+Where $\vec{V} = <V_x,V_y,0>$. Now for the Rashba effect we look at the following to help 
+
+\begin{align}
+  \mathcal{H}_R &= \alpha (\vec{\sigma}\times \vec{p}) \cdot \hat{z} \\
+\end{align}
+
+If we think about the square lattice we recall that there are four nearest neighbors and with the way the Hamiltonian is built using h.c. we only need two vectors to describe that whole system (x and y). For a triangular lattice there are six nearest neighbors to consider, we need three vectors to describe the whole system. Depeding how we want the Hamiltonian to guide through the triangular lattice we will pick appropriate vectors. In this approach we will build the triangular lattice starting with the top vertex along the positive y-axis and moving down by rows to the x-axis that'll consist of the remiaing two vertices of the triangle. This gives us three vectors that look like
+
+\begin{align}
+  \hat{e}_1 &= <1,0> \\
+  \hat{e}_2 &= \dfrac{1}{2}<1,-\sqrt{3}> \\
+  \hat{e}_3 &= \dfrac{1}{2}<-1,-\sqrt{3}>
+\end{align}
+
+This leads me to think that the Hamiltonian for Rashba spin orbit coupling to look like
+
+\begin{align}
+  \mathcal{H}_R = -i\alpha\sum_{<i,j>} c^{\dagger}_i (\sigma \times \hat{e}_j)\cdot \hat{z} c_j
+\end{align}
+
+Let's now add s-wave pairing to the system. This is simply
+
+\begin{align}
+  \mathcal{H}_{SW} = \sum\limits_i \Delta c^{\dagger}_{i\uparrow} c^{\dagger}_{i\downarrow} + h.c.
+\end{align}
+
+\section{Fourier transform to momentum space}
+
+The Rashba and Zeeman terms involve pauli matrices. The next few lines are the momentum formulation for each pauli matrix. 
+\begin{align}
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_x c_{r+r_j} &= \sum\limits_{k} e^{-iak_j}(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c^{\dagger}_{k\downarrow}c_{k\uparrow}) \\
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_y c_{r+r_j} &= -i \sum\limits_{k} e^{-iak_j}(c^{\dagger}_{k\uparrow}c_{k\downarrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow}) \\
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_z c_{r+r_j} &= \sum\limits_{k} e^{-iak_j}(c^{\dagger}_{k\uparrow}c_{k\downarrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow})
+\end{align}
+
+For the Zeeman terms it takes place on the same lattice site and so the exponential terms become 1. If we then make use of the anti-commutation relation we get
+
+\begin{align}
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_x c_{r} = \dfrac{1}{2} \sum\limits_{k} (c^{\dagger}_{k\uparrow}c_{k\downarrow} - c_{-k\downarrow}c^{\dagger}_{-k\uparrow} + c^{\dagger}_{k\downarrow}c_{k\uparrow}- c_{-k\uparrow}c^{\dagger}_{-k\downarrow}) \\
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_y c_{r} = \dfrac{-i}{2} \sum\limits_{k} (c^{\dagger}_{k\uparrow}c_{k\downarrow} - c_{-k\downarrow}c^{\dagger}_{-k\uparrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow}+ c_{-k\uparrow}c^{\dagger}_{-k\downarrow}) \\
+  \sum\limits_{r} c^{\dagger}_{r}\sigma_z c_{r} = \dfrac{1}{2} \sum\limits_{k} (c^{\dagger}_{k\uparrow}c_{k\downarrow} - c_{-k\downarrow}c^{\dagger}_{-k\uparrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow}+ c_{-k\uparrow}c^{\dagger}_{-k\downarrow}) 
+\end{align}
+
+The Rashba term includes a h.c. and then we make use of the anti-commutation relation to get these terms
+
+\begin{align}
+  &i\alpha\sum\limits_{r} c^{\dagger}_{r}\sigma_x c_{r+r_j} + h.c. = \alpha \sum\limits_{k} 2\sin(ak_j)(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c^{\dagger}_{k\downarrow}c_{k\uparrow}) \\
+  &= \dfrac{\alpha}{2} \sum\limits_{k} 2\sin(ak_j)(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c_{-k\downarrow}c^{\dagger}_{-k\uparrow} + c^{\dagger}_{k\downarrow}c_{k\uparrow}+ c_{-k\uparrow}c^{\dagger}_{-k\downarrow}) \\
+  &i\alpha\sum\limits_{r} c^{\dagger}_{r}\sigma_y c_{r+r_j} + h.c. = -i\alpha \sum\limits_{k} 2\sin(ak_j)(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c^{\dagger}_{k\downarrow}c_{k\uparrow}) \\
+  &= \dfrac{-i\alpha}{2} \sum\limits_{k} 2\sin(ak_j)(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c_{-k\downarrow}c^{\dagger}_{-k\uparrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow}- c_{-k\uparrow}c^{\dagger}_{-k\downarrow})
+\end{align}
+
+Now let's apply the three lattice directions to the Rashba term
+
+\begin{align}
+  \mathcal{H}_R = i\alpha \sum\limits_{r} c^{\dagger}_r (\sigma_y c_{r+e_1} +\dfrac{1}{2}(\sqrt{3}\sigma_x -\sigma_y)c_{r+e_2} + \dfrac{1}{2}(\sqrt{3}\sigma_x + \sigma_y)c_{r+e_3})
+\end{align}
+
+The first term gives 
+
+\begin{align}
+  &= \dfrac{-i\alpha}{2} \sum\limits_{k} 2\sin(ak_1)(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c_{-k\downarrow}c^{\dagger}_{-k\uparrow} - c^{\dagger}_{k\downarrow}c_{k\uparrow}- c_{-k\uparrow}c^{\dagger}_{-k\downarrow})
+\end{align}
+
+The second term
+
+\begin{align}
+  &= \dfrac{\alpha}{2}\sum\limits_k 2\sin(ak_2)(e^{i\pi/6}(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c_{-k\downarrow}c^{\dagger}_{-k\uparrow}) + e^{-i\pi/6}(c^{\dagger}_{k\downarrow}c_{k\uparrow}+ c_{-k\uparrow}c^{\dagger}_{-k\downarrow}))
+\end{align}
+
+The third term
+
+\begin{align}
+  &= \dfrac{\alpha}{2}\sum\limits_k 2\sin(ak_3)(e^{-i\pi/6}(c^{\dagger}_{k\uparrow}c_{k\downarrow} + c_{-k\downarrow}c^{\dagger}_{-k\uparrow}) + e^{i\pi/6}(c^{\dagger}_{k\downarrow}c_{k\uparrow}+ c_{-k\uparrow}c^{\dagger}_{-k\downarrow}))
+\end{align}
+
+Where
+\begin{align}
+  k_1 &= k_x \\
+  k_2 &= \dfrac{1}{2}(k_x - \sqrt{3} k_y) \\
+  k_3 &= -\dfrac{1}{2}(k_x + \sqrt{3} k_y)
+\end{align}
+for convenience we will now make an $\alpha$ function
+
+\begin{align}
+  \alpha(\vec{k}) = 2\alpha(-i\sin(ak_1) + e^{i\pi/6}\sin(ak_2) + e^{-i\pi/6}\sin(ak_3))
+\end{align}
+
+We can now write the Rashba term in matrix form which looks like
+
+\[
+  \mathcal{H}_R = \dfrac{1}{2} \sum\limits_k\Psi^{\dagger}_k 
+  \begin{bmatrix}
+    0 & \alpha(\vec{k})   & 0 & 0 \\
+    \alpha^*(\vec{k}) & 0 & 0 & 0 \\
+    0 & 0 & 0 & \alpha^*(\vec{k}) \\
+    0 & 0 & \alpha(\vec{k})   & 0 \\
+  \end{bmatrix}
+  \Psi_k 
+\]
+
+Where 
+
+\begin{align}
+  \Psi_k = (c_{k\uparrow}, c_{k\downarrow}, c^{\dagger}_{-k\uparrow}, c^{\dagger}_{-k\downarrow})^T
+\end{align}
+
+The Zeeman terms in matrix form
+
+\[
+  \mathcal{H}_Z = \dfrac{1}{2} \sum\limits_k\Psi^{\dagger}_k 
+  \begin{bmatrix}
+    V_z & V_x-iV_y  & 0 & 0 \\
+    V_x+iV_y & -V_z & 0 & 0 \\
+    0 & 0 & -V_z & -V_x-iV_y\\
+    0 & 0 & -V_x+iV_y & V_z \\
+  \end{bmatrix}
+  \Psi_k 
+\]
