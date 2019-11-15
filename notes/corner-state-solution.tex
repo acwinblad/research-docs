@@ -1,0 +1,73 @@
+\chapter{Solution to the corner state of the \textit{p}-wave superconducting triangular island}
+\section{Conserved quantites within the system}
+
+Let's begin by writing out the Hamiltonian without an in-plane magnetic field and determine what operator shares a common eigenbasis with the Hamiltonian.
+\begin{equation}
+  \Ham = \left(\dfrac{k^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{k} \times \bm{\sigma}) \cdot \hat{z}
+\end{equation}
+Where the effective order parameter $\tilde{\Delta} = \alpha\Delta/(2V_z)$, effective chemical potential $\mu = V_z-\mu_0$, and $m$ is the effective mass. 
+Based on the geometry of the problem we know we have rotational symmetry about the z-axis. 
+We also have Rashba spin-orbit coupling.
+This gives two good guesses as to which qunatities are conserved in the system.
+Orbital angular momentum and spin along the z-axis. 
+More conventually we will use the total angular momentum operator $J_z = L_z + S_z$.
+What's left is to prove that our $J_z$ operator commutes with the Hamiltonian.
+For convenience I will include $\hbar$ and $\bm{p}$ where needed.
+
+\begin{align*}
+  [J_z,\Ham] &= [L_z,\Ham] + [S_z,\Ham] \\
+  [L_z,\Ham] &= (\bm{r}\times\bm{p})\cdot\hat{z}\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](\bm{r}\times\bm{p})\cdot\hat{z} \\
+  &= (r_xp_y-r_yp_x)\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
+  &= (r_xp_y-r_yp_x)\left[\tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
+  &= (r_xp_y-r_yp_x)\left[\tilde{\Delta} (p_x\sigma_y-p_y\sigma_x)\right] \\ 
+  &-\left[\tilde{\Delta} (p_x\sigma_y-p_y\sigma_x)\right](r_xp_y-r_yp_x) \\
+  &= i\hbar\tilde{\Delta} (p_x\sigma_x + p_y\sigma_y) = i\hbar\tilde{\Delta}\bm{p}\cdot\bm{\sigma}
+\end{align*}
+
+\begin{align*}
+  [S_z,\Ham] &= \dfrac{\hbar}{2}(\sigma_z\Ham - \Ham\sigma_z) \\
+  &= \dfrac{\hbar\tilde{\Delta}}{2}(\sigma_z(p_x\sigma_y - p_y\sigma_x) - (p_x\sigma_y - p_y\sigma_x)\sigma_z) \\
+  &= \dfrac{\hbar\tilde{\Delta}}{2}(-2ip_x\sigma_x - 2ip_y\sigma_y) = -i\hbar\tilde{\Delta}\bm{p}\cdot\bm{\sigma} \\
+  [J_z,\Ham] &= 0.
+\end{align*}
+
+Now that we have shown $J_z$ is a conserved quantity we will use it to find a common eigenvector between it and the Hamiltonian.
+Recall in spherical coordinates that 
+\begin{equation}
+  J_z\ket{\Psi} = (-i\hbar\partial_{\phi} + \dfrac{\hbar}{2}\sigma_z)\ket{\Psi} =  \hbar m_j\ket{\Psi}.
+\end{equation}
+Next we let $\bra{\bm{r}}\ket{\Psi} = R(r)\Phi(\phi)$.
+Which gives us the separable differential equation
+\begin{align*}
+  \hbar m_j \Phi R &= (-i\hbar\Phi_{\phi}+\dfrac{\hbar}{2}\sigma_z\Phi)R \\
+  \Phi_{\phi} &= i(m-\sigma_z/2)\Phi \\
+  \Phi(\phi) &= e^{im_j\phi} [ a e^{-i\phi/2}, b e^{i\phi/2} ]^T
+\end{align*}
+
+\section{Radial dependence}
+
+With the general angular solution found we should be to turn the original Hamiltonian into a separable equation. Tha Hamiltonian in cylindrical polar coordinates acting on $\Psi = R(r)\Phi(\phi)$ looks like
+\begin{align*}
+  \Ham\Psi &= \dfrac{-1}{2m}\left(\partial_r^2 + \dfrac{\partial_r}{r} + \dfrac{\partial_{\phi}^2}{r^2} + 2m\mu\right) R e^{im_j\phi}
+  \begin{bmatrix}
+    ae^{-i\phi/2} \\
+    -be^{i\phi/2}
+  \end{bmatrix} \\
+  &+\tilde{\Delta}
+  \begin{bmatrix}
+    0 & e^{-i\phi}\left(-\partial_r + \dfrac{i\partial_{\phi}}{r}\right) \\
+    e^{i\phi}\left(\partial_r + \dfrac{i\partial_{\phi}}{r}\right) & 0
+  \end{bmatrix} R e^{im_j\phi}
+  \begin{bmatrix}
+    ae^{-i\phi/2} \\
+    be^{i\phi/2}
+  \end{bmatrix}  = E\Psi.
+\end{align*}
+Which gives two equations
+\begin{align}
+  r^2R_{rr} + rR_r + (2m(\mu+E)r^2-M_-^2)R &= -2m\tilde{\Delta}\dfrac{b}{a}(r^2R_r+rM_+R) \\
+  r^2R_{rr} + rR_r + (2m(\mu-E)r^2-M_+^2)R &= -2m\tilde{\Delta}\dfrac{a}{b}(r^2R_r-rM_-R).
+\end{align}

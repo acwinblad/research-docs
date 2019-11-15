@@ -1,0 +1,113 @@
+\documentclass[10pt,letterpaper]{book}
+\usepackage[a4paper,width=15cm,top=2.5cm,bottom=2.5cm,bindingoffset=6mm]{geometry}
+\usepackage{footnote}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc} % important for having seachable underscores
+\usepackage{bm}
+\usepackage[sort&compress,numbers]{natbib}
+\setlength{\parskip}{2.54mm}
+
+
+\usepackage{color}
+\def\red{\textcolor{red}}
+\def\old#1{\textcolor{red}{#1}}
+\def\new#1{\textcolor{blue}{#1}}
+
+% Print only chapters in the Table Of Contents
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2} 
+
+% Ensure that blank pages don't have numbers or heading on them 
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+ \hbox{}
+ \vspace*{\fill}
+ \thispagestyle{empty}
+ \newpage\fi\fi}
+\makeatother
+
+% set fancy headings
+\pagestyle{fancy}
+\lhead[{\it \thepage}]{{\bf\it Research Notes}}
+\chead{}
+\rhead[{\bf\it Research Notes}]{{\it \thepage}}
+\renewcommand{\headrulewidth}{0.2pt}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{0.25in}
+\setlength{\parindent}{0in}
+
+%% This part slightly modifies the default definition of \chapter
+%% (found in book.cls) to add a \hspace{2em} before numbered chapters.
+\makeatletter
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}%
+                                   {\hspace{2em}\protect\numberline{\thechapter}#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\makeatother
+
+
+% reset vec and hat style to a bold type
+\let\oldhat\hat
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+% stretches the vertical spacing of arrays/matrices
+\renewcommand{\arraystretch}{2}
+\setlength{\jot}{10pt}
+
+\graphicspath{ {./images/} }
+\title{Research Notes}
+\author{Aidan Winblad}
+\date{\today}
+%%% THIS SHOULD BE THE LAST PACKAGE TO BE LOADED!
+%hidelinks to remove colored borders from links
+%plainpages=false needed for the unnumbered pages
+%breaklinks=true to allow to break long links (e.g. long titles) on
+%more than one line
+%bookmarksopen open the bookmarks in the adobe reader plugin
+%bookmarksopenlevel decide the max level at which the bookmarks should
+%be open
+% pdfdisplaydoctitle=true to show the document title instead of the
+% filename in the titlebar of adobereader
+\usepackage[plainpages=false,breaklinks=true,pdfborder=0 0 0,pdfdisplaydoctitle=true,bookmarksopen=true,bookmarksopenlevel=0,pdftex,%
+%Comment next line if it makes problems
+%(it requires a recent LaTeX distribution)
+            hidelinks,
+            pdftitle={MSE502B},
+            pdfkeywords={lecture notes}]{hyperref}
+
+\newcommand{\Ham}{\mathcal{H}}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{../notes/corner-state-solution.tex}
+ 
+\end{document}
+
