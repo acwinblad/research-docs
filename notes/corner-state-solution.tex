@@ -43,31 +43,72 @@ Next we let $\bra{\bm{r}}\ket{\Psi} = R(r)\Phi(\phi)$.
 Which gives us the separable differential equation
 \begin{align*}
   \hbar m_j \Phi R &= (-i\hbar\Phi_{\phi}+\dfrac{\hbar}{2}\sigma_z\Phi)R \\
-  \Phi_{\phi} &= i(m-\sigma_z/2)\Phi \\
-  \Phi(\phi) &= e^{im_j\phi} [ a e^{-i\phi/2}, b e^{i\phi/2} ]^T
+  \Phi_{\phi} &= i(m_j-\sigma_z/2)\Phi \\
+  \Phi(\phi) &= e^{im_j\phi} [ a e^{-i\phi/2}, b e^{i\phi/2} ]^T \\
+  \Phi(\phi) &= [ a e^{iM\phi}, b e^{i(M+1)\phi} ]^T
 \end{align*}
+
+where it is clear $m_j$ is half integer, it more convenient to write it as $M$ which is a whole integer and represent the orbital angular momentum eigenvalue.
 
 \section{Radial dependence}
 
-With the general angular solution found we should be to turn the original Hamiltonian into a separable equation. Tha Hamiltonian in cylindrical polar coordinates acting on $\Psi = R(r)\Phi(\phi)$ looks like
+With the general angular solution found we should be to turn the original Hamiltonian into a separable equation. 
+The Hamiltonian in cylindrical polar coordinates acting on $\Psi = R(r)\Phi(\phi)$ looks like
 \begin{align*}
-  \Ham\Psi &= \dfrac{-1}{2m}\left(\partial_r^2 + \dfrac{\partial_r}{r} + \dfrac{\partial_{\phi}^2}{r^2} + 2m\mu\right) R e^{im_j\phi}
+  \Ham\Psi &= \dfrac{-1}{2m}\left(\partial_r^2 + \dfrac{\partial_r}{r} + \dfrac{\partial_{\phi}^2}{r^2} + 2m\mu\right) R
   \begin{bmatrix}
-    ae^{-i\phi/2} \\
-    -be^{i\phi/2}
+    ae^{iM\phi} \\
+    -be^{i(M+1)\phi}
   \end{bmatrix} \\
   &+\tilde{\Delta}
   \begin{bmatrix}
     0 & e^{-i\phi}\left(-\partial_r + \dfrac{i\partial_{\phi}}{r}\right) \\
     e^{i\phi}\left(\partial_r + \dfrac{i\partial_{\phi}}{r}\right) & 0
-  \end{bmatrix} R e^{im_j\phi}
+  \end{bmatrix} R
   \begin{bmatrix}
-    ae^{-i\phi/2} \\
-    be^{i\phi/2}
+    ae^{iM\phi} \\
+    be^{i(M+1)\phi}
   \end{bmatrix}  = E\Psi.
 \end{align*}
 Which gives two equations
 \begin{align}
-  r^2R_{rr} + rR_r + (2m(\mu+E)r^2-M_-^2)R &= -2m\tilde{\Delta}\dfrac{b}{a}(r^2R_r+rM_+R) \\
-  r^2R_{rr} + rR_r + (2m(\mu-E)r^2-M_+^2)R &= -2m\tilde{\Delta}\dfrac{a}{b}(r^2R_r-rM_-R).
+  &r^2R_{rr} + rR_r + (2m\mu r^2-M^2)R = -2m\tilde{\Delta}\dfrac{b}{a}r^2(R_r + (M+1)R/r) - 2mEr^2R \\
+  &r^2R_{rr} + rR_r + (2m\mu r^2-(M+1)^2)R = -2m\tilde{\Delta}\dfrac{a}{b}r^2(R_r - MR/r) + 2mEr^2R.
 \end{align}
+
+Taking a guess at a trial solution we let a linear combination of two Bessel functions
+\begin{equation}
+  R(r) = 
+  \begin{bmatrix}
+    AJ_M(\sqrt{2m\mu}r) \\
+    BJ_{M+1}(\sqrt{2m\mu}r)
+  \end{bmatrix}
+\end{equation}
+
+Here we will write out some of the Bessel function identities to be used
+\begin{align*}
+  J_{\nu}'(x) + \dfrac{\nu}{x}J_{\nu}(x) &= J_{\nu-1}(x) \\
+  J_{\nu}'(x) - \dfrac{\nu}{x}J_{\nu}(x) &= - J_{\nu+1}(x).
+\end{align*}
+
+Plugging in the trial solution into the differential equations it is abundantly clear the LHS's go to zero. The RHS using the above Bessel function derivative identities give
+\begin{align}
+  2mEr^2AJ_M &= -2m\sqrt{2m\mu}\tilde\Delta\dfrac{b}{a}r^2BJ_M \\
+  2mEr^2BJ_{M+1} &= -2m\sqrt{2m\mu}\tilde\Delta\dfrac{a}{b}r^2AJ_{M+1}
+\end{align}
+
+and thus a relation between $A$ and $B$,
+
+\begin{equation}
+  B = -\dfrac{aAE}{b\sqrt{2m\mu}\tilde\Delta} = -\dfrac{a\sqrt{2m\mu}\tilde\Delta A}{bE}
+\end{equation}
+
+The resulting wave function then looks like
+\begin{equation}
+  \Psi(r,\phi) = A'
+  \begin{bmatrix}
+    J_M(\sqrt{2m\mu}r) e^{iM\phi} \\
+    -\dfrac{E}{\sqrt{2m\mu}\tilde\Delta} J_{M+1}(\sqrt{2m\mu}r) e^{i(M+1)\phi}
+  \end{bmatrix}
+\end{equation}
+The $A'$ term is to be determined using normalization.
