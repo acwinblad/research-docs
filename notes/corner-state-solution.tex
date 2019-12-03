@@ -72,18 +72,9 @@ The Hamiltonian in cylindrical polar coordinates acting on $\Psi = R(r)\Phi(\phi
 \end{align*}
 Which gives two equations
 \begin{align}
-  &r^2R_{rr} + rR_r + (2m\mu r^2-M^2)R = -2m\tilde{\Delta}\dfrac{b}{a}r^2(R_r + (M+1)R/r) - 2mEr^2R \\
-  &r^2R_{rr} + rR_r + (2m\mu r^2-(M+1)^2)R = -2m\tilde{\Delta}\dfrac{a}{b}r^2(R_r - MR/r) + 2mEr^2R.
+  &r^2R_{rr} + rR_r + (2m(\mu+E) r^2-M^2)R = -2m\tilde{\Delta}\dfrac{b}{a}r^2(R_r + (M+1)R/r) \\
+  &r^2R_{rr} + rR_r + (2m(\mu-E) r^2-(M+1)^2)R = -2m\tilde{\Delta}\dfrac{a}{b}r^2(R_r - MR/r).
 \end{align}
-
-Taking a guess at a trial solution we let a linear combination of two Bessel functions
-\begin{equation}
-  R(r) = 
-  \begin{bmatrix}
-    AJ_M(\sqrt{2m\mu}r) \\
-    BJ_{M+1}(\sqrt{2m\mu}r)
-  \end{bmatrix}
-\end{equation}
 
 Here we will write out some of the Bessel function identities to be used
 \begin{align*}
@@ -91,24 +82,22 @@ Here we will write out some of the Bessel function identities to be used
   J_{\nu}'(x) - \dfrac{\nu}{x}J_{\nu}(x) &= - J_{\nu+1}(x).
 \end{align*}
 
-Plugging in the trial solution into the differential equations it is abundantly clear the LHS's go to zero. The RHS using the above Bessel function derivative identities give
-\begin{align}
-  2mEr^2AJ_M &= -2m\sqrt{2m\mu}\tilde\Delta\dfrac{b}{a}r^2BJ_M \\
-  2mEr^2BJ_{M+1} &= -2m\sqrt{2m\mu}\tilde\Delta\dfrac{a}{b}r^2AJ_{M+1}
-\end{align}
-
-and thus a relation between $A$ and $B$,
-
+A trial solution of
 \begin{equation}
-  B = -\dfrac{aAE}{b\sqrt{2m\mu}\tilde\Delta} = -\dfrac{a\sqrt{2m\mu}\tilde\Delta A}{bE}
-\end{equation}
-
-The resulting wave function then looks like
-\begin{equation}
-  \Psi(r,\phi) = A'
+  \Psi(r,\phi) = 
   \begin{bmatrix}
-    J_M(\sqrt{2m\mu}r) e^{iM\phi} \\
-    -\dfrac{E}{\sqrt{2m\mu}\tilde\Delta} J_{M+1}(\sqrt{2m\mu}r) e^{i(M+1)\phi}
-  \end{bmatrix}
+    A J_M(k_+ r) e^{iM\phi} \\
+    B J_{M+1}(k_- r) e^{i(M+1)\phi}
+  \end{bmatrix},
 \end{equation}
-The $A'$ term is to be determined using normalization.
+
+where $k_{\pm} = \sqrt{2m(\mu\pm E)}$.
+Plugging into the Hamiltonian we find two equations above to be zero on the LHS. the RHS then looks like
+\begin{align*}
+  -2m\tilde\Delta\dfrac{b}{a}r^2 B k_- J_M(k_-r) &= 0 \\
+  2m\tilde\Delta\dfrac{a}{b}r^2 A k_+ J_{M+1}(k_+r) &= 0
+\end{align*}
+
+What I can see from this is that $A=B=0$ or saying $J_M = 0$ for all r (which is a bit redundant to say).
+
+Two ideas: raising and lowering operators and find a recurrence relation there. The other is if the LHS are zero and the RHS is of a different function as suggested by the trial solution could we just solve that first order differential equation? Just an idea.
