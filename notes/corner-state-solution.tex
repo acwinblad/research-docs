@@ -3,9 +3,9 @@
 
 Let's begin by writing out the Hamiltonian without an in-plane magnetic field and determine what operator shares a common eigenbasis with the Hamiltonian.
 \begin{equation}
-  \Ham = \left(\dfrac{k^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{k} \times \bm{\sigma}) \cdot \hat{z}
+  \Ham = \left(\dfrac{k^2}{2m} - \mu\right) \sz + \Delta (\bm{k} \times \bm{\sigma}) \cdot \hat{z}
 \end{equation}
-Where the effective order parameter $\tilde{\Delta} = \alpha\Delta/(2V_z)$, effective chemical potential $\mu = V_z-\mu_0$, and $m$ is the effective mass. 
+Where the effective order parameter $\Delta = \alpha\Delta/(2V_z)$, effective chemical potential $\mu = V_z-\mu_0$, and $m$ is the effective mass. 
 Based on the geometry of the problem we know we have rotational symmetry about the z-axis. 
 We also have Rashba spin-orbit coupling.
 This gives two good guesses as to which qunatities are conserved in the system.
@@ -16,36 +16,40 @@ For convenience I will include $\hbar$ and $\bm{p}$ where needed.
 
 \begin{align*}
   [J_z,\Ham] &= [L_z,\Ham] + [S_z,\Ham] \\
-  [L_z,\Ham] &= (\bm{r}\times\bm{p})\cdot\hat{z}\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
-  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](\bm{r}\times\bm{p})\cdot\hat{z} \\
-  &= (r_xp_y-r_yp_x)\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
-  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sigma_z + \tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
-  &= (r_xp_y-r_yp_x)\left[\tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
-  &-\left[\tilde{\Delta} (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
-  &= (r_xp_y-r_yp_x)\left[\tilde{\Delta} (p_x\sigma_y-p_y\sigma_x)\right] \\ 
-  &-\left[\tilde{\Delta} (p_x\sigma_y-p_y\sigma_x)\right](r_xp_y-r_yp_x) \\
-  &= i\hbar\tilde{\Delta} (p_x\sigma_x + p_y\sigma_y) = i\hbar\tilde{\Delta}\bm{p}\cdot\bm{\sigma}
+\end{align*}
+\begin{align*}
+  [L_z,\Ham] &= (\bm{r}\times\bm{p})\cdot\hat{z}\left[\left(\dfrac{p^2}{2m} - \mu\right) \sz + \Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sz + \Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](\bm{r}\times\bm{p})\cdot\hat{z} \\
+  &= (r_xp_y-r_yp_x)\left[\left(\dfrac{p^2}{2m} - \mu\right) \sz + \Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\left(\dfrac{p^2}{2m} - \mu\right) \sz + \Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
+\end{align*}
+\begin{align*}
+  &= (r_xp_y-r_yp_x)\left[\Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right] \\ 
+  &-\left[\Delta (\bm{p} \times \bm{\sigma}) \cdot \hat{z}\right](r_xp_y-r_yp_x) \\
+  &= (r_xp_y-r_yp_x)\left[\Delta (p_x\sy-p_y\sx)\right] \\ 
+  &-\left[\Delta (p_x\sy-p_y\sx)\right](r_xp_y-r_yp_x) \\
+  &= i\hbar\Delta (p_x\sx + p_y\sy) = i\hbar\Delta\bm{p}\cdot\bm{\sigma}
 \end{align*}
 
 \begin{align*}
-  [S_z,\Ham] &= \dfrac{\hbar}{2}(\sigma_z\Ham - \Ham\sigma_z) \\
-  &= \dfrac{\hbar\tilde{\Delta}}{2}(\sigma_z(p_x\sigma_y - p_y\sigma_x) - (p_x\sigma_y - p_y\sigma_x)\sigma_z) \\
-  &= \dfrac{\hbar\tilde{\Delta}}{2}(-2ip_x\sigma_x - 2ip_y\sigma_y) = -i\hbar\tilde{\Delta}\bm{p}\cdot\bm{\sigma} \\
+  [S_z,\Ham] &= \dfrac{\hbar}{2}(\sz\Ham - \Ham\sz) \\
+  &= \dfrac{\hbar\Delta}{2}(\sz(p_x\sy - p_y\sx) - (p_x\sy - p_y\sx)\sz) \\
+  &= \dfrac{\hbar{\Delta}{2}(-2ip_x\sx - 2ip_y\sy) = -i\hbar\Delta\bm{p}\cdot\bm{\sigma} \\
   [J_z,\Ham] &= 0.
 \end{align*}
 
 Now that we have shown $J_z$ is a conserved quantity we will use it to find a common eigenvector between it and the Hamiltonian.
 Recall in spherical coordinates that 
 \begin{equation}
-  J_z\ket{\Psi} = (-i\hbar\partial_{\phi} + \dfrac{\hbar}{2}\sigma_z)\ket{\Psi} =  \hbar m_j\ket{\Psi}.
+  J_z\ket{\Psi} = (-i\hbar\partial_{\phi} + \dfrac{\hbar}{2}\sz)\ket{\Psi} =  \hbar m_j\ket{\Psi}.
 \end{equation}
 Next we let $\bra{\bm{r}}\ket{\Psi} = R(r)\Phi(\phi)$.
 Which gives us the separable differential equation
 \begin{align*}
-  \hbar m_j \Phi R &= (-i\hbar\Phi_{\phi}+\dfrac{\hbar}{2}\sigma_z\Phi)R \\
-  \Phi_{\phi} &= i(m_j-\sigma_z/2)\Phi \\
-  \Phi(\phi) &= e^{im_j\phi} [ a e^{-i\phi/2}, b e^{i\phi/2} ]^T \\
-  \Phi(\phi) &= [ a e^{iM\phi}, b e^{i(M+1)\phi} ]^T
+  \hbar m_j \Phi R &= (-i\hbar\Phi_{\phi}+\dfrac{\hbar}{2}\sz\Phi)R \\
+  \Phi_{\phi} &= i(m_j-\sz/2)\Phi \\
+  \Phi(\phi) &= e^{im_j\phi} [ A e^{-i\phi/2}, B e^{i\phi/2} ]^T \\
+  \Phi(\phi) &= [ A e^{iM\phi}, B e^{i(M+1)\phi} ]^T
 \end{align*}
 
 where it is clear $m_j$ is half integer, it more convenient to write it as $M$ which is a whole integer and represent the orbital angular momentum eigenvalue.
@@ -55,49 +59,128 @@ where it is clear $m_j$ is half integer, it more convenient to write it as $M$ w
 With the general angular solution found we should be to turn the original Hamiltonian into a separable equation. 
 The Hamiltonian in cylindrical polar coordinates acting on $\Psi = R(r)\Phi(\phi)$ looks like
 \begin{align*}
-  \Ham\Psi &= \dfrac{-1}{2m}\left(\partial_r^2 + \dfrac{\partial_r}{r} + \dfrac{\partial_{\phi}^2}{r^2} + 2m\mu\right) R
+  \Ham\Psi &= 
   \begin{bmatrix}
-    ae^{iM\phi} \\
-    -be^{i(M+1)\phi}
-  \end{bmatrix} \\
-  &+\tilde{\Delta}
-  \begin{bmatrix}
-    0 & e^{-i\phi}\left(-\partial_r + \dfrac{i\partial_{\phi}}{r}\right) \\
-    e^{i\phi}\left(\partial_r + \dfrac{i\partial_{\phi}}{r}\right) & 0
+    -\dfrac{\nabla^2}{2m} -\mu & \Delta e^{-i\phi}\left(-\partial_r + \dfrac{i\partial_{\phi}}{r}\right) \\
+    \Delta e^{i\phi}\left(\partial_r + \dfrac{i\partial_{\phi}}{r}\right) & \dfrac{\nabla^2}{2m}+\mu
   \end{bmatrix} R
   \begin{bmatrix}
-    ae^{iM\phi} \\
-    be^{i(M+1)\phi}
-  \end{bmatrix}  = E\Psi.
-\end{align*}
-Which gives two equations
-\begin{align}
-  &r^2R_{rr} + rR_r + (2m(\mu+E) r^2-M^2)R = -2m\tilde{\Delta}\dfrac{b}{a}r^2(R_r + (M+1)R/r) \\
-  &r^2R_{rr} + rR_r + (2m(\mu-E) r^2-(M+1)^2)R = -2m\tilde{\Delta}\dfrac{a}{b}r^2(R_r - MR/r).
-\end{align}
-
-Here we will write out some of the Bessel function identities to be used
-\begin{align*}
-  J_{\nu}'(x) + \dfrac{\nu}{x}J_{\nu}(x) &= J_{\nu-1}(x) \\
-  J_{\nu}'(x) - \dfrac{\nu}{x}J_{\nu}(x) &= - J_{\nu+1}(x).
+    Ae^{iM\phi} \\
+    Be^{i(M+1)\phi}
+  \end{bmatrix}  = ER
+  \begin{bmatrix}
+    Ae^{iM\phi} \\
+    Be^{i(M+1)\phi}
+  \end{bmatrix}.
 \end{align*}
 
+Applying the differential operators, multiplying both sides by $2mr^2$, and assuming $R$ is a two component vector we find
+
+\begin{equation*}
+  \small
+  \begin{bmatrix}
+    -(r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -M^2)) & -2m\Delta \left(\partial_r + \dfrac{i(M+1)}{r}\right) \\
+    2m\Delta \left(\partial_r - \dfrac{iM}{r}\right) & r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -(M+1)^2)
+  \end{bmatrix} 
+  \begin{bmatrix}
+    AR_1 \\
+    BR_2 \\
+  \end{bmatrix} 
+  = 2mE 
+  \begin{bmatrix}
+    AR_1 \\
+    BR_2 \\
+  \end{bmatrix} 
+\end{equation*}
+
+The diagonal terms are Bessel differential equations.
+Knowing the differential form and knowing the function should be zero at the origin we choose a set of Bessel functions.
 A trial solution of
 \begin{equation}
   \Psi(r,\phi) = 
   \begin{bmatrix}
-    A J_M(k_+ r) e^{iM\phi} \\
-    B J_{M+1}(k_- r) e^{i(M+1)\phi}
+    A J_M(\ke r) e^{iM\phi} \\
+    B J_{M+1}(\ke r) e^{i(M+1)\phi}
   \end{bmatrix},
 \end{equation}
 
-where $k_{\pm} = \sqrt{2m(\mu\pm E)}$.
-Plugging into the Hamiltonian we find two equations above to be zero on the LHS. the RHS then looks like
+where $\ke = \sqrt{2m(\mu + \epsilon)}$, is used; though this definition is not necessary it may prove useful later if needed.
+For convenience we write out some of the Bessel function identities to be used
 \begin{align*}
-  -2m\tilde\Delta\dfrac{b}{a}r^2 B k_- J_M(k_-r) &= 0 \\
-  2m\tilde\Delta\dfrac{a}{b}r^2 A k_+ J_{M+1}(k_+r) &= 0
+  J_{\nu}'(kx) + \dfrac{\nu}{x}J_{\nu}(kx) &= kJ_{\nu-1}(kx) \\
+  J_{\nu}'(kx) - \dfrac{\nu}{x}J_{\nu}(kx) &= - kJ_{\nu+1}(kx) \\
+  J_{\nu}''(kx) &= (\nu^2 - (kx)^2)\dfrac{J_{\nu}(kx)}{x^2} - \dfrac{J_{\nu}'(kx)}{x}.
 \end{align*}
 
-What I can see from this is that $A=B=0$ or saying $J_M = 0$ for all r (which is a bit redundant to say).
+Plugging into the Hamiltonian we find
+\begin{equation*}
+  \Ham \Psi = 
+  \begin{bmatrix}
+  (\ke^2-2m\mu) r^2 & -2m\Delta\ke r^2 \\
+  2m\Delta\ke r^2 & -(\ke^2-2m\mu) r^2
+  \end{bmatrix} 
+  \begin{bmatrix}
+    A J_M(\ke r) \\
+    B J_{M+1}(\ke r) 
+  \end{bmatrix}
+  = 2mEr^2
+  \begin{bmatrix}
+    A J_M(\ke r) \\
+    B J_{M+1}(\ke r) 
+  \end{bmatrix}.
+\end{equation*}
 
-Two ideas: raising and lowering operators and find a recurrence relation there. The other is if the LHS are zero and the RHS is of a different function as suggested by the trial solution could we just solve that first order differential equation? Just an idea.
+This is now a simple eigenvalue problem now which is readily solved. 
+\begin{equation*}
+  \begin{vmatrix}
+    (\ke^2-2m(\mu+E)) & -2m\Delta\ke \\
+    -2m\Delta\ke & -(\ke^2-2m(\mu-E)) 
+  \end{vmatrix} 
+  =
+  0
+\end{equation*}
+
+Solving for the energy we arrive at 
+\begin{equation}
+  E = \pm\dfrac{\sqrt{\ke^4+\k3^2(4m^2\Delta^2-4m\mu)+4m^2\mu^2}}{2m}.
+\end{equation}
+
+We can also rearrange to see that the wavenumber is
+\begin{equation}
+  \ke = \pm_1 \sqrt{2m(\mu-m\Delta^2)\pm_2\sqrt{4m^2(\mu-m\Delta^2)^2 - 4m^2(\mu^2-E^2)}}
+\end{equation}
+
+Here we see there are 4 wavenumbers that satisfy the eigenvalue problem.
+
+\section{Questions}
+
+My next concern comes down to how Bessel functions work. Let us say we have now $\pm\ke_{1,2}$, where the 1 and 2 represent the plus/minus inside the radical. 
+In general plugging in a $-k$, or equivalently $-x$, into the Bessel function it gives us
+\begin{align*}
+  J_{\nu}(-kx) = (-1)^{\nu} J_{\nu}(kx)
+\end{align*}
+
+Then to write a general solution for the $M$-order Bessel function I am a little lost on what to do.
+\begin{align*}
+  AJ_{\nu}(kx) + BJ_{\nu}(-kx) &= (A+B)J_{\nu}(kx) & \nu = \text{even} \\
+  AJ_{\nu}(kx) + BJ_{\nu}(-kx) &= (A-B)J_{\nu}(kx) & \nu = \text{odd}
+\end{align*}
+
+Now to further generalize to a two component vector
+\begin{align*}
+  \begin{bmatrix}
+    AJ_{\nu}(kx) +BJ_{\nu}(-kx)\\
+    CJ_{\nu+1}(kx) +DJ_{\nu+1}(-kx)\\
+  \end{bmatrix} & & \\
+  \begin{bmatrix}
+    (A+B)J_{\nu}(kx) \\
+    (C-D)J_{\nu+1}(kx) \\
+  \end{bmatrix} & & \nu = \text{even} \\
+  \begin{bmatrix}
+    (A-B)J_{\nu}(kx) \\
+    (C+D)J_{\nu+1}(kx) \\
+  \end{bmatrix} & & \nu = \text{odd}
+\end{align*}
+
+Am I overthinking this? this also does not include the fact that besides plus minus we still have two different wavenumbers.
+Or maybe I should just find the associated eigenvectors to the four eigenvalue wavenumbers?
