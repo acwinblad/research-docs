@@ -5,10 +5,10 @@ Let's begin by writing out the Hamiltonian without an in-plane magnetic field an
 \begin{equation}
   \Ham = \left(\dfrac{k^2}{2m} - \mu\right) \sz + \Delta (\bm{k} \times \bm{\sigma}) \cdot \hat{z}
 \end{equation}
-Where the effective order parameter $\Delta = \alpha\Delta/(2V_z)$, effective chemical potential $\mu = V_z-\mu_0$, and $m$ is the effective mass. 
+Where the effective order parameter $\Delta = \alpha\Delta_s/(2V_z)$, effective chemical potential $\mu = V_z-\mu_0$, and $m$ is the effective mass. 
 Based on the geometry of the problem we know we have rotational symmetry about the z-axis. 
 We also have Rashba spin-orbit coupling.
-This gives two good guesses as to which qunatities are conserved in the system.
+This gives two good guesses as to which quantities are conserved in the system.
 Orbital angular momentum and spin along the z-axis. 
 More conventually we will use the total angular momentum operator $J_z = L_z + S_z$.
 What's left is to prove that our $J_z$ operator commutes with the Hamiltonian.
@@ -79,14 +79,14 @@ Applying the differential operators, multiplying both sides by $2mr^2$, and assu
 \begin{equation*}
   \small
   \begin{bmatrix}
-    -(r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -M^2)) & -2m\Delta \left(\partial_r + \dfrac{i(M+1)}{r}\right) \\
-    2m\Delta \left(\partial_r - \dfrac{iM}{r}\right) & r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -(M+1)^2)
+    -(r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -M^2)) & -2m\Delta r^2\left(\partial_r + \dfrac{(M+1)}{r}\right) \\
+    2m\Delta r^2\left(\partial_r - \dfrac{M}{r}\right) & r^2\partial_{rr} +r\partial_r +(2m\mu r^2 -(M+1)^2)
   \end{bmatrix} 
   \begin{bmatrix}
     AR_1 \\
     BR_2 \\
   \end{bmatrix} 
-  = 2mE 
+  = 2mE r^2
   \begin{bmatrix}
     AR_1 \\
     BR_2 \\
@@ -112,21 +112,20 @@ For convenience we write out some of the Bessel function identities to be used
   J_{\nu}''(kx) &= (\nu^2 - (kx)^2)\dfrac{J_{\nu}(kx)}{x^2} - \dfrac{J_{\nu}'(kx)}{x}.
 \end{align*}
 
-Plugging into the Hamiltonian we find
+Plugging into the Hamiltonian we have two equations that give
 \begin{equation*}
-  \Ham \Psi = 
   \begin{bmatrix}
-  (\ke^2-2m\mu) r^2 & -2m\Delta\ke r^2 \\
-  2m\Delta\ke r^2 & -(\ke^2-2m\mu) r^2
+  (\ke^2-2m\mu) & -2m\Delta\ke \\
+  2m\Delta\ke & -(\ke^2-2m\mu)
   \end{bmatrix} 
   \begin{bmatrix}
-    A J_M(\ke r) \\
-    B J_{M+1}(\ke r) 
+    A \\
+    B  
   \end{bmatrix}
-  = 2mEr^2
+  = 2mE
   \begin{bmatrix}
-    A J_M(\ke r) \\
-    B J_{M+1}(\ke r) 
+    A \\
+    B  
   \end{bmatrix}.
 \end{equation*}
 
@@ -142,7 +141,7 @@ This is now a simple eigenvalue problem now which is readily solved.
 
 Solving for the energy we arrive at 
 \begin{equation}
-  E = \pm\dfrac{\sqrt{\ke^4+\k3^2(4m^2\Delta^2-4m\mu)+4m^2\mu^2}}{2m}.
+  E = \pm\dfrac{\sqrt{\ke^4+\ke^2(4m^2\Delta^2-4m\mu)+4m^2\mu^2}}{2m}.
 \end{equation}
 
 We can also rearrange to see that the wavenumber is
@@ -150,37 +149,12 @@ We can also rearrange to see that the wavenumber is
   \ke = \pm_1 \sqrt{2m(\mu-m\Delta^2)\pm_2\sqrt{4m^2(\mu-m\Delta^2)^2 - 4m^2(\mu^2-E^2)}}
 \end{equation}
 
-Here we see there are 4 wavenumbers that satisfy the eigenvalue problem.
+Here we see there are 4 wavenumbers that satisfy the eigenvalue problem. 
+Though due to linear dependence and boundary conditions we can disregard the negative wavenumbers. 
+Leaving us with
+\begin{equation}
+  \kpm = \sqrt{2m(\mu-m\Delta^2)\pm\sqrt{4m^2(\mu-m\Delta^2)^2 - 4m^2(\mu^2-E^2)}}
+\end{equation}
 
 \section{Questions}
 
-My next concern comes down to how Bessel functions work. Let us say we have now $\pm\ke_{1,2}$, where the 1 and 2 represent the plus/minus inside the radical. 
-In general plugging in a $-k$, or equivalently $-x$, into the Bessel function it gives us
-\begin{align*}
-  J_{\nu}(-kx) = (-1)^{\nu} J_{\nu}(kx)
-\end{align*}
-
-Then to write a general solution for the $M$-order Bessel function I am a little lost on what to do.
-\begin{align*}
-  AJ_{\nu}(kx) + BJ_{\nu}(-kx) &= (A+B)J_{\nu}(kx) & \nu = \text{even} \\
-  AJ_{\nu}(kx) + BJ_{\nu}(-kx) &= (A-B)J_{\nu}(kx) & \nu = \text{odd}
-\end{align*}
-
-Now to further generalize to a two component vector
-\begin{align*}
-  \begin{bmatrix}
-    AJ_{\nu}(kx) +BJ_{\nu}(-kx)\\
-    CJ_{\nu+1}(kx) +DJ_{\nu+1}(-kx)\\
-  \end{bmatrix} & & \\
-  \begin{bmatrix}
-    (A+B)J_{\nu}(kx) \\
-    (C-D)J_{\nu+1}(kx) \\
-  \end{bmatrix} & & \nu = \text{even} \\
-  \begin{bmatrix}
-    (A-B)J_{\nu}(kx) \\
-    (C+D)J_{\nu+1}(kx) \\
-  \end{bmatrix} & & \nu = \text{odd}
-\end{align*}
-
-Am I overthinking this? this also does not include the fact that besides plus minus we still have two different wavenumbers.
-Or maybe I should just find the associated eigenvectors to the four eigenvalue wavenumbers?
