@@ -107,8 +107,8 @@ A trial solution of
 where $\ke = \sqrt{2m(\mu + \epsilon)}$, is used; though this definition is not necessary it may prove useful later if needed.
 For convenience we write out some of the Bessel function identities to be used
 \begin{align*}
-  J_{\nu}'(kx) + \dfrac{\nu}{x}J_{\nu}(kx) &= kJ_{\nu-1}(kx) \\
-  J_{\nu}'(kx) - \dfrac{\nu}{x}J_{\nu}(kx) &= - kJ_{\nu+1}(kx) \\
+  J_{\nu}'(kx) &+ \dfrac{\nu}{x}J_{\nu}(kx) = kJ_{\nu-1}(kx) \\
+  J_{\nu}'(kx) &- \dfrac{\nu}{x}J_{\nu}(kx) = - kJ_{\nu+1}(kx) \\
   J_{\nu}''(kx) &= (\nu^2 - (kx)^2)\dfrac{J_{\nu}(kx)}{x^2} - \dfrac{J_{\nu}'(kx)}{x}.
 \end{align*}
 
@@ -116,7 +116,7 @@ Plugging into the Hamiltonian we have two equations that give
 \begin{equation*}
   \begin{bmatrix}
   (\ke^2-2m\mu) & -2m\Delta\ke \\
-  2m\Delta\ke & -(\ke^2-2m\mu)
+  -2m\Delta\ke & -(\ke^2-2m\mu)
   \end{bmatrix} 
   \begin{bmatrix}
     A \\
