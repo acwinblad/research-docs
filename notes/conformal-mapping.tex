@@ -1,0 +1,93 @@
+\section{Complex Functions and Differentiation}
+A brief recap on complex functions and differentiation is written and will be used in the following section.
+We start with a complex plane $z$ which is made up of the $x$-axis and $y$-axis
+\begin{equation}
+  z = x+iy.
+\end{equation}
+
+Given a complex function $f(z)$ becomes
+\begin{equation}
+  f(z) = f(x+iy).
+\end{equation}
+
+Which leads us to then write it as
+\begin{equation}
+  f(z) = u(x,y) +iv(x,y).
+\end{equation}
+
+Now for differentiation, a complex function $f(z)$ is differentiable, the proof we skip for now.
+It's derivative is 
+\begin{align}
+  f'(z) &= \dfrac{\partial u}{\partial x} + i \dfrac{\partial v}{\partial x} = \dfrac{\partial f}{\partial x} \\
+        &= \dfrac{\partial v}{\partial y} - i \dfrac{\partial u}{\partial y} = -i \dfrac{\partial f}{\partial y}.
+\end{align}
+
+Taking note of the Cauchy-Riemann equations
+\begin{align}
+  \dfrac{\partial u}{\partial x} &= \dfrac{\partial v}{\partial y} \\
+  \dfrac{\partial u}{\partial y} &= - \dfrac{\partial v}{\partial x}.
+\end{align}
+
+This allows us to conveniently write the derivative as
+\begin{align}
+  \dfrac{\partial f}{\partial x} &= \dfrac{\partial u}{\partial x} - i \dfrac{\partial u}{\partial y} \\
+  &= \dfrac{\partial v}{\partial y} + i \dfrac{\partial v}{\partial x},
+\end{align}
+
+Which will be used in the following section.
+
+\section{Conformal Mapping of our Tight-Binding Hamiltonian}
+
+Complex functions allow us to use harmonic functions to solve the two-dimensional Laplace equation.
+Conformal mapping allows us to map from one plane to another.
+In general we are mapping a complex $z$-plane to a complex $w$-plane to solve some sort of equation.
+Once solved in the $w$-plane we can write the solution back in terms of the $z$-plane.
+For Laplace's equation it is written as
+\begin{equation}
+  \nabla^2 \psi = |f'(z)|^2\nabla^2\Psi.
+\end{equation}
+
+This factor comes from the chain rule and will be a needed to be accounted for mapping our Hamiltonian.
+Second order partial derivative is given in text without proof.
+We have first order partial derivatives that need to be accounted for.
+Recall, we have the following first order partial derivatives
+\begin{align}
+  \pm \psi_x + i \psi_y. 
+\end{align}
+
+Using the chain rule we arrive at
+\begin{align}
+  \pm \psi_x + i \psi_y &= \pm \psi_u u_x \pm \psi_v v_x + i \psi_u u_y + i \psi_v v_y \\
+  &= (\pm u_x + i u_y) \psi_u + i(\mp i v_x + v_y) \psi_y \\
+  &=
+  \begin{cases}
+    (u_x + i u_y) \psi_u + i (v_y - i v_x) \psi_v & (+) \\
+    -(u_x - i u_y) \psi_u + i (v_y + i v_x) \psi_v & (-)
+  \end{cases} \\
+  &=
+  \begin{cases}
+    \bar{f}'(z) (\psi_u + i \psi_v) & (+) \\
+    f'(z) (-\psi_u + i \psi_v) & (-).
+  \end{cases}
+\end{align}
+
+Now that we have the off-diagonal terms we can write our full Hamiltonian,
+\begin{align}
+  \Ham = 
+  \begin{bmatrix}
+    -|f'(z)|^2\dfrac{\nabla^2}{2m} - \mu & \Delta f'(z) (-\partial_u + i \partial_v) \\
+    \Delta \bar{f}'(z)(\partial_u +i\partial_v) & |f'(z)|^2\dfrac{\nabla^2}{2m} + \mu
+  \end{bmatrix}
+\end{align}
+
+This Hamiltonian looks almost identical to the previous version but with new factor terms on each element.
+Here is where the situation is a bit trickier than the Laplace equation.
+Remember it is
+\begin{equation}
+  \nabla^2 \psi = |f'(z)|^2\nabla^2\Psi.
+\end{equation}
+
+One can simple solve the right hand size and invert back to the $z$-plane without worrying about the magnitude squared of the complex functions derivative.
+
+\subsection{which map}
+
