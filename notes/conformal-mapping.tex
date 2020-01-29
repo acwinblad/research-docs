@@ -47,8 +47,8 @@ For Laplace's equation it is written as
   \nabla^2 \psi = |f'(z)|^2\nabla^2\Psi.
 \end{equation}
 
-This factor comes from the chain rule and will be a needed to be accounted for mapping our Hamiltonian.
-Second order partial derivative is given in text without proof.
+This factor, or simply the Jacobian, is needed to be accounted for mapping our Hamiltonian.
+Second order partial derivatives are given in the text without proof.
 We have first order partial derivatives that need to be accounted for.
 Recall, we have the following first order partial derivatives
 \begin{align}
@@ -87,7 +87,12 @@ Remember it is
   \nabla^2 \psi = |f'(z)|^2\nabla^2\Psi.
 \end{equation}
 
-One can simple solve the right hand size and invert back to the $z$-plane without worrying about the magnitude squared of the complex functions derivative.
+One can simple solve the right hand size and invert back to the $z$-plane without worrying about a Jacobian factor.
 
-\subsection{which map}
+\subsection{Choosing an Analytic Function to Map to}
+
+Cohen's book gives two examples of a wedge mapping onto the upper half of the $w$-plane, i.e. semi-infinite topological superconductor, or as parallel plates, synonamous with semi-infinite topological superconductor ribbon problem. 
+Both of those have known solutions. 
+Potentially, we could invert the mappings to arrive at a solution for the wedge? 
+Which may serve better than dealing with the Jacobian in out Hamiltonian in the $w$-plane.
 
