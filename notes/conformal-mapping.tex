@@ -91,8 +91,21 @@ One can simple solve the right hand size and invert back to the $z$-plane withou
 
 \subsection{Choosing an Analytic Function to Map to}
 
-Cohen's book gives two examples of a wedge mapping onto the upper half of the $w$-plane, i.e. semi-infinite topological superconductor, or as parallel plates, synonamous with semi-infinite topological superconductor ribbon problem. 
-Both of those have known solutions. 
-Potentially, we could invert the mappings to arrive at a solution for the wedge? 
-Which may serve better than dealing with the Jacobian in out Hamiltonian in the $w$-plane.
+One choice of mapping is using $w = \ln(z)$.
+In the case of a semi-inifite plane lying from $x<0$, we have a straight line from $-\infty<y<\infty$, or a wedge ranging from $-\pi/2<\phi<\pi/2$.
+Under this mapping the $w$-plane geometry has a semi-infinite ribbon ranging from $-\infty<u<\infty$ and $-\pi/2<v<\pi/2$, where $u = \ln(x^2+y^2)^{1/2}$ and $v = \arctan(y/x)$.
+The Jacobian can be found from $|f'(z)|^2$ by letting
+\begin{align*}
+  f'(z) &= \dfrac{1}{z} = \dfrac{z^*}{|z|^2} = \dfrac{e^{-i\phi}}{r} = e^{-(u+iv)} \\
+  J &= |f'(z)|^2 = \dfrac{1}{r^2} = e^{-2u}
+\end{align*}
 
+where $u = \ln(r)$ or $r = e^u$, and $v = \phi = \arctan(y/x)$.
+We now arrive a Hamiltonian in the $w$-plane that is
+\begin{align}
+  \Ham = 
+  \begin{bmatrix}
+    -e^{-2u}\dfrac{\nabla^2}{2m} - \mu & \Delta e^{-(u+iv)} (-\partial_u + i \partial_v) \\
+    \Delta e^{-(u-iv)}(\partial_u +i\partial_v) & e^{-2u}\dfrac{\nabla^2}{2m} + \mu
+  \end{bmatrix}
+\end{align}
