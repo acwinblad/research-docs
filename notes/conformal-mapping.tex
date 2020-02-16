@@ -100,8 +100,7 @@ The Jacobian can be found from $|f'(z)|^2$ by letting
   J &= |f'(z)|^2 = \dfrac{1}{r^2} = e^{-2u}
 \end{align*}
 
-where $u = \ln(r)$ or $r = e^u$, and $v = \phi = \arctan(y/x)$.
-We now arrive a Hamiltonian in the $w$-plane that is
+We now arrive at a Hamiltonian in the $w$-plane that is
 \begin{align}
   \Ham = 
   \begin{bmatrix}
@@ -109,3 +108,68 @@ We now arrive a Hamiltonian in the $w$-plane that is
     \Delta e^{-(u-iv)}(\partial_u +i\partial_v) & e^{-2u}\dfrac{\nabla^2}{2m} + \mu
   \end{bmatrix}
 \end{align}
+
+As a sanity check we take the solution from the $z$-plane and transform it to the $w$-plane to see if we can get a zero energy solution out. 
+In the $z$-plane the zero energy edge state with $k_y = 0$ has the following form
+\begin{equation}
+  \Psi(x) = \mathcal N (e^{-\lambda_1 x}-e^{-\lambda_2 x}) \phi_{x,+}
+\end{equation}
+
+Whereas, in the $w$-plane it is
+\begin{equation}
+  \Psi(u,v) = \mathcal N' (e^{-\lambda_1 e^u \cos{v}}-e^{-\lambda_2 e^u \cos{v}}) \phi
+\end{equation}
+
+Applying the transformed Hamiltonian onto the new eigen state we should get zero.
+Skipping some derivative steps we arrive at 
+\begin{align*}
+  H_{top row}\Psi(u,v) &= -e^{-2u} \left(\dfrac{\lambda_j^2}{2m} e^{2u} e^{-\lambda_j e^u \cos{v}}\right) -\mu e^{-\lambda_j e^u \cos{v}} \\
+  &- \Delta e^{-(u+iv)} (\lambda_j\cos{v} + i \lambda_j \sin{v}) e^u e^{-\lambda_j e^u \cos{v}} \\
+  H_{top row}\Psi(u,v) &= -\left(\dfrac{\lambda_j^2}{2m} +\mu - \Delta \lambda_j \right) e^{-\lambda_j e^u \cos{v}}
+\end{align*}
+
+In the $z$-plane it is easy to show
+\begin{equation}
+  \lambda = m\Delta \pm \sqrt{m^2\Delta^2 - 2m\mu}
+\end{equation}
+
+\section{Derivation of a Wedge Corner State using Conformal Mapping}
+
+As noted before we used $w = \ln{z}$ on a semi-infinite plane lying in the negative $x$-plane.
+We will use the same mapping on a wedge geometry.
+We define the wedge so it is symmetric about the $x$-axis and opening in the positive direction.
+Thus, we define $\Psi(r,\phi_0/2 \leq \phi \leq -\phi_0/2) = 0$.
+For our specific problem $\phi_0 = \pi / 3$, however, we will solve for a general case.
+The Hamiltonian for a wedge in the $z$-plane is
+\begin{align}
+  \Ham = 
+  \begin{bmatrix}
+    -\dfrac{\nabla^2}{2m} - \mu & \Delta (-\partial_u + i \partial_v) \\
+    \Delta (\partial_u +i\partial_v) & \dfrac{\nabla^2}{2m} + \mu
+  \end{bmatrix}
+\end{align}
+
+Again, using the previous mapping the transformed Hamiltonian is
+\begin{align}
+  \Ham = 
+  \begin{bmatrix}
+    -e^{-2u}\dfrac{\nabla^2}{2m} - \mu & \Delta e^{-(u+iv)} (-\partial_u + i \partial_v) \\
+    \Delta e^{-(u-iv)}(\partial_u +i\partial_v) & e^{-2u}\dfrac{\nabla^2}{2m} + \mu
+  \end{bmatrix}
+\end{align}
+
+Now, in the $w$-plane we need to solve for a general solution.
+A good guess at an ansatz would to use
+\begin{align*}
+  \psi(x,y) = \exp{a x + i b y} \\
+  \psi(u,v) = \exp(\lambda e^u \cos{v} + n e^u \sin{v} )
+\end{align*}
+
+***As a side note for further study, I think separation of variables doesn't have to be solely $\Psi = F(x)G(y)$ but can have more convenient forms similar to solving the radial problem, in this case $\Psi = \exp(F(x)G(y))$.
+Applying our Hamiltonian to the trial wave function we find a relation between the two quantum numbers given as
+\begin{align*}
+  \lambda^2 + n^2 & = \left(m\Delta \pm \sqrt{m^2\Delta^2 - 2m\mu}\right)^2 = \beta_{\pm}^2 \\
+  \lambda &= \pm \left(\beta_{\pm}^2 - n^2 \right)^{1/2}
+\end{align*}
+
+
