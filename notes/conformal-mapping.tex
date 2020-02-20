@@ -139,6 +139,7 @@ As noted before we used $w = \ln{z}$ on a semi-infinite plane lying in the negat
 We will use the same mapping on a wedge geometry.
 We define the wedge so it is symmetric about the $x$-axis and opening in the positive direction.
 Thus, we define $\Psi(r,\phi_0/2 \leq \phi \leq -\phi_0/2) = 0$.
+We will also let the function go to zero as $r$ goes to infinity, $\Psi(r\to\infty,\phi)=0$.
 For our specific problem $\phi_0 = \pi / 3$, however, we will solve for a general case.
 The Hamiltonian for a wedge in the $z$-plane is
 \begin{align}
@@ -165,7 +166,6 @@ A good guess at an ansatz would to use
   \psi(u,v) = \exp(\lambda e^u \cos{v} + n e^u \sin{v} )
 \end{align*}
 
-***As a side note for further study, I think separation of variables doesn't have to be solely $\Psi = F(x)G(y)$ but can have more convenient forms similar to solving the radial problem, in this case $\Psi = \exp(F(x)G(y))$.
 Applying our Hamiltonian to the trial wave function we find a relation between the two quantum numbers given as
 \begin{align*}
   \lambda^2 + n^2 & = \left(m\Delta \pm \sqrt{m^2\Delta^2 - 2m\mu}\right)^2 = \beta_{\pm}^2 \\
