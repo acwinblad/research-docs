@@ -1,4 +1,4 @@
-\documentclass[xcolor=dvipsnames,10pt]{beamer}
+\documentclass[xcolor=dvipsnames,9pt]{beamer}
 %\usetheme[hideallsubsections]{Hannover}
 \usetheme{Hannover} % plenty of themes to pick from
 \graphicspath{{../../images/}}
@@ -9,6 +9,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{textpos}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
 \usecolortheme{crane} % plenty of color themes to pick from
 \useinnertheme{rectangles}
 
@@ -36,7 +40,7 @@
 \setbeamertemplate{section in toc}{\hspace*{0em}\inserttocsection}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
 
-\newcommand{\TT}{Transition from 2D to 1D topological superconductivity in a triangular island of a p-wave superconductor}
+\newcommand{\TT}{Transition from 2D to 1D topological superconductivity in a triangular p-wave superconductor island}
 \newcommand{\MO}{Motivation}
 \newcommand{\DE}{Derivation}
 \newcommand{\RE}{Results}
@@ -65,12 +69,43 @@
   \section{\MO}
   \begin{frame}
     \frametitle{\MO}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    \begin{multicols}{2}
+
+    \begin{itemize}
+      \item Ivanov shows p-wave superconductors allow for braiding in 2D systems 
+        \begin{itemize}
+          \item Are there any p-wave superconductors?
+          \item Two potential candidates X and Y
+          \item Effective p-wave superconductors
+        \end{itemize}
+      \item Alicea proposes a quasi-2D T-junction
+        \begin{itemize}
+          \item Unresolved task of simultaneously braiding and measuring in T-junctions
+          \item Not two-dimensional
+          \item Is the braiding equivalent?
+        \end{itemize}
+    \end{itemize}
+
+    \begin{figure}
+      \includegraphics[width=0.4\textwidth]{../../images/t-junction.pdf}
+    \end{figure}
+    \end{multicols}
   \end{frame}
 
   \begin{frame}
     \frametitle{\MO}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    \begin{multicols}{2}
+
+    \begin{itemize}
+      \item Consider triangular islands which are topologically similar to T-junctions 
+      \item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces
+    \end{itemize}
+
+    \begin{figure}
+      \includegraphics[width=0.5\textwidth]{../../images/triangular-islands.pdf}
+    \end{figure}
+    \end{multicols}
   \end{frame}
 
   \section{\DE}
@@ -97,7 +132,17 @@
   \section{\RE}
   \begin{frame}
     \frametitle{\RE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    \begin{figure}
+      \begin{tikzpicture}
+        \draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+
+        \node[inner sep=0pt] (figure) at (-1,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-1.pdf}};
+        \node[inner sep=0pt] (figure) at (3,0) {a figure}
+      \end{tikzpicture}
+    \end{figure}
+
   \end{frame}
 
   \begin{frame}
