@@ -1,4 +1,4 @@
-\documentclass[xcolor=dvipsnames,9pt]{beamer}
+\documentclass[xcolor=dvipsnames,10pt]{beamer}
 %\usetheme[hideallsubsections]{Hannover}
 \usetheme{Hannover} % plenty of themes to pick from
 \graphicspath{{../../images/}}
@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{textpos}
 \usepackage{multicol}
+\usepackage{bm}
 \usepackage{tikz}
 \usepackage{verbatim}
 \usetikzlibrary{arrows,shapes}
@@ -40,10 +41,12 @@
 \setbeamertemplate{section in toc}{\hspace*{0em}\inserttocsection}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
 
+\newcommand{\ham}{\mathcal{H}}
+
 \newcommand{\TT}{Transition from 2D to 1D topological superconductivity in a triangular p-wave superconductor island}
 \newcommand{\MO}{Motivation}
-\newcommand{\DE}{Derivation}
-\newcommand{\RE}{Results}
+\newcommand{\FO}{Formulation}
+\newcommand{\DA}{Data}
 \newcommand{\CO}{Conclusion}
 
 \title{\TT}
@@ -79,11 +82,10 @@
           \item Two potential candidates X and Y
           \item Effective p-wave superconductors
         \end{itemize}
-      \item Alicea proposes a quasi-2D T-junction
+      \item Alicea proposes a quasi-1D T-junction
         \begin{itemize}
-          \item Unresolved task of simultaneously braiding and measuring in T-junctions
-          \item Not two-dimensional
-          \item Is the braiding equivalent?
+          \item Has not been successfully imlemented experimentally
+          \item Non-Abelian statistics of Majorana fermions is meaningful only in 2D
         \end{itemize}
     \end{itemize}
 
@@ -100,6 +102,9 @@
     \begin{itemize}
       \item Consider triangular islands which are topologically similar to T-junctions 
       \item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces
+        \begin{itemize}
+          \item Triangular Co islands on Cu(111)
+        \end{itemize}
     \end{itemize}
 
     \begin{figure}
@@ -108,52 +113,114 @@
     \end{multicols}
   \end{frame}
 
-  \section{\DE}
+  \section{\FO}
   \begin{frame}
-    \frametitle{\DE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    \frametitle{\FO: Tunable superconductor device}
+
+    \begin{figure}
+      \includegraphics[width=0.5\textwidth]{../../images/tunable-semiconductor.pdf}
+    \end{figure}
+
+    \center\small
+    Effective p-wave Hamiltonian
+    \begin{gather}
+      \ham = \ham_0 + \ham_{SC} + \ham_R + \ham_Z
+    \end{gather}
+
+    \begin{gather}
+      \ham = \sum_j \left((6t - \mu) c_j^{\adjoint} c_j + c_j^{\adjoint} \bm{V} \cdot \bm{\sigma} c_j \notag\\  
+      + (\Delta c_{j\uparrow}^{\adjoint} c_{j\downarrow}^{\adjoint} + h.c) \right) \notag\\
+      -\sum_{<j,k>} \left( t c_j^{\adjoint} c_k + h.c. + it_R c_j^{\adjoint} \bm{\sigma} \times \bm{r}_{jk} \cdot \hat{\bm{z}}_k \right)
+    \end{gather}
+
   \end{frame}
 
+  \section{\DA}
   \begin{frame}
-    \frametitle{\DE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  \end{frame}
-
-  \begin{frame}
-    \frametitle{\DE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  \end{frame}
-
-  \begin{frame}
-    \frametitle{\DE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  \end{frame}
-
-  \section{\RE}
-  \begin{frame}
-    \frametitle{\RE}
+    \frametitle{\DA: Zero in-plane Zeeman field}
 
     \begin{figure}
       \begin{tikzpicture}
-        \draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-
-        \node[inner sep=0pt] (figure) at (-1,0)
+        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+        \node[inner sep=0pt] (figure) at (-3,0)
         {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-1.pdf}};
-        \node[inner sep=0pt] (figure) at (3,0) {a figure}
+        \node[inner sep=0pt] (figure) at (2.5,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-2.pdf}};
+        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
       \end{tikzpicture}
     \end{figure}
 
   \end{frame}
 
   \begin{frame}
-    \frametitle{\RE}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    \frametitle{\DA: Nonzero in-plane Zeeman field}
+
+    \begin{figure}
+      \begin{tikzpicture}
+        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+        \node[inner sep=0pt] (figure) at (-3,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-1-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (2.5,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-2-in-plane.pdf}};
+        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+      \end{tikzpicture}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{\DA: DOS spectral flow}
+
+    \begin{figure}
+      \begin{tikzpicture}
+        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=.75\textwidth]{../../images/spectral-flow-dos.pdf}};
+      \end{tikzpicture}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{\DA: DOS at the vertices}
+
+    \begin{figure}
+      \begin{tikzpicture}
+        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+        \node[inner sep=0pt] (figure) at (-3,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/dos-upper-vertex.pdf}};
+        \node[inner sep=0pt] (figure) at (2.5,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/dos-lower-vertex.pdf}};
+        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+      \end{tikzpicture}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{\DA: A closer look}
+
+    \begin{figure}
+      \begin{tikzpicture}
+        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+        \node[inner sep=0pt] (figure) at (-3,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/dos-upper-vertex-zoomed.pdf}};
+        \node[inner sep=0pt] (figure) at (2.5,0)
+        {\includegraphics[width=0.5\textwidth]{../../images/dos-lower-vertex-zoomed.pdf}};
+        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+      \end{tikzpicture}
+    \end{figure}
   \end{frame}
 
   \section{\CO}
   \begin{frame}
     \frametitle{\CO}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    \begin{itemize}
+      \item Majorana-like corner states for both zero and nonzero in-plane Zeeman fields.
+      \item Introduction of in-plane Zeeman field breaks the three-fold symmetry yielding two-fold symmetry.
+      \item Future work
+        \begin{itemize}
+          \item Derive an analytical description of corner states
+          \item Develop robust braiding formulation
+        \end{itemize}
+    \end{itemize}
   \end{frame}
 
 
