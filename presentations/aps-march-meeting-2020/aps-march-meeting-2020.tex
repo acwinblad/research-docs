@@ -1,19 +1,19 @@
 \documentclass[xcolor=dvipsnames,10pt,aspectratio=169]{beamer}
 %\usetheme[hideallsubsections]{Hannover}
-\usetheme[width=1.75cm]{Hannover} % plenty of themes to pick from
+\usetheme[width=1.9cm]{Hannover} % plenty of themes to pick from
 \graphicspath{{../../images/}}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{graphicx,hyperref,url}
+\usepackage{braket}
+\usepackage{bm}
 \usepackage{textpos}
 \usepackage{multicol}
-\usepackage{bm}
+\usepackage{graphicx,hyperref,url}
 \usepackage{tikz}
 \usepackage{verbatim}
-\usepackage{braket}
 \usetikzlibrary{arrows,shapes}
 \usecolortheme{crane} % plenty of color themes to pick from
 \useinnertheme{rectangles}
@@ -25,53 +25,63 @@
 \setbeamercolor{palette secondary}{bg=UBCgreen,fg=white}
 \setbeamercolor{palette tertiary}{bg=UBCgreen,fg=white}
 \setbeamercolor{palette quaternary}{bg=UBCgreen,fg=white}
-\setbeamercolor{palette sidebar primary}{fg=UBCgreen,bg=UBCgold}
-\setbeamercolor{palette sidebar secondary}{fg=UBCgreen,bg=UBCgold}
-\setbeamercolor{palette sidebar tertiary}{fg=UBCgreen,bg=UBCgold}
-\setbeamercolor{palette sidebar quaternary}{fg=UBCgreen,bg=UBCgold}
+\setbeamercolor{palette sidebar primary}{fg=black,bg=UBCgold}
+\setbeamercolor{palette sidebar secondary}{fg=black,bg=UBCgold}
+\setbeamercolor{palette sidebar tertiary}{fg=black,bg=UBCgold}
+\setbeamercolor{palette sidebar quaternary}{fg=black,bg=UBCgold}
 \setbeamercolor{structure}{fg=UBCgreen} % itemize, enumerate, etc
 \setbeamercolor{section in toc}{fg=UBCgreen} % TOC sections
 \setbeamercolor{subsection in head/foot}{bg=UBCgold,fg=white}
 \setbeamercolor{section in sidebar}{fg=UBCgreen}
 \setbeamercolor{section in sidebar}{fg=UBCgreen}
+\setbeamerfont{section in sidebar}{size=\small}
+\setbeamerfont{title in sidebar}{size=\tiny}
+\setbeamerfont{author in sidebar}{size=\tiny}
 \setbeamertemplate{page number in head/foot}[totalframenumber]
 \setbeamertemplate{navigation symbols}{\footnotesize\usebeamertemplate{page number in head/foot}}
 \setbeamertemplate{frametitle}[default][left,colsep=-4bp,rounded=false]
 \setbeamertemplate{section in toc}[bullets]
-%\addtobeamertemplate{frametitle}{}{%
-%    \begin{textblock*}{100mm}(0.95\textwidth,-0.95cm)
-%    \includegraphics[width=0.925cm]{CSU-Ram-357-617.pdf}
-%    \end{textblock*}
-%}
+\addtobeamertemplate{title page}{}{%
+    \begin{textblock*}{100mm}(0.445\textwidth,-22.4em)
+      \includegraphics[width=1.5cm]{CSU-Ram-357-617.pdf}
+    \end{textblock*}
+}
+\addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{100mm}(0.95\textwidth,-0.95cm)
+    \includegraphics[width=0.925cm]{CSU-Ram-357-617.pdf}
+    \end{textblock*}
+}
 \makeatletter
 \setbeamertemplate{sidebar canvas \beamer@sidebarside}%
                   [vertical shading][top=UBCgold,bottom=UBCgold]
 \makeatother
 
-\addtobeamertemplate{sidebar left}{}{
-  \hspace{0.3cm}
-  \vspace{0.2cm}
-  \includegraphics[align = l, width = 1cm]{CSU-Ram-357-617.pdf}
-}
+%\addtobeamertemplate{sidebar left}{}{
+%  \hspace{0.3cm}
+%  \vspace{0.2cm}
+%  \includegraphics[align = l, width = 1cm]{CSU-Ram-357-617.pdf}
+%}
 
 %\setbeamertemplate{section in toc}{\hspace*{0em}\inserttocsection}
 %\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
 
 \newcommand{\ham}{\mathcal{H}}
-\newcommand{\TT}{Transition from 2D to a 1D topological superconductivity in a triangular p-wave superconductor island}
-\newcommand{\ST}{Transtition from 2D to a 1D topological p-wave superconductor }
+\newcommand{\TT}{Transition from 2D to 1D topological superconductivity in a triangular island of p-wave superconductor}
+\newcommand{\ST}{Transtition from 2D to 1D topological p-wave superconductor}
 \newcommand{\MO}{Motivation}
-\newcommand{\PW}{P-wave superconductors and Braiding}
+\newcommand{\PW}{P-wave superconductors and braiding}
 \newcommand{\EF}{Effective p-wave and triangular islands}
 \newcommand{\FO}{Formulation}
 \newcommand{\RE}{Results}
-\newcommand{\CO}{Summary}
+\newcommand{\ED}{Energy dispersion and edge states.}
+\newcommand{\DO}{Density of states}
+\newcommand{\CO}{Summary \& ongoing work}
 
 \title[\ST]{\TT}
 \subtitle{}
 \author[Aidan Winblad]{Aidan Winblad \small \and\\ Hua Chen}
 \institute{Department of Physics \and\\ Colorado State University}
-\date{\small\today}
+\date{\small March 2, 2020}
 
 \begin{document}
 
@@ -82,16 +92,17 @@
   \begin{frame}
   \frametitle{Outline}
     \begin{itemize}
-      \item \MO
+      \item \MO:
         \begin{itemize}
-          \item \PW
-          \item \PE
+          \item P-wave superconductors and braiding.
+          \item 1D wires and T-junctions.
+          \item Triangular structures for braiding.
         \end{itemize}
-      \item \FO
-      \item \RE
+      \item \FO \ of an effective p-wave superconductor.
+      \item \RE:
         \begin{itemize}
-          \item 
-          \item 
+          \item \ED
+          \item \DO
         \end{itemize}
       \item \CO
     \end{itemize}
@@ -103,20 +114,21 @@
     \begin{multicols}{2}
 
     \begin{itemize}
-      \item P-wave superconductors exhibit non-Abelian statistices by braiding half-quantum vortices.
+      \item P-wave superconductors contain half-quantum vortices.
         \begin{itemize}
           \item Majorana fermions located at core of a vortex.
+          \item Braiding vortices exhibits Non-Abelian statistics.
         \end{itemize}
-      \item 1D p-wave superconductors host Majorana fermions at end points.
+      \item 1D p-wave superconductors host Majorana fermions on end points.
         \begin{itemize}
-          \item Measured in real systems using effective p-wave superconductors.
-          \item Mourik, \textit{Science} \textbf{336}, 1003 (2012).
-          \item Nadj-Perge, \textit{Science} \textbf{346}, 602 (2014).
+          \item Measured in real systems: 
+          \item[] \hspace{0.45em}\scriptsize Mourik, \textit{Science} \textbf{336}, 1003 (2012).
+          \item[] \hspace{0.50em}\scriptsize Nadj-Perge, \textit{Science} \textbf{346}, 602 (2014).
         \end{itemize}
-      \item Quasi-1D T-junction.
+      \item Quasi-1D T-junction
         \begin{itemize}
-          \item Non-Abelian statistics of Majorana fermions is meaningful only in 2D.
-          \item In practice challenging to make T-junction networks.
+          \item Braiding of Majorana fermions is only meaningful in 2D.
+          \item In practice challenging to make T-junctions.
         \end{itemize}
     \end{itemize}
 
@@ -124,7 +136,7 @@
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
         {\includegraphics[width=0.25\textwidth]{../../images/t-junction.pdf}};
-        \node[inner sep=0pt] (caption) at (0,-3.2) {\small Alicea, \textit{Nature Phys.} \textbf{7}, 412 (2011)}
+        \node[inner sep=0pt] (reference) at (0,-3.2) {\small Alicea, \textit{Nature Phys.} \textbf{7}, 412 (2011)}
         \end{tikzpicture}
       \end{figure}
     \end{multicols}
@@ -138,8 +150,7 @@
     \begin{itemize}
       \item Consider triangular islands, topologically similar to T-junctions.
       \item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces.
-      \item Triangular Co islands on Cu(111).
-      \item Good platform for transition from 2D to a 1D topological superconductor.
+      \item Good platform for transition from 2D to 1D topological superconductor.
     \end{itemize}
     \newline
 
@@ -147,7 +158,8 @@
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
         {\includegraphics[width=0.4\textwidth]{../../images/triangular-islands.pdf}};
-        \node[inner sep=0pt] (caption) at (0,-3.2) {\small Pietzsch, \textit{PRL} \textbf{96}, 237202 (2006)}
+        \node[inner sep=0pt] (caption) at (0,-2.8) {\scriptsize Triangular Co islands on Cu(111).};
+        \node[inner sep=0pt] (reference) at (0,-3.2) {\small Pietzsch et al., \textit{PRL} \textbf{96}, 237202 (2006)}
         \end{tikzpicture}
       \end{figure}
     \end{multicols}
@@ -167,48 +179,82 @@
           \end{tikzpicture}
         \end{figure}
 
+        \footnotesize
     Effective p-wave Hamiltonian:
+    %\vspace{-0.5em}
     \begin{align}
       &\ham_{eff} = \ham_0 + \ham_Z + \ham_{SC} + \ham_R \notag\\
       &\ham_0 = \sum_j (6t - \mu) c_j^{\dagger} c_j -\sum_{\braket{j,k}} (t c_j^{\dagger} c_k + h.c.) \notag\\
       &\ham_Z = \sum_j c_j^{\dagger} \bm{V} \cdot \bm{\sigma} c_j \notag  \\
       &\ham_{SC} = \sum_j (\Delta c_{j\uparrow}^{\dagger} c_{j\downarrow}^{\dagger} + h.c) \notag \\
-      &\ham_R = -it_R\sum_{\braket{j,k}}  c_j^{\dagger} \bm{\sigma} \times \bm{r}_{jk} \cdot \hat{\bm{z}}_k c_j \notag
+      &\ham_R = -it_R\sum_{\braket{j,k}}  c_j^{\dagger} (\bm{\sigma} \times \bm{r}_{jk}) \cdot \hat{\bm{z}} \, c_k \notag
     \end{align}
+
+    Parameter values:
+    %\vspace{-0.5em}
+      \begin{align*}
+        t &= 10 & t_R &= t/2 \\
+        \Delta &= 25 & V_x &= 0 \\
+        V_z &= 1000 & \mu &= V_z+6t \\
+        V_y &= 0.2(n-1) & \text{ for } n &= \text{ 1,2,\dots,130}
+      \end{align*}
+      \vspace{-2.00em}
+      \begin{equation*}
+      \end{equation*}
     \end{multicols}
 
   \end{frame}
 
   \section{\RE}
+
   \begin{frame}
     \frametitle{Zero in-plane Zeeman field}
 
     \begin{figure}
       \begin{tikzpicture}
         %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-        \node[inner sep=0pt] (figure) at (-3,0)
-        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-1.pdf}};
-        \node[inner sep=0pt] (figure) at (2.5,0)
-        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-2.pdf}};
-        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+        \node[inner sep=0pt] (figure) at (-3.35,2)
+        {\includegraphics[width=0.35\textwidth]{../../images/dispersion.pdf}};
+        \node[inner sep=0pt] (figure) at (2.5,2.1)
+        {\includegraphics[width=0.13\textwidth]{../../images/energy-spectra.pdf}};
+        \node[inner sep=0pt] (figure) at (3,-1.8)
+        {\includegraphics[width=0.42\textwidth]{../../images/wavefunction-1.pdf}};
+        \node[inner sep=0pt] (figure) at (-3,-1.8)
+        {\includegraphics[width=0.42\textwidth]{../../images/wavefunction-2.pdf}};
+        \node[inner sep=0pt,overlay] (caption) at (-6.44,3.40) {\footnotesize$V_y = 0$};
+        \pause
+        \draw[blue] (2.77,2.51) ellipse (14pt and 1pt);
+        \draw[blue] (2.77,2.16) ellipse (14pt and 1pt);
+        \draw[blue,->] (2.77,2.51) -- (-0.5,0.);
+        \draw[blue,->] (2.77,2.16) -- (2.77,0.00);
       \end{tikzpicture}
     \end{figure}
 
   \end{frame}
 
   \begin{frame}
-    \frametitle{Nonzero in-plane Zeeman field}
+    \frametitle{Non-zero in-plane Zeeman field}
 
     \begin{figure}
       \begin{tikzpicture}
         %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-        \node[inner sep=0pt] (figure) at (-3,0)
-        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-1-in-plane.pdf}};
-        \node[inner sep=0pt] (figure) at (2.5,0)
-        {\includegraphics[width=0.5\textwidth]{../../images/wavefunction-2-in-plane.pdf}};
-        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+        \node[inner sep=0pt] (figure) at (-3.35,2)
+        {\includegraphics[width=0.35\textwidth]{../../images/dispersion-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (2.5,2.1)
+        {\includegraphics[width=0.13\textwidth]{../../images/energy-spectra-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (-3,-1.8)
+        {\includegraphics[width=0.42\textwidth]{../../images/wavefunction-1-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (3,-1.8)
+        {\includegraphics[width=0.42\textwidth]{../../images/wavefunction-2-in-plane.pdf}};
+        \node[inner sep=0pt,overlay] (caption) at (-6.25,3.40) {\footnotesize$V_y = 4.85$};
+        \pause
+        \draw[blue] (2.77,2.45) ellipse (14pt and 1pt);
+        \draw[blue] (2.77,2.165) ellipse (14pt and 1pt);
+        \draw[blue,->] (2.77,2.45) -- (-0.5,0.);
+        \draw[blue,->] (2.77,2.165) -- (2.77,0.00);
       \end{tikzpicture}
     \end{figure}
+
   \end{frame}
 
   \begin{frame}
@@ -229,11 +275,12 @@
     \begin{figure}
       \begin{tikzpicture}
         %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-        \node[inner sep=0pt] (figure) at (-3,0)
+        \node[inner sep=0pt] (figure) at (-3.2,0)
         {\includegraphics[width=0.5\textwidth]{../../images/dos-upper-vertex.pdf}};
-        \node[inner sep=0pt] (figure) at (2.5,0)
+        \node[inner sep=0pt] (figure) at (3.2,0)
         {\includegraphics[width=0.5\textwidth]{../../images/dos-lower-vertex.pdf}};
-        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+        \node[inner sep=0pt] (upper) at (3.1,2.5) {\small lower vertex};
+        \node[inner sep=0pt] (lower) at (-3.3,2.5) {\small upper vertex};
       \end{tikzpicture}
     \end{figure}
   \end{frame}
@@ -244,68 +291,30 @@
     \begin{figure}
       \begin{tikzpicture}
         %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-        \node[inner sep=0pt] (figure) at (-3,0)
+        \node[inner sep=0pt] (figure) at (-3.2,0)
         {\includegraphics[width=0.5\textwidth]{../../images/dos-upper-vertex-zoomed.pdf}};
-        \node[inner sep=0pt] (figure) at (2.5,0)
+        \node[inner sep=0pt] (figure) at (3.2,0)
         {\includegraphics[width=0.5\textwidth]{../../images/dos-lower-vertex-zoomed.pdf}};
-        %\node[inner sep=0pt] (figure) at (3,0) {a figure}
+        \node[inner sep=0pt] (upper) at (3.1,2.5) {\small lower vertex};
+        \node[inner sep=0pt] (lower) at (-3.3,2.5) {\small upper vertex};
       \end{tikzpicture}
     \end{figure}
   \end{frame}
 
-  \section{\CO}
+  \section[Summary]{\CO}
   \begin{frame}
-    \frametitle{Summary}
+    \frametitle{\CO}
     \begin{itemize}
-      \item Numerical effects due to finite size do not give exact zero energy wavefunctions.
       \item Introduction of in-plane Zeeman field breaks the three-fold symmetry yielding two-fold symmetry.
+      \item Trend shows 1D edge state energies approaching zero.
+      \item Numerical effects due to finite size do not give exact zero energy wavefunctions.
       \item Next steps
         \begin{itemize}
           \item Complete analytical description of corner states.
-          \item Infinite wedge.
           \item Develop robust braiding formulation.
         \end{itemize}
     \end{itemize}
   \end{frame}
-
-
-%  \begin{frame}
-%  \frametitle{List}
-%  \begin{itemize}
-%  \item Point A
-%  \item Point B
-%  \begin{itemize}
-%  \item part 1
-%  \item part 2
-%  \end{itemize}
-%  \item Point C
-%  \item Point D
-%  \end{itemize}
-%  \end{frame}
-%
-%  \begin{frame}
-%    \frametitle{Enumerate}
-%    \begin{enumerate}[]
-%  \item Point A
-%  \item Point B
-%  \begin{enumerate}[i]
-%  \item part 1
-%  \item part 2
-%  \end{enumerate}
-%  \item Point C
-%  \item Point D
-%  \end{enumerate}
-%  \end{frame}
-%
-%  \begin{frame}
-%  \frametitle{Using Columns}
-%    \begin{columns}
-%      \column{0.5\textwidth}
-%      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-%      \column{0.5\textwidth}
-%      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-%    \end{columns}
-%  \end{frame}
 
 \end{document}
 
