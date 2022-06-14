@@ -1,0 +1,83 @@
+Hello, thank you for the introduction.
+
+/// Outline
+
+Let's get started.
+This talk is outlined as follows.
+I talk about the motivation behind the research, p-wave superconductors, T-junction wires, and triangular structures.
+Followed by some formulation, which includes some of my previous work then why decide to include a Peierls substitution into Kitaev's model.
+The results will be next where I talk about topological phase of our system, show Majorana zero-modes on a triangular chain and a hollow triangle.
+Finally I wrap it all up and talk briefly about next steps.
+
+/// Motivation 1
+
+We know p-wave superconductors have half-quantum vortices which are theorized to host Majorana fermions at their cores. We also have literature that says if we braid these Majorana fermions they exhibit non-abelian statistics which would allow for quantum computation.
+We have seen 1D p-wave superconductors host Majorana fermions on the end points in theory. We also have possibly seen them in real systems.
+A decade ago it was proposed to use these wires in a quasi-1D T-junction setup. This engineering would allow us to potential braid Majorana fermions about the 3 points of a T-junction. However, we don't have a robust theory for braiding in 1D, only 2D. It is also challenging in practice to build, but still feasible and seriously pursued.
+
+/// Transition
+We wanted to expand on the idea of T-junction and it's 3 points but go to 2D, which leads us to triangular islands.
+
+/// Motivation 2
+We can consider triangular islands as topologically similar to T-junctions.
+An advantage this has is it's easier to grow these in lab.
+We think this is a good platform for realizing a transition from a 2D to 1D topological superconductor.
+
+/// Transition
+Now we will move onto some of the previous research I've done.
+
+/// Previous Work
+Before we tried using an effective p-wave superconductor with an applied magnetic field along an axis of symmetry (mainly the y-axis).
+In the figure to the right we have the energy dispersion for a slice in k-space, you can see as we increase the magnetic field strength our band gap shrinks.
+This leads me to the next figure in the bottom left. Here we are looking at a finite system's energy spectra with the same applied magnetic field. The blue lines show the band gap we saw before. You'll notice we have many edge states within the band gap and some near zero energy.
+The figure in the bottom right shows us the wavefunction of near zero energy quasiparticle. You can see appling such a field has broken the 3-fold symmetry and has pushed our paricles to be hosted near the bottom two corners.
+
+/// Transition
+We ran into two problems here. Firstly, we weren't getting Majorana zero-modes. Secondly, these near zero modes live in the continuum of edge states and isn't safe.
+
+/// Kitaev Limit with Vector Potential on a triangular island
+We instead switched gears and incorporated a vector potential field into a p-wave superconductor.
+To do this we simply include a Peierls substitution into our generalized p-wave superconductor Hamiltonian.
+We determined in the Majorana fermion basis we could isolate a single Majorana fermion at one corner of a triangular superconductor using a constant vector potential along the y-axis. Later I will show it works for a linear vector potential as well (any odd function most likely will work).
+
+/// Transition
+This is good but even with this setup the Majorana zero-modes would still live in a continuum of edge states. We also need to check how does using a vector potential affect our topological phase.
+
+/// Majorana Number of 1D chain with Vector potential
+We take a step back here and use the previous Hamiltonian for a 1D chain.
+We set t=delta and leave mu and phi to be variables.
+The figure shown here is the corresponding Majorana number phase diagram.
+The blue regions show where our system is in a non-trivial topological phase and yellow tells us it's in a trivial phase.
+This shows us that a vector potential induces a topological phase transition.
+Then, in the figure at the bottom, we show that if we set mu=0 and set phi=pi, we can achieve something similar but not identical to Kitaev's chain.
+Namely, the b_1 and a_N sites are uncoupled rather than a_1 and b_N that he showed.
+This information is helpful in telling us we will still be in a non-trivial phase and will become more useful when we look outside of mu=0.
+
+/// Transition
+Now, let's move onto results of a triangular chain.
+
+/// Triangular Chain
+The solution we picked to try an remove the number of edge states is to simply introduce a large gap on the interior points such that it's in a trivial phase and can be effectively ignored.
+The rest of the system will use the Kitaev limit, t=delta and mu = 0.
+We then apply a vector potential field to our triangular chain.
+In this example we chose a linear relationship describe here.
+The following equation is the critical vector potential strength for our system to achieve MZM's at the bottom two corners.
+In this bottom left figure we have the vector potential field plotted.
+In the top right figure we show the spectral flow of how the energies change as a function of the vector potential strength. The dotted vertical line is located at the critical strength. Here we can see as we reach that value it appears the energy modes reach zero energy, as expected.
+Then, in the figure below it we plot one of those zero-modes. As can be seen we have high probabilities of our potential MZMs at the bottom two corners.
+
+/// Transition
+This is good but producing these chains may not be as feasible as producing a finite width for the edges. So next we look at a hollow triangle.
+
+/// Hollow Triangle
+Here we can see similar results for a hollow triangle.
+The same behavior of energy modes moving towards zero energy as we reach the critical strength.
+Plotting one of the zero-modes we see yet again that the MZMs want to be hosted at the bottom two corners of the triangle.
+
+/// Summary
+Alright, let's wrap this up.
+I have shown that introducing a vector potential allows for additional tunability of topology.
+Triangular islands with a gapped interior can be a promising platform for hosting and manipulating MZMs.
+Next we will search for safe MZMs in hollow triangles outside the Kitaev limit, using our Majorana number phase diagram as a guide.
+Then, we will work on developing a robust braiding scheme.
+

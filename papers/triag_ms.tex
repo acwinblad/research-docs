@@ -1,0 +1,137 @@
+\documentclass[aps,prb,showpacs,twocolumn,amsmath,amssymb,superscriptaddress]{revtex4-2}
+
+\usepackage{tabularx}
+\usepackage{bm}
+%\usepackage[demo]{graphicx}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor= blue,citecolor=blue,linkcolor= blue,bookmarks=true,bookmarksopen=false}
+
+\usepackage{color}
+
+\usepackage{amsmath,mathtools}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{amssymb,amscd,xypic,bm,wasysym}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage[caption=false,position=top,captionskip=0pt,farskip=0pt]{subfig}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
+
+
+\newcommand{\Red}[1]{\textcolor{red}{#1}}
+%\newcommand{\vb}[1]{\boldsymbol{#1}}
+\usepackage{soul}
+
+% reset vec and hat style to a bold type
+\let\oldhat\hat
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+% stretches the vertical spacing of arrays/matrices
+\renewcommand{\arraystretch}{1.5}
+\setlength{\jot}{10pt}
+
+\newcommand{\Ham}{\mathcal{H}}
+\newcommand{\ke}{k_{\epsilon}}
+\newcommand{\kpm}{k_{\pm}}
+\newcommand{\sx}{\sigma_x}
+\newcommand{\sy}{\sigma_y}
+\newcommand{\sz}{\sigma_z}
+\newcommand{\so}{\sigma_0}
+\newcommand{\cc}{c^{\dagger}}
+\newcommand{\de}{\Delta}
+
+\begin{document}
+
+\title{Superconducting triangular islands as a platform for manipulating Majorana fermions}
+
+\author{Aidan Winblad}
+\affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}
+
+\author{Hua Chen}
+\affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}
+\affiliation{School of Advanced Materials Discovery, Colorado State University, Fort Collins, CO 80523, USA}
+
+
+\begin{abstract}
+  \Red{PLACEHOLDER**APS MM 2022 Abstract}
+  We study the possibility of obtaining robust Majorana modes at the corners of triangular islands of different superconductor models, with the goal of finding alternative structures that can serve as building blocks of topological quantum computation.
+  By considering both spinless p-wave and ferromagnetic Rashba s-wave superconductor models on an equilateral triangle subject to inhomogeneous supercurrents, we found that Majorana corner modes can generally appear if the system being considered can be made equivalent to a triangular chain model, which can be understood by calculating the bulk Z2 topological invariant.
+  We also discussed the robustness of the corner modes in possible experimental realizations of the triangular islands.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\Red{PLACEHOLDER}
+
+
+\Red{OUTLINE: (Sec I is \dots, Sec II is \dots)}
+\section{Linear vector potential effects on 1D chains}
+\Red{PLACEHOLDER}
+\subsection{\Red{Gap closing/reopening (Topological Change) and phase diagram}}
+Recent work has predicted that placing a supercurrent along a superconducting chain can induce a topological phase change.
+Another way of thinking about this is there is a constant vector potential that induces a constant phase on the hopping amplitudes on the superconducting chain.
+Here we will show that using a linear vector potential can also induce a topological phase change, i.e. clsoing and reopening a gap.
+\Red{Maybe here we can state the Hamiltonian in the supplementary? Explain we can't solve this analytically, thus we proceed with a numerical approach starting with the lattice space Hamiltonian.}
+Let us start with the Hamiltonian of a Kitaev chain
+\begin{equation}
+  \Ham = \sum_j (-t\cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j,
+\end{equation}
+where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, and $\mu$ is the chemical potential.
+Next, we will apply Peierls substitution to our creation(annihilation) operators
+\begin{align}
+  \cc_{j+1} c_j &\rightarrow \cc_{j+1} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{j+1}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
+  &\rightarrow \cc_{j+1} c_j e^{i \phi_{j+1,j}}.
+\end{align}
+Here the electron charge, $e$, and Planck's constant, $\hbar$, will be treated as natural numbers. The vector potential will be linear, symmetric about the y-axis, and point along the x-axis, $\vec{A} = Bx\hat{x}$ for $-L/2 \leq x \leq L/2$.
+One finds that $t$ is the only term that picks up a phase, thus our modified Hamiltonian looks like
+\begin{equation}
+  \Ham = \sum_j (-t e^{i\phi_{j+1,j}} \cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j.
+\end{equation}
+
+To calculate the Majorana number we need to rewrite our Hamiltonian to be in skew-symmetric form.
+One such way is to write it in Majorana fermion basis, the transformation matrix is of the form
+\[
+  u = \dfrac{1}{\sqrt{2}} \left(
+  \begin{matrix}
+    1 & 1 \\
+    -i & i
+\end{matrix} \right)
+\]
+Since we are in lattice space we need to expand for the system size, we simply include a tensor product with the identity matrix of the size of the system, $U = u \otimes I_n$.
+We can now arrive at the skew-symmetric matrix with the following equation
+\begin{equation}
+  A = -i U \Ham U^{\dagger}.
+\end{equation}
+The Majorana number of a 1D chain is defined as
+\begin{equation}
+  \mathcal{M} = sgn[Pf(A)],
+\end{equation}
+where the $Pf$ stands for the Pfaffian of the skew-symmetric matrix.
+\subsection{\Red{Majorana Edge modes on a double chain}}
+
+\section{Triangular islands}
+\Red{PLACEHOLDER}
+\subsection{\Red{3-site problem and kitaev limit for tri.chain, solid triangle}}
+
+\subsection{\Red{Finite width (hollow triangle)}}
+
+\subsubsection{\Red{Majorana number (PBC)}}
+
+\subsubsection{\Red{Corner modes (open BC)}}
+
+\section{Conclusions and Discussion}
+\Red{PLACEHOLDER}
+
+
+\begin{acknowledgements}
+  Supported by XYZ Grant No. XXXXXX etc.
+\end{acknowledgements}
+
+
+%\bibliography{./triag_ref}
+
+
+\end{document}

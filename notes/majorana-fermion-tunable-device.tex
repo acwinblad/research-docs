@@ -34,15 +34,15 @@ or in a more compact form using $\beta(\vec{k}) = k_y + V_x/\alpha$ and $\gamma(
 giving $\epsilon_{\pm}' = \pm \sqrt{V_z^2+\alpha^2\eta^2(\vec{k})}$ with eigenvectors
 
 \begin{align}
-  u_+(\vec{k})  =  
+  u_+(\vec{k})  =
   \left( \begin{array}{l}
-      A_\uparrow(\vec{k}) \\ 
+      A_\uparrow(\vec{k}) \\
       -A_\downarrow(\vec{k}) \dfrac{\beta(\vec{k}) - i \gamma(\vec{k})}{\eta(\vec{k})}
   \end{array} \right)
   \\ \\
-  u_-(\vec{k})  =  
+  u_-(\vec{k})  =
   \left( \begin{array}{l}
-      B_\uparrow(\vec{k}) \dfrac{\beta(\vec{k}) + i \gamma(\vec{k})}{\eta(\vec{k})}  \\ 
+      B_\uparrow(\vec{k}) \dfrac{\beta(\vec{k}) + i \gamma(\vec{k})}{\eta(\vec{k})}  \\
       B_\downarrow(\vec{k})
   \end{array} \right)
 \end{align}
@@ -52,7 +52,7 @@ One can find $A_{\sigma}=A_{\sigma}^*$ and $B_{\sigma}=B_{\sigma}^*$ and the coe
 \begin{align}
   A_{\uparrow}(\vec{k}) &= \dfrac{-\alpha\eta(\vec{k})}{\sqrt{2\epsilon_+'(\vec{k})}} \sqrt{\dfrac{1}{\epsilon_+'(\vec{k})-V_z}} \\
 A_{\downarrow}(\vec{k}) &= \sqrt{\dfrac{\epsilon_+'(\vec{k})-V_z}{2\epsilon_+'(\vec{k})}} \\
-B_{\uparrow}(\vec{k}) &= \sqrt{\dfrac{\epsilon_-'(\vec{k})+V_z}{2\epsilon_-'(\vec{k})}} \\ 
+B_{\uparrow}(\vec{k}) &= \sqrt{\dfrac{\epsilon_-'(\vec{k})+V_z}{2\epsilon_-'(\vec{k})}} \\
 B_{\downarrow}(\vec{k}) &= \dfrac{\alpha\eta(\vec{k})}{\sqrt{2\epsilon_-'(\vec{k})}} \sqrt{\dfrac{1}{\epsilon_-'(\vec{k})+V_z}}
 \end{align}
 
@@ -102,7 +102,7 @@ We will use a more convenient notation by making the following substitutions
   \Delta_{+-}(\vec{k}) &= \Delta f_s(\vec{k})
 \end{align}
 
-Where 
+Where
 
 \begin{align}
   f_s(\vec{k}) = \left(A_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})-B_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k})\dfrac{\beta(\vec{k})-i\gamma(\vec{k})}{\eta(\vec{k})}\dfrac{\beta(-\vec{k})+i\gamma(-\vec{k})}{\eta(-\vec{k})} \right)
@@ -126,10 +126,10 @@ Then we write the Hamiltonian as, where we have used the conventional BdG approa
   \mathcal{H} = \dfrac{1}{2}\sum\limits_{\vec{k}} \Psi^{\dagger}H_{BdG}\Psi
 \end{align}
 
-with 
+with
 
 \begin{equation}
-  H_{BdG} = 
+  H_{BdG} =
   \begin{bmatrix}
     \epsilon_+(\vec{k}) & 0 & 2\Delta_{++}(\vec{k}) & \Delta_{+-}(\vec{k}) \\
     0 & \epsilon_-(\vec{k}) & -\Delta_{+-}(-\vec{k}) & 2\Delta_{--}(\vec{k}) \\
@@ -138,7 +138,7 @@ with
   \end{bmatrix}
 \end{equation}
 
-where 
+where
 
 \begin{equation}
   \epsilon_{\pm}(\vec{k}) = \dfrac{k^2}{2m} - \mu + \epsilon_{\pm}'(\vec{k})
@@ -147,7 +147,7 @@ where
 We can rearrange our matrix into a more block diagonal form with off terms to give
 
 \begin{equation}
-  H_{BdG} = 
+  H_{BdG} =
   \begin{bmatrix}
     \epsilon_+(\vec{k}) & 2\Delta_{++} & 0 & \Delta_{+-}(\vec{k}) \\
     2\Delta_{++}^* & -\epsilon_+(-\vec{k}) & -\Delta_{+-}^*(-\vec{k}) & 0 \\
@@ -159,7 +159,7 @@ We can rearrange our matrix into a more block diagonal form with off terms to gi
 Upon studying $V_y=V_x=0$ we see that near the fermi surface the interband pairing has little affect on the band gap. Scaling it's effect from $0 \to 1$ we see the intraband gap appears at a slightly smaller momentum as the interband pairing is turned off. We thus use the approximation $\Delta_{+-}(k_f) \approx 0$. We also set $\mu$ such that is only crosses the lower bands, thus allowing $c_+^{\dagger} \to 0$.
 
 \begin{equation}
-  H_{BdG} = 
+  H_{BdG} =
   \begin{bmatrix}
     \epsilon_-(\vec{k}) & 2\Delta_{--}(\vec{k}) \\
     2\Delta_{--}^*(\vec{k}) & -\epsilon_-(-\vec{k}) \\
@@ -216,18 +216,18 @@ Where $V=\sqrt{V_x^2+V_y^2}$ and $\phi=\arg(V_x+iV_y)$
 Let us now consider what has more of an affect on the energy band gap, the diagonal or off-diagonal terms in the Hamiltonian. To start we seperate the Hamiltonian in to two terms using only an applied field in the $y$-direction,
 
 \begin{align}
-  H_{BdG} = H_0 + H_y 
+  H_{BdG} = H_0 + H_y
 \end{align}
 
-Where 
+Where
 
 \begin{align}
-  H_0 &= 
+  H_0 &=
   \begin{bmatrix}
     \epsilon_0(k) & 2\Delta_0(\vec{k}) \\
     2\Delta_0^*(\vec{k}) & -\epsilon_0(k) \\
   \end{bmatrix} \\
-  H_y &= 
+  H_y &=
   \begin{bmatrix}
     \epsilon_y(k_x) & 2\Delta_y \\
     2\Delta_y^* & -\epsilon_y(-k_x) \\
@@ -243,7 +243,7 @@ Here we define
   \Delta_y &= -\dfrac{i\Delta V_y}{2V_z}
 \end{align}
 
-To start we look at when $\epsilon_0(k_0) = 0$, which is the momentum value we would see an energy band gap appear. Determining the orthonormal eigensystem of the base Hamiltonian gives us 
+To start we look at when $\epsilon_0(k_0) = 0$, which is the momentum value we would see an energy band gap appear. Determining the orthonormal eigensystem of the base Hamiltonian gives us
 
 \begin{align}
   \ket{\pm =\pm 2|\Delta_0|} = \dfrac{1}{\sqrt{2}}
@@ -253,7 +253,7 @@ To start we look at when $\epsilon_0(k_0) = 0$, which is the momentum value we w
     \end{bmatrix}
 \end{align}
 
-We then perform the basis transformation 
+We then perform the basis transformation
 
 \begin{align}
   \matrixelement{+}{H_y}{+} &= \dfrac{\alpha k_x V_y}{V_z} \\
@@ -265,11 +265,11 @@ We then perform the basis transformation
 Which can be written in a more compact form as
 
 \begin{align}
-  H_y &= \dfrac{V_y}{V_z} 
+  H_y &= \dfrac{V_y}{V_z}
   \begin{bmatrix}
     \alpha k_x & \frac{1}{2}V_y+i\Delta \\
     \frac{1}{2}V_y-i\Delta & \alpha k_x \\
-  \end{bmatrix} 
+  \end{bmatrix}
 \end{align}
 
-Here we claim that all elements of the matrix are of equal importance due to them all being within the same order of magnitude. 
+Here we claim that all elements of the matrix are of equal importance due to them all being within the same order of magnitude.

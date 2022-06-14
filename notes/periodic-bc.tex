@@ -1,0 +1,77 @@
+\section{Using periodic BC}
+
+\renewcommand\arraystretch{3.0}
+
+\begin{equation}
+  \Ham = \left(\dfrac{k^2}{2m} - \mu\right) \sz + \Delta (\bm{k} \times \bm{\sigma}) \cdot \hat{z}
+\end{equation}
+
+$k^2 = \dfrac{k_x^2}{9} + \dfrac{k_y^2}{3}
+
+\begin{align*}
+  \Ham(\vec{k}) &=
+  \begin{bmatrix}
+    \dfrac{k^2}{2m} -\mu + \dfrac{3\lambda}{2V_z}(k_y V_x - k_x V_y) & \dfrac{\Delta}{2V_z} \left(\dfrac{3\lambda k_y}{2}-V_x +i\left[\dfrac{3\lambda k_x}{2} + V_y \right]\right) \\
+    \dfrac{\Delta}{2V_z} \left(\dfrac{3\lambda k_y}{2}-V_x - i\left[\dfrac{3\lambda k_x}{2} + V_y \right]\right) & -\left(\dfrac{k^2}{2m} -\mu\right) + \dfrac{3\lambda}{2V_z}(k_y V_x - k_x V_y)
+  \end{bmatrix} \\
+\end{align*}
+
+Simplify by setting $V_x = V_y = 0$
+
+\begin{align*}
+  \Ham(\vec{k}) &=
+  \begin{bmatrix}
+    \dfrac{k^2}{2m} -\mu & \dfrac{3\lambda\Delta}{4V_z} (k_y + i k_x) \\
+    \dfrac{3\lambda\Delta}{4V_z} (k_y - i k_x) & -\left(\dfrac{k^2}{2m} -\mu\right)
+  \end{bmatrix} \\
+  \Ham(\vec{r}) &=
+  \begin{bmatrix}
+    -\left( \dfrac{\nabla^2}{2m} + \mu \right) & -\dfrac{3\lambda\Delta}{4V_z} (i \partial_y - \partial_x) \\
+    -\dfrac{3\lambda\Delta}{4V_z} (i \partial_y + \partial_x) & \dfrac{\nabla^2}{2m} + \mu
+  \end{bmatrix}
+\end{align*}
+
+From triangular boundary conditions the following fourier series is used,
+
+\begin{equation}
+  \Psi(x,y) = \sum_{j,k = 0}^{\infty} \exp\left[\dfrac{2\pi i}{a} \left(\dfrac{jx}{3} + \dfrac{ky}{\sqrt{3}} \right) \right]
+\end{equation}
+
+For sake of brevity we will let $ l^2 = j^2/9 + k^2/3 $ and $ 2\pi/a = 1 $ for the remainder of this section
+
+\begin{align*}
+  \Ham\Psi &=
+  \begin{bmatrix}
+    \dfrac{l^2}{2m} -\mu & \dfrac{3\lambda\Delta}{4V_z} \left( \dfrac{k}{\sqrt{3}} + i \dfrac{j}{3} \right) \\
+    \dfrac{3\lambda\Delta}{4V_z} \left( \dfrac{k}{\sqrt{3}} - i \dfrac{j}{3} \right) & -\left(\dfrac{l^2}{2m} -\mu\right)
+  \end{bmatrix}
+  = E\Psi
+\end{align*}
+
+Solving the eigenvalue problem we arrive at
+
+\begin{align*}
+  \dfrac{l^4}{4m^2} - 2\mu \dfrac{l^2}{2m} + \mu^2 - E^2 + \left( \dfrac{3\lambda\Delta}{4V_z} \right)^2 l^2 = 0 \\
+  l^4 - \left( 4m\mu - 4m^2 \left( \dfrac{3\lambda\Delta}{4V_z} \right)^2 \right) l^2 + 4m^2 ( \mu^2 - E^2 ) = 0
+\end{align*}
+
+Solving for $l$ we find
+
+\begin{equation}
+  l^2 = 2m\mu - 2m^2 \left( \dfrac{3\lambda\Delta}{4V_z} \right)^2 \pm \sqrt{4m^2E^2 - 8m^3 \mu \left( \dfrac{3\lambda\Delta}{4V_z} \right)^2 +4m^4 \left( \dfrac{3\lambda\Delta}{4V_z} \right)^4 }
+\end{equation}
+
+Since the fourier series is restricted to integer values the radical needs to be positive.
+The bulk band gap of the system is $3\lambda\Delta k_f/2V_z$, where $k_f = \sqrt{2m\mu}$.
+The third term in the radical is much smaller than the second term.
+Comparing the energy term to the second term we need the following condition to be met.
+
+\begin{equation}
+  E >= \sqrt{2m\mu}\dfrac{3\lambda\Delta}{4V_z} = \dfrac{3\lambda\Delta k_f}{4V_z}
+\end{equation}
+
+The consequence of this inequality tells us that for any combination of $[j, k]$ it will only lead to bulk state energies.
+
+This method works well for Schrodinger's equation using periodic or a infinite barrier to get the same results.
+However, it doesn't seem to translate well to our BdG equation for finding edge states, i.e. switching infinite barriers with periodic conditions.
+

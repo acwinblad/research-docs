@@ -6,6 +6,7 @@
 \usepackage{physics}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
 \usepackage[T1]{fontenc} % important for having seachable underscores
 \usepackage{bm}
 \usepackage[sort&compress,numbers]{natbib}
@@ -19,9 +20,9 @@
 
 % Print only chapters in the Table Of Contents
 \setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2} 
+\setcounter{tocdepth}{2}
 
-% Ensure that blank pages don't have numbers or heading on them 
+% Ensure that blank pages don't have numbers or heading on them
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
  \hbox{}
@@ -41,7 +42,7 @@
 \rfoot{}
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\footskip}{0.25in}
-\setlength{\parindent}{0in}
+%\setlength{\parindent}{0in}
 
 %% This part slightly modifies the default definition of \chapter
 %% (found in book.cls) to add a \hspace{2em} before numbered chapters.
@@ -92,7 +93,7 @@
 %be open
 % pdfdisplaydoctitle=true to show the document title instead of the
 % filename in the titlebar of adobereader
-\usepackage[plainpages=false,breaklinks=true,pdfborder=0 0 0,pdfdisplaydoctitle=true,bookmarksopen=true,bookmarksopenlevel=0,pdftex,%
+\usepackage[plainpages=false,breaklinks=true,pdfborder={0 0 0},pdfdisplaydoctitle=true,bookmarksopen=true,bookmarksopenlevel=0,pdftex,%
 %Comment next line if it makes problems
 %(it requires a recent LaTeX distribution)
             hidelinks,
@@ -108,12 +109,14 @@
 \newcommand{\sy}{\sigma_y}
 \newcommand{\sz}{\sigma_z}
 \newcommand{\so}{\sigma_0}
+\newcommand{\cc}{c^{\dagger}}
+\newcommand{\de}{\Delta}
 \begin{document}
 
 \maketitle
 \tableofcontents
 
-\input{../notes/majorana-fermions-equilateral-triangle.tex}
- 
+\input{../notes/majorana-fermion-notation.tex}
+
 \end{document}
 

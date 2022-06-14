@@ -1,0 +1,61 @@
+\documentclass[aps,prb,showpacs,amsmath,amssymb,superscriptaddress]{revtex4-2}
+
+\usepackage{tabularx}
+\usepackage{bm}
+%\usepackage[demo]{graphicx}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor= blue,citecolor=blue,linkcolor= blue,bookmarks=true,bookmarksopen=false}
+
+\usepackage{color}
+
+\usepackage{amsmath,mathtools}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{amssymb,amscd,xypic,bm,wasysym}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage[caption=false,position=top,captionskip=0pt,farskip=0pt]{subfig}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
+
+
+\newcommand{\Red}[1]{\textcolor{red}{#1}}
+%\newcommand{\vb}[1]{\boldsymbol{#1}}
+\usepackage{soul}
+
+\begin{document}
+	
+\title{Supplementary Material for ``Superconducting triangular islands as a platform for manipulating Majorana fermions"}
+	
+\author{Aidan Winblad}
+\affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}	
+
+\author{Hua Chen}
+\affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}
+\affiliation{School of Advanced Materials Discovery, Colorado State University, Fort Collins, CO 80523, USA}
+
+\maketitle
+
+\section{1D spinless $p$-wave superconductor with a linear vector potential}
+In this section we discuss the topological phases of a 1D spinless $p$-wave superconductor subject to a linear vector potential:
+\begin{eqnarray}
+	H = \int dx \left\{   \psi^\dag(x) \left[ \frac{(p+ebx)^2}{2m} -\mu \right]\psi(x) + \Delta\left[  \psi^\dag(x) \partial_x \psi^\dag(x) + {\rm h.c.} \right] \right\}
+\end{eqnarray} 
+where $p=-i\hbar \partial_x$ is the 1D momentum operator, $b$ is the strength of a nominal magnetic field, $e>0$ is the absolute value of electron charge, $\mu$ is the chemical potential, $\Delta$ is the strength of the $p$-wave pairing potential. Such a vector potential generally exists when a magnetic field along $z$ is applied and can be removed by choosing a different gauge for the vector potential in the absence of superconductivity. This can also be seen from the fact that the $\Delta = 0$ Hamiltonian has eigensolutions 
+\begin{eqnarray}
+	\psi_k(x) = \frac{1}{\sqrt{2\pi L}} e^{i k x - \frac{ieb}{\hbar}x^2},\; \epsilon_k = \frac{\hbar^2 k^2}{2m}.
+\end{eqnarray}
+But when $\Delta \neq 0$, the Hamiltonian is not diagonal in this basis any more. 
+
+The eigenequation in Nambu spinor basis is 
+\begin{eqnarray}
+	\begin{pmatrix}
+		\frac{(-i\hbar \partial_x + eb x)^2}{2m} - \mu & \Delta \partial_x \\
+		-\Delta \partial_x & -\frac{(-i\hbar \partial_x - eb x)^2}{2m} + \mu
+	\end{pmatrix} \Psi = \epsilon \Psi
+\end{eqnarray}
+
+\bibliography{triag_ref}
+
+\end{document}
