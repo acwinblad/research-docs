@@ -69,15 +69,18 @@
 
 \Red{OUTLINE: (Sec I is \dots, Sec II is \dots)}
 \section{Linear vector potential effects on 1D chains}
+
 \Red{PLACEHOLDER}
+
 \subsection{\Red{Gap closing/reopening (Topological Change) and phase diagram}}
+
 Recent work has predicted that placing a supercurrent along a superconducting chain can induce a topological phase change.
 Another way of thinking about this is there is a constant vector potential that induces a constant phase on the hopping amplitudes on the superconducting chain.
 Here we will show that using a linear vector potential can also induce a topological phase change, i.e. clsoing and reopening a gap.
 \Red{Maybe here we can state the Hamiltonian in the supplementary? Explain we can't solve this analytically, thus we proceed with a numerical approach starting with the lattice space Hamiltonian.}
-Let us start with the Hamiltonian of a Kitaev chain
+Let us start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor chain
 \begin{equation}
-  \Ham = \sum_j (-t\cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j,
+  \Ham_{ch} = \sum_j (-t\cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j,
 \end{equation}
 where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, and $\mu$ is the chemical potential.
 Next, we will apply Peierls substitution to our creation(annihilation) operators
@@ -87,8 +90,8 @@ Next, we will apply Peierls substitution to our creation(annihilation) operators
 \end{align}
 Here the electron charge, $e$, and Planck's constant, $\hbar$, will be treated as natural numbers. The vector potential will be linear, symmetric about the y-axis, and point along the x-axis, $\vec{A} = Bx\hat{x}$ for $-L/2 \leq x \leq L/2$.
 One finds that $t$ is the only term that picks up a phase, thus our modified Hamiltonian looks like
-\begin{equation}
-  \Ham = \sum_j (-t e^{i\phi_{j+1,j}} \cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j.
+\begin{equation} \label{eq: Peierls chain}
+  \Ham_{ch} = \sum_j (-t e^{i\phi_{j+1,j}} \cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j.
 \end{equation}
 
 To calculate the Majorana number we need to rewrite our Hamiltonian to be in skew-symmetric form.
@@ -100,21 +103,81 @@ One such way is to write it in Majorana fermion basis, the transformation matrix
     -i & i
 \end{matrix} \right)
 \]
-Since we are in lattice space we need to expand for the system size, we simply include a tensor product with the identity matrix of the size of the system, $U = u \otimes I_n$.
+Since we are in lattice space we need to expand for the system size, we simply include a tensor product with an identity matrix of the size of the system, $U = u \otimes I_n$.
 We can now arrive at the skew-symmetric matrix with the following equation
 \begin{equation}
-  A = -i U \Ham U^{\dagger}.
+  A_{ch} = -i U \Ham_{ch} U^{\dagger}.
 \end{equation}
-The Majorana number of a 1D chain is defined as
+The Majorana number, \mathcal{M}, of a 1D chain is defined as
 \begin{equation}
-  \mathcal{M} = sgn[Pf(A)],
+  \mathcal{M} = \text{sgn}[\text{Pf}(A_{ch})],
 \end{equation}
-where the $Pf$ stands for the Pfaffian of the skew-symmetric matrix.
+where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix.
+When $\mathcal{M} = -1$, the chain is in a non-trivial topology and we would expect Majorana zero modes at the edges of a finite chain. As we sweep through a range of $B$ values for our vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and our system take on a trivial topology, thus no Majorana zero modes would exist on the edge of a finite chain. \Red{Taking a look at figure XX we can see for varying $\mu$ and $B$ values where our system is trivial and non-trivial.}
+
 \subsection{\Red{Majorana Edge modes on a double chain}}
 
+\Red{Need to make this script and plot still}
+
 \section{Triangular islands}
-\Red{PLACEHOLDER}
+
 \subsection{\Red{3-site problem and kitaev limit for tri.chain, solid triangle}}
+We now expand our analysis to triangular islands.
+The chain Hamiltonian in \ref{eq: Peierls chain} can be generalized to be
+\begin{equation} \label{eq: Peierls triangle}
+  \Ham = \sum_{<j,l>} (-t e^{i\phi_{l,j}} \cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_j \mu \cc_j c_j,
+\end{equation}
+where $<j,l>$ are nearest neighbors on a triangular lattice and $\theta_{l,j}$ is the angle between the two sites.
+It is difficult to come to any conclusion while in the complex fermion basis, but if we write our Hamiltonian in Majorana fermion basis we can get a clearer picture.
+\Red{Maybe a see supplementary material XX for derivation here.}
+The triangular Hamiltonian now takes the form
+\begin{align}
+  \Ham = -\dfrac{i\mu}{4} \sum_j (& a_j b_j - b_j a_j) \nonumber \\
+  -\dfrac{i}{4} \sum_{<j,l>} [&(t\sin\phi_{l.j}-\de\sin\theta_{l,j}) a_l a_j \nonumber \\
+  +&(t\sin\phi_{l,j}+\de\sin\theta_{l,j}) b_l b_j \nonumber \\
+  +&(t\cos\phi_{l,j}+\de\cos\theta_{l,j}) a_l b_j \nonumber \\
+  -&(t\cos\phi_{l,j}-\de\cos\theta_{l,j}) b_l a_j].
+\end{align}
+To clear things up, $\phi_{l,j} = -\phi_{j,l}$ since the direction of integration is reversed and the angle $\theta_{l,j} = \theta_{j,l} + \pi$, this ensures we have a Hermitian Hamiltonian.
+
+Let us consider a 3-point triangle lattice, where each lattice point is a complex fermion housing two Majorana fermions.
+The bottom left point will have $a_1, b_1$, bottom right has $a_2, b_2$, and the top point has $a_3, b_3$.
+Similar to Kitaev we will make the same assumptions $t=\de$ and $\mu=0$.
+Doing this lets us see a combination of trig terms.
+We need some of these combination to go to zero.
+Notice how each individual row looks like a Kitaev chain, we need to look at how the rows interact with each other.
+Since our goal is to have two Majorana zero modes at the bottom corners, lets aim to have $a_1$ and $b_2$ be such modes.
+Anytime $a_1$ or $b_2$ appear in our equation we need its trig terms to cancel, eliminating those particles coupling to the rest of the system.
+Let us look at the energy going from site 1 to site 3, $\theta = \pi/3$, we notice the first and last term should be
+\begin{align}
+  a_3 a_1 (\sin\phi_{31} - \sin\pi/3) = 0, \\
+  b_3 a_1 (\cos\phi_{31} - \cos\pi/3) = 0.
+\end{align}
+This is true if $\phi_{31} = \pi/3$.
+Now let's consider the energy from site 3 to site 2.
+The phase angle $\theta = -\pi/3$.
+The two simplified equations involving $b_2$ are
+\begin{align}
+  (\sin\phi_{23} - \sin(\pi/3)) b_2 b_3 = 0, \nonumber \\
+  (\cos\phi_{23} - \cos(\pi/3)) b_2 a_3 = 0. \nonumber
+\end{align}
+Here we see $\phi_{23} = \pi/3$.
+The linear vector potential one can get with the desired phases is
+\begin{equation}
+  \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} x \hat{y}
+\end{equation}
+
+We can now extrapulate from a 3-point triangle to a full triangular island.
+The goal being to ensure Majorana zero modes at the bottom two vertices.
+If instead we have a triangular island with $n$-many rows we find
+\begin{equation}
+  \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} \dfrac{x}{2n-3} \hat{y}.
+\end{equation}
+Solving the Hamiltonian numerically we can see how turning on this Peierls phase affects the eigenenergies.
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-0/mu-p0_0000/spectral-flow.pdf}
+\caption{As the strength of the vector potential increases we can see zero energy modes appear at the critical strength, denoted as the dotted black line. Notice the density of edge states makes it unclear the Majorana zero modes live in a clean gap.}
+\end{figure}
 
 \subsection{\Red{Finite width (hollow triangle)}}
 
@@ -123,6 +186,7 @@ where the $Pf$ stands for the Pfaffian of the skew-symmetric matrix.
 \subsubsection{\Red{Corner modes (open BC)}}
 
 \section{Conclusions and Discussion}
+
 \Red{PLACEHOLDER}
 
 

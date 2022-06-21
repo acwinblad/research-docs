@@ -41,11 +41,12 @@ and the order parameter gives
   \de ( e^{i\theta_{j,l}} \cc_l \cc_j + e^{-i\theta_{j,l}} c_j c_l) = \dfrac{i\de}{2} ( \sin\theta_{j,l} (a_l a_j - b_l b_j) - \cos\theta_{j,l} (a_l b_j + b_l a_j) ).
 \end{equation}
 Combining the two with chemical potential, shifting the energy, and taking into account for its anticommutation relationship, we can make the Hamiltonian Hermitian as follows
+\begin{strip}
 \begin{align}
   \Ham = -\dfrac{i\mu}{4} \sum_j (a_j b_j - b_j a_j) - \dfrac{i}{4} \sum_{<j,l>} [&(t\sin\phi-\de\sin\theta) a_l a_j + (t\sin\phi+\de\sin\theta) b_l b_j \nonumber \\
   +&(t\cos\phi+\de\cos\theta) a_l b_j - (t\cos\phi-\de\cos\theta) b_l a_j].
 \end{align}
-I was confused for a bit on the trig arguments in the Hamiltonian.
+\end{strip}
 The angle $\theta_{j,l} = \theta_{l,j}+\pi$ and $\phi_{j,l} = -\phi_{l,j}$ since the direction of integration is in the opposite direction.
 The nearest neighbor notation accounts for hopping in both directions, making it Hermitian.
 
