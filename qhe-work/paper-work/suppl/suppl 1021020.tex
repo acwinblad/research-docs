@@ -1,0 +1,534 @@
+
+\documentclass[aps,pra,preprint,showpacs]{revtex4-1}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+
+\begin{document}
+
+\title{Supplemental Material for "Unveiling quantum Hall effect in spatially inhomogeneous Floquet systems without external magnetic field"}
+\author{M. Tahir$^{1}$ and Hua Chen$^{1,2}$}
+\affiliation{$^{1}$Department of Physics, Colorado State University, Fort Collins, CO
+80523, USA}
+\affiliation{$^{2}$School of Advanced Materials Discovery, Colorado State University,
+Fort Collins, CO 80523, USA}
+
+
+\maketitle
+
+\section{High Frequency (Van Vleck) expansion from degenerate perturbation theory}
+
+In order to understand the effects of coherent time-periodic modulation of quantum systems, we need an efficient method to obtain the Floquet
+Hamiltonian $\hat{H}^{F}$ for a given time-dependent Hamiltonian $\hat{H} (\tau )$. Generally, for the Floquet systems, one would like to obtain a
+suitable Hamiltonian $\hat{H}(\tau )$ given a desired static Hamiltonian $\hat{H}_{\rm eff}$. Usually the formal approach in making use of the
+full eigenstates of a time-dependent model Hamiltonian is not feasible in practice. Therefore, one requires an approximate scheme that still provides
+a valid description at least on the time-scales and energy-scales. Such an approach is provided by high-frequency approximations \cite{JHS,HSA,MGP,MBL,AEE,NGJ}. 
+Using the Van Vleck expansion within the degenerate perturbation theory as shown in Ref. \cite{AEE}, we can write the explicit expressions for the first few terms with $n=0,1,2$ as required;
+
+\begin{eqnarray} \label{eq:44}
+&&\hat{H}^{F(0)}=\hat{H}_{0},  \\
+&&\hat{H}^{F(1)} =\sum_{m\neq 0}\frac{[\hat{H}_{m},\hat{H}_{-m}]}{m\hbar \omega } 
+\notag,\\
+&&\hat{H}^{F(2)}={\displaystyle\sum_{m\neq0}}
+\left(  \frac{[\hat{H}_{-m},[\hat{H}_{0},\hat{H}_{m}]]}{2(m\hbar\omega)^{2}
+}+{\displaystyle\sum_{m^{\prime}\neq0,m}}
+\frac{[\hat{H}_{-m^{\prime}},[\hat{H}_{m^{\prime}-m},\hat{H}_{m}
+]]}{3mm^{\prime}(\hbar\omega)^{2}}\right)\notag.
+\end{eqnarray}
+Expressions for higher orders can be found in the above equations and refs. \cite{JHS,HSA,MGP,MBL,AEE,NGJ}. From a practical
+point of view, and in the cases which we will be considering, one often engineers the time-dependent Hamiltonian in such a way that the approximate
+Floquet Hamiltonian $\hat{H}_{\rm eff}$ =$\sum_{n=0}^{m}H^{F(n)}$ corresponds to the desired model Hamiltonian of the effective systems.
+
+\subsection{Model formulation of Floquet Landau Levels in Dirac electrons}
+As a generic model Hamiltonian to describe 2D systems, we consider Hamiltonian of monolayer graphene,
+\begin{equation} \label{eq:HDirac}
+	H^D=v_F(\bf{\sigma . \Pi}), 
+\end{equation}%
+where $\mathbf{\Pi =p+}e\mathbf{A^D}$, here $\mathbf{A^D}$ is the vector potential, $\mathbf{p}$ is the momentum operator, $v_F$ is the Fermi
+velocity of Dirac fermions, $e$ the absolute value of electron charge, and $\mathbf{\sigma}$ the Pauli matrices vector in 2D. We have two linearly polarized laser lights with the electric field components
+\begin{equation} \label{eq:Efield}
+	\mathbf{E}_{1} =E\cos (\omega t)\hat{x},\mathbf{E}_{2}=E\sin
+	(Kx)\sin (2\omega t)\hat{y},
+\end{equation}%
+where second light is spatially inhomogeneous. The $\omega $ is frequency of light with time $t$, $%
+K=2\pi /a$ with $a$ being the spatial period of the electric field with
+amplitude $E$. This form of the field leads ($\mathbf{E}=-\frac{\partial \mathbf{A^D}}{\partial t}$) to the following vector potential $\mathbf{A^D}$
+\begin{equation} \label{eq:Avector}
+	\mathbf{A^D=(- }V_y\sin (\omega t), V_x \cos (2\omega t),0\mathbf{),} 
+\end{equation}%
+where we have $V_{y}=\frac{ev_FE}{\omega },V_{x}=\frac{ev_FE}{2\omega }\sin(Kx)$. Substituting Eq.~\eqref{eq:Avector} into Eq.~\eqref{eq:HDirac}, we arrive at
+\begin{equation} \label{eq:Htime}
+	H^D(t)=H_{0}^D- \sigma _{x}V_{y}\sin (\omega t)+\sigma _{y}V_{x}\cos 2(\omega
+	t),
+\end{equation}%
+where $H_{0}^D=v_F(\sigma _{x} p_{x}+\sigma_{y} p_{y})$. Because of the time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL} and obtain an effective Hamiltonian from Eq.~\eqref{eq:Htime}. According to Floquet approach \cite{JHS,HSA,MGP,MBL,AEE,NGJ}, time-dependent components for real physical Hamiltonian written in Eq.~\eqref{eq:Htime} are
+\begin{equation} \label{eq:Htimen}
+	H_{n}^D  =\frac{1}{T}\int_{0}^{T}\left\{-\sigma_{x}V_y\sin(\omega
+	t)+\sigma_{y}V_x\cos(2\omega t)\right\}  e^{in\omega t}dt,
+\end{equation}
+where $n=\pm 1, \pm 2$, and $H_{n}^D=(1/T)\int_{0}^{T}e^{-in\omega t}H^D(t)dt]$ is the $n$-th Fourier harmonic of the time-periodic part of the Hamiltonian in Eq.~\eqref{eq:Htime}.
+
+After performing the Fourier transform of the time-periodicity in Eq.~\eqref{eq:Htimen}, first and second order expansion in Eq.~\eqref{eq:44} terms leads to the  effective Hamiltonian as
+\begin{equation} \label{eq:Heffec}
+	H_{\rm eff}^D=H_{0}^D-\frac{V_{y}^{2}v_F\sigma_{y}p_{y}}{\hbar^{2}\omega^{2}}
+	-\frac{V_{y}^{2}V_{x}\sigma_{y}}{2\hbar^{2}\omega^{2}}-\frac{v_F\sigma
+		_{x}(V_{x}^{2}p_{x}+p_{x}V_{x}^{2})}{8\hbar^{2}\omega^{2}}.
+\end{equation}
+In Eq. ~\eqref{eq:Heffec}, first order term in $\hbar \omega$ that leads to gap at the Dirac point in usual circularly polarized light \cite{AEE, MBL} is zero here due to inhomogeneous nature of laser lights. This effective Hamiltonian can be simplified in the long wavelength limit ($\sin(Kx) \rightarrow Kx$) to
+\begin{equation} \label{eq:HeffB}
+	H_{\rm eff}^D = v_{F}^{\prime}\sigma_{x}p_{x}+v_F\sigma_{y}(p_{y}-eB^Dx)
+\end{equation}%
+In obtaining Eq.~\eqref{eq:HeffB}, last term in Eq.~\eqref{eq:Heffec} is second order in space and thus zero in the long wavelength limit for the spatially inhomogeneous modulation. Further, we have $v_{F}^{\prime}=v_F/C,B^D=\frac{V_{y}^{2}E}{4\hbar^{2}\omega^{3}C}K,$ with $C=1-V_{y}^{2}/(\hbar^{2}\omega^{2})$. In accordance with Eqs.~\eqref{eq:Heffec} and ~\eqref{eq:HeffB}, there is least anisotropy in the Dirac spectrum in addition to zero gap. Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffB}, we obtained the eigenvalues for Dirac system as%
+\begin{equation} \label{eq:DiracEner}
+	E_{n}^D=\sqrt{n(v_{F}^{\prime}v_FB^D)2e\hbar},
+\end{equation}
+which is shown in the main manuscript.
+
+\subsection{Model formulation of Floquet Landau Levels in Schr\"{o}dinger electrons}
+Here, we consider the case of Schr\"{o}dinger electrons under the application of two linearly polarized laser lights. The unperturbed Hamiltonian for 2DEG is
+\begin{equation} \label{eq:H2DEG}
+	H=\frac{\bf{\pi}^{2}}{2m^{\ast}},
+\end{equation}
+where $m^{\ast}$ is the effective mass of electron. By changing the Hamiltonian into a time-dependent form by applying two linearly polarized lights
+such that $\mathbf{\pi\rightarrow p-eA(t)}$. \ Therefore, Eq.~\eqref{eq:H2DEG} is written as
+\begin{equation} \label{eq:H2time}
+	H(t)=\frac{1}{2m^{\ast}}[p_{x}+eA_{x}(t)]^{2}+\frac{1}{2m^{\ast}}[p_{y}
+	+eA_{y}(t)]^{2},
+\end{equation}
+where the electric field components for two spatially inhomogeneous linearly polarized laser lights are
+\begin{equation} \label{eq:E2field}
+	\mathbf{E}_{1} =E\cos (\omega t)\hat{x},\mathbf{E}_{2}^{\prime}=E\cos
+	(Kx)\sin (\omega t)\hat{y}.
+\end{equation}
+It is important to note that second electric field in Eq.~\eqref{eq:E2field} is different from similar field used for Dirac spectrum given in Eq.~\eqref{eq:Efield}. This is due to the fact that Schr\"{o}dinger Hamiltonian is quadratic rather than linear as in case of Dirac electrons. This is basic requirement for the Schr\"{o}dinger electron spectrum to exhibit LLs. The field give in Eq.~\eqref{eq:E2field} lead to the following vector potential $\mathbf{A(t)}$
+\begin{equation} \label{eq:A2vector}
+	\mathbf{A(t)=(- }V_1\sin (\omega t), V_2 \cos (\omega t),0\mathbf{),} 
+\end{equation}
+where we have $V_{1}=\frac{eE}{\omega },V_{2}=V_1\cos(Kx)$. Employing the Floquet theory similar to Dirac electrons, we obtain the effective Hamiltonian as
+\begin{equation}\label{eq:H2effec}
+	H_{\rm eff}  =H_{0} -\frac{U}{m^{\ast}}\sin (Kx) p_{y} -\frac{U^2}{4m^{\ast}}V_{1}^{2}\cos(2Kx).
+\end{equation}
+In the long wavelength limit ($\sin(Kx) \rightarrow Kx$, $\cos(2Kx) \rightarrow 1$), Eq.~\eqref{eq:H2effec} can be simplified to
+\begin{equation} \label{eq:H2Feffect}
+	H_{\rm eff}=\frac{p_{x}^{2}}{2m^{\ast}}+\frac{1}{2m^{\ast}}[p_{y}
+	+eBx]^{2}-\frac{U^{2}}{4m^{\ast}},
+\end{equation}
+where $U=\frac{KV_{1}^{2}}{2m^{\ast}\omega}$, and the effective magnetic field 
+$B=\frac{K^{2}V_{1}^{2}}{em^{\ast}\omega}$. Eq.~\eqref{eq:H2Feffect} is a standard LL problem in the presence of an external perpendicular
+magnetic field. Therefore, by diagonalizing the effective Hamiltonian, the corresponding energy eigenvalues are obtained as
+\begin{equation} \label{eq:Energy}
+	E_{n}=(n+\frac{1}{2})\hbar\omega_{c}-\frac{U^{2}}{4m^{\ast}},
+\end{equation}
+where $\omega_{c}=\frac{eB}{m^{\ast}}$. This is shown in the main text.
+
+\section{Introduction}
+In this note we present details of how to set up the tight-binding models for Floquet quantum Hall effect.
+
+
+\subsection{General framework of Floquet theory}
+
+In this section we review the basic results of the Floquet theory and how to recast it into a matrix diagonalization problem. The discussion in this section is mostly following \cite{AEE}.
+
+For a time-periodic Hamiltonian $H(t) = H(t+T)$ with period $T$, the time evolution of a wavefunction governed by it is described by the Schr\"{o}dinger equation
+\begin{eqnarray}\label{eq:SchrHt}
+	i\hbar \partial_t \psi(t) = H(t) \psi(t).
+\end{eqnarray}
+Floquet theorem states that $\psi(t)$ must satisfy
+\begin{eqnarray}
+	\psi(t+T) = \psi(t) e^{-i \frac{\epsilon T}{\hbar}},
+\end{eqnarray}
+where $\epsilon$ is a real number of energy units, or equivalently
+\begin{eqnarray}
+	\psi(t) = e^{-i \frac{\epsilon t}{\hbar}} u_{\epsilon}(t),
+\end{eqnarray}
+where $u_{\epsilon}(t) = u_{\epsilon}(t+T)$. 
+
+Here we give a proof that is closely analogous to that of the Bloch theorem, based on plane wave expansion. An arbitrary wavefunction can be expanded into plane waves
+\begin{eqnarray}
+	\psi(t) = \sum_{\epsilon} c_\epsilon e^{-i \frac{\epsilon t}{\hbar}},
+\end{eqnarray}
+where $\epsilon\in \mathbb{R}$, while a time-periodic function $H(t)$ can only be written as a discrete Fourier series
+\begin{eqnarray}
+	H(t) = \sum_n H_n e^{i n \omega t},
+\end{eqnarray}
+where $\omega = 2\pi /T$, and $H_n = \frac{1}{T} \int_0^T H(t) e^{-i n \omega t} dt$. Substituting the two expansions above into Eq.~\ref{eq:SchrHt} gives 
+\begin{eqnarray}
+	0 &=& \sum_\epsilon \left[ \sum_n H_n e^{-i \frac{(\epsilon - n \hbar \omega) t}{\hbar}} c_\epsilon - \epsilon c_\epsilon  e^{-i \frac{\epsilon t}{\hbar}} \right] \\\nonumber
+	&=& \sum_\epsilon \left[ \sum_n H_n c_{\epsilon + n\hbar \omega} - \epsilon c_\epsilon  \right] e^{-i \frac{\epsilon t}{\hbar}},
+\end{eqnarray}
+which leads to
+\begin{eqnarray}\label{eq:cepseqn}
+	\sum_n H_n c_{\epsilon + n\hbar \omega} - \epsilon c_\epsilon = 0.
+\end{eqnarray}
+For an arbitrary $\epsilon\in \mathbb{R}$ we can define $\tilde{\epsilon} \in [-\hbar \omega /2, \hbar \omega /2)$ so that $\epsilon = \tilde{\epsilon} + m \hbar \omega$. It is apparent that Eq.~\ref{eq:cepseqn} only couples $c_{\tilde{\epsilon} + m\hbar \omega}$ belonging to the same $\tilde{\epsilon}$. We thus define
+\begin{eqnarray}
+	c_{\tilde{\epsilon} + m\hbar \omega} \equiv c_{m \tilde{\epsilon}},
+\end{eqnarray}
+so that Eq.~\ref{eq:cepseqn} becomes a set of coupled equations for $c_{m \tilde{\epsilon}}$, $m \in \mathbb{Z}$:
+\begin{eqnarray}\label{eq:cepsteqn}
+	\sum_n (H_n  - m\hbar \omega \delta_{n0} ) c_{m+n, \tilde{\epsilon}} = \tilde{\epsilon} c_{m \tilde{\epsilon}}.
+\end{eqnarray}
+Eq.~\ref{eq:cepseqn} is the eigenvalue problem of the infinite-dimensional matrix $\bar{Q}$ with the matrix elements
+\begin{eqnarray}
+	\bar{Q}_{m,m+n} = H_n - m \hbar \omega\delta_{n0},
+\end{eqnarray}
+which is also the quasienergy operator in \cite{AEE}. In practice the number of eigenvalues $\tilde{\epsilon}$ is determined by the dimension of $H(t)$. The solutions of Eq.~\ref{eq:SchrHt} are therefore
+\begin{eqnarray}\label{eq:psitildee}
+	\psi_{\tilde{\epsilon}} (t) = \sum_m c_{m \tilde{\epsilon}} e^{-i\frac{(\tilde{\epsilon} + m \hbar \omega)t}{\hbar}} = e^{-i\frac{\tilde{\epsilon} t}{\hbar}} \sum_m c_{m \tilde{\epsilon}} e^{-i m  \omega t} \equiv e^{-i\frac{\tilde{\epsilon} t}{\hbar}} u_{\tilde{\epsilon}}(t).
+\end{eqnarray}
+
+The proof above also gives a useful device for calculating the Floquet states $\psi_{\tilde{\epsilon}} (t) $ based on plane wave expansion. In general $H_n$ can be a complicated operator depending on, e.g. position, spin, etc., and $c_{m \tilde{\epsilon}}$ is a function depending on these quantum numbers. One can choose a representation that makes $H_0$ diagonal, such as the Bloch representation, leading to the eigenvalues $\epsilon_{n \bm k}$ of the time-averaged Hamiltonian ($H_0$). When $H_n$ is 0 for all $n \neq 0$, we have $\tilde{\epsilon} = \epsilon_{n \bm k} - m \hbar \omega$, $m \in \mathbb{Z}$. When $H_n$ is nonzero for any $n \neq 0$ there is in general no simple relationship between $\tilde{\epsilon}$ and $ \epsilon_{n \bm k}$. Nonetheless, when $H_n$, $n \neq 0$ can be viewed as perturbation the spectrum of $\tilde{\epsilon}$ is similar to that of $\epsilon_{n \bm k} - m \hbar \omega$, i.e., the eigenenergies $\epsilon_{n \bm k}$ together with infinite number of its copies shifted vertically by $m \hbar \omega$.
+
+The importance of $\tilde{\epsilon}$ is that it completely determines the stroboscopic motion of an arbitrary Floquet wavefunction, i.e.,
+\begin{eqnarray}
+	\psi_{\tilde{\epsilon}} (t + m T) = e^{-i \frac{\tilde{\epsilon} m T}{\hbar}} \psi_{\tilde{\epsilon}} (t),\,\, \forall m\in \mathbb{Z}.
+\end{eqnarray}
+Since $\{\psi_{\tilde{\epsilon}}(t)\}$ is a complete set at time $t$, the stroboscopic evolution of an arbitrary wavefunction governed by $H(t)$ is 
+\begin{eqnarray}
+	\Psi(t + m T) = \sum_{\tilde{\epsilon}} C_{\tilde{\epsilon}} e^{-i \frac{\tilde{\epsilon} m T}{\hbar}} \psi_{\tilde{\epsilon}} (t),
+\end{eqnarray}
+where $\Psi(t) =  \sum_{\tilde{\epsilon}} C_{\tilde{\epsilon}} \psi_{\tilde{\epsilon}} (t)$. The full time-evolution operator $\hat{U}(t_1,t_0)$ is therefore
+\begin{eqnarray}\label{eq:Uevolve}
+	\hat{U}(t_1,t_0) = \sum_{\tilde{\epsilon}}|\psi_{\tilde{\epsilon}} (t_1)\rangle \langle \psi_{\tilde{\epsilon}} (t_0) | = \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_1)\rangle \langle u_{\tilde{\epsilon}} (t_0) | e^{-i\frac{\tilde{\epsilon}(t_1 - t_0)}{\hbar}}.
+\end{eqnarray}
+Now we introduce two operators
+\begin{eqnarray}\label{eq:UFt1t0}
+	\hat{U}^F(t_1,t_0) \equiv \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_1)\rangle \langle u_{\tilde{\epsilon}} (t_0) |,
+\end{eqnarray}
+and 
+\begin{eqnarray}\label{eq:HFt0}
+	\hat{H}^F_{t_0} \equiv \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_0)\rangle\tilde{\epsilon} \langle u_{\tilde{\epsilon}} (t_0) |,
+\end{eqnarray}
+which allows us to rewrite Eq.~\ref{eq:Uevolve} as
+\begin{eqnarray}
+	\hat{U}(t_1,t_0) = \hat{U}_F(t_1,t_0) \exp\left[ -i\frac{(t_1 - t_0)\hat{H}^F_{t_0} }{\hbar}  \right] = \exp\left[ -i\frac{(t_1 - t_0)\hat{H}^F_{t_1} }{\hbar}  \right] \hat{U}_F(t_1,t_0). 
+\end{eqnarray}
+Namely, the full time evolution is separated into two parts: $\hat{H}^F_{t_0}$ governs the stroboscopic evolution \emph{with the starting time} $t_0$, since 
+\begin{eqnarray}
+	\exp\left[ -i\frac{m T \hat{H}^F_{t_0} }{\hbar}  \right] \psi_{\tilde{\epsilon}}(t_0) = e^{-i\frac{m T \tilde{\epsilon}}{\hbar} } \psi_{\tilde{\epsilon}}(t_0) = \psi_{\tilde{\epsilon}}(t_0 + m T),
+\end{eqnarray}
+while $\hat{U}_F (t_1, t_0)$ evolves the periodic part of the Floquet wavefunctions. $\hat{H}^F_{t_0} $ and $\hat{U}_F (t_1, t_0)$ are respectively called the Floquet Hamiltonian and the micromotion operator.   
+
+The most unsettling property of $\hat{H}^F_{t_0} $ is its dependence on $t_0$. To get rid of it we note that Eq.~\ref{eq:psitildee} implies
+\begin{eqnarray}
+	|u_{\tilde{\epsilon}}(t) \rangle =  \sum_{\alpha} \left(\sum_m c_{m \tilde{\epsilon}}^{\alpha} e^{-i m\omega t} \right)|\alpha\rangle \equiv\sum_\alpha  |\alpha\rangle U_{\alpha,\tilde{\epsilon}} (t) ,
+\end{eqnarray}
+where the time-independent basis $|\alpha\rangle$ spans the Hilbert space of $H(t)$, and $U (t)$ is a time-dependent unitary matrix satisfying $U(t+T) = U(t)$. Substituting this $|u_{\tilde{\epsilon}}(t) \rangle$ into Eq.~\ref{eq:SchrHt} gives
+\begin{eqnarray}
+	{\rm Diag}[\{\tilde{\epsilon}\}] = U^\dag H (t) U - i\hbar U^\dag \partial_t U = U^\dag \bar{Q} U,
+\end{eqnarray} 
+where ${\rm Diag}[\{\tilde{\epsilon}\}]$ is a diagonal matrix with its eigenvalues being $\tilde{\epsilon}$. Comparing this with the effect of a time-dependent unitary transformation of the wavefunction $\psi' = U^\dag \psi$ in the Schr\"{o}dinger equation:
+\begin{eqnarray}
+	i\hbar \partial_t \psi' = (U^\dag H U - i\hbar U^\dag \partial_t U)\psi' \equiv H' \psi',
+\end{eqnarray}
+we can see that $U$ essentially transforms $H(t)$ to an effective Hamiltonian $H' = U^\dag \bar{Q}U$ which is time independent. The time evolution of $\psi$ can thus obtained as
+\begin{eqnarray}
+	\psi(t_1) &=& U(t_1) \psi'(t_1) = U(t_1) \exp\left[ -i \frac{H' (t_1 - t_0)}{\hbar}  \right] \psi'(t_0) \\\nonumber
+	&=&  U(t_1) \exp\left[ -i \frac{H' (t_1 - t_0)}{\hbar}  \right] U^\dag(t_0) \psi(t_0)\\\nonumber
+	&=&\hat{U}(t_1,t_0)\psi(t_0). 
+\end{eqnarray}
+We therefore define
+\begin{eqnarray}
+	\hat{H}_F \equiv U^\dag \bar{Q} U = H'
+\end{eqnarray} 
+as the Floquet effective Hamiltonian, which gives the time-evolution operator
+\begin{eqnarray}\label{eq:Ut1t0}
+	\hat{U}(t_1,t_0) =  U(t_1) \exp\left[ -i \frac{\hat{H}_F (t_1 - t_0)}{\hbar}  \right] U^\dag(t_0).
+\end{eqnarray}
+Intuitively, this means that the time evolution is obtained by first doing a gauge transformation to the time-independent gauge, evolving the system, and finally gauge-transforming back to the original gauge. 
+
+Although we have been assuming that $U(t)$ diagonalizes $\bar{Q}$, this is not necessary. Any time-independent unitary transformation multiplied to $U(t)$ can still make $\hat{H}_F$ time independent. To make connection between the $t_0$ dependent Floquet Hamiltonian $\hat{H}^F_{t_0}$ in Eq.~\ref{eq:HFt0} and the effective Hamiltonian $\hat{H}_F$, we use a minimal $U(t)$ that is independent of the basis of $\hat{H}(t)$:
+\begin{eqnarray}
+	U_F(t) =\sum_m c_m e^{-im\omega t}, 
+\end{eqnarray}
+which is a time-dependent scalar function. In the matrix form of $\bar{Q}$, this $U_F(t)$ block-diagonalizes $\bar{Q}$. All the diagonal blocks have the form $H_F - m\hbar \omega \bf{1}$. Here we removed the hat of $H_F$ to indicate that it is a matrix written in certain representation instead of an operator. In this particular representation or gauge, $|\alpha(t)\rangle = |\alpha\rangle U_F(t)$. We thus have
+\begin{eqnarray}
+	\hat{H}_{t_0}^F = \sum_{\tilde{\epsilon}}|u_{\tilde{\epsilon}}(t_0)\rangle \tilde{\epsilon} \langle u_{\tilde{\epsilon}} (t_0)| = \sum_{\alpha\beta} U_F(t_0) |\alpha\rangle (H_F)_{\alpha\beta} \langle \beta | U_F^\dag(t_0).  
+\end{eqnarray}  
+Or loosely speaking $\hat{H}_{t_0}^F =  U_F(t_0) \hat{H}_F U_F^\dag(t_0)$. Therefore the $t_0$ dependence in $\hat{H}_{t_0}^F$ is only due to a gauge transformation and is not physical. The complete information of time evolution can be obtained from $H_F$ \emph{and} $U_F$ according to Eq.~\ref{eq:Ut1t0}.
+
+In practice, to obtain the quasienergy spectrum or $H_F$ we simply start from the eigenvalue problem Eq.~\ref{eq:cepseqn} for $\bar{Q}\equiv \bar{H} + \bar{Q}_0$, where $\bar{H}_{m,m+n} = H_n$ and $(\bar{Q}_0)_{m,m+n} = -m\hbar \omega \delta_{n0}$. We can either use perturbation theory and treat $\bar{H}$ as perturbation, which is accurate in the high-frequency limit, or directly diagonalize $\bar{Q}$ with a large enough cutoff. The first several terms in the perturbation series of $H_F$ are given in Eqs.~86-89 in \cite{AEE} ($m$ there should be $-m$ in our notation). 
+
+\subsection{Including a spatially and temporally varying vector potential in a tight-binding model}
+
+In this section we discuss how to include a spatially and temporally varying vector potential in a tight-binding model and to set up the matrix of $\bar{Q}$ for numerical diagonalization.
+
+A tight-binding Hamiltonian is in general written as a polynomial of creation and annihilation operators of Wannier states, denoted by $a_{i,s}^\dag$ and $a_{i,s}$, where $i$ labels sites, and $s$ labels internal degrees of freedom. Assume that the external electromagnetic fields represented by a vector potential $\bm A(\bm r, t)$ vary smoothly in space and time, the fields can be included in the tight-binding model through a Peierls phase
+\begin{eqnarray}
+	a_{i,s}^\dag \rightarrow a_{i,s}^\dag \exp\left[- i\frac{e}{\hbar} \int_{\bm r_0}^{\bm r_i}  \bm A(\bm r, t) \cdot d\bm l \right],
+\end{eqnarray}
+which leads to a change of the hopping term
+\begin{eqnarray}\label{eq:tintA}
+	t_{ij,ss'} a_{i,s}^\dag a_{j,s'} \rightarrow t_{ij,ss'}  \exp\left[- i\frac{e}{\hbar} \int_{\bm r_j}^{\bm r_i}  \bm A(\bm r, t) \cdot d\bm l \right] a_{i,s}^\dag a_{j,s'} \equiv \tilde{t}_{ij,ss'}  a_{i,s}^\dag a_{j,s'}.
+\end{eqnarray}
+The phase factor is path dependent. This is not a problem if the spatial variation of $\bm A$ is smooth on the lattice scale. In the limit of smooth variation we can approximate $\tilde{t}_{ij,ss'} $ by 
+\begin{eqnarray}\label{eq:tAapprox}
+	\tilde{t}_{ij,ss'} \approx t_{ij,ss'}  \exp\left[- i\frac{e}{\hbar} \bm A(\bm r_{ij}, t) \cdot \bm d_{ij} \right] \equiv t_{ij,ss'} e^{-i \phi_{ij}(t)},
+\end{eqnarray}
+where $\bm r_{ij} \equiv (\bm r_i + \bm r_j)/2$, and $\bm d_{ij} \equiv \bm r_i - \bm r_j$. Eq.~\ref{eq:tAapprox} is the main result to be used in the next section.
+
+\subsection{Tight-binding models}
+In this section we give two tight-binding models of the Floquet quantum Hall effect, respectively for Schr\"{o}dinger and Dirac electrons.
+
+\subsubsection{Schr\"{o}dinger electron}
+We consider a nearest-neighbor single-orbital tight-binding model on a square lattice
+\begin{eqnarray}
+	H_S = -t \sum_{\langle ij \rangle} c_{i}^\dag c_j + {\rm h.c.} 
+\end{eqnarray}
+where $\langle ij \rangle$ means sites $i, j$ are nearest neighbors. $t > 0$. We assume the lattice constant is $a$ and the lattice sites have coordinates
+\begin{eqnarray}
+	\bm r_{i} = x_i a \hat{x} + y_i a \hat{y},\,\, x_i, y_i \in \mathbb{Z}.
+\end{eqnarray} 
+In the case that the system is infinite in both directions one can Fourier transform the Hamiltonian and obtain the eigenenergy $\epsilon_{\bm k} = -4t\cos(k_x a + k_y a)$, with $k_x, k_y \in [-\pi/a, \pi/a]$. For long wavelength $|\bm k|\ll 1/a$ we have $\epsilon_{\bm k} \approx 2ta^2 k^2 -4t$, same as that of a Schr\"{o}dinger electron with mass $m = \hbar^2/(4ta^2)$.
+
+To get the Floquet QHE effect we consider a vector potential due to two linearly polarize light
+\begin{eqnarray}
+	\bm E_1 = E \cos(\omega t) \hat{x},\,\, \bm E_2 = E\cos(Kx) \sin(\omega t) \hat{y},
+\end{eqnarray}
+which is 
+\begin{eqnarray}
+	\bm A(t) = -\frac{E}{\omega} \sin(\omega t) \hat{x} + \frac{E}{\omega} \cos(Kx) \cos(\omega t) \hat{y}.
+\end{eqnarray}
+The hopping term ($t_{i,j}$) in this case is
+\begin{equation}
+	t_{i,j}=-\exp\left[  -\frac{ie}{\hbar}\bm A(\frac{\bm{r}
+		_{i}+\bm{r}_{j}}{2}, t) \cdot \bm d_{ij}\right]  .
+\end{equation}
+With the help of vector potential, above equation can be written as
+\begin{eqnarray}
+	t_{i,j} = \begin{cases}
+		-\exp\left[  \mp\frac
+		{ie}{\hbar}\left(  \bm{-}\frac{Ea}{\omega}\sin(\omega t)\right)
+		\right]  \equiv\exp\left[  \pm i\theta\right] ,& \text{if } \bm{r}_{j}-\bm{r}_{i}=\pm a \hat{x}\\
+		-\exp\left[  \mp\frac
+		{ie}{\hbar}\left(  \frac{Ea}{\omega}\cos(Kx_{i})\cos(\omega t)\right)
+		\right]  \equiv\exp\left[  \pm i\phi_{x}\right], & \text{if } \bm{r}_{j}-\bm{r}_{i}=\pm a \hat{y} 
+	\end{cases}
+\end{eqnarray}
+where we have
+\begin{equation}
+	\phi_{x}=-\frac{e}{\hbar}\left(  \frac{Ea}{\omega}\cos(Kx_{i})\cos(\omega
+	t)\right)  ,\theta=\frac{e}{\hbar}\left(  \frac{Ea}{\omega}\sin(\omega
+	t)\right)  ,\phi_{0}=\frac{eEa}{\hbar\omega}
+\end{equation}
+The Hamiltonian is written $(\bm r_{i} = x_i a \hat{x} + y_i a \hat{y})$ as
+\begin{align}
+	H_{S}^{F} &  =
+	{\displaystyle\sum\limits_{x}}
+	{\displaystyle\sum\limits_{y}}
+	\left[  C_{x,y}^{\dagger}C_{x,y+a}\exp\left[  i\phi_{x}\right]  +C_{x,y}
+	^{\dagger}C_{x,y-a}\exp\left[  -i\phi_{x}\right]  \right]  \\
+	&  +
+	{\displaystyle\sum\limits_{x}}
+	{\displaystyle\sum\limits_{y}}
+	\left[  C_{x,y}^{\dagger}C_{x+a,y}\exp\left[  +i\theta\right]  +C_{x,y}
+	^{\dagger}C_{x-a,y}\exp\left[  -i\theta\right]  \right]  \nonumber
+\end{align}
+Using eigenstates of the form
+\begin{equation}
+	C_{x,y}^{\dagger}=
+	{\displaystyle\sum\limits_{k}}
+	e^{iky}C_{x,k}^{\dagger},
+\end{equation}
+For fixed $k$, we arrive at
+\begin{equation}
+	H_{S}^{F}(k)=
+	{\displaystyle\sum\limits_{x}}
+	\left[  2\cos[\phi_{x}-ka]C_{x,k}^{\dagger}C_{x,k}+C_{x,k}^{\dagger}
+	C_{x+a,k}\exp\left[  +i\theta\right]  +C_{x,k}^{\dagger}C_{x-a,k}\exp\left[
+	-i\theta\right]  \right]
+\end{equation}
+Now in terms of $x=ja$, above equation can be written as
+
+\begin{align}
+	H_{j,j}(k) &  =-2\cos\left[  \frac{e}{\hbar}\frac{Ea}{\omega}\cos
+	(Kaj)\cos(\omega t)+ka\right]  \label{12}\\
+	H_{j,j+1}(k) &  =-\exp\left[  i\frac{e}{\hbar}\left(  \frac{Ea}{\omega}
+	\sin(\omega t)\right)  \right]  \nonumber\\
+	H_{j,j-1}(k) &  =-\exp\left[  -i\frac{e}{\hbar}\left(  \frac{Ea}{\omega}
+	\sin(\omega t)\right)  \right]  \nonumber
+\end{align}
+Now we need to perform time Fourier transform of above equation as
+\begin{align}
+	H_{j,j,n} &  =\frac{1}{T}
+	{\displaystyle\int\limits_{0}^{T}}
+	H_{j,j}(k)e^{-in\omega t}dt\\
+	&  =\frac{-1}{2\pi}
+	{\displaystyle\int\limits_{0}^{2\pi}}
+	2\cos\left[  \phi_{0}\cos(Kaj)\cos(\tau)+ka\right]  e^{-in\tau}d\tau
+	\nonumber\\
+\end{align}
+we have used the property of Bessel function
+\begin{equation}
+	J_{n}(x)  =\frac{1}{2\pi}
+	{\displaystyle\int\limits_{0}^{2\pi}}
+	e^{ix\sin\tau-in\tau}d\tau\Longrightarrow\frac{1}{2\pi}
+	{\displaystyle\int\limits_{0}^{2\pi}}
+	e^{ix\cos\tau-in\tau}d\tau=J_{n}(x)e^{\frac{in\pi}{2}}
+\end{equation}
+and the fact that $\tau\rightarrow\tau+\pi/2;\sin\tau=\sin\tau
++\pi/2=\cos\tau$. Therefore, we arrive at
+\begin{equation}
+	H_{j,j,n}=-\left[  J_{n}\left(  \phi_{0}\cos(Kaj)\right)  e^{ika}+J_{n}\left(
+	-\phi_{0}\cos(Kaj)\right)  e^{-ika}\right]  e^{\frac{in\pi}{2}}\label{14}
+\end{equation}
+similarly, we have
+\begin{align}
+	H_{j,j+1,n} &  =-\frac{1}{2\pi}
+	{\displaystyle\int\limits_{0}^{2\pi}}
+	e^{i\phi_{0}\sin\tau-in\tau}d\tau=-J_{n}(\phi_{0})\label{15}\\
+	H_{j,j-1,n} &  =-J_{n}(-\phi_{0})\nonumber
+\end{align}
+
+We can now construct the matrix of $\bar{Q}$. To this end we choose a cutoff for $m$ ($m\hbar \omega$ in the diagonal blocks):
+\begin{eqnarray}
+	|m|\le m_c,
+\end{eqnarray}
+where $m_c$ is a positive integer. This means that there are $N_m = 2 m_c + 1$ diagonal blocks, and each block is a $N_S\times N_S$ matrix. Therefore $\bar{Q}$ is a $N_m N_S \times N_m N_S$ matrix. Each $N_S \times N_S$ block, labeled by $\bar{Q}_{m,m+n}$, is
+\begin{equation}
+	\bar{Q}_{m,m+n} = H_{S}^{F}(k,n) - m\hbar \omega \delta_{n0} \bf{1}_{N_S\times N_S},
+\end{equation} 
+where the $N_S \times N_S$ matrix $H_n$ has matrix elements shown as
+
+\begin{eqnarray}
+	H_{S}^{F}(k,n)  =\frac{1}{T}
+	{\displaystyle\int\limits_{0}^{T}}
+	H_{S}^{F}(k,t)e^{-in\omega t}dt
+\end{eqnarray}
+
+To make convergence with respect to $m_c$ faster one can choose $\hbar \omega \gg 8t$, where $8t$ is the band width of the tight-binding model. For $m_c = 4$, $r_c = 7$, the dimension of $\bar{Q}$ is $N_m N_S = 2025$. 
+
+
+\subsubsection{Dirac electron}
+We consider a nearest-neighbor single-orbital tight-binding model
+\begin{eqnarray}
+	H_D = -t_{i\alpha,j\beta} \sum_{\langle i\alpha,j\beta \rangle} c_{i\alpha}^\dag c_{j\beta} + {\rm h.c.} 
+\end{eqnarray}
+where $\langle i\alpha,j\beta \rangle$ means sites $i, j$ are nearest neighbors with sublattices $\alpha$, $\beta$ and $t > 0$ being the hopping parameter. We assume the lattice constant is $a$ and the lattice sites have coordinates
+\begin{eqnarray}
+	\bm r_{i\alpha} = m_{i} \bm a_1 \hat{x} + n_{i} \bm a_2 \hat{y} + \bm \tau_{\alpha},\,\, m_{i}, n_{i} \in \mathbb{Z}.
+\end{eqnarray} 
+
+To get the Floquet QHE effect we consider a vector potential due to two linearly polarize light
+\begin{eqnarray}
+	\bm E_1 = E \cos(\omega t) \hat{x},\,\, \bm E_{2}^{\prime} = E\sin(Kx) \sin(2\omega t) \hat{y},
+\end{eqnarray}
+which is 
+\begin{eqnarray}
+	\bm A^{\prime} (t) = -\frac{eE}{\omega} \sin(\omega t) \hat{x} + \frac{eE}{2\omega} \sin(Kx) \cos(2\omega t) \hat{y}.
+\end{eqnarray}
+Note that $\nabla \cdot \bm A = 0$. For simplicity we consider the long wavelength limit
+\begin{eqnarray}
+	\bm A^{\prime} (t) \approx -\frac{eE}{\omega} \sin(\omega t) \hat{x} + \frac{eE}{2\omega} \left(K x\right) \cos(2\omega t) \hat{y}.
+\end{eqnarray}
+
+To include $\bm A^{\prime}$ in the tight-binding model, we consider a finite system defined by 
+\begin{eqnarray}
+	\max(|x_{i\alpha}|,|y_{i\beta}|)\le r_c,
+\end{eqnarray}
+where $r_c$ is a positive integer. The Hamiltonian $H_D$ in the tight-binding basis is a $N_S \times N_S$ square matrix with $N_S = (2r_c+1)^2$ and its matrix elements
+\begin{eqnarray}
+	H_{i\alpha,j\beta} = -t_{i\alpha,j\beta}, \,\, {\rm if }\, |\bm r_{i\alpha} -\bm r_{j\beta}| = a
+\end{eqnarray}
+and $0$ otherwise. 
+
+Including the vector potential using Eq.~\ref{eq:tAapprox} corresponding to replacing $H_{i\alpha,j\beta}$ by 
+\begin{eqnarray}\label{eq:HijD}
+	H_{i\alpha,j\beta} = - t \exp\left\{ -i\frac{eEa}{\hbar\omega}\left[-(x_{i\alpha} - x_{j\beta})\sin(\omega t) + \frac{1}{2} \left(\sin(\frac{Ka(x_{i\alpha}+x_{j\beta})}{2})\right) (y_{i\alpha} - y_{j\beta}) \cos(2\omega t) \right] \right\},
+\end{eqnarray}
+if $|\bm r_{i\alpha} -\bm r_{j\beta}| = a$, and $H_{i\alpha,j\beta} = 0$ otherwise. For simplicity we use $a$ as the length unit and $t$ as the energy unit. $K$ is thus in units of $1/a$. Eq.~\ref{eq:HijD} is then simplified as 
+\begin{eqnarray}\label{eq:HijDdimenless}
+	H_{i\alpha,j\beta} = - \exp \left\{ -i \phi_0 \left[-(x_{i\alpha} - x_{j\beta})\sin(\omega t) +\frac{1}{2} \left(\sin(\frac{K(x_i+x_j)}{2})\right ) (y_{i\alpha} - y_{j\beta}) \cos(2\omega t) \right] \right\},
+\end{eqnarray}
+where $\phi_0 \equiv eEa/\hbar \omega = (eEa/t)/(\hbar \omega/t)$ is dimensionless. Here we essentially use $t/ea$ as the units of $E$ and $t/\hbar$ as the units of $\omega$. 
+
+We next construct the quasienergy operator $\bar{Q}$. For this we first need to calculate $H_{i\alpha,j\beta,n}$:
+\begin{equation} \label{eq:HijDn}
+	H_{i\alpha,j\beta,n} = \frac{1}{T} \int_0^T H_{i\alpha,j\beta} e^{-in\omega t} dt
+\end{equation}
+
+The eigenstate of the Hamiltonian is written as
+\begin{equation}
+	C_{i,\alpha }^{\dagger }=C_{m,n,\alpha }^{\dagger
+	}=\sum\limits_{k_{y}}e^{ik_{y}(3an)}C_{m,k_{y},\alpha }^{\dagger }
+\end{equation}
+
+and we can write the diagonal and off-diagonal parts of the Hamiltonian $H_{j,j}$,
+
+\begin{align} \label{eq:Hjj1}
+	H_{j,j} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{A1}-\tau _{x}^{B1})\sin
+	(\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{2ja\sqrt{3}+\tau
+		_{x}^{A1}+\tau _{x}^{B1}}{2}\right) (\tau _{y}^{A1}-\tau _{y}^{B1})\cos
+	(2\omega t)\right\} \right] \\
+		H_{j,j} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{B1}-\tau _{x}^{A2})\sin
+	(\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{2ja\sqrt{3}+\tau
+		_{x}^{B1}+\tau _{x}^{A2}}{2}\right) (\tau _{y}^{B1}-\tau _{y}^{A2})\cos
+	(2\omega t)\right\} \right] \\
+	H_{j,j} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{A2}-\tau _{x}^{B2})\sin
+	(\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{2ja\sqrt{3}+\tau
+		_{x}^{A2}+\tau _{x}^{B2}}{2}\right) (\tau _{y}^{A2}-\tau _{y}^{B2})\cos
+	(2\omega t)\right\} \right] 
+\end{align}%
+and  $H_{j,j+1}$,
+\begin{align} \label{eq:Hjj2}
+	H_{j,j+1} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{B1}-\tau
+	_{x}^{A1})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{(2j+1)a%
+		\sqrt{3}+\tau _{x}^{A1}+\tau _{x}^{B1}}{2}\right) (\tau _{y}^{B1}-\tau
+	_{y}^{A1})\cos (2\omega t)\right\} \right] \\
+	H_{j,j+1} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{B2}-\tau
+	_{x}^{A2})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{(2j+1)a%
+		\sqrt{3}+\tau _{x}^{B2}+\tau _{x}^{A2}}{2}\right) (\tau _{y}^{B2}-\tau
+	_{y}^{A2})\cos (2\omega t)\right\} \right] \\
+	H_{j,j+1} & =-\exp \{-ik_{y}3a\}\exp \left[ -i\phi _{0}\left\{ -(\tau
+	_{x}^{B2}-\tau _{x}^{A1})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K%
+	\frac{(2j+1)a\sqrt{3}+\tau _{x}^{B2}+\tau _{x}^{A1}}{2}\right) (\tau
+	_{y}^{B2}-\tau _{y}^{A1})\cos (2\omega t)\right\} \right] 
+\end{align}%
+and $H_{j,j-1}$,
+
+\begin{align} \label{eq:Hjj3}
+	H_{j,j-1} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{A1}-\tau
+	_{x}^{B1})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{(2j-1)a%
+		\sqrt{3}+\tau _{x}^{A1}+\tau _{x}^{B1}}{2}\right) (\tau _{y}^{A1}-\tau
+	_{y}^{B1})\cos (2\omega t)\right\} \right] \\
+	H_{j,j-1} & =-\exp \{ik_{y}3a\}\exp \left[ -i\phi _{0}\left\{ -(\tau
+	_{x}^{A1}-\tau _{x}^{B2})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K%
+	\frac{(2j-1)a\sqrt{3}+\tau _{x}^{A1}+\tau _{x}^{B2}}{2}\right) (\tau
+	_{y}^{A1}-\tau _{y}^{B2})\cos (2\omega t)\right\} \right] \\
+	H_{j,j-1} & =-\exp \left[ -i\phi _{0}\left\{ -(\tau _{x}^{A2}-\tau
+	_{x}^{B2})\sin (\omega t)\mathbf{+}\frac{1}{2}\sin \left( K\frac{(2j-1)a%
+		\sqrt{3}+\tau _{x}^{A2}+\tau _{x}^{B2}}{2}\right) (\tau _{y}^{A2}-\tau
+	_{y}^{B2})\cos (2\omega t)\right\} \right] 
+\end{align}
+
+We can now construct the matrix of $\bar{Q}$. To this end we choose a cutoff for $m$ ($m\hbar \omega$ in the diagonal blocks):
+\begin{eqnarray}
+	|m|\le m_c,
+\end{eqnarray}
+where $m_c$ is a positive integer. This means that there are $N_m = 2 m_c + 1$ diagonal blocks, and each block is a $N_S\times N_S$ matrix. Therefore $\bar{Q}$ is a $N_m N_S \times N_m N_S$ matrix. Each $N_S \times N_S$ block, labeled by $\bar{Q}_{m,m+n}$, is
+\begin{equation}
+	\bar{Q}_{m,m+n} = H_n - m\hbar \omega \delta_{n0} \bm{1}_{N_S\times N_S},
+\end{equation} 
+where the $N_S \times N_S$ matrix $H_n$ has matrix elements.
+
+To make convergence with respect to $m_c$ faster one can choose $\hbar \omega \gg 8t$, where $8t$ is the band width of the tight-binding model. For $m_c = 4$, $r_c = 7$, the dimension of $\bar{Q}$ is $N_m N_S = 2025$.
+
+\begin{thebibliography}{99}
+\bibitem{JHS} J. H. Shirley, Phys. Rev. 138, B979 (1965).
+
+\bibitem{HSA} H. Sambe, Phys. Rev. A 7, 2203 (1973).
+
+\bibitem{MGP} M. Grifoni and P. H\"{a}nggi, Phys. Rep. 304, 229 (1998).
+
+\bibitem{MBL} M. Bukov, L. D'Alessio, and A. Polkovnikov, Adv. Phys. 64, 139
+(2015).
+
+\bibitem{AEE} Eckardt and E. Anisimovas, New J. Phys. 17, 093039 (2015).
+
+\bibitem{NGJ} N. Goldman and J. Dalibard, Phys. Rev. X 4, 031027 (2014).
+
+\end{thebibliography}
+
+\end{document}

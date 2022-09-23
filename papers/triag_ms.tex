@@ -123,7 +123,7 @@ When $\mathcal{M} = -1$, the chain is in a non-trivial topology and we would exp
 
 \subsection{\Red{3-site problem and kitaev limit for tri.chain, solid triangle}}
 We now expand our analysis to triangular islands.
-The chain Hamiltonian in \ref{eq: Peierls chain} can be generalized to be
+The chain Hamiltonian in Eq. \ref{eq: Peierls chain} can be generalized as
 \begin{equation} \label{eq: Peierls triangle}
   \Ham = \sum_{<j,l>} (-t e^{i\phi_{l,j}} \cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_j \mu \cc_j c_j,
 \end{equation}
@@ -155,29 +155,42 @@ Let us look at the energy going from site 1 to site 3, $\theta = \pi/3$, we noti
 \end{align}
 This is true if $\phi_{31} = \pi/3$.
 Now let's consider the energy from site 3 to site 2.
-The phase angle $\theta = -\pi/3$.
-The two simplified equations involving $b_2$ are
+The phase angle $\theta = -\pi/3$ and the two simplified equations involving $b_2$ are
 \begin{align}
   (\sin\phi_{23} - \sin(\pi/3)) b_2 b_3 = 0, \nonumber \\
   (\cos\phi_{23} - \cos(\pi/3)) b_2 a_3 = 0. \nonumber
 \end{align}
 Here we see $\phi_{23} = \pi/3$.
-The linear vector potential one can get with the desired phases is
+The linear vector potential one can get with the desired phase is
 \begin{equation}
   \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} x \hat{y}
 \end{equation}
 
 We can now extrapulate from a 3-point triangle to a full triangular island.
 The goal being to ensure Majorana zero modes at the bottom two vertices.
-If instead we have a triangular island with $n$-many rows we find
+If instead we have a triangular island with $n_r$-many rows we find
 \begin{equation}
-  \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} \dfrac{x}{2n-3} \hat{y}.
+  \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} \dfrac{x}{2n_r-3} \hat{y} = Bx\hat{y}.
 \end{equation}
 Solving the Hamiltonian numerically we can see how turning on this Peierls phase affects the eigenenergies.
 \begin{figure}[h]
 \includegraphics[width=0.5\textwidth]{../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-0/mu-p0_0000/spectral-flow.pdf}
-\caption{As the strength of the vector potential increases we can see zero energy modes appear at the critical strength, denoted as the dotted black line. Notice the density of edge states makes it unclear the Majorana zero modes live in a clean gap.}
+\label{fig: full-triangle-spectral}
+\caption{For increasing vector potential strength MZM's appear at the critical strength, denoted with a dotted black line. Notice the density of edge states makes it unclear the Majorana zero modes live in a clean gap.}
 \end{figure}
+
+We clearly see MZM's appear at the critical, unfortunately it doesn't seem to live within a clean gap.
+To get around this we instead think of using a triangular chain instead to remove a majority of the edge states.
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-1/mu-p0_0000/spectral-flow.pdf}
+\label{fig: full-triangle-spectral}
+\caption{As the strength of the vector potential increases MZM's appear at the critical strength, denoted as the dotted black line. Transparency has been added to look for any degeneracies. While a cleaner gap can be seen for the MZM's they are degenerate.}
+\end{figure}
+While we have effectively reduced the number of states living in the gap we see the MZM's are doubly degenerate.
+This is a consequence of a triangular chain's geometry.
+The next excited state becomes a zero mode due to the geometry forcing the wave function to be well separated and recombines with the other expected MZM's.
+This leads us to think we should use a finite width for the sides of the triangle.
 
 \subsection{\Red{Finite width (hollow triangle)}}
 
