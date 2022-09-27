@@ -174,7 +174,7 @@ If instead we have a triangular island with $n_r$-many rows we find
 \end{equation}
 Solving the Hamiltonian numerically we can see how turning on this Peierls phase affects the eigenenergies.
 \begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-0/mu-p0_0000/spectral-flow.pdf}
+\includegraphics[width=0.5\textwidth]{./figures/nr-25-w-0-spectral-flow.pdf}
 \label{fig: full-triangle-spectral}
 \caption{For increasing vector potential strength MZM's appear at the critical strength, denoted with a dotted black line. Notice the density of edge states makes it unclear the Majorana zero modes live in a clean gap.}
 \end{figure}
@@ -183,8 +183,8 @@ We clearly see MZM's appear at the critical, unfortunately it doesn't seem to li
 To get around this we instead think of using a triangular chain instead to remove a majority of the edge states.
 
 \begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-1/mu-p0_0000/spectral-flow.pdf}
-\label{fig: full-triangle-spectral}
+\includegraphics[width=0.5\textwidth]{./figures/nr-25-w-1-spectral-flow.pdf}
+\label{fig: chain-triangle-spectral}
 \caption{As the strength of the vector potential increases MZM's appear at the critical strength, denoted as the dotted black line. Transparency has been added to look for any degeneracies. While a cleaner gap can be seen for the MZM's they are degenerate.}
 \end{figure}
 While we have effectively reduced the number of states living in the gap we see the MZM's are doubly degenerate.
@@ -197,6 +197,12 @@ This leads us to think we should use a finite width for the sides of the triangl
 \subsubsection{\Red{Majorana number (PBC)}}
 
 \subsubsection{\Red{Corner modes (open BC)}}
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{./figures/nr-25-w-3-spectral-flow.pdf}
+\label{fig: finite-width-triangle-spectral}
+\caption{As the strength of the vector potential increases MZM's appear at the critical strength, denoted as the dotted black line. Transparency has been added to look for any degeneracies.}
+\end{figure}
 
 \section{Conclusions and Discussion}
 
