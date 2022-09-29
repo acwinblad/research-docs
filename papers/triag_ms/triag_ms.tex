@@ -113,11 +113,46 @@ The Majorana number, \mathcal{M}, of a 1D chain is defined as
   \mathcal{M} = \text{sgn}[\text{Pf}(A_{ch})],
 \end{equation}
 where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix.
-When $\mathcal{M} = -1$, the chain is in a non-trivial topology and we would expect Majorana zero modes at the edges of a finite chain. As we sweep through a range of $B$ values for our vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and our system take on a trivial topology, thus no Majorana zero modes would exist on the edge of a finite chain. \Red{Taking a look at figure XX we can see for varying $\mu$ and $B$ values where our system is trivial and non-trivial.}
+When $\mathcal{M} = -1$, the chain is in a non-trivial topology and we would expect Majorana zero modes at the edges of a finite chain.
+As we sweep through a range of $B$ values for our vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and our system take on a trivial topology, thus no Majorana zero modes would exist on the edge of a finite chain.
+Taking a look at figure \ref{fig: majorana-number} we can see for varying $\mu$ and $B$ values where our system is trivial and non-trivial.
 
 \subsection{\Red{Majorana Edge modes on a double chain}}
 
-\Red{Need to make this script and plot still}
+\begin{figure}[]
+  \subfloat[][]
+  {
+    \includegraphics[width=0.22\textwidth]{./figures/linear-chain-majorana-number.pdf}
+    \label{subfig:linear-chain-majorana-number}
+  }
+  \subfloat[][]
+  {
+    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n0_5-B-0_015pi.pdf}
+    \label{subfig:non-trivial-double-chain-1}
+  }
+  \\
+  \subfloat[][]
+  {
+    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n1_2-B-0.pdf}
+    \label{subfig:non-trivial-double-chain-2}
+  }
+  \subfloat[][]
+  {
+    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n1_2-B-0_015pi.pdf}
+    \label{subfig:trivial-double-chain}
+  }
+\caption{(a) The Majorana number is calculated for a single chain consisting of $n=80$ lattice sites with linear vector potential and parameter ranges $-2t \leq \mu \leq 2t$ and $B\leq \pi/25$. Values within the blue region tell us the chain is in a non-trivial topology, while white means it is trivial topology. (b)-(d) The eigenstates are plotted for a double chain, each chain has $n=80$ lattice sites. The top chain has an applied linear vector potential. Each chain and eigenstate are plotted with offsets for clarity: (b) $\mu=-1.2t$ and $B=0$ shows two fermion edge states at the interface (c) $\mu=-0.5t$ and $B=0.015\pi$ shows two fermionic edge states at the interface (d) $\mu=-1.2t$ and $B=0.015\pi$ shows two Majorana fermions at the interface of the two chains.}
+\label{fig:majorana-number}
+\end{figure}
+
+To illustrate the importance of bulk-edge correspondence in forming Majorana fermions we take a look at two chains connected at their end points.
+The top chain will have an applied linear vector potential.
+Topology of the bottom chain is only determined by its chemical potential.
+Both chains will be connected at the endpoints and have pairing along the y-axis.
+Following figure \ref{subfig:linear-chain-majorana-number}, picking a $\mu$ and $B$ combo in the non-trivial region (blue) results in the top chain being non-trivial.
+One can see in figure \ref{subfig:non-trivial-double-chain-1} and \ref{subfig:non-trivial-double-chain-2} that the connection of two non-trivial chains have no MZM's.
+When we turn on the vector potential and tune the chemical potential enough like figure \ref{subfig:trivial-double-chain} we have a trivial top chain connected to a non-trivial chain resulting in MZM's at the interfaces.
+Later we will use this bulk-edge correspondence in our justification of MZM's hosting on a triangular superconductor.
 
 \section{Triangular islands}
 
@@ -173,7 +208,7 @@ If instead we have a triangular island with $n_r$-many rows we find
   \vec{A} = \dfrac{8 \pi}{3 \sqrt{3} a^2} \dfrac{x}{2n_r-3} \hat{y} = Bx\hat{y}.
 \end{equation}
 Solving the Hamiltonian numerically we can see how turning on this Peierls phase affects the eigenenergies.
-\begin{figure}[h]
+\begin{figure}[]
 \includegraphics[width=0.5\textwidth]{./figures/nr-25-w-0-spectral-flow.pdf}
 \label{fig: full-triangle-spectral}
 \caption{For increasing vector potential strength MZM's appear at the critical strength, denoted with a dotted black line. Notice the density of edge states makes it unclear the Majorana zero modes live in a clean gap.}
@@ -198,7 +233,7 @@ This leads us to think we should use a finite width for the sides of the triangl
 
 \subsubsection{\Red{Corner modes (open BC)}}
 
-\begin{figure}[h]
+\begin{figure}[]
 \includegraphics[width=0.5\textwidth]{./figures/nr-25-w-3-spectral-flow.pdf}
 \label{fig: finite-width-triangle-spectral}
 \caption{As the strength of the vector potential increases MZM's appear at the critical strength, denoted as the dotted black line. Transparency has been added to look for any degeneracies.}
