@@ -160,9 +160,7 @@
         \small
         \item[]  (Dirac) Fermion
         \begin{itemize}
-          \setlength\itemsep{0pt}
             \item Fermi statistics
-            \item Complex solution
             \item Particle $\neq$ Antiparticle : $c \neq c^{\dagger}$
             \item Charged
             \item Electron
@@ -174,9 +172,7 @@
         \small
         \item[] Majorana Fermion
         \begin{itemize}
-          \setlength\itemsep{0pt}
             \item Fermi statistics
-            \item Real solution
             \item Particle $=$ Antiparticle : $c = c^{\dagger}$
             \item Neutral
             \item Neutrino? Dark Matter?
@@ -208,44 +204,227 @@
 
   \begin{frame}{\BD}
     \begin{multicols}{2}
+      \begin{itemize}
+        \item Superconductors
+          \begin{itemize}
+            \item Cooper pairs
+            \begin{itemize}
+              \item Electron-phonon interaction pairs two electrons with opposite spin and momenta.
+            \end{itemize}
+            \item Bogoliubov quasiparticles
+            \begin{itemize}
+              \item Excitation from ground state, pairs an electron to a hole.
+              \item Zero-energy excitations may be Majorana fermions.
+              \item If so, they come in pairs.
+            \end{itemize}
+          \end{itemize}
+      \end{itemize}
+      \vspace{30mm}
+
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.45\textwidth]{./figures/electron-holes-dispersion.png}};
+        \node[inner sep=0pt] (holes) at (1.4,2.5) {\small holes};
+        \node[inner sep=0pt] (electrons) at (1.15,2.25) {\small electrons};
+      \end{tikzpicture}
 
     \end{multicols}
 
   \end{frame}
 
-  \section{\MO}
-  \begin{frame}{\MO}{}
+  \begin{frame}{\BD}
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[width=\textwidth]{./figures/Kitaev Chain.pdf}};
+      \node[inner sep=0pt] (a1) at (-4.7,1.6) {\small $a_1$\quad\quad\quad$b_1$};
+      \node[inner sep=0pt] (aN) at (4.9,1.6) {\small $a_N$\quad\quad\ \ $b_N$};
+      \node[inner sep=0pt] (c1) at (-4.75,0) {\small $c_1$};
+      \node[inner sep=0pt] (cN) at (4.9,0) {\small $c_N$};
+      \node[inner sep=0pt] (cc1) at (-3.9,-1.6) {\small $\tilde{c}_1$};
+      \node[inner sep=0pt] (ccN) at (4.3,-1.6) {\small $\tilde{c}_{N-1}$};
+      \node[inner sep=0pt] (reference) at (0.0,-2.0) {\footnotesize Kitaev, Phys, Uspekhi \textbf{44}, 131 (2001)};
+    \end{tikzpicture}
 
+    \vspace{20pt}
+    Majorana fermion notation
+    \begin{equation}
+      c_j = \dfrac{1}{2}(a_j + i b_j).
+    \end{equation}
+
+  \end{frame}
+
+  \begin{frame}{\BD}
+    Hamiltonian for a 1D tight-binding chain with spinless \textit{p}-wave superconductivity
+    \begin{equation}
+      \ham_{chain} = -\mu\sum_j^N \cc_j c_j -\sum_j^{N-1} t \cc_j c_{j+1} + |\de| c_j c_{j+1} + h.c.
+    \end{equation}
+    Hamiltonian in Majorana basis
+    \begin{equation}
+      \ham_{chain} = \dfrac{i}{2} \sum_j -\mu a_j b_j + (t+|\de|) b_j a_{j+1} + (-t+|\de|) a_j b_{j+1}.
+    \end{equation}
+    $t=|\de|=0$ and $\mu<0$, trivial phase
+    \begin{equation}
+      \ham = -\dfrac{i\mu}{2} \sum_j a_j b_j.
+    \end{equation}
+    $t=|\de|>0$ and $\mu=0$, non-trivial (topological) phase
+    \begin{equation}
+      \ham = it \sum_j b_j a_{j+1}.
+    \end{equation}
+
+  \end{frame}
+
+  \begin{frame}{\BD}
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[width=\textwidth]{./figures/Kitaev Chain.pdf}};
+      \node[inner sep=0pt] (a1) at (-4.7,1.6) {\small $a_1$\quad\quad\quad$b_1$};
+      \node[inner sep=0pt] (aN) at (4.9,1.6) {\small $a_N$\quad\quad\ \ $b_N$};
+      \node[inner sep=0pt] (c1) at (-4.75,0) {\small $c_1$};
+      \node[inner sep=0pt] (cN) at (4.9,0) {\small $c_N$};
+      \node[inner sep=0pt] (cc1) at (-3.9,-1.6) {\small $\tilde{c}_1$};
+      \node[inner sep=0pt] (ccN) at (4.3,-1.6) {\small $\tilde{c}_{N-1}$};
+      \node[inner sep=0pt] (reference) at (0.0,-2.0) {\footnotesize Kitaev, \textit{Phys. Uspekhi} \textbf{44}, 131 (2001)};
+    \end{tikzpicture}
+
+    Intersite fermion representation
+    \begin{equation}
+      \tilde{c}_j = \dfrac{1}{2}(a_{j+1} + i b_j).
+    \end{equation}
+    The highly non-local fermion state
+    \begin{equation}
+      f = \dfrac{1}{2}(a_{1} + i b_N),
+    \end{equation}
+    corresponds to zero energy. This is still true for $|\mu|< 2t$
+  \end{frame}
+
+  \begin{frame}{\BD}
     \begin{multicols}{2}
+      \centering
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.35\textwidth]{./figures/swave-superconductor.pdf}};
+      \end{tikzpicture}
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.30\textwidth]{./figures/Mourik-dispersion.jpeg}};
+      \end{tikzpicture}
+      \vspace{40pt}
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.50\textwidth]{./figures/Mourik-didv-curve.png}};
+        \node[inner sep=0pt] (reference) at (0.25,-3) {\footnotesize Mourik, \textit{Science} \textbf{336}, 1003 (2012).};
+      \end{tikzpicture}
+    \end{multicols}
+  \end{frame}
 
-    \begin{itemize}
-      \item P-wave superconductors contain half-quantum vortices.
-        \begin{itemize}
-          \item Majorana fermions located at core of a vortex.
-          \item Braiding vortices exhibits Non-Abelian statistics.
-        \end{itemize}
-      \item 1D p-wave superconductors host Majorana fermions on end points.
-        \begin{itemize}
-          \item Possibly measured in real systems:
-          \item[] \hspace{0.40em}\scriptsize Mourik, \textit{Science} \textbf{336}, 1003 (2012)
-          \item[] \hspace{0.50em}\scriptsize Nadj-Perge, \textit{Science} \textbf{346}, 602 (2014)
-        \end{itemize}
-      \item Quasi-1D T-junction
-        \begin{itemize}
-          \item Braiding of Majorana fermions is defined for 2D.
-          \item In practice challenging to make, but still feasible and seriously pursued.
-        \end{itemize}
-    \end{itemize}
+  \begin{frame}{\BD}
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (-4,0)
+      {\includegraphics[width=0.5\textwidth]{./figures/Nadj-Perge-setup.png}};
+      \node[inner sep=0pt] (figure) at (2.75,0)
+      {\includegraphics[width=0.5\textwidth]{./figures/Nadj-Perge-results.png}};
+      \node[inner sep=0pt] (reference) at (2.75,-1.75) {\footnotesize Nadj-Perge, \textit{Science} \textbf{346}, 602 (2014).};
+    \end{tikzpicture}
+  \end{frame}
 
+  \begin{frame}{\BD}
+    \centering
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[width=\textwidth]{./figures/Schneider-results.pdf}};
+      \node[inner sep=0pt] (reference) at (0,-3.00) {\footnotesize Mn atoms (red spheres) on top of superconducting Nb (brown spheres).};
+      \node[inner sep=0pt] (reference) at (0,-3.40) {\footnotesize Schneider et al., \textit{Nature Nanotechnology} \textbf{17}, 384 (2022).};
+    \end{tikzpicture}
+  \end{frame}
+
+
+  \section{\MO}
+
+  \begin{frame}{\MO}
+    \begin{multicols}{2}
+      \begin{figure}
+        \includegraphics[width=0.5\textwidth]{./figures/pwave-braid.pdf}
+      \end{figure}
+
+      \vspace{-10mm}
+      \begin{equation*}
+        T_i :
+        \begin{cases}
+          \gamma_i \rightarrow \gamma_{i+1} \\
+          \gamma_{i+1} \rightarrow -\gamma_i \\
+          \gamma_j \rightarrow \gamma_j & \text{for $j$ and $j\neqi+1$}
+        \end{cases}
+      \end{equation*}
+
+      \begin{equation*}
+        \tau(T_i) \gamma_j [\tau(T_i)]^{-1} = T_i(\gamma_j)
+      \end{equation*}
+      \begin{equation*}
+        \tau(T_i) = \exp\left(\dfrac{\pi}{4}\gamma_{i+j}\gamma_i\right) = \dfrac{1}{\sqrt{2}}(1+\gamma_{i+j}\gamma_i)
+      \end{equation*}
+
+      \centering
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.45\textwidth]{./figures/braid.pdf}};
+        \node[inner sep=0pt] (Ttl) at (-2.7,1.5) {\small $T_i$};
+        \node[inner sep=0pt] (Ttr) at (2.7,1.5) {\small $T_{i+1}$};
+        \node[inner sep=0pt] (Tml) at (-2.6,0.0) {\small $T_{i+1}$};
+        \node[inner sep=0pt] (Tmr) at (2.5,0.0) {\small $T_i$};
+        \node[inner sep=0pt] (Tbl) at (-2.7,-1.6) {\small $T_i$};
+        \node[inner sep=0pt] (Tbr) at (2.7,-1.6) {\small $T_{i+1}$};
+        \node[inner sep=0pt] (reference) at (0,-3.0) {\footnotesize Ivanov, \textit{PRL} \textbf{86}, 268 (2000).};
+      \end{tikzpicture}
+
+    \end{multicols}
+  \end{frame}
+
+  \begin{frame}{\MO}
+
+    \begin{multicols}{3}
     \begin{figure}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.25\textwidth]{../../images/t-junction.pdf}};
-        \node[inner sep=0pt] (reference) at (0,-3.2) {\small Alicea, \textit{Nature Phys.} \textbf{7}, 412 (2011)}
+        {\includegraphics[width=0.30\textwidth]{./figures/t-junction.pdf}};
+        \node[inner sep=0pt] (a1) at (-1.1,3.5) {\small $\gamma_1$};
+        \node[inner sep=0pt] (a2) at (1.1,3.5) {\small $\gamma_2$};
+        \node[inner sep=0pt] (b1) at (0.4,0.2) {\small $\gamma_1$};
+        \node[inner sep=0pt] (b2) at (1.1,1.65) {\small $\gamma_2$};
+        \node[inner sep=0pt] (c1) at (0.4,-1.65) {\small $\gamma_1$};
+        \node[inner sep=0pt] (c2) at (-1.1,-0.15) {\small $\gamma_2$};
+        \node[inner sep=0pt] (d1) at (1.1,-2.00) {\small $\gamma_1$};
+        \node[inner sep=0pt] (d2) at (-1.1,-2.00) {\small $\gamma_2$};
         \end{tikzpicture}
       \end{figure}
-    \end{multicols}
 
+      \begin{minipage}{0.67\textwidth}
+      \small
+      \begin{equation}
+        \ham_T = -\mu \sum_j \cc_j c_j - \sum_j t \cc_j c_{j+1} + |\de| e^{i\phi} c_j c_{j+1} + h.c.
+      \end{equation}
+      \begin{equation}
+        c_j = e^{-i(\phi/2)}(\gamma_{j+1,1} + i \gamma_{j,2})/2
+      \end{equation}
+      \begin{itemize}
+        \footnotesize
+        \item Take pairing term $|\de|e^{i\phi} c_j c_{j+1}$ such that the site indices:
+        \item Increase moving $\rightarrow / \uparrow$ in the horizontal/vertical wires: $\phi=0$,
+        \item Decrease moving $\leftarrow / \downarrow$ in the horizontal/vertical wires: $\phi=\pi$.
+      \end{itemize}
+
+      \centering
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.8\textwidth]{./figures/t-junction-network.pdf}};
+        \node[inner sep=0pt] (gamma1) at (-1.9,1.3) {\small $\gamma_1$ \quad\ \  $\gamma_2$};
+        \node[inner sep=0pt] (gamma2) at (0.0,1.3) {\small $\gamma_3$ \quad\ \  $\gamma_4$};
+        \node[inner sep=0pt] (gamma3) at (1.8,1.3) {\small $\gamma_5$ \quad\ \  $\gamma_6$};
+        \node[inner sep=0pt] (reference) at (0,-1.5) {\small Alicea, \textit{Nature Phys.} \textbf{7}, 412 (2011)}
+      \end{tikzpicture}
+      \vspace{20cm}
+      \end{minipage}
+
+    \end{multicols}
   \end{frame}
 
   \begin{frame}
@@ -255,14 +434,14 @@
     \begin{itemize}
       \item Consider triangular islands, topologically similar to T-junctions.
       \item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces.
-      \item Good platform for transition from 2D to 1D topological superconductor.
+      \item Good platform to transition from 2D to 1D topological superconductor.
     \end{itemize}
     \newline
 
     \begin{figure}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.4\textwidth]{../../images/triangular-islands.pdf}};
+        {\includegraphics[width=0.4\textwidth]{./figures/triangular-islands.pdf}};
         \node[inner sep=0pt] (caption) at (0,-2.8) {\scriptsize Triangular Co islands on Cu(111).};
         \node[inner sep=0pt] (reference) at (0,-3.2) {\small Pietzsch et al., \textit{PRL} \textbf{96}, 237203 (2006)}
         \end{tikzpicture}
@@ -271,27 +450,113 @@
 
   \end{frame}
 
-
   \section{\FO}
 
-  \begin{frame}
-    \frametitle{\PW}
-
-    \begin{figure}
+  \begin{frame}{\PW}
+    \begin{multicols}{2}
+      \centering
       \begin{tikzpicture}
-        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
-        \node[inner sep=0pt] (figure) at (-3.60,4.2)
-        {\includegraphics[width=0.35\textwidth]{../../images/tunable-semiconductor.pdf}};
-        \node[inner sep=0pt] (figure) at (2.10,4.0)
-        {\includegraphics[width=0.40\textwidth]{../../images/dispersion-in-plane.pdf}};
-        \node[inner sep=0pt] (figure) at (-3.9,0.2)
-        {\includegraphics[width=0.14\textwidth]{../../images/energy-spectra-in-plane.pdf}};
-        \node[inner sep=0pt] (figure) at (2.5,0.2)
-        {\includegraphics[width=0.40\textwidth]{../../images/wavefunction-2-in-plane.pdf}};
-        %\node[inner sep=0pt,overlay] (caption) at (-6.25,3.40) {\footnotesize$V_y = 4.85$};
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[width=0.5\textwidth]{./figures/tunable-semiconductor.pdf}};
+        \node[inner sep=0pt] (reference) at (0,-3) {\small Alicea, \textit{PRB} \textbf{81}, 125318 (2010).};
       \end{tikzpicture}
-    \end{figure}
+      \small
+      \begin{equation}
+        c_j = (c_{j\uparrow}, c_{j\downarrow})^T
+      \end{equation}
+      \textit{s}-wave SC paring term:
+      \begin{equation}
+        \ham_{SC} = \sum_j \de \cc_{j\uparrow} \cc_{j\downarrow} + h.c.
+      \end{equation}
+      Quantum well:
+      \begin{equation}
+        \ham_0 = \sum_j (6t - \mu) \cc_j c_j - \sum_{\langle j,l \rangle} (t \cc_l c_j + h.c.)
+      \end{equation}
+      Rashba spin-orbit coupling:
+      \begin{equation}
+        \ham_R = -it_R \sum_{\langle j,l \rangle \alpha\beta} \cc_{l\alpha} (\bm{\sigma}_{\alpha\beta} \times \hat{r}_{lj}) \cdot \hat{z} c_{j\beta}
+      \end{equation}
+      Zeeman field:
+      \begin{equation}
+        \ham_Z = \sum_j \cc_j \vec{V}\cdot \bm{\sigma} c_j
+      \end{equation}
 
+    \end{multicols}
+  \end{frame}
+
+%  \begin{frame}
+%    \frametitle{\PW}
+%
+%    \begin{figure}
+%      \begin{tikzpicture}
+%        %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
+%        \node[inner sep=0pt] (figure) at (-3.60,4.2)
+%        {\includegraphics[width=0.35\textwidth]{./figures/tunable-semiconductor.pdf}};
+%        \node[inner sep=0pt] (figure) at (2.10,4.0)
+%        {\includegraphics[width=0.40\textwidth]{./figures/dispersion-in-plane.pdf}};
+%        \node[inner sep=0pt] (figure) at (-3.9,0.2)
+%        {\includegraphics[width=0.14\textwidth]{./figures/energy-spectra-in-plane.pdf}};
+%        \node[inner sep=0pt] (figure) at (2.5,0.2)
+%        {\includegraphics[width=0.40\textwidth]{./figures/wavefunction-2-in-plane.pdf}};
+%        %\node[inner sep=0pt,overlay] (caption) at (-6.25,3.40) {\footnotesize$V_y = 4.85$};
+%      \end{tikzpicture}
+%    \end{figure}
+%
+%  \end{frame}
+
+  \begin{frame}{\PW}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (-0.15,0.18)
+        {\includegraphics[width=0.16\textwidth]{./figures/energy-spectra-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (-4.0,0.0)
+        {\includegraphics[width=0.45\textwidth]{./figures/dispersion-in-plane.pdf}};
+        \node[inner sep=0pt] (figure) at (3.7,0.20)
+        {\includegraphics[width=0.45\textwidth]{./figures/wavefunction-2-in-plane.pdf}};
+    \end{tikzpicture}
+  \end{frame}
+
+%  \begin{frame}{\PW}
+%    \begin{tikzpicture}
+%        \node[inner sep=0pt] (figure) at (-3.0,0.0)
+%        {\includegraphics[width=0.30\textwidth]{./figures/energy-spectra-in-plane.pdf}};
+%        \node[inner sep=0pt] (figure) at (3.2,1.9)
+%        {\includegraphics[width=0.40\textwidth]{./figures/dispersion-in-plane.pdf}};
+%        \node[inner sep=0pt] (figure) at (3.7,-1.9)
+%        {\includegraphics[width=0.40\textwidth]{./figures/wavefunction-2-in-plane.pdf}};
+%    \end{tikzpicture}
+%  \end{frame}
+
+  \begin{frame}{Topological phase transition induced by a supercurrent}
+    \centering
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0.0,1.5)
+      {\includegraphics[width=0.6\textwidth]{./figures/Romito-setup.pdf}};
+      \node[inner sep=0pt] (figure2) at (0.0,-2.0)
+      {\includegraphics[width=0.6\textwidth]{./figures/Romito-topology-map2.pdf}};
+      \node[inner sep=0pt] (reference) at (0,-4.5) {\small Romito, \textit{PRB} \textbf{85}, 020502(R) (2012).};
+    \end{tikzpicture}
+  \end{frame}
+
+  \begin{frame}{Topological phase transition induced by a supercurrent}
+    \centering
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (-3.5,0)
+      {\includegraphics[width=0.4\textwidth]{./figures/Takasan-setup.pdf}};
+      \node[inner sep=0pt] (figure2) at (3.0,0.0)
+      {\includegraphics[width=0.5\textwidth]{./figures/Takasan-results.pdf}};
+      \node[inner sep=0pt] (reference) at (-3.5,-1.5) {\small Takasan, \textit{PRB} \textbf{106}, 014508 (2022).};
+    \end{tikzpicture}
+  \end{frame}
+
+  \begin{frame}{Kitaev chain with vector potential}
+    Peierls substitution
+    \begin{align}
+      \cc_{j+1} c_j &\rightarrow \cc_{j+1} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{j+1}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
+      &\rightarrow \cc_{j+1} c_j e^{i \phi_{j+1,j}}.
+    \end{align}
+    \begin{equation} \label{eq: Peierls chain}
+      \ham_{chain} = \sum_j (-t e^{i\phi_{j+1,j}} \cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j.
+    \end{equation}
   \end{frame}
 
   \begin{frame}
@@ -302,7 +567,7 @@
       \begin{tikzpicture}
         %\draw[help lines,gray!20] (-4,-4) grid[step=0.5] (4,4);
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=.4\textwidth]{../../images/left-triangle-corner.pdf}};
+        {\includegraphics[width=.4\textwidth]{./figures/left-triangle-corner.pdf}};
       \end{tikzpicture}
 
       \small
@@ -322,24 +587,6 @@
   \section{\RE}
 
   \begin{frame}
-    \frametitle{Majorana Number of 1D Chain with Vector Potential}
-
-    % show a different kind of pairing here (phi= pi and mu = 0)
-
-    \vspace{1em}
-    \begin{tikzpicture}
-      \node[inner sep=0pt] (figure) at (0,0)
-      {\includegraphics[width=0.4\textwidth]{../../images/Majorana-number.pdf}};
-      \node[inner sep=0pt] (mu) at (-2.8,0.1) {$\mu$};
-      \node[inner sep=0pt] (phi) at (0.1,-2.8) {$\phi$};
-      \node[inner sep=0pt] (figure) at (0.1,-3.8)
-      {\includegraphics[width=\textwidth]{../../images/kitaev-chain-mu_pi.pdf}};
-      \node[inner sep=0pt] (phi0) at (-6.2,-3.825) {\footnotesize $\phi = \pi$};
-    \end{tikzpicture}
-
-  \end{frame}
-
-  \begin{frame}
     \frametitle{Triangular Chain}
     % show spectral plot and wavefunction
 
@@ -354,7 +601,7 @@
     \vspace{-4em}
     \begin{figure}
       %\hspace{-1.25em}
-      \includegraphics[width=0.4\textwidth]{../../images/vector-potential-field.pdf}
+      \includegraphics[width=0.4\textwidth]{./figures/vector-potential-field.pdf}
     \end{figure}
 
     \begin{figure}
@@ -366,7 +613,7 @@
     \vspace{-1em}
 
     \begin{figure}
-      \includegraphics[width=0.4\textwidth]{../../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-1/mu-p0_0000/En01-B-0_1029.pdf}
+      \includegraphics[width=0.4\textwidth]{../../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-1/mu-p0_0000/Ep00-B-0_1029.pdf}
     \end{figure}
     \end{multicols}
 
@@ -402,6 +649,15 @@
 
 
   \appendix
+
+  \begin{frame}
+    \frametitle{Additional results from Schneider et al.}
+
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{./figures/Schneider-additional-results.pdf}
+    \end{figure}
+
+  \end{frame}
 
   \begin{frame}
   \frametitle{Majorana fermion notation and coupling isolations}
