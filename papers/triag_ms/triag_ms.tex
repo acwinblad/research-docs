@@ -65,35 +65,55 @@
 
 
 \section{Introduction}
-\Red{PLACEHOLDER}
+\Red{1) Designs based on the kitaev chains and experimental evidence.}
 
+\Red{2) Geometries different from chain, quasi-1D, 2D options}
+
+\Red{3) Supercurrent and TSC}
 
 \Red{OUTLINE: (Sec I is \dots, Sec II is \dots)}
-\section{Linear vector potential effects on 1D chains}
+\section{Topological phase diagram of an infinite ribbon}
 
-\Red{PLACEHOLDER}
+It has been previously shown that a constant vector potential can induce a topological phase transition for a spinless $p$-wave superconducting chain [REF], and other types of superconductors.
+It appears Majorana fermions can behosted at the end points of a chain with finite width as with a Josephson-junction as seen in [REF], provided the width is much smaller than the Majorana fermion decay length.
+Expanding on these ideas we would like to induce a topological phase transition for an infinite triangular lattice ribbon.
+This will help create an argument using bulk-edge correspondence to inform how Majorana fermions will form at the interfaces of triangular island edges.
 
-\subsection{\Red{Gap closing/reopening (Topological Change) and phase diagram}}
-
-Recent work has predicted that placing a supercurrent along a superconducting chain can induce a topological phase change.
-Another way of thinking about this is there is a constant vector potential that induces a constant phase on the hopping amplitudes on the superconducting chain.
-Here we will show that using a linear vector potential can also induce a topological phase change, i.e. clsoing and reopening a gap.
-\Red{Maybe here we can state the Hamiltonian in the supplementary? Explain we can't solve this analytically, thus we proceed with a numerical approach starting with the lattice space Hamiltonian.}
-Let us start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor chain
+Let us start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor of a triangular lattice
 \begin{equation}
-  \Ham_{ch} = \sum_j (-t\cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j,
+  \Ham = \sum_{\langle j, l \rangle} (-t\cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_{j} \mu \cc_j c_j,
 \end{equation}
-where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, and $\mu$ is the chemical potential.
+where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, $\mu$ is the chemical potential, $\theta_{l,j}$ is the angle between sites $l$ and $j$.
 Next, we will apply Peierls substitution to our creation(annihilation) operators
 \begin{align}
-  \cc_{j+1} c_j &\rightarrow \cc_{j+1} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{j+1}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
-  &\rightarrow \cc_{j+1} c_j e^{i \phi_{j+1,j}}.
+  \cc_{l} c_j &\rightarrow \cc_{l} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{l}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
+  &\rightarrow \cc_{l} c_j e^{i \phi_{l,j}}.
 \end{align}
-Here the electron charge, $e$, and Planck's constant, $\hbar$, will be treated as natural numbers. The vector potential will be linear, symmetric about the y-axis, and point along the x-axis, $\vec{A} = Bx\hat{x}$ for $-L/2 \leq x \leq L/2$.
+Here the electron charge, $e$, and Planck's constant, $\hbar$, will be treated as natural numbers.
+The vector potential will be constant throughout the ribbon allowing for translational symmetry along the $x$-axis.
 One finds that $t$ is the only term that picks up a phase, thus our modified Hamiltonian looks like
 \begin{equation} \label{eq: Peierls chain}
-  \Ham_{ch} = \sum_j (-t e^{i\phi_{j+1,j}} \cc_{j+1} c_j + \de \cc_{j+1}\cc_j + h.c.) - \mu \cc_j c_j.
+  \Ham = \sum_{\langle j,l \rangle} (-t e^{i\phi_{l,j}} \cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_j \mu \cc_j c_j.
 \end{equation}
+
+Since we are interested how an infinite ribbon behaves in a vector field we will fourier transform along the $x$-axis only.
+We pick the following transform to be
+\begin{equation}
+  \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{i \vec{k}\cdot\vec{r}_m}
+\end{equation}
+where $\vec{k}=k\hat{x}$ and $\vec{r}_m = ma\hat{x}$, and for convenience $a$ will be treated as a natural number, too.
+This leads to the following block Hamiltonian
+\begin{equation}
+  \Ham(k) = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
+    \begin{matrix}
+      \epsilon(k) & \delta(k) \\
+      \delta^\dagger(k) & -\epsilon(-k)
+    \end{matrix} \right)
+    \Psi_k.
+\end{equation}
+The $\epsilon(k)$ block is a tridiagonal with $\epsilon_0(k) = -2t\cos(k+\phi_1) - \mu$ along the diagonal, the upper diagonal is  $\epsilon_1(k) = -t(e^{-i\phi_2}+e^{i(k-\phi_3)})$, and $\epsilon_1^*(k)$ along the lower diagonal.
+The $\delta(k)$ block is a tridiagonal with $\delta_0(k) = 2i\de \sin k $ along the diagonal, the upper diagonal is  $\delta_1(k) = -\de (e^{i\theta_2}+e^{i(k+\theta_3)})$, and $-\delta_1(-k)$ along the lower diagonal.
+The size of each block is the number of rows along the $y$-axis in the infinite ribbon.
 
 To calculate the Majorana number we need to rewrite our Hamiltonian to be in skew-symmetric form.
 One such way is to write it in Majorana fermion basis, the transformation matrix is of the form
@@ -118,34 +138,6 @@ When $\mathcal{M} = -1$, the chain is in a non-trivial topology and we would exp
 As we sweep through a range of $B$ values for our vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and our system take on a trivial topology, thus no Majorana zero modes would exist on the edge of a finite chain.
 Taking a look at figure \ref{fig: majorana-number} we can see for varying $\mu$ and $B$ values where our system is trivial and non-trivial.
 
-\subsection{\Red{Majorana Edge modes on a double chain}}
-
-\begin{figure}[]
-  \subfloat[][]
-  {
-    \includegraphics[width=0.34\textwidth]{./figures/linear-chain-majorana-number-full-range.pdf}
-    \label{subfig:linear-chain-majorana-number}
-  }
-  \subfloat[][]
-  {
-    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n0_5-B-0_015pi.pdf}
-    \label{subfig:non-trivial-double-chain-1}
-  }
-  \\
-  \subfloat[][]
-  {
-    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n1_2-B-0.pdf}
-    \label{subfig:non-trivial-double-chain-2}
-  }
-  \subfloat[][]
-  {
-    \includegraphics[width=0.22\textwidth]{./figures/double-chain-mu-n1_2-B-0_015pi.pdf}
-    \label{subfig:trivial-double-chain}
-  }
-\caption{(a) The Majorana number is calculated for a single chain consisting of $n=80$ lattice sites with linear vector potential and parameter ranges $-2t \leq \mu \leq 2t$ and $B\leq \pi/25$. Values within the blue region tell us the chain is in a non-trivial topology, while white means it is trivial topology. (b)-(d) The eigenstates are plotted for a double chain, each chain has $n=80$ lattice sites. The top chain has an applied linear vector potential. Each chain and eigenstate are plotted with offsets for clarity: (b) $\mu=-1.2t$ and $B=0$ shows two fermion edge states at the interface (c) $\mu=-0.5t$ and $B=0.015\pi$ shows two fermionic edge states at the interface (d) $\mu=-1.2t$ and $B=0.015\pi$ shows two Majorana fermions at the interface of the two chains.}
-\label{fig:majorana-number}
-\end{figure}
-
 To illustrate the importance of bulk-edge correspondence in forming Majorana fermions we take a look at two chains connected at their end points.
 The top chain will have an applied linear vector potential.
 Topology of the bottom chain is only determined by its chemical potential.
@@ -169,7 +161,7 @@ It is difficult to come to any conclusion while in the complex fermion basis, bu
 The triangular Hamiltonian now takes the form
 \begin{align}
   \Ham = -\dfrac{i\mu}{4} \sum_j (& a_j b_j - b_j a_j) \nonumber \\
-  -\dfrac{i}{4} \sum_{<j,l>} [&(t\sin\phi_{l.j}-\de\sin\theta_{l,j}) a_l a_j \nonumber \\
+  -\dfrac{i}{4} \sum_{\langle j,l \rangle} [&(t\sin\phi_{l.j}-\de\sin\theta_{l,j}) a_l a_j \nonumber \\
   +&(t\sin\phi_{l,j}+\de\sin\theta_{l,j}) b_l b_j \nonumber \\
   +&(t\cos\phi_{l,j}+\de\cos\theta_{l,j}) a_l b_j \nonumber \\
   -&(t\cos\phi_{l,j}-\de\cos\theta_{l,j}) b_l a_j].
