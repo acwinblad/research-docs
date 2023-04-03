@@ -62,31 +62,33 @@
 
 
 \section{Introduction}
-\Blue{(0) brief history of MFs in twenty years}
-For the past twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \ref{}.
-\Blue{(1) Designs based on the kitaev chains and experimental evidence.}
-MZMs were originally proposed to be found in topological 2D \textit{p}-wave superconducting vortices and at the ends of a topological 1D \textit{p}-wave superconductor \ref{}.
+For the past twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}.
+MZMs were originally proposed to be found in topological 2D \textit{p}-wave superconducting vortices and at the ends of a topological 1D \textit{p}-wave superconductor \cite{readPairedStatesFermions2000, kitaevUnpairedMajoranaFermions2001}.
 A \textit{p}-wave superconductor has yet to be discovered but innovative heterostructures have been proposed to make topological superconductors.
-Such systems make use of \textit{s}-wave superconductors in proximity to various heterostructures: topological insulator \ref{} or Josephson junction with in plane magnetic field \ref{}, 2D electron gas (2DEG) with Rashba spin-orbit coupling (SOC) and ferromagnet \ref{}, ferromagnetic atomic spin chains or spin-helical order \ref{}, and Quantum anomalous Hall insulator (QAHI) \ref{}.
-The past decade has seen strides in potential measurements of MZMs, most of these focus on one end of the wire \ref{} looking at zero-bias conductance peak (ZBP) curves and more recently both ends of a wire \ref{}.
-A new potential measurement may soon help confirm the identity of MZMs using a quantum dot and crossed Andreev reflections (CAR) in a Josephson junction \ref{}.
-\Blue{(2) Geometries different from chain, quasi-1D, 2D options}
-The main proposal to achieve braiding of MZMs uses 1D wires to create large networks of t-junctions to create tetrons and hexons.
-Others have pointed this is not a simple task and proposed quasi-1D systems like a cross Josephson junction \ref{} or scissor cuts on a QAHI \ref{} to get around the difficult engineering of 1D wire networks.
-We propose an alternative structure by using triangular superconducting islands, which can be easily produced with epitaxial growth \ref{}.
-\Blue{(3) Supercurrent and TSC}
+Such systems make use of \textit{s}-wave superconductors in proximity to various heterostructures: topological insulator \cite{fuSuperconductingProximityEffect2008, hosurMajoranaModesEnds2011, potterEngineeringMathitipSuperconductor2011, veldhorstMagnetotransportInducedSuperconductivity2013} or Josephson junction with in plane magnetic field \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019}, 2D electron gas (2DEG) with Rashba spin-orbit coupling (SOC) and ferromagnet \cite{oregHelicalLiquidsMajorana2010, sauGenericNewPlatform2010, lutchynSearchMajoranaFermions2011, potterTopologicalSuperconductivityMajorana2012, nadj-pergeProposalRealizingMajorana2013}, ferromagnetic atomic spin chains \cite{choyMajoranaFermionsEmerging2011, brauneckerInterplayClassicalMagnetic2013, klinovajaTopologicalSuperconductivityMajorana2013}, and quantum anomalous Hall insulator (QAHI) \cite{chenQuasionedimensionalQuantumAnomalous2018, zengQuantumAnomalousHall2018, xieCreatingLocalizedMajorana2021}.
+There have been strides in potential measurements of MZMs, most of these focus on one end of the wire \cite{mourikSignaturesMajoranaFermions2012, rokhinsonFractionalJosephsonEffect2012, dengAnomalousZeroBiasConductance2012, nadj-pergeObservationMajoranaFermions2014, xuExperimentalDetectionMajorana2015, albrechtExponentialProtectionZero2016, sunMajoranaZeroMode2016, wangEvidenceMajoranaBound2018, jackObservationMajoranaZero2019, fornieriEvidenceTopologicalSuperconductivity2019, renTopologicalSuperconductivityPhasecontrolled2019, mannaSignaturePairMajorana2020} looking at zero-bias conductance peak (ZBP) curves and more recently both ends of a wire \cite{schneiderPrecursorsMajoranaModes2022}.
+A new potential measurement may soon help confirm the identity of MZMs using a quantum dot and crossed Andreev reflections (CAR) in a Josephson junction \cite{fengProbingRobustMajorana2022}.
+
+The main proposal to achieve braiding of MZMs uses 1D wires to create large networks of T-junctions to create tetrons and hexons.
+It is not a simple task to develop these networks \cite{karzigScalableDesignsQuasiparticlepoisoningprotected2017} and proposed quasi-1D systems in thin films \cite{potterMultichannelGeneralizationKitaev2010}, a cross Josephson junction \cite{zhouPhaseControlMajorana2020}, or scissor cuts on a QAHI \cite{xieCreatingLocalizedMajorana2021} to get around the difficult engineering of 1D wire networks.
+We propose an alternative structure by using triangular superconducting islands, which can be easily produced with epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006}.
+
+A common thread of the previous work has been to use a magnetic field or Zeeman effect to induce a topological phase transition.
+\Blue{Takasan 2022 spends some time building up why one can use supercurrents, should we also talk about that or just reference their paper and the 2012 supercurrent paper and let that be good enough?}
+Instead, it has been shown a supercurrent can induce a topological phase transtion in a given heterostructure \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}.
+We show when using an inhomogeneous supercurrent on a minimal model MZMs can be exactly solved.
+Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite width hollow triangle island we can realize clean gap MZMs due to bulk-edge correspondence, even calculating an approximate topological phase diagram with broad topological parameter regimes.
 
 \Blue{OUTLINE: (Sec I is \dots, Sec II is \dots)}
 \section{Triangular islands}
 
 \subsection{\Blue{3-site problem and kitaev limit for tri.chain, solid triangle}}
-We show one can get exact MZMs in a simple three site triangular lattice.
+We show one can get exact MZMs in a minimal three site triangular lattice.
 Let us start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor of a triangular lattice
 \begin{equation}
   \ham = \sum_{\langle j, l \rangle} (-t\cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_{j} \mu \cc_j c_j,
 \end{equation}
 where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, $\mu$ is the chemical potential, $\theta_{l,j}$ is the angle between sites $l$ and $j$.
-It has been previously shown that a constant vector potential can induce a topological phase transition for hybrid effective $p$-wave and spinless $p$-wave superconducting chain \cite{romitoManipulatingMajoranaFermions2012,takasanSupercurrentinducedTopologicalPhase2022}, and other types of superconductors.
 Next, we apply a Peierls substitution to our creation(annihilation) operators of the form
 \begin{align}
   \cc_{l} c_j &\rightarrow \cc_{l} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{l}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
@@ -143,7 +145,7 @@ We would also like to find a range of chemical potentials that result in a topol
 
 \section{Topological phase diagram of a finite width ribbon}
 
-It appears Majorana fermions can behosted at the end points of a chain with finite width as with a Josephson-junction as seen in [REF], provided the width is much smaller than the Majorana fermion decay length.
+It appears Majorana fermions can behosted at the end points of a chain with finite width as with a Josephson-junction as seen in \cite{}, provided the width is much smaller than the Majorana fermion decay length.
 Expanding on these ideas we would like to induce a topological phase transition for an infinite triangular lattice ribbon.
 This will help create an argument using bulk-edge correspondence to inform how MZMs will form at the interfaces of triangular island edges, i.e. their corners.
 
@@ -286,7 +288,7 @@ As expected we find MZMs at the bottom corners of the triangle where the differi
 \end{acknowledgements}
 
 
-\bibliography{triag_ref}
+\bibliography{triag_cite}
 
 
 \end{document}
