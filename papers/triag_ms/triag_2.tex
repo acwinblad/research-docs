@@ -76,8 +76,10 @@ We propose an alternative structure by using triangular superconducting islands,
 A common thread of the previous work has been to use a magnetic field or Zeeman effect to induce a topological phase transition.
 \Blue{Takasan 2022 spends some time building up why one can use supercurrents, should we also talk about that or just reference their paper and the 2012 supercurrent paper and let that be good enough?}
 Instead, it has been shown a supercurrent can induce a topological phase transtion in a given heterostructure \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}.
+Adjusting the supercurrent can allow for manipulating the MZMs position along a wire.
 We show when using an inhomogeneous supercurrent on a minimal model MZMs can be exactly solved.
-Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite width hollow triangle island we can realize clean gap MZMs due to bulk-edge correspondence, even calculating an approximate topological phase diagram with broad topological parameter regimes.
+Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite width hollow triangle island we can realize clean gap MZMs due to bulk-edge correspondence, calculating an approximate topological phase diagram with broad topological parameter regimes.
+Our platform allows for another option to host and manipulate MZMs on triangular networks instead of 1D wire networks.
 
 \Blue{OUTLINE: (Sec I is \dots, Sec II is \dots)}
 \section{Triangular islands}
@@ -238,12 +240,6 @@ Here we see the vector potential plays a vital role in transforming the topology
   \label{fig: majorana-number}
 \end{figure}
 
-We can now use bulk-edge correspondence to justify the production of Majorana fermions at the interfaces of the triangular islands edges, i.e. corners.
-We simulataneoulsy tune regions I and II to be in a trivial(nontrivial) topological phase and regions III and IV to be nontrivial(trivial) topological phase, respectively.
-To check we look at the numerical eigenenergy spectral flow and eigenstates of a triangular lattice with size $n=100$, and width $w=3$, and $A = [0,2\pi]$.
-Fig. \ref{fig: spectral-flows} shows strong agreement of MZMs appearing in the same vector potential range as seen in Fig. \ref{subfig: majorana-number-5pi6ths}'s topological phase diagram.
-As expected we find MZMs at the bottom corners of the triangle where the differing topologies meet, as seen in Fig. \ref{fig: mzm-wavefunctions}.
-
 \begin{figure}[]
   \subfloat[\label{subfig: spectral-flow-mu-0.0}]{%
     \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-0_0.pdf}%
@@ -278,10 +274,41 @@ As expected we find MZMs at the bottom corners of the triangle where the differi
   \label{fig: mzm-wavefunctions}
 \end{figure}
 
-\section{Conclusions and Discussion}
+We can now use bulk-edge correspondence to justify the hosting of Majorana fermions at the interfaces of the triangular islands edges, i.e. corners.
+We simulataneoulsy tune regions I and II to be in a trivial(nontrivial) topological phase and regions III and IV to be nontrivial(trivial) topological phase, respectively.
+To check we look at an eigenenergy spectral flow and eigenstates of a triangular lattice with size $n=100$, width $w=3$, and $A = [0,2\pi]$.
+Fig. \ref{fig: spectral-flows} shows strong agreement of MZMs appearing in the same vector potential range as seen in Fig. \ref{subfig: majorana-number-5pi6ths}'s topological phase diagram.
+As expected we find MZMs at the bottom corners of the triangle where the differing topologies meet, as seen in Fig. \ref{fig: mzm-wavefunctions}.
+We see a broad parameter space, $\mu$ and $A$, for our system to host MZMs.
+Our calculations also show the MZMs live within a clean gap inside those parameter ranges.
+As a last note, we were able to show analytically and numerically any odd-function vector potential field may host MZMs at two vertices of a triangular island.
 
-\Blue{PLACEHOLDER}
+\section{Discussion and Conclusions}
 
+How one can build this system warrants some thought.
+A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}.
+If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to be a very strong trivial superconductor.
+Another option may be to use quasi-1D cuts on a QAHI with triangular lattice in proximity to an \textit{s}-wave superconductor \cite{xieCreatingLocalizedMajorana2021}.
+To implement the inhomogeneous supercurrent or vector potential one could use a magnetic field and a uniform supercurrent or two antiparallel supercurrents separated by a 1D or quasi-1D insulator strip.
+To braid MZMs in this system one only has to rotate and slowly turn on neighboring triangles inhomogeneous vector potentials to transition an edge to be of nontrivial topology.
+The following schematic in Fig. \ref{} illustrates how such a manipulation of MZMs can occur.
+
+\begin{figure}[]
+  \begin{tikzpicture}
+    \node[inner sep=0pt] (figure) at (0,0){\includegraphics[width=0.5\textwidth]{./figures/triangle-network-braiding.pdf}};
+    \node[inner sep=0pt] (gamma1) at (-2.7,-1.1) {\small $\gamma_1$};
+    \node[inner sep=0pt] (gamma2) at (-1.8,-1.1) {\small $\gamma_2$};
+    \node[inner sep=0pt] (gamma1') at (2.7,-1.1) {\small $\gamma_1$};
+    \node[inner sep=0pt] (gamma2') at (1.8,-1.1) {\small $\gamma_2$};
+  \end{tikzpicture}
+  \caption{Network of tunable topological superconducting hollow triangular islands. The left panel shows the initialization of two MZMs $\gamma_1$ and $\gamma_2$. The right panel depicts the MZMs after a braiding operation. The arrows depict which island has an inhomogeneous vector potential applied and in general direction for a step-function. Green lines shows which edges are topologically nontrivial.}
+  \label{fig: triangular-network-braiding}
+\end{figure}
+
+With the base model for a new platform displayed further work is still required.
+A description of the Wannier states would be informative (I'm not well versed in this type of description, could use your expertise here in writing this sentence as it sounds important to include).
+Perfectly fabricated devices are not always realistic, a further study of the effects misshapen lattice edges would be important to further gauge how robust our platform is.
+Another calculation of how the MZMs evolve on a single triangle when the vector potential is rotated by $2\pi$ at its center would be informative if they survive such a process without mixing into higher order states and if they pick up a phase accumulation.
 
 \begin{acknowledgements}
   Supported by XYZ Grant No. XXXXXX etc.

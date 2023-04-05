@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{46}%
+\begin{thebibliography}{47}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -131,9 +131,7 @@
   {Fu}}\ and\ \bibinfo {author} {\bibfnamefont {C.~L.}\ \bibnamefont {Kane}},\
   }\href {https://doi.org/10.1103/PhysRevLett.100.096407} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {100}},\
-  \bibinfo {pages} {096407} (\bibinfo {year} {2008})},\ \Eprint
-  {https://arxiv.org/abs/0707.1692} {arxiv:0707.1692 [cond-mat]} \BibitemShut
-  {NoStop}%
+  \bibinfo {pages} {096407} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hosur}\ \emph {et~al.}(2011)\citenamefont {Hosur},
   \citenamefont {Ghaemi}, \citenamefont {Mong},\ and\ \citenamefont
   {Vishwanath}}]{hosurMajoranaModesEnds2011}%
@@ -661,4 +659,31 @@
   {https://doi.org/10.1103/PhysRevB.106.014508} {\bibfield  {journal} {\bibinfo
    {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {106}},\ \bibinfo
   {pages} {014508} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dvir}\ \emph {et~al.}(2023)\citenamefont {Dvir},
+  \citenamefont {Wang}, \citenamefont {{van Loo}}, \citenamefont {Liu},
+  \citenamefont {Mazur}, \citenamefont {Bordin}, \citenamefont {{ten Haaf}},
+  \citenamefont {Wang}, \citenamefont {{van Driel}}, \citenamefont {Zatelli},
+  \citenamefont {Li}, \citenamefont {Malinowski}, \citenamefont {Gazibegovic},
+  \citenamefont {Badawy}, \citenamefont {Bakkers}, \citenamefont {Wimmer},\
+  and\ \citenamefont {Kouwenhoven}}]{dvirRealizationMinimalKitaev2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Dvir}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Wang}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {{van Loo}}}, \bibinfo {author}
+  {\bibfnamefont {C.-X.}\ \bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont
+  {G.~P.}\ \bibnamefont {Mazur}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Bordin}}, \bibinfo {author} {\bibfnamefont {S.~L.~D.}\
+  \bibnamefont {{ten Haaf}}}, \bibinfo {author} {\bibfnamefont {J.-Y.}\
+  \bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {{van Driel}}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Zatelli}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Li}},
+  \bibinfo {author} {\bibfnamefont {F.~K.}\ \bibnamefont {Malinowski}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Gazibegovic}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Badawy}}, \bibinfo {author}
+  {\bibfnamefont {E.~P. A.~M.}\ \bibnamefont {Bakkers}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Wimmer}},\ and\ \bibinfo {author}
+  {\bibfnamefont {L.~P.}\ \bibnamefont {Kouwenhoven}},\ }\href
+  {https://doi.org/10.1038/s41586-022-05585-1} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature}\ }\textbf {\bibinfo {volume} {614}},\ \bibinfo {pages}
+  {445} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
 \end{thebibliography}%
