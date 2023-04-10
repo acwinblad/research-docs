@@ -7,8 +7,8 @@
 %\usepackage[demo]{graphicx}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{setspace}
-\setstretch{3}
+%\usepackage{setspace}
+%\setstretch{3}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor= blue,citecolor=blue,linkcolor= blue,bookmarks=true,bookmarksopen=false}
@@ -62,7 +62,7 @@
 \maketitle
 
 \section{Introduction}
-For the past twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}.
+For more than twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}.
 MZMs were originally proposed to be found in topological 2D \textit{p}-wave superconducting vortices and at the ends of a topological 1D \textit{p}-wave superconductor \cite{readPairedStatesFermions2000, kitaevUnpairedMajoranaFermions2001}.
 A \textit{p}-wave superconductor has yet to be discovered but innovative heterostructures have been proposed to make topological superconductors.
 Such systems make use of \textit{s}-wave superconductors in proximity to various heterostructures: topological insulator \cite{fuSuperconductingProximityEffect2008, hosurMajoranaModesEnds2011, potterEngineeringMathitipSuperconductor2011, veldhorstMagnetotransportInducedSuperconductivity2013} or Josephson junction with in plane magnetic field \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019}, 2D electron gas (2DEG) with Rashba spin-orbit coupling (SOC) and ferromagnet \cite{oregHelicalLiquidsMajorana2010, sauGenericNewPlatform2010, lutchynSearchMajoranaFermions2011, potterTopologicalSuperconductivityMajorana2012, nadj-pergeProposalRealizingMajorana2013}, ferromagnetic atomic spin chains \cite{choyMajoranaFermionsEmerging2011, brauneckerInterplayClassicalMagnetic2013, klinovajaTopologicalSuperconductivityMajorana2013}, and quantum anomalous Hall insulator (QAHI) \cite{chenQuasionedimensionalQuantumAnomalous2018, zengQuantumAnomalousHall2018, xieCreatingLocalizedMajorana2021}.
@@ -70,7 +70,7 @@ There have been strides in potential measurements of MZMs, most of these focus o
 A new potential measurement may soon help confirm the identity of MZMs using a quantum dot and crossed Andreev reflections (CAR) in a Josephson junction \cite{fengProbingRobustMajorana2022}.
 
 The main proposal to achieve braiding of MZMs uses 1D wires to create large networks of T-junctions to create tetrons and hexons.
-It is not a simple task to develop these networks \cite{karzigScalableDesignsQuasiparticlepoisoningprotected2017} and proposed quasi-1D systems in thin films \cite{potterMultichannelGeneralizationKitaev2010}, a cross Josephson junction \cite{zhouPhaseControlMajorana2020}, or scissor cuts on a QAHI \cite{xieCreatingLocalizedMajorana2021} to get around the difficult engineering of 1D wire networks.
+It is not a simple task to develop these networks \cite{karzigScalableDesignsQuasiparticlepoisoningprotected2017}, proposed alternatives are quasi-1D systems in thin films \cite{potterMultichannelGeneralizationKitaev2010}, a cross Josephson junction \cite{zhouPhaseControlMajorana2020}, or scissor cuts on a QAHI \cite{xieCreatingLocalizedMajorana2021}, which get around the difficult engineering of 1D wire networks.
 We propose an alternative structure by using triangular superconducting islands, which can be easily produced with epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006}.
 
 A common thread of the previous work has been to use a magnetic field or Zeeman effect to induce a topological phase transition.
@@ -81,7 +81,6 @@ We show when using an inhomogeneous supercurrent on a minimal model MZMs can be 
 Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite width hollow triangle island we can realize clean gap MZMs due to bulk-edge correspondence, calculating an approximate topological phase diagram with broad topological parameter regimes.
 Our platform allows for another option to host and manipulate MZMs on triangular networks instead of 1D wire networks.
 
-\Blue{OUTLINE: (Sec I is \dots, Sec II is \dots)}
 \section{Minimal Triangle Model}
 
 We show exact MZMs are hosted in a minimal three site triangular lattice.
@@ -285,7 +284,7 @@ Our calculations also show the MZMs live within a clean gap inside those paramet
 
 How one can build this system warrants some thought.
 A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}.
-If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to be a very strong trivial superconductor.
+If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to make a very strong trivial superconductor at its center.
 One could place individual atoms using an STM tip \cite{schneiderPrecursorsMajoranaModes2022}.
 Another option may be to use quasi-1D cuts on a QAHI with triangular lattice in proximity to an \textit{s}-wave superconductor \cite{xieCreatingLocalizedMajorana2021}.
 To implement the inhomogeneous supercurrent or vector potential one could use a magnetic field and a uniform supercurrent or two antiparallel supercurrents separated by a 1D or quasi-1D insulator strip.
