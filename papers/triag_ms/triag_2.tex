@@ -7,6 +7,8 @@
 %\usepackage[demo]{graphicx}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{setspace}
+\setstretch{3}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor= blue,citecolor=blue,linkcolor= blue,bookmarks=true,bookmarksopen=false}
@@ -59,8 +61,6 @@
 
 \maketitle
 
-
-
 \section{Introduction}
 For the past twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}.
 MZMs were originally proposed to be found in topological 2D \textit{p}-wave superconducting vortices and at the ends of a topological 1D \textit{p}-wave superconductor \cite{readPairedStatesFermions2000, kitaevUnpairedMajoranaFermions2001}.
@@ -82,26 +82,25 @@ Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite w
 Our platform allows for another option to host and manipulate MZMs on triangular networks instead of 1D wire networks.
 
 \Blue{OUTLINE: (Sec I is \dots, Sec II is \dots)}
-\section{Triangular islands}
+\section{Minimal Triangle Model}
 
-\subsection{\Blue{3-site problem and kitaev limit for tri.chain, solid triangle}}
-We show one can get exact MZMs in a minimal three site triangular lattice.
-Let us start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor of a triangular lattice
+We show exact MZMs are hosted in a minimal three site triangular lattice.
+Start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor of a triangular lattice
 \begin{equation}
   \ham = \sum_{\langle j, l \rangle} (-t\cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_{j} \mu \cc_j c_j,
 \end{equation}
 where $t$ is the hopping amplitude, $\de$ is the superconducting order parameter, $\mu$ is the chemical potential, $\theta_{l,j}$ is the angle between sites $l$ and $j$.
-Next, we apply a Peierls substitution to our creation(annihilation) operators of the form
+Next, a Peierls substitution is applied to the creation(annihilation) operators of the form
 \begin{align}
   \cc_{l} c_j &\rightarrow \cc_{l} c_j \exp \left(-\dfrac{i e}{\hbar} \int_{r_j}^{r_{l}} \vec{A} \cdot d\vec{l} \right) \\ \nonumber
   &\rightarrow \cc_{l} c_j e^{i \phi_{l,j}}.
 \end{align}
 Here the electron charge, $e$, and Planck's constant, $\hbar$, will be treated as natural numbers.
-One finds that $t$ is the only term that picks up a phase, thus our modified Hamiltonian looks like
+One finds that $t$ is the only term that picks up a phase, the modified Hamiltonian looks like
 \begin{equation} \label{eq: Peierls Hamiltonian}
   \ham = \sum_{\langle j,l \rangle} (-t e^{i\phi_{l,j}} \cc_{l} c_j + \de e^{i\theta_{l,j}} \cc_{l}\cc_j + h.c.) - \sum_j \mu \cc_j c_j.
 \end{equation}
-It is difficult to come to any conclusion while in the complex fermion basis, but if we write our Hamiltonian in a Majorana fermion basis we can get a clearer picture.
+It is difficult to come to any conclusion while in the complex fermion basis, writing the Hamiltonian in a Majorana fermion basis shows a clearer picture.
 \Blue{Maybe a see supplementary material XX for derivation here.}
 The Hamiltonian now takes the form
 \begin{align}
@@ -111,53 +110,53 @@ The Hamiltonian now takes the form
   +&(t\cos\phi_{l,j}+\de\cos\theta_{l,j}) a_l b_j \nonumber \\
   -&(t\cos\phi_{l,j}-\de\cos\theta_{l,j}) b_l a_j].
 \end{align}
-To clear things up, $\phi_{l,j} = -\phi_{j,l}$ since the direction of integration is reversed and the angle $\theta_{l,j} = \theta_{j,l} + \pi$, this ensures we have a Hermitian Hamiltonian.
+The Hamiltonian is Hermitian if $\phi_{l,j} = -\phi_{j,l}$ and $\theta_{l,j} = \theta_{j,l} + \pi$.
 
-Let us consider a three point triangular lattice, where each lattice point is a complex fermion housing two Majorana fermions.
+We consider a three point triangular lattice, where each lattice point is a complex fermion housing two Majorana fermions.
 The bottom left point is $a_1, b_1$, bottom right is $a_2, b_2$, and the top point is $a_3, b_3$.
 Similar to Kitaev we will make the same assumptions $t=\de$ and $\mu=0$.
-We are left with several combinations of trig terms, some of which we require to be zero.
-Notice how the bottom row is a Kitaev chain, we need only to look at how the bottom row interacts with the top point.
-Since our goal is to have two Majorana zero modes at the bottom corners, lets aim to have $a_1$ and $b_2$ be such modes.
-Anytime $a_1$ or $b_2$ appear in our equation we need its trig terms to cancel, eliminating these particles coupling from the rest of the system.
-Let us look at the coupling from site 1 to site 3, $\theta = \pi/3$, we notice the first and last term should be
+We are left with several combinations of trig terms, some of which are required to be zero.
+Notice the bottom row is a Kitaev chain, we need only to look at how the bottom row interacts with the top point.
+To achieve two MZMs at the bottom corners, let $a_1$ and $b_2$ be such modes.
+Anytime $a_1$ or $b_2$ appear in an equation its trig terms must cancel, eliminating these particles coupling from the rest of the system.
+Looking at the coupling from site 1 to site 3, $\theta = \pi/3$, the first and last term are
 \begin{align}
   (\sin\phi_{31} - \sin\pi/3) a_3 a_1 = 0, \\
   (\cos\phi_{31} - \cos\pi/3) b_3 a_1 = 0.
 \end{align}
 This is true if $\phi_{31} = \pi/3$.
-Now let's consider the coupling of site 3 to site 2.
-The phase angle $\theta = -\pi/3$ and the two simplified equations involving $b_2$ are
+Consider the coupling of site 3 to site 2, phase angle $\theta = -\pi/3$ and the two simplified equations involving $b_2$ are
 \begin{align}
   (\sin\phi_{23} - \sin(\pi/3)) b_2 b_3 = 0, \nonumber \\
-  (\cos\phi_{23} - \cos(\pi/3)) b_2 a_3 = 0. \nonumber
+  (\cos\phi_{23} - \cos(\pi/3)) b_2 a_3 = 0, \nonumber
 \end{align}
-Here we see $\phi_{23} = \pi/3$.
-A constant step-function vector potential one can get with the desired phase is
+thus $\phi_{23} = \pi/3$.
+A constant step-function vector potential can get the desired phase when
 \begin{equation}
   \vec{A} = \begin{cases}
       \dfrac{2 \pi}{3\sqrt{3}a} \hat{y} \quad &x > 0 \\
       \dfrac{-2 \pi}{3\sqrt{3}a} \hat{y} \quad &x < 0. \\
             \end{cases}
 \end{equation}
-We find this is still true if we extrapulate from a three point triangle to a triangular island because we need only to consider how the the corner Majorana fermions couple with their neighboring sites.
-When we calculated the energy spectrum for a full triangular island we found MZMs, however, they did not appear to live within a clean gap and nor did they have a broad range of vector potential strengths giving zero modes.
-Kitaev had noted one could still get a topological phase for $-2t<\mu<2t$ and MZMs hosting at the interface of differing topologies.
-We would also like to find a range of chemical potentials that result in a topologically nontrivial phase.
+We find this to be true when extrapulated from a three point triangle to a triangular island because we need only to consider how the the corner Majorana fermions couple with their neighboring sites.
+Calculating the energy spectrum for a full triangular island we found MZMs, however, they did not appear to live within a clean gap nor did they have a broad range of vector potential strengths hosting zero modes.
+Kitaev had noted one could still get a topological phase for $-2t<\mu<2t$ and MZMs hosting at the interface of differing topologies \cite{kitaevUnpairedMajoranaFermions2001}.
+We would also like to find a range of chemical potentials and vector potential strengths that result in a topologically nontrivial phase.
+As a last note, any odd-function vector potential field can achieve exact MZMs on the bottom two vertices of a triangular island.
+We only consider constant vector potentials in the next section to allow for a fourier transform of the ribbons main axis.
 
 \section{Topological phase diagram of a finite width ribbon}
 
-It appears Majorana fermions can behosted at the end points of a chain with finite width as with a Josephson-junction as seen in \cite{}, provided the width is much smaller than the Majorana fermion decay length.
+MZMs can be hosted at the end points of a chain with finite width as with a Josephson-junction or other thin films, provided the width is much smaller than the Majorana fermion decay length \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019, potterMultichannelGeneralizationKitaev2010}.
 Expanding on these ideas we would like to induce a topological phase transition for an infinite triangular lattice ribbon.
-This will help create an argument using bulk-edge correspondence to inform how MZMs will form at the interfaces of triangular island edges, i.e. their corners.
+This will help create an argument using bulk-edge correspondence to inform how MZMs will host at the interfaces of triangular island edges, i.e. their corners.
 
-We can start from Eq. \ref{eq: Peierls Hamiltonian}
-Since we are interested how a finite width ribbon along the $x$-axis behaves in a constant vector field we will fourier transform along the $x$-axis only.
-We pick the following transform to be
+Starting from Eq. \ref{eq: Peierls Hamiltonian} and since we are interested how a finite width ribbon along the $x$-axis behaves in a constant vector field we will fourier transform along the $x$-axis only.
+Pick the following transform to be
 \begin{equation}
   \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{i \vec{k}\cdot\vec{r}_m}
 \end{equation}
-where $\vec{k}=k\hat{x}$ and $\vec{r}_m = ma\hat{x}$, and for convenience $a$ will be treated as a natural number, too.
+where $\vec{k}=k\hat{x}$ and $\vec{r}_m = ma\hat{x}$, and for convenience $a$ will be treated as a natural number.
 This leads to the following block Hamiltonian
 \begin{equation}
   \ham(k) = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
@@ -171,7 +170,7 @@ The $\epsilon(k)$ block is a tridiagonal with $\epsilon_0(k) = -2t\cos(k+\phi_1)
 The $\delta(k)$ block is a tridiagonal with $\delta_0(k) = 2i\de \sin k $ along the diagonal, the upper diagonal is  $\delta_1(k) = -\de (e^{i\theta_2}+e^{i(k+\theta_3)})$, and $-\delta_1(-k)$ along the lower diagonal.
 The size of each block is the number of rows along the $y$-axis in a ribbon.
 
-To calculate the Majorana number we need to rewrite our Hamiltonian to be in skew-symmetric form.
+To calculate the Majorana number (\mathcal{M}) the Hamiltonian needs to be in skew-symmetric form.
 One such way is to write it in the Majorana fermion basis, the transformation matrix is of the form
 \begin{equation}
   u = \dfrac{1}{\sqrt{2}} \left(
@@ -181,25 +180,24 @@ One such way is to write it in the Majorana fermion basis, the transformation ma
   \end{matrix} \right)
 \end{equation}
 
-To account for the finite number of rows in our ribbon we simply include a tensor product with an identity matrix of the same size, $U = u \otimes I_n$.
-We can now arrive at the skew-symmetric matrix with the following equation
+To account for the finite number of rows in a ribbon include a tensor product with an identity matrix of the same size, $U = u \otimes I_n$.
+We arrive at the skew-symmetric matrix with the following equation
 \begin{equation}
   A_{ch} = -i U \ham_{ch} U^{\dagger}.
 \end{equation}
-The Majorana number, $\mathcal{M}$, of a 1D chain is defined as
+The $\mathcal{M}$ of a 1D chain is defined as
 \begin{equation}
   \mathcal{M} = \text{sgn}[\text{Pf}(A_{ch})],
 \end{equation}
-where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix.
+where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitaevUnpairedMajoranaFermions2001}.
 We make the claim this satisfies a finite width ribbon as well.
-When $\mathcal{M} = -1$, the ribbon is in a nontrivial topology and we would expect Majorana zero modes at its edges.
-As we sweep through a range of $A$ for our vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and our system take on a trivial topology, thus no Majorana zero modes would exist on the edge of a finite ribbon.
+When $\mathcal{M} = -1$, the ribbon is in a nontrivial topology and expect MZMs at its edges.
+Sweeping through a range of $A$ for the vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and the system take on a trivial topology, no Majorana zero modes would exist on the edge of a finite ribbon.
 
 To illustrate the importance of bulk-edge correspondence in forming Majorana fermions we will now look at the edges of a hollow triangular island.
-We want to show the top edges can be in a trivial phase while the bottom remains in a nontrivial phase.
-In previous papers a constant vector potential was used along the chain's axis.
-If instead we use a constant vector potential step function centered on a chain with a 60 degree bend, equating it to a equilateral triangle, we can have an equivalent system to the chain model.
-One also finds that the vector potential has symmetry about the ribbon's axis, i.e. $\vec{A}$ pointing in the positive or negative y-axis yields the same result.
+We show the top edges can be in a trivial phase while the bottom remains in a nontrivial phase.
+In previous papers a constant vector potential was used along the chain's axis \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}.
+We instead use a constant vector potential step function from the previous section centered on a chain with two 60 degree bends, equating it to a equilateral triangle.
 Taking a hollow triangular island centered about the y-axis with the following vector potential
 \begin{equation}
   \vec{A} = \begin{cases}
@@ -207,8 +205,9 @@ Taking a hollow triangular island centered about the y-axis with the following v
             -A \hat{y} \quad &x < 0 \\
             \end{cases}
 \end{equation}
-we can examine each edge individually.
-Looking at Fig. \ref{fig: triangular-island-vector-potential-divided} we can quickly determine each edge's vector potential with respect to its main axis.
+we examine each edge individually.
+When calculating \mathcal{M} the vector potential has symmetry about the ribbon's axis, i.e. $\vec{A}$ pointing in the positive or negative y-axis yields the same result.
+Looking at Fig. \ref{fig: triangular-island-vector-potential-divided} we determine each edge's vector potential with respect to its main axis.
 
 \begin{figure}[]
   \begin{tikzpicture}
@@ -224,10 +223,10 @@ Looking at Fig. \ref{fig: triangular-island-vector-potential-divided} we can qui
   \label{fig: triangular-island-vector-potential-divided}
 \end{figure}
 
-The topological phase diagram for ribbons III and IV, with three rows, can be seen in Fig. \ref{subfig: majorana-number-y-axis}, we can see for varying $\mu$ and $A$, with $\vec{A} = A\hat{y}$, where our system is topologically trivial (yellow) and nontrivial (blue).
+The topological phase diagram for ribbons III and IV, with three rows, can be seen in Fig. \ref{subfig: majorana-number-y-axis}, we can see for varying $\mu$ and $A$, with $\vec{A} = A\hat{y}$, the system is topologically trivial (yellow) and nontrivial (blue).
 It appears when the vector potential is perpendicular to the ribbon it does not contribute to the topology of the system.
-Similarly, for ribbons I and II, with three rows, the topological phase diagram can be seen in Fig. \ref{subfig: majorana-number-5pi6ths}.
-Here we see the vector potential plays a vital role in transforming the topology.
+Similarly, for ribbons I and II, with three rows, the topological phase diagram is seen in Fig. \ref{subfig: majorana-number-5pi6ths}.
+Here the vector potential plays a vital role in transitioning the topology.
 
 \begin{figure}[]
   \subfloat[\label{subfig: majorana-number-y-axis}]{%
@@ -274,24 +273,24 @@ Here we see the vector potential plays a vital role in transforming the topology
   \label{fig: mzm-wavefunctions}
 \end{figure}
 
-We can now use bulk-edge correspondence to justify the hosting of Majorana fermions at the interfaces of the triangular islands edges, i.e. corners.
-We simulataneoulsy tune regions I and II to be in a trivial(nontrivial) topological phase and regions III and IV to be nontrivial(trivial) topological phase, respectively.
+We make use of bulk-edge correspondence to justify MZMs hosting at the interfaces of the triangular islands edges, i.e. corners.
+One simulataneously tunes regions I and II to be in a trivial(nontrivial) topological phase and regions III and IV to be nontrivial(trivial) topological phase, respectively.
 To check we look at an eigenenergy spectral flow and eigenstates of a triangular lattice with size $n=100$, width $w=3$, and $A = [0,2\pi]$.
 Fig. \ref{fig: spectral-flows} shows strong agreement of MZMs appearing in the same vector potential range as seen in Fig. \ref{subfig: majorana-number-5pi6ths}'s topological phase diagram.
-As expected we find MZMs at the bottom corners of the triangle where the differing topologies meet, as seen in Fig. \ref{fig: mzm-wavefunctions}.
+As expected MZMs host at the bottom corners of the triangle where the differing topologies meet, as seen in Fig. \ref{fig: mzm-wavefunctions}.
 We see a broad parameter space, $\mu$ and $A$, for our system to host MZMs.
 Our calculations also show the MZMs live within a clean gap inside those parameter ranges.
-As a last note, we were able to show analytically and numerically any odd-function vector potential field may host MZMs at two vertices of a triangular island.
 
 \section{Discussion and Conclusions}
 
 How one can build this system warrants some thought.
 A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}.
 If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to be a very strong trivial superconductor.
+One could place individual atoms using an STM tip \cite{schneiderPrecursorsMajoranaModes2022}.
 Another option may be to use quasi-1D cuts on a QAHI with triangular lattice in proximity to an \textit{s}-wave superconductor \cite{xieCreatingLocalizedMajorana2021}.
 To implement the inhomogeneous supercurrent or vector potential one could use a magnetic field and a uniform supercurrent or two antiparallel supercurrents separated by a 1D or quasi-1D insulator strip.
 To braid MZMs in this system one only has to rotate and slowly turn on neighboring triangles inhomogeneous vector potentials to transition an edge to be of nontrivial topology.
-The following schematic in Fig. \ref{} illustrates how such a manipulation of MZMs can occur.
+The following schematic in Fig. \ref{fig: triangular-network-braiding} illustrates how such a manipulation of MZMs can occur.
 
 \begin{figure}[]
   \begin{tikzpicture}
@@ -306,7 +305,7 @@ The following schematic in Fig. \ref{} illustrates how such a manipulation of MZ
 \end{figure}
 
 With the base model for a new platform displayed further work is still required.
-A description of the Wannier states would be informative (I'm not well versed in this type of description, could use your expertise here in writing this sentence as it sounds important to include).
+A description of the Wannier states would be informative (\Blue{Hua, I'm not well versed in this type of description, could use your expertise here in writing this sentence as it sounds important to include}).
 Perfectly fabricated devices are not always realistic, a further study of the effects misshapen lattice edges would be important to further gauge how robust our platform is.
 Another calculation of how the MZMs evolve on a single triangle when the vector potential is rotated by $2\pi$ at its center would be informative if they survive such a process without mixing into higher order states and if they pick up a phase accumulation.
 
