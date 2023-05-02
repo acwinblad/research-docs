@@ -1,6 +1,6 @@
-\documentclass[aps,prb,showpacs,amsmath,amssymb,superscriptaddress]{revtex4-2}
+\documentclass[aps,prb,showpacs,amsmath,twocolumn,amssymb,superscriptaddress]{revtex4-2}
 %\documentclass[aps,prb,showpacs,twocolumn,amsmath,amssymb,superscriptaddress]{revtex4-2}
-\bibliographystyle{apsrev4-2}
+%\bibliographystyle{apsrev4-2}
 
 \usepackage{tabularx}
 \usepackage{bm}
@@ -43,7 +43,7 @@
 
 \begin{document}
 
-\title{Superconducting triangular islands as a platform for manipulating Majorana fermions}
+\title{Superconducting triangular islands as a platform for manipulating Majorana zero modes}
 
 \author{Aidan Winblad}
 \affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}
@@ -52,33 +52,26 @@
 \affiliation{Department of Physics, Colorado State University, Fort Collins, CO 80523, USA}
 \affiliation{School of Advanced Materials Discovery, Colorado State University, Fort Collins, CO 80523, USA}
 
-\maketitle
-
 \begin{abstract}
-We study the possibility of obtaining robust Majorana zero modes (MZMs) at the corners of triangular superconducting islands, with the goal of finding alternative structures that can serve as building blocks for topological quantum computation. A spinless $p$-wave superconductor as a three point triangle, or triangular island, is considered in the presence of a vector potential field and we show it can be exactly solved to host MZMs on the corners. Additionally, for a hollow equilateral triangle subject to inhomogeneous supercurrents, from bulk-edge correspondence we find that MZMs can generally appear when two of the edges are of differing topological phase from the third edge. We also discuss the robustness of MZMs in possible experimental realizations of the triangular islands.
+Current proposals on topological quantum computation (TQC) based on Majorana zero modes (MZM) have mostly been focused on coupled-wire architecture which can be challenging to implement experimentally. To explore alternative building blocks of TQC, in this work we study the possibility of obtaining robust MSM at the corners of triangular superconducting islands, which often appear spontaneously in epitaxial growth. We first show that a minimal three-site triangle model of spinless $p$-wave superconductor allows MZM to appear at different pairs of vertices controlled by a staggered vector potential, which may be realized using coupled quantum dots. We then show that the minimal model can be extended to ``hollow" triangular islands subject to inhomogeneous supercurrents, and MZM generally appear when two of the edges are in a different topological phase from the third. We also discuss the robustness of MZM in various possible experimental realizations of the triangular islands.
 \end{abstract}
 
+
+\maketitle
+
+
 \section{Introduction}
-For more than twenty years Majorana zero-modes (MZMs) in condensed matter systems have been highly sought after due to both its fault-tolerant topological protection and non-Abelian exchange statistics for quantum computating \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}.
-MZMs were originally proposed to be found in topological 2D \textit{p}-wave superconducting vortices and at the ends of a topological 1D \textit{p}-wave superconductor \cite{readPairedStatesFermions2000, kitaevUnpairedMajoranaFermions2001}.
-A \textit{p}-wave superconductor has yet to be discovered but innovative heterostructures have been proposed to make topological superconductors.
-Such systems make use of \textit{s}-wave superconductors in proximity to various heterostructures: topological insulator \cite{fuSuperconductingProximityEffect2008, hosurMajoranaModesEnds2011, potterEngineeringMathitipSuperconductor2011, veldhorstMagnetotransportInducedSuperconductivity2013} or Josephson junction with in plane magnetic field \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019}, 2D electron gas (2DEG) with Rashba spin-orbit coupling (SOC) and ferromagnet \cite{oregHelicalLiquidsMajorana2010, sauGenericNewPlatform2010, lutchynSearchMajoranaFermions2011, potterTopologicalSuperconductivityMajorana2012, nadj-pergeProposalRealizingMajorana2013}, ferromagnetic atomic spin chains \cite{choyMajoranaFermionsEmerging2011, brauneckerInterplayClassicalMagnetic2013, klinovajaTopologicalSuperconductivityMajorana2013}, and quantum anomalous Hall insulator (QAHI) \cite{chenQuasionedimensionalQuantumAnomalous2018, zengQuantumAnomalousHall2018, xieCreatingLocalizedMajorana2021}.
-There have been strides in potential measurements of MZMs, most of these focus on one end of the wire \cite{mourikSignaturesMajoranaFermions2012, rokhinsonFractionalJosephsonEffect2012, dengAnomalousZeroBiasConductance2012, nadj-pergeObservationMajoranaFermions2014, xuExperimentalDetectionMajorana2015, albrechtExponentialProtectionZero2016, sunMajoranaZeroMode2016, wangEvidenceMajoranaBound2018, jackObservationMajoranaZero2019, fornieriEvidenceTopologicalSuperconductivity2019, renTopologicalSuperconductivityPhasecontrolled2019, mannaSignaturePairMajorana2020} looking at zero-bias conductance peak (ZBP) curves and more recently both ends of a wire \cite{schneiderPrecursorsMajoranaModes2022}.
-A new potential measurement may soon help confirm the identity of MZMs using a quantum dot and crossed Andreev reflections (CAR) in a Josephson junction \cite{fengProbingRobustMajorana2022}.
+For more than twenty years, Majorana zero modes (MZM) in condensed matter systems have been highly sought after due to their potential for serving as building blocks of topological quantum computation, thanks to their topological robustness against decoherence and non-Abelian exchange statistics \cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevFaulttolerantQuantumComputation2003, nayakNonAbelianAnyonsTopological2008, aliceaNonAbelianStatisticsTopological2011, aasenMilestonesMajoranaBasedQuantum2016}. Theoretically, MZM were originally proposed to be found in half-quantum vortices of two-dimensional (2D) topological \textit{p}-wave superconductors and at the ends of 1D spinless \textit{p}-wave superconductors \cite{readPairedStatesFermions2000, kitaevUnpairedMajoranaFermions2001}.
+Whether a pristine \textit{p}-wave superconductor {\bf [REF]} has been found is still under debate. However, innovative heterostructures proximate to ordinary $s$-wave superconductors have been proposed to behave as effective topological superconductors in both 1D and 2D. These, for example, \Red{semiconductor nanowires subject to magnetic fields}\cite{mourikSignaturesMajoranaFermions2012, rokhinsonFractionalJosephsonEffect2012, dengAnomalousZeroBiasConductance2012}, ferromagnetic atomic spin chains \cite{choyMajoranaFermionsEmerging2011, brauneckerInterplayClassicalMagnetic2013, klinovajaTopologicalSuperconductivityMajorana2013,nadj-pergeObservationMajoranaFermions2014,schneiderPrecursorsMajoranaModes2022}, 3D topological insulators \cite{fuSuperconductingProximityEffect2008, hosurMajoranaModesEnds2011, potterEngineeringMathitipSuperconductor2011, veldhorstMagnetotransportInducedSuperconductivity2013}, quantum anomalous Hall insulators \cite{chenQuasionedimensionalQuantumAnomalous2018, zengQuantumAnomalousHall2018, xieCreatingLocalizedMajorana2021}, 2D Rashba electron gas with a perpendicular Zeeman field \cite{oregHelicalLiquidsMajorana2010, sauGenericNewPlatform2010, lutchynSearchMajoranaFermions2011, potterTopologicalSuperconductivityMajorana2012, nadj-pergeProposalRealizingMajorana2013}, \Red{metallic ferromagnets}, and \Red{planar Josephson junctions} \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019}, etc. It has been a challenging task to decisively confirm the existence of MZM in the various experimental systems due to other competing mechanisms that can potentially result in similar features as MZM do in different probes \cite{xuExperimentalDetectionMajorana2015, albrechtExponentialProtectionZero2016, sunMajoranaZeroMode2016, wangEvidenceMajoranaBound2018, jackObservationMajoranaZero2019, fornieriEvidenceTopologicalSuperconductivity2019, renTopologicalSuperconductivityPhasecontrolled2019, mannaSignaturePairMajorana2020}. Other proposals for constructing Kitaev chains through a bottom-up approach, based on, e.g. \Red{magnetic tunnel junctions proximate to spin-orbit-coupled superconductors}, and \Red{quantum dots coupled through superconducting links} are therefore promising. In particular, the recent experiment of a designer minimal Kitaev chain based on two quantum dots coupled through tunable crossed Andreev reflections (CAR) offers a compelling route towards MZM platforms based on exactly solvable building blocks.
+%A new potential measurement may soon help confirm the identity of MZMs using a quantum dot and  \cite{fengProbingRobustMajorana2022}.
 
-The main proposal to achieve braiding of MZMs uses 1D wires to create large networks of T-junctions to create tetrons and hexons.
-It is not a simple task to develop these networks \cite{karzigScalableDesignsQuasiparticlepoisoningprotected2017}, proposed alternatives are quasi-1D systems in thin films \cite{potterMultichannelGeneralizationKitaev2010}, a cross Josephson junction \cite{zhouPhaseControlMajorana2020}, or scissor cuts on a QAHI \cite{xieCreatingLocalizedMajorana2021}, which get around the difficult engineering of 1D wire networks.
-We propose an alternative structure by using triangular superconducting islands, which can be easily produced with epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006}.
+In parallel with the above efforts of realizing MZM in different materials systems, scalable architectures for quantum logic circuits based on MZM have also been intensely studied over the past decades. A major proposal among these studies is to build networks of T-junctions, which are minimal units for swapping a pair of MZM hosted at different ends of a junction, that allow braiding-based TQC \cite{karzigScalableDesignsQuasiparticlepoisoningprotected2017}. Alternatively, networks based on coupled wires forming the so-called tetrons and hexons, aiming at measurement-based logic gate operations, have also been extensively investigated. To counter the technical challenge of engineering networks with physical wires or atomic chains, various ideas based on effective Kitaev chains, such as quasi-1D systems in thin films \cite{potterMultichannelGeneralizationKitaev2010}, cross Josephson junctions \cite{zhouPhaseControlMajorana2020}, scissor cuts on a QAHI \cite{xieCreatingLocalizedMajorana2021}, and rings of magnetic atoms {\bf [REF]}, etc. have been proposed. However, due to the same difficulty of obtaining or identifying genuine MZM in quasi-1D systems mentioned above, it remains unclear how practical these strategies are in the near term.
 
-A common thread of the previous work has been to use a magnetic field or Zeeman effect to induce a topological phase transition.
-\Blue{Takasan 2022 spends some time building up why one can use supercurrents, should we also talk about that or just reference their paper and the 2012 supercurrent paper and let that be good enough?}
-Instead, it has been shown a supercurrent can induce a topological phase transtion in a given heterostructure \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}.
-Adjusting the supercurrent can allow for manipulating the MZMs position along a wire.
-We show when using an inhomogeneous supercurrent on a minimal model MZMs can be exactly solved.
-Additionally, when using an inhomogeneous supercurrent on a quasi-1D or finite width hollow triangle island we can realize clean gap MZMs due to bulk-edge correspondence, calculating an approximate topological phase diagram with broad topological parameter regimes.
-Our platform allows for another option to host and manipulate MZMs on triangular networks instead of 1D wire networks.
+\Red{Higher-order topological superconductors and corner MZM}
 
-\section{Minimal Triangle Model}
+In this work, we propose an alternative structural unit for manipulating MZM, triangular superconducting islands, motivated by the above challenges associated with wire geometries and by the fact that triangular islands routinely appear spontaneously in epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} on close-packed atomic surfaces. We first show that a minimal ``Kitaev triangle'' consisting of three sites hosts MZM at different pairs of vertices controlled by Peierls phases on the three edges, which can be readily realized using quantum dots. To generalize the minimal model to other means of engineering topologically equivalent triangles, we study the topological phase transitions of quasi-1D ribbons driven by Peierls phases, which can be created by magnetic fields or supercurrents \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}, and use the resulting phase diagram as a guide to construct finite-size triangles with a hollow interior that host MZM. In the end we discuss possible experimental systems that can realize our proposals and scaled-up networks of triangles for implementing MZM-based logic gate operations. 
+
+\section{A minimal Kitaev triangle model}
 
 We show exact MZMs are hosted in a minimal three site triangular lattice.
 Start with the Hamiltonian of a spinless or spin-polarized $p$-wave superconductor of a triangular lattice
@@ -304,6 +297,12 @@ With the base model for a new platform displayed further work is still required.
 A description of the Wannier states would be informative (\Blue{Hua, I'm not well versed in this type of description, could use your expertise here in writing this sentence as it sounds important to include}).
 Perfectly fabricated devices are not always realistic, a further study of the effects misshapen lattice edges would be important to further gauge how robust our platform is.
 Another calculation of how the MZMs evolve on a single triangle when the vector potential is rotated by $2\pi$ at its center would be informative if they survive such a process without mixing into higher order states and if they pick up a phase accumulation.
+
+Would a uniform supercurrent or vector potential work?  Symmetry of the phase diagram under flipping sign of the vector potential. 
+
+The three-site design may also make it convenient to implement parity readout by turning the third vertex temporily into a normal quantum dot and using the proposal in PRB 101, 235411. 
+
+The bottom-up approach may also be favored due to the peripheral control circuit needed to precisely control the effective fermion Hamtiltonian also makes it convenient to distinguish MZMs from ABSs by implementing the various testing proposals.
 
 \begin{acknowledgements}
   Supported by XYZ Grant No. XXXXXX etc.
