@@ -74,14 +74,14 @@ In this work, we propose an alternative structural unit for manipulating MZM, tr
 \section{A minimal Kitaev triangle model}
 
 In this section we present an exactly solvable minimal model (\Red{not analytically solvable though--perhaps solvable with the help of symmetry}) with three sites forming a ``Kitaev triangle" that can host MZM at different pairs of vertices controlled by Peierls phases on the triangle edges. The Bogoliubov-de Gennes (BdG) Hamiltonian includes complex hopping and $p$-wave pairing between three spinless fermions forming an equilateral triangle ({\bf Fig. XXX--Add a schematic figure}):
-\begin{equation}
+\begin{equation}\label{eq:HBdG}
   \ham = \sum_{\langle j l \rangle} (-te^{i\phi_{jl}}\cc_{j} c_l + \de e^{i\theta_{jl}} c_{j} c_l + {\rm h.c.}) - \sum_{j} \mu \cc_j c_j,
 \end{equation}
 where $t$ is the hopping amplitude, $\de$ is the amplitude of the (2D) $p$-wave pairing, $\mu$ is the chemical potential, $\theta_{jl}$ is the polar angle of $\mathbf r_{jl} = \mathbf r_l - \mathbf r_j$ (the $x$ axis is chosen to be along $\mathbf r_{12}$), consistent with $\{c^\dag_l, c^\dag_j\} = 0$. $\phi_{jl}$ is the Peierls phase due to a bond-dependent vector potential $\mathbf A$ to be specified below: 
 \begin{eqnarray}
 \phi_{jl} = \dfrac{e}{\hbar} \int_{\mathbf r_j}^{\mathbf r_{l}} \vec{A} \cdot d\vec{l} = -\phi_{lj}
 \end{eqnarray}
-where $e>0$ is the absolute value of the electron change. {\bf I changed the order of labeling $j,l$ etc. above. I understand that it may be more natural to think of $c_j^\dag c_l$ as hopping from $l$ to $j$, but people are more used to write the labels from left to right. For the pairing term this is consistent with \cite{kitaevUnpairedMajoranaFermions2001}.} To get the conditions for having MZM in this model we rewrite $\mathcal{H}$ in the Majorana fermion basis $a_{j} = c_j + c^\dag_j$, $b_j = \frac{1}{i}(c_j - c^\dag_j)$ \cite{supp}:
+where $e>0$ is the absolute value of the electron charge. Below we use the natural units $e=\hbar=1$. {\bf I changed the order of labeling $j,l$ etc. above. I understand that it may be more natural to think of $c_j^\dag c_l$ as hopping from $l$ to $j$, but people are more used to write the labels from left to right. For the pairing term this is consistent with \cite{kitaevUnpairedMajoranaFermions2001}.} To get the conditions for having MZM in this model we rewrite $\mathcal{H}$ in the Majorana fermion basis $a_{j} = c_j + c^\dag_j$, $b_j = \frac{1}{i}(c_j - c^\dag_j)$ \cite{supp}:
 \begin{align}\label{eq:H3M}
     \ham =  -\dfrac{i}{2} \sum_{\langle j l \rangle} \Big[&\left(t\sin\phi_{jl}-\de\sin\theta_{jl}\right) a_j a_l \\\nonumber
   +&\left(t\sin\phi_{jl}+\de\sin\theta_{jl}\right) b_j b_l  \\\nonumber
@@ -120,25 +120,38 @@ It is straightforward to show that at $\bm \phi_{2}$ and $\bm \phi_3$ there are 
 
 In comparison to the minimum T-junction model with four sites \cite{aliceaNonAbelianStatisticsTopological2011}, our Kitaev triangle model only requires three sites to achieve braiding between two MZM, and is potentially also easier to engineer experimentally. In the next section we will show that a more mesoscopic hollow-triangle structure can achieve qualitatively the same result and may be preferred in other materials platforms.
 
-\section{Topological phase diagram of a finite width ribbon}
+\section{MZM in hollow triangles}
+For systems with less fine-tuned Hamiltonians than the minimal model in the previous section, it is more instructive to search for MZM based on topological arguments. In this section we show that MZM generally appear at the corners of a hollow triangle, which can be approximated by joining three finite-width chains or ribbons whose bulk topology is individually tuned by a nonuniform vector potential. 
 
-Kitaev had noted one could still get a topological phase for $-2t<\mu<2t$ and MZMs hosting at the interface of differing topologies \cite{kitaevUnpairedMajoranaFermions2001}.
-We would also like to find a range of chemical potentials and vector potential strengths that result in a topologically nontrivial phase.
-As a last note, any odd-function vector potential field can achieve exact MZMs on the bottom two vertices of a triangular island.
-We only consider constant vector potentials in the next section to allow for a fourier transform of the ribbons main axis.
+To this end, we first show that topological phase transitions can be induced by a vector potential in a spinless $p$-wave superconductor ribbon. In comparison with similar previous proposals that mostly focused on vector potentials or supercurrents flowing along the chain \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}, we also consider the effects of vector potential components perpendicular to the finite-width ribbon, which will be present in a triangular structure.
 
-
-MZMs can be hosted at the end points of a chain with finite width as with a Josephson-junction or other thin films, provided the width is much smaller than the Majorana fermion decay length \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019, potterMultichannelGeneralizationKitaev2010}.
-Expanding on these ideas we would like to induce a topological phase transition for an infinite triangular lattice ribbon.
-This will help create an argument using bulk-edge correspondence to inform how MZMs will host at the interfaces of triangular island edges, i.e. their corners.
-
-Starting from Eq. \ref{eq: Peierls Hamiltonian} and since we are interested how a finite width ribbon along the $x$-axis behaves in a constant vector field we will fourier transform along the $x$-axis only.
-Pick the following transform to be
+Consider Eq.~\eqref{eq:HBdG} on a triangular lattice defined by unit-length lattice vectors $(\bm a_1, \bm a_2) = (\hat{x}, \frac{1}{2}\hat{x} + \frac{\sqrt{3}}{2}\hat{y})$ with finite width along $y$ and assume the Peierls phases are due to a uniform vector potential $\bm A$ so that $\phi_{jl} = \bm A\cdot \bm r_{jl}$. The Hamiltonian is periodic along $x$ and can be Fourier transformed through
 \begin{equation}
-  \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{i \vec{k}\cdot\vec{r}_m}
+  \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{-i km}
 \end{equation}
-where $\vec{k}=k\hat{x}$ and $\vec{r}_m = ma\hat{x}$, and for convenience $a$ will be treated as a natural number.
-This leads to the following block Hamiltonian
+where $m,n$ label the lattice sites as $\bm r_{m,n} = m\bm a_1 + n \bm a_2$. The resulting momentum space Hamiltonian can be written as the following block form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{equation}
   \ham(k) = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
     \begin{matrix}
@@ -266,6 +279,8 @@ Our calculations also show the MZMs live within a clean gap inside those paramet
 \Red{For hollow triangles what are the advantages of using supercurrent/vector potential versus individually changing the chemical potential of each edges? For three-site triangles one can only control hopping since each site is shared by two edges.}
 
 \section{Discussion and Conclusions}
+
+MZM can be hosted at the end points of a chain with finite width as with a Josephson-junction or other thin films, provided the width is much smaller than the Majorana fermion decay length \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019, potterMultichannelGeneralizationKitaev2010}.
 
 How one can build this system warrants some thought.
 A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}.
