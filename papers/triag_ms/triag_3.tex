@@ -123,46 +123,39 @@ In comparison to the minimum T-junction model with four sites \cite{aliceaNonAbe
 \section{MZM in hollow triangles}
 For systems with less fine-tuned Hamiltonians than the minimal model in the previous section, it is more instructive to search for MZM based on topological arguments. In this section we show that MZM generally appear at the corners of a hollow triangle, which can be approximated by joining three finite-width chains or ribbons whose bulk topology is individually tuned by a nonuniform vector potential. 
 
-To this end, we first show that topological phase transitions can be induced by a vector potential in a spinless $p$-wave superconductor ribbon. In comparison with similar previous proposals that mostly focused on vector potentials or supercurrents flowing along the chain \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}, we also consider the effects of vector potential components perpendicular to the finite-width ribbon, which will be present in a triangular structure.
+To this end, we first show that topological phase transitions can be induced by a vector potential in a spinless $p$-wave superconductor ribbon. In comparison with similar previous proposals that mostly focused on vector potentials or supercurrents flowing along the chain \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}, we also consider the effects of vector potential components perpendicular to the finite-width ribbon, which will be present in a triangular structure. \Red{But the perpendicular component has no effect on the topological phase diagram?}
 
-Consider Eq.~\eqref{eq:HBdG} on a triangular lattice defined by unit-length lattice vectors $(\bm a_1, \bm a_2) = (\hat{x}, \frac{1}{2}\hat{x} + \frac{\sqrt{3}}{2}\hat{y})$ with finite width along $y$ and assume the Peierls phases are due to a uniform vector potential $\bm A$ so that $\phi_{jl} = \bm A\cdot \bm r_{jl}$. The Hamiltonian is periodic along $x$ and can be Fourier transformed through
+Consider Eq.~\eqref{eq:HBdG} on a triangular lattice defined by unit-length lattice vectors $(\bm a_1, \bm a_2) = (\hat{x}, \frac{1}{2}\hat{x} + \frac{\sqrt{3}}{2}\hat{y})$ with $W$ unit cells along $\bm a_2$ but infinite unit cells along $\bm a_1$, and assume the Peierls phases are due to a uniform vector potential $\bm A$ so that $\phi_{jl} = \bm A\cdot \bm r_{jl}$. We also introduce $\bm a_3 \equiv -\bm a_1 + \bm a_2$ for later convenience. The Hamiltonian is periodic along $x$ and can be Fourier transformed through
 \begin{equation}
   \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{-i km}
 \end{equation}
-where $m,n$ label the lattice sites as $\bm r_{m,n} = m\bm a_1 + n \bm a_2$. The resulting momentum space Hamiltonian can be written as the following block form
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{equation}
-  \ham(k) = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
+where $m,n$ label the lattice sites as $\bm r_{m,n} = m\bm a_1 + n \bm a_2$. The resulting momentum space Hamiltonian can be written as the following block form up to a constant
+\begin{eqnarray}
+      \ham = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
     \begin{matrix}
-      \epsilon(k) & \delta(k) \\
-      \delta^\dagger(k) & -\epsilon(-k)
+      h_t(k) & h_\Delta(k) \\
+      h_\Delta^\dagger(k) & -h_t^*(-k)
     \end{matrix} \right)
-    \Psi_k.
-\end{equation}
-The $\epsilon(k)$ block is a tridiagonal with $\epsilon_0(k) = -2t\cos(k+\phi_1) - \mu$ along the diagonal, the upper diagonal is  $\epsilon_1(k) = -t(e^{-i\phi_2}+e^{i(k-\phi_3)})$, and $\epsilon_1^*(k)$ along the lower diagonal.
-The $\delta(k)$ block is a tridiagonal with $\delta_0(k) = 2i\de \sin k $ along the diagonal, the upper diagonal is  $\delta_1(k) = -\de (e^{i\theta_2}+e^{i(k+\theta_3)})$, and $-\delta_1(-k)$ along the lower diagonal.
-The size of each block is the number of rows along the $y$-axis in a ribbon.
+    \Psi_k
+\end{eqnarray}
+where $\Psi_k \equiv (c_{k,1},\dots, c_{k,W},c^\dag_{-k,1},\dots c_{-k,W}^\dag)^T$. $h_t(k)$ is a $W\times W$ Hermitian tridiagonal matrix with $(h_t)_{n,n} = -2t\cos(k+\bm A\cdot \bm a_1) - \mu$ and $(h_t)_{n,n+1} = -t\left( e^{i(-k+\bm A\cdot \bm a_3)}  + e^{i\bm A \cdot \bm a_2}\right)$. $h_\Delta(k)$ is a $W\times W$ tridiagonal matrix with $(h_\Delta)_{n,n} = -2i\de \sin k $ and $(h_\Delta)_{n,n\pm 1} = \mp \de\left[ e^{-i(\pm k + \frac{2\pi}{3})} + e^{-i\frac{\pi}{3}} \right]$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 To calculate the Majorana number (\mathcal{M}) the Hamiltonian needs to be in skew-symmetric form.
 One such way is to write it in the Majorana fermion basis, the transformation matrix is of the form
