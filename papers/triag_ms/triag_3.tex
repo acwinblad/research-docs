@@ -93,7 +93,7 @@ For concreteness we consider the Kitaev limit $t=\de$, $\mu=0$, and choose $\phi
   \left(\sin\phi_{23} + \sin\frac{2\pi}{3}\right) b_2 b_3 =\left(\cos\phi_{23} + \cos\frac{2\pi}{3}\right)b_2 a_3 = 0
 \end{align}
 which means $\phi_{23} = -\pi/3$. Similarly one can find $\phi_{31} =-\phi_{13} = -\pi/3$. The three Peierls phases can be realized by the following staggered vector potential
-\begin{equation}
+\begin{equation}\label{eq:Astep}
   \vec{A} =\left[1-2\Theta(x)\right]\frac{2 \pi}{3\sqrt{3}a} \hat{y} 
 \end{equation}
 where $\Theta(x)$ is the Heavisde step function. In fact, using a uniform $\vec{A} =\frac{2 \pi}{3\sqrt{3}a} \hat{y}$, which corresponds to $\phi_{23} = -\pi/3 = -\phi_{31}$ also works, since the existence of $a_1$ is unaffected by $\phi_{23}$. However, in this case the counterpart of $b_2$ is not localized on a single site. For the same reason, the above condition for MZM localized at triangle corners can be generalized to Kitaev chains forming a triangular loop, as well as to finite-size triangles of 2D spinless $p$-wave superconductors in the Kitaev limit, as the existence of $a_1$ and $b_2$ are only dictated by the vector potential near the corresponding corners. It should be noted that in the latter case, 1D Majorana edge states will arise when the triangle becomes larger, and effectively diminishes the gap that protects the corner MZM {\bf Add a figure showing a larger triangle in \cite{supp}}. On the other hand, for the longer Kitaev chain, due to the potential practical difficulty of controlling further-neighbor hopping and pairing amplitudes, it is better to resort to the approach of controlling the individual topological phases of the three edges which will be detailed in the next section. 
@@ -130,56 +130,61 @@ Consider Eq.~\eqref{eq:HBdG} on a triangular lattice defined by unit-length latt
   \cc_{m,n} = \dfrac{1}{\sqrt{N}} \sum_{k} \cc_{k,n} e^{-i km}
 \end{equation}
 where $m,n$ label the lattice sites as $\bm r_{m,n} = m\bm a_1 + n \bm a_2$. The resulting momentum space Hamiltonian can be written as the following block form up to a constant
-\begin{eqnarray}
-      \ham = \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
+\begin{eqnarray}\label{eq:Hribbon}
+      \ham &=& \dfrac{1}{2} \sum_k \Psi_k^\dagger \left(
     \begin{matrix}
       h_t(k) & h_\Delta(k) \\
       h_\Delta^\dagger(k) & -h_t^*(-k)
     \end{matrix} \right)
-    \Psi_k
+    \Psi_k \\\nonumber
+&\equiv&\dfrac{1}{2} \sum_k \Psi_k^\dagger H(k)
+    \Psi_k 
 \end{eqnarray}
 where $\Psi_k \equiv (c_{k,1},\dots, c_{k,W},c^\dag_{-k,1},\dots c_{-k,W}^\dag)^T$. $h_t(k)$ is a $W\times W$ Hermitian tridiagonal matrix with $(h_t)_{n,n} = -2t\cos(k+\bm A\cdot \bm a_1) - \mu$ and $(h_t)_{n,n+1} = -t\left( e^{i(-k+\bm A\cdot \bm a_3)}  + e^{i\bm A \cdot \bm a_2}\right)$. $h_\Delta(k)$ is a $W\times W$ tridiagonal matrix with $(h_\Delta)_{n,n} = -2i\de \sin k $ and $(h_\Delta)_{n,n\pm 1} = \mp \de\left[ e^{-i(\pm k + \frac{2\pi}{3})} + e^{-i\frac{\pi}{3}} \right]$.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-To calculate the Majorana number (\mathcal{M}) the Hamiltonian needs to be in skew-symmetric form.
-One such way is to write it in the Majorana fermion basis, the transformation matrix is of the form
-\begin{equation}
-  u = \dfrac{1}{\sqrt{2}} \left(
+By transforming Eq.~\ref{eq:Hribbon} to the Majorana basis using the unitary transformation:
+\begin{eqnarray}
+    U\equiv \dfrac{1}{\sqrt{2}} \left(
   \begin{matrix}
     1 & 1 \\
     -i & i
-  \end{matrix} \right)
-\end{equation}
+  \end{matrix} \right) \otimes \mathbb{I}
+\end{eqnarray}
+where $\mathbb{I}$ is a ${W\times W}$ identity matrix, and defining $A_k\equiv -iU H(k) U^\dag$, not to be confused with the vector potential, one can calculate the Majorana number \cite{kitaevUnpairedMajoranaFermions2001} $\mathcal{M}$ of the 1D ribbon as \cite{liTopologicalSuperconductivityInduced2014}
+\begin{eqnarray}
+\mathcal{M} = {\rm sgn}\left[{{\rm Pf}(A_{k=0}) {\rm Pf}(A_{k=\pi})}\right]
+\end{eqnarray}
+where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitaevUnpairedMajoranaFermions2001}. When $\mathcal{M} = -1$, the 1D system is in a nontrivial topological phase with MZM appearing at open ends of semi-infinite ribbons, and otherwise for $\mathcal{M} = 1$. 
 
-To account for the finite number of rows in a ribbon include a tensor product with an identity matrix of the same size, $U = u \otimes I_n$.
-We arrive at the skew-symmetric matrix with the following equation
-\begin{equation}
-  A_{ch} = -i U \ham_{ch} U^{\dagger}.
-\end{equation}
-The $\mathcal{M}$ of a 1D chain is defined as
-\begin{equation}
-  \mathcal{M} = \text{sgn}[\text{Pf}(A_{ch})],
-\end{equation}
-where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitaevUnpairedMajoranaFermions2001}.
-We make the claim this satisfies a finite width ribbon as well.
-When $\mathcal{M} = -1$, the ribbon is in a nontrivial topology and expect MZMs at its edges.
-Sweeping through a range of $A$ for the vector potential we expect to see a gap closing, $\mathcal{M} = 1$, and the system take on a trivial topology, no Majorana zero modes would exist on the edge of a finite ribbon.
+\begin{figure}[ht]
+  \subfloat[\label{subfig: majorana-number-y-axis}]{%
+    \includegraphics[width=0.3\textwidth]{./figures/majorana-number-y-axis.pdf}%
+  }\hfill
+  \subfloat[\label{subfig: majorana-number-5pi6ths}]{%
+    \includegraphics[width=0.3\textwidth]{./figures/majorana-number-5pi6ths.pdf}%
+  }\hfill
+  \caption{Topological phase diagrams for a system with three rows (a) regions III and IV, and (b) regions I and II, from Fig. \ref{fig: triangular-island-vector-potential-divided}}
+  \label{fig: majorana-number}
+\end{figure}
+
+In Fig.~\ref{fig: majorana-number} we show the topological phase diagrams for a 1D ribbon with width $W=3$, $\bm A = A\hat{y}$ (a) and $\bm A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$ (b). \Red{Plot (b) from $A=0$ to $4\pi/\sqrt{3}$}. We found that the vector potential component normal to the ribbon length direction has no effect on the topological invariant, nor does the sign of its component along the ribbon length direction. These properties motivate us to consider the structure of a hollow triangle formed by three finite-width ribbons subject to a vector potential similar to that in Eq.~\eqref{eq:Astep}, as illustrated in Fig.~\ref{fig: triangular-island-vector-potential-divided}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 To illustrate the importance of bulk-edge correspondence in forming Majorana fermions we will now look at the edges of a hollow triangular island.
 We show the top edges can be in a trivial phase while the bottom remains in a nontrivial phase.
@@ -214,17 +219,6 @@ The topological phase diagram for ribbons III and IV, with three rows, can be se
 It appears when the vector potential is perpendicular to the ribbon it does not contribute to the topology of the system.
 Similarly, for ribbons I and II, with three rows, the topological phase diagram is seen in Fig. \ref{subfig: majorana-number-5pi6ths}.
 Here the vector potential plays a vital role in transitioning the topology.
-
-\begin{figure}[]
-  \subfloat[\label{subfig: majorana-number-y-axis}]{%
-    \includegraphics[width=0.3\textwidth]{./figures/majorana-number-y-axis.pdf}%
-  }\hfill
-  \subfloat[\label{subfig: majorana-number-5pi6ths}]{%
-    \includegraphics[width=0.3\textwidth]{./figures/majorana-number-5pi6ths.pdf}%
-  }\hfill
-  \caption{Topological phase diagrams for a system with three rows (a) regions III and IV, and (b) regions I and II, from Fig. \ref{fig: triangular-island-vector-potential-divided}}
-  \label{fig: majorana-number}
-\end{figure}
 
 \begin{figure}[]
   \subfloat[\label{subfig: spectral-flow-mu-0.0}]{%
