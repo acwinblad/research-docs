@@ -117,7 +117,6 @@ It is straightforward to show that at $\bm \phi_{2}$ and $\bm \phi_3$ there are 
 
 \Red{Indeed, Fig.~\ref{fig:3eig} shows that the MZM stays at zero energy throughout the parameter path that interchanges their positions. To show that such an operation indeed realizes braiding, we explicitly calculate the many-body Berry phase of the evolution \cite{aliceaNonAbelianStatisticsTopological2011,Li_2016}.}
 
-
 In comparison to the minimum T-junction model with four sites \cite{aliceaNonAbelianStatisticsTopological2011}, our Kitaev triangle model only requires three sites to achieve braiding between two MZM, and is potentially also easier to engineer experimentally. In the next section we will show that a more mesoscopic hollow-triangle structure can achieve qualitatively the same result and may be preferred in other materials platforms.
 
 \section{MZM in hollow triangles}
@@ -163,43 +162,14 @@ where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitae
   \subfloat[\label{subfig: majorana-number-5pi6ths}]{%
     \includegraphics[width=0.3\textwidth]{./figures/majorana-number-5pi6ths.pdf}%
   }\hfill
-  \caption{Topological phase diagrams for a system with three rows (a) regions III and IV, and (b) regions I and II, from Fig. \ref{fig: triangular-island-vector-potential-divided}}
+    \subfloat[\label{subfig: majorana-number-superposed}]{%
+    \includegraphics[width=0.3\textwidth]{./figures/majorana-number-superposed.pdf}%
+  }\hfill
+  \caption{Topological phase diagrams for a $W=3$ triangular lattice ribbon with its Hamiltonian given by Eq.~\eqref{eq:Hribbon}. (a) $\bm A = A\hat{y}$ corresponding to regions III and IV in Fig.~\ref{fig: triangular-island-vector-potential-divided}. (b) $\bm A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$, corresponding to regions I and II in Fig.~\ref{fig: triangular-island-vector-potential-divided}. (c) Phase diagram for a hollow triangle obtained by superposing (a) and (b).}
   \label{fig: majorana-number}
 \end{figure}
 
-In Fig.~\ref{fig: majorana-number} we show the topological phase diagrams for a 1D ribbon with width $W=3$, $\bm A = A\hat{y}$ (a) and $\bm A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$ (b). \Red{Plot (b) from $A=0$ to $4\pi/\sqrt{3}$}. We found that the vector potential component normal to the ribbon length direction has no effect on the topological invariant, nor does the sign of its component along the ribbon length direction. These properties motivate us to consider the structure of a hollow triangle formed by three finite-width ribbons subject to a vector potential similar to that in Eq.~\eqref{eq:Astep}, as illustrated in Fig.~\ref{fig: triangular-island-vector-potential-divided}. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-To illustrate the importance of bulk-edge correspondence in forming Majorana fermions we will now look at the edges of a hollow triangular island.
-We show the top edges can be in a trivial phase while the bottom remains in a nontrivial phase.
-In previous papers a constant vector potential was used along the chain's axis \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}.
-We instead use a constant vector potential step function from the previous section centered on a chain with two 60 degree bends, equating it to a equilateral triangle.
-Taking a hollow triangular island centered about the y-axis with the following vector potential
-\begin{equation}
-  \vec{A} = \begin{cases}
-            A \hat{y} \quad &x > 0 \\
-            -A \hat{y} \quad &x < 0 \\
-            \end{cases}
-\end{equation}
-we examine each edge individually.
-When calculating \mathcal{M} the vector potential has symmetry about the ribbon's axis, i.e. $\vec{A}$ pointing in the positive or negative y-axis yields the same result.
-Looking at Fig. \ref{fig: triangular-island-vector-potential-divided} we determine each edge's vector potential with respect to its main axis.
+In Fig.~\ref{fig: majorana-number} we show the topological phase diagrams for a 1D ribbon with width $W=3$, $\bm A = A\hat{y}$ (a) and $\bm A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$ (b). \Red{Plot (b) from $A=0$ to $4\pi/\sqrt{3}$}. We found that the vector potential component normal to the ribbon length direction has no effect on the topological invariant, nor does the sign of its component along the ribbon length direction. However, topological phase transitions can be induced by varying the size of the vector potential component along the ribbon, consistent with previous results \cite{romitoManipulatingMajoranaFermions2012, takasanSupercurrentinducedTopologicalPhase2022}. These properties motivate us to consider the structure of a hollow triangle formed by three finite-width ribbons subject to a vector potential $\mathbf A(x,y) = \left[1-2\Theta(x)\right]A\hat{y}$, similar to that in Eq.~\eqref{eq:Astep}, as illustrated in Fig.~\ref{fig: triangular-island-vector-potential-divided}. (The coordinate system is chosen so that the center of the bottom edge is the origin and the bottom edge is along the $x$ axis.) Superposing Figs.~\ref{fig: majorana-number} (a) and (b) in (c), one can find regions on the phase diagram where the bottom edge and the two upper edges of the hollow triangle have different $\mathcal{M}$, which should give rise to MZM localized at the two bottom corners if the triangle is large enough so that bulk-edge correspondence holds, and gap closing does not occur at other places along its edges. 
 
 \begin{figure}[]
   \begin{tikzpicture}
@@ -211,29 +181,26 @@ Looking at Fig. \ref{fig: triangular-island-vector-potential-divided} we determi
     \node[inner sep=0pt] (R3) at (1.3,-3.3) {\small III};
     \node[inner sep=0pt] (R3) at (-1.3,-2.1) {\small IV};
   \end{tikzpicture}
-  \caption{Triangular island with constant step function vector potential. The edges are divided up into four regions with differing vector potentials. Each segment is treated like a finite width ribbon where we can test its topology as function of $\mu$ and $\vec{A}$. Vector potential $\vec{A}$ makes an angle $\eta =  \mp \dfrac{5\pi}{6}, \pm \dfrac{\pi}{2}$, to each ribbon's main axis, respectively.}
+  \caption{Triangular island with constant step function vector potential. The edges are divided up into four regions with differing vector potentials. Each segment is treated like a finite width ribbon where we can test its topology as function of $\mu$ and $\vec{A}$. Vector potential $\vec{A}$ makes an angle $\eta =  \mp \dfrac{5\pi}{6}, \pm \dfrac{\pi}{2}$, to each ribbon's main axis, respectively. \Red{Plot the figures from $A=0$ to $4\pi/\sqrt{3}$.}}
   \label{fig: triangular-island-vector-potential-divided}
 \end{figure}
 
-The topological phase diagram for ribbons III and IV, with three rows, can be seen in Fig. \ref{subfig: majorana-number-y-axis}, we can see for varying $\mu$ and $A$, with $\vec{A} = A\hat{y}$, the system is topologically trivial (yellow) and nontrivial (blue).
-It appears when the vector potential is perpendicular to the ribbon it does not contribute to the topology of the system.
-Similarly, for ribbons I and II, with three rows, the topological phase diagram is seen in Fig. \ref{subfig: majorana-number-5pi6ths}.
-Here the vector potential plays a vital role in transitioning the topology.
+To show that corner MZM indeed appear when the conditions given by the phase diagram Fig.~\ref{fig: majorana-number} (c) are met, we directly diagonalize the BdG Hamiltonian of a finite hollow triangle with edge length $L=100$ and width $W=3$. Fig.~\ref{fig: spectral-flows} show the spectral flow (BdG eigenvalues evolving with increasing vector potential $A$) for near-zero-energy eigenvalues at different chemical potentials. \Red{Add two lines showing the smallest gap on the three edges calculated using infinite ribbons.} Indeed, zero-energy modes appear in the regions of $\mu$ and $A$ consistent with the phase diagram, except when the bulk band gap is too small. The eigenfunctions for the zero-energy modes at selected values of $A$ and $\mu$ plotted in Fig.~\ref{fig: mzm-wavefunctions} also confirm their spatial localization at the bottom corners of the triangle. 
 
 \begin{figure}[]
   \subfloat[\label{subfig: spectral-flow-mu-0.0}]{%
     \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-0_0.pdf}%
   }\hfill
-  \subfloat[\label{subfig: spectral-flow-mu-0.2}]{%
-    \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-0_2.pdf}%
-  }\hfill
+%  \subfloat[\label{subfig: spectral-flow-mu-0.2}]{%
+%    \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-0_2.pdf}%
+%  }\hfill
   \subfloat[\label{subfig: spectral-flow-mu-1.6}]{%
     \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-1_6.pdf}%
   }\hfill
   \subfloat[\label{subfig: spectral-flow-mu-n1.6}]{%
     \includegraphics[width=0.3\textwidth]{./figures/spectral-flow-n-100-w-3-mu-n1_6.pdf}%
   }\hfill
-  \caption{Eigenenergy spectral flow for a system with $n_r=100$ and $w_{edge}=3$, with (a) $\mu=0$, (b) $\mu=0.2t$, (c) $\mu=1.6t$, and (d) $\mu=-1.6t$.}
+  \caption{Near-zero BdG eigenvalues evolving with increasing vector potential $A$ for a hollow triangle with edge length $L=100$ and width $W=3$ at different values of the chemical potential: (a) $\mu=0$, (b) $\mu=1.6t$, and (c) $\mu=-1.6t$. Dashed lines correspond to the lowest eigen-energies of the three edges with periodic boundary condition. \Red{Plot the figures from $A=0$ to $4\pi/\sqrt{3}$.}}
   \label{fig: spectral-flows}
 \end{figure}
 
@@ -241,40 +208,33 @@ Here the vector potential plays a vital role in transitioning the topology.
   \subfloat[\label{subfig: mzm-mu-0.0}]{%
     \includegraphics[width=0.3\textwidth]{./figures/En00-B-2_8274-n-100-w-3-mu-0_0.pdf}%
   }\hfill
-  \subfloat[\label{subfig: mzm-mu-0.2}]{%
-    \includegraphics[width=0.3\textwidth]{./figures/En00-B-2_5918-n-100-w-3-mu-0_2.pdf}%
-  }\hfill
+%  \subfloat[\label{subfig: mzm-mu-0.2}]{%
+%    \includegraphics[width=0.3\textwidth]{./figures/En00-B-2_5918-n-100-w-3-mu-0_2.pdf}%
+%  }\hfill
   \subfloat[\label{subfig: mzm-mu-1.6}]{%
     \includegraphics[width=0.3\textwidth]{./figures/En00-B-2_6704-n-100-w-3-mu-1_6.pdf}%
   }\hfill
   \subfloat[\label{subfig: mzm-mu-n1.6}]{%
     \includegraphics[width=0.3\textwidth]{./figures/En00-B-2_4347-n-100-w-3-mu-n1_6.pdf}%
   }\hfill
-  \caption{MZMs for a system with $n_r=100$ and $w_{edge}=3$, with (a) $\mu=0.2t$, $A = 2.8274$, (b) $\mu=0.2t$, $A = 2.5918$, (c) $\mu=1.6t$, $A = 2.6704$, and (d) $\mu=-1.6t$, $A = 2.4347$.}
+  \caption{Corner MZM for a hollow triangle with $L=100$ and $W=3$. (a) $\mu=0.2t$, $A = 2.8274$, (b) $\mu=1.6t$, $A = 2.6704$, and (c) $\mu=-1.6t$, $A = 2.4347$.}
   \label{fig: mzm-wavefunctions}
 \end{figure}
 
-We make use of bulk-edge correspondence to justify MZMs hosting at the interfaces of the triangular islands edges, i.e. corners.
-One simulataneously tunes regions I and II to be in a trivial(nontrivial) topological phase and regions III and IV to be nontrivial(trivial) topological phase, respectively.
-To check we look at an eigenenergy spectral flow and eigenstates of a triangular lattice with size $n=100$, width $w=3$, and $A = [0,2\pi]$.
-Fig. \ref{fig: spectral-flows} shows strong agreement of MZMs appearing in the same vector potential range as seen in Fig. \ref{subfig: majorana-number-5pi6ths}'s topological phase diagram.
-As expected MZMs host at the bottom corners of the triangle where the differing topologies meet, as seen in Fig. \ref{fig: mzm-wavefunctions}.
-We see a broad parameter space, $\mu$ and $A$, for our system to host MZMs.
-Our calculations also show the MZMs live within a clean gap inside those parameter ranges.
+\Red{Show a similar MZM braiding figure as Fig.~\ref{fig:3eig} (b).}
 
-
-\Red{For hollow triangles what are the advantages of using supercurrent/vector potential versus individually changing the chemical potential of each edges? For three-site triangles one can only control hopping since each site is shared by two edges.}
+Before ending this section, we comment on the possibility of using a uniform vector potential to realize MZM. Since the phase diagram Fig.~\ref{fig: majorana-number} (a) is invariant under reflection of the vector potential with respect to either the ribbon direction or its normal, one might wonder if the staggered vector potential in Fig.~\ref{fig: triangular-island-vector-potential-divided} can be replaced by a uniform vector potential. However, such a setting will create a discontinuity of the along-edge component of the vector potential at the top vertex. \Red{It is still not clear why this cannot give MZM. Please double check the numerics.}
 
 \section{Discussion and Conclusions}
 
-MZM can be hosted at the end points of a chain with finite width as with a Josephson-junction or other thin films, provided the width is much smaller than the Majorana fermion decay length \cite{black-schafferMajoranaFermionsSpinorbitcoupled2011, pientkaSignaturesTopologicalPhase2013, hellTwoDimensionalPlatformNetworks2017, scharfTuningTopologicalSuperconductivity2019, potterMultichannelGeneralizationKitaev2010}.
+Possible points to discuss in this section:
 
-How one can build this system warrants some thought.
-A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}.
-If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to make a very strong trivial superconductor at its center.
-One could place individual atoms using an STM tip \cite{schneiderPrecursorsMajoranaModes2022}.
-Another option may be to use quasi-1D cuts on a QAHI with triangular lattice in proximity to an \textit{s}-wave superconductor \cite{xieCreatingLocalizedMajorana2021}.
-To implement the inhomogeneous supercurrent or vector potential one could use a magnetic field and a uniform supercurrent or two antiparallel supercurrents separated by a 1D or quasi-1D insulator strip.
+1. Why is hollow necessary? The finite width is needed for two reasons: (1) $W\ll L$ is required for bulk-edge correspondence based on 1D topology to hold; (2) A finite $W$ is needed to gap out the chiral edge states of a 2D spinless $p$-wave superconductor based on which Eq.~\eqref{eq:Hribbon} is written. Extension to more realistic model systems, e.g. Rashba+Zeeman+s-wave. Less-ideal structure: Finite triangle with a hollow interior may host a low-energy effective Hamiltonian of the Kitaev triangle in the space of low-energy Wannier functions.
+
+2. Ways to build the hollow triangle: atomic chains, epitaxial triangle plus central gating, Planar Josephson junction, cuts on QAHI/superconductor heterostructure. A minimal model may be achieved by using a mesoscopic model involving quantum dots at the triangles vertices, to represent the minimal three point model \cite{dvirRealizationMinimalKitaev2023}. If using epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} one could make a network of vertex connected triangles, then either hollow the triangle out using ablation techniques or place a smaller inner voltage gates to tune the chemical potential to make a very strong trivial superconductor at its center. One could place individual atoms using an STM tip \cite{schneiderPrecursorsMajoranaModes2022}. Another option may be to use quasi-1D cuts on a QAHI with triangular lattice in proximity to an \textit{s}-wave superconductor \cite{xieCreatingLocalizedMajorana2021}.
+
+3. How to create staggered vector potential/supercurrent for finite hollow triangles and for the minimal Kitaev triangle? To implement the inhomogeneous supercurrent or vector potential one could use a magnetic field and a uniform supercurrent or two antiparallel supercurrents separated by a 1D or quasi-1D insulator strip.
+
 To braid MZMs in this system one only has to rotate and slowly turn on neighboring triangles inhomogeneous vector potentials to transition an edge to be of nontrivial topology.
 The following schematic in Fig. \ref{fig: triangular-network-braiding} illustrates how such a manipulation of MZMs can occur.
 
@@ -289,13 +249,6 @@ The following schematic in Fig. \ref{fig: triangular-network-braiding} illustrat
   \caption{Network of tunable topological superconducting hollow triangular islands. The left panel shows the initialization of two MZMs $\gamma_1$ and $\gamma_2$. The right panel depicts the MZMs after a braiding operation. The arrows depict which island has an inhomogeneous vector potential applied and in general direction for a step-function. Green lines shows which edges are topologically nontrivial.}
   \label{fig: triangular-network-braiding}
 \end{figure}
-
-With the base model for a new platform displayed further work is still required.
-A description of the Wannier states would be informative (\Blue{Hua, I'm not well versed in this type of description, could use your expertise here in writing this sentence as it sounds important to include}).
-Perfectly fabricated devices are not always realistic, a further study of the effects misshapen lattice edges would be important to further gauge how robust our platform is.
-Another calculation of how the MZMs evolve on a single triangle when the vector potential is rotated by $2\pi$ at its center would be informative if they survive such a process without mixing into higher order states and if they pick up a phase accumulation.
-
-Would a uniform supercurrent or vector potential work?  Symmetry of the phase diagram under flipping sign of the vector potential. 
 
 The three-site design may also make it convenient to implement parity readout by turning the third vertex temporily into a normal quantum dot and using the proposal in PRB 101, 235411. 
 
