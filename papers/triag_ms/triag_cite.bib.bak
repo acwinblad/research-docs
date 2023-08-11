@@ -1437,4 +1437,50 @@
   url       = {https://link.aps.org/doi/10.1103/PhysRevLett.121.227701},
 }
 
+@Article{Sau2012,
+  author   = {Sau, Jay D. and Sarma, S. Das},
+  journal  = {Nature Communications},
+  title    = {Realizing a robust practical Majorana chain in a quantum-dot-superconductor linear array},
+  year     = {2012},
+  issn     = {2041-1723},
+  month    = {Jul},
+  number   = {1},
+  pages    = {964},
+  volume   = {3},
+  abstract = {Semiconducting nanowires in proximity to superconductors are promising experimental systems for realizing the elusive Majorana fermions, which, because of their non-Abelian anyonic braiding statistics, may ultimately be used as building blocks for topological quantum computers. A serious challenge in the experimental realization of the Majorana fermions is the suppression of topological superconductivity by disorder together with the tunability of carrier density for semiconductors in close proximity to superconductors. Here we show that Majorana fermions that are protected by a disorder robust topological gap can occur at the ends of a chain of gate-tunable quantum dots connected by s-wave superconductors. Such an array of quantum dots provides the simplest realization of Majorana fermions in systems as simple as a few quantum dot array. The proposed system provides a very practical and easily realizable experimental platform for the observation of non-Abelian Majorana modes.},
+  day      = {17},
+  doi      = {10.1038/ncomms1966},
+  url      = {https://doi.org/10.1038/ncomms1966},
+}
+
+@Article{parity_QD_readout_2020,
+  author    = {Sz\'echenyi, G\'abor and P\'alyi, Andr\'as},
+  journal   = {Phys. Rev. B},
+  title     = {Parity-to-charge conversion for readout of topological Majorana qubits},
+  year      = {2020},
+  month     = {Jun},
+  pages     = {235441},
+  volume    = {101},
+  doi       = {10.1103/PhysRevB.101.235441},
+  issue     = {23},
+  numpages  = {17},
+  publisher = {American Physical Society},
+  url       = {https://link.aps.org/doi/10.1103/PhysRevB.101.235441},
+}
+
+@Article{wang_2018,
+  author    = {Wang, Qiyue and Liu, Cheng-Cheng and Lu, Yuan-Ming and Zhang, Fan},
+  journal   = {Phys. Rev. Lett.},
+  title     = {High-Temperature Majorana Corner States},
+  year      = {2018},
+  month     = {Oct},
+  pages     = {186801},
+  volume    = {121},
+  doi       = {10.1103/PhysRevLett.121.186801},
+  issue     = {18},
+  numpages  = {7},
+  publisher = {American Physical Society},
+  url       = {https://link.aps.org/doi/10.1103/PhysRevLett.121.186801},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
