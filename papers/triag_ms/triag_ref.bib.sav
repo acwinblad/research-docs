@@ -1554,9 +1554,3 @@ d
   abstract = {Topological superconductivity supports exotic Majorana bound states (MBS) which are chargeless zero-energy emergent quasiparticles. With their non-Abelian exchange statistics and fractionalization of a single electron stored nonlocally as a spatially separated MBS, they are particularly suitable for implementing fault-tolerant topological quantum computing. While realizing MBS has focused on one-dimensional systems, the onset of topological superconductivity requires delicate parameter tuning and geometric constraints pose significant challenges for their control and demonstration of non-Abelian statistics. To overcome these challenges, building on recent experiments in planar Josephson junctions (JJs), we propose a MBS platform of X-shaped JJs. This versatile implementation reveals how external flux control of the superconducting phase difference can generate and manipulate multiple MBS pairs to probe non-Abelian statistics. The underlying topological superconductivity exists over a large parameter space, consistent with materials used in our fabrication of such X junctions, as an important step towards scalable topological quantum computing.},
   file = {/home/acwinblad/snap/zotero-snap/common/Zotero/storage/EFI23QSN/Zhou et al. - 2020 - Phase Control of Majorana Bound States in a Topolo.pdf;/home/acwinblad/snap/zotero-snap/common/Zotero/storage/7EFYEIFM/PhysRevLett.124.html}
 }
-
-@Article{supp,
-  journal = {{See Supplementary Material at [url] for technical details, which includes Refs. []}},
-}
-
-@Comment{jabref-meta: databaseType:biblatex;}

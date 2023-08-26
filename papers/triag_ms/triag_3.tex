@@ -151,8 +151,8 @@ where $\mathbb{I}$ is a ${W\times W}$ identity matrix, and defining $A_k\equiv -
 where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitaevUnpairedMajoranaFermions2001}. When $\mathcal{M} = -1$, the 1D system is in a nontrivial topological phase with MZM appearing at open ends of semi-infinite ribbons, and otherwise for $\mathcal{M} = 1$.
 
 \begin{figure}[ht]
-  \subfloat[]{\includegraphics[width=0.37\textwidth]{./figures/topological-phase-diagram-w-1.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/topological-phase-diagram-w-1.pdf}}\\
+  \subfloat[]{\includegraphics[width=0.31\textwidth]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}}
 \caption{(a) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.~\eqref{eq:Hribbon} obtained by overlapping the $\mathcal{M}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: yellow---$\mathcal{M}=1$, blue---$\mathcal{M}=-1$, orange---$\mathcal{M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu=1.6$.}
   \label{fig: pd}
 \end{figure}
@@ -174,35 +174,19 @@ We finally show that rotating the uniform vector potential in-plane can manipula
 
 \emph{Discussion.---}The hollow interior of the triangles considered in this work is needed for two reasons: (1) $W\ll L$ is required for bulk-edge correspondence based on 1D topology to hold; (2) A finite $W$ is needed to gap out the chiral edge states of a 2D spinless $p$-wave superconductor based on which Eq.~\eqref{eq:Hribbon} is written. The latter is not essential if one does not start with a spinless $p$-wave supercondutor but a more realistic model such as the Rashba+Zeeman+$s$-wave pairing model. On the other hand, the former constraint may also be removed if one uses the Kitaev triangle. Nonetheless, an effective 3-site Kitaev triangle may emerge as the effective theory of triangular structures if a three-orbital low-energy Wannier basis can be isolated, similar to the continuum theory of Moire structures. We also note in passing that the corner MZM in our triangles appear due to different reasons from that in higher-order topological superconductors \cite{wangEvidenceMajoranaBound2018,pahomiBraidingMajoranaCorner2020}.
 
+\begin{figure}[ht]
+   \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding1.pdf}} \,
+    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding2.pdf}} \\
+    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding3.pdf}} \,
+    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding4.pdf}} \\
+  \caption{\Red{Representative steps for braiding four MZM in three triangles sharing corners. (a) Initialization of four MZM $\gamma_1, \gamma_2, \gamma_3, \gamma_4$. All three edges of the middle triangle are in the trivial phase by e.g. controlling the chemical potential. (b) Moving $\gamma_3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential. (c) Transporting $\gamma_2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi/6$. (d) Moving $\gamma_3$ to the left triangle by ``switching off" the middle triangle.}}
+  \label{fig:4MZMbraiding}
+\end{figure}
+
 For possible physical realizations of our triangles, immediate choices are quantum dots forming a Kitaev triangle \cite{dvirRealizationMinimalKitaev2023}, planar Josephson junctions or cuts on QAHI/superconductor heterostructures \cite{xieCreatingLocalizedMajorana2021} that form a hollow triangle, and triangular atomic chains assembled by an STM tip \cite{schneiderPrecursorsMajoranaModes2022} on a close-packed surface. The quantum-dot platform may be advantageous in the convenience of implementing parity readout by turning the third vertex temporarily into a normal quantum dot \cite{mishmashDephasingLeakageDynamics2020,parity_QD_readout_2020, fengProbingRobustMajorana2022}. Looking into the future, it is more intriguing to utilize the spontaneously formed triangular islands in epitaxial growth \cite{pietzschSpinResolvedElectronicStructure2006} with the center region removed either physically by lithography/ablation, or electrically by gating. To create a staggered vector potential or supercurrent profile for the Kitaev triangle, one can use a uniform magnetic field, corresponding to a constant vector potential gradient, plus a uniform supercurrent that controls the position of the zero. It is also possible to use two parallel superconducting wires with counter-propagating supercurrents proximate to the triangle.
 
-A tentative design for braiding more than two MZM based on our triangles is schematically illustrated in Fig. ~\ref{fig: triangular-network-braiding}. The neighboring triangles share vertices through gated gap regions so that MZM pairs can be created at different vertices in individual triangles, while shuffled and transported through different triangles by controlling the gates at shared vertices, that fuse MZM but do not create additional gap closing events. Our work provides a versatile platform for manipulating MZM based on currently available candidate MZM systems and for potentially demonstrating the non-Abelian nature of MZM in near term devices.
+A tentative design for braiding more than two MZM, illustrated in Fig.~\ref{fig:4MZMbraiding}, consists of three triangles sharing bottom vertices with their neighbors. The critical step of transporting $\gamma_2$ to the left vertex of the rightmost triangle can be achieved by rotating the vector potential of the middle triangle counterclockwise as illustrated in Figs.~\ref{fig:4MZMbraiding} (b,c). In \cite{supp} we show this operation does not involve gap closing at least for certain parameter regions. Our work provides a versatile platform for manipulating MZM based on currently available candidate MZM systems and for potentially demonstrating the non-Abelian nature of MZM in near term devices.
 
-\begin{figure}[]
-  \begin{tikzpicture}
-    \node[inner sep=0pt] (figure) at (0,0){\includegraphics[width=0.5\textwidth]{./figures/4-mf-swap-2-3.pdf}};
-    \node[inner sep=0pt] (gamma1) at (-3.1,2.6) {\small $\gamma_1$};
-    \node[inner sep=0pt] (gamma2) at (-1.1,2.6) {\small $\gamma_2$};
-    \node[inner sep=0pt] (gamma3) at (0.9,2.6) {\small $\gamma_3$};
-    \node[inner sep=0pt] (gamma4) at (2.9,2.6) {\small $\gamma_4$};
-
-    \node[inner sep=0pt] (gamma1) at (-3.1,-1.9) {\small $\gamma_1$};
-    \node[inner sep=0pt] (gamma1') at (-1.1,-1.9) {\small $\gamma_{1'}$};
-    \node[inner sep=0pt] (gamma3) at (-2.0,-0.2) {\small $\gamma_3$};
-    \node[inner sep=0pt] (gamma3') at (-0.0,-0.2) {\small $\gamma_{3'}$};
-    \node[inner sep=0pt] (gamma2') at (2.0,-0.2) {\small $\gamma_{2'}$};
-    \node[inner sep=0pt] (gamma2) at (3.9,-0.2) {\small $\gamma_2$};
-    \node[inner sep=0pt] (gamma4') at (0.9,-1.9) {\small $\gamma_{4'}$};
-    \node[inner sep=0pt] (gamma4) at (2.9,-1.9) {\small $\gamma_4$};
-
-    \node[inner sep=0pt] (gamma1) at (-3.1,-6.4) {\small $\gamma_1$};
-    \node[inner sep=0pt] (gamma3) at (-1.1,-6.4) {\small $\gamma_3$};
-    \node[inner sep=0pt] (gamma2) at (0.9,-6.4) {\small $\gamma_2$};
-    \node[inner sep=0pt] (gamma4) at (2.9,-6.4) {\small $\gamma_4$};
-  \end{tikzpicture}
-  \caption{\Red{Representative steps for braiding four MZM in a network of triangles sharing corners through electrical gates. (a) Initialization of four MZM $\gamma_1, \gamma_2, \gamma_3, \gamma_4$. (b) Moving XXX to XXX by creating another pair of MZM in a triangle neighboring XXX and fusing one of them with XXX. After that another pair of MZM $\gamma_5$ and $\gamma_6$ are created. (c) Fusing XXX with XXX, which effectively interchanges XXX and XXX compared with (a).}}
-  \label{fig: triangular-network-braiding}
-\end{figure}
 
 \begin{acknowledgements}
 This work was supported by the start-up funding of CSU and partially by NSF CAREER grant DMR-1945023.
