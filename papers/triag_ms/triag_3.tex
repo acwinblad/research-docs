@@ -151,8 +151,10 @@ where $\mathbb{I}$ is a ${W\times W}$ identity matrix, and defining $A_k\equiv -
 where $\text{Pf}$ stands for the Pfaffian of a skew-symmetric matrix \cite{kitaevUnpairedMajoranaFermions2001}. When $\mathcal{M} = -1$, the 1D system is in a nontrivial topological phase with MZM appearing at open ends of semi-infinite ribbons, and otherwise for $\mathcal{M} = 1$.
 
 \begin{figure}[ht]
-  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/topological-phase-diagram-w-1.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.31\textwidth]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}}
+  \hspace{6pt}
+  \subfloat[]{\includegraphics[width=0.316\textwidth]{./figures/topological-phase-diagram-1pi6-n-1.pdf}} \\
+  \vspace{-15pt}
+  \subfloat[]{\includegraphics[width=0.30\textwidth]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}}
 \caption{(a) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.~\eqref{eq:Hribbon} obtained by overlapping the $\mathcal{M}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: yellow---$\mathcal{M}=1$, blue---$\mathcal{M}=-1$, orange---$\mathcal{M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu=1.6$.}
   \label{fig: pd}
 \end{figure}
@@ -162,11 +164,11 @@ In Fig.~\ref{fig: pd} (a) we show the topological phase diagrams for a 1D ribbon
 To show that corner MZM indeed appear when the conditions given by the phase diagram Fig.~\ref{fig: pd} (a) are met, we directly diagonalize the BdG Hamiltonian of a finite hollow triangle with edge length $L=50$ and width $W=1$. Fig.~\ref{fig: pd} (b) shows the spectral flow (BdG eigen-energies evolving with increasing vector potential $A$) close to zero energy at chemical potential $\mu=1.6$. Indeed, zero-energy modes appear in the regions of $\mu$ and $A$ consistent with the phase diagram (except when the bulk band gap is too small \cite{supp} \Red{This is referring to some less ideal parameters and the larger $W$ cases.}). Hollow triangles with larger larger $W$ also have qualitatively similar behavior, although the phase diagrams are more complex \cite{supp}. The eigenfunctions for the zero-energy modes at $A=2.75$ and $\mu=1.6$ in Fig.~\ref{fig: rotation} (b) also confirm their spatial localization at the bottom corners of the triangle.
 
 \begin{figure*}[ht]
-  \subfloat[]{\includegraphics[width=0.27\textwidth]{./figures/spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_6.pdf}}
-  \subfloat[]{\includegraphics[width=0.25\textwidth]{./figures/GS-T-Square.pdf}}\hspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.25\textwidth]{./figures/GS-T-Circle.pdf}}\hspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.25\textwidth]{./figures/GS-T-Diamond.pdf}}
-  \caption{(a) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(\cos\varphi \hat{x} + \sin\varphi \hat{y})$. (b-d) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0, \frac{\pi}{6}$, and $\frac{\pi}{3}$, respectively.}
+  \subfloat[]{\includegraphics[height=105pt]{./figures/spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_6.pdf}}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/GS-T-Square.pdf}}\hspace{-20pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/GS-T-Circle.pdf}}\hspace{-20pt}
+  \subfloat[]{\includegraphics[height=102pt]{./figures/GS-T-Diamond.pdf}}
+  \caption{(a) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (b-d) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0, \frac{\pi}{6}$, and $\frac{\pi}{3}$, respectively.}
   \label{fig: rotation}
 \end{figure*}
 
@@ -175,10 +177,36 @@ We finally show that rotating the uniform vector potential in-plane can manipula
 \emph{Discussion.---}The hollow interior of the triangles considered in this work is needed for two reasons: (1) $W\ll L$ is required for bulk-edge correspondence based on 1D topology to hold; (2) A finite $W$ is needed to gap out the chiral edge states of a 2D spinless $p$-wave superconductor based on which Eq.~\eqref{eq:Hribbon} is written. The latter is not essential if one does not start with a spinless $p$-wave supercondutor but a more realistic model such as the Rashba+Zeeman+$s$-wave pairing model. On the other hand, the former constraint may also be removed if one uses the Kitaev triangle. Nonetheless, an effective 3-site Kitaev triangle may emerge as the effective theory of triangular structures if a three-orbital low-energy Wannier basis can be isolated, similar to the continuum theory of Moire structures. We also note in passing that the corner MZM in our triangles appear due to different reasons from that in higher-order topological superconductors \cite{wangEvidenceMajoranaBound2018,pahomiBraidingMajoranaCorner2020}.
 
 \begin{figure}[ht]
-   \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding1.pdf}} \,
-    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding2.pdf}} \\
-    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding3.pdf}} \,
-    \subfloat[]{\includegraphics[width=0.23\textwidth]{4mzmbraiding4.pdf}} \\
+  \begin{tikzpicture}
+    \node[inner sep=0pt] (figure) at (0,0)
+    {\includegraphics[width=0.45\textwidth]{./figures/4-mf-swap-2-3.pdf}};
+
+    \node[inner sep=0pt] (a) at (-4,1.75) {(a)};
+    \node[inner sep=0pt] (b) at (0.1,1.75) {(b)};
+    \node[inner sep=0pt] (c) at (-4,-.25) {(c)};
+    \node[inner sep=0pt] (d) at (0.1,-.25) {(d)};
+
+    \node[inner sep=0pt] (gamma1) at (-3.4,0.25) {$\gamma_1$};
+    \node[inner sep=0pt] (gamma2) at (-2.4,0.25) {$\gamma_2$};
+    \node[inner sep=0pt] (gamma3) at (-1.4,0.25) {$\gamma_3$};
+    \node[inner sep=0pt] (gamma4) at (-0.4,0.25) {$\gamma_4$};
+
+    \node[inner sep=0pt] (gamma1) at (0.65,0.25) {$\gamma_1$};
+    \node[inner sep=0pt] (gamma2) at (1.65,0.25) {$\gamma_2$};
+    \node[inner sep=0pt] (gamma3) at (2.4,1.4) {$\gamma_3$};
+    \node[inner sep=0pt] (gamma4) at (3.65,0.25) {$\gamma_4$};
+
+    \node[inner sep=0pt] (gamma1) at (-3.4,-1.75) {$\gamma_1$};
+    \node[inner sep=0pt] (gamma3) at (-1.63,-0.60) {$\gamma_3$};
+    \node[inner sep=0pt] (gamma2) at (-1.4,-1.75) {$\gamma_2$};
+    \node[inner sep=0pt] (gamma4) at (-0.4,-1.75) {$\gamma_4$};
+
+    \node[inner sep=0pt] (gamma1) at (0.65,-1.75) {$\gamma_1$};
+    \node[inner sep=0pt] (gamma3) at (1.65,-1.75) {$\gamma_3$};
+    \node[inner sep=0pt] (gamma2) at (2.65,-1.75) {$\gamma_2$};
+    \node[inner sep=0pt] (gamma4) at (3.65,-1.75) {$\gamma_4$};
+
+  \end{tikzpicture}
   \caption{\Red{Representative steps for braiding four MZM in three triangles sharing corners. (a) Initialization of four MZM $\gamma_1, \gamma_2, \gamma_3, \gamma_4$. All three edges of the middle triangle are in the trivial phase by e.g. controlling the chemical potential. (b) Moving $\gamma_3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential. (c) Transporting $\gamma_2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi/6$. (d) Moving $\gamma_3$ to the left triangle by ``switching off" the middle triangle.}}
   \label{fig:4MZMbraiding}
 \end{figure}
