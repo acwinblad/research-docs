@@ -21,6 +21,7 @@
 
 
 \newcommand{\Red}[1]{\textcolor{red}{#1}}
+\newcommand{\Blue}[1]{\textcolor{blue}{#1}}
 %\newcommand{\vb}[1]{\boldsymbol{#1}}
 \usepackage{soul}
 
@@ -109,9 +110,7 @@ where $\otimes$ means tensor product. The $2\times 2$ Berry phase matrix $M_{f\l
 \end{eqnarray}
 where $R_f = R_i$ since the path is closed.
 
-By using a large enough $N$ we found the converged $M_{f\leftarrow i}$ matrix has only diagonal elements being nonzero, meaning the braiding only changes each ground state by a scalar phase factor. Their values are $(M_{f\leftarrow i})_{00} = e^{i0.37\pi}$ and $(M_{f\leftarrow i})_{11} = e^{i(0.37-0.5)\pi}$.
-
-\Red{Could you double check the numbers? I previously got $e^{i0.118\pi}$ for $|0\rangle$ and $e^{-i0.382\pi}$ for $|1\rangle$.}
+By using a large enough $N$ we found the converged $M_{f\leftarrow i}$ matrix has only diagonal elements being nonzero, meaning the braiding only changes each ground state by a scalar phase factor. Their values are $(M_{f\leftarrow i})_{00} = e^{i0.118\pi}$ and $(M_{f\leftarrow i})_{11} = e^{-i 0.382\pi} = e^{i(0.118-0.5)\pi}$.
 
 We end this section by noting that the parameter path considered for the 3-site Kitaev triangle above is not equivalent to rotating a staggered vector potential but to separately manipulating the Peierls phases along the three edges. We have also done calculations for the latter case and found the two lowest-energy states fail to be degenerate everywhere along the parameter path, leading to non-standard Berry phase values.
 
@@ -131,17 +130,17 @@ We end this section by noting that the parameter path considered for the 3-site 
 A model that is closer to a realistic hollow triangular island is the finite-width triangular chain or ribbon. An example, illustrated in Figure \ref{fig: supp pd} (c), has its edge length $L=50$ and width $W=3$. The phase diagram Fig.~\ref{fig: supp pd} (a) is created in a similar way as that in Fig.~3 (a) of the main text, assuming a constant vector potential $\mathbf A = A\hat{y}$ and infinitely long $W=3$ ribbons. The spectral flow for the actual triangle with $\mu = 1.6$ in Fig.~\ref{fig: supp pd} (b) show MZM in the correct regions expected from the phase diagram. Fig.~\ref{fig: supp pd} (c) plots the MZM wavefunction for $A=2.7409$ and $\mu=1.6$ that are indeed well localized at the bottom corners.
 
 \begin{figure}[ht]
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/spectral-flow-w-3.pdf}}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Square-w-3.pdf}} \\
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Circle-w-3.pdf}}
+  \hspace{-20pt}
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{./figures/supp/spectral-flow-w-3.pdf}}\\
+  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Square-w-3.pdf}}
+  %\subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Circle-w-3.pdf}}
   \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Diamond-w-3.pdf}}
-  \caption{(a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (b-d) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0, \frac{\pi}{6}$, and $\frac{\pi}{3}$, respectively.}
+  \caption{(a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (b-c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0$ and $\frac{\pi}{3}$, respectively.}
   \label{fig: supp rotation}
 \end{figure}
 
-\Red{Shouldn't the eigenenergies at $\varphi = 0$ the same as that at $\varphi = \pi$? Why are they different in Fig.~\ref{fig: supp rotation} (a)?}
 
-We next rotate the uniform vector potential to examine how the MZM move on a hollow triangle. Figure~\ref{fig: supp rotation} shows the spectral flow and eigenfunctions as we rotate $\varphi=0$ to $\varphi=\pi$ counterclockwisely. The two MZM cycle through the three vertices as $\varphi$ increases from 0 to $\pi/3$ in a similar manner as that in Fig.~4 of the main text.  
+We next rotate the uniform vector potential to examine how the MZM move on a hollow triangle. Figure~\ref{fig: supp rotation} shows the spectral flow and eigenfunctions as we rotate $\varphi=0$ to $\varphi=\pi$ counterclockwisely. The two MZM cycle through the three vertices as $\varphi$ increases from 0 to $\pi/3$ in a similar manner as that in Fig.~4 of the main text.
 
 \section{Braiding MZM in a small network of triangles}
 
@@ -151,14 +150,14 @@ The left and right triangles initialize a constant vector potential with $\varph
 Slowly rotating the middle triangle chains vector potential to $\varphi=\dfrac{\pi}{3}$ we see the the middle MFs swap which MF pair they are connected to.
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/spectral-flow-braiding.pdf}} \\
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-Braid-0.pdf}}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-Braid-1.pdf}} \\
-  \vspace{-40pt}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-Braid-2.pdf}}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-Braid-3.pdf}} \\
-  \vspace{-40pt}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-Braid-4.pdf}}
+  \hspace{-30pt}
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{./figures/supp/spectral-flow-braiding.pdf}} \\
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_5236.pdf}}
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_6283.pdf}} \\
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_7330.pdf}}
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_8378.pdf}} \\
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_9425.pdf}}
+  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-1_0472.pdf}}
   \caption{(a) Spectral flow of three triangular chains connected at their bottom certices in a row with $W=1$, $L=50$, and $\mu=1.6$. Each triangle has a vector potential field applied as $\mathbf A = A(\sin\varphi \hat{x} + \cos\varphi \hat{y})$, with $A=2.6$. The left and right trianlges have $\varphi=0$, while the middle triangle rotates $\varphi = \dfrac{\pi}{6}$ to $\varphi = \dfrac{\pi}{3}$. (b)-(f) BdG eigenfunction $|\Psi|^2$ summed over the four zero modes over the rotation of the middle triangles $\varphi$. }
 \end{figure}
 
