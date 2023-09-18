@@ -1,0 +1,63 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+%Version for spanish users, by dgarhdez
+
+\documentclass[11pt,letterpaper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\usepackage[spanish,es-lcroman]{babel}
+
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+%\moderncvcolor{green}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\begin{document}
+Dr. Jerry I. Dadap
+
+Associate Editor
+
+Physical Review B
+
+%\opening{Dear Dr. Dadap,}
+%\closing{Best regards,}
+%\enclosure[Adjunto]{CV}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Dear Dr. Dadap
+
+We would like to submit the attached manuscript entitled ``Superconducting triangular islands as a platform for manipulating Majorana zero modes” for consideration of publication as a Letter in Physical Review B.
+
+Topological quantum computation based on Majorana zero modes (MZM) has been actively pursued in the past decade. Aside from well-recognized challenges in unambiguously identifying MZM in existing effective one-dimensional $p$-wave superconductors, the next step of demonstrating braiding of MZM is even more formidable. The most prevalent proposal on realizing braiding operation is based on networks of effective $p$-wave superconductor wires subject to many tiny electric gates that are distributed along the wires and can be sequentially turned on or off, so that the MZM can be adiabatically moved across different parts of the network. It is then a natural question to ask if there exists an alternative, possibly more practical architecture for braiding MZM, that may even be more friendly to near-term MZM systems.
+
+Motivated by this question, as well as the recent experimental breakthrough on demonstrating MZM in a minimal Kitaev chain consisting of only two quantum dots [Dvir et al., Nature 614, 445 (2023)], we propose in this work a couple of new structures for braiding MZM based on triangular superconducting islands that can either be constructed in a bottom-up manner as a minimal extension of the two-site Kitaev chain, or appear naturally in epitaxial growth of ultrathin films. For the former case, we have shown that a minimal 3-site ``Kitaev triangle" can host MZM at different pairs of vertices that can be controlled by a non-uniform vector potential. We have demonstrated braiding two MZM in this minimal model by explicitly calculating the many-body Berry phase. For the latter case, we have extended the 3-site Kitaev triangle to a finite-size triangular island with a hollow interior. We have shown that using a uniform vector potential, one can induce a pair of MZM at different pairs of vertices of the triangle. Moreover, rotating the uniform vector potential can change the positions of the MZM without closing the bulk band gap, i.e., adiabatically. Finally we have given a scalable design, backed by numerical calculations, for braiding two out of four MZM that corresponds to nontrivial logical gate operations, in a network of corner-sharing hollow triangles. 
+
+We believe our work is both timely and can lead to long-term impact, as it provides a novel platform in parallel with the coupled-wire network design for braiding MZM, and is practical especially considering near-term MZM devices. We are confident that you and the readers of Physical Review B will find our work exciting and convincing similar to many other excellent Letters already published on this topic therein. We appreciate your consideration of our work and look forward to hearing from you soon.
+
+Best regards,
+
+Aidan Winblad and Hua Chen
+
+p.s. We would like to suggest that Andrei Bernevig at Princeton University, Jian Li at Westlake University, Barry Bradlyn at University of Illinois at Urbana-Champaign, Stevan Nadj-Perge at Caltech, and Ken Shih at the University of Texas at Austin are well positioned to serve as potential referees of this paper. 
+
+%\vspace{0.5cm}
+
+
+%\makeletterclosing
+\end{document}
+
+
+%% end of file `template.tex'.
