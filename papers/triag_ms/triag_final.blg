@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: triag_final.aux
+The style file: apsrev4-2.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: triag_finalNotes.bib
+Database file #2: triag_cite.bib
+control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (0) allowed
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--empty author in supp
+Warning--empty year in supp
+You've used 61 entries,
+            6079 wiz_defined-function locations,
+            2103 strings with 33397 characters,
+and the built_in function-call counts, 79282 in all, are:
+= -- 5047
+> -- 2563
+< -- 482
++ -- 759
+- -- 650
+* -- 12973
+:= -- 7001
+add.period$ -- 59
+call.type$ -- 61
+change.case$ -- 294
+chr.to.int$ -- 70
+cite$ -- 65
+duplicate$ -- 7129
+empty$ -- 5553
+format.name$ -- 1453
+if$ -- 16316
+int.to.chr$ -- 2
+int.to.str$ -- 68
+missing$ -- 1099
+newline$ -- 229
+num.names$ -- 175
+pop$ -- 2600
+preamble$ -- 1
+purify$ -- 294
+quote$ -- 0
+skip$ -- 3276
+stack$ -- 0
+substring$ -- 1698
+swap$ -- 7289
+text.length$ -- 318
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 978
+warning$ -- 3
+while$ -- 187
+width$ -- 0
+write$ -- 580
+(There were 3 warnings)
