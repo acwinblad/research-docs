@@ -1,5 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Full trianglular island with length $L=25$ with a staggered vector potential described by Eq. \ref {eq:Heaviside-vector-potential}\relax }}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces (a) Evolution of the eigenvalues of the 3-site Kitaev triangle along the closed parameter path for $\phi $ on the three edges. (b) MZM wavefunctions at different points of the parameter path. Clockwise from the upper left panel: $\bm {\phi }_1 \rightarrow \frac {1}{2}(\bm {\phi }_1 + \bm {\phi }_2)\rightarrow \bm {\phi }_2\rightarrow \bm {\phi }_3$.\relax }}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.\nobreakspace {}\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:Hribbon}\unskip \@@italiccorr )}} obtained by superimposing the $\mathcal {M}(A, \mu )$ plots of 1D chains with $\mathbf A = A\hat {\mathbf {y}}$ and $\mathbf A = A(\frac {\sqrt {3}}{2}\hat {\mathbf {x}}+\frac {1}{2}\hat {\mathbf {y}})$. Color scheme: white---$\mathcal {M}=1$, dark blue---$\mathcal {M}=-1$, light blue---$\mathcal {M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu =1.6$.\relax }}{14}{figure.caption.9}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{14}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{14}{subfigure.3.2}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu =1.6$, and $A=2.75$ with increasing rotation angle $\varphi $, defined through $\mathbf A = A(-\sin \varphi \hat {\mathbf {x}} + \cos \varphi \hat {\mathbf {y}})$. (b-d) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $\varphi = 0, \frac {\pi }{6}$, and $\frac {\pi }{3}$, respectively.\relax }}{15}{figure.caption.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{15}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{15}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{15}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{15}{subfigure.4.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -17,6 +17,10 @@
 \usepackage{booktabs}
 \usepackage[pagetoc,toc,titletoc,title]{appendix}
 \usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[caption=false,position=top,captionskip=0pt,farskip=0pt]{subfig}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
 
 % for specifying urls and links
 \usepackage{url}
@@ -58,7 +62,7 @@
 \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
 % stretches the vertical spacing of arrays/matrices
-\renewcommand{\arraystretch}{2}
+\renewcommand{\arraystretch}{1}
 \setlength{\jot}{10pt}
 
 \newcommand{\ham}{\mathcal{H}}
@@ -72,7 +76,7 @@
 \newcommand{\cc}{c^{\dagger}}
 \newcommand{\de}{\Delta}
 
-\graphicspath{ {./figures/} }
+\graphicspath{ {./figures} }
 \title{Emergent Topological Phenomena in Low-D Systems Induced by Gauge Potentials}
 \author{Aidan Winblad}
 % department name
@@ -167,9 +171,11 @@ STUFF
   \item \Blue{Model, results (uniform and non-uniform)}
   \item \Blue{Discussion, future}
 \end{enumerate}
-
-\input{./chapters/chapter-2/kitaev-triangle-peierls-sub.tex}
-\input{./chapters/chapter-2/hollow-kitaev-triangle.tex}
+\input{./ch-02/chapter-02.tex}
+%\input{./ch-02/kitaev-triangle-peierls-sub.tex}
+%\input{./ch-02/full-kitaev-triangle.tex}
+%\input{./ch-02/minimal-kitaev-triangle.tex}
+%\input{./ch-02/hollow-kitaev-triangle.tex}
 
 \chapter{Floquet Landau Levels}
 
@@ -199,6 +205,8 @@ STUFF
   \item \Blue{Other derivations not included in introduction}
 \end{enumerate}
 \end{appendices}
+
+\addbibresource{./ch-02/chapter-02-cite}
 
 \end{document}
 

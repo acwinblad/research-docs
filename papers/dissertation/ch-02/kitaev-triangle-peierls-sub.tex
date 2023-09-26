@@ -8,7 +8,7 @@ We start with a spinless or spin-polarized \textit{p}-wave superconductor
 where $t$ is the hopping amplitude, $\de$  is the amplitude of (2D) \textit{p}-wave pairing, $\mu$ is the chemical potential, $\theta_{jl}$ is the polar angle of $\vec{r}_{jl} = \vec{r}_l - \vec{r}_j$, consistent with $\{\cc_l, \cc_j\} = 0$.
 
 We will now include a gauge potential via a Peierls substitution as
-\begin{align}\label{eq:Peierls-phase}
+\begin{align}\label{eq:HBdG}
   \cc_j &\rightarrow \cc_j \exp(-\dfrac{i e}{\hbar} \int_0^{\vec{r}_j} \vec{A} \cdot d\vec{l}), \nonumber \\
   \cc_j c_l &\rightarrow \cc_j c_l \exp(\dfrac{i e}{\hbar} \int_{\vec{r}_j}^{\vec{r}_l} \vec{A} \cdot d\vec{l}) \nonumber \\
   &\rightarrow \cc_l c_j e^{i \phi_{j,l}}. \nonumber \\
@@ -81,7 +81,7 @@ Which is derived in the following subsection
 
 First, naively consider a constant vector potential field.
 For sites 1--2 we want the field to be perpendicular to their axis this tells usto start with $\vec{A} = A\hat{y}$.
-From Eq. \ref{eq:Peierls-phase}, set $e=\hbar=1$ and the path integral for $\phi_{13}$ becomes
+From Eq. \ref{eq:HBdG}, set $e=\hbar=1$ and the path integral for $\phi_{13}$ becomes
 \begin{align}
   \phi_{13} &= \int_{\vec{r_1}}^{\vec{r_3}} \vec{A} \cdot d\vec{l} \nonumber \\
   &= A \int_{y_1}^{y_3} \hat{y} \cdot d\vec{l} \nonumber \\
@@ -168,6 +168,6 @@ Now, the difference of the squares is
 \end{equation}
 Plugging back into our expression we find
 \begin{equation}
-  \dfrac{8 \pi}{3 \sqrt{3} a^2 (2 \texttt{nr}- 3)}.
+  -\dfrac{8 \pi}{3 \sqrt{3} a^2 (2 \texttt{nr}- 3)}.
 \end{equation}
 This is expression is easy to implement in code.
