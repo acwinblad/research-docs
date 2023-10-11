@@ -5,19 +5,21 @@
 \usepackage{amsthm,amsbsy}
 \usepackage{physics}
 \usepackage{graphicx}
+\usepackage{tikz}
 %\usepackage{fancyhdr}
 %\usepackage{setspace}
 \usepackage{enumerate}
 %\setlength{\headheight}{15pt}
 \usepackage[T1]{fontenc} % important for having seachable underscores
 \usepackage{bm}
-\usepackage[sort&compress,numbers]{natbib}
+%\usepackage[sort&compress,numbers]{natbib}
 \usepackage{color}
 %\setlength{\parskip}{2.54mm}
 \usepackage{booktabs}
 \usepackage[pagetoc,toc,titletoc,title]{appendix}
 \usepackage{tocloft}
 \usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarks=true,bookmarksopen=false}
 \usepackage{cleveref}
 \usepackage[caption=false,position=top,captionskip=0pt,farskip=0pt]{subfig}
 \captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
@@ -133,7 +135,7 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 \listoffigures      % insert list of figures (optional)
 
 \mainmatter % starts thesis body
-
+\bibliographystyle{unsrt}
 
 \chapter{Introduction}
 \Blue{EM gauge potential appears in electronic Hamiltonian in CM}
@@ -157,25 +159,13 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
   \end{enumerate}
 \end{enumerate}
 
-STUFF
 \chapter{Superconducting Triangular Islands as a Platform for Manipulating Majorana Zero Modes}
 
-\begin{enumerate}
-  \item \Blue{Introduction}
-  \item \Blue{Formalism}
-  \begin{enumerate}[i]
-    \item \Blue{BdG --- decide how much detail on derivation}
-    \item \Blue{Majorana Number}
-    \item \Blue{Many-Body Berry Phase}
-  \end{enumerate}
-  \item \Blue{Model, results (uniform and non-uniform)}
-  \item \Blue{Discussion, future}
-\end{enumerate}
-\input{./ch-02/chapter-02.tex}
-%\input{./ch-02/kitaev-triangle-peierls-sub.tex}
-%\input{./ch-02/full-kitaev-triangle.tex}
-%\input{./ch-02/minimal-kitaev-triangle.tex}
-%\input{./ch-02/hollow-kitaev-triangle.tex}
+\input{./ch-02/introduction.tex}
+\input{./ch-02/kitaev-triangle.tex}
+\input{./ch-02/hollow-triangle.tex}
+\input{./ch-02/hollow-triangle-additional-results.tex}
+\input{./ch-02/discussion.tex}
 
 \chapter{Floquet Landau Levels}
 
@@ -206,7 +196,7 @@ STUFF
 \end{enumerate}
 \end{appendices}
 
-\addbibresource{./ch-02/chapter-02-cite}
+\bibliography{triag_cite}
 
 \end{document}
 
