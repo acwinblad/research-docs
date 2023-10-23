@@ -29,7 +29,7 @@ Which is derived in the following subsection
 
 First, naively consider a constant vector potential field.
 For sites 1--2 we want the field to be perpendicular to their axis this tells usto start with $\vec{A} = A\hat{y}$.
-From Eq. \ref{eq:HBdG}, set $e=\hbar=1$ and the path integral for $\phi_{13}$ becomes
+From Eq. \ref{eq:HBdG}, set $e=\hbar=1$ and the line integral for $\phi_{13}$ becomes
 \begin{align}
   \phi_{13} &= \int_{\vec{r_1}}^{\vec{r_3}} \vec{A} \cdot d\vec{l} \nonumber \\
   &= A \int_{y_1}^{y_3} \hat{y} \cdot d\vec{l} \nonumber \\
@@ -90,7 +90,7 @@ In general, this should be true for any odd function used
 For a staggered vector potential such as a Heaviside or Tanh function we do not need to adjust the vector potential strength relative to its size.
 When considering larger Kitaev triangles we need to adjust the vector potential strength for linear and higher order vector potentials.
 Start with the botton left corner point, $x_j$, and look at its nearest neighbor along $\theta=\pi/3$, we denote this point with position $x_l$.
-If we look back at the path integral of a linear function we have the general form of
+If we look back at the line integral of a linear function we have the general form of
 \begin{align}
   \phi_{jl} &= A \int_{x_j}^{x_l} \dfrac{dy}{dx} x dx \nonumber \\
   &= \dfrac{\sqrt{3} A}{2} (x_l^2 - x_j^2) = \pi/3. \nonumber

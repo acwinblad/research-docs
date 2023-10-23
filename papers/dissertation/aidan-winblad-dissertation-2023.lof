@@ -30,7 +30,29 @@
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{14}{subfigure.7.5}%
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{14}{subfigure.7.6}%
 \contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{14}{subfigure.7.7}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Representative steps for braiding four MZM in four triangles sharing corners. (a) Initialization of four MZM $\gamma _1, \gamma _2, \gamma _3, \gamma _4$. All three edges of the bottom-middle and the top triangles are in the trivial phase by e.g. controlling the chemical potential. The bottom-left and bottom-right triangles have $\varphi = 0$ so that their bottom edges are nontrivial. (b) Moving $\gamma _3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential at $\varphi =\frac {\pi }{6}$, and then turning on the top triangle with similar means except $\varphi = 0$. (c) Transporting $\gamma _2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi /6$. (d) Moving $\gamma _3$ to the left triangle by ``switching off" the top triangle followed by the middle triangle.\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] \hat {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{15}{figure.caption.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{15}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{15}{subfigure.8.2}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x/2w)\hat {\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{16}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{subfigure.9.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{16}{subfigure.9.2}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] \hat {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{17}{figure.caption.15}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.10.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.10.2}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x / 2w)\hat {\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{17}{figure.caption.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.11.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.11.2}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =0$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax\hat {\mathbf {y}}$ (a) $W=1$ and (b) $W=3$ (c-d) Wavefunctions of the MZM at $A=0.0499$ for both widths, respectively.\relax }}{18}{figure.caption.17}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{subfigure.12.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{subfigure.12.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{18}{subfigure.12.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{18}{subfigure.12.4}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =1.6$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax\hat {\mathbf {y}}$ (a) $W=1$ and (b) $W=3$. (c-d) Wavefunctions of the MZM at $A=0.0598$ for both widths, respectively.\relax }}{19}{figure.caption.18}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{subfigure.13.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{subfigure.13.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{19}{subfigure.13.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{19}{subfigure.13.4}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Representative steps for braiding four MZM in four triangles sharing corners. (a) Initialization of four MZM $\gamma _1, \gamma _2, \gamma _3, \gamma _4$. All three edges of the bottom-middle and the top triangles are in the trivial phase by e.g. controlling the chemical potential. The bottom-left and bottom-right triangles have $\varphi = 0$ so that their bottom edges are nontrivial. (b) Moving $\gamma _3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential at $\varphi =\frac {\pi }{6}$, and then turning on the top triangle with similar means except $\varphi = 0$. (c) Transporting $\gamma _2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi /6$. (d) Moving $\gamma _3$ to the left triangle by ``switching off" the top triangle followed by the middle triangle.\relax }}{20}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
