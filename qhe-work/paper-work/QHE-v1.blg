@@ -1,5 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'QHE-v1.blg'
-[74] biber:340> INFO - === Mon Jul 25, 2022, 10:48:14
-[191] Utils.pm:398> ERROR - Cannot find 'QHE-v1.bcf'!
-[191] Biber.pm:135> INFO - ERRORS: 1
