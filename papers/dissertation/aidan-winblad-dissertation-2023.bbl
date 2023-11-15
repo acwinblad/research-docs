@@ -1,3 +1,593 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{ivanovNonAbelianStatisticsHalfQuantum2001}
+D.~A. Ivanov.
+\newblock Non-{{Abelian Statistics}} of {{Half-Quantum Vortices}} in p -{{Wave
+  Superconductors}}.
+\newblock {\em Phys. Rev. Lett.}, 86(2):268--271, January 2001.
+
+\bibitem{kitaevFaulttolerantQuantumComputation2003}
+A.~{\relax Yu}. Kitaev.
+\newblock Fault-tolerant quantum computation by anyons.
+\newblock {\em Annals of Physics}, 303(1):2--30, January 2003.
+
+\bibitem{nayakNonAbelianAnyonsTopological2008}
+Chetan Nayak, Steven~H. Simon, Ady Stern, Michael Freedman, and Sankar
+  Das~Sarma.
+\newblock Non-{{Abelian}} anyons and topological quantum computation.
+\newblock {\em Rev. Mod. Phys.}, 80(3):1083--1159, September 2008.
+
+\bibitem{aliceaNonAbelianStatisticsTopological2011}
+Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
+  Fisher.
+\newblock Non-{{Abelian}} statistics and topological quantum information
+  processing in {{1D}} wire networks.
+\newblock {\em Nature Phys}, 7(5):412--417, May 2011.
+
+\bibitem{aasenMilestonesMajoranaBasedQuantum2016}
+David Aasen, Michael Hell, Ryan~V. Mishmash, Andrew Higginbotham, Jeroen Danon,
+  Martin Leijnse, Thomas~S. Jespersen, Joshua~A. Folk, Charles~M. Marcus,
+  Karsten Flensberg, and Jason Alicea.
+\newblock Milestones {{Toward Majorana-Based Quantum Computing}}.
+\newblock {\em Phys. Rev. X}, 6(3):031016, August 2016.
+
+\bibitem{readPairedStatesFermions2000}
+N.~Read and Dmitry Green.
+\newblock Paired states of fermions in two dimensions with breaking of parity
+  and time-reversal symmetries and the fractional quantum {{Hall}} effect.
+\newblock {\em Phys. Rev. B}, 61(15):10267--10297, April 2000.
+
+\bibitem{kitaevUnpairedMajoranaFermions2001}
+A.~Yu Kitaev.
+\newblock Unpaired {{Majorana}} fermions in quantum wires.
+\newblock {\em Phys.-Usp.}, 44(10S):131, October 2001.
+
+\bibitem{brisonPWaveSuperconductivityDVector2021}
+Jean-Pascal Brison.
+\newblock P-{{Wave Superconductivity}} and d-{{Vector Representation}}.
+\newblock In Herv{\'e} Bulou, Lo{\"i}c Joly, Jean-Michel Mariot, and Fabrice
+  Scheurer, editors, {\em Magnetism and {{Accelerator-Based Light Sources}}},
+  Springer {{Proceedings}} in {{Physics}}, pages 165--204, {Cham}, 2021.
+  {Springer International Publishing}.
+
+\bibitem{mourikSignaturesMajoranaFermions2012}
+V.~Mourik, K.~Zuo, S.~M. Frolov, S.~R. Plissard, E.~P. A.~M. Bakkers, and L.~P.
+  Kouwenhoven.
+\newblock Signatures of {{Majorana Fermions}} in {{Hybrid
+  Superconductor-Semiconductor Nanowire Devices}}.
+\newblock {\em Science}, 336(6084):1003--1007, May 2012.
+
+\bibitem{rokhinsonFractionalJosephsonEffect2012}
+Leonid~P. Rokhinson, Xinyu Liu, and Jacek~K. Furdyna.
+\newblock The fractional a.c. {{Josephson}} effect in a
+  semiconductor\textendash superconductor nanowire as a signature of
+  {{Majorana}} particles.
+\newblock {\em Nature Phys}, 8(11):795--799, November 2012.
+
+\bibitem{dengAnomalousZeroBiasConductance2012}
+M.~T. Deng, C.~L. Yu, G.~Y. Huang, M.~Larsson, P.~Caroff, and H.~Q. Xu.
+\newblock Anomalous {{Zero-Bias Conductance Peak}} in a {{Nb}}\textendash{{InSb
+  Nanowire}}\textendash{{Nb Hybrid Device}}.
+\newblock {\em Nano Lett.}, 12(12):6414--6419, December 2012.
+
+\bibitem{choyMajoranaFermionsEmerging2011}
+T.-P. Choy, J.~M. Edge, A.~R. Akhmerov, and C.~W.~J. Beenakker.
+\newblock Majorana fermions emerging from magnetic nanoparticles on a
+  superconductor without spin-orbit coupling.
+\newblock {\em Phys. Rev. B}, 84(19):195442, November 2011.
+
+\bibitem{brauneckerInterplayClassicalMagnetic2013}
+Bernd Braunecker and Pascal Simon.
+\newblock Interplay between {{Classical Magnetic Moments}} and
+  {{Superconductivity}} in {{Quantum One-Dimensional Conductors}}: {{Toward}} a
+  {{Self-Sustained Topological Majorana Phase}}.
+\newblock {\em Phys. Rev. Lett.}, 111(14):147202, October 2013.
+
+\bibitem{klinovajaTopologicalSuperconductivityMajorana2013}
+Jelena Klinovaja, Peter Stano, Ali Yazdani, and Daniel Loss.
+\newblock Topological {{Superconductivity}} and {{Majorana Fermions}} in {{RKKY
+  Systems}}.
+\newblock {\em Phys. Rev. Lett.}, 111(18):186805, November 2013.
+
+\bibitem{nadj-pergeProposalRealizingMajorana2013}
+S.~{Nadj-Perge}, I.~K. Drozdov, B.~A. Bernevig, and Ali Yazdani.
+\newblock Proposal for realizing {{Majorana}} fermions in chains of magnetic
+  atoms on a superconductor.
+\newblock {\em Phys. Rev. B}, 88(2):020407, July 2013.
+
+\bibitem{nadj-pergeObservationMajoranaFermions2014}
+Stevan {Nadj-Perge}, Ilya~K. Drozdov, Jian Li, Hua Chen, Sangjun Jeon, Jungpil
+  Seo, Allan~H. MacDonald, B.~Andrei Bernevig, and Ali Yazdani.
+\newblock Observation of {{Majorana}} fermions in ferromagnetic atomic chains
+  on a superconductor.
+\newblock {\em Science}, 346(6209):602--607, October 2014.
+
+\bibitem{schneiderPrecursorsMajoranaModes2022}
+Lucas Schneider, Philip Beck, Jannis {Neuhaus-Steinmetz}, Levente R{\'o}zsa,
+  Thore Posske, Jens Wiebe, and Roland Wiesendanger.
+\newblock Precursors of {{Majorana}} modes and their length-dependent energy
+  oscillations probed at both ends of atomic {{Shiba}} chains.
+\newblock {\em Nat. Nanotechnol.}, 17(4):384--389, April 2022.
+
+\bibitem{fuSuperconductingProximityEffect2008}
+Liang Fu and C.~L. Kane.
+\newblock Superconducting proximity effect and {{Majorana}} fermions at the
+  surface of a topological insulator.
+\newblock {\em Phys. Rev. Lett.}, 100(9):096407, March 2008.
+
+\bibitem{hosurMajoranaModesEnds2011}
+Pavan Hosur, Pouyan Ghaemi, Roger S.~K. Mong, and Ashvin Vishwanath.
+\newblock Majorana {{Modes}} at the {{Ends}} of {{Superconductor Vortices}} in
+  {{Doped Topological Insulators}}.
+\newblock {\em Phys. Rev. Lett.}, 107(9):097001, August 2011.
+
+\bibitem{potterEngineeringMathitipSuperconductor2011}
+Andrew~C. Potter and Patrick~A. Lee.
+\newblock Engineering a \$p+\textbackslash mathit\{ip\}\$ superconductor:
+  {{Comparison}} of topological insulator and {{Rashba}} spin-orbit-coupled
+  materials.
+\newblock {\em Phys. Rev. B}, 83(18):184520, May 2011.
+
+\bibitem{veldhorstMagnetotransportInducedSuperconductivity2013}
+M.~Veldhorst, M.~Snelder, M.~Hoek, C.~G. Molenaar, D.~P. Leusink, A.~A.
+  Golubov, H.~Hilgenkamp, and A.~Brinkman.
+\newblock Magnetotransport and induced superconductivity in {{Bi}} based
+  three-dimensional topological insulators.
+\newblock {\em physica status solidi (RRL) \textendash{} Rapid Research
+  Letters}, 7(1-2):26--38, 2013.
+
+\bibitem{chenQuasionedimensionalQuantumAnomalous2018}
+Chui-Zhen Chen, Ying-Ming Xie, Jie Liu, Patrick~A. Lee, and K.~T. Law.
+\newblock Quasi-one-dimensional quantum anomalous {{Hall}} systems as new
+  platforms for scalable topological quantum computation.
+\newblock {\em Phys. Rev. B}, 97(10):104504, March 2018.
+
+\bibitem{zengQuantumAnomalousHall2018}
+Yongxin Zeng, Chao Lei, Gaurav Chaudhary, and Allan~H. MacDonald.
+\newblock Quantum anomalous {{Hall Majorana}} platform.
+\newblock {\em Phys. Rev. B}, 97(8):081102, February 2018.
+
+\bibitem{xieCreatingLocalizedMajorana2021}
+Ying-Ming Xie, Xue-Jian Gao, Tai-Kai Ng, and K.~T. Law.
+\newblock Creating {{Localized Majorana Zero Modes}} in {{Quantum Anomalous
+  Hall Insulator}}/{{Superconductor Heterostructures}} with a {{Scissor}}, June
+  2021.
+
+\bibitem{oregHelicalLiquidsMajorana2010}
+Yuval Oreg, Gil Refael, and Felix {von Oppen}.
+\newblock Helical {{Liquids}} and {{Majorana Bound States}} in {{Quantum
+  Wires}}.
+\newblock {\em Phys. Rev. Lett.}, 105(17):177002, October 2010.
+
+\bibitem{sauGenericNewPlatform2010}
+Jay~D. Sau, Roman~M. Lutchyn, Sumanta Tewari, and S.~Das~Sarma.
+\newblock Generic {{New Platform}} for {{Topological Quantum Computation Using
+  Semiconductor Heterostructures}}.
+\newblock {\em Phys. Rev. Lett.}, 104(4):040502, January 2010.
+
+\bibitem{lutchynSearchMajoranaFermions2011}
+Roman~M. Lutchyn, Tudor~D. Stanescu, and S.~Das~Sarma.
+\newblock Search for {{Majorana Fermions}} in {{Multiband Semiconducting
+  Nanowires}}.
+\newblock {\em Phys. Rev. Lett.}, 106(12):127001, March 2011.
+
+\bibitem{potterTopologicalSuperconductivityMajorana2012}
+Andrew~C. Potter and Patrick~A. Lee.
+\newblock Topological superconductivity and {{Majorana}} fermions in metallic
+  surface states.
+\newblock {\em Phys. Rev. B}, 85(9):094516, March 2012.
+
+\bibitem{liTwodimensionalChiralTopological2016}
+Jian Li, Titus Neupert, Zhijun Wang, A.~H. MacDonald, A.~Yazdani, and B.~Andrei
+  Bernevig.
+\newblock Two-dimensional chiral topological superconductivity in {{Shiba}}
+  lattices.
+\newblock {\em Nat Commun}, 7(1):12297, July 2016.
+
+\bibitem{leiUltrathinFilmsSuperconducting2018}
+Chao Lei, Hua Chen, and Allan~H. MacDonald.
+\newblock Ultrathin {{Films}} of {{Superconducting Metals}} as a {{Platform}}
+  for {{Topological Superconductivity}}.
+\newblock {\em Phys. Rev. Lett.}, 121(22):227701, November 2018.
+
+\bibitem{black-schafferMajoranaFermionsSpinorbitcoupled2011}
+Annica~M. {Black-Schaffer} and Jacob Linder.
+\newblock Majorana fermions in spin-orbit-coupled ferromagnetic {{Josephson}}
+  junctions.
+\newblock {\em Phys. Rev. B}, 84(18):180509, November 2011.
+
+\bibitem{pientkaSignaturesTopologicalPhase2013}
+Falko Pientka, Alessandro Romito, Mathias Duckheim, Yuval Oreg, and Felix von
+  Oppen.
+\newblock Signatures of topological phase transitions in mesoscopic
+  superconducting rings.
+\newblock {\em New J. Phys.}, 15(2):025001, February 2013.
+
+\bibitem{hellTwoDimensionalPlatformNetworks2017}
+Michael Hell, Martin Leijnse, and Karsten Flensberg.
+\newblock Two-{{Dimensional Platform}} for {{Networks}} of {{Majorana Bound
+  States}}.
+\newblock {\em Phys. Rev. Lett.}, 118(10):107701, March 2017.
+
+\bibitem{fornieriEvidenceTopologicalSuperconductivity2019}
+Antonio Fornieri, Alexander~M. Whiticar, F.~Setiawan, El{\'i}as Portol{\'e}s,
+  Asbj{\o}rn C.~C. Drachmann, Anna Keselman, Sergei Gronin, Candice Thomas,
+  Tian Wang, Ray Kallaher, Geoffrey~C. Gardner, Erez Berg, Michael~J. Manfra,
+  Ady Stern, Charles~M. Marcus, and Fabrizio Nichele.
+\newblock Evidence of topological superconductivity in planar {{Josephson}}
+  junctions.
+\newblock {\em Nature}, 569(7754):89--92, May 2019.
+
+\bibitem{renTopologicalSuperconductivityPhasecontrolled2019}
+Hechen Ren, Falko Pientka, Sean Hart, Andrew~T. Pierce, Michael Kosowsky, Lukas
+  Lunczer, Raimund Schlereth, Benedikt Scharf, Ewelina~M. Hankiewicz,
+  Laurens~W. Molenkamp, Bertrand~I. Halperin, and Amir Yacoby.
+\newblock Topological superconductivity in a phase-controlled {{Josephson}}
+  junction.
+\newblock {\em Nature}, 569(7754):93--98, May 2019.
+
+\bibitem{scharfTuningTopologicalSuperconductivity2019}
+Benedikt Scharf, Falko Pientka, Hechen Ren, Amir Yacoby, and Ewelina~M.
+  Hankiewicz.
+\newblock Tuning topological superconductivity in phase-controlled
+  {{Josephson}} junctions with {{Rashba}} and {{Dresselhaus}} spin-orbit
+  coupling.
+\newblock {\em Phys. Rev. B}, 99(21):214503, June 2019.
+
+\bibitem{zhouPhaseControlMajorana2020}
+Tong Zhou, Matthieu~C. Dartiailh, William Mayer, Jong~E. Han, Alex
+  {Matos-Abiague}, Javad Shabani, and Igor {\v Z}uti{\'c}.
+\newblock Phase {{Control}} of {{Majorana Bound States}} in a {{Topological}}
+  \$\textbackslash mathsf\{\vphantom\}{{X}}\vphantom\{\}\$ {{Junction}}.
+\newblock {\em Phys. Rev. Lett.}, 124(13):137001, April 2020.
+
+\bibitem{xuExperimentalDetectionMajorana2015}
+Jin-Peng Xu, Mei-Xiao Wang, Zhi~Long Liu, Jian-Feng Ge, Xiaojun Yang, Canhua
+  Liu, Zhu~An Xu, Dandan Guan, Chun~Lei Gao, Dong Qian, Ying Liu, Qiang-Hua
+  Wang, Fu-Chun Zhang, Qi-Kun Xue, and Jin-Feng Jia.
+\newblock Experimental {{Detection}} of a {{Majorana Mode}} in the core of a
+  {{Magnetic Vortex}} inside a {{Topological Insulator-Superconductor Bi}} 2
+  {{Te}} 3 / {{NbSe}} 2 {{Heterostructure}}.
+\newblock {\em Phys. Rev. Lett.}, 114(1):017001, January 2015.
+
+\bibitem{albrechtExponentialProtectionZero2016}
+S.~M. Albrecht, A.~P. Higginbotham, M.~Madsen, F.~Kuemmeth, T.~S. Jespersen,
+  J.~Nyg{\aa}rd, P.~Krogstrup, and C.~M. Marcus.
+\newblock Exponential protection of zero modes in {{Majorana}} islands.
+\newblock {\em Nature}, 531(7593):206--209, March 2016.
+
+\bibitem{sunMajoranaZeroMode2016}
+Hao-Hua Sun, Kai-Wen Zhang, Lun-Hui Hu, Chuang Li, Guan-Yong Wang, Hai-Yang Ma,
+  Zhu-An Xu, Chun-Lei Gao, Dan-Dan Guan, Yao-Yi Li, Canhua Liu, Dong Qian,
+  Yi~Zhou, Liang Fu, Shao-Chun Li, Fu-Chun Zhang, and Jin-Feng Jia.
+\newblock Majorana {{Zero Mode Detected}} with {{Spin Selective Andreev
+  Reflection}} in the {{Vortex}} of a {{Topological Superconductor}}.
+\newblock {\em Phys. Rev. Lett.}, 116(25):257003, June 2016.
+
+\bibitem{wangEvidenceMajoranaBound2018}
+Dongfei Wang, Lingyuan Kong, Peng Fan, Hui Chen, Shiyu Zhu, Wenyao Liu, Lu~Cao,
+  Yujie Sun, Shixuan Du, John Schneeloch, Ruidan Zhong, Genda Gu, Liang Fu,
+  Hong Ding, and Hong-Jun Gao.
+\newblock Evidence for {{Majorana}} bound states in an iron-based
+  superconductor.
+\newblock {\em Science}, 362(6412):333--335, October 2018.
+
+\bibitem{jackObservationMajoranaZero2019}
+Berthold J{\"a}ck, Yonglong Xie, Jian Li, Sangjun Jeon, B.~Andrei Bernevig, and
+  Ali Yazdani.
+\newblock Observation of a {{Majorana}} zero mode in a topologically protected
+  edge channel.
+\newblock {\em Science}, 364(6447):1255--1259, June 2019.
+
+\bibitem{mannaSignaturePairMajorana2020}
+Sujit Manna, Peng Wei, Yingming Xie, Kam~Tuen Law, Patrick~A. Lee, and
+  Jagadeesh~S. Moodera.
+\newblock Signature of a pair of {{Majorana}} zero modes in superconducting
+  gold surface states.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  117(16):8775--8782, April 2020.
+
+\bibitem{fatinWirelessMajoranaBound2016}
+Geoffrey~L. Fatin, Alex {Matos-Abiague}, Benedikt Scharf, and Igor {\v
+  Z}uti{\'c}.
+\newblock Wireless {{Majorana Bound States}}: {{From Magnetic Tunability}} to
+  {{Braiding}}.
+\newblock {\em Phys. Rev. Lett.}, 117(7):077002, August 2016.
+
+\bibitem{sauRealizingRobustPractical2012}
+Jay~D. Sau and S.~Das Sarma.
+\newblock Realizing a robust practical {{Majorana}} chain in a
+  quantum-dot-superconductor linear array.
+\newblock {\em Nat Commun}, 3(1):964, July 2012.
+
+\bibitem{leijnseParityQubitsPoor2012}
+Martin Leijnse and Karsten Flensberg.
+\newblock Parity qubits and poor man's {{Majorana}} bound states in double
+  quantum dots.
+\newblock {\em Phys. Rev. B}, 86(13):134528, October 2012.
+
+\bibitem{dvirRealizationMinimalKitaev2023}
+Tom Dvir, Guanzhong Wang, Nick {van Loo}, Chun-Xiao Liu, Grzegorz~P. Mazur,
+  Alberto Bordin, Sebastiaan L.~D. {ten Haaf}, Ji-Yin Wang, David {van Driel},
+  Francesco Zatelli, Xiang Li, Filip~K. Malinowski, Sasa Gazibegovic, Ghada
+  Badawy, Erik P. A.~M. Bakkers, Michael Wimmer, and Leo~P. Kouwenhoven.
+\newblock Realization of a minimal {{Kitaev}} chain in coupled quantum dots.
+\newblock {\em Nature}, 614(7948):445--450, February 2023.
+
+\bibitem{karzigScalableDesignsQuasiparticlepoisoningprotected2017}
+Torsten Karzig, Christina Knapp, Roman~M. Lutchyn, Parsa Bonderson, Matthew~B.
+  Hastings, Chetan Nayak, Jason Alicea, Karsten Flensberg, Stephan Plugge,
+  Yuval Oreg, Charles~M. Marcus, and Michael~H. Freedman.
+\newblock Scalable designs for quasiparticle-poisoning-protected topological
+  quantum computation with {{Majorana}} zero modes.
+\newblock {\em Phys. Rev. B}, 95(23):235305, June 2017.
+
+\bibitem{potterMultichannelGeneralizationKitaev2010}
+Andrew~C. Potter and Patrick~A. Lee.
+\newblock Multichannel {{Generalization}} of {{Kitaev}}'s {{Majorana End
+  States}} and a {{Practical Route}} to {{Realize Them}} in {{Thin Films}}.
+\newblock {\em Phys. Rev. Lett.}, 105(22):227003, November 2010.
+
+\bibitem{liManipulatingMajoranaZero2016}
+Jian Li, Titus Neupert, B.~Andrei Bernevig, and Ali Yazdani.
+\newblock Manipulating {{Majorana}} zero modes on atomic rings with an external
+  magnetic field.
+\newblock {\em Nat Commun}, 7(1):10395, January 2016.
+
+\bibitem{pietzschSpinResolvedElectronicStructure2006}
+O.~Pietzsch, S.~Okatov, A.~Kubetzka, M.~Bode, S.~Heinze, A.~Lichtenstein, and
+  R.~Wiesendanger.
+\newblock Spin-{{Resolved Electronic Structure}} of {{Nanoscale Cobalt
+  Islands}} on {{Cu}}(111).
+\newblock {\em Phys. Rev. Lett.}, 96(23):237203, June 2006.
+
+\bibitem{romitoManipulatingMajoranaFermions2012}
+Alessandro Romito, Jason Alicea, Gil Refael, and Felix {von Oppen}.
+\newblock Manipulating {{Majorana}} fermions using supercurrents.
+\newblock {\em Phys. Rev. B}, 85(2):020502, January 2012.
+
+\bibitem{takasanSupercurrentinducedTopologicalPhase2022}
+Kazuaki Takasan, Shuntaro Sumita, and Youichi Yanase.
+\newblock Supercurrent-induced topological phase transitions.
+\newblock {\em Phys. Rev. B}, 106(1):014508, July 2022.
+
+\bibitem{supp}
+{\em {See Supplemental Material at [url]}}.
+
+\bibitem{liTopologicalSuperconductivityInduced2014}
+Jian Li, Hua Chen, Ilya~K. Drozdov, A.~Yazdani, B.~Andrei Bernevig, and A.~H.
+  MacDonald.
+\newblock Topological superconductivity induced by ferromagnetic metal chains.
+\newblock {\em Phys. Rev. B}, 90(23):235433, December 2014.
+
+\bibitem{pahomiBraidingMajoranaCorner2020}
+Tudor~E. Pahomi, Manfred Sigrist, and Alexey~A. Soluyanov.
+\newblock Braiding {{Majorana}} corner modes in a second-order topological
+  superconductor.
+\newblock {\em Phys. Rev. Res.}, 2(3):032068, September 2020.
+
+\bibitem{mishmashDephasingLeakageDynamics2020}
+Ryan~V. Mishmash, Bela Bauer, Felix {von Oppen}, and Jason Alicea.
+\newblock Dephasing and leakage dynamics of noisy {{Majorana-based}} qubits:
+  {{Topological}} versus {{Andreev}}.
+\newblock {\em Phys. Rev. B}, 101(7):075404, February 2020.
+
+\bibitem{parity_QD_readout_2020}
+G\'abor Sz\'echenyi and Andr\'as P\'alyi.
+\newblock Parity-to-charge conversion for readout of topological majorana
+  qubits.
+\newblock {\em Phys. Rev. B}, 101:235441, Jun 2020.
+
+\bibitem{fengProbingRobustMajorana2022}
+Guan-Hao Feng and Hong-Hao Zhang.
+\newblock Probing robust {{Majorana}} signatures by crossed {{Andreev}}
+  reflection with a quantum dot.
+\newblock {\em Phys. Rev. B}, 105(3):035148, January 2022.
+
+\bibitem{QHE1}
+K.~v.~Klitzing, G.~Dorda, and M.~Pepper.
+\newblock New method for high-accuracy determination of the fine-structure
+  constant based on quantized hall resistance.
+\newblock {\em Phys. Rev. Lett.}, 45(6):494--497, August 1980.
+
+\bibitem{QHE2}
+K.~S. Novoselov, A.~K. Geim, S.~V. Morozov, D.~Jiang, M.~I. Katsnelson, I.~V.
+  Grigorieva, Dubonos~S. V., and A.~A. Firsov.
+\newblock Two-dimensional gas of massless {{Dirac}} fermions in graphene.
+\newblock {\em Nature Physics}, 438:197, 2005.
+
+\bibitem{QHE3}
+Yuanbo Zhang, Yan-Wen Tan, Horst~L. Stormer, and Philip Kim.
+\newblock Experimental observation of the quantum {{Hall}} effect and
+  {{Berry}}'s phase in graphene.
+\newblock {\em Nature Physics}, 438:201, 2005.
+
+\bibitem{QHE4}
+A.~H. Castro~Neto, F.~Guinea, N.~M.~R. Peres, K.~S. Novoselov, and A.~K. Geim.
+\newblock The electronic properties of graphene.
+\newblock {\em Rev. Mod. Phys.}, 81(1):109--162, January 2009.
+
+\bibitem{NHL}
+Netanel~H. Lindner, Gil Refael, and Victor Galitski.
+\newblock Floquet topological insulator in semiconductor quantum wells.
+\newblock {\em Nature Physics}, 7:490, 2011.
+
+\bibitem{AEE}
+Andr{\'e} Eckardt and Egidijus Anisimovas.
+\newblock High-frequency approximation for periodically driven quantum systems
+  from a {{Floquet-space}} perspective.
+\newblock {\em New J. Phys.}, 17:093039, 2015.
+
+\bibitem{MCR}
+Mikael~C. Rechtsman, Julia~M. Zeuner, Yonatan Plotnik, Yaakov Lumer, Daniel
+  Podolsky, Felix Dreisow, Stefan Nolte, Mordechai Segev, and Alexander
+  Szameit.
+\newblock Photonic floquet topological insulators.
+\newblock {\em Nature Physics}, 496:196, 2013.
+
+\bibitem{YHW}
+Y.~H. Wang, H.~Steinberg, P.~{Jarillo-Herrero}, and N.~Gedik.
+\newblock Observation of floquet-bloch states on the surface of a topological
+  insulator.
+\newblock {\em Science}, 342(6157):453--457, 2013.
+
+\bibitem{HZJ}
+Hongbin Zhang, Jiandong Yao, Jianmei Shao, Hai Li, Shuwei Li, Dinghua Bao,
+  Chengxin Wang, and Guowei Yang.
+\newblock Anomalous photoelectric effect of a polycrystalline topological
+  insulator film.
+\newblock {\em Scientific Reports}, 4:5876, 2014.
+
+\bibitem{JWM}
+J.~W. McIver, B.~Schulte, F.-U. Stein, T.~Matsuyama, G.~Jotzu, G.~Meier, and
+  A.~Cavalleri.
+\newblock Light-induced anomalous {{Hall}} effect in graphene.
+\newblock {\em Nature Physics}, 11:123, 2019.
+
+\bibitem{JHS}
+Jon~H. Shirley.
+\newblock Solution of the schr\"odinger equation with a hamiltonian periodic in
+  time.
+\newblock {\em Phys. Rev.}, 138(4B):B979--B987, May 1965.
+
+\bibitem{HSA}
+Hideo Sambe.
+\newblock Steady states and quasienergies of a quantum-mechanical system in an
+  oscillating field.
+\newblock {\em Phys. Rev. A}, 7(6):2203--2213, June 1973.
+
+\bibitem{MGP}
+Milena Grifoni and Peter H{\"a}nggi.
+\newblock Driven quantum tunneling.
+\newblock {\em Physics Reports}, 304:229, 1998.
+
+\bibitem{MBL}
+M.~Bukov, L.~{\'D}~Alessio, and A.~Polkovnikov.
+\newblock Universal high-frequency behavior of periodically driven systems:
+  From dynamical stabilization to {{Floquet}} engineering.
+\newblock {\em Advances in Physics}, 64:139, 2015.
+
+\bibitem{NGJ}
+N.~Goldman and J.~Dalibard.
+\newblock Periodically driven quantum systems: {{Effective}} hamiltonians and
+  engineered gauge fields.
+\newblock {\em Phys. Rev. X}, 4(3):031027, August 2014.
+
+\bibitem{SRI}
+Saar Rahav, Ido Gilary, and Shmuel Fishman.
+\newblock Effective {{Hamiltonians}} for periodically driven systems.
+\newblock {\em Phys. Rev. A}, 68(1):013820, July 2003.
+
+\bibitem{API}
+A.~P. Itin and M.~I. Katsnelson.
+\newblock Effective hamiltonians for rapidly driven many-body lattice systems:
+  {{Induced}} exchange interactions and density-dependent hoppings.
+\newblock {\em Phys. Rev. Lett.}, 115(7):075301, August 2015.
+
+\bibitem{TMS}
+Takahiro Mikami, Sota Kitamura, Kenji Yasuda, Naoto Tsuji, Takashi Oka, and
+  Hideo Aoki.
+\newblock Brillouin-{{Wigner}} theory for high-frequency expansion in
+  periodically driven systems: {{Application}} to {{Floquet}} topological
+  insulators.
+\newblock {\em Phys. Rev. B}, 93(14):144307, April 2016.
+
+\bibitem{ESM}
+E.~S. Mananga and T.~Charpentier.
+\newblock Introduction of the {{Floquet-Magnus}} expansion in solid-state
+  nuclear magnetic resonance spectroscopy.
+\newblock {\em The Journal of Chemical Physics}, 135:044109, 2011.
+
+\bibitem{TKT}
+T.~Kuwahara, T.~Mori, and K.~Saito.
+\newblock Floquet\textendash{{Magnus}} theory and generic transient dynamics in
+  periodically driven many-body quantum systems.
+\newblock {\em Annals of Physics}, 367:96, 2016.
+
+\bibitem{ALA}
+A.~L{\'o}pez, A.~Scholz, Z.~Z. Sun, and J.~Schliemann.
+\newblock Graphene with time-dependent spin-orbit coupling: Truncated
+  {{Magnus}} expansion approach.
+\newblock {\em Eur. Phys. J. B}, 86:366, 2013.
+
+\bibitem{FCA}
+F.~Casas, J.~A. Oteo, and J.~Ros.
+\newblock Floquet theory: Exponential perturbative treatment.
+\newblock {\em J. Phys. A}, 34:3379, 2001.
+
+\bibitem{TKO}
+Takuya Kitagawa, Takashi Oka, Arne Brataas, Liang Fu, and Eugene Demler.
+\newblock Transport properties of nonequilibrium systems under the application
+  of light: {{Photoinduced}} quantum {{Hall}} insulators without {{Landau}}
+  levels.
+\newblock {\em Phys. Rev. B}, 84(23):235108, December 2011.
+
+\bibitem{Haldane}
+F.~D.~M. Haldane.
+\newblock Model for a quantum hall effect without landau levels:
+  {{Condensed-matter}} realization of the "{{Parity Anomaly}}".
+\newblock {\em Phys. Rev. Lett.}, 61(18):2015--2018, October 1988.
+
+\bibitem{AKA}
+Andrei Kirilyuk, Alexey~V. Kimel, and Theo Rasing.
+\newblock Ultrafast optical manipulation of magnetic order.
+\newblock {\em Rev. Mod. Phys.}, 82(3):2731--2784, September 2010.
+
+\bibitem{JHM}
+J.~H. Mentink, K.~Balzer, and M.~Eckstein.
+\newblock Ultrafast and reversible control of the exchange interaction in
+  {{Mott}} insulators.
+\newblock {\em Nature Communications}, 6:6708, 2015.
+
+\bibitem{LST}
+L.~Stojchevska, I.~Vaskivskyi, T.~Mertelj, P.~Kusar, D.~Svetin, S.~Brazovskii,
+  and D.~Mihailovic.
+\newblock Ultrafast switching to a stable hidden quantum state in an electronic
+  crystal.
+\newblock {\em Science}, 344(6180):177--180, 2014.
+
+\bibitem{AGG}
+Adolfo~G. Grushin, {\'A}lvaro {G{\'o}mez-Le{\'o}n}, and Titus Neupert.
+\newblock Floquet fractional chern insulators.
+\newblock {\em Phys. Rev. Lett.}, 112(15):156801, April 2014.
+
+\bibitem{MSR}
+Mark~S. Rudner and Netanel~H. Lindner.
+\newblock Floquet topological insulators: From band structure engineering to
+  novel non-equilibrium quantum phenomena.
+\newblock {\em arxiv}.
+
+\bibitem{EKM}
+Ervand Kandelaki and Mark~S. Rudner.
+\newblock Many-body dynamics and gap opening in interacting periodically driven
+  systems.
+\newblock {\em Phys. Rev. Lett.}, 121(3):036801, July 2018.
+
+\bibitem{SWP1}
+G.~Juzeli{\=u}{\=u}nas and P.~{\"O}hberg.
+\newblock Slow light in degenerate fermi gases.
+\newblock {\em Phys. Rev. Lett.}, 93(3):033602, July 2004.
+
+\bibitem{SWP2}
+J.~Ruseckas, G.~Juzeli{\=u}{\=u}nas, P.~{\"O}hberg, and M.~Fleischhauer.
+\newblock Non-abelian gauge potentials for ultracold atoms with degenerate dark
+  states.
+\newblock {\em Phys. Rev. Lett.}, 95(1):010404, June 2005.
+
+\bibitem{SWP3}
+Shi-Liang Zhu, Hao Fu, C.-J. Wu, S.-C. Zhang, and L.-M. Duan.
+\newblock Spin hall effects for cold atoms in a light-induced gauge potential.
+\newblock {\em Phys. Rev. Lett.}, 97(24):240401, December 2006.
+
+\bibitem{SWP4}
+Jean Dalibard, Fabrice Gerbier, Gediminas Juzeli{\=u}{\=u}nas, and Patrik
+  {\"O}hberg.
+\newblock Colloquium: {{Artificial}} gauge potentials for neutral atoms.
+\newblock {\em Rev. Mod. Phys.}, 83(4):1523--1543, November 2011.
+
+\bibitem{SWP5}
+N~Goldman, G~Juzeli{\=u}nas, P~{\"O}hberg, and I~B Spielman.
+\newblock Light-induced gauge fields for ultracold atoms.
+\newblock {\em Reports on Progress in Physics}, 77(12):126401, November 2014.
 
 \end{thebibliography}

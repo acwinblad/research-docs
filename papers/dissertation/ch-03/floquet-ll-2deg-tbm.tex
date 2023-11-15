@@ -1,0 +1,82 @@
+\subsection{Tight-binding model 2DEG}
+
+We start with a 2D tight-binding hamiltonian
+
+\begin{equation}
+  \ham = \sum_{j,l} -h (\cc_{j,l} c_{j+1,l} + \cc_{j,l} c_{j,l+1} + h.c.)
+\end{equation}
+Using the following approximation for smoothly varying vector potential fields
+
+\begin{equation}
+  \int_{\vec{r}_a}^{\vec{r}_b} \vec{A}(\vec{r}) \cdot d\vec{l} = \vec{A} \left( \dfrac{\vec{r}_b+\vec{r}_b}{2} \right) \cdot (\vec{r}_b - \vec{r}_a)
+\end{equation}
+and using Peierls substitution the Hamiltonian becomes
+
+\begin{equation}
+  \ham(t) = \sum_{j,l} (-h_{j,j+1}(t) \cc_{j,l} c_{j+1,l} - h_{l,l+1}(t) \cc_{j,l} c_{j,l+1} + h.c.),
+\end{equation}
+where
+
+\begin{align}
+  h_{j,j+1}(t) &= h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{x_j-x_{j+1}}{a} \sin \omega t\right) \nonumber \\
+  h_{j,j+1}(t) &= h \exp\left(i \phi_0 \sin \omega t\right) \\
+  h_{l,l+1}(t) &= h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{y_{l+1}-y_l}{a} \cos(Kx_j)\cos \omega t\right) \nonumber \\
+  h_{l,l+1}(t) &= h \exp\left(i \phi_0 \cos(Kx_j)\cos \omega t\right).
+\end{align}
+
+The incident laser beam allows for translation symmetry along the y-axis, so we can reduce the dimension of the Hamiltonian with the following Fourier transform
+
+\begin{equation}
+  \cc_{j,l} = \dfrac{1}{\sqrt{N_y}} \sum_k \cc_{j,k} e^{ik\hat{y}\cdot \vec{r}_{j,l}}.
+\end{equation}
+The Hamiltonian then becomes
+
+\begin{align}
+  \ham(t) &= \sum_{j,k} ( h_{l,l+1}(t) e^{-ika} + h_{l,l+1}^*(t) e^{ika}) \cc_{j,k} c_{j,k} + (h_{j,j+1}(t) \cc_{j,k} c_{j+1,k} + h.c.) \\
+  &= \sum_{j,k} 2h\cos( \phi_0 \cos(Kx_j) \cos \omega t - ka ) \cc_{j,k} c_{j,k} + (h e^{i\phi_0 \sin \omega t} \cc_{j,k} c_{j+1,k} + h.c.).
+\end{align}
+Making use of Floquet theory we can make the Hamiltonian time-independent with the following time Fourier transform
+
+\begin{align}
+  \ham_{ab,n}(k) &= \dfrac{1}{T} \int_0^T \ham_{ab}(k,t) e^{-in \omega t} dt \\
+  &= \dfrac{1}{2\pi} \int_0^{2\pi} \ham_{ab}(k,t) e^{-in\tau} d\tau
+\end{align}
+where $a,b$ represent the matrix index of the previous Hamiltonian and $n$ is the $n$-th order mode of light.
+We will make use of the following Hansen-Bessel integral formulas
+
+\begin{equation} \label{eq: hansen-bessel}
+  J_n(z) = \dfrac{1}{2\pi} \int_0^{2\pi} e^{in\tau - z \sin\tau} d\tau = \dfrac{1}{2\pi} \int_0^{2\pi} e^{in\tau - in\pi/2 + z\cos\tau} d\tau,
+\end{equation}
+note that the integral bound can be the same due to the integrand being periodic from $[0,2\pi]$.
+Recall, Bessel function identities for $n \in \mathbb{Z}$
+
+\begin{align}
+  J_n(-z) = (-1)^n J_n(z) \\
+  J_{-n}(z) = (-1)^n J_n(z)
+\end{align}
+The terms for given $k$ become the following time Fourier transforms
+
+\begin{align}
+  \ham_{jj,n}(k) &= -\dfrac{h}{2\pi} \int_0^{2\pi} \left( e^{i \phi_0 \cos(Kx_j) \cos \tau - ika - in\tau} + e^{-i \phi_0 \cos(Kx_j) \cos \tau + ika - in\tau} \right) d\tau \nonumber \\
+    &= -h \left( \dfrac{e^{-ika}}{2\pi} \int_0^{2\pi} e^{i z \cos \tau - in\tau} d\tau + \dfrac{e^{ika}}{2\pi} \int_0^{2\pi} e^{-i z \cos \tau - in\tau} d\tau \right) \nonumber \\
+    &= -h \left( \dfrac{e^{-ika -in\pi/2}}{2\pi} \int_0^{2\pi} e^{i z \cos \tau - in\tau + in\pi/2} d\tau + \dfrac{e^{ika - in\pi/2}}{2\pi} \int_0^{2\pi} e^{-i z \cos \tau - in\tau + in\pi/2} d\tau \right) \nonumber \\
+    &= -h e^{-in\pi/2} \left( J_{-n}(z) e^{-ika} + J_{-n}(-z) e^{ika} \right) \nonumber \\
+    &= -h J_n(z) e^{-in\pi/2} ( e^{ika} +  e^{-ika+in\pi} ) \nonumber \\
+    &= -h J_n(z) ( e^{i(ka-in\pi/2)} +  e^{-i(ka-in\pi/2)} ) \nonumber \\
+    &= -h J_n(\phi_0 \cos(Kx_j)) \cos \left( ka -in\pi/2 \right)
+\end{align}
+and
+
+\begin{align}
+  \ham_{j,j+1,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
+  &= -h J_{-n}(-\phi_0) \nonumber \\
+  &= -h J_n(\phi_0) \\
+  \ham_{j+1,j,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{-i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
+    &= -h J_{-n}(\phi_0) \nonumber \\
+    &= -h (-1)^n J_n(\phi_0)
+\end{align}
+
+This completes finding all the matrix terms for the quasienergy matrix $\bar{Q}$ for a 2DEG tight binding model with incident inhomogeneous laser light.
+
+
+

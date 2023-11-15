@@ -2,153 +2,54 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: aidan-winblad-dissertation-2023.aux
 The style file: unsrt.bst
-I couldn't open database file QHErefv1.bib
----line 230 of file aidan-winblad-dissertation-2023.aux
- : \bibdata{QHErefv1
- :                  }
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 309 of file aidan-winblad-dissertation-2023.aux
- : \bibdata
- :         {triag_cite}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 370 of file aidan-winblad-dissertation-2023.aux
- : \bibdata
- :         {fll_qhe}
-I'm skipping whatever remains of this command
-I found no database files---while reading file aidan-winblad-dissertation-2023.aux
-Warning--I didn't find a database entry for "ivanovNonAbelianStatisticsHalfQuantum2001"
-Warning--I didn't find a database entry for "kitaevFaulttolerantQuantumComputation2003"
-Warning--I didn't find a database entry for "nayakNonAbelianAnyonsTopological2008"
-Warning--I didn't find a database entry for "aliceaNonAbelianStatisticsTopological2011"
-Warning--I didn't find a database entry for "aasenMilestonesMajoranaBasedQuantum2016"
-Warning--I didn't find a database entry for "readPairedStatesFermions2000"
-Warning--I didn't find a database entry for "kitaevUnpairedMajoranaFermions2001"
-Warning--I didn't find a database entry for "brisonPWaveSuperconductivityDVector2021"
-Warning--I didn't find a database entry for "mourikSignaturesMajoranaFermions2012"
-Warning--I didn't find a database entry for "rokhinsonFractionalJosephsonEffect2012"
-Warning--I didn't find a database entry for "dengAnomalousZeroBiasConductance2012"
-Warning--I didn't find a database entry for "choyMajoranaFermionsEmerging2011"
-Warning--I didn't find a database entry for "brauneckerInterplayClassicalMagnetic2013"
-Warning--I didn't find a database entry for "klinovajaTopologicalSuperconductivityMajorana2013"
-Warning--I didn't find a database entry for "nadj-pergeProposalRealizingMajorana2013"
-Warning--I didn't find a database entry for "nadj-pergeObservationMajoranaFermions2014"
-Warning--I didn't find a database entry for "schneiderPrecursorsMajoranaModes2022"
-Warning--I didn't find a database entry for "fuSuperconductingProximityEffect2008"
-Warning--I didn't find a database entry for "hosurMajoranaModesEnds2011"
-Warning--I didn't find a database entry for "potterEngineeringMathitipSuperconductor2011"
-Warning--I didn't find a database entry for "veldhorstMagnetotransportInducedSuperconductivity2013"
-Warning--I didn't find a database entry for "chenQuasionedimensionalQuantumAnomalous2018"
-Warning--I didn't find a database entry for "zengQuantumAnomalousHall2018"
-Warning--I didn't find a database entry for "xieCreatingLocalizedMajorana2021"
-Warning--I didn't find a database entry for "oregHelicalLiquidsMajorana2010"
-Warning--I didn't find a database entry for "sauGenericNewPlatform2010"
-Warning--I didn't find a database entry for "lutchynSearchMajoranaFermions2011"
-Warning--I didn't find a database entry for "potterTopologicalSuperconductivityMajorana2012"
-Warning--I didn't find a database entry for "liTwodimensionalChiralTopological2016"
-Warning--I didn't find a database entry for "leiUltrathinFilmsSuperconducting2018"
-Warning--I didn't find a database entry for "black-schafferMajoranaFermionsSpinorbitcoupled2011"
-Warning--I didn't find a database entry for "pientkaSignaturesTopologicalPhase2013"
-Warning--I didn't find a database entry for "hellTwoDimensionalPlatformNetworks2017"
-Warning--I didn't find a database entry for "fornieriEvidenceTopologicalSuperconductivity2019"
-Warning--I didn't find a database entry for "renTopologicalSuperconductivityPhasecontrolled2019"
-Warning--I didn't find a database entry for "scharfTuningTopologicalSuperconductivity2019"
-Warning--I didn't find a database entry for "zhouPhaseControlMajorana2020"
-Warning--I didn't find a database entry for "xuExperimentalDetectionMajorana2015"
-Warning--I didn't find a database entry for "albrechtExponentialProtectionZero2016"
-Warning--I didn't find a database entry for "sunMajoranaZeroMode2016"
-Warning--I didn't find a database entry for "wangEvidenceMajoranaBound2018"
-Warning--I didn't find a database entry for "jackObservationMajoranaZero2019"
-Warning--I didn't find a database entry for "mannaSignaturePairMajorana2020"
-Warning--I didn't find a database entry for "fatinWirelessMajoranaBound2016"
-Warning--I didn't find a database entry for "sauRealizingRobustPractical2012"
-Warning--I didn't find a database entry for "leijnseParityQubitsPoor2012"
-Warning--I didn't find a database entry for "dvirRealizationMinimalKitaev2023"
-Warning--I didn't find a database entry for "karzigScalableDesignsQuasiparticlepoisoningprotected2017"
-Warning--I didn't find a database entry for "potterMultichannelGeneralizationKitaev2010"
-Warning--I didn't find a database entry for "liManipulatingMajoranaZero2016"
-Warning--I didn't find a database entry for "pietzschSpinResolvedElectronicStructure2006"
-Warning--I didn't find a database entry for "romitoManipulatingMajoranaFermions2012"
-Warning--I didn't find a database entry for "takasanSupercurrentinducedTopologicalPhase2022"
-Warning--I didn't find a database entry for "supp"
-Warning--I didn't find a database entry for "liTopologicalSuperconductivityInduced2014"
-Warning--I didn't find a database entry for "pahomiBraidingMajoranaCorner2020"
-Warning--I didn't find a database entry for "mishmashDephasingLeakageDynamics2020"
-Warning--I didn't find a database entry for "parity_QD_readout_2020"
-Warning--I didn't find a database entry for "fengProbingRobustMajorana2022"
-Warning--I didn't find a database entry for "QHE1"
-Warning--I didn't find a database entry for "QHE2"
-Warning--I didn't find a database entry for "QHE3"
-Warning--I didn't find a database entry for "QHE4"
-Warning--I didn't find a database entry for "NHL"
-Warning--I didn't find a database entry for "AEE"
-Warning--I didn't find a database entry for "MCR"
-Warning--I didn't find a database entry for "YHW"
-Warning--I didn't find a database entry for "HZJ"
-Warning--I didn't find a database entry for "JWM"
-Warning--I didn't find a database entry for "JHS"
-Warning--I didn't find a database entry for "HSA"
-Warning--I didn't find a database entry for "MGP"
-Warning--I didn't find a database entry for "MBL"
-Warning--I didn't find a database entry for "NGJ"
-Warning--I didn't find a database entry for "SRI"
-Warning--I didn't find a database entry for "API"
-Warning--I didn't find a database entry for "TMS"
-Warning--I didn't find a database entry for "ESM"
-Warning--I didn't find a database entry for "TKT"
-Warning--I didn't find a database entry for "ALA"
-Warning--I didn't find a database entry for "FCA"
-Warning--I didn't find a database entry for "TKO"
-Warning--I didn't find a database entry for "Haldane"
-Warning--I didn't find a database entry for "AKA"
-Warning--I didn't find a database entry for "JHM"
-Warning--I didn't find a database entry for "LST"
-Warning--I didn't find a database entry for "AGG"
-Warning--I didn't find a database entry for "MSR"
-Warning--I didn't find a database entry for "EKM"
-Warning--I didn't find a database entry for "SWP1"
-Warning--I didn't find a database entry for "SWP2"
-Warning--I didn't find a database entry for "SWP3"
-Warning--I didn't find a database entry for "SWP4"
-Warning--I didn't find a database entry for "SWP5"
-You've used 0 entries,
+Database file #1: ref.bib
+Repeated entry---line 1791 of file ref.bib
+ : @article{supp
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--empty author in supp
+Warning--empty title in supp
+Warning--empty year in supp
+Warning--empty year in MSR
+You've used 94 entries,
             1791 wiz_defined-function locations,
-            632 strings with 8066 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            1068 strings with 26030 characters,
+and the built_in function-call counts, 24204 in all, are:
+= -- 1881
+> -- 1523
+< -- 1
++ -- 541
+- -- 447
+* -- 2294
+:= -- 4079
+add.period$ -- 280
+call.type$ -- 94
+change.case$ -- 93
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 98
+duplicate$ -- 852
+empty$ -- 2139
+format.name$ -- 447
+if$ -- 5051
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 94
+missing$ -- 93
+newline$ -- 470
+num.names$ -- 95
+pop$ -- 110
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 315
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1760
+swap$ -- 103
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 4 error messages)
+warning$ -- 4
+while$ -- 214
+width$ -- 96
+write$ -- 1028
+(There was 1 error message)

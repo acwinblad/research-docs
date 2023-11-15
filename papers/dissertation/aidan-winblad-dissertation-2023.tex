@@ -135,7 +135,6 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 \listoffigures      % insert list of figures (optional)
 
 \mainmatter % starts thesis body
-\bibliographystyle{unsrt}
 
 \chapter{Introduction}
 \Blue{EM gauge potential appears in electronic Hamiltonian in CM}
@@ -169,23 +168,11 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 
 \chapter{Floquet Landau Levels}
 
-\begin{enumerate}
-  \item \Blue{Introduction (Tahir's intro is fine, maybe in my own words, Floquet engineering)}
-  \begin{enumerate}[i]
-    \item \Blue{Time dependent, motivation---QAHE gap but not QHE gap}
-    \item \Blue{Floquet Theorem--- quasi-energy spectrum}
-  \end{enumerate}
-  \item \Blue{Results}
-  \begin{enumerate}[i]
-    \item \Blue{square + \vec{A}(t) (Tahir's perturbative calc)}
-    \item \Blue{honeycomb + \vec{A}(t) (Tahir's perturbative calc)}
-  \end{enumerate}
-  \item \Blue{Discussion and future}
 \input{ch-03/introduction.tex}
 \input{ch-03/floquet-ll-dirac.tex}
 \input{ch-03/floquet-ll-2deg.tex}
+\input{ch-03/floquet-ll-2deg-tbm.tex}
 \input{ch-03/conclusion.tex}
-\end{enumerate}
 
 \chapter{Conclusion and Discussion}
 
@@ -203,8 +190,8 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 \end{appendices}
 
 
-\bibliography{triag_cite}
-\bibliography{fll_qhe}
+\bibliographystyle{unsrt}
+\bibliography{ref}
 
 \end{document}
 
