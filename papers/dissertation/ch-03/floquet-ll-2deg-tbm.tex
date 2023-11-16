@@ -1,6 +1,6 @@
 \subsection{Tight-binding model 2DEG}
 
-We start with a 2D tight-binding hamiltonian
+We start with a nearest-neighbor single-orbital tight-binding Hamiltonian on a square lattice
 
 \begin{equation}
   \ham = \sum_{j,l} -h (\cc_{j,l} c_{j+1,l} + \cc_{j,l} c_{j,l+1} + h.c.)
@@ -8,7 +8,7 @@ We start with a 2D tight-binding hamiltonian
 Using the following approximation for smoothly varying vector potential fields
 
 \begin{equation}
-  \int_{\vec{r}_a}^{\vec{r}_b} \vec{A}(\vec{r}) \cdot d\vec{l} = \vec{A} \left( \dfrac{\vec{r}_b+\vec{r}_b}{2} \right) \cdot (\vec{r}_b - \vec{r}_a)
+  \int_{\vec{r}_a}^{\vec{r}_b} \vec{A}(\vec{r}) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{\vec{r}_b+\vec{r}_b}{2} \right) \cdot (\vec{r}_b - \vec{r}_a)
 \end{equation}
 and using Peierls substitution the Hamiltonian becomes
 
@@ -18,16 +18,16 @@ and using Peierls substitution the Hamiltonian becomes
 where
 
 \begin{align}
-  h_{j,j+1}(t) &= h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{x_j-x_{j+1}}{a} \sin \omega t\right) \nonumber \\
-  h_{j,j+1}(t) &= h \exp\left(i \phi_0 \sin \omega t\right) \\
-  h_{l,l+1}(t) &= h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{y_{l+1}-y_l}{a} \cos(Kx_j)\cos \omega t\right) \nonumber \\
-  h_{l,l+1}(t) &= h \exp\left(i \phi_0 \cos(Kx_j)\cos \omega t\right).
+  h_{j,j+1}(t) &\approx h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{x_j-x_{j+1}}{a} \sin \omega t\right) \nonumber \\
+  &= h \exp\left(i \phi_0 \sin \omega t\right) \\
+  h_{l,l+1}(t) &\approx h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{y_{l+1}-y_l}{a} \cos(Kx_j)\cos \omega t\right) \nonumber \\
+  &= h \exp\left(i \phi_0 \cos(Kx_j)\cos \omega t\right).
 \end{align}
 
 The incident laser beam allows for translation symmetry along the y-axis, so we can reduce the dimension of the Hamiltonian with the following Fourier transform
 
 \begin{equation}
-  \cc_{j,l} = \dfrac{1}{\sqrt{N_y}} \sum_k \cc_{j,k} e^{ik\hat{y}\cdot \vec{r}_{j,l}}.
+  \cc_{j,l} = \dfrac{1}{\sqrt{N_y}} \sum_k \cc_{j,k} e^{ik\hat{y}\cdot \vec{r}_{l}} = \dfrac{1}{\sqrt{N_y}} \sum_k \cc_{j,k} e^{ikla}.
 \end{equation}
 The Hamiltonian then becomes
 

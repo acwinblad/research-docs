@@ -1,0 +1,81 @@
+\subsection{Tight-binding model Dirac}
+
+We start with a nearest-neighbor single-orbital tight-binding Hamiltonian
+
+\begin{equation}
+  \ham = - \sum_{jl\alpha,j'l'\beta} h \cc_{jl\alpha} c_{j'l'\beta} + h.c.
+\end{equation}
+Using the following approximation for smoothly varying vector potential fields
+
+\begin{equation}
+  \int_{\vec{r}_{j,l}^{\alpha}} ^{\vec{r}_{j',l'}^{\beta}} \vec{A}(\vec{r}) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{ \vec{r}_{j',l'}^{\beta} + \vec{r}_{j,l}^{\alpha} }{2} \right) \cdot \left( \vec{r}_{j',l'}^{\beta} - \vec{r}_{j,l}^{\alpha} \right)
+\end{equation}
+where
+
+\begin{align}
+  \vec{a}_1 &= \sqrt{3}a\hat{x} \\
+  \vec{a}_2 &= 3a\hat{y} \\
+  \vec{r}_{jl}^{A_1} &= j\vec{a}_1 + l\vec{a}_2 \\
+  \vec{r}_{jl}^{B_1} &= (j+\tfrac{1}{2})\vec{a}_1 + \dfrac{l}{6}\vec{a}_2 \\
+  \vec{r}_{jl}^{A_2} &= (j+\tfrac{1}{2})\vec{a}_1 + \dfrac{l}{2}\vec{a}_2 \\
+  \vec{r}_{jl}^{B_2} &= (j+1)\vec{a}_1 + \dfrac{2l}{3}\vec{a}_2.
+\end{align}
+Applying a Peierls substitution the Hamiltonian becomes
+
+\begin{equation}
+\begin{split}
+  \ham (t) = -\sum_{jl} \ &h_{jlA_1}^{jlB_1}(t) \cc_{jlA_1} c_{jlB_1} + h_{jlB_1}^{jlA_2}(t) \cc_{jlB_1} c_{jlA_2} + h_{jlA_2}^{jlB_2}(t) \cc_{jlA_2} c_{jlB_2} \\
+      + &h_{jlB_1}^{j+1,lA_1}(t) \cc_{jlB_1} c_{j+1,lA_1} + h_{jlB_2}^{j+1,l,A_2} \cc_{jlB_2} c_{j+1,lA_2}(t) \\
+      + &h_{jlB_2}^{j+1,l+1,A_1}(t) \cc_{jlB_2} c_{j+1,l+1,A_1} + h.c.
+\end{split}
+\end{equation}
+where in general
+
+\begin{equation}
+  h_{jl\alpha}^{j'l'\beta} (t) \approx h \exp \left[ i \phi_0 \left(-\dfrac{x_{j'l'}^{\beta} - x_{jl}^{\alpha}}{a} \sin\omega t + \dfrac{y_{j'l'}^{\beta} - y_{jl}^{\alpha}}{2a} \sin\left(K \dfrac{x_{j'l'}^{\beta} + x_{jl}^{\alpha}}{2}\right) \cos 2\omega t \right) \right].
+\end{equation}
+More explicitly for each term
+
+\begin{align}
+  h_{jlA_1}^{jlB_1}(t) &\approx h \exp \left[ i\phi_0 \left(-\dfrac{\sqrt{3}}{2} \sin\omega t + \dfrac{1}{4} \sin(\sqrt{3}Ka(j+\tfrac{1}{4})) \cos 2\omega t \right) \right] \\
+  h_{jlB_1}^{jlA_2}(t) &\approx h \exp \left[ i\phi_0 \left(\dfrac{1}{2} \sin(\sqrt{3}Ka(j+\tfrac{1}{2})) \cos 2\omega t \right) \right] \\
+  h_{jlA_2}^{jlB_2}(t) &\approx h \exp \left[ i\phi_0 \left(-\dfrac{\sqrt{3}}{2} \sin\omega t + \dfrac{1}{4} \sin(\sqrt{3}Ka(j+\tfrac{3}{4})) \cos 2\omega t \right) \right]
+\end{align}
+\begin{align}
+  h_{jlB_1}^{j+1,lA_1}(t) &\approx h \exp \left[ i\phi_0 \left(-\dfrac{\sqrt{3}}{2} \sin\omega t - \dfrac{1}{4} \sin(\sqrt{3}Ka(j+\tfrac{3}{4})) \cos 2\omega t \right) \right] \\
+  h_{jlB_2}^{j+1,lA_2}(t) &\approx h \exp \left[ i\phi_0 \left(-\dfrac{\sqrt{3}}{2}\sin\omega t -\dfrac{1}{4} \sin(\sqrt{3}Ka(j+\tfrac{5}{4})) \cos 2\omega t \right) \right] \\
+  h_{jlB_2}^{j+1,l+1,A_1}(t) &\approx h \exp \left[ i\phi_0 \left(\dfrac{1}{2} \sin(\sqrt{3}Ka(j+1)) \cos 2\omega t \right) \right]
+\end{align}
+
+The incident laser beam allows for translation symmetry along the y-axis, so we can reduce the dimension of the Hamiltonian with the following Fourier transform
+
+\begin{equation}
+  \cc_{jl\alpha} = \dfrac{1}{N_y} \sum_k \cc_{jk\alpha} e^{ik\hat{y}\cdot\vec{R_l}} = \dfrac{1}{N_y} \sum_k \cc_{jk\alpha} e^{ik(3la)}
+\end{equation}
+The Hamiltonian then becomes
+
+\begin{equation}
+\begin{split}
+  \ham (t) = -\sum_{jk} \ &h_{jlA_1}^{jlB_1}(t) \cc_{jkA_1} c_{jkB_1} + h_{jlB_1}^{jlA_2}(t) \cc_{jkB_1} c_{jkA_2} + h_{jlA_2}^{jlB_2}(t) \cc_{jkA_2} c_{jkB_2} \\
+      + &h_{jlB_1}^{j+1,lA_1}(t) \cc_{jkB_1} c_{j+1,kA_1} + h_{jlB_2}^{j+1,l,A_2} \cc_{jkB_2} c_{j+1,kA_2}(t) \\
+      + &h_{jlB_2}^{j+1,l+1,A_1}(t) e^{-i3ka} \cc_{jkB_2} c_{j+1,kA_1} + h.c.
+\end{split}
+\end{equation}
+
+Making use of Floquet theory we can make the Hamiltonian time-independent with the following time domain Fourier transform
+
+\begin{equation}
+  \ham_{ab,n}(k) = \dfrac{1}{2\pi} \int_0^{2\pi} \ham_{ab}(k,t) e^{-in\tau} d\tau
+\end{equation}
+where $a,b$ represent the amtrix indes of the previous Hamiltonian and $n$ is the $n$-th order mode of light.
+Each term has the general following form
+
+\begin{equation}
+  \ham_{ab,n}(k) = \dfrac{1}{2\pi} \int_0^{2\pi} e^{i Z_1 \sin\tau + i Z_2 \cos2\tau - in\tau} d\tau
+\end{equation}
+which looks a lot like the Hansen-Bessel integral function.
+However, because of the linear combination of $\sin\tau$ and $\cos 2\tau$, there is no elementary solution to the integral as currently defined.
+\Red{I think if it was a linear combination of $\sin\tau$ and $\cos\tau$ we could use an addition of sines identity and maybe get a Hansen-Bessel integral.}
+\Red{A mute point for this project since we need the $\cos 2\tau$ term to match the continuum models expectation of Landau levels.}
+We thus solve the integral numerically for each given $n$.
+
