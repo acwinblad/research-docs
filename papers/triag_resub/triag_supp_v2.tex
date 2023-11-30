@@ -51,6 +51,166 @@
 
 \maketitle
 
+\section{Analytic solutions of the Kitaev triangle}
+In this section we present some analytic results related to the 3-site Kitaev triangle. 
+
+We start from the 1D Kitaev chain Hamiltonian with complex nearest-neighbor hopping $-te^{i\phi}$ and $p$-wave pairing $\Delta e^{i\theta}$ in the Kitaev limit ($t=\Delta > 0, \mu = 0$):
+\begin{eqnarray}
+	H = \sum_{n}\left(- te^{i\phi}c_n^\dag c_{n+1} + \Delta e^{i\theta}c_nc_{n+1} + {\rm h.c.}\right)
+\end{eqnarray}
+In the Majorana fermion basis $a_n = c_n + c_n^\dag$, $b_n = -i(c_n - c_n^\dag)$ the Hamiltonian becomes
+\begin{eqnarray}
+H = -\frac{it}{2} \sum_n \left[(S_\phi - S_\theta) a_n a_{n+1} + (S_\phi + S_\theta)b_n b_{n+1} + (C_\phi - C_\theta) a_n b_{n+1} - (C_\phi + C_\theta)b_na_{n+1}\right]
+\end{eqnarray}
+where $S_\phi\equiv \sin\phi$, $C_\phi\equiv \cos\phi$, etc. Therefore, when $\phi = \theta$, $a_n$ becomes decoupled from $a_{n+1}$ and $b_{n+1}$, and $a_1$ drops out from the Hamiltonian. Similarly, when $\phi = \theta + \pi$, $b_1$ becomes isolated. To find the other MZM, we note that when $\phi = \theta$, terms involving $a_{N}$ and $b_N$ in the Hamiltonian are
+\begin{eqnarray}
+	H_N = -itb_{N-1}(S_\phi b_{N} - C_\phi a_N).
+\end{eqnarray}
+Considering the unitary transformation
+\begin{eqnarray}
+	\begin{pmatrix}
+		a_N' \\
+		b_N'
+	\end{pmatrix} \equiv\begin{pmatrix}
+	C_\phi & - S_\phi\\
+	S_\phi & C_\phi 
+\end{pmatrix}\begin{pmatrix}
+a_N\\
+b_N
+\end{pmatrix}
+\end{eqnarray}
+we have 
+\begin{eqnarray}
+	H_N = itb_{N-1} a'_N
+\end{eqnarray}
+Therefore the other MZM is $b'_N = S_\phi a_N + C_\phi b_N$. Similarly, when $\phi = \theta + \pi$ the other MZM is $a'_{N} \equiv C_\phi a_N - S_\phi b_N$. 
+
+For the 3-site Kitaev triangle at the initial configuration $\boldsymbol{\phi}_1$, if the three edges were isolated from each other, the MZM would have been
+\begin{eqnarray}
+	1-2:&& a_1,\,b_2\\\nonumber
+	2-3:&& b_2,\,\frac{1}{2}a_3 + \frac{\sqrt{3}}{2}b_3\\\nonumber
+	3-1:&& a_1,\, \frac{\sqrt{3}}{2}a_3 + \frac{1}{2} b_3
+\end{eqnarray}
+One can therefore see that the two MZM at site 3 are not compatible with each other. 
+
+We next solve for the excited states of the Kitaev triangle at the initial configuration $\boldsymbol{\phi}_1$. The Hamiltonian in the Majorana basis is
+\begin{eqnarray}
+	H &=& -\frac{it}{2}\left( -2b_1 a_2 - \sqrt{3} a_2 a_3 + a_2 b_3 + \sqrt{3} b_1 b_3 - b_1 a_3   \right) = \frac{1}{2}\Gamma h\Gamma^T\\\nonumber
+ \Gamma &\equiv& (b_1, a_2, a_3, b_3)\\\nonumber
+h&\equiv&-it\begin{pmatrix}
+	0 & -1 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\
+	1 & 0 & -\frac{\sqrt{3}}{2} & \frac{1}{2}\\
+	\frac{1}{2} & \frac{\sqrt{3}}{2} & 0 & 0 \\
+	-\frac{\sqrt{3}}{2} & -\frac{1}{2} & 0 & 0
+\end{pmatrix} = t\left( -\frac{1}{2}\sigma_0 \tau_y - \frac{1}{2}\sigma_z\tau_y -\frac{1}{2}\sigma_y \tau_z + \frac{\sqrt{3}}{2} \sigma_x \tau_y \right)
+\end{eqnarray}
+$h$ has the following symmetry:
+\begin{eqnarray}
+	O = \left(\frac{\sqrt{3}}{2}\sigma_x - \frac{1}{2}\sigma_z\right) \tau_y
+\end{eqnarray}
+We therefore rotate the Hamiltonian so that $O$ becomes diagonal using the following unitary operator
+\begin{eqnarray}
+	U = e^{-\frac{i\pi}{3}\sigma_y}\otimes e^{i\frac{\pi}{4}\tau_x}
+\end{eqnarray}
+which leads to 
+\begin{eqnarray}
+	U^\dag O U &=& {\rm Diag}(1,-1,-1,1)
+\end{eqnarray}
+$U$ therefore block-diagonalizes $h$ as
+\begin{eqnarray}
+	U^\dag h U = 	\frac{t}{2}\begin{pmatrix}
+		1 &  &  & -1 \\
+		& -1 & 1 & \\
+		& 1 & -3 & \\
+		-1 & & & 3 
+	\end{pmatrix}
+\end{eqnarray}
+which can then be diagonalized by
+\begin{eqnarray}
+	V = \begin{pmatrix}
+		\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} & 0 & \frac{1 - \sqrt{2}}{\sqrt{4-2\sqrt{2}}} & 0 \\
+		0 & \frac{1 + \sqrt{2}}{\sqrt{4 + 2\sqrt{2}}} & 0 & \frac{1-\sqrt{2}}{\sqrt{4 - 2\sqrt{2}}} \\
+		0 & \frac{1}{\sqrt{4+ 2\sqrt{2}}} & 0 & \frac{1}{\sqrt{4 - 2\sqrt{2}}} \\
+		\frac{1}{\sqrt{4+2\sqrt{2}}} & 0 & \frac{1}{\sqrt{4-2\sqrt{2}}} & 0
+	\end{pmatrix}
+\end{eqnarray}
+as
+\begin{eqnarray}
+	V^\dag U^\dag h U V =t\times {\rm Diag}\left( 1 -\frac{\sqrt{2}}{2},  -1 +\frac{\sqrt{2}}{2},  1 +\frac{\sqrt{2}}{2},  -1 -\frac{\sqrt{2}}{2} \right)
+\end{eqnarray}
+We therefore have the two lowest excited states with eigenenergies $\pm t(1-\frac{\sqrt{2}}{2})$
+\begin{eqnarray}
+	\psi_{+1} &=& \Gamma U \begin{pmatrix}
+	\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} \\
+0  \\
+0 \\
+\frac{1}{\sqrt{4+2\sqrt{2}}} 
+	\end{pmatrix} = \Gamma \times \frac{1}{4\sqrt{2+\sqrt{2}}} \begin{pmatrix}
+	1+\sqrt{2}-\sqrt{3} i \\
+	(1+\sqrt{2})i-\sqrt{3}  \\
+	i+ \sqrt{3} + \sqrt{6} \\
+	1 + (\sqrt{3} + \sqrt{6})i
+\end{pmatrix} \\\nonumber
+	\psi_{-1} &=& \Gamma  U \begin{pmatrix}
+		0\\
+	\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} \\
+	\frac{1}{\sqrt{4+2\sqrt{2}}} \\
+	0
+\end{pmatrix} = \Gamma \times \frac{1}{4\sqrt{2+\sqrt{2}}} \begin{pmatrix}
+	(1+\sqrt{2})i-\sqrt{3} \\
+	1+\sqrt{2}-\sqrt{3} i \\
+	1+ (\sqrt{3} + \sqrt{6} )i\\
+    i + \sqrt{3} + \sqrt{6}
+\end{pmatrix}
+\end{eqnarray}
+The first excited states can therefore be understood as a hybridization between the ``bulk" states of the 1-2 bond and the fermion on site 3. The other two eigenstates can be obtained similarly.
+
+We next prove that in the braiding process given in the main text there is always a pair of MZM at exactly zero energy. Without loss of generality we consider the $\boldsymbol{\phi}_1\rightarrow \boldsymbol{\phi}_2$ step. The Hamiltonian in the fermion basis becomes
+\begin{eqnarray}
+H =&& - e^{ix}c_1^\dag c_2 + c_1 c_2 + e^{-ix}c_1 c_2^\dag - c_1^\dag c_2^\dag \\\nonumber
+&&- e^{-\frac{\pi}{3}i} c_2^\dag c_3 + e^{\frac{2\pi}{3}i} c_2 c_3 + e^{\frac{\pi}{3}i}c_2 c_3^\dag - e^{-\frac{2\pi}{3}i} c_2^\dag c_3^\dag \\\nonumber
+&&+  e^{\left(-\frac{\pi}{3}-x\right)i} c_1 c_3^\dag  - e^{-\frac{2\pi}{3}i} c_1 c_3  - e^{\left(\frac{\pi}{3}+x\right)i} c_1^\dag c_3  + e^{\frac{2\pi}{3}i}  c_1^\dag c_3^\dag
+\end{eqnarray}
+where we have temporarily omitted the energy unit $t$. We then have
+\begin{eqnarray}
+	[c_1^\dag, H] &=& c_2 + e^{-ix} c_2^\dag + e^{\left(-\frac{\pi}{3}-x\right)i} c_3^\dag - e^{-\frac{2\pi}{3}i} c_3 \\\nonumber
+	[c_1, H] &=& -[c_1^\dag, H]^\dag = -e^{ix} \left[ c_2 + e^{-i x}c_2^\dag - e^{-\frac{2\pi}{3}i} c_3 +  e^{\left(-\frac{\pi}{3}-x\right)i} c_3^\dag \right]
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	[e^{\frac{ix}{2}}c_1^\dag + e^{-\frac{ix}{2}} c_1, H] = 0
+\end{eqnarray}
+Namely we have an MZM:
+\begin{eqnarray}
+	\tilde{a}_1 \equiv e^{\frac{ix}{2}}c_1^\dag + e^{-\frac{ix}{2}} c_1 = C_{\frac{x}{2}} a_1 + S_{\frac{x}{2}} b_1
+\end{eqnarray}
+To find the other MZM, we calculate the commutators between the other fermion operators with the Hamiltonian:
+\begin{eqnarray}
+	[c_2^\dag, H] &=& e^{ix} c_1^\dag - c_1 - e^{-\frac{i\pi}{3}} c_3 + e^{\frac{i\pi}{3}} c_3^\dag \\\nonumber
+	[c_2, H] &=& -e^{-ix} c_1 + c_1^\dag + e^{\frac{i\pi}{3}} c_3^\dag - e^{-\frac{i\pi}{3}} c_3\\\nonumber
+	[c_3^\dag, H] &=& e^{-\frac{i\pi}{3}}c_2^\dag + e^{-\frac{i\pi}{3}} c_2 - e^{\frac{i\pi}{3}} c_1 + e^{i\left(\frac{\pi}{3} + x \right)}c_1^\dag \\\nonumber
+	[c_3, H]	&=& -e^{\frac{i\pi}{3}}c_2 - e^{\frac{i\pi}{3}} c_2^\dag + e^{-\frac{i\pi}{3}} c_1^\dag - e^{-i\left(\frac{\pi}{3} + x \right)}c_1
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	[c_2 - c_2^\dag, H] &=& (1-e^{-ix})c_1 + (1-e^{ix})c_1^\dag\\\nonumber
+	[\left( e^{\frac{i\pi}{6}} c_3 - e^{-i\frac{\pi}{6}} c_3^\dag \right), H] & = &  e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})c_1 + e^{-\frac{i\pi}{6}}( 1- e^{i\left(\frac{\pi}{3} + x\right)})c_1^\dag
+\end{eqnarray}
+However, the ratio between the coefficients of $c_1$ or $c_1^\dag$ in the two commutators above is purely real:
+\begin{eqnarray}
+-\frac{1-e^{-ix}}{e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})} = - \frac{2-2\cos x}{e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})(1-e^{ix})} = \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}}
+\end{eqnarray}
+Thus the following Majorana operator commutes with the Hamiltonian and is the second MZM:
+\begin{eqnarray}
+	\tilde{b}_{23} &\equiv& -iN\left(\left[\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}\right](c_2 - c_2^\dag) + (1-\cos x) \left( e^{\frac{i\pi}{6}} c_3 -e^{-\frac{i\pi}{6}} c_3^\dag\right)\right)\\\nonumber
+	&=& N\left(\left[\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}\right]b_2 + (1-\cos x)\left( \frac{1}{2} a_3 + \frac{\sqrt{3}}{2} b_3\right)\right)
+\end{eqnarray}
+where $N$ is a normalization factor. When $x=0$ only the first term survives since
+\begin{eqnarray}
+\lim_{x\rightarrow 0} \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}} = 0 
+\end{eqnarray}
+while when $x = -\frac{\pi}{3}$ only the second term survives. So $\tilde{b}_{23}$ continuously evolves from $b_2$ to $\frac{1}{2} a_3 + \frac{\sqrt{3}}{2} b_3$ along the path $\boldsymbol{\phi}_1\rightarrow \boldsymbol{\phi}_2$. 
+
 \section{Many-body Berry phase calculation for the 3-site Kitaev triangle}
 
 In this section we provide details for calculating the many-body Berry phase for braiding two MZM in the Kitaev triangle, as shown in Fig.~2 in the main text. To start we use the Hamiltonian Eq.~(1) in the main text,
