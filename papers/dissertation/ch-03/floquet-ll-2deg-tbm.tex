@@ -1,19 +1,24 @@
-\subsection{Tight-binding model 2DEG}
+\section{Tight-binding model 2DEG}
 
 We start with a nearest-neighbor single-orbital tight-binding Hamiltonian on a square lattice
 
 \begin{equation}
   \ham = \sum_{j,l} -h (\cc_{j,l} c_{j+1,l} + \cc_{j,l} c_{j,l+1} + h.c.)
 \end{equation}
+The incident laser beam as a vector potential is as follows
+
+\begin{equation}
+  \vec{A}(\vec{r}, t) = \dfrac{E}{\omega} \langle -\sin\omega t, \cos(Kx) \cos\omega t \rangle.
+\end{equation}
 Using the following approximation for smoothly varying vector potential fields
 
 \begin{equation}
-  \int_{\vec{r}_a}^{\vec{r}_b} \vec{A}(\vec{r}) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{\vec{r}_b+\vec{r}_b}{2} \right) \cdot (\vec{r}_b - \vec{r}_a)
+  \int_{\vec{r}_a}^{\vec{r}_b} \vec{A}(\vec{r},t) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{\vec{r}_b+\vec{r}_b}{2}, t \right) \cdot (\vec{r}_b - \vec{r}_a)
 \end{equation}
 and using Peierls substitution the Hamiltonian becomes
 
 \begin{equation}
-  \ham(t) = \sum_{j,l} (-h_{j,j+1}(t) \cc_{j,l} c_{j+1,l} - h_{l,l+1}(t) \cc_{j,l} c_{j,l+1} + h.c.),
+  \ham(t) = -\sum_{j,l} (h_{j,j+1}(t) \cc_{j,l} c_{j+1,l} + h_{l,l+1}(t) \cc_{j,l} c_{j,l+1} + h.c.),
 \end{equation}
 where
 

@@ -1,14 +1,18 @@
-\subsection{Tight-binding model Dirac}
-
+\section{Tight-binding model Dirac}
 We start with a nearest-neighbor single-orbital tight-binding Hamiltonian
 
 \begin{equation}
   \ham = - \sum_{jl\alpha,j'l'\beta} h \cc_{jl\alpha} c_{j'l'\beta} + h.c.
 \end{equation}
+The incident laser beam in vector potential forms looks like
+
+\begin{equation}
+  \vec{A}(\vec{r},t) = \dfrac{E}{\omega} \langle -\sin \omega t, \dfrac{1}{2} \sin(Kx) \cos 2\omega t \rangle.
+\end{equation}
 Using the following approximation for smoothly varying vector potential fields
 
 \begin{equation}
-  \int_{\vec{r}_{j,l}^{\alpha}} ^{\vec{r}_{j',l'}^{\beta}} \vec{A}(\vec{r}) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{ \vec{r}_{j',l'}^{\beta} + \vec{r}_{j,l}^{\alpha} }{2} \right) \cdot \left( \vec{r}_{j',l'}^{\beta} - \vec{r}_{j,l}^{\alpha} \right)
+  \int_{\vec{r}_{j,l}^{\alpha}} ^{\vec{r}_{j',l'}^{\beta}} \vec{A}(\vec{r},t) \cdot d\vec{l} \approx \vec{A} \left( \dfrac{ \vec{r}_{j',l'}^{\beta} + \vec{r}_{j,l}^{\alpha} }{2}, t \right) \cdot \left( \vec{r}_{j',l'}^{\beta} - \vec{r}_{j,l}^{\alpha} \right)
 \end{equation}
 where
 
@@ -16,9 +20,9 @@ where
   \vec{a}_1 &= \sqrt{3}a\hat{x} \\
   \vec{a}_2 &= 3a\hat{y} \\
   \vec{r}_{jl}^{A_1} &= j\vec{a}_1 + l\vec{a}_2 \\
-  \vec{r}_{jl}^{B_1} &= (j+\tfrac{1}{2})\vec{a}_1 + \dfrac{l}{6}\vec{a}_2 \\
-  \vec{r}_{jl}^{A_2} &= (j+\tfrac{1}{2})\vec{a}_1 + \dfrac{l}{2}\vec{a}_2 \\
-  \vec{r}_{jl}^{B_2} &= (j+1)\vec{a}_1 + \dfrac{2l}{3}\vec{a}_2.
+  \vec{r}_{jl}^{B_1} &= (j+\tfrac{1}{2})\vec{a}_1 + (l+\tfrac{1}{6})\vec{a}_2 \\
+  \vec{r}_{jl}^{A_2} &= (j+\tfrac{1}{2})\vec{a}_1 + (l+\tfrac{1}{2})\vec{a}_2 \\
+  \vec{r}_{jl}^{B_2} &= (j+1)\vec{a}_1 + (l+\tfrac{2}{3})\vec{a}_2.
 \end{align}
 Applying a Peierls substitution the Hamiltonian becomes
 
@@ -76,6 +80,28 @@ Each term has the general following form
 which looks a lot like the Hansen-Bessel integral function.
 However, because of the linear combination of $\sin\tau$ and $\cos 2\tau$, there is no elementary solution to the integral as currently defined.
 \Red{I think if it was a linear combination of $\sin\tau$ and $\cos\tau$ we could use an addition of sines identity and maybe get a Hansen-Bessel integral.}
-\Red{A mute point for this project since we need the $\cos 2\tau$ term to match the continuum models expectation of Landau levels.}
+\Red{A moot point for this project since we need the $\cos 2\tau$ term to match the continuum models expectation of Landau levels.}
 We thus solve the integral numerically for each given $n$.
-
+After the time domain Fourier transform the Hamiltonian can be reduced to the following matrix form
+\begin{equation}
+  \ham = -\sum_{jk} \left[ \Psi_{jk}^{\dagger} \ham_{jj} \Psi_{jk} + \Psi_{jk}^{\dagger} \ham_{j,j+1}'(k) \Psi_{j+1,k} + h.c. \right]
+\end{equation}
+\[
+  \ham_{jj} =
+  \begin{bmatrix}
+    0 & h_{jlA_1}^{jlB_2} & 0 & 0 \\
+    0 & 0 & h_{jlB_1}^{jlA_2} & 0 \\
+    0 & 0 & 0 & h_{jlA_2}^{jlB_2} \\
+    0 & 0 & 0 & 0
+  \end{bmatrix}
+\]
+\[
+  \ham_{j,j+1}'(k) =
+  \begin{bmatrix}
+    0 & 0 & 0 & 0 \\
+    h_{jlB_1}^{j+1,lA_1} & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    e^{-i3ka} h_{jlB_2}^{j+1,l+1,A_1} & 0 & h_{jlB_2}^{j+1,lA_2} & 0
+  \end{bmatrix}
+\]
+with $\Psi_{jk} = [c_{jkA_1}, c_{jkB_1}, c_{jkA_2}, c_{jkB_2}]^T$.
