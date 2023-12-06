@@ -52,7 +52,7 @@
 \maketitle
 
 \section{Analytic solutions of the Kitaev triangle}
-In this section we present some analytic results related to the 3-site Kitaev triangle. 
+In this section we present some analytic results related to the 3-site Kitaev triangle.
 
 We start from the 1D Kitaev chain Hamiltonian with complex nearest-neighbor hopping $-te^{i\phi}$ and $p$-wave pairing $\Delta e^{i\theta}$ in the Kitaev limit ($t=\Delta > 0, \mu = 0$):
 \begin{eqnarray}
@@ -73,17 +73,17 @@ Considering the unitary transformation
 		b_N'
 	\end{pmatrix} \equiv\begin{pmatrix}
 	C_\phi & - S_\phi\\
-	S_\phi & C_\phi 
+	S_\phi & C_\phi
 \end{pmatrix}\begin{pmatrix}
 a_N\\
 b_N
 \end{pmatrix}
 \end{eqnarray}
-we have 
+we have
 \begin{eqnarray}
 	H_N = itb_{N-1} a'_N
 \end{eqnarray}
-Therefore the other MZM is $b'_N = S_\phi a_N + C_\phi b_N$. Similarly, when $\phi = \theta + \pi$ the other MZM is $a'_{N} \equiv C_\phi a_N - S_\phi b_N$. 
+Therefore the other MZM is $b'_N = S_\phi a_N + C_\phi b_N$. Similarly, when $\phi = \theta + \pi$ the other MZM is $a'_{N} \equiv C_\phi a_N - S_\phi b_N$.
 
 For the 3-site Kitaev triangle at the initial configuration $\boldsymbol{\phi}_1$, if the three edges were isolated from each other, the MZM would have been
 \begin{eqnarray}
@@ -91,7 +91,7 @@ For the 3-site Kitaev triangle at the initial configuration $\boldsymbol{\phi}_1
 	2-3:&& b_2,\,\frac{1}{2}a_3 + \frac{\sqrt{3}}{2}b_3\\\nonumber
 	3-1:&& a_1,\, \frac{\sqrt{3}}{2}a_3 + \frac{1}{2} b_3
 \end{eqnarray}
-One can therefore see that the two MZM at site 3 are not compatible with each other. 
+One can therefore see that the two MZM at site 3 are not compatible with each other.
 
 We next solve for the excited states of the Kitaev triangle at the initial configuration $\boldsymbol{\phi}_1$. The Hamiltonian in the Majorana basis is
 \begin{eqnarray}
@@ -112,7 +112,7 @@ We therefore rotate the Hamiltonian so that $O$ becomes diagonal using the follo
 \begin{eqnarray}
 	U = e^{-\frac{i\pi}{3}\sigma_y}\otimes e^{i\frac{\pi}{4}\tau_x}
 \end{eqnarray}
-which leads to 
+which leads to
 \begin{eqnarray}
 	U^\dag O U &=& {\rm Diag}(1,-1,-1,1)
 \end{eqnarray}
@@ -122,7 +122,7 @@ $U$ therefore block-diagonalizes $h$ as
 		1 &  &  & -1 \\
 		& -1 & 1 & \\
 		& 1 & -3 & \\
-		-1 & & & 3 
+		-1 & & & 3
 	\end{pmatrix}
 \end{eqnarray}
 which can then be diagonalized by
@@ -144,7 +144,7 @@ We therefore have the two lowest excited states with eigenenergies $\pm t(1-\fra
 	\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} \\
 0  \\
 0 \\
-\frac{1}{\sqrt{4+2\sqrt{2}}} 
+\frac{1}{\sqrt{4+2\sqrt{2}}}
 	\end{pmatrix} = \Gamma \times \frac{1}{4\sqrt{2+\sqrt{2}}} \begin{pmatrix}
 	1+\sqrt{2}-\sqrt{3} i \\
 	(1+\sqrt{2})i-\sqrt{3}  \\
@@ -207,9 +207,9 @@ Thus the following Majorana operator commutes with the Hamiltonian and is the se
 \end{eqnarray}
 where $N$ is a normalization factor. When $x=0$ only the first term survives since
 \begin{eqnarray}
-\lim_{x\rightarrow 0} \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}} = 0 
+\lim_{x\rightarrow 0} \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}} = 0
 \end{eqnarray}
-while when $x = -\frac{\pi}{3}$ only the second term survives. So $\tilde{b}_{23}$ continuously evolves from $b_2$ to $\frac{1}{2} a_3 + \frac{\sqrt{3}}{2} b_3$ along the path $\boldsymbol{\phi}_1\rightarrow \boldsymbol{\phi}_2$. 
+while when $x = -\frac{\pi}{3}$ only the second term survives. So $\tilde{b}_{23}$ continuously evolves from $b_2$ to $\frac{1}{2} a_3 + \frac{\sqrt{3}}{2} b_3$ along the path $\boldsymbol{\phi}_1\rightarrow \boldsymbol{\phi}_2$.
 
 \section{Many-body Berry phase calculation for the 3-site Kitaev triangle}
 
@@ -283,7 +283,7 @@ We end this section by noting that the parameter path considered for the 3-site 
   \subfloat[]{\includegraphics[width=0.46\textwidth]{./figures/supp/spectral-flow-nr-50-w-3-mu-1_6.pdf}} \\
   \hspace{70pt}
   \subfloat[]{\includegraphics[width=0.50\textwidth]{./figures/supp/GS-A-2_74-nr-50-w-3-mu-1_6.pdf}}
-  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{      3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: white---$\mathcal{M}=1$, dark blue---$\mathcal{M}=-1$, light blue---$\mathcal{M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu=1.6$. (c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $A=2.4709$.}
+  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}_{t,b}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: purple---$[\mathcal{M}_t,\mathcal{M}_b]=[1,1]$, yellow---$[\mathcal{M}_t,\mathcal{M}_b]=[-1,-1]$, red---$[\mathcal{M}_t,\mathcal{M}_b]=[1,-1]$, orange---$[\mathcal{M}_t,\mathcal{M}_b] = [-1,1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu=1.6$. (c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $A=2.4709$.}
   \label{fig: supp pd}
 \end{figure}
 
