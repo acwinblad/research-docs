@@ -1,0 +1,16 @@
+Dec. 16th, 2023
+
+Re: BJR1430
+Superconducting triangular islands as a platform for manipulating Majorana zero modes
+
+Dr. Ashot Melikyan
+Senior Associate Editor
+Physical Review B
+
+Dear Dr. Melikyan,
+
+Thank you for the prompt handling of our work. We are delighted to see the overall positive feedbacks from both referees. In the separately enclosed response letter we have addressed all of the questions and critiques from both referees in detail and have listed the major changes. We note that while Referee #2 has some reservation on our work due to existing literature on manipulating topological superconductor wires using vector potential or supercurrents, we have carefully explained in our reponse that the main focus and also novelty of our work is on creating and manipulating Majorana zero modes (MZM) in different triangular structures that are feasible for near-term devices. We believe our work points out new directions and model systems for the pursuit of MZM-based qubits and circuits, which qualify it of being dissminated to the broader community in this field as a Letter in Physical Review B. We look forward to hearing from you about the editorial decision of our work soon.
+
+Sincerely,
+
+Hua Chen
