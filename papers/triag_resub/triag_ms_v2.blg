@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: triag_ms_v2.aux
+The style file: apsrev4-2.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: triag_ms_v2Notes.bib
+Database file #2: triag_cite.bib
+Repeated entry---line 1552 of file triag_cite.bib
+ : @book{DeGennes_book
+ :                    ,
+I'm skipping whatever remains of this entry
+control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (0) allowed
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--empty author in supp
+Warning--empty year in supp
+You've used 68 entries,
+            6079 wiz_defined-function locations,
+            2159 strings with 35136 characters,
+and the built_in function-call counts, 87180 in all, are:
+= -- 5603
+> -- 2775
+< -- 521
++ -- 824
+- -- 700
+* -- 14199
+:= -- 7744
+add.period$ -- 66
+call.type$ -- 68
+change.case$ -- 328
+chr.to.int$ -- 76
+cite$ -- 72
+duplicate$ -- 7848
+empty$ -- 6136
+format.name$ -- 1570
+if$ -- 17944
+int.to.chr$ -- 3
+int.to.str$ -- 75
+missing$ -- 1208
+newline$ -- 250
+num.names$ -- 196
+pop$ -- 2866
+preamble$ -- 1
+purify$ -- 329
+quote$ -- 0
+skip$ -- 3621
+stack$ -- 0
+substring$ -- 1891
+swap$ -- 7982
+text.length$ -- 343
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 1079
+warning$ -- 3
+while$ -- 207
+width$ -- 0
+write$ -- 642
+(There was 1 error message)
