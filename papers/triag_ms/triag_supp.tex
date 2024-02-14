@@ -5,7 +5,9 @@
 %\usepackage[demo]{graphicx}
 \usepackage{graphicx}
 
+\usepackage{xr-hyper}
 \usepackage{hyperref}
+\externaldocument[]{triag_final}
 \hypersetup{colorlinks=true,urlcolor= blue,citecolor=blue,linkcolor= blue,bookmarks=true,bookmarksopen=false}
 
 \usepackage{color}
@@ -277,25 +279,25 @@ We end this section by noting that the parameter path considered for the 3-site 
 \section{Corner MZM in finite-width hollow triangles}
 
 \begin{figure}[ht]
-  \hspace{28pt}
-  \subfloat[]{\includegraphics[width=0.65\textwidth]{./figures/supp/topological-phase-diagram-1pi6-n-3.pdf}} \\
+  \hspace{43pt}
+  \subfloat[]{\includegraphics[width=0.54\textwidth]{./figures/supp/topological-phase-diagram-1pi3-w-3.pdf}} \\
   \vspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.46\textwidth]{./figures/supp/spectral-flow-nr-50-w-3-mu-1_6.pdf}} \\
-  \hspace{70pt}
-  \subfloat[]{\includegraphics[width=0.50\textwidth]{./figures/supp/GS-A-2_74-nr-50-w-3-mu-1_6.pdf}}
-  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}_{b,t}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: purle---$[\mathcal{M}_b,\mathcal{M}_t]=[1,1]$, yellow---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,-1]$, red---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,1]$, orange---$[\mathcal{M}_b,\mathcal{M}_t]=[1,-1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu=1.6$. (c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $A=2.4709$.}
+  \subfloat[]{\includegraphics[width=0.46\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-1_6000.pdf}} \\
+  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}_{b,t}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: purle---$[\mathcal{M}_b,\mathcal{M}_t]=[1,1]$, yellow---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,-1]$, red---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,1]$, orange---$[\mathcal{M}_b,\mathcal{M}_t]=[1,-1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=80$, $W=3$, and $\mu=1.6$.}
   \label{fig: supp pd}
 \end{figure}
 
 A model that is closer to a realistic hollow triangular island is the finite-width triangular chain or ribbon. An example, illustrated in Figure \ref{fig: supp pd} (c), has its edge length $L=50$ and width $W=3$. The phase diagram Fig.~\ref{fig: supp pd} (a) is created in a similar way as that in Fig.~3 (a) of the main text, assuming a constant vector potential and infinitely long $W=3$ ribbons. The spectral flow for the actual triangle with $\mu = 1.6$ in Fig.~\ref{fig: supp pd} (b) shows MZM in the parameter regions in agreement with the phase diagram. Fig.~\ref{fig: supp pd} (c) plots the MZM wavefunction for $A=2.7409$ and $\mu=1.6$ that are indeed well localized at the bottom corners.
 
 \begin{figure}[ht]
-  \hspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.5\textwidth]{./figures/supp/spectral-flow-w-3.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Square-w-3.pdf}}
-  %\subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Circle-w-3.pdf}}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/GS-T-Diamond-w-3.pdf}}
-  \caption{(a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (b-c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0$ and $\frac{\pi}{3}$, respectively.}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/topological-phase-diagram-w-3-mu-p1_6000.pdf}}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/band-gap-rotation-w-3-mu-p1_6000.pdf}}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-p1_6000.pdf}}\\
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Square-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Triangle-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Circle-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Diamond-w-3.pdf}}\hspace{-31.5pt}
+  \caption{(a) Topological phase diagram for a W=3 triangular ribbon with the Hamiltonian Eq.~\eqref{eq:Hribbon} by superimposing the $\mathcal{M}_{b,r,l}(\mu=1.6,A,\varphi)$ plots of quasi 1D ribbons, $\varphi_{r,l}$ are out of phase with $\varphi_b$ by $\pi/3$ and $-\pi/3$, respectively. (b) Bandgap size of the topological phase diagram, with both diagrams a path of vector potential strengths as a function of rotation angle allows for Majorana zero modes to persist throughout rotation.  (c) Spectral flow of a hollow triangle with $W=3$, $L=80$, $\mu=1.6$, and $\mathbf A = A(\varphi)(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$ where a triangle wavefunction $A(\varphi) = A_{max} - 2(A_{max}-A_{min})\left|\frac{\varphi}{\pi/3} - \left\lfloor \frac{\varphi}{\pi/3} - \frac{1}{2} \right\rfloor\right|$, $A_{max} = 0.83$ and $A_{min} = 0.77$, is used to prevent bandgap from opening . (d-g) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = [0, \frac{\pi}{6}, \frac{\pi}{3}, \frac{\pi}{2}]$.}
   \label{fig: supp rotation}
 \end{figure}
 

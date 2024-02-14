@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{59}%
+\begin{thebibliography}{66}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -814,6 +814,47 @@
   {https://doi.org/10.1038/ncomms10395} {\bibfield  {journal} {\bibinfo
   {journal} {Nat Commun}\ }\textbf {\bibinfo {volume} {7}},\ \bibinfo {pages}
   {10395} (\bibinfo {year} {2016}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pahomi}\ \emph {et~al.}(2020)\citenamefont {Pahomi},
+  \citenamefont {Sigrist},\ and\ \citenamefont
+  {Soluyanov}}]{pahomiBraidingMajoranaCorner2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont
+  {Pahomi}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sigrist}},\
+  and\ \bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Soluyanov}},\
+  }\bibfield  {title} {\bibinfo {title} {Braiding {{Majorana}} corner modes in
+  a second-order topological superconductor},\ }\href
+  {https://doi.org/10.1103/PhysRevResearch.2.032068} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Res.}\ }\textbf {\bibinfo {volume} {2}},\
+  \bibinfo {pages} {032068} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph
+  {et~al.}(2020{\natexlab{a}})\citenamefont {Zhang}, \citenamefont {Calzona},\
+  and\ \citenamefont {Trauzettel}}]{zhangsb_2020_1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.-B.}\ \bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Calzona}},\
+  and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Trauzettel}},\
+  }\bibfield  {title} {\bibinfo {title} {All-electrically tunable networks of
+  majorana bound states},\ }\href {https://doi.org/10.1103/PhysRevB.102.100503}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {102}},\ \bibinfo {pages} {100503} (\bibinfo {year}
+  {2020}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph
+  {et~al.}(2020{\natexlab{b}})\citenamefont {Zhang}, \citenamefont {Rui},
+  \citenamefont {Calzona}, \citenamefont {Choi}, \citenamefont {Schnyder},\
+  and\ \citenamefont {Trauzettel}}]{zhangsb_2020_2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.-B.}\ \bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {W.~B.}\ \bibnamefont {Rui}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Calzona}}, \bibinfo
+  {author} {\bibfnamefont {S.-J.}\ \bibnamefont {Choi}}, \bibinfo {author}
+  {\bibfnamefont {A.~P.}\ \bibnamefont {Schnyder}},\ and\ \bibinfo {author}
+  {\bibfnamefont {B.}~\bibnamefont {Trauzettel}},\ }\bibfield  {title}
+  {\bibinfo {title} {Topological and holonomic quantum computation based on
+  second-order topological superconductors},\ }\href
+  {https://doi.org/10.1103/PhysRevResearch.2.043025} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Res.}\ }\textbf {\bibinfo {volume} {2}},\
+  \bibinfo {pages} {043025} (\bibinfo {year} {2020}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Pietzsch}\ \emph {et~al.}(2006)\citenamefont
   {Pietzsch}, \citenamefont {Okatov}, \citenamefont {Kubetzka}, \citenamefont
   {Bode}, \citenamefont {Heinze}, \citenamefont {Lichtenstein},\ and\
@@ -856,38 +897,81 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
   {volume} {106}},\ \bibinfo {pages} {014508} (\bibinfo {year}
   {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hyart}\ \emph {et~al.}(2013)\citenamefont {Hyart},
+  \citenamefont {van Heck}, \citenamefont {Fulga}, \citenamefont {Burrello},
+  \citenamefont {Akhmerov},\ and\ \citenamefont {Beenakker}}]{Hyart_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Hyart}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {van Heck}},
+  \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont {Fulga}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Burrello}}, \bibinfo {author}
+  {\bibfnamefont {A.~R.}\ \bibnamefont {Akhmerov}},\ and\ \bibinfo {author}
+  {\bibfnamefont {C.~W.~J.}\ \bibnamefont {Beenakker}},\ }\bibfield  {title}
+  {\bibinfo {title} {Flux-controlled quantum computation with majorana
+  fermions},\ }\href {https://doi.org/10.1103/PhysRevB.88.035121} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {88}},\ \bibinfo {pages} {035121} (\bibinfo {year} {2013})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Dmytruk}\ \emph {et~al.}(2019)\citenamefont
+  {Dmytruk}, \citenamefont {Thakurathi}, \citenamefont {Loss},\ and\
+  \citenamefont {Klinovaja}}]{Dmytruk_2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Dmytruk}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Thakurathi}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Loss}},\ and\ \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Klinovaja}},\ }\bibfield  {title}
+  {\bibinfo {title} {Majorana bound states in double nanowires with reduced
+  zeeman thresholds due to supercurrents},\ }\href
+  {https://doi.org/10.1103/PhysRevB.99.245416} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo
+  {pages} {245416} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {De~Gennes}(1999)}]{DeGennes_book}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~G.}\ \bibnamefont
+  {De~Gennes}},\ }\href {https://cds.cern.ch/record/566105} {\emph {\bibinfo
+  {title} {{Superconductivity of Metals and Alloys}}}},\ Advanced book
+  classics\ (\bibinfo  {publisher} {Perseus},\ \bibinfo {address} {Cambridge,
+  MA},\ \bibinfo {year} {1999})\BibitemShut {NoStop}%
 \bibitem [{sup()}]{supp}%
   \BibitemOpen
   \href@noop {} {\bibinfo  {journal} {{See Supplemental Material at [url]}}\
   }\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fu}(2021)}]{FU_2021}%
+  \BibitemOpen
+\bibfield  {journal} {  }\bibfield  {author} {\bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Fu}},\ }\bibfield  {title} {\bibinfo {title} {Majorana
+  orthogonal transformation and majorana zero modes in free fermionic
+  systems},\ }\href {https://doi.org/https://doi.org/10.1016/j.aop.2021.168564}
+  {\bibfield  {journal} {\bibinfo  {journal} {Annals of Physics}\ }\textbf
+  {\bibinfo {volume} {432}},\ \bibinfo {pages} {168564} (\bibinfo {year}
+  {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pandey}\ \emph {et~al.}(2023)\citenamefont {Pandey},
+  \citenamefont {Kaushal}, \citenamefont {Alvarez},\ and\ \citenamefont
+  {Dagotto}}]{Pandey_2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Pandey}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Kaushal}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Alvarez}},\ and\ \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Dagotto}},\ }\bibfield  {title}
+  {\bibinfo {title} {Majorana zero modes in y-shape interacting kitaev wires},\
+  }\href {https://doi.org/10.1038/s41535-023-00584-5} {\bibfield  {journal}
+  {\bibinfo  {journal} {npj Quantum Materials}\ }\textbf {\bibinfo {volume}
+  {8}},\ \bibinfo {pages} {51} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Li}\ \emph {et~al.}(2014)\citenamefont {Li},
   \citenamefont {Chen}, \citenamefont {Drozdov}, \citenamefont {Yazdani},
   \citenamefont {Bernevig},\ and\ \citenamefont
   {MacDonald}}]{liTopologicalSuperconductivityInduced2014}%
   \BibitemOpen
-\bibfield  {journal} {  }\bibfield  {author} {\bibinfo {author} {\bibfnamefont
-  {J.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Chen}}, \bibinfo {author} {\bibfnamefont {I.~K.}\ \bibnamefont {Drozdov}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Yazdani}}, \bibinfo
-  {author} {\bibfnamefont {B.~A.}\ \bibnamefont {Bernevig}},\ and\ \bibinfo
-  {author} {\bibfnamefont {A.~H.}\ \bibnamefont {MacDonald}},\ }\bibfield
-  {title} {\bibinfo {title} {Topological superconductivity induced by
-  ferromagnetic metal chains},\ }\href
-  {https://doi.org/10.1103/PhysRevB.90.235433} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo
-  {pages} {235433} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Pahomi}\ \emph {et~al.}(2020)\citenamefont {Pahomi},
-  \citenamefont {Sigrist},\ and\ \citenamefont
-  {Soluyanov}}]{pahomiBraidingMajoranaCorner2020}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont
-  {Pahomi}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sigrist}},\
-  and\ \bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Soluyanov}},\
-  }\bibfield  {title} {\bibinfo {title} {Braiding {{Majorana}} corner modes in
-  a second-order topological superconductor},\ }\href
-  {https://doi.org/10.1103/PhysRevResearch.2.032068} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. Res.}\ }\textbf {\bibinfo {volume} {2}},\
-  \bibinfo {pages} {032068} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Li}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Chen}}, \bibinfo
+  {author} {\bibfnamefont {I.~K.}\ \bibnamefont {Drozdov}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Yazdani}}, \bibinfo {author} {\bibfnamefont
+  {B.~A.}\ \bibnamefont {Bernevig}},\ and\ \bibinfo {author} {\bibfnamefont
+  {A.~H.}\ \bibnamefont {MacDonald}},\ }\bibfield  {title} {\bibinfo {title}
+  {Topological superconductivity induced by ferromagnetic metal chains},\
+  }\href {https://doi.org/10.1103/PhysRevB.90.235433} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {90}},\
+  \bibinfo {pages} {235433} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mishmash}\ \emph {et~al.}(2020)\citenamefont
   {Mishmash}, \citenamefont {Bauer}, \citenamefont {{von Oppen}},\ and\
   \citenamefont {Alicea}}]{mishmashDephasingLeakageDynamics2020}%

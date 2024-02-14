@@ -126,28 +126,10 @@ Consider Eq.~\eqref{eq:HBdG} on a triangular lattice defined by unit-length latt
 where $\Psi_k \equiv (c_{k,1},\dots, c_{k,W},c^\dag_{-k,1},\dots c_{-k,W}^\dag)^T$. $h_t(k)$ is a $W\times W$ Hermitian tridiagonal matrix with $(h_t)_{n,n} = -2t\cos(k+\mathbf A\cdot \mathbf a_1) - \mu$ and $(h_t)_{n,n+1} = -t\left( e^{i(-k+\mathbf A\cdot \mathbf a_3)}  + e^{i\mathbf A \cdot \mathbf a_2}\right)$. $h_\Delta(k)$ is a $W\times W$ tridiagonal matrix with $(h_\Delta)_{n,n} = -2i\de \sin k $ and $(h_\Delta)_{n,n\pm 1} = \mp \de\left[ e^{-i(\pm k + \frac{2\pi}{3})} + e^{-i\frac{\pi}{3}} \right]$. One can then use Eq.~\eqref{eq:Hribbon} to calculate the Majorana number \cite{kitaevUnpairedMajoranaFermions2001,liTopologicalSuperconductivityInduced2014} $\mathcal{M}$ of the 1D ribbon. When $\mathcal{M} = -1$, the 1D system is in a nontrivial topological phase with MZM appearing at open ends of semi-infinite ribbons, and otherwise for $\mathcal{M} = 1$.
 
 \begin{figure}[ht]
-  \subfloat[]{\includegraphics[width=0.0\textwidth]{./triangular-lattice-finite-width-ribbon.pdf}}\\
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./triangular-lattice-finite-width-ribbon.pdf}}\\
   \hspace{10pt}
-  \begin{tikzpicture}
-    \node[inner sep=0pt] (figure) at (0.00,0)
-    {\includegraphics[width=0.40\textwidth]{./triangular-lattice-finite-width-ribbon.pdf}} \\
-
-    \node[inner sep=0pt] (a) at (-2.5,1.4) {(a)};
-    \node[inner sep=0pt] (A) at (-0.75,1.00) {\small $\vec{A}$};
-    \node[inner sep=0pt] (varphi) at (-0.2,-0.05) {\small $\varphi$};
-    \node[inner sep=0pt] (x) at (3.7,-1.18) {\small $x$};
-    \node[inner sep=0pt] (y) at (0.11,1.45) {\small $y$};
-    %\node[inner sep=0pt] (w1) at (-3.3,-1.20) {\small $W=1$};
-    %\node[inner sep=0pt] (w2) at (-3.3,-0.40) {\small $W=2$};
-    %\node[inner sep=0pt] (w3) at (-3.3,0.40) {\small $W=3$};
-    \node[inner sep=0pt] (n1) at (-2.6,-1.50) {\small $n=1$};
-    \node[inner sep=0pt] (nL) at (2.8,-1.50) {\small $n=L$};
-    \node[inner sep=0pt] (a) at (-1.22,-1.70) {\small $a$};
-  \end{tikzpicture}
-  \vspace{-15pt}
-  \hspace{30pt}
-  \subfloat[]{\includegraphics[width=0.355\textwidth]{./topological-phase-diagram-1pi6-w-1.pdf}} \\
-  \vspace{-00pt}
+  \subfloat[]{\includegraphics[width=0.355\textwidth]{./topological-phase-diagram-1pi3-w-1.pdf}} \\
+  \hspace{-20pt}
   \subfloat[]{\includegraphics[width=0.30\textwidth]{./spectral-flow-nr-50-w-1-mu-1_6.pdf}}
   \caption{(a) Schematic illustration of a finite-width ribbon based on the triangular lattice. (b) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.~\eqref{eq:Hribbon} obtained by superimposing the $\mathcal{M}_{t,b}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: black---$[\mathcal{M}_b,\mathcal{M}_t]=[1,1]$, yellow---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,-1]$, purple---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,1]$, orange---$[\mathcal{M}_b, \mathcal{M}_t]=[1,-1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu=1.6$. All calculations are done with $t=\Delta =1$.}
   \label{fig: pd}
@@ -160,11 +142,11 @@ To show that corner MZM indeed appear when the conditions given by the phase dia
 \begin{figure*}[ht]
   \subfloat[]{\includegraphics[height=135pt]{./topological-phase-diagram-w-1-mu-p1_1000.pdf}}
   \subfloat[]{\includegraphics[height=135pt]{./spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_1.pdf}} \\
-  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Square.pdf}}\hspace{-31.5pt}
-  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Triangle.pdf}}\hspace{-31.5pt}
-  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Circle.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Square.pdf}}\hspace{-30.0pt}
+  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Triangle.pdf}}\hspace{-30.0pt}
+  \subfloat[]{\includegraphics[height=100pt]{./GS-T-Circle.pdf}}\hspace{-30.0pt}
   \subfloat[]{\includegraphics[height=100pt]{./GS-T-Diamond.pdf}}
-  \caption{(a) Topological phase diagram for a W=1 triangular ribbon with the Hamiltonian Eq.~\eqref{eq:Hribbon} by superimposing the $\mathcal{M}_{b,r,l}(\mu=1.1,A,\varphi)$ plots of 1D chains, $\varphi_{r,l}$ are out of phase with $\varphi_b$ by $\pi/6$ and $-\pi/6$, respectively. The colors are mapped based on which edges have non-trivial topology, read as $[\mathcal{M}_b, \mathcal{M}_r, \mathcal{M}_l]$. Black and yellow, $[1,1,1]$ and $[-1,-1,-1]$, correspond to all edges being trivial and non-trivial topology, respectively. For values of $A \approx (2.25,2.5)$ as $\varphi$ rotates the color sequence repeats from dark purple to yellow-orange, which corresponds to the non-trivial topology rotating ccw along the edges starting with the bottom edge. (b) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu=1.1$, and $A=2.35$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (c-f) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0$, $\frac{\pi}{12}$, $\frac{\pi}{6}$, and $\frac{\pi}{3}$, respectively.}
+  \caption{(a) Topological phase diagram for a W=1 triangular ribbon with the Hamiltonian Eq.~\eqref{eq:Hribbon} by superimposing the $\mathcal{M}_{b,r,l}(\mu=1.1,A,\varphi)$ plots of 1D chains, $\varphi_{r,l}$ are out of phase with $\varphi_b$ by $\pi/3$ and $-\pi/3$, respectively. The colors are mapped based on which edges have non-trivial topology, read as $[\mathcal{M}_b, \mathcal{M}_r, \mathcal{M}_l]$. Black and yellow, $[1,1,1]$ and $[-1,-1,-1]$, correspond to all edges being trivial and non-trivial topology, respectively. For values of $A \approx (2.25,2.5)$ as $\varphi$ rotates the color sequence repeats from dark purple to yellow-orange, which corresponds to the non-trivial topology rotating ccw along the edges starting with the bottom edge. (b) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu=1.1$, and $A=2.35$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (c-f) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0$, $\frac{\pi}{12}$, $\frac{\pi}{6}$, and $\frac{\pi}{3}$, respectively.}
   \label{fig: rotation}
 \end{figure*}
 
