@@ -9,35 +9,42 @@
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\beamer@sectionpages {2}{3}}
 \headcommand {\beamer@subsectionpages {2}{3}}
-\headcommand {\sectionentry {2}{Formulation}{4}{Formulation}{0}}
-\headcommand {\slideentry {2}{0}{1}{4/4}{}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {2}{0}{2}{5/5}{}{0}}
-\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\sectionentry {2}{Kitaev Triangle}{4}{Kitaev Triangle}{0}}
+\headcommand {\slideentry {2}{0}{1}{4/5}{}{0}}
+\headcommand {\beamer@framepages {4}{5}}
 \headcommand {\beamer@sectionpages {4}{5}}
 \headcommand {\beamer@subsectionpages {4}{5}}
-\headcommand {\sectionentry {3}{Results}{6}{Results}{0}}
-\headcommand {\slideentry {3}{0}{1}{6/6}{}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {3}{0}{2}{7/7}{}{0}}
-\headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {3}{0}{3}{8/8}{}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@sectionpages {6}{8}}
-\headcommand {\beamer@subsectionpages {6}{8}}
-\headcommand {\sectionentry {4}{Summary}{9}{Summary}{0}}
-\headcommand {\slideentry {4}{0}{1}{9/9}{}{0}}
-\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\sectionentry {3}{Hollow Triangle}{6}{Hollow Triangle}{0}}
+\headcommand {\slideentry {3}{0}{1}{6/8}{}{0}}
+\headcommand {\beamer@framepages {6}{8}}
+\headcommand {\slideentry {3}{0}{2}{9/14}{}{0}}
+\headcommand {\beamer@framepages {9}{14}}
+\headcommand {\slideentry {3}{0}{3}{15/20}{}{0}}
+\headcommand {\beamer@framepages {15}{20}}
+\headcommand {\beamer@sectionpages {6}{20}}
+\headcommand {\beamer@subsectionpages {6}{20}}
+\headcommand {\sectionentry {4}{Braiding}{21}{Braiding}{0}}
+\headcommand {\slideentry {4}{0}{1}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@sectionpages {21}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\sectionentry {5}{Summary}{22}{Summary}{0}}
+\headcommand {\slideentry {5}{0}{1}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
 \headcommand {\gdef \insertmainframenumber {9}}
 \headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{9}}
-\headcommand {\beamer@sectionpages {9}{9}}
-\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\beamer@appendixpages {10}}
-\headcommand {\slideentry {4}{0}{2}{10/10}{}{1}}
-\headcommand {\beamer@framepages {10}{10}}
-\headcommand {\beamer@partpages {10}{10}}
-\headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\beamer@sectionpages {10}{10}}
-\headcommand {\beamer@documentpages {10}}
-\headcommand {\gdef \inserttotalframenumber {10}}
+\headcommand {\beamer@partpages {1}{22}}
+\headcommand {\beamer@sectionpages {22}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\beamer@appendixpages {23}}
+\headcommand {\slideentry {5}{0}{2}{23/23}{}{1}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {5}{0}{3}{24/24}{}{1}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {5}{0}{4}{25/25}{}{1}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@partpages {23}{25}}
+\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\beamer@sectionpages {23}{25}}
+\headcommand {\beamer@documentpages {25}}
+\headcommand {\gdef \inserttotalframenumber {12}}
