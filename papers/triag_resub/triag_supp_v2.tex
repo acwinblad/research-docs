@@ -66,7 +66,7 @@ where $S_\phi\equiv \sin\phi$, $C_\phi\equiv \cos\phi$, etc. Therefore, when $\p
 \begin{eqnarray}
 	H_N = -itb_{N-1}(S_\phi b_{N} - C_\phi a_N).
 \end{eqnarray}
-Considering the unitary transformation \cite{FU_2021}
+Considering the unitary transformation
 \begin{eqnarray}
 	\begin{pmatrix}
 		a_N' \\
@@ -277,35 +277,46 @@ We end this section by noting that the parameter path considered for the 3-site 
 \section{Corner MZM in finite-width hollow triangles}
 
 \begin{figure}[ht]
-  \hspace{28pt}
-  \subfloat[]{\includegraphics[width=0.55\textwidth]{./figures/supp/topological-phase-diagram-1pi3-w-3.pdf}} \\
+ \hspace{43pt}
+  \subfloat[]{\includegraphics[width=0.54\textwidth]{./figures/supp/topological-phase-diagram-1pi3-w-3.pdf}} \\
   \vspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.46\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-1_6000.pdf}} \\
-  \hspace{70pt}
-  \subfloat[]{\includegraphics[width=0.45\textwidth]{./figures/supp/GS-A-2_74-nr-50-w-3-mu-1_6.pdf}}
-  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}_{t,b}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: purple---$[\mathcal{M}_t,\mathcal{M}_b]=[1,1]$, yellow---$[\mathcal{M}_t,\mathcal{M}_b]=[-1,-1]$, red---$[\mathcal{M}_t,\mathcal{M}_b]=[1,-1]$, orange---$[\mathcal{M}_t,\mathcal{M}_b] = [-1,1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu=1.6$. (c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $A=2.4709$.}
+  \subfloat[]{\includegraphics[width=0.46\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-1_6000.pdf}} 
+  \caption{(a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal{M}_{b,t}(A, \mu)$ plots of 1D chains with $\mathbf A = A\hat{y}$ and $\mathbf A = A(\frac{\sqrt{3}}{2}\hat{x}+\frac{1}{2}\hat{y})$. Color scheme: purple---$[\mathcal{M}_b,\mathcal{M}_t]=[1,1]$, yellow---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,-1]$, red---$[\mathcal{M}_b,\mathcal{M}_t]=[-1,1]$, orange---$[\mathcal{M}_b,\mathcal{M}_t] = [1,-1]$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=80$, $W=3$, and $\mu=1.6$.}
   \label{fig: supp pd}
 \end{figure}
 
-A model that is closer to a realistic hollow triangular island is the finite-width triangular chain or ribbon. An example, illustrated in Figure \ref{fig: supp pd} (c), has its edge length $L=50$ and width $W=3$. The phase diagram Fig.~\ref{fig: supp pd} (a) is created in a similar way as that in Fig.~3 (b) of the main text, assuming a constant vector potential along $\hat{y}$ and infinitely long $W=3$ ribbons. The spectral flow for the actual triangle with $\mu = 1.6$ in Fig.~\ref{fig: supp pd} (b) shows MZM in the parameter regions in agreement with the phase diagram. Fig.~\ref{fig: supp pd} (c) plots the MZM wavefunction for $A=2.4709$ and $\mu=1.6$ that are indeed well localized at the bottom corners.
+A model that is closer to a realistic hollow triangular island is the finite-width triangular chain or ribbon. An example, illustrated in Figure \ref{fig: supp rotation} (d), has its edge length $L=80$ and width $W=3$. The Hamiltonian for a single ribbon parallel to $\hat{x}$ is constructed and Fourier transformed in the way described in the main text and has the following block form up to a constant
+\begin{eqnarray}\label{eq:Hribbon}
+      \ham = \frac{1}{2} \sum_k \Psi_k^\dagger \left(
+    \begin{matrix}
+      h_t(k) & h_\Delta(k) \\
+      h_\Delta^\dagger(k) & -h_t^*(-k)
+    \end{matrix} \right)
+    \Psi_k
+\end{eqnarray}
+where $\Psi_k \equiv (c_{k,1},\dots, c_{k,W},c^\dag_{-k,1},\dots c_{-k,W}^\dag)^T$. $h_t(k)$ is a $W\times W$ Hermitian tridiagonal matrix with $(h_t)_{n,n} = -2t\cos(k+\mathbf A\cdot \mathbf a_1) - \mu$ and $(h_t)_{n,n+1} = -t\left( e^{i(-k+\mathbf A\cdot \mathbf a_3)}  + e^{i\mathbf A \cdot \mathbf a_2}\right)$ (here $\mathbf a_3 \equiv -\mathbf a_1 + \mathbf a_2$). $h_\Delta(k)$ is a $W\times W$ tridiagonal matrix with $(h_\Delta)_{n,n} = -2i\de \sin k $ and $(h_\Delta)_{n,n\pm 1} = \mp \de\left[ e^{-i(\pm k + \frac{2\pi}{3})} + e^{-i\frac{\pi}{3}} \right]$. 
+
+The phase diagram Fig.~\ref{fig: supp pd} (a) is created in a similar way as that in Fig.~3 (b) of the main text, assuming a constant vector potential along $\hat{y}$ and infinitely long $W=3$ ribbons. The spectral flow for the actual triangle with $\mu = 1.6$ in Fig.~\ref{fig: supp pd} (b) shows MZM in the parameter regions in agreement with the phase diagram. Fig.~\ref{fig: supp pd}. The MZM wavefunctions for $A=0.83$ and $\mu=1.6$, illustrated in Fig.~\ref{fig: supp rotation} (d), are indeed well localized at the bottom corners.
+
+We next discuss how to move the MZM on a hollow triangle by rotating the vector potential. Due to the Peierls phase accumulated by hopping that is not parallel with the finite-width ribbon edges, the vector potential has a more complex effect on the energy spectrum here than that for the $W=1$ case. To ensure that the bulk band gap of individual edges only closes at a few isolated topological phase transition points, we plot in Figure~\ref{fig: supp rotation} (b) the smallest gap of the three edges with periodic boundary condition versus $(A,\varphi)$ when $\mu=1.6$. A relatively clean region can be identified when $A\in (0.75,0.8)$. Further taking into account the topological phase diagram Fig.~\ref{fig: supp rotation} (a) obtained in a similar way as Fig.~4 (a) in the main text, we chose a parameter path on the $(A,\varphi)$ plane that linearly interpolates the following points:
+\begin{eqnarray}\label{eq:w3path}
+   (A,\varphi) = (0.83,0)\rightarrow \left(0.77,\frac{\pi}{6}\right) \rightarrow \left(0.83,\frac{\pi}{3}\right)\rightarrow \left(0.77,\frac{\pi}{2}\right)  
+\end{eqnarray}
+The phase diagram indicates that along this path, the nontrivial $\mathcal{M}=-1$ phase crawls through the three edges in a clockwise manner. Such a path ensures that only one edge undergoes a topological phase transition at a time. Then in the actual triangle the bulk gap will stay open due to finite size effect as a MZM moves across an edge without hybridizing with the other MZM.
+
+To support this claim, we plot in Fig.~\ref{fig: supp rotation} (c) the spectral flow for a finite triangle with $L=80$, $W=3$, $\mu=1.6$ and the above parameter path. The bulk gap is indeed open throughout the path, and the degeneracy of the two MZM also stays intact. The wavefunctions of the MZM at representative points along the path are plotted in panels (d-g) in the same order as that marked in panel (c). The locations of the MZM are also consistent with that inferred from the topological phase diagram. 
 
 \begin{figure}[ht]
-  \hspace{-20pt}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/band-gap-rotation-w-3-mu-p1_6000.pdf}}
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/topological-phase-diagram-w-3-mu-p1_6000.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-p1_6000.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-Square-w-3.pdf}}
-  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-Triangle-w-3.pdf}}\\
-  \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-Circle-w-3.pdf}}
-  \subfloat[]{\includegraphics[width=0.35
-\textwidth]{./figures/supp/GS-T-Diamond-w-3.pdf}}
-  \caption{(a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu=1.6$, and $A=2.75$ with increasing rotation angle $\varphi$, defined through $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$. (b-c) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0$ and $\frac{\pi}{3}$, respectively.}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/topological-phase-diagram-w-3-mu-p1_6000.pdf}}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/band-gap-rotation-w-3-mu-p1_6000.pdf}}
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{./figures/supp/spectral-flow-nr-80-w-3-mu-p1_6000.pdf}}\\
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Square-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Triangle-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Circle-w-3.pdf}}\hspace{-31.5pt}
+  \subfloat[]{\includegraphics[height=100pt]{./figures/supp/GS-T-Diamond-w-3.pdf}}\hspace{-31.5pt}
+  \caption{(a) Topological phase diagram for three $W=3$ ribbons corresponding to the three edges of a hollow triangle. ($\mu=1.6$ in all panels.) (b) Minimum of the bulk gaps of the three ribbons plotted on the $(A,\varphi)$ plane. (c) Spectral flow of a hollow triangle with $W=3$, $L=80$, and the parameter path given in Eq.~\eqref{eq:w3path}. (d-g) BdG eigenfunction $|\Psi|^2$ summed over the two zero modes at $\varphi = 0, \frac{\pi}{6}, \frac{\pi}{3}, \frac{\pi}{2}$, respectively.}
   \label{fig: supp rotation}
 \end{figure}
-
-We next discuss how to move the MZM on a hollow triangle by rotating the vector potential. Due to the Peierls phase accumulated by hopping that is not parallel with the ribbon edges for general width ribbons, the vector potential has a more complex effect on the energy spectrum than that for the $W=1$ case. To ensure that the bulk band gap of individual edges only closes at a few isolated topological phase transition points, we plot in Figure~\ref{fig: supp rotation} (a) the smallest gap of the three edges with periodic boundary condition versus $(A,\varphi)$. One can see that 
-
-shows the spectral flow and eigenfunctions as we rotate $\varphi=0$ to $\varphi=\pi$ counterclockwisely. The two MZM cycle through the three vertices in a similar manner as that in Fig.~4 of the main text (only the MZM wavefunctions at $\varphi = 0$ and $\frac{\pi}{3}$ are plotted as representatives of the $\varphi = n\pi/3$ cases). Note that the spectral flow has 3-fold rotation symmetry but not 6-fold, since increasing $\varphi$ by $\frac{2\pi}{3}$ is equivalent to rotating the coordinate system clockwisely by $\frac{2\pi}{3}$. In contrast, rotating the vector potential by $\frac{\pi}{3}$, if without an additional sign change of the $p$-wave pairing potential, is not an exact symmetry of the finite triangle. Also we did not try to scrutinize the phase diagram to find a parameter path in which the bulk gap does not close, as in the $W=1$ case in the main text. Here we just point out that identifying a system-specific parameter path for adiabatic manipulation of MZM is in principle always possible, especially if one is allowed to have more knobs other than $\varphi$ in real structures, such as tuning the chemical potential of individual edges or the size of the vector potential, etc.
 
 \section{Braiding MZM in a small network of triangles}
 
@@ -313,7 +324,7 @@ In this section we show that one can braid two out of four MZM, a minimal settin
 
 \begin{figure}
   \hspace{-30pt}
-  \subfloat[]{\includegraphics[width=0.5\textwidth]{./figures/supp/spectral-flow-braiding.pdf}} \\
+  \subfloat[]{\includegraphics[width=0.4\textwidth]{./figures/supp/spectral-flow-braiding.pdf}} \\
   \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_5236.pdf}}
   \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_6283.pdf}} \\
   \subfloat[]{\includegraphics[width=0.35\textwidth]{./figures/supp/GS-T-0_7330.pdf}}
@@ -323,6 +334,6 @@ In this section we show that one can braid two out of four MZM, a minimal settin
   \caption{(a) Spectral flow for the critical step of swapping $\gamma_2$ and $\gamma_3$ in the example of Fig.~5 in the main text, calculated using four corner-sharing triangles of $W=1$ and $L=50$, with $\mu=1.6$ and $A=2.6$. Vector potential for the middle triangle in the bottom row can rotate according to $\mathbf A = A(-\sin\varphi \hat{x} + \cos\varphi \hat{y})$ from $\varphi = \frac{\pi}{6}$ to $\frac{\pi}{3}$, while the other three have fixed $\varphi = 0$. (b)-(g) BdG eigenfunction $|\Psi|^2$ summed over the four zero modes at equally-spaced points along the rotation path. The black arrow indicates the direction of the vector potential for the bottom middle triangle.}\label{fig: supp braiding}
 \end{figure}
 
-\bibliography{triag_cite}
+%\bibliography{triag_cite}
 
 \end{document}
