@@ -45,11 +45,17 @@
 \setbeamertemplate{frametitle}[default][left,colsep=-4bp,rounded=false]
 \setbeamertemplate{section in toc}[bullets]
 \addtobeamertemplate{title page}{}{%
-    \begin{textblock*}{100mm}(0.445\textwidth,-21.4em)
+    \begin{textblock*}{100mm}(0.445\textwidth,-22.30em)
       \includegraphics[width=1.5cm]{./figures/CSU-Ram-357-617.png}
+    \end{textblock*}
+    \begin{textblock*}{100mm}(-6.5em,3mm)
+      \small arXiv:\\2309.11607
     \end{textblock*}
 }
 \addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(-4.74em,15.05em)
+      \small \color{black}arXiv:\\2309.11607
+    \end{textblock*}
     \begin{textblock*}{100mm}(0.95\textwidth,-0.95cm)
       \includegraphics[width=0.925cm]{./figures/CSU-Ram-357-617.png}
     \end{textblock*}
@@ -191,7 +197,6 @@
   \begin{frame}
     \frametitle{Kitaev Triangle}
 
-
     \begin{multicols}{2}
       \footnotesize
       \begin{equation*}
@@ -203,6 +208,7 @@
         \includegraphics[width=.3\textwidth]{./figures/3-point-triangle.pdf}
       \end{figure}
 
+      \pause
       \vspace{-05mm}
       \footnotesize
       \begin{align*}
@@ -232,7 +238,7 @@
     \begin{multicols}{2}
       \small
       \begin{equation*}
-        \phi_{jl} = \dfrac{e}{\hbar}\int_{\vec{r}_j}^{\vec{r}_l} \vec{A} \cdot d\vec{l} = -\phi_{lj}
+        \phi_{jl} = \dfrac{e}{\hbar}\int_{\vec{r}_j}^{\vec{r}_l} \vec{A} \cdot d\vec{l} = \vec{A}\cdot\vec{r}_{jl} = -\phi_{lj}
       \end{equation*}
       \vspace{-08mm}
       \begin{figure}
@@ -257,13 +263,14 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Rotating MZMs on a Triangular Chain (W=1)}
+    \frametitle{Rotating MZM on a Triangular Chain (W=1)}
 
     \begin{figure}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (-2.8,0){\includegraphics[width=0.4\textwidth]{./figures/topological-phase-diagram-w-1-mu-p1_1000.pdf}};
         \pause
         \draw[line width=0.3mm, green] (-4.62,1) -- (-1.4,1);
+        \pause
         \node[inner sep=0pt] (figure2) at (2.8,0){\includegraphics[width=0.4\textwidth]{./figures/spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_1.pdf}};
         \node[inner sep=0pt] (caption) at (0,-2.0) {\footnotesize $L=50$, $W=1$, $\mu=1.1$, $A=2.35$};
         \onslide<1->
@@ -282,7 +289,7 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Rotating MZMs on a Hollow Triangle (W=3)}
+    \frametitle{Rotating MZM on a Hollow Triangle (W=3)}
 
     \begin{figure}
       \begin{tikzpicture}
@@ -301,8 +308,9 @@
         \draw[line width = 0.2mm, green] (-0.07,-0.51) -- (0.39,-0.43);
         \draw[line width = 0.2mm, green] (0.39,-0.43) -- (0.86,-0.51);
         \draw[line width = 0.2mm, green] (0.86,-0.51) -- (1.32,-0.43);
+        \pause
         \node[inner sep=0pt] (figure3) at (4.4,0){\includegraphics[width=0.33\textwidth]{./figures/spectral-flow-rotation-nr-80-w-3-mu-p1_6000.pdf}};
-        \node[inner sep=0pt] (caption) at (0,-2.0) {\footnotesize $L=80$, $W=3$, $\mu=1.6$, $(A,\varphi) = (0.83,0) \rightarrow (0.77,\pi/6) \rightarrow (0.83,\pi/3) \rightarrow \dots$};
+        \node[inner sep=0pt] (caption) at (0,-2.0) {\footnotesize $L=80$, $W=3$, $\mu=1.6$, $(A,\varphi) = (0.83,0) \rightarrow (0.77,\tfrac{\pi}{6}) \rightarrow (0.83,\tfrac{\pi}{3}) \rightarrow (0.77, \tfrac{\pi}{2}) \dots$};
         \onslide<1->
       \end{tikzpicture}
     \end{figure}
@@ -323,7 +331,7 @@
 
   \section{\BR}
   \begin{frame}
-    \frametitle{Braiding Two of Four MZMs}
+    \frametitle{Braiding Two of Four MZM}
     \begin{figure}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0) {\includegraphics[width=0.8\textwidth]{./figures/4-mf-swap-2-3.pdf}};
@@ -359,7 +367,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \begin{itemize}
       \item Introduction of Peierls phase allows for a minimal Kitaev triangle, reducing fermionic sites down to 3.
       \item Vector potential field and its rotation allows additional tunability of topology.
-      \item MZMs can be hosted and braided on a network of triangular islands.
+      \item MZM can be hosted and braided on a network of triangular islands.
     \end{itemize}
   \end{frame}
 
