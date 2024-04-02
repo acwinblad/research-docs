@@ -1,0 +1,96 @@
+\section{Minimal coupling and Canonical momentum}
+Minimal coupling comes from the following substitution
+
+\begin{equation}
+  -i\hbar\nabla \rightarrow -ih\nabla - q\vec{A},
+\end{equation}
+which can be derived from the canonical momentum operator when a charged particle is present in a vector potential field.
+In this case minimal coupling means the field is coupling the orbital and potential only, ignoring higher order multipole moments.
+This also allows the system to have a local gauge invariance under U(1) transformations, i.e. $\vec{A} \rightarrow \vec{A} + \nabla\lambda$.
+REFERENCE Alexander Atlan Condensed Matter Field Thoery.
+
+We will next derive the canonical momentum operator and demonstrate its gauge invariance.
+Simply start with the Lagrangian for charged particle in a scalar and vector potential field,
+
+\begin{align}
+  \mathcal{L} &= T- U \nonumber \\
+  \mathcal{L} &= \dfrac{1}{2} m \dot{r}^2 - qV + q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t),
+\end{align}
+where $T = \tfrac{1}{2} m \dot{r}^2$ and $U = qV - q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t)$.
+One recalls from classical mechanics that
+
+\begin{align}
+  \vec{p} &= \dfrac{\partial\mathcal{L}}{\partial \dot{\vec{r}}} \nonumber \\
+  \vec{p} &= m \dot{\vec{r}} + q \left( \partial_{\dot{x}} + \partial_{\dot{y}} + \partial_{\dot{z}} \right) \left(\dot{x} A_x + \dot{y} A_y + \dot{z} A_z \right) \nonumber \\
+  \vec{p} &= m \vec{v} + q \vec{A} \nonumber \\
+  \vec{p}_{can} &= \vec{p}_{kin} + q \vec{A}
+  \label{eq:canonical-momentum}
+\end{align}
+
+Now that we know the canonical momentum and defined the Lagrangian we can determine the Hamiltonian
+
+\begin{align}
+  \ham &= \vec{p} \cdot \dot{\vec{r}} - \mathcal{L} \nonumber \\
+  &= (m \dot{\vec{r}} + q \vec{A}) \cdot \dot{\vec{r}} - \dfrac{1}{2} m \dot{r}^2 + q V - q \dot{\vec{r}}\cdot\ \vec{A} \nonumber \\
+  &= \dfrac{1}{2} m \dot{r}^2 + q V \nonumber \\
+  &= \dfrac{1}{2m}  p_{kin}^2 + q V \nonumber \\
+  \ham &= \dfrac{1}{2m} (\vec{p}_{can} - q \vec{A})^2 + q V,
+\end{align}
+where in the last step we used Eq.~\eqref{eq:canonical-momentum} to replace the kinetic momentum.
+Thus we have shown that in the presence of a vector potential field we have the minimal coupling expression $i\hbar\nabla - a\vec{A}$.
+
+Next, for simplicity, we show the previous Hamiltonian without a scalar potential is gauge invariant (it can be shown with the scalar potential but it is irrelevant to our research).
+Suppose $\ham|\psi \rangle = \epsilon |\psi \rangle$ and that
+
+\begin{equation}
+  \ham = \dfrac{1}{2m} (\hat{p} - q \vec{A})^2.
+\end{equation}
+Let $\vec{A}' = \vec{A}+\nabla\lambda$, where $\lambda$ is a scalar.
+Then,
+
+\begin{equation}
+  \ham |\psi\rangle = \dfrac{1}{2m} (\hat{p} - q \vec{A}' + q \nabla \lambda)^2 |\psi\rangle = \epsilon |\psi\rangle,
+\end{equation}
+and also allow
+
+\begin{align}
+  \ham' |\psi'\rangle &= \dfrac{1}{2m} (\hat{p} - q \vec{A}')^2 |\psi'\rangle, \nonumber \\
+  \ham' |\psi'\rangle &= \dfrac{1}{2m} (\hat{p} - q \vec{A} - q \nabla \lambda)^2 |\psi'\rangle = \epsilon |\psi'\rangle.
+\end{align}
+Let $|\psi'\rangle = U |\psi\rangle$, where $U$ is a unitary operator such that $U^{\dagger} U = \hat{1}$.
+Position and Momentum expectations should be the same under both gauge choices.
+Starting with position we derive one useful commutation relation
+
+\begin{align}
+  \langle \psi' | \hat{r} | \psi'\rangle &= \langle \psi | U^{\dagger} \hat{r} U | \psi\rangle = \langle \psi | \hat{r} | \psi\rangle \nonumber \\
+  U^{\dagger} \hat{r} U &= \hat{r} \nonumber \\
+  \hat{r} U &= U \hat{r} \nonumber \\
+  [\hat{r},U] &= 0.
+\end{align}
+We can then extrapulate to $[\vec{A},U] = 0$.
+With momentum we can derive another useful commutation relation
+
+\begin{align}
+  \langle \psi' | \hat{p}-q \vec{A}' | \psi'\rangle &= \langle \psi | U^{\dagger} (\hat{p} - q \vec{A}') U | \psi\rangle = \langle \psi | \hat{p} - q \vec{A} | \psi\rangle \nonumber \\
+  U^{\dagger} \hat{p} U - U^{\dagger} q\vec{A}'U &= \hat{p} - q \vec{A} \nonumber \\
+  \hat{p} U - q\vec{A} U - q\nabla\lambda U &= U \hat{p} - U q \vec{A} \nonumber \\
+  [\hat{p},U] = -i\hbar\partial_{\hat{r}} U &= q\nabla\lambda U.
+\end{align}
+This leads us to find $U = \exp[iq\lambda/\hbar]$
+We can now look at the Hamiltonian and see how each gauge relates to each other
+
+\begin{align}
+  \ham' |\psi'\rangle &= (\hat{p} - q \vec{A} - q \nabla \lambda)^2 |\psi'\rangle \nonumber \\
+  &= (\hat{p} - q \vec{A} - q \nabla \lambda) \cdot (\hat{p} U - q \vec{A} U - q \nabla \lambda U) |\psi\rangle \nonumber \\
+  &= (\hat{p} - q \vec{A} - q \nabla \lambda) \cdot U (\hat{p} - q \vec{A}) |\psi\rangle \nonumber \\
+  &= U (\hat{p} - q \vec{A})^2 |\psi\rangle \nonumber \\
+  &= U \epsilon |\psi\rangle.
+\end{align}
+We see the local phase of the wavefunction is changed but it still represents the same energy shown by
+
+\begin{align}
+  \langle \psi'| \ham' |\psi'\rangle &= \langle \psi | U^{\dagger} U \epsilon |\psi \rangle = \epsilon \nonumber \\
+  \langle \psi | \ham |\psi \rangle &= \langle \psi | \epsilon |\psi \rangle = \epsilon,
+\end{align}
+and in other words $U^{\dagger} \ham' U = \ham$.
+REFERENCE Kittel Introduction to solid state physics.
