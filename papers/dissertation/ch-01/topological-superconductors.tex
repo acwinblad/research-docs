@@ -1,1 +1,59 @@
-\section{Topological superconductors and Majorana fermions}
+\section{Majorana fermions and Topological superconductors}
+
+In brief, Majorana Ettore hypothesised the existence of Majorana fermions, by finding a unique (real) wavefunction solution to Dirac's equation, who found a general (complex) wavefunction solution.
+The Standard Model predicts neutrinos to be Majorana fermions yet that has yet to be measured.
+One can achieve a Majorana fermion as a linear combination of two fermions, also known as a Bogoliubov quasiparticle, inside a non-trivial topological $p$-wave superconductor.
+We have yet to physically realize a $p$-wave superconductor experimentally, however, we can use heterostructures in proximity to an $s$-wave superconductor to achieve an effective $p$-wave superconduting interface, which is explained and referenced in later chapters.
+Majorana fermions are dictated by non-Abelian exchange statistics, which allows for building a universal quantum computer, hence why they are highly sought after.
+Another boon of using a non-trivial topological superconductor is the ability to protect Majorana fermions from local perturbations.
+
+One of our goals in this disseration is present a new type of topological quantum logic gate that utilizes triangular geometry and rotation of a vector potential field to host and braid Majorana fermions.
+
+Let us go ahead and show how Kitaev derived Majorana zero modes, Majorana fermions, on a 1D spinless $p$-wave superconductor.
+Start with a 1d spinless $p$-wave superconductor tight-binding Hamiltonian
+
+\begin{equation}
+  \ham = \sum_j^{N-1} (-t \cc_j c_{j+1} + \Delta c_j c_{j+1} + h.c.) - \sum_j^{N} \mu \cc_j c_j,
+\end{equation}
+where $t$ is hopping amplitude, superconducting order parameter $\Delta = |\Delta|$ for simplicity, $\mu$ is chemical potential, and $\cc (c)$ is the creation (annihilation) operator for a complex fermion.
+We next use a basis tranformation to convert to the Majorana fermion basis, where $\cc_j = \tfrac{1}{2} (a_j - i b_j)$, $\left\{ a^{\dagger}_j, a_{j'} \right\} = \left\{ a_j, a_{j'} \right\} = 2\delta_{j,j'}$ since they are Majorana fermions, and $\left\{a_j,b_j'\right\} = 0$.
+After some algebra we arrive at
+
+\begin{equation}
+  \ham = \dfrac{i}{2} \sum_j \left( -\mu a_j b_j + (t+\Delta) b_j a_{j+1} + (-t+\Delta) a_j b_{j+1} \right).
+\end{equation}
+In the trivial phase, no Majorana fermions, $\mu \neq 0$ and $t=\Delta=0$,
+
+\begin{equation}
+  \ham = -\mu\dfrac{1}{2} \sum_j a_j b_j.
+\end{equation}
+The non-trivial phase, with Majorana fermions present, $\mu = 0$, and $t = \Delta > 0$,
+
+\begin{equation}
+  \ham = it \sum_j b_j a_{j+1}.
+\end{equation}
+Notice the terms $a_0$ and $b_N$ are missing in the non-trivial Hamiltonian, we can say there is a non-localized zero energy mode present in the system defined by $f = \tfrac{1}{2}(a_0 + i b_N)$, hence the name Majorana zero modes.
+Now, slightly outside the Kitaev limit for non-trivial topology, we can limit $|\mu| < 2t$ and $t = |Delta| >0$ and still achieve non-trivial topology with Majorana zero modes at the interface of trivial and non-trivial topology.
+To understand why this is still true we can determine the topological invariant for the system, also known as the Majorana number, a type of Winding number for 1D superconducting systems.
+Calculating the Majorana number is straight forward enough, its proof on the other hand is not, this can be found in the appendix REFERENCE appendix here.
+Write the Hamiltonian in the Majorana basis, $A = -iU \ham U^{\dagger}$, then take the sign of the Pfaffian,
+
+\begin{equation}
+  \mathcal{M} = \text{sgn} [\text{Pf} (A)].
+\end{equation}
+This calculation can be reduced down if we can write the Hamiltonian in momentum space.
+Doing so lets us consider the $k=0$ and $k=\pi$ points only in the brillouin zone, due to symmetry.
+\begin{equation}
+  \mathcal{M} =
+  \begin{cases}
+    \text{sgn} [\text{Pf} (A_{k=0}) \text{Pf} (A_{k=\pi})], &\text{if L is even}, \\
+    \text{sgn} [\text{Pf} (A_{k=0})], &\text{if L is odd},
+  \end{cases}
+\end{equation}
+where L is the number of lattice sites from our lattice Hamiltonian.
+We find that under the Kitaev limit, if $|\mu|< 2t$, then $\mathcal{M} = -1$, and if $|\mu| > 2t$, then $\mathcal{M} = 1$.
+When a section of the material is in a non-trivial topology and either the other material is trivial or vacuum (also trivial), Majorana zero modes will be localized at the differing topological interfaces, this is also known as bulk-edge correspondence and will be used later in our topological quantum logic gate.
+As a last note, when $|\mu| = 2t$ this is a critical point and where the gap opens and closes, it is not an ideal region of parameter space for our needs.
+
+\Blue{Add in some schematics of Kitaev chain in the various cases described}
+

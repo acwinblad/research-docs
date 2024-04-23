@@ -60,7 +60,7 @@
 \newcommand{\Blue}[1]{\textcolor{blue}{#1}}
 
 % reset vec and hat style to a bold type
-\let\oldhat\hat
+\let\op\hat
 \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
 % stretches the vertical spacing of arrays/matrices
@@ -76,6 +76,7 @@
 \newcommand{\sz}{\sigma_z}
 \newcommand{\so}{\sigma_0}
 \newcommand{\cc}{c^{\dagger}}
+\newcommand{\ca}{a^{\dagger}}
 \newcommand{\de}{\Delta}
 
 \graphicspath{ {./figures} }
@@ -145,23 +146,24 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 \end{enumerate}
 
 \Blue{Topological phenomena in CM considered in thesis}
-\begin{enumerate}
-  \item \Blue{(1) Majorana and TSC}
-  \begin{enumerate}[i]
-    \item \Blue{Kitaev chain (\MN --- topological invariant). BdG?}
-    \item \Blue{Braiding (Application in TQC)}
-  \end{enumerate}
-  \item \Blue{Landau Level and Hofstadter butterfly}
-  \begin{enumerate}[i]
-    \item \Blue{solve for LL in 2DEG --- why it's topological, chern number, TKNN quantum Hall}
-    \item \Blue{square lattice --- hofstadter butterfly ( on other lattices, honeycomb)}
-  \end{enumerate}
-\end{enumerate}
 
 \input{./ch-01/introduction.tex}
 \input{./ch-01/maxwell-theory-gauge-potentials.tex}
 \input{./ch-01/minimal-coupling.tex}
 \input{./ch-01/peierls-phase.tex}
+\input{./ch-01/topological-superconductors.tex}
+\begin{enumerate}
+  \item \Blue{Braiding (Application in TQC)}
+    not sure how much to talk about here, and slightly mentioned earlier with topological superconductors.
+\end{enumerate}
+
+\input{./ch-01/landau-levels.tex}
+\item \Blue{Landau Level and Hofstadter butterfly}
+\begin{enumerate}[i]
+  \item \Blue{solve for LL in 2DEG --- why it's topological, chern number, TKNN quantum Hall}
+  \item \Blue{square lattice --- hofstadter butterfly ( on other lattices, honeycomb)}
+\end{enumerate}
+
 
 \chapter{Superconducting Triangular Islands as a Platform for Manipulating Majorana Zero Modes}
 
@@ -185,14 +187,11 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 
 \begin{appendices}
 \chapter{Suitable Name}
-\begin{enumerate}
-  \item \Blue{Majorana Number derivation}
-  \item \Blue{Other derivations not included in introduction}
-\end{enumerate}
 \input{./ch-app/kitaev-triangle-peierls-sub.tex}
 \input{./ch-app/conditions-for-mzm.tex}
 \input{ch-03/floquet-ll-2deg-tbm.tex}
 \input{ch-03/floquet-ll-dirac-tbm.tex}
+\input{./ch-app/quantum-harmonic-oscillator.tex}
 \end{appendices}
 
 

@@ -1,0 +1,161 @@
+\section{Quantum harmonic oscillator}
+\label{appendix:qho}
+
+We will quickly derive this energy solution and derive ladder operators.
+Rewrite the quantum harmonic oscillator as (and dropping the operator hat)
+
+\begin{equation*}
+  H = \dfrac{1}{2m} \left( p_x^2 + m^2 \omega^2 x^2 \right),
+\end{equation*}
+then complete the square by adding "zero"
+
+\begin{align}
+  H &= \dfrac{1}{2m} \left( [m\omega x - i p_x] [m\omega x + i p_x] -im\omega[xp_x - p_x x] \right) \nonumber \\
+  &= \dfrac{1}{2m} \left( [m\omega x - i p_x] [m\omega + i p_x] + m \hbar \omega \right) \nonumber \\
+  &= \dfrac{1}{2m} \left( \tilde{a}^{\dagger} \tilde{a} + m\hbar \omega \right) \nonumber \\
+  &= \hbar \omega \left( \dfrac{\tilde{a}^{\dagger} \tilde{a} }{2m\hbar \omega} + \dfrac{1}{2} \right) \nonumber \\
+  &= \hbar \omega \left( a^{\dagger} a + \dfrac{1}{2} \right),
+\end{align}
+where $a = \tfrac{1}{\sqrt{2}} \left(\sqrt{\tfrac{m\omega}{\hbar}} x + i \tfrac{p_x}{\sqrt{m\hbar\omega}} \right)$.
+We have simplified the Hamiltonian into new creation and annihilation operators, called ladder operators, which we will now show how they work.
+Also note $[a, a^{\dagger}] = 1$.
+Let looks at how the operator commutes with the Hamiltonian
+
+\begin{align}
+  [H, a] &= Ha - aH = \hbar \omega \left( \ca a a + \dfrac{a}{2} - a \ca a - \dfrac{a}{2}) \right) \nonumber \\
+      &= \hbar \omega (\ca a  - (1 + \ca a) ) a \nonumber \\
+      &= - \hbar \omega a, \quad \text{and} \\
+  [H, \ca] &= H\ca - \ca H = \hbar \omega \left( \ca a \ca + \dfrac{\ca}{2} - \ca \ca a - \dfrac{\ca}{2}\right) \nonumber \\
+      &= \hbar \omega \ca ( a\ca - \ca a) \nonumber \\
+      &= \hbar \omega \ca.
+\end{align}
+SOME TRANSITION TO ACTING Ha on Psi.
+
+\begin{align}
+  H | \psi_n \rangle &= E_n | \psi_n \rangle. \nonumber \\
+  H\ca | \psi_n \rangle &= (\ca H + \hbar \omega \ca) |\psi_n\rangle \nonumber \\
+  H\ca | \psi_n \rangle &= (E_n +\hbar \omega) \ca |\psi_n\rangle. \nonumber \\
+  H a |\psi_n \rangle &= (E_n - \hbar \omega) a |\psi_n\rangle. \nonumber \\
+\end{align}
+Being careful notice
+
+\begin{align}
+  H|\psi_0\rangle &= E_0 |\psi_0\rangle \nonumber \\
+  Ha|\psi_0\rangle &= (E_0-\hbar \omega) a|\psi_0\rangle,
+\end{align}
+however, $E_0$ is the minimum so $E_0-\hbar \omega$ cannot exist and thus
+
+\begin{equation}
+  a |\psi_0\rangle = 0
+\end{equation}
+Again we look at the ground state energy
+
+\begin{align}
+  \langle \psi_0 | H | \psi_0 \rangle &= \langle \psi_0 | \hbar \omega(\ca a +1/2) | \psi_0 \rangle \nonumber \\
+  E_0 &= \hbar \omega \langle \psi_0 | \ca a | \psi_0 \rangle + \dfrac{\hbar\omega}{2} \langle \psi_0 | \psi_0 \rangle \nonumber \\
+  E_0 &= \dfrac{\hbar \omega}{2}.
+\end{align}
+Then for the given eigenstates
+
+\begin{equation*}
+  \ca|\psi_0\rangle, \quad \ca\ca|\psi_0\rangle, \quad \ca\ca\ca|\psi_0\rangle, \quad \dots
+\end{equation*}
+with eigenvalues
+\begin{equation*}
+  \tfrac{3}{2} \hbar\omega, \quad \tfrac{5}{2} \hbar\omega, \quad \tfrac{7}{2} \hbar\omega, \quad \dots
+\end{equation*}
+Which we can generalize to
+
+\begin{equation*}
+  |\psi_n\rangle \propto ( \ca )^n|\psi_0\rangle,
+\end{equation*}
+with the eigenenergy
+
+\begin{equation*}
+  E_n = \hbar\omega \left( n + \tfrac{1}{2} \right).
+\end{equation*}
+With our goal complete we continue on to determine how the ladder operators evolve the state.
+We can now renormalize our proportional expression
+
+\begin{align*}
+  |\psi_{n+1}\rangle &= c\ca|\psi_n\rangle \nonumber \\
+  1 = \langle \psi_{n+1} | \psi_{n+1} \rangle &= |c|^2 (\langle \psi_n|\ca)(\ca|\psi_n\rangle) \nonumber \\
+  &= |c|^2 \langle \psi_n | a\ca | \psi_n \rangle \nonumber \\
+  &= |c|^2 \langle \psi_n | \dfrac{H}{\hbar\omega} + \dfrac{1}{2} |\psi_n \rangle \nonumber \\
+  &= |c|^2 \left(\dfrac{E_n}{\hbar\omega} +\dfrac{1}{2} \right) \nonumber \\
+  &= |c|^2 \left(n+1\right) \nonumber \\
+  |c| &= \dfrac{1}{\sqrt{n+1}}
+\end{align*}
+which give the following relation
+
+\begin{equation}
+  |\psi_{n+1} \rangle = \dfrac{\ca}{\sqrt{n+1}} |\psi_n \rangle.
+\end{equation}
+Similarly we find
+
+\begin{equation}
+  |\psi_{n-1} \rangle = \dfrac{\ca}{\sqrt{n}} |\psi_n \rangle.
+\end{equation}
+Thus $\ca a |\psi_n \rangle = n |\psi_n \rangle$.
+The energy of the system is definitively
+
+\begin{equation}
+  E_n = \hbar\omega \left(n + \dfrac{1}{2} \right)
+\end{equation}
+
+\section{Dirac equation in the presence of a magnetic field}
+\label{appendix:dirac}
+We now focus on how the presence of a magnetic field affects the Dirac equation.
+The Dirac Hamiltonian with vector potential
+
+\begin{equation}
+  \ham = v_f \bm{\sigma}\cdot(\op{p} - q\op{A})
+\end{equation}
+Using the previous definition, $\vec{A} = Bx\hat{y}$, the Hamiltonian becomes
+
+\begin{align}
+  \ham = v_f \sigma_x \op{p}_x + v_f \sigma_y (\op{p}_y - qB\op{x})
+\end{align}
+Like Schrodinger's equation we use the same ansatz wavefunction and arrive at
+
+\begin{align}
+  \ham = v_f \sigma_x \op{p}_x - v_f \sigma_y (qB\op{x} - \hbar k_y) \nonumber \\
+  \ham = v_f \sigma_x \op{p}_x - v_f \sigma_y qB\op{x},
+\end{align}
+where we recognize the x term is just shifted by a constant like earlier.
+In matrix form the Hamiltonian looks like
+
+\[
+  \ham = i v_f q B
+  \begin{bmatrix}
+    0 & \op{x} - i\dfrac{\op{p}_x}{qB} \\
+    \op{x} + i\dfrac{\op{p}_x}{qB} & 0
+  \end{bmatrix}
+\]
+
+\[
+  \ham = i v_f \sqrt{2m \hbar\omega}
+  \begin{bmatrix}
+    0 & \ca\\
+    a & 0
+  \end{bmatrix}
+\]
+The form of the Hamiltonian can be quickly solved by squaring then acting on a wavefunction
+
+\[
+  |\ham|^2 = 2m \hbar\omega v_f^2
+  \begin{bmatrix}
+    \ca a & 0 \\
+    0 & a\ca
+  \end{bmatrix}
+\]
+We focus on the first element of the matrix
+
+\begin{align}
+  \langle \psi_n | |\ham_{11}|^2 |\psi_n\rangle &= \langle \psi_n | E_n^2 |\psi_n\rangle \nonumber \\
+    &= 2m \hbar\omega v_f^2 \langle \psi_n | \ca a |\psi_n\rangle \nonumber \\
+    &= 2m \hbar\omega v_f^2 \langle \psi_n | n |\psi_n\rangle \nonumber \\
+    E_n^2 &= 2m \hbar \omega n v_f^2 \nonumber \\
+    E_n &= \pm v_f \sqrt{2m\hbar\omega n}
+\end{align}
+

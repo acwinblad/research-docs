@@ -1,58 +1,58 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Schematics of two triangle structures proposed in this work. (a) Three-site Kitaev triangle with bond-dependent Peierls phases. (b) Hollow triangular island with a uniform vector potential.\relax }}{14}{figure.caption.6}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{14}{subfigure.1.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{14}{subfigure.1.2}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces (a) Evolution of the eigenvalues of the 3-site Kitaev triangle along the closed parameter path for $\phi $ on the three edges. (b) MZM wavefunctions at different points of the parameter path. Clockwise from the upper left panel: $\bm {\phi }_1 \rightarrow \frac {1}{2}(\bm {\phi }_1 + \bm {\phi }_2)\rightarrow \bm {\phi }_2\rightarrow \bm {\phi }_3$.\relax }}{17}{figure.caption.7}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.2.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.\nobreakspace {}\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:Hribbon}\unskip \@@italiccorr )}} obtained by superimposing the $\mathcal {M}(A, \mu )$ plots of 1D chains with $\mathbf A = A\hat {\mathbf {y}}$ and $\mathbf A = A(\frac {\sqrt {3}}{2}\hat {\mathbf {x}}+\frac {1}{2}\hat {\mathbf {y}})$. Color scheme: white---$\mathcal {M}=1$, dark blue---$\mathcal {M}=-1$, light blue---$\mathcal {M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu =1.6$.\relax }}{19}{figure.caption.8}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{subfigure.3.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{subfigure.3.2}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu =1.6$, and $A=2.75$ with increasing rotation angle $\varphi $, defined through $\mathbf A = A(-\sin \varphi \hat {\mathbf {x}} + \cos \varphi \hat {\mathbf {y}})$. (b-d) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $\varphi = 0, \frac {\pi }{6}$, and $\frac {\pi }{3}$, respectively.\relax }}{21}{figure.caption.9}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{21}{subfigure.4.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{21}{subfigure.4.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{21}{subfigure.4.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{21}{subfigure.4.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces (a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal {M}(A, \mu )$ plots of 1D chains with $\mathbf A = A\hat {\mathbf {y}}$ and $\mathbf A = A(\frac {\sqrt { 3}}{2}\hat {\mathbf {x}}+\frac {1}{2}\hat {\mathbf {y}})$. Color scheme: white---$\mathcal {M}=1$, dark blue---$\mathcal {M}=-1$, light blue---$\mathcal {M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu =1.6$. (c) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A=2.4709$.\relax }}{22}{figure.caption.10}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{subfigure.5.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{22}{subfigure.5.3}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu =1.6$, and $A=2.75$ with increasing rotation angle $\varphi $, defined through $\mathbf A = A(-\sin \varphi \hat {\mathbf {x}} + \cos \varphi \hat {\mathbf {y}})$. (b-c) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $\varphi = 0$ and $\frac {\pi }{3}$, respectively.\relax }}{23}{figure.caption.11}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.6.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{23}{subfigure.6.3}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) Spectral flow for the critical step of swapping $\gamma _2$ and $\gamma _3$ in the example of Fig.\nobreakspace {}5 in the main text, calculated using four corner-sharing triangles of $W=1$ and $L=50$, with $\mu =1.6$ and $A=2.6$. Vector potential for the middle triangle in the bottom row can rotate according to $\mathbf A = A(-\sin \varphi \hat {\mathbf {x}} + \cos \varphi \hat {\mathbf {y}})$ from $\varphi = \frac {\pi }{6}$ to $\frac {\pi }{3}$, while the other three have fixed $\varphi = 0$. (b)-(g) BdG eigenfunction $|\Psi |^2$ summed over the four zero modes at equally-spaced points along the rotation path. The black arrow indicates the direction of the vector potential for the bottom middle triangle.\relax }}{24}{figure.caption.12}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.7.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.7.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{24}{subfigure.7.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{24}{subfigure.7.4}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{24}{subfigure.7.5}%
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{24}{subfigure.7.6}%
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{24}{subfigure.7.7}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] \hat {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{25}{figure.caption.13}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{25}{subfigure.8.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{25}{subfigure.8.2}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x/2w)\hat {\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{26}{figure.caption.14}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{26}{subfigure.9.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{26}{subfigure.9.2}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] \hat {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{27}{figure.caption.15}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{subfigure.10.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{subfigure.10.2}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x / 2w)\hat {\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{27}{figure.caption.16}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{subfigure.11.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{subfigure.11.2}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =0$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax\hat {\mathbf {y}}$ (a) $W=1$ and (b) $W=3$ (c-d) Wavefunctions of the MZM at $A=0.0499$ for both widths, respectively.\relax }}{28}{figure.caption.17}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.12.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.12.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{28}{subfigure.12.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{28}{subfigure.12.4}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =1.6$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax\hat {\mathbf {y}}$ (a) $W=1$ and (b) $W=3$. (c-d) Wavefunctions of the MZM at $A=0.0598$ for both widths, respectively.\relax }}{29}{figure.caption.18}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{29}{subfigure.13.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{29}{subfigure.13.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{29}{subfigure.13.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{29}{subfigure.13.4}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Representative steps for braiding four MZM in four triangles sharing corners. (a) Initialization of four MZM $\gamma _1, \gamma _2, \gamma _3, \gamma _4$. All three edges of the bottom-middle and the top triangles are in the trivial phase by e.g. controlling the chemical potential. The bottom-left and bottom-right triangles have $\varphi = 0$ so that their bottom edges are nontrivial. (b) Moving $\gamma _3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential at $\varphi =\frac {\pi }{6}$, and then turning on the top triangle with similar means except $\varphi = 0$. (c) Transporting $\gamma _2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi /6$. (d) Moving $\gamma _3$ to the left triangle by ``switching off" the top triangle followed by the middle triangle.\relax }}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schematics of two triangle structures proposed in this work. (a) Three-site Kitaev triangle with bond-dependent Peierls phases. (b) Hollow triangular island with a uniform vector potential.\relax }}{19}{figure.caption.6}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{subfigure.1.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{subfigure.1.2}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces (a) Evolution of the eigenvalues of the 3-site Kitaev triangle along the closed parameter path for $\phi $ on the three edges. (b) MZM wavefunctions at different points of the parameter path. Clockwise from the upper left panel: $\bm {\phi }_1 \rightarrow \frac {1}{2}(\bm {\phi }_1 + \bm {\phi }_2)\rightarrow \bm {\phi }_2\rightarrow \bm {\phi }_3$.\relax }}{22}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{subfigure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Topological phase diagram for a $W=1$ triangular chain with the Hamiltonian Eq.\nobreakspace {}\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:Hribbon}\unskip \@@italiccorr )}} obtained by superimposing the $\mathcal {M}(A, \mu )$ plots of 1D chains with $\mathbf A = A{\mathbf {y}}$ and $\mathbf A = A(\frac {\sqrt {3}}{2}{\mathbf {x}}+\frac {1}{2}{\mathbf {y}})$. Color scheme: white---$\mathcal {M}=1$, dark blue---$\mathcal {M}=-1$, light blue---$\mathcal {M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L = 50$, $W=1$, and $\mu =1.6$.\relax }}{24}{figure.caption.8}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.3.2}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, $\mu =1.6$, and $A=2.75$ with increasing rotation angle $\varphi $, defined through $\mathbf A = A(-\sin \varphi {\mathbf {x}} + \cos \varphi {\mathbf {y}})$. (b-d) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $\varphi = 0, \frac {\pi }{6}$, and $\frac {\pi }{3}$, respectively.\relax }}{26}{figure.caption.9}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{26}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{26}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{26}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{26}{subfigure.4.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces (a) Topological phase diagram for a $W=3$ hollow triangle obtained by overlapping the $\mathcal {M}(A, \mu )$ plots of 1D chains with $\mathbf A = A{\mathbf {y}}$ and $\mathbf A = A(\frac {\sqrt { 3}}{2}{\mathbf {x}}+\frac {1}{2}{\mathbf {y}})$. Color scheme: white---$\mathcal {M}=1$, dark blue---$\mathcal {M}=-1$, light blue---$\mathcal {M}=0$ (b) Near-gap BdG eigen-energies vs $A$ for a finite triangle with edge length $L=50$, $W=3$, and $\mu =1.6$. (c) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A=2.4709$.\relax }}{27}{figure.caption.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{27}{subfigure.5.3}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, $\mu =1.6$, and $A=2.75$ with increasing rotation angle $\varphi $, defined through $\mathbf A = A(-\sin \varphi {\mathbf {x}} + \cos \varphi {\mathbf {y}})$. (b-c) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $\varphi = 0$ and $\frac {\pi }{3}$, respectively.\relax }}{28}{figure.caption.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{28}{subfigure.6.3}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) Spectral flow for the critical step of swapping $\gamma _2$ and $\gamma _3$ in the example of Fig.\nobreakspace {}5 in the main text, calculated using four corner-sharing triangles of $W=1$ and $L=50$, with $\mu =1.6$ and $A=2.6$. Vector potential for the middle triangle in the bottom row can rotate according to $\mathbf A = A(-\sin \varphi {\mathbf {x}} + \cos \varphi {\mathbf {y}})$ from $\varphi = \frac {\pi }{6}$ to $\frac {\pi }{3}$, while the other three have fixed $\varphi = 0$. (b)-(g) BdG eigenfunction $|\Psi |^2$ summed over the four zero modes at equally-spaced points along the rotation path. The black arrow indicates the direction of the vector potential for the bottom middle triangle.\relax }}{29}{figure.caption.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{29}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{29}{subfigure.7.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{29}{subfigure.7.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{29}{subfigure.7.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{29}{subfigure.7.5}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{29}{subfigure.7.6}%
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{29}{subfigure.7.7}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{30}{figure.caption.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{30}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{30}{subfigure.8.2}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=1$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x/2w){\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{31}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{31}{subfigure.9.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{31}{subfigure.9.2}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing heaviside vector potential strength defined by $\mathbf {A} = A [1-2\Theta (x)] {\mathbf {y}}$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{32}{figure.caption.15}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.10.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.10.2}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces (a) Spectral flow of a hollow triangle with $W=3$, $L=50$, and $\mu =1.6$ for increasing tanh vector potential strength defined by $\mathbf {A} = -A \tanh (x / 2w){\mathbf {y}}$, $w=a/2$ (b) BdG eigenfunction $|\Psi |^2$ summed over the two zero modes at $A = 2.7409$.\relax }}{32}{figure.caption.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.11.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.11.2}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =0$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax{\mathbf {y}}$ (a) $W=1$ and (b) $W=3$ (c-d) Wavefunctions of the MZM at $A=0.0499$ for both widths, respectively.\relax }}{33}{figure.caption.17}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.12.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.12.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{33}{subfigure.12.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{33}{subfigure.12.4}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Spectral flow of a hollow triangle with $L=50$, and $\mu =1.6$ for increasing linear vector potential strength defined by $\mathbf {A} = -Ax{\mathbf {y}}$ (a) $W=1$ and (b) $W=3$. (c-d) Wavefunctions of the MZM at $A=0.0598$ for both widths, respectively.\relax }}{34}{figure.caption.18}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{34}{subfigure.13.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{34}{subfigure.13.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{34}{subfigure.13.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{34}{subfigure.13.4}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Representative steps for braiding four MZM in four triangles sharing corners. (a) Initialization of four MZM $\gamma _1, \gamma _2, \gamma _3, \gamma _4$. All three edges of the bottom-middle and the top triangles are in the trivial phase by e.g. controlling the chemical potential. The bottom-left and bottom-right triangles have $\varphi = 0$ so that their bottom edges are nontrivial. (b) Moving $\gamma _3$ by ``switching on" the middle triangle by changing the chemical potential under a fixed vector potential at $\varphi =\frac {\pi }{6}$, and then turning on the top triangle with similar means except $\varphi = 0$. (c) Transporting $\gamma _2$ to the right triangle through rotating the vector potential in the middle triangle counterclockwise by $\pi /6$. (d) Moving $\gamma _3$ to the left triangle by ``switching off" the top triangle followed by the middle triangle.\relax }}{35}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
