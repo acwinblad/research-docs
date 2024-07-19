@@ -23,8 +23,8 @@ and using Peierls substitution the Hamiltonian becomes
 where
 
 \begin{align}
-  h_{j,j+1}(t) &\approx h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{x_j-x_{j+1}}{a} \sin \omega t\right) \nonumber \\
-  &= h \exp\left(i \phi_0 \sin \omega t\right) \\
+  h_{j,j+1}(t) &\approx h \exp\left(-i \dfrac{eEa}{\hbar \omega} \dfrac{x_{j+1}-x_j}{a} \sin \omega t\right) \nonumber \\
+  &= h \exp\left(-i \phi_0 \sin \omega t\right) \\
   h_{l,l+1}(t) &\approx h \exp\left(i \dfrac{eEa}{\hbar \omega} \dfrac{y_{l+1}-y_l}{a} \cos(Kx_j)\cos \omega t\right) \nonumber \\
   &= h \exp\left(i \phi_0 \cos(Kx_j)\cos \omega t\right).
 \end{align}
@@ -73,12 +73,12 @@ The terms for given $k$ become the following time Fourier transforms
 and
 
 \begin{align}
-  \ham_{j,j+1,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
-  &= -h J_{-n}(-\phi_0) \nonumber \\
-  &= -h J_n(\phi_0) \\
-  \ham_{j+1,j,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{-i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
-    &= -h J_{-n}(\phi_0) \nonumber \\
-    &= -h (-1)^n J_n(\phi_0)
+  \ham_{j,j+1,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{-i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
+  &= -h J_{-n}(\phi_0) \nonumber \\
+  &= -h (-1)^n J_n(\phi_0) \\
+  \ham_{j+1,j,n} &= -\dfrac{h}{2\pi} \int_0^{2\pi} e^{i \phi_0 \sin \tau - in\tau} d\tau \nonumber \\
+    &= -h J_{-n}(-\phi_0) \nonumber \\
+    &= -h J_n(\phi_0)
 \end{align}
 
 This completes finding all the matrix terms for the quasienergy matrix $\bar{Q}$ for a 2DEG tight binding model with incident inhomogeneous laser light.
