@@ -4,7 +4,7 @@ We consider the case of Schr\"{o}dinger electrons under the application of two l
 H=\frac{\pi_{x}^{2}}{2m^{\ast}}+\frac{\pi_{y}^{2}}{2m^{\ast}},
 \end{equation}
 where $m^{\ast}$ is the effective mass of electron. By changing the Hamiltonian into a time-dependent form by applying two linearly polarized lights
-such that $\bm{\pi}\rightarrow \vec{p-eA(t)}$. \ Therefore, Eq.~\eqref{eq:H2DEG} is written as%
+such that $\bm{\pi}\rightarrow \vec{p}-q\vec{A}(t)$. \ Therefore, Eq.~\eqref{eq:H2DEG} is written as%
 \begin{equation}\label{eq:H2time}
 H(t)=\frac{1}{2m^{\ast}}[p_{x}-qA_{x}(t)]^{2}+\frac{1}{2m^{\ast}}[p_{y} -qA_{y}(t)]^{2},
 \end{equation}
@@ -23,11 +23,12 @@ Substituting into the Schrodinger Hamiltonian we arrive at
   \ham(t) = \dfrac{1}{2m} [ &p_x^2 + p_y^2 + V^2 \sin^2{(Kx)} + V^2 \sin{(\omega t)} (p_x \sin(Kx) + \sin(Kx) p_x) + 2Vp_y \sin(Kx) \cos(\omega t) ]
 \end{align}
 where $V=qE/\omega$.
-Because of the time-translation symmetry through $A(t+T) = A(t)$ with $T = 2\pi/\omega$, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:Htime2deg}. After performing the Fourier transform of the time-periodicity, first and second order expansion in $\hbar \omega$ terms and in the long wavelength limit leads to the final effective Hamiltonian as
+Because of the time-translation symmetry through $A(t+T) = A(t)$ with $T = 2\pi/\omega$, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:Htime2deg}. After performing the Fourier transform of the time-periodicity, first order expansion in $\hbar \omega$ terms and in the long wavelength limit leads to the final effective Hamiltonian as
 
-\begin{equation}\label{eq:Heff2deg}
-  \ham = \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + V^2K^2x^2 + \dfrac{V^2\hbar}{4m\omega} (K^2 - 2K^4x^2) + \dfrac{2V^2K^2}{m\omega} p_y x \right]
-\end{equation}
+\begin{align}\label{eq:Heff2deg}
+  \ham_{\rm eff} &= \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + V^2K^2x^2 + \dfrac{\hbar V^2}{4m\omega} (K^2 - 2K^4x^2) - \dfrac{2V^2K^2}{m\omega} p_y x \right] \nonumber \\
+  \ham &= \dfrac{1}{2m} \left[ p_x^2 + p_y^2 - \dfrac{2V^2K^2}{m\omega} p_y x + \left(1-\dfrac{\hbar K^2}{2m\omega}\right)V^2K^2x^2 + \dfrac{\hbar V^2 K^2}{4m\omega} \right]
+\end{align}
 Notice here we have quantum harmonic oscillator (QHO) in x-axis and also coupling between $p_y$ and $x$.
 The coupling can allow for flux pumping.
 While we may have Landau levels, from the QHO, it still needs to be shown if our system has topological edge states.
