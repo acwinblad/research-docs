@@ -1,0 +1,190 @@
+\section*{Chern number of Landau levels}
+In this section we discuss how to understand the Chern number of Landau levels. For two-dimensional periodic systems, the 2D Brillouin zone is a closed manifold, and one can define the Chern number as a topological invariant for the mapping between complex functions (ground state wavefunctions) and this manifold. However, for Landau levels the system does not have translational symmetry which causes a conceptual difficulty in defining Chern numbers.
+
+To address this difficulty, let us start from the Chern number of typical 2D Bloch Hamiltonians. The Berry curvature of band $n$ at crystal momentum $\mathbf k$ is defined as
+\begin{eqnarray}\label{eq:Berrycurv}
+	\Omega_{n\mathbf k} = \hat{z}\cdot (\nabla_{\mathbf k} \times \mathbf A_{n \mathbf k})= \hat z\cdot (\nabla_{\mathbf k} \times \langle u_{n \mathbf k} | i\nabla_{\mathbf k} | u_{n \mathbf k}\rangle )
+\end{eqnarray}
+The Chern number for band $n$, which must not touch other bands throughout the Brillouin zone, is defined as
+\begin{eqnarray}
+	C_{n} = \int \frac{d^2\mathbf k}{2\pi} \Omega_{n \mathbf k}
+\end{eqnarray}
+However, according to Eq.~\eqref{eq:Berrycurv}, $C_n$ can be rewritten into
+\begin{eqnarray}
+	C_{n} &=&\int \frac{d^2\mathbf k}{2\pi} \partial_{k_x} \langle u_{n \mathbf k}| i\partial_{k_y} | u_{n \mathbf k}\rangle  - \int \frac{d^2\mathbf k}{2\pi} \partial_{k_y} \langle u_{n \mathbf k}| i\partial_{k_x} | u_{n \mathbf k}\rangle \\\nonumber
+	&=&\frac{1}{2\pi}\int d{k_x}\partial_{k_x}\int dk_y  \langle u_{n \mathbf k}| i\partial_{k_y} | u_{n \mathbf k}\rangle - \frac{1}{2\pi}\int d{k_y}\partial_{k_y}\int dk_x  \langle u_{n \mathbf k}| i\partial_{k_x} | u_{n \mathbf k}\rangle
+\end{eqnarray}
+It is worth noting that the last result is related to the expectation value of polarization (or position operator) in a Bloch state:
+\begin{eqnarray}
+	 \langle n\mathbf k | \mathbf r | n' \mathbf k'\rangle &=& \int d^2\mathbf r \psi_{n'\mathbf k'}^\dag (\mathbf r) \mathbf r \psi_{n \mathbf k} (\mathbf r) \\\nonumber
+	 & =& \int d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) e^{-i\mathbf k \cdot \mathbf r}\mathbf r e^{i\mathbf k'\cdot \mathbf r } u_{n' \mathbf k'} (\mathbf r) \\\nonumber
+	 &=& \int d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) e^{-i\mathbf k \cdot \mathbf r}\mathbf (-i\partial_{\mathbf k'} e^{i\mathbf k'\cdot \mathbf r }) u_{n' \mathbf k'} (\mathbf r)\\\nonumber
+	 &=& -i\partial_{\mathbf k'} \langle n\mathbf k | n'\mathbf k'\rangle  + \int d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) e^{-i\mathbf k \cdot \mathbf r}e^{i\mathbf k'\cdot \mathbf r }  \left[i\partial_{\mathbf k'} u_{n' \mathbf k'} (\mathbf r)\right] \\\nonumber
+	 &=&  -i\delta_{nn'} \frac{(2\pi)^2}{V_{\rm uc}}\partial_{\mathbf k'}\delta(\mathbf k  - \mathbf k')   + \int d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) e^{-i\mathbf k \cdot \mathbf r}e^{i\mathbf k'\cdot \mathbf r }  \left[i\partial_{\mathbf k'} u_{n' \mathbf k'} (\mathbf r)\right] \\\nonumber
+	 &=&  -i\delta_{nn'} \frac{(2\pi)^2}{V_{\rm uc}}\partial_{\mathbf k'}\delta(\mathbf k  - \mathbf k')   + \sum_{\mathbf R}\int_{\rm uc}  d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) e^{i(\mathbf k' - \mathbf k) \cdot \mathbf r} \left[i\partial_{\mathbf k'} u_{n' \mathbf k'} (\mathbf r)\right] e^{i(\mathbf k' - \mathbf k)\cdot \mathbf R} \\\nonumber
+	 &=& -i\delta_{nn'} \frac{(2\pi)^2}{V_{\rm uc}}\partial_{\mathbf k'}\delta(\mathbf k  - \mathbf k')   + \frac{(2\pi)^2}{V_{\rm uc}} \delta(\mathbf k - \mathbf k') \int_{\rm uc}  d^2\mathbf r u_{n\mathbf k}^\dag (\mathbf r) \left[i\partial_{\mathbf k'} u_{n' \mathbf k'} (\mathbf r)\right] e^{i(\mathbf k' - \mathbf k)\cdot \mathbf R}\\\nonumber
+	 &=& \frac{(2\pi)^2}{V_{\rm uc}} \left[i\delta_{nn'} \partial_{\mathbf k}\delta(\mathbf k - \mathbf k') + \langle u_{n \mathbf k} | i\partial_{\mathbf k} | u_{n'\mathbf k}\rangle \delta(\mathbf k-\mathbf k') \right]
+\end{eqnarray}
+where we have used the normalization condition of 2D Bloch states $\langle n\mathbf k | n'\mathbf k'\rangle = \delta_{nn'} \frac{(2\pi)^2}{V_{\rm uc}}\delta(\mathbf k  - \mathbf k')  $ with $V_{\rm uc}$ the unit cell volume or area. The above result means that
+\begin{eqnarray}
+	\frac{a_y}{2\pi} \int d k_y \langle n\mathbf k | \mathbf r | n\mathbf k\rangle &\equiv& N \mathbf r_{n} (k_x) = \frac{a_y}{2\pi} \int d k_y \lim_{\mathbf k'\rightarrow \mathbf k} \langle n\mathbf k | \mathbf r | n\mathbf k'\rangle \\\nonumber
+	&=& \frac{a_y}{2\pi} N \int dk_y \langle u_{n\mathbf k}| i\partial_{\mathbf k} |u_{n \mathbf k}\rangle
+\end{eqnarray}
+where $a_y$ is the lattice constant along $y$. Namely
+\begin{eqnarray}\label{eq:intdkyA}
+\frac{1}{2\pi} \int dk_y \langle u_{n\mathbf k}| i\partial_{\mathbf k} |u_{n \mathbf k}\rangle = \frac{\mathbf r_n(k_x)}{a_y}.
+\end{eqnarray}
+Therefore
+\begin{eqnarray}\label{eq:Cnpump}
+	C_n &=& \frac{1}{a_y} \int dk_x \partial_{k_x} y_n(k_x) - \frac{1}{a_x} \int dk_y \partial_{k_y} x_n(k_y) \\\nonumber
+	&=& \frac{1}{a_y} \left[y_n|_{k_x = \frac{2\pi}{a_x}} - y_n|_{k_x = 0} \right] -  \frac{1}{a_x} \left[x_n|_{k_y = \frac{2\pi}{a_x}} - x_n|_{k_y = 0} \right] \\\nonumber
+	&\equiv &\frac{\Delta y_n}{a_y} - \frac{\Delta x_n}{a_x}
+\end{eqnarray}
+In other words, the Chern number can be understood as an effect of adiabatic pumping. The parameter defining the pump is $k_x$ (1st term in the above equation) or $k_y$ (2nd term in the above equation). When the pumping parameter increases by a period, the expectation value of the position operator $y_n$ (or $x_n$) for the given band does not necessarily return to itself. A nonzero change leads to the finite Chern number. A caveat that is not mentioned in many references or textbooks is that since $\mathbf{A}_{n\mathbf k}$ is not a gauge invariant quantity, the two individual terms in the last line of Eq.~\eqref{eq:Cnpump} are not separately well defined. Instead, one can choose a gauge so that $A_x(k_y = 0) = A_{x}(k_y = \frac{2\pi}{a_y})$ [but $A_y(k_x = 0) \neq A_{y}(k_x = \frac{2\pi}{a_x})$, since otherwise $C_n$ always vanishes], so that
+\begin{eqnarray}
+	C_n = \frac{\Delta y_n}{a_y},~ A_x\left(k_y + \frac{2\pi}{a_y}\right) = A_x(k_y)
+\end{eqnarray}
+In this manner, the Chern number is equivalent to the change of the $y$-component of the center-of-mass position of the given Bloch state, when $k_x$ changes by $2\pi/a_x$.
+
+The above adiabatic pumping understanding of the Chern number can now be used to define the Chern number of Landau levels, for which the Hamiltonian can only be made translation invariant along one direction. The Landau level Hamiltonian for a uniform magnetic field $B\hat{z} = \nabla \times (Bx\hat{y}) = \nabla \times \mathbf A$ is
+\begin{eqnarray}
+	H = \frac{p_x^2}{2 m } + \frac{(p_y + eBx)^2}{2m}
+\end{eqnarray}
+Assuming the eigenfunctions are $\psi(x,y)$, we can first make use of the translation symmetry along $y$ to define
+\begin{eqnarray}
+	\psi(x,y) = \frac{1}{2\pi}\int dk \phi(x,k) e^{iky}
+\end{eqnarray}
+The inverse transform is
+\begin{eqnarray}
+\psi(x,k) = \int dy \psi(x,y) e^{-iky}
+\end{eqnarray}
+which is consistent with the direct transform since
+\begin{eqnarray}
+\psi(x,k) &=& \int dy \frac{1}{2\pi}\int dk' \phi(x,k') e^{i(k'-k)y} \\\nonumber
+&=& \int dk' \phi(x,k')\delta(k'-k) = \phi(x,k)
+\end{eqnarray}
+Here we assume the wave functions are normalized as
+\begin{eqnarray}
+	\int d^2\mathbf r \psi^\dag(x,y)\psi(x,y) = 1
+\end{eqnarray}
+which means
+\begin{eqnarray}\label{eq:phinorm}
+	1 &=& \frac{1}{(2\pi)^2}\int d^2{\mathbf r} \int dk \int dk' \phi^\dag(x,k)\phi(x,k')e^{i(k'-k)y}\\\nonumber
+	&=&\frac{1}{(2\pi)^2} \int dx \int dk\int dk' \phi^\dag(x,k)\phi(x,k') 2\pi\delta(k'-k) \\\nonumber
+	&=& \frac{1}{2\pi}\int dx \int dk \phi^\dag(x,k)\phi(x,k) \\\nonumber
+	&=& \int\frac{dk}{2\pi} \langle \phi(k) | \phi(k)\rangle
+\end{eqnarray}
+
+The $k$-dependent Hamiltonian is
+\begin{eqnarray}
+H_k = e^{-iky} H e^{iky} &=& \frac{p_x^2}{2 m } + \frac{(\hbar k + eBx)^2}{2m} \\\nonumber
+&=& \frac{p_x^2}{2 m } + \frac{1}{2}m \left(\frac{eB}{m}\right)^2 \left( x + \frac{\hbar k}{eB}\right)^2
+%&=&-\frac{\hbar^2}{2m}\left[\partial_x^2 - \left(\frac{eB}{\hbar}\right)^2\left( x + \frac{\hbar k}{eB}\right)^2\right]\\\nonumber
+%&\equiv& -\frac{\hbar^2}{2m}\left[\partial_x^2 - \ell^{-4}\left( x + \frac{\hbar k}{eB}\right)^2\right]
+\end{eqnarray}
+which is a quantum harmonic oscillator with $\omega = eB/m \equiv \omega_c$. The eigensolutions are
+\begin{eqnarray}
+	H_k \phi_n(x,k) &=& \hbar \omega \left(n+\frac{1}{2}\right) \phi_n(x,k),\\\nonumber
+	\phi_n(x,k) &=& \frac{1}{\sqrt{2^n n!}} \left( \frac{m\omega_c}{\hbar \pi} \right)^\frac{1}{4} e^{-\frac{m\omega_c(x-x_k)^2}{2\hbar}}H_n\left[\sqrt{\frac{m\omega}{\hbar}}(x-x_k)\right]
+\end{eqnarray}
+where $H_n$ are the Hermite polynomials and $x_k \equiv - \frac{\hbar k}{eB}$. However, the above $\phi_n$ are normalized as
+\begin{eqnarray}\label{eq:llnorm}
+	\int dx \phi_n^*(x,k)\phi_n(x,k) = 1
+\end{eqnarray}
+incompatible with our earlier definition in Eq.~\eqref{eq:phinorm}. To this end we choose a cutoff for the $k$ integral and replace the normalization condition in Eq.~\eqref{eq:phinorm} as
+\begin{eqnarray}\label{eq:phinormnew}
+	1 = \frac{1}{2\pi}\int_{-\frac{\pi}{a_y}}^{\frac{\pi}{a_y}}dk \langle \phi(k) | \phi(k)\rangle
+\end{eqnarray}
+Since $\phi_n(x,k)$ depends on $k$ only through a shift of $x$, we have
+\begin{eqnarray}
+	\frac{1}{2\pi}\int_{-\frac{\pi}{a_y}}^{\frac{\pi}{a_y}}dk \langle \phi_n(k) | \phi_n(k)\rangle = \frac{1}{a_y} \langle \phi_n (k=0) | \phi_n (k=0)\rangle \equiv \frac{1}{a_y} \langle \phi_n | \phi_n \rangle = \frac{1}{a_y}
+\end{eqnarray}
+This means that the $\phi_n$ should be redefined so that Eq.~\eqref{eq:phinormnew} is satisfied:
+\begin{eqnarray}
+\phi_n(x,k) &=& \frac{\sqrt{a_y}}{\sqrt{2^n n!}} \left( \frac{m\omega_c}{\hbar \pi} \right)^\frac{1}{4} e^{-\frac{m\omega_c(x-x_k)^2}{2\hbar}}H_n\left[\sqrt{\frac{m\omega}{\hbar}}(x-x_k)\right]\\\nonumber
+\langle \phi_n | \phi_n \rangle &=& a_y
+\end{eqnarray}
+
+We can now try to use the above interpretation of the Chern number to check if Landau levels indeed have $C=1$. To this end we would rewrite Eq.~\eqref{eq:Cnpump} assuming $k$ as a pumping parameter. But this requires us to re-interpret Eq.~\eqref{eq:intdkyA} $\mathbf r_n$ defined there is for Bloch waves with a different normalization condition from that in Eq.~\eqref{eq:phinormnew}. Regarding $|n\mathbf k\rangle$ as an eigenstate of the Hamiltonian playing the same role as $|\phi_n\rangle$, we have
+\begin{eqnarray}
+	\frac{a_x a_y}{(2\pi)^2}\int dk_x \int dk_y \langle n\mathbf k | n\mathbf k\rangle = 	\frac{a_x a_y}{(2\pi)^2} \int d^2\mathbf k \frac{(2\pi)^2}{a_x a_y} \delta(\mathbf k) = 1
+\end{eqnarray}
+In other words,
+\begin{eqnarray}\label{eq:xnkdef}
+	\frac{a_y}{2\pi} \int dk_y \langle n\mathbf k | \mathbf r |n\mathbf k\rangle = \frac{1}{N_y}\sum_{k_y} \langle n\mathbf k|\mathbf r|n\mathbf k\rangle \rightarrow \frac{1}{a_y}\langle \phi_n(k) | x | \phi_n(k)\rangle \equiv x_{nk}
+\end{eqnarray}
+which corresponds to taking the expectation value of $x$ in a given normalized eigenstate. Therefore Eq.~\eqref{eq:Cnpump} applicable to the present case should be
+\begin{eqnarray}
+	C_n &=& -\frac{1}{2\pi}\int dk \partial_k \left(\frac{2\pi}{L_x} x_{nk}\right)\\\nonumber
+	&=&\frac{1}{L_x} \left(x_{n k = \frac{\pi}{a_y}} - x_{nk = -\frac{\pi}{a_y}}\right)
+\end{eqnarray}
+Due to the symmetry of $\phi_n(x,k) = \langle x| \phi_{n}(k)\rangle = \phi_n (x-x_k, k=0) $, we have
+\begin{eqnarray}
+	\langle \phi_{nk} | x | \phi_{nk} \rangle = a_y x_k
+\end{eqnarray}
+As a result
+\begin{eqnarray}
+C_n &=& \frac{1}{L_x}\frac{\hbar}{eB}\left(\frac{\pi}{a_y} + \frac{\pi}{a_y} \right)\\\nonumber
+&=& \frac{h}{e}\frac{1}{B a_y L_x} \equiv \frac{\Phi_0}{\Phi} N_y
+\end{eqnarray}
+where $N_y \equiv L_y/a_y$. However, this result is obtained by assuming that the period of $k$ is $2\pi/a_y$. If one wraps the 2D system into a cylinder parallel to $\hat{x}$ so that $k$ is quantized into
+\begin{eqnarray}
+	k = \frac{2\pi}{L_y}m
+\end{eqnarray}
+where $m$ can be any integer. Then imagining that one inserts a flux (or phase) through the cylinder defined by
+\begin{eqnarray}
+	\Phi_x \equiv \frac{e}{\hbar} A L_y
+\end{eqnarray}
+so that $\Phi_x$ enters the Landau level Hamiltonian as
+\begin{eqnarray}
+	H(\Phi_x) = \frac{p_x^2}{2m} + \frac{(p_y + \frac{\hbar}{L_y}\Phi_x + eBx)^2}{2m}
+\end{eqnarray}
+Then apparently the Hamiltonian is symmetric under $\Phi_x\rightarrow \Phi_x + 2\pi$, so that $\Phi_x$ can be viewed as a pumping parameter. In the above language, this is equivalent to choosing $k$ as the pumping parameter but defining its period as
+\begin{eqnarray}
+	\frac{2\pi}{a_y}\rightarrow \frac{2\pi}{L_y}
+\end{eqnarray}
+The Chern number is thus defined as
+\begin{eqnarray}\label{eq:Cnpumpingfrac}
+	C_n &=& - \frac{1}{2\pi}\oint d\Phi_x \partial_{\Phi_x} \left( \frac{2\pi}{L_x}x_{nk} \right)\\\nonumber
+	&=&\frac{1}{L_x} \left(x_{n k = \frac{2\pi}{L_y}} - x_{nk = 0}\right)\\\nonumber
+	&=& \frac{\Phi_0}{\Phi}
+\end{eqnarray}
+The final result above is, however, not necessarily an integer. To see what is wrong with it, let us now use the above cylinder picture to understand what is really going on when the flux $\Phi_x$ changes by $2\pi$. Since the cylinder has periodic boundary condition along $y$, $k$ is quantized as mentioned above, which restricts the eigenstates $|\phi_n(k)\rangle$. This further constrains the values of $x_k$, i.e., the center-of-mass of the wave functions $\phi_n(x,k) = \langle x| \phi_n(k)\rangle $:
+\begin{eqnarray}
+	\langle \phi_{nk}|x|\phi_{nk}\rangle = -\frac{2\pi m}{L_y}\frac{\hbar}{eB} = -\frac{\Phi_0}{BL_y}m \equiv -m \Delta x
+\end{eqnarray}
+where we recover the original normalization of the Landau level wavefunctions Eq.~\eqref{eq:llnorm}. Note that from this we can also obtain the total number of electrons within a Landau level:
+\begin{eqnarray}
+	N = \frac{L_x}{\Delta x} = \frac{\Phi}{\Phi_0}.
+\end{eqnarray}
+When $\Phi_x$ changes by a period, which is equivalent to $k$ changing by $\frac{2\pi}{L_y}$ or $m$ changes by 1, the center-of-mass of the Landau level wavefunction shifts along $\hat{x}$ for all $k$ by the same quantity $\Phi_0/(BL_y)$, which is the same as their nearest neighbor spacing. Thus increasing $\Phi_x$ by $2\pi$ is equivalent to removing a Landau level wavefunction at the boundary of $x = -L_x/2$ and adding another one at $x = L_x/2$. That one electron is transported from one edge to the other edge is the Chern number. However, Eq.~\eqref{eq:Cnpumpingfrac} does not describe this integer directly. A modification that leads to the direct correspondence is to multiply Eq.~\eqref{eq:Cnpumpingfrac} by the total number of electrons $N$:
+\begin{eqnarray}
+	C_n &=& -\frac{N}{2\pi} \oint d\Phi_x\partial_{\Phi_x}  \left( \frac{2\pi}{L_x}x_{nk}(\Phi_x) \right)\\\nonumber
+	&=& -\frac{1}{2\pi} \sum_k \oint d\Phi_x\partial_{\Phi_x}  \left( \frac{2\pi}{L_x}x_{nk}(\Phi_x) \right) \\\nonumber
+	&\equiv& -\frac{1}{2\pi} \oint d\Phi_x\partial_{\Phi_x}  \left( \frac{2\pi}{L_x}X_{n}(\Phi_x) \right)\\\nonumber
+	&=& \frac{1}{L_x}\left[X_n(2\pi) - X_n(0)\right]
+\end{eqnarray}
+where $X_{n}\equiv \sum_k x_{nk}$ is the $X$ coordinate of the center of mass of \emph{all} electrons multiplied by the number of electrons within a Landau level. The above formula can be generally applied to other systems that has translation symmetry only along one direction.
+
+More specifically, suppose we have a Hamiltonian $H$ with eigenstates labeled by discrete band indices $n$ and some other quantum numbers $q$ characterizing the degenerate states within a band, and the eigenstates are simply normalized as $\langle nq | nq\rangle =1$, then
+\begin{eqnarray}
+	X_n = \sum_{q} \langle nq | x | nq \rangle
+\end{eqnarray}
+One can get $C_n$ by diagonalizing the Hamiltonian so that $H|nq\rangle = \epsilon_n |nq\rangle$, adding the flux so that
+\begin{eqnarray}
+	H(\Phi_x) | nq (\Phi_x)\rangle = \epsilon_n(\Phi_x) | nq (\Phi_x)\rangle
+\end{eqnarray}
+and making sure that $\epsilon_n(\Phi_x)$ does not intersect with other bands as $\Phi_x$ increases by $2\pi$. After that, calculate
+\begin{eqnarray}
+	X_n(\Phi_x = 2\pi) - X_n(\Phi_x = 0)
+\end{eqnarray}
+and divide the above result by the finite length of the system along $x$. The result, if nonzero, means the system has a finite Chern number despite the absence of translation symmetry.
+
+If, however, that $\epsilon_n$ depends on $q$ as well. Namely $\epsilon_n\rightarrow \epsilon_n(q)$, one can still define the Chern number by making sure that all eigenenergies $\epsilon_{nq}(\Phi_x)$ do not touch other bands as $\Phi_x$ increases by $2\Pi$. The final step of calculating the Chern number stays unchanged.
+
+%\begin{thebibliography}{99}
+%
+%\bibitem{polarization_1993} R.D. King-Smith and D. Vanderbilt, Phys. Rev. B \textbf{47}, 1651(R) (1993).
+%
+%
+%\end{thebibliography}

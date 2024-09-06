@@ -11,45 +11,45 @@ Warning--empty author in supp
 Warning--empty title in supp
 Warning--empty year in supp
 Warning--empty year in MSR
-You've used 94 entries,
+You've used 100 entries,
             1791 wiz_defined-function locations,
-            1068 strings with 26030 characters,
-and the built_in function-call counts, 24204 in all, are:
-= -- 1881
-> -- 1523
+            1110 strings with 27724 characters,
+and the built_in function-call counts, 25758 in all, are:
+= -- 1996
+> -- 1641
 < -- 1
-+ -- 541
-- -- 447
-* -- 2294
-:= -- 4079
-add.period$ -- 280
-call.type$ -- 94
-change.case$ -- 93
++ -- 583
+- -- 483
+* -- 2432
+:= -- 4348
+add.period$ -- 298
+call.type$ -- 100
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 98
-duplicate$ -- 852
-empty$ -- 2139
-format.name$ -- 447
-if$ -- 5051
+cite$ -- 104
+duplicate$ -- 909
+empty$ -- 2269
+format.name$ -- 483
+if$ -- 5377
 int.to.chr$ -- 0
-int.to.str$ -- 94
-missing$ -- 93
-newline$ -- 470
-num.names$ -- 95
-pop$ -- 110
+int.to.str$ -- 100
+missing$ -- 102
+newline$ -- 500
+num.names$ -- 101
+pop$ -- 128
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 315
+skip$ -- 330
 stack$ -- 0
-substring$ -- 1760
-swap$ -- 103
+substring$ -- 1834
+swap$ -- 109
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 214
-width$ -- 96
-write$ -- 1028
+while$ -- 225
+width$ -- 103
+write$ -- 1097
 (There was 1 error message)

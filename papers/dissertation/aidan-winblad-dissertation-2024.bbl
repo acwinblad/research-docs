@@ -1,10 +1,62 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
+
+\bibitem{griffithsIntroductionElectrodynamics2024}
+David~J. Griffiths.
+\newblock {\em Introduction to Electrodynamics}.
+\newblock Cambridge University Press, Cambridge New York Port Melbourne New
+  Delhi Singapore, fifth edition edition, 2024.
+
+\bibitem{altlandCondensedMatterField2023}
+Alexander Altland and Ben Simons.
+\newblock {\em Condensed Matter Field Theory}.
+\newblock Cambridge University Press, Cambridge, United Kingdom ; New York, NY,
+  third edition edition, 2023.
+
+\bibitem{kittelIntroductionSolidState2018}
+Charles Kittel.
+\newblock {\em Introduction to Solid State Physics}.
+\newblock Wiley, Hoboken, NJ, global edition, [9th edition] edition, 2018.
+
+\bibitem{wanTopologicalSemimetalFermiarc2011}
+Xiangang Wan, Ari~M. Turner, Ashvin Vishwanath, and Sergey~Y. Savrasov.
+\newblock Topological semimetal and {{Fermi-arc}} surface states in the
+  electronic structure of pyrochlore iridates.
+\newblock {\em Phys. Rev. B}, 83(20):205101, May 2011.
+
+\bibitem{xuDiscoveryWeylFermion2015}
+Su-Yang Xu, Ilya Belopolski, Nasser Alidoust, Madhab Neupane, Guang Bian,
+  Chenglong Zhang, Raman Sankar, Guoqing Chang, Zhujun Yuan, Chi-Cheng Lee,
+  Shin-Ming Huang, Hao Zheng, Jie Ma, Daniel~S. Sanchez, BaoKai Wang, Arun
+  Bansil, Fangcheng Chou, Pavel~P. Shibayev, Hsin Lin, Shuang Jia, and M.~Zahid
+  Hasan.
+\newblock Discovery of a {{Weyl}} fermion semimetal and topological {{Fermi}}
+  arcs.
+\newblock {\em Science}, 349(6248):613--617, August 2015.
+
+\bibitem{liWeylSemimetalTaAs2016}
+Zhilin Li, Hongxiang Chen, Shifeng Jin, Di~Gan, Wenjun Wang, Liwei Guo, and
+  Xiaolong Chen.
+\newblock Weyl {{Semimetal TaAs}}: {{Crystal Growth}}, {{Morphology}}, and
+  {{Thermodynamics}}.
+\newblock {\em Crystal Growth \& Design}, 16(3):1172--1175, March 2016.
 
 \bibitem{ivanovNonAbelianStatisticsHalfQuantum2001}
 D.~A. Ivanov.
 \newblock Non-{{Abelian Statistics}} of {{Half-Quantum Vortices}} in p -{{Wave
   Superconductors}}.
 \newblock {\em Phys. Rev. Lett.}, 86(2):268--271, January 2001.
+
+\bibitem{kitaevUnpairedMajoranaFermions2001}
+A.~Yu Kitaev.
+\newblock Unpaired {{Majorana}} fermions in quantum wires.
+\newblock {\em Phys.-Usp.}, 44(10S):131, October 2001.
+
+\bibitem{aliceaNonAbelianStatisticsTopological2011}
+Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
+  Fisher.
+\newblock Non-{{Abelian}} statistics and topological quantum information
+  processing in {{1D}} wire networks.
+\newblock {\em Nature Phys}, 7(5):412--417, May 2011.
 
 \bibitem{kitaevFaulttolerantQuantumComputation2003}
 A.~{\relax Yu}. Kitaev.
@@ -16,13 +68,6 @@ Chetan Nayak, Steven~H. Simon, Ady Stern, Michael Freedman, and Sankar
   Das~Sarma.
 \newblock Non-{{Abelian}} anyons and topological quantum computation.
 \newblock {\em Rev. Mod. Phys.}, 80(3):1083--1159, September 2008.
-
-\bibitem{aliceaNonAbelianStatisticsTopological2011}
-Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
-  Fisher.
-\newblock Non-{{Abelian}} statistics and topological quantum information
-  processing in {{1D}} wire networks.
-\newblock {\em Nature Phys}, 7(5):412--417, May 2011.
 
 \bibitem{aasenMilestonesMajoranaBasedQuantum2016}
 David Aasen, Michael Hell, Ryan~V. Mishmash, Andrew Higginbotham, Jeroen Danon,
@@ -36,11 +81,6 @@ N.~Read and Dmitry Green.
 \newblock Paired states of fermions in two dimensions with breaking of parity
   and time-reversal symmetries and the fractional quantum {{Hall}} effect.
 \newblock {\em Phys. Rev. B}, 61(15):10267--10297, April 2000.
-
-\bibitem{kitaevUnpairedMajoranaFermions2001}
-A.~Yu Kitaev.
-\newblock Unpaired {{Majorana}} fermions in quantum wires.
-\newblock {\em Phys.-Usp.}, 44(10S):131, October 2001.
 
 \bibitem{brisonPWaveSuperconductivityDVector2021}
 Jean-Pascal Brison.

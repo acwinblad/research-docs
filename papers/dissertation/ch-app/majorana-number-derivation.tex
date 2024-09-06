@@ -1,0 +1,627 @@
+\section{Kitaev chain}
+A pair of Majorana fermions can be defined in terms of spinless operators $a_j, a_j^\dag$, where $j$ labels general quantum numbers, as
+\begin{eqnarray}\label{eq:atoc}
+	&&c_{2j-1} = a_j+ a_j^\dag\\\nonumber
+	&&c_{2j} = -i(a_j - a_j^\dag)
+\end{eqnarray}
+which are hermitian conjugates of themselves. Conversely,
+\begin{eqnarray}\label{eq:ctoa}
+	&&a_j =\frac{1}{2} (c_{2j-1} + i c_{2j}),\\\nonumber
+	&&a_j^\dag = \frac{1}{2}(c_{2j-1} - i c_{2j})
+\end{eqnarray}
+For a general mean-field Hamiltonian
+\begin{eqnarray}
+	H = \sum_{jl} h_{jl} a_j^\dag a_l
+\end{eqnarray}
+where $h$ is a Hermitian matrix, it can be transformed to the Majorana fermion representation as follows:
+\begin{eqnarray}\label{eq:BdGMrep}
+	H &=& \frac{1}{4}\sum_{jl} h_{jl} (c_{2j-1} - i c_{2j}) ( c_{2l-1} + i c_{2l})\\\nonumber
+	&=& \frac{1}{4}\sum_{jl} (h_{jl} c_{2j-1} c_{2l-1} - i h_{jl} c_{2j} c_{2l-1} + ih_{jl} c_{2j-1} c_{2l} + h_{jl} c_{2j} c_{2l}) \\\nonumber
+	&=& \frac{i}{4} \sum_{jl} (c_{2j-1}, c_{2j})\begin{pmatrix}
+		-ih_{jl} & h_{jl}\\
+		-h_{jl} & -ih_{jl}
+	\end{pmatrix}\begin{pmatrix}
+	c_{2l-1} \\
+	c_{2l}
+\end{pmatrix}\\\nonumber
+&\equiv&\frac{i}{4}\sum_{mn}A_{mn}c_{m}c_n
+\end{eqnarray}
+where the matrix $A$ anti-Hermitian since
+\begin{eqnarray}
+	H^\dag = -\frac{i}{4}\sum_{mn}A_{mn}^* c_n c_m =  H
+\end{eqnarray}
+which leads to $A_{mn}^* = -A_{nm}$. If the Hamiltonian does not preserve particle number, i.e., it is a BdG Hamiltonian, we have, similarly
+\begin{eqnarray}
+H = \sum_{jl} \left(h_{jl} a_j^\dag a_l + \Delta_{jl} a_j a_l + \Delta^\dag_{jl}  a_j^\dag a_l^\dag\right)
+\end{eqnarray}
+supposing we do not double count the terms in the normal part of the Hamiltonian. Then
+\begin{eqnarray}
+H = \frac{i}{4} \sum_{jl} (c_{2j-1}, c_{2j})\begin{pmatrix}
+	-ih -i(\Delta + \Delta^\dag) & h + (\Delta-\Delta^\dag )\\
+	-h + (\Delta - \Delta^\dag) & -ih + i(\Delta +\Delta^\dag)
+\end{pmatrix}_{jl}\begin{pmatrix}
+	c_{2l-1} \\
+	c_{2l}
+\end{pmatrix}\\\nonumber
+\end{eqnarray}
+On the other hand, the BdG Hamiltonian can be written as
+\begin{eqnarray}\label{eq:HBdG}
+	H &=&\frac{1}{2} \sum_{j}h_{jj} + \sum_{jl} \left( \frac{1}{2}h_{jl} a_j^\dag a_l - \frac{1}{2}h_{lj} a_j a_l^\dag + \Delta_{jl} a_j a_l + \Delta^\dag_{jl}  a_j^\dag a_l^\dag \right) \\\nonumber
+	&=& \frac{1}{2}{\rm Tr}(h) + \sum_{jl} (a_j^\dag, a_j)\begin{pmatrix}
+		\frac{1}{2} h & \Delta^\dag \\
+		\Delta & -\frac{1}{2}h^T
+	\end{pmatrix}_{jl}\begin{pmatrix}
+	a_l \\
+	a_l^\dag
+\end{pmatrix} \\\nonumber
+&\equiv & \frac{1}{2}{\rm Tr}(h) + a^\dag \begin{pmatrix}
+	\frac{1}{2} h & \Delta^\dag \\
+	\Delta & -\frac{1}{2}h^T
+\end{pmatrix} a
+\end{eqnarray}
+where $a\equiv(a_1, a_2,\dots, a_1^\dag, a_2^\dag,\dots)^T$. Suppose the BdG Hamiltonian can be diagonalized by a Bogoliubov transformation:
+\begin{eqnarray}\label{eq:bogoliubov}
+	\tilde{a}_j^\dag &=& a_{l}^\dag U_{1,lj} + a_{k} U_{2,kj} \\\nonumber
+	\tilde{a}_j &=& a_{l} U^*_{1,lj} + a^\dag_{k} U^*_{2,kj}
+\end{eqnarray}
+Preserving the anticommutation relation suggests
+\begin{eqnarray}
+	\delta_{ij} &=& \{\tilde{a}_{i}, \tilde{a}_j^\dag \} = \{a_{l} U^*_{1,li} + a^\dag_{k} U^*_{2,ki},  a_{l'}^\dag U_{1,l'j} + a_{k'} U_{2,k'j}  \} \\\nonumber
+	&=&  U^*_{1,li} U_{1,lj} + U^*_{2,ki}U_{2,kj} = (U_1^\dag U_1 + U_2^\dag U_2)_{ij} \\\nonumber
+	0 &=& \{\tilde{a}_{i}, \tilde{a}_j \} =\{a_{l} U^*_{1,li} + a^\dag_{k} U^*_{2,ki}, a_{l'} U^*_{1,l'j} + a^\dag_{k'} U^*_{2,k'j}  \} \\\nonumber
+	&=& U^*_{1,li}U^*_{2,lj} + U^*_{2,ki}U^*_{1,kj} = (U^\dag_1 U_2^* + U^\dag_2 U_1^*)_{ij}\\\nonumber
+	0 &=& \{\tilde{a}_{i}^\dag, \tilde{a}_j^\dag \} =\{a_{l}^\dag U_{1,li} + a_{k} U_{2,ki}, a^\dag_{l'} U_{1,l'j} + a_{k'} U_{2,k'j}  \} \\\nonumber
+      &=& U_{1,li}U_{2,lj} + U_{2,ki}U_{1,kj} = (U^\dag_1 U_2^* + U^\dag_2 U_1^*)^*_{ij}
+\end{eqnarray}
+The above identities simply indicate
+\begin{eqnarray}
+\mathcal{U} \equiv \begin{pmatrix}
+		U_1 & U_2 \\
+		U_2^* & U_1^*
+	\end{pmatrix}
+\end{eqnarray}
+is a unitary matrix. Therefore one can diagonalize the BdG Hamiltonian using usual unitary matrices obtained from the eigenvectors of the matrix in the last line of Eq.~\ref{eq:HBdG}:
+\begin{eqnarray}\label{eq:HBdGdiag}
+	H &=& \frac{1}{2}{\rm Tr}(h) + \tilde{a}^\dag U^\dag \begin{pmatrix}
+		\frac{1}{2} h & \Delta^\dag \\
+		\Delta & -\frac{1}{2}h^T
+	\end{pmatrix} U \tilde{a}\\\nonumber
+&\equiv& \frac{1}{2}{\rm Tr}(h) + \frac{1}{2}\tilde{a}^\dag \begin{pmatrix}
+	\epsilon & 0 \\
+	0 & -\epsilon
+\end{pmatrix} \tilde{a}\\\nonumber
+&=& \frac{1}{2}\sum_{j}h_{jj} +\frac{1}{2} \sum_{j}(\epsilon_j \tilde{a}_j^\dag \tilde{a}_j - \epsilon_j \tilde{a}_j \tilde{a}_j^\dag) \\\nonumber
+&=&  \frac{1}{2}\sum_{j}h_{jj} +\sum_{j}\epsilon_j(\tilde{a}_j^\dag \tilde{a}_j - \frac{1}{2})
+\end{eqnarray}
+where $\epsilon \equiv {\rm Diag}[\epsilon_1, \epsilon_2,\dots]$. To see why $U$ can transform the BdG Hamiltonian into such a diagonal matrix with opposite eigenvalues at the same positions in the upper-left and lower-right blocks, we check these two terms explicitly
+\begin{eqnarray}
+	&&\frac{1}{2}(\epsilon_{1} \tilde{a}_j^\dag \tilde{a}_j - \epsilon_{2} \tilde{a}_j \tilde{a}_j^\dag)\\\nonumber
+	&=& \frac{\epsilon_1}{2} (a_l^\dag U_{1,lj} + a_k U_{2,kj}) (a_{l'} U^*_{1,{l'}j} + a^\dag_{k'} U^*_{2,k'j}) - \frac{ \epsilon_2 }{2} (a_{l'} U^*_{1,{l'}j} + a^\dag_{k'} U^*_{2,k'j})(a_l^\dag U_{1,lj} + a_k U_{2,kj}) \\\nonumber
+	&=& \frac{1}{2}(\epsilon_1 U_{1,lj} U_{1,l'j}^* - \epsilon_2 U^*_{2,lj} U_{2,l'j}) a^\dag_{l} a_{l'} + \frac{1}{2}(\epsilon_1 U_{2,kj} U^*_{2,k'j} -  \epsilon_2 U^*_{1,kj} U_{1, k'j}) a_k a_{k'}^\dag \\\nonumber
+	&+& \frac{1}{2} (\epsilon_1 U_{1,lj} U_{2,k'j}^* - \epsilon_2 U_{2,lj}^* U_{1,k'j}) a_{l}^\dag a_{k'}^\dag + \frac{1}{2} (\epsilon_1 U_{2,kj} U^*_{1,l'j} -\epsilon_2 U_{1,kj}^* U_{2,l'j} ) a_{k} a_{l'}
+\end{eqnarray}
+Comparing them with the original BdG Hamiltonian Eq.~\ref{eq:HBdG}, we can conclude that
+\begin{eqnarray}
+&&	\epsilon_1 U_{1,lj} U_{1,l'j}^* - \epsilon_2 U^*_{2,lj} U_{2,l'j} = - (\epsilon_1 U_{2,l'j} U^*_{2,lj} -  \epsilon_2 U^*_{1,l'j} U_{1, lj}) \\\nonumber
+&& \epsilon_1 U_{1,lj} U_{2,k'j}^* - \epsilon_2 U_{2,lj}^* U_{1,k'j} = (\epsilon_1 U_{2,k'j} U^*_{1,lj} -\epsilon_2 U_{1,k'j}^* U_{2,lj} )^*
+\end{eqnarray}
+or equivalently
+\begin{eqnarray}
+	&&(\epsilon_1 - \epsilon_2) (U_{1,lj} U_{1,l'j}^* + U_{2,l'j} U^*_{2,lj} )= 0 \\\nonumber
+	&& 0 = 0
+\end{eqnarray}
+The first equation therefore dictates $\epsilon_1 = \epsilon_2$. However, note that $\epsilon_j$ does not have to be all positive. If the original normal state Hamiltonian can be diagonalized into a form
+\begin{eqnarray}
+	H = \sum_{j} \tilde{\epsilon}_{j} b^\dag_j b_j
+\end{eqnarray}
+where $\tilde{\epsilon}_{j}$ can be either positive or negative, the state with the lowest possible energy from the system is
+\begin{eqnarray}
+	|\Omega \rangle =  \prod_{\tilde{\epsilon}_k < 0} b_k^\dag | 0\rangle
+\end{eqnarray}
+where $|0\rangle$ is the true vacuum with no particles in any sense. This is the ground state, and its parity is therefore determined by the number of single-particle eigenstates that have negative energies.
+
+From the same perspective, one can define the ground state of the BdG Hamiltonian Eq.~\ref{eq:HBdGdiag} \emph{for a specific set of Fermion operators} $\tilde{a}_j$, as
+\begin{eqnarray}
+	|\Omega_{\rm BdG}\rangle = \prod_{\epsilon_j < 0} \tilde{a}_j^\dag | 0_{\rm BdG} \rangle
+\end{eqnarray}
+where $| 0_{\rm BdG} \rangle$ is certain ``vacuum state" for the given set of $\tilde{a}_j$:
+\begin{eqnarray}
+	\tilde{a}_j | 0_{\rm BdG} \rangle = 0,\, \forall j
+\end{eqnarray}
+The number of particles in the ground state is therefore determined by the number of negative $\epsilon_j$. However, the sign of $\epsilon_j$ in the present case does not have absolute meaning. For example, supposing $\epsilon_{j_0}<0$, the following Bogoliubov transformation
+\begin{eqnarray}\label{eq:Bgtranswitch}
+	\tilde{a}'_{j_0} = \tilde{a}_{j_0}^\dag \\\nonumber
+	{\tilde{a}}^{\prime \dag}_{j_0} = \tilde{a}_{j_0}
+\end{eqnarray}
+that only interchanges the creation and annihilation operators for a single $j_0$ and keeps the others unchanged, leads to a different ground state
+\begin{eqnarray}
+	|\Omega'_{\rm BdG}\rangle = \prod_{\epsilon_j < 0, j\neq j_0} \tilde{a}_j^\dag | 0_{\rm BdG} \rangle
+\end{eqnarray}
+since the number of negative energy eigenstates decreases by one. The transformation in Eq.~\ref{eq:Bgtranswitch} therefore neither preserves particle number nor particle parity. This can be explicitly checked. The particle number operator in the $\tilde{a}_j$ representation is
+\begin{eqnarray}
+	N = \sum_{j} \tilde{a}_j^\dag \tilde{a}_j
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	N' = \sum_{j\neq j_0} \tilde{a}_j^\dag \tilde{a}_j + \tilde{a}_{j_0} \tilde{a}^\dag_{j_0} = N + (1-2 \tilde{a}_{j_0}^\dag \tilde{a}_{j_0})
+\end{eqnarray}
+The latter equation also means that when the $j_0$ state is occupied in $\Omega_{\rm BdG}$, i.e., $\tilde{a}_{j_0}^\dag \tilde{a}_{j_0} |\Omega_{\rm BdG}\rangle = |\Omega_{\rm BdG}\rangle$, the transformation decreases the total number of particles by 1. Conversely, if it is unoccupied ($\epsilon_{j_0} > 0$), or $\tilde{a}_{j_0}^\dag \tilde{a}_{j_0} |\Omega_{\rm BdG}\rangle = 0$, the transformation increases the particle number by one.
+
+The fermion parity operator can be defined by
+\begin{eqnarray}
+	P = \prod_j (1-2a_j^\dag a_j)
+\end{eqnarray}
+so that $P = 1$ if the number of occupied states is even, and $-1$ otherwise. Alternatively, since
+\begin{eqnarray}
+	a_j^\dag a_j = \frac{1}{4}(c_{2j-1} - ic_{2j})(c_{2j-1} + ic_{2j}) = \frac{1}{2} (1 + ic_{2j-1} c_{2j})
+\end{eqnarray}
+$P$ can be written in the Majorana representation as
+\begin{eqnarray}\label{eq:Pm}
+	P = \prod_j (-i c_{2j-1} c_{2j}).
+\end{eqnarray}
+Eq.~\ref{eq:Bgtranswitch} transforms $P$ by changing
+\begin{eqnarray}
+	1 - 2\tilde{a}^\dag_{j_0} \tilde{a}_{j_0}\rightarrow 	1 - 2\tilde{a}'_{j_0}\tilde{a}^{\prime\dag}_{j_0} = - (1-\tilde{a}^{\prime\dag}_{j_0}\tilde{a}'_{j_0})
+\end{eqnarray}
+and hence indeed changes $P$.
+
+We can also understand why the BdG Hamiltonian preserves $P$ but not $N$. Due to the following commutation relations:
+\begin{eqnarray}
+	&&[a_j^\dag a_{l}, a_j^\dag a_j ] = a_j^\dag a_{l} a_j^\dag a_j - a_j^\dag a_j a_j^\dag a_{l} = - a_j^\dag a_l\\\nonumber
+	&&[a_j^\dag a_{l}, a_l^\dag a_l ] = a_j^\dag a_{l} a_l^\dag a_l - a_l^\dag a_l a_j^\dag a_{l} = a_j^\dag a_l\\\nonumber
+	&&[a_j^\dag a^\dag_{l}, a_j^\dag a_j ] = a_j^\dag a^\dag_{l} a_j^\dag a_j - a_j^\dag a_j a_j^\dag a^\dag_{l} = - a_j^\dag a_l^\dag\\\nonumber
+	&&[a_j^\dag a^\dag_{l}, a_l^\dag a_l ] = a_j^\dag a^\dag_{l} a_l^\dag a_l - a_l^\dag a_l a_j^\dag a^\dag_{l} = - a_j^\dag a_l^\dag\\\nonumber
+	&&[a_j a_l, a_j^\dag a_j ] = a_j a_{l} a_j^\dag a_j - a_j^\dag a_j a_j a_{l} =  a_j a_l\\\nonumber
+	&&[a_j a_{l}, a_l^\dag a_l ] = a_j a_{l} a_l^\dag a_l - a_l^\dag a_l a_j a_{l} = a_j a_l
+\end{eqnarray}
+and
+\begin{eqnarray}
+	[a_j^\dag a_{l}, (1-2a_j^\dag a_j)(1-2a_l^\dag a_l) ] &=& (1-2a_j^\dag a_j)[a_j^\dag a_{l}, (1-2a_l^\dag a_l) ] + 	[a_j^\dag a_{l}, (1-2a_j^\dag a_j)](1-2a_l^\dag a_l) \\\nonumber
+	&=& -2(1-2a_j^\dag a_j)a_j^\dag a_l + 2a_j^\dag a_l (1-2a_l^\dag a_l) \\\nonumber
+	&=& -2 a_j^\dag a_l + 4 a_j^\dag a_l +  2 a_j^\dag a_l - 4 a_j^\dag a_l = 0 \\\nonumber
+	[a_j a_{l}, (1-2a_j^\dag a_j)(1-2a_l^\dag a_l) ] &=& (1-2a_j^\dag a_j)[a_j a_{l}, (1-2a_l^\dag a_l) ] + 	[a_j a_{l}, (1-2a_j^\dag a_j)](1-2a_l^\dag a_l) \\\nonumber
+	&=& -2(1-2a_j^\dag a_j)a_j a_l - 2a_j a_l (1-2a_l^\dag a_l) \\\nonumber
+	&=& -2 a_j a_l -  2 a_j a_l + 4 a_j a_l =0
+\end{eqnarray}
+we have
+\begin{eqnarray}
+	[H, N] &=& 2\sum_{jl} (\Delta_{jl} a_j a_l - \Delta^\dag_{jl} a_j^\dag a_l^\dag ) \\\nonumber
+	[H, P] &=& 0
+\end{eqnarray}
+
+Since $[H,P] = 0$, there are common eigenstates of $H$ and $P$, or that they can be simultaneously diagonalized by some unitary transformation. However, since $P$ is not a one-body operator, its unitary transformation in general cannot be written as multiplications of $2N\times 2N$ matrices as the BdG Hamiltonian. We therefore need to understand how the Bogoliubov transformation Eq.~\ref{eq:bogoliubov} transforms $P$. To this end we first write Eq.~\ref{eq:bogoliubov} into a block form
+\begin{eqnarray}
+	(\tilde{a}^\dag, \tilde{a}) = (a^\dag, a)\mathcal{U}
+\end{eqnarray}
+where $a \equiv (a_1, a_2,\dots, a_N)$ and so on. On the other hand, Eqs.~\ref{eq:ctoa} and \ref{eq:atoc} can be written as
+\begin{eqnarray}
+	(c_o, c_e) = (a^\dag, a) \begin{pmatrix}
+		1 & i\\
+		1 & -i
+	\end{pmatrix},\; (a^\dag, a) = (c_o, c_e) \begin{pmatrix}
+	\frac{1}{2} & \frac{1}{2}\\
+	-\frac{i}{2} & \frac{i}{2}
+\end{pmatrix}
+\end{eqnarray}
+where $c_o \equiv (c_1, c_3, \dots c_{2N-1})$ and $c_e\equiv(c_2, c_4, \dots, c_{2N})$. The above equations then lead to
+\begin{eqnarray}
+	(\tilde{c}_o, \tilde{c}_e) &=& (c_o, c_e) \begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2}\\
+		-\frac{i}{2} & \frac{i}{2}
+	\end{pmatrix} \mathcal{U} \begin{pmatrix}
+		1 & i\\
+		1 & -i
+	\end{pmatrix} \\\nonumber
+&=& (c_o, c_e) \begin{pmatrix}
+	{\rm Re}(U_1 + U_2) & -{\rm Im}(U_1 - U_2) \\
+	{\rm Im}(U_1 + U_2) &  {\rm Re}(U_1 - U_2)
+\end{pmatrix}\\\nonumber
+&=& (c_o, c_e) \mathcal{O}
+\end{eqnarray}
+or equivalently
+\begin{eqnarray}
+	\tilde{c}_{2j-1} &=& c_{2k-1} \mathcal{O}_{k,j} + c_{2k}\mathcal{O}_{N+k, j}\\\nonumber
+	\tilde{c}_{2j} &=& c_{2k-1} \mathcal{O}_{k,N+j} + c_{2k}\mathcal{O}_{N+k, N+j}
+\end{eqnarray}
+
+Since all elements of $\mathcal{O}$ are real,
+\begin{eqnarray}
+	\mathcal{O}^T \mathcal{O} = \mathcal{O}^\dag \mathcal{O} = \begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2}\\
+		-\frac{i}{2} & \frac{i}{2}
+	\end{pmatrix} \mathcal{U}^\dag \mathcal{U} \begin{pmatrix}
+		1 & i\\
+		1 & -i
+	\end{pmatrix} = \mathbb{I}
+\end{eqnarray}
+Namely, $\mathcal{O}$ is a real orthogonal matrix. As a result we have
+\begin{eqnarray}
+	1 = \det(\mathcal{O}^T\mathcal{O}) = (\det{\mathcal{O}})^2
+\end{eqnarray}
+which necessarily means $\det{\mathcal{O}} = \pm 1$. From linear algebra we know that an arbitrary special orthogonal matrix, i.e., $\det{\mathcal{O}} = +1$, can always be written as
+\begin{eqnarray}
+	\mathcal{O} = e^A
+\end{eqnarray}
+where $A = -A^T$ is a real skew-symmetric matrix. But no such general expressions exist for those $\mathcal{O}$ with $\det \mathcal{O} = -1$. For later convenience we reorganize the elements of $\mathcal{O}$ so that they are labeled in the same way as the Majorana operators. Namely
+\begin{eqnarray}
+	\mathcal{O}_{k,j}&\rightarrow&\mathcal{O}_{2k-1,2j-1}\\\nonumber
+	\mathcal{O}_{N+k,j}&\rightarrow&\mathcal{O}_{2k,2j-1}\\\nonumber
+	\mathcal{O}_{k,N+j}&\rightarrow&\mathcal{O}_{2k-1,2j}\\\nonumber
+	\mathcal{O}_{N+k,N+j}&\rightarrow&\mathcal{O}_{2k,2j}
+\end{eqnarray}
+This does not affect the orthogonality of $\mathcal{O}$.
+
+To see how $\mathcal{O}$ transforms $P$, we start from Eq.~\ref{eq:Pm} and note that it can be written as
+\begin{eqnarray}\label{eq:Ppf}
+	P = (-i)^N \prod_{j=1}^N (c_{2j-1}c_{2j}) = {\rm pf}(\mathcal{C})
+\end{eqnarray}
+where
+\begin{eqnarray}
+	\mathcal{C} \equiv\begin{pmatrix}
+		C_1 & & \\
+		& \ddots & \\
+		& & C_N
+	\end{pmatrix},\; C_j\equiv \begin{pmatrix}
+0 & -i c_{2j-1} c_{2j} \\
+i c_{2j-1} c_{2j} & 0
+\end{pmatrix}
+\end{eqnarray}
+The pfaffian $\rm pf$ for an arbitrary skew-symmetric matrix is defined as
+\begin{eqnarray}
+	{\rm pf}(A) = \frac{1}{2^n n!} \sum_{\sigma \in S_{2n}} {\rm sgn}(\sigma) \prod_{i=1}^n a_{\sigma(2i-1), \sigma(2i)}
+\end{eqnarray}
+where $A$ is a $2n\times 2n$ skew-symmetric matrix, $S_{2n}$ is the permutation group of order $2n$. For skew-symmetric tridiagonal $A$ with $A_{2j-1, 2j} = - A_{2j, 2j-1} = b_j$ and all other elements zero, ${\rm pf}(A) = \prod_{j=1}^n b_j $. Eq.~\ref{eq:Ppf} is valid since all the $-i c_{2j -1} c_{2j}$ commute with one another and can be viewed as c-numbers.
+
+Our goal is to convert the complicated transformation rule of $P$ under $\mathcal{O}$ to something that is more manageable. To this end we generalize the $\mathcal{C}$ matrix above to the following:
+\begin{eqnarray}
+	\mathcal{C}_{mn} = \begin{cases}
+		0 & m=n\\
+		-ic_m c_n & m\neq n
+	\end{cases}
+\end{eqnarray}
+Apparently $\mathcal{C} = -\mathcal{C}^T$ and one can still calculate its pfaffian. To simplify the calculation we use the following equivalent definition of the pfaffian:
+\begin{eqnarray}
+	{\rm pf} (A) = \sum_{\alpha\in \Pi} A_\alpha
+\end{eqnarray}
+where $A_\alpha$ is
+\begin{eqnarray}
+	A_\alpha = {\rm sgn}(\pi_\alpha) a_{i_1,j_1} a_{i_2,j_2}\dots  a_{i_n,j_n}
+\end{eqnarray}
+and the permutation $\pi_\alpha$ and its set $\Pi$ are constructed in the following way: Consider a partition of $\{1,2,\dots,2n\}$ into unordered pairs and define $\alpha$ as such a partition
+\begin{eqnarray}
+	\alpha = \{(i_1,j_1),(i_2,j_2),\dots,(i_n,j_n)\}
+\end{eqnarray}
+so that there are $(2n)!/(2^n n!)$ such partitions. The permutation $\pi_\alpha$ is defined as
+\begin{eqnarray}
+	\pi_\alpha \equiv \begin{pmatrix}
+		1 & 2 & 3 & 4 & \dots & 2n-1 & 2n\\
+		i_1 & j_1 & i_2 & j_2 & \dots & i_n & j_n
+	\end{pmatrix}
+\end{eqnarray}
+For our $\mathcal{C}$ this means the counterpart of $A_\alpha$ is
+\begin{eqnarray}
+	{\rm sgn}(\pi_\alpha) (-i)^N c_{m_1} c_{n_1}c_{m_2} c_{n_2}\dots c_{m_N} c_{n_N} = \prod_{j=1}^N (-ic_{2j-1}c_{2j})
+\end{eqnarray}
+since ${\rm sgn}(\pi_\alpha)$ is exactly compensated by the anticommutation relation of the Majorana fermions. We therefore have
+\begin{eqnarray}
+P =\frac{2^N N!}{(2N)!} {\rm pf}(\mathcal{C})
+\end{eqnarray}
+
+We next consider the transformation of $\mathcal{C}$ by $\mathcal{O}$:
+\begin{eqnarray}
+	\tilde{\mathcal{C}}_{mn} = -i \tilde{c}_m \tilde{c}_n = -i\sum_{i\neq j} \mathcal{O}_{mi}\mathcal{O}_{nj} c_i c_j = (\mathcal{O}^T \mathcal{C}\mathcal{O})_{mn}
+\end{eqnarray}
+which is nothing but the usual similarity transformation of the matrix $\mathcal{C}$. We therefore immediately get
+\begin{eqnarray}
+	\tilde{P} &=& \frac{2^N N!}{(2N)!} {\rm pf}(\tilde{\mathcal{C}}) = \frac{2^N N!}{(2N)!} {\rm pf}(\mathcal{O}^T \mathcal{C}\mathcal{O}) = \frac{2^N N!}{(2N)!} {\rm pf}(\mathcal{C}) \det(\mathcal{O})\\\nonumber
+	&=& \det(\mathcal{O}) P
+\end{eqnarray}
+Therefore the Bogoliubov transformation $\mathcal{O}$ preserves the parity if $\det(\mathcal{O}) = +1$, and changes the parity if $\det(\mathcal{O}) = -1$.
+
+Using the above transformation rule of $P$ under a general Bogoliubov transformation we can now understand the meaning of ground state parity in \cite{kitaevUnpairedMajoranaFermions2001}. Start from an arbitrary state that is an eigenstate of $P$ with even parity, we have
+\begin{eqnarray}
+	P |\psi\rangle = |\psi\rangle
+\end{eqnarray}
+Under a Bogoliubov transformation, the state itself is unchanged, but $P\rightarrow \tilde{P}$, since the meaning of particles is different. We then have
+\begin{eqnarray}
+	\tilde{P} |\psi\rangle = \det(\mathcal{O})P |\psi\rangle = \det(\mathcal{O})|\psi\rangle
+\end{eqnarray}
+Namely, because the Bogoliubov transformation redefines particles and hence the parity operator, an even-parity state can become an odd-parity state in the new definition of the parity operator. Therefore for a given BdG Hamiltonian, the meaning of its ground state parity must be relative, and we need to choose a reference in order to discuss the parity. Such a reference is the ground state of the ``canonical form'' of the BdG Hamiltonian:
+\begin{eqnarray}
+	H_{\rm canonical} &=& \sum_{m} \epsilon_m (\tilde{a}_m^\dag \tilde{a}_m - \frac{1}{2}) = \frac{i}{2}\sum_{m}\tilde{c}_{2m-1} \tilde{c}_{2m} \\\nonumber
+	&\equiv& \frac{i}{2}\sum_{m}\epsilon_m b'_m b''_{m},\;\; \epsilon_m\geq 0
+\end{eqnarray}
+where the crucial requirement is that all the eigenenergies are non-negative. For a given BdG Hamiltonian such a canonical form is uniquely fixed, and we can use its ground state as a reference for the parity and the parity operator. The ground state of $H_{\rm canonical} $ is defined by
+\begin{eqnarray}
+	\tilde{a}_m|\Omega_{\rm canonical}\rangle = 0\;\; \forall m\in[1,N].
+\end{eqnarray}
+and the ``reference'' or canonical parity operator is
+\begin{eqnarray}
+	P_{\rm canonical} \equiv \prod_{m=1}^N (-ib'_m b''_m).
+\end{eqnarray}
+Since there are no $\tilde{a}$ particles in $|\Omega_{\rm canonical}\rangle$, we must have
+\begin{eqnarray}
+	P_{\rm canonical} |\Omega_{\rm canonical}\rangle = |\Omega_{\rm canonical}\rangle
+\end{eqnarray}
+Namely $|\Omega_{\rm canonical}\rangle $ has even parity. We can then ask the following question: What is the parity of $|\Omega_{\rm canonical}\rangle$ in the sense of particles in the original BdG Hamiltonian, i.e., $a_j$? This requires us to evaluate
+\begin{eqnarray}
+	P_{\rm BdG} |\Omega_{\rm canonical}\rangle &\equiv& \prod_{j} (-ic_{2j-1}c_{2j})  |\Omega_{\rm canonical}\rangle = \det(\mathcal{O}) 	P_{\rm canonical} |\Omega_{\rm canonical}\rangle \\\nonumber
+	&=& \det(\mathcal{O}) |\Omega_{\rm canonical}\rangle
+\end{eqnarray}
+Namely, the parity is equal to the determinant of the orthogonal transformation that transforms $c$ to $b'$ and $b''$. More precisely,
+\begin{eqnarray}
+	\begin{pmatrix}
+		b'_1 \\
+		b''_1 \\
+		\vdots \\
+		b'_N \\
+		b''_N
+	\end{pmatrix} = \mathcal{O} \begin{pmatrix}
+	c_1 \\
+	c_2 \\
+	\vdots \\
+	c_{2N-1} \\
+	c_{2N}
+\end{pmatrix}
+\end{eqnarray}
+and
+\begin{eqnarray}\label{eq:AtransO}
+	\mathcal{O} A \mathcal{O}^T = \begin{pmatrix}
+		0 & \epsilon_1 & & & \\
+		-\epsilon_1 & 0 & & & \\
+		& & \ddots & & \\
+		& & & 0 & \epsilon_N \\
+		& & & -\epsilon_N & 0
+	\end{pmatrix}
+\end{eqnarray}
+where $A$ is introduced in Eq.~\ref{eq:BdGMrep}, and our $\mathcal{O}$ is the matrix $W$ in \cite{kitaevUnpairedMajoranaFermions2001}. Eq.~\ref{eq:AtransO} therefore leads to a convenient formula for calculating $\det(\mathcal{O})$:
+\begin{eqnarray}
+	{\rm pf}(	\mathcal{O} A \mathcal{O}^T) = 	\det(\mathcal{O}){\rm pf}(A) = {\rm pf}\begin{pmatrix}
+		0 & \epsilon_1 & & & \\
+		-\epsilon_1 & 0 & & & \\
+		& & \ddots & & \\
+		& & & 0 & \epsilon_N \\
+		& & & -\epsilon_N & 0
+	\end{pmatrix} = \prod_m \epsilon_m \geq 0
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	\det(\mathcal{O}) = \left(\prod_m \epsilon_m\right) [{\rm pf}(A)]^{-1}
+\end{eqnarray}
+Since $\det(\mathcal{O}) = \pm 1$ we only need the signs of the two quantities on the right hand side of the above equation. If none of the $\epsilon_m$ vanishes, $ \left(\prod_m \epsilon_m\right) > 0$, we finally arrive at
+\begin{eqnarray}
+	\det(\mathcal{O}) = {\rm sgn}[{\rm pf}(A)]
+\end{eqnarray}
+Namely,
+\begin{eqnarray}
+	P_{\rm BdG} |\Omega_{\rm canonical}\rangle &=& \det(\mathcal{O}) |\Omega_{\rm canonical}\rangle \\\nonumber
+	&=& {\rm sgn}[{\rm pf}(A)]  |\Omega_{\rm canonical}\rangle
+\end{eqnarray}
+
+\newpage
+\section{Vector potential and gauge invariance}
+In this section we address the question of how to understand the Peierls substitution in BdG Hamiltonian.
+
+Although the superconductivity order parameter appears to break the U(1) gauge symmetry, all physical observables are still gauge invariant. More explicitly, consider a general tight-binding BdG Hamiltonian
+\begin{eqnarray}\label{eq:HBdGgeneral}
+	H = \sum_{ij,\alpha\beta} \left(t_{ij}^{\alpha\beta}c_{i\alpha}^\dag c_{j\beta} + \Delta_{ij,\alpha\beta} c_{i\alpha}c_{j\beta} - \frac{\mu}{2}c_{i\alpha}^\dag c_{i\alpha} + {\rm h.c.} \right) \equiv \frac{1}{2}C^\dag h C
+\end{eqnarray}
+where $i,j$ label position, $\alpha,\beta$ label any internal degrees of freedom, and $C = (\{c_{i\alpha}\},\{c^\dag_{i\alpha}\})^T$. $H$ has the eigensolutions
+\begin{eqnarray}
+	H |\psi_n\rangle &=& \epsilon_n |\psi_n\rangle \\\nonumber
+	|\psi_n\rangle &=& d^\dag_{\psi_n} |\Omega\rangle = \sum_{i\alpha\sigma}c^{\sigma}_{i\alpha} | \Omega\rangle U_{i\alpha\sigma,n}
+\end{eqnarray}
+where $|\Omega\rangle$ is the BCS ground state, $\sigma=\pm$ distinguishes the creation (particle) and annihilation (creation for hole) operators, and $U$ is a Bogoliubov transformation matrix which is unitary for fermions. Substituting $|\psi\rangle$ into the eigenequation leads to
+\begin{eqnarray}
+	U^\dag h U = {\rm Diag}[\{\epsilon_n\}]
+\end{eqnarray}
+
+where the pairing potential satisfies the gap equation
+\begin{eqnarray}
+	\Delta_{ij,\alpha\beta} &=& Z^{-1}{\rm Tr}[V_{j\beta,i\alpha}c_{j\beta}^\dag c^\dag_{i\alpha} e^{-\frac{1}{k_B T} H}] \\\nonumber
+	&=& \sum_n f(\epsilon_n) (U^\dag {\mathbb{V}} U)_{nn}
+\end{eqnarray}
+where $\mathbb{V}$ is a matrix with the only nonzero element being $\mathbb{V}_{j\beta+,i\alpha-} = V_{j\beta, i\alpha}$, $f$ is the Fermi-Dirac distribution function.
+
+We now show that physical observables are gauge invariant. A gauge transformation corresponds to
+\begin{eqnarray}
+	\mathbf A\rightarrow \mathbf A' = \mathbf A + \nabla \chi
+\end{eqnarray}
+where $\mathbf A$ is the vector potential. $\mathbf A$ enters the tight-binding Hamiltonian implicitly through the Peierls substitution:
+\begin{eqnarray}\label{eq:peierls}
+	c_{i\alpha}^\dag \rightarrow \tilde{c}^\dag_{i\alpha} = e^{-\frac{ie}{\hbar} \int_0^{\mathbf r_i} \mathbf A\cdot d \mathbf l} c_{i\alpha}^\dag
+\end{eqnarray}
+and we can understand Eq.~\eqref{eq:HBdGgeneral} as that written for certain $\mathbf A$ already absorbed into the definitions of $t$ and $\Delta$. The gauge transformation leads to
+\begin{eqnarray}
+	c^\dag_{i\alpha} \rightarrow c^\dag_{i\alpha} e^{-\frac{ie}{\hbar}\chi_i}
+\end{eqnarray}
+The Hamiltonian therefore becomes
+\begin{eqnarray}
+	H\rightarrow H'&=& \sum_{ij,\alpha\beta}\left[ t_{ij}^{\alpha\beta} e^{-\frac{ie}{\hbar}(\chi_i - \chi_j)} c_{i\alpha}^\dag c_{j\beta} + \Delta_{ij,\alpha\beta} e^{\frac{ie}{\hbar}(\chi_i + \chi_j)}c_{i\alpha}c_{j\beta}  - \frac{\mu}{2}c_{i\alpha}^\dag c_{i\alpha} + {\rm h.c.} \right] \\\nonumber
+	&=&\frac{1}{2}C^\dag U_\chi h U_\chi^\dag C
+\end{eqnarray}
+where
+\begin{eqnarray}
+	U_\chi = {\rm Diag}[\{e^{-\frac{ie}{\hbar}\chi_i}\},\{e^{\frac{ie}{\hbar}\chi_i}\}]
+\end{eqnarray}
+As a result, the BdG eigenvalues as well as all other physical observables represented in terms of Bogoliubov quasiparticles are invariant under the gauge transformation.
+
+The above derivation includes, however, an assumption. Namely the pairing potential $\Delta_{ij,\alpha\beta}$ stays unchanged. This is indeed the case, since
+\begin{eqnarray}
+	\Delta'_{ij,\alpha\beta} &=& Z^{'-1}{\rm Tr}[V_{j\beta,i\alpha} c^\dag_{j\beta}c^{\dag}_{i\alpha} e^{-\frac{ie}{\hbar}(\chi_i + \chi_j)} e^{-\frac{1}{k_B T}H'}] \\\nonumber
+	&=& \sum_{n}f(\epsilon_n) (U^\dag U^\dag_\chi U_\chi \mathbb{V} U_\chi^\dag U_\chi U) \\\nonumber
+	&=&\Delta_{ij,\alpha\beta}
+\end{eqnarray}
+
+\section{Analytic solution of the Kitaev triangle}
+In this section we present some analytic results related to the Kitaev triangle.
+
+We start from the 1D Kitaev chain Hamiltonian with complex nearest-neighbor hopping $-te^{i\phi}$ and $p$-wave pairing $\Delta e^{i\theta}$ in the Kitaev limit ($t=\Delta > 0, \mu = 0$):
+\begin{eqnarray}
+	H = \sum_{n}\left(- te^{i\phi}c_n^\dag c_{n+1} + \Delta e^{i\theta}c_nc_{n+1} + {\rm h.c.}\right)
+\end{eqnarray}
+In the Majorana fermion basis $a_n = c_n + c_n^\dag$, $b_n = -i(c_n - c_n^\dag)$ the Hamiltonian becomes
+\begin{eqnarray}
+H = -\frac{it}{2} \sum_n \left[(S_\phi - S_\theta) a_n a_{n+1} + (S_\phi + S_\theta)b_n b_{n+1} + (C_\phi - C_\theta) a_n b_{n+1} - (C_\phi + C_\theta)b_na_{n+1}\right]
+\end{eqnarray}
+where $S_\phi\equiv \sin\phi$, $C_\phi\equiv \cos\phi$, etc. Therefore, when $\phi = \theta$, $a_n$ becomes decoupled from $a_{n+1}$ and $b_{n+1}$, and $a_1$ drops out from the Hamiltonian. Similarly, when $\phi = \theta + \pi$, $b_1$ becomes isolated. To find the other MZM, we note that when $\phi = \theta$, terms involving $a_{N}$ and $b_N$ in the Hamiltonian are
+\begin{eqnarray}
+	H_N = -itb_{N-1}(S_\phi b_{N} - C_\phi a_N).
+\end{eqnarray}
+Considering the unitary transformation
+\begin{eqnarray}
+	\begin{pmatrix}
+		a_N' \\
+		b_N'
+	\end{pmatrix} \equiv\begin{pmatrix}
+	C_\phi & - S_\phi\\
+	S_\phi & C_\phi
+\end{pmatrix}\begin{pmatrix}
+a_N\\
+b_N
+\end{pmatrix}
+\end{eqnarray}
+we have
+\begin{eqnarray}
+	H_N = itb_{N-1} a'_N
+\end{eqnarray}
+Therefore the other MZM is $b'_N = S_\phi a_N + C_\phi b_N$. Similarly, when $\phi = \theta + \pi$ the other MZM is $a'_{N} \equiv C_\phi a_N - S_\phi b_N$.
+
+We now consider the three edges of the Kitaev triangle separately. The MZM due to each edge are respectively
+\begin{eqnarray}
+	1-2:&& a_1,\,b_2\\\nonumber
+	2-3:&& b_2,\,\frac{1}{2}a_3 + \frac{\sqrt{3}}{2}b_3\\\nonumber
+	3-1:&& a_1,\, \frac{\sqrt{3}}{2}a_3 + \frac{1}{2} b_3
+\end{eqnarray}
+One can therefore see that the two MZM at site 3 are not compatible with each other. To get the non-MZM eigenstates, we write down the remaining terms of the Hamiltonian in the Majorana basis
+\begin{eqnarray}
+	H &=& -\frac{it}{2}\left( -2b_1 a_2 - \sqrt{3} a_2 a_3 + a_2 b_3 + \sqrt{3} b_1 b_3 - b_1 a_3   \right)\\\nonumber
+	&=&\frac{1}{2}(b_1, a_2, a_3, b_3)h\begin{pmatrix}
+	b_1\\
+	a_2\\
+	a_3\\
+	b_3
+\end{pmatrix}\\\nonumber
+h&\equiv&-it\begin{pmatrix}
+	0 & -1 & -\frac{1}{2} & \frac{\sqrt{3}}{2} \\
+	1 & 0 & -\frac{\sqrt{3}}{2} & \frac{1}{2}\\
+	\frac{1}{2} & \frac{\sqrt{3}}{2} & 0 & 0 \\
+	-\frac{\sqrt{3}}{2} & -\frac{1}{2} & 0 & 0
+\end{pmatrix} = t\left( -\frac{1}{2}\sigma_0 \tau_y - \frac{1}{2}\sigma_z\tau_y -\frac{1}{2}\sigma_y \tau_z + \frac{\sqrt{3}}{2} \sigma_x \tau_y \right)
+\end{eqnarray}
+$h$ has the following symmetry:
+\begin{eqnarray}
+	O = \left(\frac{\sqrt{3}}{2}\sigma_x - \frac{1}{2}\sigma_z\right) \tau_y
+\end{eqnarray}
+We therefore rotate the Hamiltonian so that $O$ becomes diagonal using the following unitary operator
+\begin{eqnarray}
+	U = e^{-\frac{i\pi}{3}\sigma_y}\otimes e^{i\frac{\pi}{4}\tau_x}
+\end{eqnarray}
+which leads to
+\begin{eqnarray}
+	U^\dag O U &=& {\rm Diag}(1,-1,-1,1)
+\end{eqnarray}
+$U$ therefore block-diagonalizes $h$ as
+\begin{eqnarray}
+	U^\dag h U = 	\frac{t}{2}\begin{pmatrix}
+		1 &  &  & -1 \\
+		& -1 & 1 & \\
+		& 1 & -3 & \\
+		-1 & & & 3
+	\end{pmatrix}
+\end{eqnarray}
+which can then be diagonalized by
+\begin{eqnarray}
+	V = \begin{pmatrix}
+		\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} & 0 & \frac{1 - \sqrt{2}}{\sqrt{4-2\sqrt{2}}} & 0 \\
+		0 & \frac{1 + \sqrt{2}}{\sqrt{4 + 2\sqrt{2}}} & 0 & \frac{1-\sqrt{2}}{\sqrt{4 - 2\sqrt{2}}} \\
+		0 & \frac{1}{\sqrt{4+ 2\sqrt{2}}} & 0 & \frac{1}{\sqrt{4 - 2\sqrt{2}}} \\
+		\frac{1}{\sqrt{4+2\sqrt{2}}} & 0 & \frac{1}{\sqrt{4-2\sqrt{2}}} & 0
+	\end{pmatrix}
+\end{eqnarray}
+as
+\begin{eqnarray}
+	V^\dag U^\dag h U V =t\times {\rm Diag}\left( 1 -\frac{\sqrt{2}}{2},  -1 +\frac{\sqrt{2}}{2},  1 +\frac{\sqrt{2}}{2},  -1 -\frac{\sqrt{2}}{2} \right)
+\end{eqnarray}
+We therefore have the two lowest excited states
+\begin{eqnarray}
+	\psi_{+1} &=& (b_1,a_2,a_3,b_3) U \begin{pmatrix}
+	\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} \\
+0  \\
+0 \\
+\frac{1}{\sqrt{4+2\sqrt{2}}}
+	\end{pmatrix} = (b_1,a_2,a_3,b_3)\times \frac{1}{4\sqrt{2+\sqrt{2}}} \begin{pmatrix}
+	1+\sqrt{2}-\sqrt{3} i \\
+	(1+\sqrt{2})i-\sqrt{3}  \\
+	i+ \sqrt{3} + \sqrt{6} \\
+	1 + (\sqrt{3} + \sqrt{6})i
+\end{pmatrix} \\\nonumber
+	\psi_{-1} &=& (b_1,a_2,a_3,b_3) U \begin{pmatrix}
+		0\\
+	\frac{1+ \sqrt{2}}{\sqrt{4+2\sqrt{2}}} \\
+	\frac{1}{\sqrt{4+2\sqrt{2}}} \\
+	0
+\end{pmatrix} = (b_1,a_2,a_3,b_3)\times \frac{1}{4\sqrt{2+\sqrt{2}}} \begin{pmatrix}
+	(1+\sqrt{2})i-\sqrt{3} \\
+	1+\sqrt{2}-\sqrt{3} i \\
+	1+ (\sqrt{3} + \sqrt{6} )i\\
+    i + \sqrt{3} + \sqrt{6}
+\end{pmatrix}
+\end{eqnarray}
+The first excited states can therefore be understood as a hybridization between the ``bulk" states of the 1-2 bond and the fermion on site 3.
+
+We next consider the braiding process and particularize to the $\boldsymbol{\phi}_1\rightarrow \boldsymbol{\phi}_2$ step. The Hamiltonian in the fermion basis becomes
+\begin{eqnarray}
+H &=& - e^{ix}c_1^\dag c_2 + c_1 c_2 + e^{-ix}c_1 c_2^\dag - c_1^\dag c_2^\dag \\\nonumber
+&+&  - e^{-\frac{\pi}{3}i} c_2^\dag c_3 + e^{\frac{2\pi}{3}i} c_2 c_3 + e^{\frac{\pi}{3}i}c_2 c_3^\dag - e^{-\frac{2\pi}{3}i} c_2^\dag c_3^\dag \\\nonumber
+&+&  e^{\left(-\frac{\pi}{3}-x\right)i} c_1 c_3^\dag  - e^{-\frac{2\pi}{3}i} c_1 c_3  - e^{\left(\frac{\pi}{3}+x\right)i} c_1^\dag c_3  + e^{\frac{2\pi}{3}i}  c_1^\dag c_3^\dag
+\end{eqnarray}
+where we have temporarily omitted the energy unit $t$. We then have
+\begin{eqnarray}
+	[c_1^\dag, H] &=& c_2 + e^{-ix} c_2^\dag + e^{\left(-\frac{\pi}{3}-x\right)i} c_3^\dag - e^{-\frac{2\pi}{3}i} c_3 \\\nonumber
+	[c_1, H] &=& -e^{ix}c_2 - c_2^\dag - e^{\left(\frac{\pi}{3}+x\right)i} c_3 + e^{\frac{2\pi}{3}i} c_3^\dag\\\nonumber
+	&=& -e^{ix} \left[ c_2 + e^{-i x}c_2^\dag - e^{-\frac{2\pi}{3}i} c_3 +  e^{\left(-\frac{\pi}{3}-x\right)i} c_3^\dag \right]
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	[e^{\frac{ix}{2}}c_1^\dag + e^{-\frac{ix}{2}} c_1, H] = 0
+\end{eqnarray}
+Namely we have an MZM:
+\begin{eqnarray}
+	\tilde{a}_1 \equiv e^{\frac{ix}{2}}c_1^\dag + e^{-\frac{ix}{2}} c_1 = \frac{1}{2}e^{\frac{ix}{2}} (a_1 - ib_1) + \frac{1}{2}e^{-\frac{ix}{2}} (a_1 + ib_1) = C_{\frac{x}{2}} a_1 + S_{\frac{x}{2}} b_1
+\end{eqnarray}
+To find the other MZM, we calculate the commutators between the other fermion operators with the Hamiltonian:
+\begin{eqnarray}
+	[c_2^\dag, H] &=& e^{ix} c_1^\dag - c_1 - e^{-\frac{i\pi}{3}} c_3 + e^{\frac{i\pi}{3}} c_3^\dag \\\nonumber
+	[c_2, H] &=& -e^{-ix} c_1 + c_1^\dag + e^{\frac{i\pi}{3}} c_3^\dag - e^{-\frac{i\pi}{3}} c_3\\\nonumber
+	[c_3^\dag, H] &=& e^{-\frac{i\pi}{3}}c_2^\dag + e^{-\frac{i\pi}{3}} c_2 - e^{\frac{i\pi}{3}} c_1 + e^{i\left(\frac{\pi}{3} + x \right)}c_1^\dag \\\nonumber
+	[c_3, H]	&=& -e^{\frac{i\pi}{3}}c_2 - e^{\frac{i\pi}{3}} c_2^\dag + e^{-\frac{i\pi}{3}} c_1^\dag - e^{-i\left(\frac{\pi}{3} + x \right)}c_1
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+	[c_2 - c_2^\dag, H] &=& (1-e^{-ix})c_1 + (1-e^{ix})c_1^\dag\\\nonumber
+	[e^{\frac{i\pi}{6}}\left(e^{i\frac{2\pi}{3}} c_3^\dag + c_3\right), H] & = &  e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})c_1 + e^{-\frac{i\pi}{6}}( 1- e^{i\left(\frac{\pi}{3} + x\right)})c_1^\dag
+\end{eqnarray}
+However
+\begin{eqnarray}
+-\frac{1-e^{-ix}}{e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})} = - \frac{2-2\cos x}{e^{\frac{i\pi}{6}} (1-e^{-i\left(\frac{\pi}{3} + x\right)})(1-e^{ix})} = \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}}
+\end{eqnarray}
+Thus the following is the other MZM:
+\begin{eqnarray}
+	\tilde{b}_{23} &\equiv& -iN\left(\left[\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}\right](c_2 - c_2^\dag) + (1-\cos x) \left( e^{\frac{i\pi}{6}} c_3 -e^{-\frac{i\pi}{6}} c_3^\dag\right)\right)\\\nonumber
+	&=& N\left(\left[\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}\right]b_2 + (1-\cos x)\left( \frac{1}{2} a_3 + \frac{\sqrt{3}}{2} b_3\right)\right)
+\end{eqnarray}
+where $N$ is a normalization factor. When $x=0$ only the first term survives since
+\begin{eqnarray}
+\lim_{x\rightarrow 0} \frac{1-\cos x}{\cos\left( x+ \frac{\pi}{6}\right)-\frac{\sqrt{3}}{2}} = 0
+\end{eqnarray}
+while when $x = -\frac{\pi}{3}$ only the second term survives.
+
+
+
+
+
+%\begin{thebibliography}{99}
+%\bibitem{kitaev} A. Yu Kitaev, Physics-Uspekhi, \textbf{44}, 131 (2001).
+%
+%\end{thebibliography}

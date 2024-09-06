@@ -1,45 +1,23 @@
 \section{Maxwell's equations}
-In this dissertation we use gauge potentials as the key ingredient for inducing topological phase transitions in condensed matter systems, such as superconductors and insulators.
-A quick review of gauge potentials and gauge invariance will help set the stage for the manipulations we do in later chapters.
-Let us start with Maxwell theory, given by the following equations,
+Let us start with Maxwell's equations, given as
 
 \begin{align}
-  \nabla \cdot \vec{E} &= \dfrac{1}{\epsilon_0}\rho \label{eq:maxwell1} \\
-  \nabla \cdot \vec{B} &= 0 \label{eq:maxwell2} \\
-  \nabla \cross \vec{E} &= -\partial_t \vec{B} \label{eq:maxwell3} \\
-  \nabla \cross \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \partial_t \vec{E} \label{eq:maxwell4}.
+  \nabla \cdot \vec{E} &= \dfrac{1}{\epsilon_0}\rho, \label{eq:maxwell1} \\
+  \nabla \cdot \vec{B} &= 0, \label{eq:maxwell2} \\
+  \nabla \cross \vec{E} &= -\partial_t \vec{B}, \label{eq:maxwell3} \\
+  \nabla \cross \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \partial_t \vec{E}, \label{eq:maxwell4}.
 \end{align}
-We want to write Maxwell's equations in terms of potentials, $V$ and $\vec{A}$.
-The magnetic field in terms of a vector potential is $\vec{B} = \nabla \cross \vec{A}$.
-This lets us rewrite Eq.~\eqref{eq:maxwell3} as
-
+We want to write Maxwell's equations as a function of potentials, $V$ and $\vec{A}$.
+One recalls the magnetic field,
+$\vec{B} = \nabla \cross \vec{A}$,
+and electric field,
+$\vec{E} = -\nabla V - \partial_t \vec{A}$.
+We notice Eq.~\eqref{eq:maxwell2} and \eqref{eq:maxwell3} provide nothing new.
+The remaining Maxwell's equation then become
 \begin{align}
-  \nabla \cross \left( \vec{E} + \partial_t \vec{A} \right) = 0 \\
-  \vec{E} = -\nabla V - \partial_t \vec{A}.
+  \dfrac{1}{\epsilon_0}\rho &= -\nabla^2 V - \partial_t \nabla \cdot \vec{A}, \label{eq:div-electric-as-potential} \\
+  -\mu_0 \vec{J} &= \nabla^2 \vec{A} - \mu_0 \epsilon_0 \partial_t^2 \vec{A} - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \partial_t V \right). \label{eq:current-as-potential}
 \end{align}
-As a check, if $\vec{A} = \text{const}$, then $\vec{E} = -\nabla V$ as expected.
-With a new definition of the electric field we look at Eq.~\eqref{eq:maxwell1} to arrive at
-
-\begin{align}
-  \nabla \cdot \vec{E} &= \nabla \cdot \left( -\nabla V - \partial_t \vec{A} \right) \\
-  &= -\nabla^2 V - \partial_t \nabla \cdot \vec{A} = \dfrac{1}{\epsilon_0}\rho.
-  \label{eq:electric-as-potential}
-\end{align}
-Now we manipulate Eq.~\eqref{eq:maxwell4} to give
-
-\begin{align}
-  \nabla \cross \vec{B} &= \nabla \cross (\nabla \cross \vec{A}) \\
-  &= \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} \\
-  &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \left( -\nabla \partial_t V - \partial_t^2 \vec{A} \right).
-\end{align}
-Which we rearrange to
-
-\begin{equation}
-  -\mu_0 \vec{J} = \nabla^2 \vec{A} - \mu_0 \epsilon_0 \partial_t^2 \vec{A} - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \partial_t V \right).
-  \label{eq:current-as-potential}
-\end{equation}
-
-We have thus shown Maxwell's equations in terms of potentials.
 
 \section{Gauge transformations}
 We now move on to gauge transformations.
@@ -47,31 +25,28 @@ Suppose $\vec{A}' = \vec{A}+\bm{\alpha}$ and $V' = V+\beta$.
 Both vector potentials give the same magnetic field,
 
 \begin{align}
-  \vec{B} = \nabla \cross \vec{A} = \nabla \cross \vec{A}' &= \nabla \cross (\vec{A} + \bm{\alpha}) \\
-  \nabla \cross \bm{\alpha} &= 0 \\
+  \vec{B} = \nabla \cross \vec{A} = \nabla \cross \vec{A}' &= \nabla \cross (\vec{A} + \bm{\alpha}), \nonumber \\
   \bm{\alpha} &= \nabla \lambda.
 \end{align}
 The two potentials should also give the same electric field,
 
 \begin{align}
-  \vec{E} &= -\nabla V - \partial_t \vec{A} \\
-  &= -\nabla V' - \partial_t \vec{A}' \nonumber \\
-  &= -\nabla V - \nabla \beta - \partial_t \vec{A} - \partial_t \bm{\alpha} \nonumber \\
-  \text{then} \quad 0 &= \nabla \beta + \partial_t \bm{\alpha}\\
-  &= \nabla \beta + \partial_t \nabla\lambda \nonumber \\
-  &= \nabla ( \beta + \partial_t \lambda ) \nonumber \\
-  \beta &= -\partial_t \lambda + k(t) \nonumber \\
-  \beta &= -\partial_t \tilde{\lambda} \nonumber \\
+  \vec{E} &= -\nabla V - \partial_t \vec{A} = -\nabla V' - \partial_t \vec{A}' \nonumber \\
+  \vec{E} &= -\nabla V - \nabla \beta - \partial_t \vec{A} - \partial_t \nabla \lambda \nonumber \\
+  %\text{then} \quad 0 &= \nabla \beta + \partial_t \bm{\alpha}\\
+  %&= \nabla \beta + \partial_t \nabla\lambda \nonumber \\
+  %&= \nabla ( \beta + \partial_t \lambda ) \nonumber \\
+  %\beta &= -\partial_t \lambda + k(t) \nonumber \\
+  %\beta &= -\partial_t \tilde{\lambda} \nonumber \\
+  \text{then} \quad \beta &= -\partial_t \tilde{\lambda} = -\partial_t \lambda + k(t) \nonumber \\
   \vec{A}' &= \vec{A} + \nabla \lambda \\
   V' &= V - \partial_t \tilde{\lambda}
 \end{align}
 From the above set of expressions we arrive at the general gauge transformations of potentials.
-We make note that a change in $V$ and $\vec{A}$ does not change the electric and magnetic fields, gauge invariant, and are used to adjust the divergence of $\vec{A}$.
-This allows to solve the scalar and vector potentials readily depending on the gauge.
-We will next go over two most common gauge choices, Coulomb and Lorenz.
+We make note that a change in $V$ and $\vec{A}$ does not change the electric and magnetic fields, i.e.\ gauge invariant, and are tuned to adjust the divergence of $\vec{A}$.
+This allows one to solve the scalar and vector potentials readily depending on the gauge.
 
-\subsection{Coulomb gauge}
-The Coulomb gauge is used in the case of magnetostatics.
+One common example of gauge is the Coulomb gauge, which is used in magnetostatics.
 We assert the following for a Coulomb gauge, $\nabla \cdot \vec{A} = 0$, which makes $\nabla^2 V = -\tfrac{1}{\epsilon_0} \rho$.
 Recall Eq.~\eqref{eq:current-as-potential}, it simplifies to
 
@@ -79,18 +54,18 @@ Recall Eq.~\eqref{eq:current-as-potential}, it simplifies to
   \left(\nabla^2 - \mu_0 \epsilon_0 \partial_t^2 \right) \vec{A} = -\mu_0 \vec{J} + \mu_0 \epsilon_0 \nabla \partial_t V \nonumber \\
   \square^2 \vec{A} = -\mu_0 \vec{J} + \mu_0 \epsilon_0 \nabla \partial_t V
 \end{align}
-where we have used $\square$ as the d'Alembertian.
+where we have used $\square$ as the d'Alembertian  ~\cite{griffithsIntroductionElectrodynamics2024}.
 
-\subsection{Lorenz gauge}
-Here we instead assert $\nabla \cdot \vec{A} = -\mu_0 \epsilon_0 \partial_t V$, which makes $\square^2 \vec{A} = -\mu_0 \epsilon_0 \vec{J}$.
-Recall Eq.~\eqref{eq:electric-as-potential}, it simplifies to
-
-\begin{align}
-  \nabla^2 V + \partial_t (\nabla \cdot \vec{A}) &= \nabla^2 V - \mu_0 \epsilon_0 \partial_t^2 V \nonumber \\
-  \square^2 V &= -\dfrac{1}{\epsilon_0} \rho
-\end{align}
-
-We can now clearly see how the two gauges affect our potentials.
-The Lorenz gauge has the advantage of treating both scalar and vector potential with the same d'Alembertian operator, thus readily able to solve both scalar and vector potentials.
-The Coulomb gauge allows for an easily calculable scalar potential, however, it is murkier solve for the vector potential.
-REFERENCE GRIFFITHS introduction to electrodynamics 4th Edition
+%\subsection{Lorenz gauge}
+%Here we instead assert $\nabla \cdot \vec{A} = -\mu_0 \epsilon_0 \partial_t V$, which makes $\square^2 \vec{A} = -\mu_0 \epsilon_0 \vec{J}$.
+%Recall Eq.~\eqref{eq:electric-as-potential}, it simplifies to
+%
+%\begin{align}
+%  \nabla^2 V + \partial_t (\nabla \cdot \vec{A}) &= \nabla^2 V - \mu_0 \epsilon_0 \partial_t^2 V \nonumber \\
+%  \square^2 V &= -\dfrac{1}{\epsilon_0} \rho
+%\end{align}
+%
+%We can now clearly see how the two gauges affect our potentials.
+%The Lorenz gauge has the advantage of treating both scalar and vector potential with the same d'Alembertian operator, thus readily able to solve both scalar and vector potentials.
+%The Coulomb gauge allows for an easily calculable scalar potential, however, it is murkier solve for the vector potential.
+%REFERENCE GRIFFITHS introduction to electrodynamics 4th Edition
