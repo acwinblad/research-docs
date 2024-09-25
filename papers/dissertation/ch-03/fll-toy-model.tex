@@ -1,0 +1,33 @@
+\section{Toy model}
+
+A quick derivation of how the center of mass changes when we add a parabolic term to the 2DEG Landau Level system.
+Start with the Landau level Hamiltonian with a perpendicular magentic field and additional parabolic term
+
+\begin{equation}
+\ham = \dfrac{p_x^2}{2m} + \dfrac{1}{2m} {\left(p_y - qBx \right)}^2 + d^2 x^2
+\end{equation}
+We want to utilize the Laughlin pump argument.
+we imagine the y-axis is wrapped around to make a cylinder with circumference $L$ which makes $k=\tfrac{2\pi m}{L}$.
+Then add in a flux term $\Phi(t)$ along the x-axis, the Hamiltonian becomes
+
+\begin{equation}
+  \ham = \dfrac{p_x^2}{2m} + \dfrac{1}{2m} {\left(qBx + q\Phi - \hbar k \right)}^2 + d^2 x^2
+\end{equation}
+Performing a shift in coordinates of $x' = x + \tfrac{\Phi}{BL} - \tfrac{\hbar k}{qB}$
+
+\begin{align}
+  \ham &= \dfrac{p_x^2}{2m} + \dfrac{q^2B^2x'^2}{2m} + d^2 {\left( x' - \dfrac{\Phi}{BL} + \dfrac{\hbar k}{qB} \right)}^2 \nonumber \\
+  &= \dfrac{p_x^2}{2m} + \dfrac{q^2B^2x'^2}{2m} + d^2 x'^2 - 2d^2 \Phi'(k)x' + d^2 \Phi'^2(k) \nonumber \\
+  &= \dfrac{p_x^2}{2m} + \dfrac{q^2B'^2}{2m} \left( x'^2  - \dfrac{4md^2\Phi'(k)x'}{q^2B'^2} + \dfrac{4m^2d^4 \Phi'^2(k)}{q^4B'^4} \left) -\dfrac{2md^4\Phi'^2(k)}{q^2B'^2} + d^2 \Phi'^2 \nonumber \\
+  &= \dfrac{p_x^2}{2m} + \dfrac{q^2B'^2}{2m} \left( x'  - \dfrac{2md^2\Phi'(k)x'}{q^2B'^2} \left)^2 - \dfrac{d^2 \Phi'^2(k)}{q^2B'^2} (2md^2 - q^2B'^2) \nonumber \\
+  &= \dfrac{p_x^2}{2m} + \dfrac{q^2B'^2x''^2}{2m} - \dfrac{d^2 \Phi'^2(k) B^2}{B'^2}
+\end{align}
+where
+
+\begin{align}
+  x'' &= x'- \tfrac{2md^2\Phi'(k)}{q^2B'^2} \nonumber \\
+  &= x + \Phi'(k)\dfrac{B^2}{B'^2} \nonumber \\
+  &= x + \left(\dfrac{\Phi}{BL} - \dfrac{\hbar k}{qB} \right) \dfrac{B^2}{B'^2} \nonumber \\
+  &= x + \left(\dfrac{2\pi\Phi}{\Phi_0} - kL \right) \dfrac{\hbar B}{qL B'^2} \nonumber \\
+  &= x - \left(m - \dfrac{\Phi}{\Phi_0} \right) \dfrac{h B}{qL B'^2}
+\end{align}

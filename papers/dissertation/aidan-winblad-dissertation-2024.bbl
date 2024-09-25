@@ -58,6 +58,12 @@ Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
   processing in {{1D}} wire networks.
 \newblock {\em Nature Phys}, 7(5):412--417, May 2011.
 
+\bibitem{sauGenericNewPlatform2010}
+Jay~D. Sau, Roman~M. Lutchyn, Sumanta Tewari, and S.~Das~Sarma.
+\newblock Generic {{New Platform}} for {{Topological Quantum Computation Using
+  Semiconductor Heterostructures}}.
+\newblock {\em Phys. Rev. Lett.}, 104(4):040502, January 2010.
+
 \bibitem{kitaevFaulttolerantQuantumComputation2003}
 A.~{\relax Yu}. Kitaev.
 \newblock Fault-tolerant quantum computation by anyons.
@@ -198,12 +204,6 @@ Yuval Oreg, Gil Refael, and Felix {von Oppen}.
 \newblock Helical {{Liquids}} and {{Majorana Bound States}} in {{Quantum
   Wires}}.
 \newblock {\em Phys. Rev. Lett.}, 105(17):177002, October 2010.
-
-\bibitem{sauGenericNewPlatform2010}
-Jay~D. Sau, Roman~M. Lutchyn, Sumanta Tewari, and S.~Das~Sarma.
-\newblock Generic {{New Platform}} for {{Topological Quantum Computation Using
-  Semiconductor Heterostructures}}.
-\newblock {\em Phys. Rev. Lett.}, 104(4):040502, January 2010.
 
 \bibitem{lutchynSearchMajoranaFermions2011}
 Roman~M. Lutchyn, Tudor~D. Stanescu, and S.~Das~Sarma.
