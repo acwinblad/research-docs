@@ -1,0 +1,315 @@
+Hello, thank you for the introduction.
+
+/// Outline
+
+Let's get started.
+This talk is outlined as follows.
+I'll talk about Majorana fermions in particle physics, condensed matter, and how it relates to quantum computing.
+Next the motivation for triangular islands is based off of p-wave superconductors hosting MF's, T-junctions and ease of growing triangular islands.
+As for hosting MF's on triangular islands I'll talk about 2 approaches to realizing them: bulk-edge correspondence and special case of Kitaev limit on a 3-point triangle with a vector potential.
+With that I'll go over the results of MF's hosting on 3 different triangular structures.
+I'll wrap up the presentations with some final thoughts and additional projects that'll be in my disseration.
+
+/// Background MFs in Particle Physics
+What are Majorana fermions?
+Let's first go back and mention Fermi and Dirac.
+Fermions are half-odd-integer spin particles that obey fermi-dirac statistics.
+Dirac showed that the electron has an antiparticle, the positron; later shown to work for any fermion.
+Overall we find that a Dirac fermion has spin, charge, and has an antiparticle.
+Majorana was able to show that one could get a neutral charge fermion that was also its own antiparticle from the Dirac equation.
+The question remains if MF's are neutrinos or dark matter.
+
+/// Background MFs in Particle Physics
+In general if we find that neutrinos are MF's then the standard model needs revision.
+Over the years particle physicists have searched for MF's using neutrinoless double deta decay.
+The MAJORANA project is one such study.
+The results have been negative so far on the MAJORANA project.
+
+/// Transition
+Some particles are elusive in the real world, such as magnetic monopoles yet found in condensed matter systems as quasiparticles.
+We just need to find the right system to host MF's, such a p-wave superconductor.
+
+/// Background MFs in Condensed Matter
+We can recall that superconductors are perferct conductors and can have a supercurrent made of cooper pairs.
+The electron-phonon interaction facilitates two electrons with opposite spin and momenta to pair.
+Cooper pairs form a Bose-Einstein condensate.
+A Bogoliubov quasiparticle is described as a fermionic excitation of a Cooper pair.
+It is now an electron and hole with opposite momenta paired.
+One can describe this using a 2x2 BdG Hamiltonian with the order parameter mediating the pairing of an electron and a hole.
+Another way to understand this is to look at our figure to the right.
+It shows the mixing of the electron/hole energy bands.
+We also make the claim that a zero-energy excitation is a MF.
+And due to the Particle-hole symmetry of the BdG Hamiltonian they come in pairs.
+
+/// Transition
+Let's start with the simplist model to find MF's in a superconductor.
+
+/// Background MFs in Condensed Matter
+Kitaev proposed  a 1D spinless p-wave superconductor chain to host MF's.
+This following figure has spoilers but let's explain what is happening with the top chain.
+We let each lattice site be represented by a fermion operator c_j (the blue boxes).
+Each fermion operator can be represented as a linear combination of two MF's on a single lattice site.
+These can be seen as the red spheres within each blue box.
+
+/// Transition
+This Majorana fermion basis is advantageous in finding a simple solution in the Hamiltonian as we will see next.
+
+/// Background MFs in Condensed Matter
+The Hamiltonian for a 1D spinless p-wave superconductor is written as follows.
+Here the mu is chemical potential, t is the hopping amplitude, and delta is the superconducting order parameter.
+In MF basis the Hamiltonian looks as such.
+Upon inspection Kitaev set t = delta = 0 and mu less than 0.
+This results in a Hamiltonian pairing same site MF's and called the trivial phase.
+For t = delta > 0 and mu = 0 he the Hamiltonian to have pairing between intersite MF's.
+Notice how the first and last MF a_1 and b_N are not to be found in the Hamiltonian.
+To have a state with a_1 and b_N costs zero energy, thus two isolated MF's lie at the ends of the chain.
+
+/// Transition
+To get a better picture we'll look at our chain figure once more.
+
+/// Background MFs in Condensed Matter
+For the trivial phase we see the intrasite pairing of the MF's.
+For the non-trivial phase we see the intersite pairing of MF's, which can be represented with the tilde c_j's.
+We also see a_1 and b_n are isolated.
+They can be represented with the highly non-local fermion state f.
+The non-trivial phase can still be accomplished for values of mu < 2t as long as the wire is long enough for the MF wave functions to decay.
+Originally Kitaev saw this as a means for quantum information storage.
+
+/// Transition
+We have a model for hosting MF's however we have not found any p-wave superconductors as of yet.
+So we need to find a way of making an effective spinless p-wave superconductor that hosts MF's.
+
+/// Background MFs in Condensed Matter
+In 2012 Mourik et al. was able to fabricate one such heterostucture.
+They place a semiconducting wire with Rashba spin-orbit coupling against an s-save superconductor and apply a magnetic field parallel with the wire.
+The Rashba spin-orbit coupling shifts the spin up and down bands left and right and turning on the parallel magnetic field lifts the crossing between the bands at k=0.
+When the fermi level resides within this field-induced gap (the dotted line for mu) the wire appears 'spinless'.
+The s-wave superconductor provides a superconducting proximity effect, and we can project away the upper unoccupied band.
+To check for MF's they use look at DI/DV curves for varying magnetic field values, ranging from 0T to 490mT.
+The spikes at the center here show the presence of MF's at the end points.
+For the larger values of B we see the MF's disappear as the system transitions out of the topolgical phase.
+
+/// Background MFs in Condensed Matter
+In 2014 Nadj-Perge et al. showed that for a ferromagnetic chain on an strongly spin-orbit-coupled superconductor they could measure MF's at the end points, as shown in the figure to the right at 0 energy.
+
+/// Background MFs in Condensed Matter
+Within the most recent year Schneider et al. also showed they could achieve MF's at the end of a chian.
+In their setup they were able to individually place Manganese atoms on top of superconducting Niobium.
+They were able to measure MF's on short chain lengths.
+They additionally showed that only even number chains would host MF's while odd number chain lengths the MF's wave functions would hybridize causing a finite splitting (If you're interested I have their results in the appendix).
+
+/// Transition
+It looks like we are able build systems that are effective p-wave superconductors and they can host MF's.
+We now want to look at what we can do with these MF's.
+I'll now talk about the motivation for this project.
+
+/// Motivation Braiding in a 2D pwave SC
+Ivanov showed for a MF's in a vortex of a p-wave superconductor can exhibit Non-Abelian Statistics.
+I.e. operations a and b don't commute.
+This allows for a way to realize quantum computation in p-wave superconductors.
+In the figure to the right we can see a definition of an equivalent braid group in a Non-Abelian system.
+
+/// Transition
+Now that we have systems with MF's and braiding we want to develop some sort of quantu logic gate.
+A first attempt is given by Alicea.
+
+/// Motivation T-junction as a Quantum Logic Gate
+In 2011 Alicea came up with using t-junctions made of p-wave superconducting wires as a possible way to braid MF's trapped in 1D.
+Recall earlier I mentioned trivial and non-trivial states.
+We can control this topological phase transition using chemical potential.
+In the figure to the left we adiabatically tune small segments of the chain to be trivial and non-trivial to move gamma_1 to the bottom leg.
+We can continue this process to eventually move gamma_2 over an gamma_1 to the right, effectively braiding the MF's.
+In this system we have to make a few statements about the pairing potential's phase since it is direction dependent we make this quasi-1D assertions.
+The phase is zero for rightward and upwards motion while it is pi for leftward and downwards motion.
+With all that it's a simple matter to make a ladder network to host and braid the MF's in.
+There is one problem with this system, machining the voltage gates is a difficult task and has not yet been done.
+
+/// Transition
+This leads us to ask what can we do similar and different?
+Instead of t-junctions what if we used triangles instead?
+
+/// Motivation Triangular Stuctures for Braiding
+We can consider triangular islands topologically similar to t-junctions.
+We can easily use epitaxial growth to make these triangles.
+Instead of using Alicea's redfined braiding we can go based off of Ivanov's model.
+We also want to try and show a smooth connection from 1D to 2D superconductors.
+I.e. can we have the triangular islands host MF's along two vertices, effectively looking like a 1D chain in a 2D geometry.
+
+/// Transition
+I think we can now setout to develop our quantum logic gate using a triangular islands.
+As we dive into the formulation I want to mention the previous results I showed in my master's talk and where they failed.
+
+/// Previous Work Setup
+Before we tried using an in-plane magentic field on an effective p-wave superconductor heterostucture.
+Note here how the in-plane magnetic field is taken account for as a Zeeman field, we only considered its effects on spin.
+
+/// Previous Work Results
+As for the results of turning on an in-plane magnetic field we can see in momentum space the band gap shrinks.
+If we look at the eigenenergies of a finite triangle we see many edge states live within the band gap.
+If we plot the eigenstate for the ground state we did find our quasiparticles wanted to be hosted at the bottom vertices as we had expected.
+Two problems: First we don't have MF's in this system and second the ground state lives within a continuum of edge states and isn't safe and could potentially mix with the other edge states.
+
+/// Transition
+How do we get around this?
+We thought about using a supercurrent instead of a magnectic field.
+Looking through the literature we did find some previous work on the effects of a supercurrent inducing topological phase transitions in superconductors.
+
+/// Topological phase transition induced by a supercurrent.
+In 2012 Romito et al. used a semiconducting wire in proximity to a supercurrent with supercurrent flowing to compute a topological phase diagram.
+As can be seen in the diagram as long as the supercurrent is within this threshold the segment of the wire will stay in a non-trivial topology.
+Thus if we tune the individual segments of supercurrent we can have differing topologies meet.
+Here I'll mention bulk-edge correspondence: essentially when two differing topologies meet a MF will be forced to lie at the interface of the topologies.
+This can be seen in the top figure where the trivial meets the non-trivial phase a MF sits inbetween.
+
+/// Transition
+Another group showed similar results, they did expand on it using d-wave but I'll show the results for a Kitaev chain.
+
+/// Topological phase transition induced by a supercurrent
+Takasan's group used a similar setup as Romito et al.
+In the figure to the bottom right they compute the topological invariant or Majorana number for such a system.
+To calculate the MN you apply PBC to your system, this way it can count when a band gap closes and not worry about the potential MF at the edge.
+We can see in the diagram where the chain is trivial(white) and non-trivial(red).
+The remaining graphs show the nth eigenvalue with OBC and PBC with q values in trivial and non-trivial phases.
+
+/// Transition
+This is promising news that a supercurrent can induce a topological phase transition.
+How do we expand on this idea?
+We take two approaches and generalize supercurrent to a vector potential
+
+/// Formulation two approaches
+We first found a linear vector potential on a triagular island could host MFs at the bottom vertices.
+We wanted a simplified model to compute the MN.
+We can map the vector potential of the top triangular edges to a 1D chain with linear vector potential along the axis.
+We then show we can induce topological phase transitions with a linear vector potential.
+With the Topological phase diagram we can use bulk-edge correspondence on a double chain model to force MF's at the end points.
+This just a deformed triangular chain.
+We then show another approach using generalized vector potentials on triangular islands to find critical fields and use of the Kitaev limit to host MF's at the bottom vertices of a triangular island.
+
+/// Linear vector potential and Majorana number for Kitaev chain
+One way we can bring a vector potential into our model is to use a Peierls substitution.
+We choose a vector potential A to be linear in x with strength B.
+The creation and annihilation operators transform to have this form.
+This gives us a phase factor on the hopping amplitude only.
+To calculate the MN in this system we need a few things first.
+Since we don't have translation symmetry we can't go to momentum space.
+We must also transform to the Majorana basis, which can be down with this unitary operator U.
+Then we can arrive at a skew-symmetric matrix A.
+To calculate the the MN we take the sign of the Pfaffian of A.
+
+/// Transition
+Now lets take a look at the topological phase diagram
+
+/// Topological phase transition due to a linear vector potential
+We see for varying mu and B values we can find trivial and non-trivial phase.
+In addition to the Majorana number we multiply each data point by the band gap energy.
+This helps tell us the strength of topology.
+The blue regions represent trivial phases and the red non-trivial phases.
+With this map we can make use of the bulk-edge correspondence to host MF's.
+Which brings me to a double chain toy model.
+Two chains are connected at the their end points and treat it as one dimensional, no y components for the pairing potential.
+The top chain will have the linear vector potential applied to it while the bottom chain does not, which makes it look like a Kitaev chain.
+
+/// Transition
+In the next slides I'll show you the ground states for fixed vector strengths and varying mu values
+
+/// Bulk-edge correspondence on a double chain
+Here I've set B = 0.16pi and we'll swing mu from 1.4t to 0.7t, also described by the line and points in the topological phase diagram.
+The bottom chain will have the same chemical potential as the top chain and will be in a non-trivial phase.
+First up we see for our first data point the top chain is in a trivial phase.
+We see it's ground state energies are zero and they are localized at the end points of the double chain as expected.
+Our second data point for mu=1.1t has a very small band gap.
+While the top chain may be non-trival it isn't robust enough, this leads to the ground state energies hybridizing and having a nonzero energy and thus no MF's.
+For the third data point, mu=0.7t, the top chain is now non-trivial, it still has a small band gap but we can see no MF's since we have a periodic chain of non-trivial topology.
+
+/// Transition
+It might also be interesting to see what happens if we pick values in the blue spectral lines for a smaller vector strength
+
+/// Bulk-edge correspondence on a double chain
+Here I've set B=0.15pi adn we'll sweep through the same chemical potentials as before.
+In the first set we see trivial topology for the top chain.
+The ground state energies are zero and MF's at the ends of the chain as expected.
+In the second set we see similar results as before that the band gap is too small and not robust.
+In the third set we see the top chain should be trivial yet no MF's appear for the ground state wavefunction.
+This is due again to the band gap being too small, it's not robust enough to have MF's at the interface of the two topologies.
+
+/// Transition
+Now that we have this method down we will now look at another way to get MF's on triangular islands.
+
+/// Triangular p-wave superconductor with vector potential
+For a triangular p-wave superconductor with vector potential we arrive at this following equation.
+Notice that we have included a phase factor to the pairing potential, which is dependent on the angle of the sites nearest neighbor.
+Again phi is dependent on the line integral of the vector potential.
+It is hard to distinguish anything while in the fermion basis, but if we write it in MF basis our Hamiltonian takes this form.
+
+/// Transition
+While it doesn't look like an easy equation we can see many things about the nature of how MF's pair with its neighbors.
+Next I'll show a simple toy model to find conditions for MF's on a triangular island.
+
+/// Conditions for MZM's on a triangular island.
+First we look at the Kitaev limit, t=delta>0 and mu=0.
+Our Hamiltonian has four parts that survive given here.
+If we think about a 3-pt triangle as shown to the right is it possible to get 2 isolated MF's?
+Let's make the condition that any term involving a_1 and b_2 have to go to zero.
+Due to the Kitaev limit we see the bottom row a_1 and b_2 are isolated from each other and their counterparts.
+If we look at the left edge we can find for phi31 = pi/3, a_1 doesn't pair with a_3 or b_3.
+And for phi23=pi/3, b_2 doesn't pair with a_3 or b_3.
+We find that some odd function vector potentials can achieve this critical condition for a triangle to host MF's on the bottom vertices.
+For the following results I show we will consider a linear vector potential dependent on x and poiting along the y-axis.
+This linear vector potential again can be mapped to a 1D chain.
+
+/// Transition
+Lets now see what happens if we apply a linear vector potential to a triangular island
+
+/// Triangular island
+The critical strength of a triangle of n_r rows is dependent on its size.
+We can extrapolate easily what the critical strength should be as shown here.
+In the bottom left picture I show the vector potential field to help illustrate the strength at each lattice point.
+I then plot a spectral flow of the energies as a function of the vector potential strength B.
+We can see in the top right graph as B reaches B_0 which is denoted as the dotted black line our energies appear to go to zero.
+We then plot the ground state wavefunction in the bottom right.
+Good news, as expected if we look at the bottom vertices we see MF's want to be hosted there.
+Another reason this is expected is we can think back to the double chain model, the top edges of the triangular can be thought of being in the trivial phase while the bottom edge is non-trivial and thus MFs want to be hosted at the interface of the two topologies.
+Bad news, it doesn't appear the MZM's live in a clean gap and live a continuum of edge states.
+
+/// Transition
+How do we get around this?
+Instead of an island what we could build a triangular chain?
+
+/// Triangular Chain
+For the same size triangle we just keep the outermost lattice sites.
+Looking at the spectral flow we see again MZM's appear at the critical strength, and the next energy state appears to be slightly smaller than 0.5t.
+We plot one of the ground state wavefunctions on the right and again we see MF's on the bottom vertices.
+There is however one problem not easily seen in the spectral flow graph.
+It is degenerate, so we have 4 MZM's.
+
+/// Transition
+We've seen both extremes so lets try a compromise, a hollow triangular island.
+
+/// Hollow Triangle
+For the same size triangle we now pick a width for the edges of the triangle.
+For these results we pick the width to be 3 lattice sites wide.
+In the spectral flow we zero energy is achieved for the critical strength again.
+It may appear degenerate but the next energy state is on the order of 10^-3 t.
+Overall the gap is looking cleaner.
+As for the ground state wavefunction we see as expected MF's at the bottom vertices.
+
+/// Transition
+That’s all the data I have for today.
+So I’ll go ahead and wrap this all up.
+
+/// Summary
+Within this talk I have shown that triangular islands with gapped interiors (chain and hollow triangle) can be promising platforms for hosting and manipulating MZM’s.
+Computing the MN for these triangular structures should give us enough intuition to find robust MZM’s outside the Kitaev limit.
+We will also reapply this methodology for a Rashba SC heterostucture.
+And once we have that we can develop a practical braiding scheme for these quantum logic gates.
+
+/// Transition
+With this project now wrapped up I’d like to mention additional projects that will be in my dissertation.
+
+/// Additional Projects
+I’ll have a section on searching for floquet landau levels in Graphene and 2DEG’s using two linearly polarized lights.
+Another project is trying to map spins to fermions in a triangular structure like Kitaev did with a honeycomb lattic using the Jordan-Wigner transformation.
+There is little literature on the 2D transformation but we will see what we can do.
+
+With that I’d like to thank my advisor and committee members.
+I’ll now take any questions you have.
