@@ -7,7 +7,7 @@ Start with the Landau level Hamiltonian with a perpendicular magentic field and 
   \ham = \dfrac{p_x^2}{2m} + \dfrac{1}{2m} {\left(p_y + eBx \right)}^2 + \dfrac{e^2 B_1^2}{2m} x^2
 \end{equation}
 We want to utilize the Laughlin pump argument.
-we imagine the y-axis is wrapped around to make a cylinder with circumference $L$ which makes $k=\tfrac{2\pi m}{L}$.
+we imagine the y-axis is wrapped around to make a cylinder with circumference $L$ which makes $k=\tfrac{2\pi j}{L}$.
 Then add in a flux term $\Phi(t)$ along the x-axis, the Hamiltonian becomes
 
 \begin{equation}
@@ -19,8 +19,8 @@ Performing a shift in coordinates of $x' = x + \tfrac{\Phi}{BL} + \tfrac{\hbar k
   \ham &= \dfrac{p_x^2}{2m} + \dfrac{q^2B^2x'^2}{2m} + \dfrac{q^2 B_1^2}{2m} {\left( x' - \dfrac{\Phi}{BL} - \dfrac{\hbar k}{qB} \right)}^2 \nonumber \\
   &= \dfrac{p_{x'}^2}{2m} + \dfrac{q^2B^2x'^2}{2m} + \dfrac{q^2 B_1^2}{2m} x'^2 - 2\dfrac{q^2 B_1^2}{2m} \Phi'(k)x' + \dfrac{q^2 B_1^2}{2m} \Phi'^2(k) \nonumber \\
   &= \dfrac{p_{x'}^2}{2m} + \dfrac{q^2B_2^2}{2m} \left( x'^2  - \dfrac{2B_1^2\Phi'(k)x'}{B_2^2} + \dfrac{B_1^4 \Phi'^2(k)}{B_2^4} \left) -\dfrac{q^2B_1^4\Phi'^2(k)}{2mB_2^2} + \dfrac{q^2 B_1^2}{2m} \Phi'^2 \nonumber \\
-  &= \dfrac{p_{x'}^2}{2m} + \dfrac{q^2B_2^2}{2m} \left( x'  - \dfrac{B_1^2\Phi'(k)x'}{B_2^2} \left)^2 - \dfrac{B_1^2 \Phi'^2(k)}{B_2^2} (q^2 B_1^2 - q^2B_2^2) \nonumber \\
-  &= \dfrac{p_{x''}^2}{2m} + \dfrac{q^2B_2^2x''^2}{2m} + \dfrac{B^2 B_1^2 \Phi'^2(k) }{2mB_2^2}
+  &= \dfrac{p_{x'}^2}{2m} + \dfrac{q^2B_2^2}{2m} \left( x'  - \dfrac{B_1^2\Phi'(k)x'}{B_2^2} \right)^2 - \dfrac{B_1^2 \Phi'^2(k)}{B_2^2} (q^2 B_1^2 - q^2B_2^2) \nonumber \\
+  &= \dfrac{p_{x''}^2}{2m} + \dfrac{q^2B_2^2x''^2}{2m} + \dfrac{B^2 B_1^2 \Phi'^2(k) }{2mB_2^2} \label{eq:qhm-add-quad-hall-cylinder}
 \end{align}
 where
 
@@ -30,7 +30,7 @@ where
   &= x + \Phi'(k)\dfrac{B^2}{B_2^2} \nonumber \\
   &= x + \left(\dfrac{\Phi}{BL} + \dfrac{\hbar k}{eB} \right) \dfrac{B^2}{B_2^2} \nonumber \\
   &= x + \left(kL + \dfrac{2\pi\Phi}{\Phi_0}\right) \dfrac{\hbar B}{eL B_2^2} \nonumber \\
-  &= x + \left(m + \dfrac{\Phi}{\Phi_0} \right) \dfrac{B \Phi_0}{L B_2^2}
+  &= x + \left(j + \dfrac{\Phi}{\Phi_0} \right) \dfrac{B \Phi_0}{L B_2^2}
 \end{align}
 and $ B_2^2 = B^2 + B_1^2$.
 If we include a periodic potential in the y-axis, $b\cos(Ky)$, the Hamiltonian becomes
@@ -44,12 +44,31 @@ Using Bloch theorem we state
   \Psi_k (x,y) &= e^{ika_y}\Psi(x,y+a_y) \nonumber \\
   \Psi_k (x,y) &= e^{iky} u_k(x,y) \nonumber \\
   u_k(x,y) &= u_k(x,y+a_y) \nonumber \\
-  u_k(x,y) &= \sum_l u_{k,l}(x) e^{ilKy} \nonumber \\
-  \Psi_k (x,y) &= \sum_l u_{k,l}(x) e^{i(lK+k)y} = \sum_m u_{k,l}(x) e^{ik'y}.
+  u_k(x,y) &= \sum_l u_{k,l}(x) e^{ilKy} = \sum_l u_{k,l} \phi_n(x-x_l) e^{ilKy} \nonumber \\
+  \Psi_k (x,y) &= \sum_l u_{k,l}(x) e^{i(lK+k)y} = \sum_l u_{k,l}\phi_n(x-x_l) e^{ik'y}.
 \end{align}
 Acting the Hamiltonian on the ansatz wavefunction gives
 
 \begin{align}
-  \ham\Psi_k(x,y) &= \sum_l \left[ \left( \dfrac{p_{x''}^2}{2m} + \dfrac{q^2B_2^2x''^2}{2m} + \dfrac{B^2 B_1^2 \Phi'^2(k') }{2mB_2^2}\right) u_{k,l} + \dfrac{b}{2} \left(u_{k,l+1} + u_{k,l-1} \right) \right] e^{ik'y} \nonumber \\
-  &= E_n(k')\Psi_k(x,y) + \sum_l \dfrac{b}{2} \left( u_{k,l+1} + u_{k,l-1} \right) e^{ik'y}
+  \ham\Psi_k(x,y) &= \sum_l \left[ \left( \dfrac{p_{x''}^2}{2m} + \dfrac{q^2B_2^2x''^2}{2m} + \dfrac{B^2 B_1^2 \Phi'^2(k') }{2mB_2^2}\right) u_{k,l}(x) + \dfrac{b}{2} \left(u_{k,l-1}\phi_n(x-x_{l-1}) + u_{k,l+1}\phi_n(x-x_{l+1}) \right) \right] e^{ik'y} \nonumber \\
+  &= E_n(k',\Phi)\Psi_k(x,y) + \sum_l \dfrac{b}{2} \left( u_{k,l-1}\phi(x-x_{l-1}) + u_{k,l-1}\phi(x-x_{l+1}) \right) e^{ik'y}
 \end{align}
+We can integrate the y terms out.
+Assuming that $K\ll L_{B_2} e B_2^2 / (\hbar B)$ we can assume $\phi_n(x-x_l) \approx \phi_n(x-x_{l\pm1})$ and by integrating the orthogonal x terms we arrive at
+
+\begin{equation}
+  \epsilon(k) u_{k,l} = E_n(k+lK) u_{k,l} +\dfrac{b}{2} \left( u_{k,l-1} + u_{k,l+1} \right).
+\end{equation}
+This linear equation can be solved to determine the weights $u_{k,l}$.
+We are only interested in the ground state solution for this system.
+Finally, we can arrive the center of mass of the electron to be
+
+\begin{equation}
+  \langle x \rangle &= \sum_l \int dx |u_{k,l}^0|^2 \phi(x-x_l) x \phi(x-x_l),
+\end{equation}
+where $\phi(x-x_l)$ is simply the ground state eigenstate of the quantum harmonic oscillator from Eq.~\ref{eq:qhm-add-quad-hall-cylinder}.
+We can simplify the CM to
+
+\begin{equation}
+  \langle x \rangle = \sum_l |u_{k,l}^0|^2 x_l
+\end{equation}
