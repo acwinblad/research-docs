@@ -7,13 +7,20 @@ Repeated entry---line 1791 of file ref.bib
  : @article{supp
  :              ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "zhangsb_2020_1"
+Warning--I didn't find a database entry for "zhangsb_2020_2"
+Warning--I didn't find a database entry for "Hyart_2013"
+Warning--I didn't find a database entry for "Dmytruk_2019"
+Warning--I didn't find a database entry for "DeGennes_book"
+Warning--I didn't find a database entry for "FU_2021"
+Warning--I didn't find a database entry for "Pandey_2023"
 Warning--empty author in supp
 Warning--empty title in supp
 Warning--empty year in supp
 Warning--empty year in MSR
 You've used 100 entries,
             1791 wiz_defined-function locations,
-            1110 strings with 27724 characters,
+            1122 strings with 27858 characters,
 and the built_in function-call counts, 25758 in all, are:
 = -- 1996
 > -- 1641

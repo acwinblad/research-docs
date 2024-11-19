@@ -128,22 +128,22 @@ In matrix form the Hamiltonian looks like
 \[
   \ham = i v_f q B
   \begin{bmatrix}
-    0 & \op{x} - i\dfrac{\op{p}_x}{qB} \\
-    \op{x} + i\dfrac{\op{p}_x}{qB} & 0
+    0 & \op{p}_x + iqB\op{x} \\
+    \op{p}_x - iqB\op{x} & 0
   \end{bmatrix}
 \]
 
 \[
-  \ham = i v_f \sqrt{2m \hbar\omega}
+  \ham = i v_f \sqrt{2\hbar qB}
   \begin{bmatrix}
     0 & \ca\\
-    a & 0
+    -a & 0
   \end{bmatrix}
 \]
 The form of the Hamiltonian can be quickly solved by squaring then acting on a wavefunction
 
 \[
-  |\ham|^2 = 2m \hbar\omega v_f^2
+  \ham^2 = 2\hbar qB  v_f^2
   \begin{bmatrix}
     \ca a & 0 \\
     0 & a\ca
@@ -152,10 +152,10 @@ The form of the Hamiltonian can be quickly solved by squaring then acting on a w
 We focus on the first element of the matrix
 
 \begin{align}
-  \langle \psi_n | |\ham_{11}|^2 |\psi_n\rangle &= \langle \psi_n | E_n^2 |\psi_n\rangle \nonumber \\
-    &= 2m \hbar\omega v_f^2 \langle \psi_n | \ca a |\psi_n\rangle \nonumber \\
-    &= 2m \hbar\omega v_f^2 \langle \psi_n | n |\psi_n\rangle \nonumber \\
-    E_n^2 &= 2m \hbar \omega n v_f^2 \nonumber \\
-    E_n &= \pm v_f \sqrt{2m\hbar\omega n}
+  \langle \psi_n | \ham_{11}^2 |\psi_n\rangle &= \langle \psi_n | E_n^2 |\psi_n\rangle \nonumber \\
+    &= 2 \hbar qB v_f^2 \langle \psi_n | \ca a |\psi_n\rangle \nonumber \\
+    &= 2 \hbar qB v_f^2 \langle \psi_n | n |\psi_n\rangle \nonumber \\
+    E_n^2 &= 2 \hbar qB n v_f^2 \nonumber \\
+    E_n &= \pm v_f \sqrt{2\hbar qB n}
 \end{align}
 

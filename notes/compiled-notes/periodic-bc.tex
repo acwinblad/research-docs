@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper]{book}
+\documentclass[10pt,letterpaper]{book}
 \usepackage[a4paper,width=15cm,top=2.5cm,bottom=2.5cm,bindingoffset=6mm]{geometry}
 \usepackage{footnote}
 \usepackage{amsbsy}
@@ -6,7 +6,6 @@
 \usepackage{physics}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\setlength{\headheight}{15pt}
 \usepackage[T1]{fontenc} % important for having seachable underscores
 \usepackage{bm}
 \usepackage[sort&compress,numbers]{natbib}
@@ -93,21 +92,28 @@
 %be open
 % pdfdisplaydoctitle=true to show the document title instead of the
 % filename in the titlebar of adobereader
-\usepackage[plainpages=false,breaklinks=true,pdfborder={0 0 0},pdfdisplaydoctitle=true,bookmarksopen=true,bookmarksopenlevel=0,pdftex,%
+\usepackage[plainpages=false,breaklinks=true,pdfborder=0 0 0,pdfdisplaydoctitle=true,bookmarksopen=true,bookmarksopenlevel=0,pdftex,%
 %Comment next line if it makes problems
 %(it requires a recent LaTeX distribution)
             hidelinks,
             pdftitle={MSE502B},
             pdfkeywords={lecture notes}]{hyperref}
 
+\newcommand{\Ham}{\mathcal{H}}
 
+
+\newcommand{\ke}{k_{\epsilon}}
+\newcommand{\kpm}{k_{\pm}}
+\newcommand{\sx}{\sigma_x}
+\newcommand{\sy}{\sigma_y}
+\newcommand{\sz}{\sigma_z}
+\newcommand{\so}{\sigma_0}
 \begin{document}
 
 \maketitle
 \tableofcontents
 
-
-\input{../notes/majorana-fermion-tunable-device.tex}
+\input{./periodic-bc.tex}
 
 \end{document}
 

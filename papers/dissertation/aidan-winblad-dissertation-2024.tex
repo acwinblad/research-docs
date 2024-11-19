@@ -100,7 +100,7 @@ Copyright by Aidan Winblad 2024 \\
 All Rights Reserved
 }
 
-\abstract{Abstract goes here}
+\abstract{\input{./ch-01/abstract.tex}}
 
 \acknowledgements{%
 I would like to thank the CSU Graduate Student Council and the CSU Graduate School for initiating, commissioning and supporting this project.  I would also like to thank Nicole Ramo for her support and ensuring that we followed through with this project to completion.  I would like to thank Leif Anderson, who created and supported the previous LaTeX template for a number of years.  Although I have never met Leif, his work was invaluable in the creation of this package and has helped many students get their thesis approved by the CSU graduate school.  Finally, I would like to thank everyone who helps to contribute to this package.  Your work will help many CSU graduate students to create professional, beautiful and compelling theses and dissertations using LaTex.  Last but not least, thank you to the creators and maintaners of \LaTeX{} for creating a fantastic typesetting tool.
@@ -138,42 +138,27 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 \mainmatter % starts thesis body
 
 \chapter{Introduction}
-\Blue{EM gauge potential appears in electronic Hamiltonian in CM}
-\begin{enumerate}
-  \item \Blue{Review Maxwell theory -> gauge potential}
-  \item \Blue{Minimal coupling $-i \hbar \nabla \rightarrow -i \hbar \nabla + q \vec{A}$ or $-i\partial_{\mu} \rightarrow -i\partial_{\mu} + qA_{\mu}$}
-  \item \Blue{TB Hamiltonian and Peierls phase}
-\end{enumerate}
-
-\Blue{Topological phenomena in CM considered in thesis}
-
-\input{./ch-01/introduction.tex}
 \input{./ch-01/maxwell-theory-gauge-potentials.tex}
 \input{./ch-01/minimal-coupling.tex}
 \input{./ch-01/peierls-phase.tex}
 \input{./ch-01/topological-superconductors.tex}
 \input{./ch-01/landau-levels.tex}
-\item \Blue{Landau Level and Hofstadter butterfly}
-\begin{enumerate}[i]
-  \item \Blue{solve for LL in 2DEG --- why it's topological, chern number, TKNN quantum Hall}
-  \item \Blue{square lattice --- hofstadter butterfly ( on other lattices, honeycomb)}
-\end{enumerate}
-
 
 \chapter{Superconducting Triangular Islands as a Platform for Manipulating Majorana Zero Modes}
 
-\input{./ch-02/introduction.tex}
-\input{./ch-02/kitaev-triangle.tex}
-\input{./ch-02/hollow-triangle.tex}
-\input{./ch-02/hollow-triangle-additional-results.tex}
-\input{./ch-02/discussion.tex}
+\input{./ch-02/context.tex}
+\input{./ch-02/abstract.tex}
+\input{./ch-02/research-article.tex}
+\input{./ch-02/supplemental-material.tex}
 
-\chapter{Floquet Landau Levels}
+
+\chapter{Landau Level-Like Topological Floquet Hamiltonians}
 
 \input{ch-03/introduction.tex}
-\input{ch-03/fll-toy-model.tex}
-\input{ch-03/floquet-ll-2deg.tex}
+%\input{ch-03/fll-toy-model.tex}
+%\input{ch-03/dirac-laughlin-pump.tex}
 \input{ch-03/floquet-ll-dirac.tex}
+\input{ch-03/floquet-ll-2deg.tex}
 \input{ch-03/conclusion.tex}
 
 \chapter{Conclusion and Discussion}
@@ -184,17 +169,18 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
 
 \begin{appendices}
 
+
 \chapter{Superconducting Triangular Islands}
 \input{./ch-app/majorana-number-derivation.tex}
 \input{./ch-app/kitaev-triangle-peierls-sub.tex}
 % the section above includes a more explicit version of the section below, so it has been commented out.
 %\input{./ch-app/conditions-for-mzm.tex}
 
-\chapter{Floquet Landau levels}
+\chapter{Landau Level-Like Topological Floquet Hamiltonians}
 \input{./ch-app/quantum-harmonic-oscillator.tex}
-\input{./ch-app/van-vleck-expansion-2deg.tex}
-\input{ch-03/floquet-ll-2deg-tbm.tex}
-\input{ch-03/floquet-ll-dirac-tbm.tex}
+\input{./ch-app/quantum-floquet-theory.tex}
+\input{./ch-app/floquet-ll-2deg-tbm.tex}
+\input{./ch-app/floquet-ll-dirac-tbm.tex}
 \input{./ch-app/chern-number.tex}
 
 \end{appendices}

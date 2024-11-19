@@ -2,78 +2,64 @@
 Dirac electrons can be represented with a generic model Hamiltonian like 2D graphene monolayer,
 
 \begin{equation}\label{eq:HDirac}
-	H^D=v_F(\sigma _{x}\Pi _{x}+\sigma _{y}\Pi _{y}),
+	\ham_0 =v_F(\sigma _{x}p_{x}+\sigma _{y}p_{y}),
 \end{equation}%
-where $\bm{\Pi} =\vec{p}-q\vec{A}^D(t)$, here $\vec{A}^D$ is the vector
+where $\vec{p} \rightarrow \vec{p}+e\vec{A}(t)$, here $\vec{A}$ is the vector
 potential, $\vec{p}$ is the momentum operator, $v_F$ is the Fermi
-velocity of Dirac fermions, $q$ is charge,
+velocity of Dirac fermions, $e$ is electron charge,
 and $\vec{\sigma}$ the Pauli matrices vector in 2D.
 We have two linearly polarized laser lights with the electric field components
 
-\begin{align} \label{eq:Efield}
-\vec{E}_{1} &= E\cos (\omega t)\hat{x}, \nonumber \\
-\vec{E}_{2} &= E\sin(Kx)\sin (2\omega t)\hat{y},
-\end{align}%
-where second light is spatially inhomogeneous.
-It is important to note that second light need to have twice higher frequency than first.
-This is basic requirement to have LLs spectrum in Dirac systems.
-Further, one light is propagating along y-axis and polarization is along x-axis, and the other is propagating along x-axis and polarization along y-axis.
+\begin{align} \label{eq:EDfield}
+\vec{E}_{1} &= E\cos \omega t\ \hat{x}, \nonumber \\
+\vec{E}_{2} &= E\cos(Kx)\sin 2\omega t\ \hat{y},
+\end{align}
 The $\omega $ is frequency of light with time $t$, $K=2\pi /d$ with $d$ being the spatial period of the electric field with
 amplitude $E$.
-This form of the field leads ($\vec{E}=-\frac{\partial \vec{A}^D}{\partial t}$) to the following vector potential $\vec{A}^D$
+This form of the field leads to the following gauge potential field
 
-\begin{equation}\label{eq:AvecDirac}
-  \vec{A}^D(t)= \dfrac{E}{\omega} \left\langle -\sin (\omega t), \tfrac{1}{2}\sin(Kx) \cos (2\omega t),0 \right\rangle,
+\begin{equation}\label{eq:ADirac}
+  \vec{A}(t)= \dfrac{E}{\omega} \left\langle -\sin \omega t, \tfrac{1}{2}\cos(Kx) \cos 2\omega t \right\rangle,
 \end{equation}%
-Substituting Eq.~\eqref{eq:Avector} into Eq.~\eqref{eq:HDirac}, we arrive at%
+Substituting Eq.~\eqref{eq:ADirac} into Eq.~\eqref{eq:HDirac}, we arrive at%
 
-\begin{equation}\label{eq:Htime}
-H^D(t)=H_{0}^D + \sigma _{x} V_1 \sin (\omega t) - \sigma _{y} V_2\cos 2(\omega
-t),
+\begin{equation}\label{eq:HDtime}
+  \ham(t)=\ham_{0} - \sigma _{x} \dfrac{v_F V}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F V}{2\omega}\cos{(Kx)} \cos2\omega t,
 \end{equation}%
-where $H_{0}^D=v_F(\sigma _{x} p_{x}+\sigma_{y} p_{y})$, $V_1 = v_F V$, and $V_2 = \tfrac{1}{2} v_f V \sin(Kx)$.
-Because of the time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:Htime}.
-After performing the Fourier transform of the time-periodicity, first and second order expansion in $\hbar\omega$ terms leads to the final effective Hamiltonian in Eq.~\eqref{eq:Htime} as
+where $V = eE$.
+Because of the time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:HDtime}.
+After performing the Fourier transform of the time-periodicity, first and second order expansion in $\hbar\omega$ terms leads to the final effective Hamiltonian in Eq.~\eqref{eq:HDtime} as
 
-\begin{equation} \label{eq:Heffec}
-	H_{\rm eff}^D=H_{0}^D-\frac{v_F V_{1}^{2}\sigma_{y}p_{y}}{\hbar^{2}\omega^{2}}
-	+\frac{V_{1}^{2}V_{2}\sigma_{y}}{2\hbar^{2}\omega^{2}}-\frac{v_F\sigma
-		_{x}(V_{2}^{2}p_{x}+p_{x}V_{2}^{2})}{8\hbar^{2}\omega^{2}}.
+\begin{equation} \label{eq:HDeff}
+  \ham_{\text{eff}}=\ham_{0}-\sigma_y\frac{v_F^3 V^2 p_y}{\hbar^{2}\omega^{4}}
+  +\sigma_y\frac{v_F^3 V^{3}\cos{(Kx)}}{2\hbar^{2}\omega^{5}}
+  -\sigma_x\frac{v_F^3 V^2 \left\{p_x, \cos{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
 \end{equation}
-In Eq. ~\eqref{eq:Heffec}, first order term in $\hbar \omega$ that leads to gap at the Dirac point in usual circularly polarized light experiments \cite{YHW, JWM} is zero here due to inhomogeneous nature of laser lights.
-This effective Hamiltonian can be simplified in the long wavelength limit to
+In Eq. ~\eqref{eq:HDeff}, first order term in $\hbar \omega$ that leads to gap at the Dirac point in usual circularly polarized light experiments \cite{YHW, JWM} is zero here due to inhomogeneous nature of laser lights.
+This effective Hamiltonian can be simplified in the long wavelength limit, $Kx \ll 1$ to
 
 \begin{align} \label{eq:HeffB}
-  H_{\rm eff}^D &= v_F \sigma_x p_x + v_F \sigma_y \left[ \left( 1- \dfrac{v_F^2V^2}{\hbar^2\omega^2} \right) p_y + \dfrac{K v_F^2 V^3}{4 \hbar^2 \omega^2} x \right] \nonumber \\
-  H_{\rm eff}^D &= v_{F}\sigma_{x}p_{x}+v_F\sigma_{y} \left( C p_{y} + qB^Dx \right)
+  \ham_{\text{eff}} &= v_F \sigma_x p_x + v_F \sigma_y \left[ \left( 1- \dfrac{v_F^2V^2}{\hbar^2\omega^4} \right) p_y + \dfrac{K v_F^2 V^3}{4 \hbar^2 \omega^5} x \right] \nonumber \\
+  \ham_{\text{eff}}^D &= v_{F}\sigma_{x}p_{x}+v_F\sigma_{y} \left( C p_{y} + qB^Dx \right)
 \end{align}%
-In obtaining Eq.~\eqref{eq:HeffB}, last term in Eq.~\eqref{eq:Heffec} is second order in space and thus zero in the long wavelength limit for the spatially inhomogeneous modulation.
-Further, we have $B^D=\frac{Kq^2v_F^2 E^3}{4\hbar^{2}\omega^{5}}$.
-In accordance with Eqs.~\eqref{eq:Heffec} and ~\eqref{eq:HeffB}, there is least anisotropy in the Dirac spectrum in addition to zero gap.
+In obtaining Eq.~\eqref{eq:HeffB}, last term in Eq.~\eqref{eq:HDeff} is second order in space and thus zero in the long wavelength limit for the spatially inhomogeneous modulation.
+Further, we have $B^D=\frac{Kv_F^2 e^2E^3}{4\hbar^{2}\omega^{5}}$.
+In accordance with Eqs.~\eqref{eq:HDeff} and ~\eqref{eq:HeffB}, there is least anisotropy in the Dirac spectrum in addition to zero gap.
 Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffB}, we obtained the eigenvalues for Dirac system as%
 
 \begin{equation} \label{eq:DiracEner}
-  E_{n}^D = v_F^2 \sqrt{\dfrac{nK q^3 E^3}{2 \hbar \omega^5}}
+  \epsilon_{n}^D = \pm v_F^2 \sqrt{\dfrac{nK e^3 E^3}{2 \hbar \omega^5}}
 \end{equation}
 which is similar to graphene LLs spectrum in the limit of equal velocities.
 We can have gapped Dirac spectrum by using uniform circularly polarized laser light as observed in experiments \cite{YHW, JWM} or by using any substrate like hBN.
-It is also important to note that the effective magnetic field strength obtained for Dirac case in Eq.~\eqref{eq:DiracEner} is directly proportional to third order of the electric field and inversely proportional to the product of spatial period and fifth order of the frequency of the polarized light $\propto (E^3/(a\omega^5))$.
-This factor of the laser lights can be tuned and thus effective magnetic field can be enhanced in such nonequilibrium situations.
+It is also important to note that the effective magnetic field strength obtained for Dirac case in Eq.~\eqref{eq:DiracEner} is directly proportional to third order of the electric field and inversely proportional to the product of spatial period and fifth order of the frequency of the polarized light $\propto (E^3/(d\omega^5))$.
+This factor of the laser lights can be tuned and thus effective magnetic field can be enhanced in such nonequilibrium systems.
 
-\subsection{Dirac Numerical Approach}
+\subsection{Dirac numerical approach}
 
 \begin{figure}[h]
-  \begin{tikzpicture}
-    \node[inner sep=0pt] (figure) at (0,0)
-    {\includegraphics[width=0.25\textwidth]{./figures/dirac-floquet-unit-cell.pdf}};
-    \node[inner sep=0pt] (A1) at (-1.3,-1.35) {\small $A_1$};
-    \node[inner sep=0pt] (A2) at (-0.3,0.5) {\small $A_2$};
-    \node[inner sep=0pt] (B1) at (0.3,-0.5) {\small $B_1$};
-    \node[inner sep=0pt] (B2) at (1.35,1.35) {\small $B_2$};
-    \node[inner sep=0pt] (a) at (-0.65,-0.75) {\small $a$};
-    \node[inner sep=0pt] (a1) at (-1.3,0.0) {\small $\vec{a}_2$};
-    \node[inner sep=0pt] (a2) at (0.0,-1.5) {\small $\vec{a}_1$};
-  \end{tikzpicture}
+  \includegraphics[width=0.33\textwidth]{./figures/dirac-floquet-unit-cell.pdf}
+  \caption{Honeycomb lattice depicting 4 atoms per unit cell for inhomogeneous incident laser light.}
   \label{fig:honeycomb}
 \end{figure}
 
@@ -87,12 +73,12 @@ Our Hamiltonian takes the following form
   H = -\sum_{j'l'\alpha,jl\beta} h^{j'l'\alpha}_{jl\beta} C^{\dagger}_{j'l'\alpha} C_{jl\beta} + h.c.,
 \end{equation}
 where $t$ is the hopping amplitude, $j,l$ are unit cell index in x and y, and $\alpha,\beta = A_1, A_2, B_1, B_2$.
-To include the vector potential from Eq.~\eqref{eq:AvecDirac} in the tight-binding model we consider a finite system defined by $r_c \geq \max(|x_{i\alpha}|,|y_{i\beta}|)$.
+To include the vector potential from Eq.~\eqref{eq:ADirac} in the tight-binding model we consider a finite system defined by $r_c \geq \max(|x_{i\alpha}|,|y_{i\beta}|)$.
 Using a Peierls substitution we can write the hopping term as
 
 \begin{align}
 h^{j'l'\alpha}_{jl\beta} &= h \exp\left[ i \phi_0 \left\{ (x_{j'l'}^{\alpha} - x_{jl}^{\beta}) \sin{\omega t} - \dfrac{1}{2} \sin\left(K \dfrac{x_{j'l'}^{\alpha} + x_{jl}^{\beta}}{2} \right) (y_{j'l'}^{\alpha} - y_{jl}^{\beta}) \cos{2\omega t}  \right\} \right] \nonumber \\
-  &= h \exp\left[ i X_1 \sin(\omega t) -i X_2 \cos(2\omega t)\right]
+  &= h \exp\left[ i X_1 \sin{\omega t} -i X_2 \cos{2\omega t}\right]
 \end{align}
 where $ $.
 One can fourier transform along the y-axis to momentum space to simplify our system to
@@ -138,7 +124,7 @@ Each component of the matrix can be written as the following
 
 \begin{align}
   H_{ab, n} &= \dfrac{1}{T} \int^T_0 H_{ab} e^{-i n \omega t} dt \nonumber \\
-  &= \dfrac{1}{2\pi} \int^{2\pi}_0 e^{iX_1\sin(\tau) - iX_2\cos(2\tau) - i n \tau} d\tau.
+  &= \dfrac{1}{2\pi} \int^{2\pi}_0 e^{iX_1\sin{\tau} - iX_2\cos{2\tau} - i n \tau} d\tau.
 \end{align}
 This integral form is close to a Bessel function but has no elementary solution thus we solve it numerically.
 The quasienergy matrix $\bar{Q}$ then has matrix elements

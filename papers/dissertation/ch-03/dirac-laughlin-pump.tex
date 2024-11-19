@@ -1,0 +1,28 @@
+\section{Dirac Laughlin pump check}
+
+We want to investiagte whether the FLL Hamiltonian for Dirac systems exhibits integer quantum Hall effect.
+Start with the simplified effective Hamiltonian for a Dirac system with normal and oblique incident laser light
+
+\begin{equation}
+  \ham = v_F \left(p_x \sigma_x + \left(Cp_y + eBx \right) \right)
+\end{equation}
+We want to utilize the Laughlin pump argument.
+Let the y-axis is wrapped around to make a cylinder with circumference $L$ which makes $k=\tfrac{2\pi j}{L}$.
+Then add in a flux term $\Phi(t)$ along the x-axis, the Hamiltonian becomes
+
+\begin{equation}
+  \ham = v_F \left( p_x \sigma_x + \left(C\hbar k + Ce\Phi + eBx \right) \right)
+\end{equation}
+I think we can do this here or before we use our Floquet and Van-Vleck theory, since the flux will be treated as a constant throughout the derivation the same way $p_y$ is treated as a constant, they are both coupled to $\sigma_y$ as well, with respect to the other terms during the perturbation theory; or in other words we can always shift momentum with a gauge potential since it is invariant?
+Performing a shift in coordinates of $x' = x + \tfrac{C\Phi}{BL} + \tfrac{C\hbar k}{eB}$
+
+\begin{align}
+  \ham &= v_F \left( p_x' \sigma_{x} + eBx' \sigma_y \right)
+\end{align}
+where
+
+\begin{align}
+  x' &= x + \dfrac{Ch}{eBL} \left( \dfrac{kL}{2\pi} + \dfrac{\Phi}{\Phi_0} \right) \nonumber \\
+  x' &= x + \dfrac{Ch}{eBL} \left( j + \dfrac{\Phi}{\Phi_0} \right).
+\end{align}
+This tells us the CM of the electron is $\propto C(j+ \Phi/\Phi_0)$ and after one flux quanta the electron state moves from $j \rightarrow j+1$ as long as $C \neq 0$. Interestingly enough we can change the direction of CM for electron by the strength of the electric field, one direction when $C>0$ and the opposite for $C<0$.

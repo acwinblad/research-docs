@@ -1,12 +1,12 @@
 \section{Floquet LLs in 2DEG}
 We consider the case of Schr\"{o}dinger electrons under the application of two linearly polarized laser lights. The unperturbed Hamiltonian for 2DEG is%
 \begin{equation}\label{eq:H2DEG}
-H=\frac{p_{x}^{2}}{2m}+\frac{p_{y}^{2}}{2m},
+\ham =\frac{p_{x}^{2}}{2m}+\frac{p_{y}^{2}}{2m},
 \end{equation}
 where $m^{\ast}$ is the effective mass of electron. By changing the Hamiltonian into a time-dependent form by applying two linearly polarized lights
 such that $\vec{p}\rightarrow \vec{p}+e\vec{A}(t)$. \ Therefore, Eq.~\eqref{eq:H2DEG} is written as%
 \begin{equation}\label{eq:H2time}
-H(t)=\frac{1}{2m}[p_{x}+eA_{x}(t)]^{2}+\frac{1}{2m}[p_{y} +eA_{y}(t)]^{2},
+\ham(t)=\frac{1}{2m}[p_{x}+eA_{x}(t)]^{2}+\frac{1}{2m}[p_{y} +eA_{y}(t)]^{2},
 \end{equation}
 where the electric field components for two spatially inhomogeneous linearly polarized laser lights are
 \begin{align} \label{eq:E2field}
@@ -14,33 +14,40 @@ where the electric field components for two spatially inhomogeneous linearly pol
   \vec{E}_{2} &= -E\cos{(K x)} \sin{\omega t}\ \hat{y}.
 \end{align}%
 The field given in Eq.~\eqref{eq:E2field} lead to the following vector potential $\vec{A}(t)$
-\begin{equation}\label{eq:Avec2deg}
+\begin{equation}\label{eq:A2deg}
   \vec{A}(t)= \dfrac{E}{\omega} \left\langle -\sin \omega t, \cos{(Kx)} \cos{\omega t} \right\rangle.
 \end{equation}%
 Substituting into the Schrodinger Hamiltonian we arrive at
 
-\begin{align}\label{eq:Htime2deg}
+\begin{align}\label{eq:H2time}
   \ham(t) = \dfrac{1}{2m} \Bigl[ &p_x^2 + p_y^2 + \dfrac{V^2}{2\omega^2}(1-\cos{2\omega t}) + \dfrac{V^2}{2\omega^2}(1+\cos{2\omega t}) \cos^2{(Kx)} \nonumber \\
-  &+\dfrac{2Vp_x}{\omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right) \Bigr]
+  &+\dfrac{2V}{\omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right) \Bigr]
 \end{align}
 where $V=eE$.
-Because of the time-translation symmetry through $A(t+T) = A(t)$ with $T = 2\pi/\omega$, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:Htime2deg}. After performing the Fourier transform of the time-periodicity, first order expansion in $\hbar \omega$ terms the effective Hamiltonian becomes
+Because of the time-translation symmetry through $A(t+T) = A(t)$ with $T = 2\pi/\omega$, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:H2time}. After performing the Fourier transform of the time-periodicity, first order expansion in $\hbar \omega$ terms the effective Hamiltonian becomes
 
-\begin{align}\label{eq:Heff2deg}
-  \ham_{eff} &= \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + \dfrac{V^2}{\omega^2} - \dfrac{K V^2 p_y \sin{(Kx)}}{m\omega^3} \right] \nonumber \\
-  \tilde\ham_{eff} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K V^2 \sin{(Kx)}}{2m\omega^3} \right)^2  - \dfrac{K^2 V^4 \sin{(Kx)}}{4m^2\omega^6} \right]. \nonumber
+\begin{align}\label{eq:H2eff}
+  \ham_{\text{eff}} &= \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + \dfrac{V^2}{\omega^2} - \dfrac{K V^2 p_y \sin{(Kx)}}{m\omega^3} \right] \nonumber \\
+  \ham_{\text{eff}} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K V^2 \sin{(Kx)}}{2m\omega^3} \right)^2  - \dfrac{K^2 V^4 \sin{(Kx)}}{4m^2\omega^6} \right]. \nonumber
 \end{align}
-Here we can the first order (or is it second order? $H^{F(2)}$?) effects introduce a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
-Finally, in the long wavelength
+where we shifted the constant energy out of the effective Hamiltonian and completed the square for the $p_y$ and $x$ terms.
+Here we can see the first order (or is it second order? $H^{F(2)}$?) effects introduce a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
+Finally, in the long wavelength, $Kx \ll 1$,
 
 \begin{equation}
-  \ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K^2 V^2 x }{2m\omega^3} \right)^2  \right], \nonumber
+  \ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K^2 V^2 }{2m\omega^3}x \right)^2  \right], \nonumber
 \end{equation}
-Notice here we have quantum harmonic oscillator (QHO) in x-axis and coupling between $p_y$ and $x$.
-One can expect to calculate the Chern number as usual from the effective Hamiltonian which will lead to the quantum Hall effect.
-The strength of the effective magnetic field $B \propto E^2/\omega^3$, allowing for new means to achieve QHE without a magnetic field and producing squared spacing between Landau levels instead of linear spacing.
+with energies
+\begin{equation}
+  \epsilon_n^{\text{2DEG}} = \dfrac{\hbar K^2 e^2 E^2}{2m^2\omega^3} \left(n+\tfrac{1}{2}\right)
+  \label{eq:2DEGenergy}
 
-%\subsection{2DEG Numerical Approach}
+\end{equation}
+which is similar to Schrodinger LLs spectrum.
+The effective magnetic field strength obtained for 2DEG is proportional to $ B \propto E^2/d^2\omega^3$.
+This allows for additional tunability of an effective magnetic field in nonequilibrium systems.
+
+%\subsection{2DEG numerical approach}
 %
 %We now consider a 2D square lattice tight-binding model.
 %The incident laser light doesn't allow for translation symmetry along the x-axisin which we will only consider a finite radius along the x-axis and treat the y-axis as infinite.

@@ -1,19 +1,4 @@
-\section{Van-Vleck expansion of modulated circularly polarized light on a 2DEG}
-
-We start with the Schrodinger equation in 2D with a vector potential field
-
-\begin{equation}
-  H(t) = \dfrac{1}{2m} \left[ (p_x - qA_x(t))^2 + (p_y - qA_y(t))^2 \right]
-\end{equation}
-where $\vec{A}(t) = \langle -V_1\sin{\omega t} , V_2\cos{\omega t} \rangle$, $V_1 = E/\omega$ and $V_2 = V_1 \cos{Kx}$.
-Which is made up of two electromagnetic wave sources.
-The time dependent Hamiltonian becomes
-
-\begin{equation}
-  H(t) = \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + 2qV_1\sin{\omega t} p_x - 2qV_2\cos{\omega t} p_y + \dfrac{q^2(V_1^2+V_2^2)}{2} -\dfrac{q^2(V_1^2-V_2^2)}{2}\cos{2\omega t} \right].
-\end{equation}
-The Van Vleck expansion uses a high frequency expansion from degenerate perturbation.
-The Hamiltonian of such an expansion is as follows
+\section{Quantum Floquet theory}
 
 \begin{equation}
   H = H^{F(0)} + H^{F(1)} + H^{F(2)} + H^{F(3)} + \dots
@@ -31,6 +16,22 @@ The $H_m$ terms are Fourier time-domain transforms of the time dependent Hamilto
 \begin{equation}
   H_n = \dfrac{1}{T} \int_0^T H(t) e^{-in\omega t} dt = H_{-n}^{\dagger}
 \end{equation}
+
+\subsection{Non-uniform circularly polarized light on 2DEG}
+
+We start with the Schrodinger equation in 2D with a vector potential field
+
+\begin{equation}
+  H(t) = \dfrac{1}{2m} \left[ (p_x - qA_x(t))^2 + (p_y - qA_y(t))^2 \right]
+\end{equation}
+where $\vec{A}(t) = \langle -V_1\sin{\omega t} , V_2\cos{\omega t} \rangle$, $V_1 = E/\omega$ and $V_2 = V_1 \cos{Kx}$.
+Which is made up of two electromagnetic wave sources.
+The time dependent Hamiltonian becomes
+
+\begin{equation}
+  H(t) = \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + 2qV_1\sin{\omega t} p_x - 2qV_2\cos{\omega t} p_y + \dfrac{q^2(V_1^2+V_2^2)}{2} -\dfrac{q^2(V_1^2-V_2^2)}{2}\cos{2\omega t} \right].
+\end{equation}
+
 Notice our Hamiltonian has modes $m = [-2,2]$, due to orthogonality we need only compute three integrals.
 
 \begin{align}

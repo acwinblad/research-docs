@@ -1,7 +1,9 @@
-\section{Landau levels in condensed matter}
+\section{Landau levels and quantum Hall effect}
 
-We are also interested in producing Landau levels in 2DEG and Dirac models using non-uniform circularly polarized laser light.
-To understand how Landau levels appear we need to solve the Hamiltonian associated with a 2DEG in the presence of a Magnetic field.
+\subsection{Landau levels in condensed matter systems}
+We are interested in using non-uniform circularly polarized laser light to induce QHE in 2DEG and Dirac systems and determine whether the energy levels are Landau level-like (LLL).
+In the classical case of charged QHE the charged particles in the system are quantized in cyclotron orbits due to perpendicular magnetic field, these energies are called Landau levels (LLs).
+To understand why LLs appear and QHE arises we need to first solve the Hamiltonian associated with a 2DEG and Dirac systems in the presence of a perpendicular magnetic field.
 We can start with the square lattice tight-binding Hamiltonian for a 2DEG
 
 \begin{equation}
@@ -12,11 +14,11 @@ and in momentum space
 \begin{equation}
   \ham = -\sum_{\vec{p}} 2t \left( \cos{(p_x a)} + \cos{(p_y a)} \right) \cc_{\vec{p}} c_{\vec{p}}.
 \end{equation}
-Then in the limit of small momenta $k$ we arrive at
+Then in the limit of small momenta $p$ we arrive at
 
 \begin{align}
   \ham &= -\sum_{\vec{p}} 2t \left( 2 - \dfrac{p_x^2a^2}{2} -\dfrac{p_y^2a^2}{2} \right) \cc_{\vec{p}} c_{\vec{p}}, \nonumber \\
-  \ham(\vec{p}) &= \left(\dfrac{p_x^2 + p_y^2}{2m}\right),
+  \ham(\vec{p}) &= \dfrac{p_x^2 + p_y^2}{2m},
 \end{align}
 we have thus arrived at Schrodingers equation for a 2DEG in the limit of small momenta.
 Let us assume a 2DEG in the $x$-$y$ plane and has a magnetic field that points in the positive $\hat{z}$ direction, $\vec{B} = B\hat{z}$ or $\vec{A} = Bx\hat{y}$.
@@ -30,8 +32,7 @@ Acting the Hamiltonian on the ansatz wavefunction yields
 
 \begin{align}
   \ham\Psi &= \dfrac{1}{2m} \left( \op{p}_x^2 + (qB \op{x} - \hbar k_y)^2 \right)e^{ik_y y} \psi(x) \nonumber \\
-  \ham & = \dfrac{1}{2m} \left( \op{p}_x^2 + q^2 B^2 \op{x}^2 \right) \nonumber \\
-  &= \dfrac{\op{p}_x^2}{2m} + \dfrac{1}{2} m \omega^2 \op{x}^2,
+  \ham & = \dfrac{1}{2m} \left( \op{p}_x^2 + q^2 B^2 \op{x}^2 \right)
 \end{align}
 where we let $x - \tfrac{\hbar k_y}{mqB} \rightarrow x$, since it is just a shift in $x$ coordinates.
 Notice that we arrive at the expression for a quantum harmonic oscillator.
@@ -39,7 +40,7 @@ A derivation for the energy solutions can be found in \ref{appendix:qho}.
 With the energy solutions
 
 \begin{equation}
-  E_n = \hbar \omega \left(n + \dfrac{1}{2} \right) = \dfrac{\hbar q B}{m} \left(n+\dfrac{1}{2}\ \right).
+  E_n = \dfrac{\hbar q B}{m} \left(n+\dfrac{1}{2}\ \right) = \hbar \omega \left(n + \dfrac{1}{2} \right)
 \end{equation}
 
 An alteration to the lattice model can have slightly different results.
@@ -79,27 +80,37 @@ Going back to the Hamiltonian and expanding about $\vec{K}$ with small $\vec{q}$
 
 \begin{align}
   t(\vec{q}) &= -t e^{i\sqrt{3} q_x a / 2} e^{i\sqrt{3} K a / 2} \left( 2\cos{\left( \dfrac{\sqrt{3} q_x a }{2}  + \dfrac{\sqrt{3} K a}{2} \right)} + e^{i 3 p_y a /2 } \right) \nonumber \\
-  t(\vec{q}) &= -t e^{i\sqrt{3} q_x a / 2} e^{i 2\pi/3} \left( 2\cos{\left( \dfrac{\sqrt{3} q_x a }{2}  + \dfrac{2\pi}{3} \right)} + e^{i 3 p_y a /2 } \right) \nonumber \\
-  t(\vec{q}) &= -t e^{i\sqrt{3} q_x a / 2} e^{i 2\pi/3} \left( -\cos{\left( \dfrac{\sqrt{3} q_x a }{2}\right)} - \sqrt{3}\sin{\left( \dfrac{\sqrt{3}q_x a}{3} \right)} + e^{i 3 p_y a /2 } \right) \nonumber \\
-  t(\vec{q}) &\approx t e^{i 2\pi/3} \left(\dfrac{3q_x a}{2} - \dfrac{i3q_y a}{2} \right) \nonumber \\
-  t(\vec{q}) &= v_f e^{i 2\pi/3} \left(q_x - iq_y \right), \nonumber \\
-  t^*(\vec{q}) &= v_f e^{-i 2\pi/3} \left(q_x + iq_y \right), \nonumber
+  %t(\vec{q}) &= -t e^{i\sqrt{3} q_x a / 2} e^{i 2\pi/3} \left( 2\cos{\left( \dfrac{\sqrt{3} q_x a }{2}  + \dfrac{2\pi}{3} \right)} + e^{i 3 p_y a /2 } \right) \nonumber \\
+  %t(\vec{q}) &= -t e^{i\sqrt{3} q_x a / 2} e^{i 2\pi/3} \left( -\cos{\left( \dfrac{\sqrt{3} q_x a }{2}\right)} - \sqrt{3}\sin{\left( \dfrac{\sqrt{3}q_x a}{3} \right)} + e^{i 3 p_y a /2 } \right) \nonumber \\
+  %t(\vec{q}) &\approx t e^{i 2\pi/3} \left(\dfrac{3q_x a}{2} - \dfrac{i3q_y a}{2} \right) \nonumber \\
 \end{align}
-where we keep the leading order in $\vec{q}$ and $v_f = \tfrac{3ta}{2}$.
+and in the small momenta $q$ limit
+\begin{align}
+  t(\vec{q}) &\approx v_F e^{i 2\pi/3} \left(q_x - iq_y \right), \nonumber \\
+  t^*(\vec{q}) &\approx v_F e^{-i 2\pi/3} \left(q_x + iq_y \right), \nonumber
+\end{align}
+where we keep the leading order in $\vec{q}$ and $v_F = \tfrac{3ta}{2}$.
 Using a gauge transformation and redefining $\vec{q} \rightarrow \vec{p}$ we arrive at the Dirac equation
 
 \begin{equation}
-  \ham(\vec{p}) = v_f \bm{\sigma}\cdot \vec{p}.
+  \ham(\vec{p}) = v_F \bm{\sigma}\cdot \vec{p}.
 \end{equation}
 With graphene spanning the $x$-$y$ plane in the presence of a magnetic field $\vec{B} = B\hat{z}$, $\vec{A} =  Bx\hat{y}$, the Dirac equation becomes
 
 \begin{equation}
-  \ham(\vec{p}) = v_f \bm{\sigma}\cdot \left(\vec{p - q\vec{A}} \right).
+  \ham(\vec{p}) = v_F \bm{\sigma}\cdot \left(\vec{p} - q\vec{A} \right).
 \end{equation}
 A derivation for the energy solution can be found in \ref{appendix:dirac}.
 The quantized energy solutions for a 2D Dirac equation in the presence of perpendicular magnetic field is
 
 \begin{equation}
-  E_n = v_f \sqrt{2 \hbar qB n}
+  E_n = v_F \sqrt{2 n \hbar qB }
 \end{equation}
+
+We see the energy of both systems produce discrete quantized energies for charged particles in cyclotron orbits with no depenedence on momenta, these are Landau levels.
+It is also important to note these Landau levels are highly degenerate flat bands, which will lend to the discussion of bulk insulating states.
+
+\subsection{Laughlin pump}
+
+\subsection{Chern number}
 

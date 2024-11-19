@@ -374,6 +374,12 @@ Jian Li, Titus Neupert, B.~Andrei Bernevig, and Ali Yazdani.
   magnetic field.
 \newblock {\em Nat Commun}, 7(1):10395, January 2016.
 
+\bibitem{pahomiBraidingMajoranaCorner2020}
+Tudor~E. Pahomi, Manfred Sigrist, and Alexey~A. Soluyanov.
+\newblock Braiding {{Majorana}} corner modes in a second-order topological
+  superconductor.
+\newblock {\em Phys. Rev. Res.}, 2(3):032068, September 2020.
+
 \bibitem{pietzschSpinResolvedElectronicStructure2006}
 O.~Pietzsch, S.~Okatov, A.~Kubetzka, M.~Bode, S.~Heinze, A.~Lichtenstein, and
   R.~Wiesendanger.
@@ -399,12 +405,6 @@ Jian Li, Hua Chen, Ilya~K. Drozdov, A.~Yazdani, B.~Andrei Bernevig, and A.~H.
   MacDonald.
 \newblock Topological superconductivity induced by ferromagnetic metal chains.
 \newblock {\em Phys. Rev. B}, 90(23):235433, December 2014.
-
-\bibitem{pahomiBraidingMajoranaCorner2020}
-Tudor~E. Pahomi, Manfred Sigrist, and Alexey~A. Soluyanov.
-\newblock Braiding {{Majorana}} corner modes in a second-order topological
-  superconductor.
-\newblock {\em Phys. Rev. Res.}, 2(3):032068, September 2020.
 
 \bibitem{mishmashDephasingLeakageDynamics2020}
 Ryan~V. Mishmash, Bela Bauer, Felix {von Oppen}, and Jason Alicea.

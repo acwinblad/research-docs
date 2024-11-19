@@ -1,5 +1,9 @@
-\section{Maxwell's equations}
-Let us start with Maxwell's equations, given as
+\section{Maxwell's equations and gauge transformations}
+The electric and magnetic fields, $\vec{E}$ and $\vec{B}$, respectively, are physical observables.
+While differing potential fields, $V$ and $\vec{A}$, are not directly observable they still give the same electric and magnetic fields.
+A guage potential and its transformation are not physical and are reflected under gauge invariance.
+We want to introduce a gauge potential into a condensed matter system to manipualte it.
+To do so, we start with Maxwell's equations and aim to rewrite them in terms of potential fields.
 
 \begin{align}
   \nabla \cdot \vec{E} &= \dfrac{1}{\epsilon_0}\rho, \label{eq:maxwell1} \\
@@ -19,28 +23,23 @@ The remaining Maxwell's equation then become
   -\mu_0 \vec{J} &= \nabla^2 \vec{A} - \mu_0 \epsilon_0 \partial_t^2 \vec{A} - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \partial_t V \right). \label{eq:current-as-potential}
 \end{align}
 
-\section{Gauge transformations}
-We now move on to gauge transformations.
+Next, we move on to gauge transformations.
 Suppose $\vec{A}' = \vec{A}+\bm{\alpha}$ and $V' = V+\beta$.
 Both vector potentials give the same magnetic field,
 
-\begin{align}
-  \vec{B} = \nabla \cross \vec{A} = \nabla \cross \vec{A}' &= \nabla \cross (\vec{A} + \bm{\alpha}), \nonumber \\
-  \bm{\alpha} &= \nabla \lambda.
-\end{align}
+\begin{equation*}
+  \vec{B} = \nabla \cross \vec{A} = \nabla \cross \vec{A}' &= \nabla \cross (\vec{A} + \bm{\alpha}),
+\end{equation*}
+which leads to $\bm{\alpha} &= \nabla \lambda$.
 The two potentials should also give the same electric field,
 
+\begin{equation*}
+  \vec{E} &= -\nabla V - \partial_t \vec{A} = -\nabla V' - \partial_t \vec{A}',
+\end{equation*}
+then $\beta = -\partial_t \lambda + k(t)$ and
 \begin{align}
-  \vec{E} &= -\nabla V - \partial_t \vec{A} = -\nabla V' - \partial_t \vec{A}' \nonumber \\
-  \vec{E} &= -\nabla V - \nabla \beta - \partial_t \vec{A} - \partial_t \nabla \lambda \nonumber \\
-  %\text{then} \quad 0 &= \nabla \beta + \partial_t \bm{\alpha}\\
-  %&= \nabla \beta + \partial_t \nabla\lambda \nonumber \\
-  %&= \nabla ( \beta + \partial_t \lambda ) \nonumber \\
-  %\beta &= -\partial_t \lambda + k(t) \nonumber \\
-  %\beta &= -\partial_t \tilde{\lambda} \nonumber \\
-  \text{then} \quad \beta &= -\partial_t \tilde{\lambda} = -\partial_t \lambda + k(t) \nonumber \\
   \vec{A}' &= \vec{A} + \nabla \lambda \\
-  V' &= V - \partial_t \tilde{\lambda}
+  V' &= V - \partial_t \lambda + k (t)
 \end{align}
 From the above set of expressions we arrive at the general gauge transformations of potentials.
 We make note that a change in $V$ and $\vec{A}$ does not change the electric and magnetic fields, i.e.\ gauge invariant, and are tuned to adjust the divergence of $\vec{A}$.

@@ -1,33 +1,45 @@
 \section{Peierls phase in tight-binding models}
-We next show how to incorporate a vector potential field into a tight-binding Hamiltonian.
-There are a few ways to derive a Peierls phase and we will use the differential geometry approach.
+When working with condensed matter systems we either work with free particles using Schrodinger's or Dirac's equation, most often, or tight-binding models describing how particles ``hop'' from one lattice to the next.
+There is typically no momentum term to use minimal coupling to introduce the gauge potential, but we can find a basis transformation that is equivalent.
+There are a few different names this can go by, Aharonov-Bohm effect, Berry phase, geometric phase, or Peierls phase.
+There are a few ways to derive Peierls phase and we will use the differential geometry approach.
 Before we showed minimal coupling and now we would like to express it in terms of a covariant derivative
 
 \begin{equation}
   D_{\mu} = \partial_{\mu} - i A_{\mu}.
 \end{equation}
-Let us now envision how a wavefunction will evolve in the presence of a vector potential field.
+Let us now envision how a wavefunction will evolve in the presence of a gauge potential field.
 Using the covariant derivative with the parallel transport along curves we can obtain an expression for the phase accumulation on the wave function.
-The covariant derivative should vanish if it is parallel transported along the curve $\mathcal{C}$ defined by points $x$ and $x' = x + v t$.
+The covariant derivative should vanish if it has parallel transported along the curve $\mathcal{C}$ defined by points $x$ and $x' = x + v t$.
 The expression is as follows
+$\nabla_{v} s \rightarrow & t v^{\mu} D_{\mu} s_{x(t)} = 0$.
+This turns out to be a first order ordinary differential equation
+\begin{equation}
+  \dot{s}_{x(t)} - i \dot{x}^{\mu}(t) A_{x(t),\mu} s_{x(t)} = 0 \nonumber \\
+\end{equation}
+with the following solution
 
-\begin{align}
-  \nabla_{v} s = 0 \rightarrow & t v^{\mu} D_{\mu} s_{x(t)} = 0 \\
-  &= t \dot{x}^{\mu}(t) (\partial_{\mu} - i A_u) s_{x(t)} \nonumber \\
-  &= t \dfrac{\partial {x}^{\mu}}{\partial t} \dfrac{\partial}{\partial x_{\mu}} s_{x(t)} - it\dot{x}^{\mu}(t) A_{x(t),\mu} s_{x(t)} \nonumber \\
-  \rightarrow & \dot{s}_{x(t)} - i \dot{x}^{\mu}(t) A_{x(t),\mu} s_{x(t)} = 0 \nonumber \\
-  %&= \partial_t \left( \exp\left[-i\int^t_0 \dot{x}^{\mu} A_{x(t'),\mu} dt' \right] s_{x(t)} \right) = 0 \nonumber \\
-  \rightarrow & s_{x(t)} = s_{x(0)} \exp \left[ i\int^t_0 \dot{x}^{\mu} A_{x(t'),\mu} dt' \right] \nonumber \\
-  & s_{x(t)} = s_{x(0)} \exp \left[ i\int_{\mathcal{C}} dx^{\mu} A_{x(t'),\mu} \right] \nonumber
-\end{align}
-and in general we can rewrite to the following expression $\psi(t) = \psi(0) \exp \left[ \tfrac{iq}{\hbar} \int_{\mathcal{C}} \vec{A}(\vec{r})\cdot d\vec{l} \right]$  ~\cite{altlandCondensedMatterField2023}.
+\begin{equation}
+  s_{x(t)} = s_{x(0)} \exp \left[ i\int_{\mathcal{C}} dx^{\mu} A_{x(t'),\mu} \right]
+\end{equation}
+and in general we can rewrite it as the following expression $\psi(t) = \psi(0) \exp \left[ \tfrac{iq}{\hbar} \int_{\mathcal{C}} \vec{A}(\vec{r})\cdot d\vec{l} \right]$  ~\cite{altlandCondensedMatterField2023}.
+
+%\begin{align}
+%  \nabla_{v} s = 0 \rightarrow & t v^{\mu} D_{\mu} s_{x(t)} = 0 \\
+%  &= t \dot{x}^{\mu}(t) (\partial_{\mu} - i A_u) s_{x(t)} \nonumber \\
+%  &= t \dfrac{\partial {x}^{\mu}}{\partial t} \dfrac{\partial}{\partial x_{\mu}} s_{x(t)} - it\dot{x}^{\mu}(t) A_{x(t),\mu} s_{x(t)} \nonumber \\
+%  \rightarrow & \dot{s}_{x(t)} - i \dot{x}^{\mu}(t) A_{x(t),\mu} s_{x(t)} = 0 \nonumber \\
+%  %&= \partial_t \left( \exp\left[-i\int^t_0 \dot{x}^{\mu} A_{x(t'),\mu} dt' \right] s_{x(t)} \right) = 0 \nonumber \\
+%  \rightarrow & s_{x(t)} = s_{x(0)} \exp \left[ i\int^t_0 \dot{x}^{\mu} A_{x(t'),\mu} dt' \right] \nonumber \\
+%  & s_{x(t)} = s_{x(0)} \exp \left[ i\int_{\mathcal{C}} dx^{\mu} A_{x(t'),\mu} \right] \nonumber
+%\end{align}
 
 Given the following tight-binding Hamiltonian
 
 \begin{equation}
   \ham_t = -t \sum_{\langle j, l \rangle} \cc_j c_{l} + h.c.,
 \end{equation}
-we can apply a vector potential to a system making the following Peierls phase transform, a unitary transform, to its creation/annihilation operators
+we can apply a gauge potential to a system making the following Peierls phase transform, a unitary transform, to its creation/annihilation operators
 
 \begin{align}
   c_j \rightarrow c_j \exp \left[{\frac{iq}{\hbar} \int^{\vec{r}_j} \vec{A}\cdot d\vec{l}} \right] \nonumber \\
