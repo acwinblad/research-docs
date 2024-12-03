@@ -1,0 +1,52 @@
+\subsection{Non-uniform circularly polarized light on Dirac}
+We start with the Dirac equation in 2D with a gauge potential
+
+\begin{equation}
+  \ham(t) = v_{F} \bm{\sigma} \cdot \left(\vec{p}+e\vec{A}(t)\right)
+\end{equation}
+
+where $\vec{A}(t) = \tfrac{E}{\omega} \langle -\sin{\omega t}, \tfrac{1}{2} \cos{(Kx)} \cos{(2\omega t)}$.
+Which is made up of two electromagnetic wave sources.
+The time dependent Hamiltonian becomes
+
+\begin{equation}
+  \ham(t) = v_{F} \left( \sigma_x \left(p_x - \dfrac{f}{\omega} \sin{\omega t} \right) + \sigma_y \left(p_y + \dfrac{f}{2\omega} \cos{(Kx)} \cos{(2\omega t)} \right) \right),
+\end{equation}
+where $f = eE$.
+Performing the Fourier time-transform from
+
+\begin{equation}
+  H_n = \dfrac{1}{T} \int_{0}^{T} \ham(t) e^{-in\omega t} dt
+\end{equation}
+gives the following terms
+
+\begin{align}
+  H_0 &= v_{F} \bm{\sigma}\cdot \vec{p} \\
+  H_{\pm1} &= \pm \sigma_x \dfrac{i v_{F} f}{2\omega} \\
+  H_{\pm2} &= \sigma_y \dfrac{v_{F} f}{4\omega} \cos{(Kx)}.
+\end{align}
+
+We compute the following Hermitian commutators for the high-frequency expansion
+
+\begin{align}
+  &[H_{1}, H_{-1}] \\
+  &[H_{2}, H_{-2}] \\
+  &[H_{-1}, [H_{0}, H_{1}]] \\
+  &[H_{-2}, [H_{0}, H_{2}]] \\
+  &[H_{1}, [H_{-2}, H_{1}]] \\
+  &[H_{-1}, [H_{-1}, H_{2}]].
+\end{align}
+We find each term to be
+
+\begin{equation}
+  [H_{1}, H_{-1}] = [H_{2}, H_{-2}] = 0
+\end{equation}
+
+\begin{align}
+  [H_{0}, H_{\pm1}] &= \pm \sigma_z \dfrac{v_{F}^{2} f}{\omega} p_y \nonumber \\
+  [H_{1}, [H_{0}, H_{-1}]] &= - \sigma_y \dfrac{v_{F}^3 f^2}{\omega^2} p_y \\
+  [H_{0}, H_{\pm2}] &= \pm i \sigma_z \dfrac{v_{F}^{2} f}{4\omega} \left(p_x \cos{(Kx)} + \cos{(Kx)} p_x \right) \nonumber \\
+  [H_{2}, [H_{0}, H_{-2}]] &= - \sigma_y \dfrac{v_{F}^3 f^2}{2 \omega^2} \left( p_x \cos^2{(Kx)} + \cos^2{(Kx)} p_x \right) \\
+  [H_{\pm1}, H_{2}] &= \mp \sigma_z \left(\dfrac{v_{F} f}{2\omega} \right)^{2} \cos{(Kx)} \nonumber \\
+  [H_{1}, [H_{-2},H_{-1}]] &=
+\end{align}
