@@ -1,4 +1,4 @@
-\section{Floquet LLs in Dirac systems}
+\section{Floquet Landau level-like bands in Dirac systems}
 In this section we demonstrate a Dirac system in the presence of a standing non-uniform circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field that is composed of the electric field component of light.
 Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb monolayer in the presence of a gauge potential as
 
@@ -14,21 +14,21 @@ The electric field components are
 
 \begin{align} \label{eq:EDfield}
 \vec{E}_{1} &= E\cos \omega t\ \hat{x}, \nonumber \\
-\vec{E}_{2} &= E\cos(Kx)\sin 2\omega t\ \hat{y},
+\vec{E}_{2} &= E\sin(Kx)\sin 2\omega t\ \hat{y},
 \end{align}
 The $\omega $ is frequency of light with time $t$, $K=2\pi /d$ with $d$ being the spatial period of the electric field with amplitude $E$.
 Notice, the second light has twice frequency of the first, this is a requirement to make the Dirac Hamiltonian into a Landau level-like Hamiltonian, the derivation in REFERENCE APPENDIX can inform the reader of this choice.
 This form of the electric field relates to the following gauge potential field, via $\vec{E} = -\partial_t \vec{A}$ as
 
 \begin{equation}\label{eq:ADirac}
-  \vec{A}(t)= \dfrac{E}{\omega} \left\langle -\sin \omega t, \tfrac{1}{2}\cos(Kx) \cos 2\omega t \right\rangle,
+  \vec{A}(t)= \dfrac{E}{\omega} \left\langle -\sin \omega t, \tfrac{1}{2}\sin(Kx) \cos 2\omega t \right\rangle,
 \end{equation}%
 Substituting Eq.~\eqref{eq:ADirac} into Eq.~\eqref{eq:HDirac}, we arrive at%
 
 \begin{equation}\label{eq:HDtime}
-  \ham(t)=\ham_{0} - \sigma _{x} \dfrac{v_F V}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F V}{2\omega}\cos{(Kx)} \cos2\omega t,
+  \ham(t)=\ham_{0} - \sigma _{x} \dfrac{v_F eE}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F eE}{2\omega}\sin{(Kx)} \cos2\omega t,
 \end{equation}%
-where $\ham_0 = v_{F}\bm{\sigma}\cdot\vec{p}$ and $V = eE$.
+where $\ham_0 = v_{F}\bm{\sigma}\cdot\vec{p}$.
 Due to the laser light's time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:HDtime}.
 This introduces the quasienergy matrix $Q_{m,m+n} = H_n + m\hbar\omega\delta_{n0}$ after performing the Fourier time-transform of the Hamiltonian, given as
 
@@ -37,21 +37,22 @@ This introduces the quasienergy matrix $Q_{m,m+n} = H_n + m\hbar\omega\delta_{n0
 \end{equation}
 then we are left with modes $m=0,\pm1,\pm2$.
 To use the high-frequency approximation we require $\hbar\omega \gg H_{\pm1,\pm2}$, the off-diagonal terms.
-After applying the high-frequency approximation to first and second order expansion in $\hbar\omega$ terms, this leads to the zeroth-mode effective Hamiltonian in Eq.~\eqref{eq:HDtime} as
+After applying the high-frequency approximation to first and second order expansion in $\hbar\omega$, it leads to the zeroth-mode effective Hamiltonian in Eq.~\eqref{eq:HDtime} as
 
 \begin{equation} \label{eq:HDeff}
-  H_{\text{eff}}= H_{0}-\sigma_y\frac{v_F^3 V^2 p_y}{\hbar^{2}\omega^{4}}
-  +\sigma_y\frac{v_F^3 V^{3}\sin{(Kx)}}{2\hbar^{2}\omega^{5}}
-  -\sigma_x\frac{v_F^3 V^2 \left\{p_x, \cos{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
+  H_{\text{eff}}= H_{0}-\sigma_y\frac{v_F^3 e^2 E^2 p_y}{\hbar^{2}\omega^{4}}
+  +\sigma_y\frac{v_F^3 e^3 E^{3}\sin{(Kx)}}{2\hbar^{2}\omega^{5}}
+  -\sigma_x\frac{v_F^3 e^2 E^2 \left\{p_x, \sin^2{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
 \end{equation}
-In Eq. ~\eqref{eq:HDeff}, first order term in $\hbar \omega$ that leads to gap at the Dirac point in usual circularly polarized light experiments \cite{YHW, JWM} is zero here due to inhomogeneous nature of laser lights.
+The derivation can be found in the Appendix \ref{fll-dirac-derivation}.
+In Eq. ~\eqref{eq:HDeff}, the first order term in $\hbar \omega$ leads to gap at the Dirac point in normally incident circularly polarized light experiments \cite{YHW, JWM} and is zero here due to the non-uniformity nature of incident laser lights.
 This effective Hamiltonian can be simplified in the long wavelength limit, $Kx \ll 1$ to
 
 \begin{align} \label{eq:HeffB}
-  %\ham_{\text{eff}} &= v_F \sigma_x p_x + v_F \sigma_y \left[ \left( 1- \dfrac{v_F^2V^2}{\hbar^2\omega^4} \right) p_y + \dfrac{K v_F^2 V^3}{4 \hbar^2 \omega^5} x \right] \nonumber \\
+  %\ham_{\text{eff}} &= v_F \sigma_x p_x + v_F \sigma_y \left[ \left( 1- \dfrac{v_F^2e^2E^2}{\hbar^2\omega^4} \right) p_y + \dfrac{K v_F^2 e^3 E^3}{4 \hbar^2 \omega^5} x \right] \nonumber \\
   \ham_{\text{eff}}^D &= v_{F}\sigma_{x}p_{x}+v_F\sigma_{y} \left( C p_{y} + qB^Dx \right),
 \end{align}%
-where $C = 1-\left(\tfrac{v_{F}V}{\hbar\omega^2}\right)^2$ and $B^D=\frac{Kv_F^2 e^2E^3}{4\hbar^{2}\omega^{5}}$.
+where $C = 1-\left(\tfrac{v_{F}eE}{\hbar\omega^2}\right)^2$ and $B^D=\frac{Kv_F^2 e^2E^3}{4\hbar^{2}\omega^{5}}$.
 In accordance with Eqs.~\eqref{eq:HDeff} and ~\eqref{eq:HeffB}, there is least anisotropy in the Dirac spectrum in addition to zero gap.
 Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffB}, we obtained the eigenvalues for Dirac system as%
 
@@ -60,8 +61,9 @@ Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffB}, we obtained the eigenvalu
 \end{equation}
 which is similar to graphene LLs spectrum in the limit of equal velocities.
 
+\Blue{This next paragraph should be in the discussion since it uses similar language and results as 2DEG?}
 It is important to note, that this system experiences QHE for values of $C\neq0$ and can flip chirality when $C$ changes sign, more details in REFERENCE APPENDIX.
-We can have gapped Dirac spectrum and AQHE by using uniform circularly polarized laser light as observed in experiments \cite{YHW, JWM} or by using any substrate like hBN.
+We can have gapped Dirac spectrum and QAHE by using uniform circularly polarized laser light as observed in experiments \cite{YHW, JWM} or by using any substrate like hBN.
 Now, we have shown one can achieve a highly degenerate Landau level-like spectrum and QHE with an effective magnetic field strength which is directly proportional to third order of the electric field and inversely proportional to the product of spatial period and fifth order of the frequency of the polarized light $\propto (E^3/(d\omega^5))$.
 This factor of the laser lights can be tuned and thus effective magnetic field can be enhanced in such nonequilibrium systems.
 In the case of uniform circularly polarized light, one can imagine the Coulomb force makes the charged particles move in a cyclotron orbit.

@@ -1,18 +1,17 @@
-\subsection{Non-uniform circularly polarized light on Dirac}
+\subsection{Non-uniform circularly polarized light on Dirac} \label{fll-dirac-derivation}
 We start with the Dirac equation in 2D with a gauge potential
 
 \begin{equation}
   \ham(t) = v_{F} \bm{\sigma} \cdot \left(\vec{p}+e\vec{A}(t)\right)
 \end{equation}
 
-where $\vec{A}(t) = \tfrac{E}{\omega} \langle -\sin{\omega t}, \tfrac{1}{2} \cos{(Kx)} \cos{(2\omega t)}$.
+where $\vec{A}(t) = \tfrac{E}{\omega} \langle -\sin{\omega t}, \tfrac{1}{2} \sin{(Kx)} \cos{(2\omega t)}$.
 Which is made up of two electromagnetic wave sources.
 The time dependent Hamiltonian becomes
 
 \begin{equation}
-  \ham(t) = v_{F} \left( \sigma_x \left(p_x - \dfrac{f}{\omega} \sin{\omega t} \right) + \sigma_y \left(p_y + \dfrac{f}{2\omega} \cos{(Kx)} \cos{(2\omega t)} \right) \right),
+  \ham(t) = v_{F} \left( \sigma_x \left(p_x - \dfrac{eE}{\omega} \sin{\omega t} \right) + \sigma_y \left(p_y + \dfrac{eE}{2\omega} \sin{(Kx)} \cos{(2\omega t)} \right) \right),
 \end{equation}
-where $f = eE$.
 Performing the Fourier time-transform from
 
 \begin{equation}
@@ -22,8 +21,8 @@ gives the following terms
 
 \begin{align}
   H_0 &= v_{F} \bm{\sigma}\cdot \vec{p} \\
-  H_{\pm1} &= \pm \sigma_x \dfrac{i v_{F} f}{2\omega} \\
-  H_{\pm2} &= \sigma_y \dfrac{v_{F} f}{4\omega} \cos{(Kx)}.
+  H_{\pm1} &= \pm \sigma_x \dfrac{i v_{F} eE}{2\omega} \\
+  H_{\pm2} &= \sigma_y \dfrac{v_{F} eE}{4\omega} \sin{(Kx)}.
 \end{align}
 
 We compute the following Hermitian commutators for the high-frequency expansion
@@ -38,15 +37,28 @@ We compute the following Hermitian commutators for the high-frequency expansion
 \end{align}
 We find each term to be
 
-\begin{equation}
-  [H_{1}, H_{-1}] = [H_{2}, H_{-2}] = 0
-\end{equation}
+\begin{align}
+  [H_{1}, H_{-1}] &= [H_{2}, H_{-2}] = 0 \\
+  H^{F(2)} = 0.
+\end{align}
 
 \begin{align}
-  [H_{0}, H_{\pm1}] &= \pm \sigma_z \dfrac{v_{F}^{2} f}{\omega} p_y \nonumber \\
-  [H_{1}, [H_{0}, H_{-1}]] &= - \sigma_y \dfrac{v_{F}^3 f^2}{\omega^2} p_y \\
-  [H_{0}, H_{\pm2}] &= \pm i \sigma_z \dfrac{v_{F}^{2} f}{4\omega} \left(p_x \cos{(Kx)} + \cos{(Kx)} p_x \right) \nonumber \\
-  [H_{2}, [H_{0}, H_{-2}]] &= - \sigma_y \dfrac{v_{F}^3 f^2}{2 \omega^2} \left( p_x \cos^2{(Kx)} + \cos^2{(Kx)} p_x \right) \\
-  [H_{\pm1}, H_{2}] &= \mp \sigma_z \left(\dfrac{v_{F} f}{2\omega} \right)^{2} \cos{(Kx)} \nonumber \\
-  [H_{1}, [H_{-2},H_{-1}]] &=
+  [H_{0}, H_{\pm1}] &= \pm \sigma_z \dfrac{v_{F}^{2} eE}{\omega} p_y \nonumber \\
+  [H_{1}, [H_{0}, H_{-1}]] &= - \sigma_y \dfrac{v_{F}^3 e^2 E^2}{\omega^2} p_y \\
+  [H_{0}, H_{\pm2}] &= \pm i \sigma_z \dfrac{v_{F}^{2} eE}{4\omega} \left(p_x \sin{(Kx)} + \sin{(Kx)} p_x \right) \nonumber \\
+  [H_{2}, [H_{0}, H_{-2}]] &= - \sigma_x \dfrac{v_{F}^3 e^2 E^2}{2 \omega^2} \left( p_x \sin^2{(Kx)} + \sin^2{(Kx)} p_x \right) \\
+  [H_{\pm1}, H_{2}] &= \mp \sigma_z \left(\dfrac{v_{F} eE}{2\omega} \right)^{2} \sin{(Kx)} \nonumber \\
+  [H_{1}, [H_{-2},H_{-1}]] &= - \sigma_y \dfrac{v_{F}^{3} e^3 E^3}{4\omega^3} \sin{(Kx)} \\
+  [H_{-1},[H_{-1},H_{2}]] &=  \sigma_y \dfrac{v_{F}^3 e^3 E^3}{4\omega^3} \sin{(Kx)}
 \end{align}
+Piecing each term together
+
+\begin{align}
+  H^{F(3)} &= \dfrac{[H_{1}, [H_{0}, H_{-1}]]}{2\hbar^2\omega^2} + \dfrac{[H_{-2}, [H_{0}, H_{2}]]}{8\hbar^2\omega^2} - \dfrac{[H_{1}, [H_{-2}, H_{1}]]}{3\hbar^2\omega^2} + \dfrac{[H_{-1}, [H_{-1}, H_{2}]]}{6\hbar^2\omega^2} + h.c. \nonumber \\
+  &= -\sigma_y \dfrac{v_{F}^3 e^2 E^2}{\hbar^2 \omega^4} p_y - \sigma_x \dfrac{ v_{F}^3 e^2 E^2}{8\hbar^2\omega^4} \left\{p_x, \sin^2{(Kx)}\right\} + \sigma_y \dfrac{v_{F}^3 e^3 E^3}{4\hbar^2\omega^5} \sin{(Kx)}.
+\end{align}
+The full Hamiltonian to second order in $\hbar\omega$ becomes
+
+\begin{equation}
+  H_{\text{eff}} = v_{F} \bm{\sigma} \cdot \vec{p} -\sigma_y \dfrac{v_{F}^3 e^2 E^2}{\hbar^2 \omega^4} p_y - \sigma_x \dfrac{ v_{F}^3 e^2 E^2}{8\hbar^2\omega^4} \left\{p_x, \sin^2{(Kx)}\right\} + \sigma_y \dfrac{v_{F}^3 e^3 E^3}{4\hbar^2\omega^5} \sin{(Kx)}.
+\end{equation}

@@ -1,113 +1,56 @@
-\section{Floquet LLs in 2DEG}
-We consider the case of Schr\"{o}dinger electrons under the application of two linearly polarized laser lights. The unperturbed Hamiltonian for 2DEG is%
-\begin{equation}\label{eq:H2DEG}
-\ham =\frac{p_{x}^{2}}{2m}+\frac{p_{y}^{2}}{2m},
+\section{Floquet Landau level-like bands in 2DEG systems}
+In this section show a 2DEG system with a non-uniform circularly polarized light becomes an effective 2DEG Hamiltonian with a magnetic field that is composed of the electric field component of light.
+We consider the case of Schrodinger charged particles in the presence of a gauge potential as
+\begin{equation}\label{eq:H2deg}
+  \ham(t) = \dfrac{1}{2m^*} \left( \vec{p} + e \vec{A}(t)\right)
 \end{equation}
-where $m^{\ast}$ is the effective mass of electron. By changing the Hamiltonian into a time-dependent form by applying two linearly polarized lights
-such that $\vec{p}\rightarrow \vec{p}+e\vec{A}(t)$. \ Therefore, Eq.~\eqref{eq:H2DEG} is written as%
-\begin{equation}\label{eq:H2time}
-\ham(t)=\frac{1}{2m}[p_{x}+eA_{x}(t)]^{2}+\frac{1}{2m}[p_{y} +eA_{y}(t)]^{2},
-\end{equation}
-where the electric field components for two spatially inhomogeneous linearly polarized laser lights are
+where $m^*$ is the effective charge mass.
+As before, the light is made of two linearly polarized laser lights.
+Where the first is normally incident in the $z$-axis with polarization in the $x$-axis.
+The second is of oblique incidence in the $xz$-plane, to acquire non-uniformity in the $x$-axis, with polarization in the $y$-axis.
+This is to introduce $x$-dependence with the $p_y$ term of the Schrodinger Hamiltonian.
+The electric field components are
 \begin{align} \label{eq:E2field}
   \vec{E}_{1} &= E \cos{\omega t}\ \hat{x}, \nonumber \\
   \vec{E}_{2} &= -E\cos{(K x)} \sin{\omega t}\ \hat{y}.
 \end{align}%
-The field given in Eq.~\eqref{eq:E2field} lead to the following vector potential $\vec{A}(t)$
+In this case both lights have the same frequency of light, this is a requirement to make the 2DEG Hamiltonian into a Landau level-like Hamiltonian.
+This form of the electric field relates to the following gauge potential, via $\vec{E} = -\partial_t \vec{A}$ as
+
 \begin{equation}\label{eq:A2deg}
   \vec{A}(t)= \dfrac{E}{\omega} \left\langle -\sin \omega t, \cos{(Kx)} \cos{\omega t} \right\rangle.
 \end{equation}%
-Substituting into the Schrodinger Hamiltonian we arrive at
+Substituting Eq. \eqref{eq:A2deg} into Eq. \eqref{eq:H2deg}, we arrive at
 
 \begin{align}\label{eq:H2time}
-  \ham(t) = \dfrac{1}{2m} \Bigl[ &p_x^2 + p_y^2 + \dfrac{V^2}{2\omega^2}(1-\cos{2\omega t}) + \dfrac{V^2}{2\omega^2}(1+\cos{2\omega t}) \cos^2{(Kx)} \nonumber \\
-  &+\dfrac{2V}{\omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right) \Bigr]
+  \ham(t) = \dfrac{1}{2m^*} \Bigl[ &p_x^2 + p_y^2 + \dfrac{e^2 E^2}{2\omega^2}(1-\cos{2\omega t}) + \dfrac{e^2 E^2}{2\omega^2}(1+\cos{2\omega t}) \cos^2{(Kx)} \nonumber \\
+  &+\dfrac{2eE}{\omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right) \Bigr].
 \end{align}
-where $V=eE$.
-Because of the time-translation symmetry through $A(t+T) = A(t)$ with $T = 2\pi/\omega$, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:H2time}. After performing the Fourier transform of the time-periodicity, first order expansion in $\hbar \omega$ terms the effective Hamiltonian becomes
+Again, due to laser light's time-translation symmetry we can apply the Floquet theory, which includes computing the Fourier time-transform using Eq. \eqref{eq:fourier-time-transform}.
+This leaves us with modes $m=0,\pm1,\pm2$.
+In the high-frequency expansion we still require $\hbar \omega \gg H_{\pm1,\pm2}$.
+After applying the high-frequency approximation to first order in $\hbar \omega$, it leads to the zeroth-mode effective Hamiltonian as
 
 \begin{align}\label{eq:H2eff}
-  \ham_{\text{eff}} &= \dfrac{1}{2m} \left[ p_x^2 + p_y^2 + \dfrac{V^2}{\omega^2} - \dfrac{K V^2 p_y \sin{(Kx)}}{m\omega^3} \right] \nonumber \\
-  \ham_{\text{eff}} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K V^2 \sin{(Kx)}}{2m\omega^3} \right)^2  - \dfrac{K^2 V^4 \sin{(Kx)}}{4m^2\omega^6} \right]. \nonumber
+  \ham_{\text{eff}} &= \dfrac{1}{2m^*} \left[ p_x^2 + p_y^2 + \dfrac{e^2 E^2}{\omega^2}\left(1+\cos^2{(Kx)}\right) - \dfrac{2 K e^2 E^2 p_y \sin{(Kx)}}{m^*\omega^3} \right] \nonumber \\
+  \ham_{\text{eff}} &= \dfrac{1}{2m^*} \left[ p_x^2 + \left(p_y - \dfrac{K e^2 E^2 \sin{(Kx)}}{m^*\omega^3} \right)^2 + \dfrac{e^2 E^2 \cos^2{(Kx)}}{\omega^2}  - \dfrac{K^2 e^4 E^4 \sin{(Kx)}}{m^{*2}\omega^6} \right]. \nonumber
 \end{align}
 where we shifted the constant energy out of the effective Hamiltonian and completed the square for the $p_y$ and $x$ terms.
-Here we can see the first order (or is it second order? $H^{F(2)}$?) effects introduce a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
+Here we can see the high-frequency expansion terms $H^{F(1)}$ and $H^{F(2)}$, as shown in \ref{app:quantum-floquet-theory}, introduce a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
 Finally, in the long wavelength, $Kx \ll 1$,
 
 \begin{equation}
-  \ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m} \left[ p_x^2 + \left(p_y - \dfrac{K^2 V^2 }{2m\omega^3}x \right)^2  \right], \nonumber
+  \ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m^*} \left[ p_x^2 + \left(p_y - eB^{\text{2DEG}}x \right)^2  \right], \nonumber
 \end{equation}
-with energies
+with $B^{\text{2DEG}} = \tfrac{K^2 e E^2 }{m^*\omega^3}$.
+Solving for the energy spectrum
 \begin{equation}
-  \epsilon_n^{\text{2DEG}} = \dfrac{\hbar K^2 e^2 E^2}{2m^2\omega^3} \left(n+\tfrac{1}{2}\right)
+  \epsilon_n^{\text{2DEG}} = \dfrac{\hbar K^2 e^2 E^2}{m^{*2}\omega^3} \left(n+\dfrac{1}{2}\right)
   \label{eq:2DEGenergy}
-
 \end{equation}
-which is similar to Schrodinger LLs spectrum.
+which is similar to 2DEG LLs spectrum.
+
+We have shown one can achieve a highly degenerate Landau level-like spectrum and QHE in a 2DEG system with an effective magnetic field proportional to electric field  squared and inverserly proportional to the product of spatial period squared and angular frequency cubed $\propto (E^2/(d^2\omega^3))$.
+These factors of the laser lights can be tuned and be enhanced in such nonequilibrium systems.
 The effective magnetic field strength obtained for 2DEG is proportional to $ B \propto E^2/d^2\omega^3$.
 This allows for additional tunability of an effective magnetic field in nonequilibrium systems.
-
-%\subsection{2DEG numerical approach}
-%
-%We now consider a 2D square lattice tight-binding model.
-%The incident laser light doesn't allow for translation symmetry along the x-axisin which we will only consider a finite radius along the x-axis and treat the y-axis as infinite.
-%Our unit cell will still only contain one atom per cell, this will not be the case for Dirac.
-%Lattice vectors are described as follows $\vec{a}_1 = a\hat{x}$, and $\vec{a}_2 = a \hat{y}$.
-%We will use a Peierls phase to introduce the vector potential field to the tight-binding Hamiltonian.
-%In general, the Hamiltonian has the following form:
-%\begin{equation}
-%  \ham(t) = -\sum_{jl} h_{j,j+1}(t) \cc_{j,l} c_{j+1,l} + h_{l,l+1} \cc_{j,l} c_{j,l+1} + h.c.
-%\end{equation}
-%where $h$, hopping amplitude, takes the following phase contributions
-%
-%\begin{align}
-%  h_{j,j+1}(t) &= \exp \left[ i \dfrac{qE}{\hbar \omega}(x_{j+1}-x_j) \sin(K\bar{x}_{j,j+1}) \sin{\omega t} \right] \nonumber \\
-%  h_{j,j+1}(t) &= \exp \left[ i Z_1 \sin{\omega t} \right] \\
-%  h_{j+1,j}(t) &= \exp \left[ -i Z_1 \sin{\omega t} \right] \\
-%h_{l,l+1}(t) &= \exp \left[ i \dfrac{qE}{\hbar \omega} (y_{l+1}-y_l) \sin(Kx_j) \cos\omega t \right] \nonumber \\
-%  h_{l,l+1}(t) &= \exp \left[ i Z_2 \cos\omega t \right] \\
-%  h_{l+1,l}(t) &= \exp \left[ -i Z_2 \cos\omega t \right]
-%\end{align}
-%where $Z = qEa/\hbar \omega$, $Z_1 = Z\sin(K\bar{x}_{j,j+1})$, $Z_2 = Z\sin(Kx_j)$, and $\bar{x}_{j,j+1} = (x_{j+1}+x_j)/2$.
-%One can fourier transform along the y-axis to momentum space to simplify the system to
-%
-%\begin{align}
-%  \ham(t) &= -\sum  h e^{iZ_1\sin{\omega t}} \cc_{jk} c_{j+1,k} + h e^{ i Z_2 \cos(\omega t) - ika} \cc_{jk} c_{jk} + h.c. \nonumber \\
-%  &= -\sum_{jk} h_{j,j+1}(t) \cc_{jk} c_{j+1,k} + h_{jk}(t) \cc_{jk} c_{jk} + h.c.
-%\end{align}
-%
-%We next impose Floquet theory and take fourier time-domain transforms of the Hamiltonian.
-%Both of the terms take the following form
-%
-%\begin{align}
-%  h_{j,j+1,n} &= \dfrac{1}{T} \int_0^T h_{j,j+1}(t) e^{-in\omega t} dt \nonumber \\
-%  &= \dfrac{h}{T} \int_0^T e^{iZ_1 \sin{\omega t} -in\omega t} dt \nonumber \\
-%  &= \dfrac{h}{2\pi} \int_0^{2\pi} e^{iZ_1 \sin\tau - in\tau} d\tau \nonumber \\
-%  &= h J_n(Z_1) \\
-%  h_{j+1,j,n} &= h (-1)^n J_n(Z_1)
-%\end{align}
-%
-%\begin{align}
-%  h_{jk,n} &= \dfrac{1}{T} \int_0^T h_{jk}(t) e^{-in\omega t} dt \nonumber \\
-%  &= \dfrac{h}{T} e^{-ika} \int_0^T e^{- iZ_2 \cos{(\omega t)} - in\omega t} dt \nonumber \\
-%  &= \dfrac{h}{2\pi} e^{-ika} \int_0^{2\pi} e^{-i Z_2\cos\tau - in\tau} d\tau \nonumber \\
-%  &= \dfrac{h}{2\pi} e^{-in\pi/2-ika} \int_0^{2\pi} e^{-iZ_2 \cos\tau - in\tau + in\pi/2} d\tau \nonumber \\
-%  &= he^{- in\pi/2 -ika} J_{n}(Z_2) \\
-%  h_{jk,n}^* &= he^{+ in\pi/2 +ika} J_{n}(Z_2)
-%\end{align}
-%The Hamiltonian after fourier transform is
-%
-%\begin{equation}
-%  H_n = -h \sum_{jk} J_n(Z_1) \left(\cc_{jk} c_{j+1,k} + (-1)^n \cc_{j+1,k} c_{jk}\right) + 2\cos\left(ka+\tfrac{n\pi}{2}\right) J_n(Z_2) \cc_{jk} c_{jk}
-%\end{equation}
-%
-%We now build the quasienergy matrix $\bar{Q}$ that has matrix elements
-%
-%\begin{equation}
-%  \bar{Q}_{m,m+n} = H_n - m\hbar\omega \delta_{n0}
-%\end{equation}
-%The quasienergy matrix by definition is infinite in Floquet theory and thus not possible to solve at least numerically.
-%However, since we are interested in the behavior at zeroth mode and depending on the stregnth of laser light energy, $\hbar\omega$, we choose a cutoff mode $|m|\leq m_c$, where $m_c$ is a positive integer such that higher modes do not contribute to the zeroth modes behavior.
-%Notice we have two cutoffs, one for x-axis radius and for light modes.
-%This translates to a matrix with dimensions ${(N_r N_m)}^2$, $N_r = (2*r_c+1)$, and $N_m=(2*m_c+1)$.
-%
