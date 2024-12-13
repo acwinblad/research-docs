@@ -110,7 +110,44 @@ The quantized energy solutions for a 2D Dirac equation in the presence of perpen
 We see the energy of both systems produce discrete quantized energies for charged particles in cyclotron orbits with no depenedence on momenta, these are Landau levels.
 It is also important to note these Landau levels are highly degenerate flat bands, which will lend to the discussion of bulk insulating states.
 
-\subsection{Laughlin pump}
+\subsection{Quantized Hall conductivity and Chern number}
 
-\subsection{Chern number}
+Here we will go over the relationship between quantized Hall conductivity and Chern number, which is described as
+
+\begin{equation}
+  \sigma_{xy} = - C\dfrac{e^2}{h}, \quad C \in \mathbb{Z}.
+\end{equation}
+Let us consider a 2D system with translation symmetry in the $x$ and $y$ axis with lattice constants $l_x$ and $l_y$, respectively.
+The Brillouin zone boundaries are
+\begin{equation}
+  k_x = \dfrac{\pi}{l_x} [-1,1) \quad \text{and} \quad k_y = \dfrac{\pi}{l_y} [-1,1),
+\end{equation}
+where we can think of the periodicity in $k_x$ and $k_y$ creating a torus, $\vec{T}$, in 3D space.
+We now introduce the Kubo formula, which is a linear response to a physical observable by a time-dependent perturbation, for conductivity as
+
+\begin{equation} \label{eq:kubo}
+  \sigma_{xy} = i\hbar \sum_{E_a < E_F < E_b} \int_{\vec{T}} \dfrac{d^2k}{(2\pi)^2} \dfrac{\langle u_{\vec{k}}^a | J_y | u_{\vec{k}}^b \rangle \langle u_{\vec{k}}^b | J_x | u_{\vec{k}}^a \rangle - \langle u_{\vec{k}}^a | J_x | u_{\vec{k}}^b \rangle \langle u_{\vec{k}}^b | J_y | u_{\vec{k}}^a \rangle}{{(E_b - E_a)}^2}.
+\end{equation}
+The $a$ and $b$ terms represent dispersion bands below and above the Fermi energy, respectively, and a basic requirement the bands be separated to allow for an insulator.
+Recall, current density can be defined by $\vec{J} = (e/\hbar) \partial_{\vec{k}} H$.
+So long as $H$ is written in a basis that current density is non-zero we can continue.
+Plugging current density in Eq. \eqref{eq:kubo} gives
+
+\begin{equation}
+  \sigma_{xy} = \dfrac{ie^2}{h} \sum_{E_a < E_F < E_b} \int_{\vec{T}} \dfrac{d^2k}{2\pi} \dfrac{\langle u_{\vec{k}}^a | \partial_{k_y} H | u_{\vec{k}}^b \rangle \langle u_{\vec{k}}^b | \partial_{k_x} H | u_{\vec{k}}^a \rangle - \langle u_{\vec{k}}^a | \partial_{k_x} H | u_{\vec{k}}^b \rangle \langle u_{\vec{k}}^b | \partial_{k_y} H | u_{\vec{k}}^a \rangle}{{(E_b - E_a)}^2}.
+\end{equation}
+Using the product rule on the following expression $\langle \alpha | \partial_j (H | \beta\rangle)$ and using $\sum_b = \vec{1} - \sum_a |u_{\vec{k}}^a\rangle \langle u_{\vec{k}}^a |$ lets us simplify the previous expression to
+
+\begin{equation}
+  \sigma_{xy} = \dfrac{e^2}{h} \sum_{a} \int_{\vec{T}} \dfrac{d^2k}{2\pi} i\left(\langle \partial_{k_y} u_{\vec{k}}^a | \partial_{k_x} u_{\vec{k}}^a \rangle - \langle \partial_{k_x} u_{\vec{k}}^a | \partial_{k_y} u_{\vec{k}}^a \rangle \right) = \dfrac{e^2}{h} \sum_{a} \int_{\vec{T}} \dfrac{d^2k}{2\pi} \mathcal{F}_{xy}
+\end{equation}
+where we recognize the integral is the negative Chern number integral, which is always integer.
+The Hall conductivity becomes
+
+\begin{equation}
+  \sigma_{xy} = -\dfrac{e^2}{h} \sum_a C_a = -C \dfrac{e^2}{h}.
+\end{equation}
+This leads to Hall conductivity becoming quantized and increases as the Fermi energy fills more bands.
+
+\subsection{Laughlin pump}
 
