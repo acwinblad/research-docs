@@ -34,7 +34,7 @@ Acting the Hamiltonian on the ansatz wavefunction yields
   \ham\Psi &= \dfrac{1}{2m} \left( \op{p}_x^2 + (qB \op{x} - \hbar k_y)^2 \right)e^{ik_y y} \psi(x) \nonumber \\
   \ham & = \dfrac{1}{2m} \left( \op{p}_x^2 + q^2 B^2 \op{x}^2 \right)
 \end{align}
-where we let $x - \tfrac{\hbar k_y}{mqB} \rightarrow x$, since it is just a shift in $x$ coordinates.
+where we let $x - \tfrac{\hbar k_y}{qB} \rightarrow x$, since it is just a shift in $x$ coordinates.
 Notice that we arrive at the expression for a quantum harmonic oscillator.
 A derivation for the energy solutions can be found in \ref{appendix:qho}.
 With the energy solutions
@@ -148,6 +148,41 @@ The Hall conductivity becomes
   \sigma_{xy} = -\dfrac{e^2}{h} \sum_a C_a = -C \dfrac{e^2}{h}.
 \end{equation}
 This leads to Hall conductivity becoming quantized and increases as the Fermi energy fills more bands.
+This is one way to describe the topological invariant of the quantum Hall effect by looking at geometry of momentum space with PBC.
 
-\subsection{Laughlin pump}
+\subsection{Laughlin pump on a Hall cylinder}
+We demonstrate another way to describe quantum Hall effect for Landau Levels on a Hall cyclinder.
+For a 2D system we let there be PBC in the $y$-axis with length $L$, which discretizes momentum space into $k = 2\pi n/ L$ points.
+This creates a cylinder with the $y$ in the angular axis and $x$ in the axial axis.
+Laughlin pumping requires one apply a flux along the cyclinder's $x$ axis.
+We can introduce the flux in the gauge potential as
+
+\begin{equation}
+  \vec{A} = (Bx + \Phi/L)\hat{y}.
+\end{equation}
+Inserting the flux into the LL Schrodinger Hamiltonian gives
+
+\begin{equation}
+  \ham = \dfrac{1}{2m^*} \left( p_x^2 + {\left(\dfrac{2\pi \hbar n}{L} + eBx + \dfrac{e\Phi}{L} \right)}^2\right).
+\end{equation}
+This becomes the quantum harmonic oscillator solution we saw earlier where we let $x' = x + x_n$ and
+
+\begin{equation} \label{eq:xCM}
+  x_n = \dfrac{h}{eBL} \left(n + \dfrac{\Phi}{\Phi_0} \right),
+\end{equation}
+where $\Phi_0 = h/e$ is the flux quanta.
+The generalized LL wave function solution is
+
+\begin{equation}
+  \psi_n(x) \propto H_n (x+x_n) e^{-eB(x+x_n)^2 / 2\hbar} e^{i2\pi n/L},
+\end{equation}
+where $H_n(x)$ is the Hermite polynomial.
+Solving for $\langle x_n \rangle = \langle \psi_n(x) | x | \psi_n(x) \rangle$ we see each electron is centered at Eq. \eqref{eq:xCM}.
+
+When the flux increments by one flux quanta we notice each electron's center of mass moves by the same integer multiple, i.e.\ the states go from $n\rightarrow n+1$.
+This is a change in charge as electrons are pumped from one state to the next, or from one edge of the cyclinder to the other.
+If $n$ LLs are filled then $n$ electrons are transferred, as $\Delta Q = ne$.
+The Hall conductivity can be written as $\sigma_H = \Delta Q / \Delta \Phi$.
+After a change in flux $\Delta \Phi = \Phi_0$ the Hall conductivity is quantized as $\sigma_H = ne^2 / h$.
+Once again we have shown Hall conductivity is quantized for LL systems.
 

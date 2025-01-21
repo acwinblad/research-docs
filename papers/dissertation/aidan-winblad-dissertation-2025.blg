@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: aidan-winblad-dissertation-2024.aux
+The top-level auxiliary file: aidan-winblad-dissertation-2025.aux
 The style file: unsrt.bst
 Database file #1: ref.bib
 Repeated entry---line 1791 of file ref.bib
@@ -14,13 +14,15 @@ Warning--I didn't find a database entry for "Dmytruk_2019"
 Warning--I didn't find a database entry for "DeGennes_book"
 Warning--I didn't find a database entry for "FU_2021"
 Warning--I didn't find a database entry for "Pandey_2023"
+Warning--I didn't find a database entry for "shimFundamentalLimits"
+Warning--I didn't find a database entry for "germaniumthing"
 Warning--empty author in supp
 Warning--empty title in supp
 Warning--empty year in supp
 Warning--empty year in MSR
 You've used 100 entries,
             1791 wiz_defined-function locations,
-            1122 strings with 27858 characters,
+            1125 strings with 27914 characters,
 and the built_in function-call counts, 25758 in all, are:
 = -- 1996
 > -- 1641

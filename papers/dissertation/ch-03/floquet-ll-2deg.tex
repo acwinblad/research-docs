@@ -2,18 +2,16 @@
 In this section show a 2DEG system with a non-uniform circularly polarized light becomes an effective 2DEG Hamiltonian with a magnetic field that is composed of the electric field component of light.
 We consider the case of Schrodinger charged particles in the presence of a gauge potential as
 \begin{equation}\label{eq:H2deg}
-  \ham(t) = \dfrac{1}{2m^*} \left( \vec{p} + e \vec{A}(t)\right)
+  \ham(t) = \dfrac{1}{2m^*} \left( \vec{p} + e \vec{A}(t)\right)^2
 \end{equation}
 where $m^*$ is the effective charge mass.
-As before, the light is made of two linearly polarized laser lights.
-Where the first is normally incident in the $z$-axis with polarization in the $x$-axis.
-The second is of oblique incidence in the $xz$-plane, to acquire non-uniformity in the $x$-axis, with polarization in the $y$-axis.
-This is to introduce $x$-dependence with the $p_y$ term of the Schrodinger Hamiltonian.
-The electric field components are
+As before, the light is made of three linearly polarized laser lights.
+The relevant electric field components at the 2DEG interface are
 \begin{align} \label{eq:E2field}
   \vec{E}_{1} &= E \cos{\omega t}\ \hat{x}, \nonumber \\
-  \vec{E}_{2} &= -E\cos{(K x)} \sin{\omega t}\ \hat{y}.
+  \vec{E}_{2} &= \vec{E}_2^f + \vec{E}_2^b = -E\cos{(K x)} \sin{\omega t}\ \hat{y}.
 \end{align}%
+In this case both lights have same frequency of light, here there are no pauli matrices to account for, we can get non-zero commutations from the $x$ and $p_x$ terms during the high-frequency expansion.
 In this case both lights have the same frequency of light, this is a requirement to make the 2DEG Hamiltonian into a Landau level-like Hamiltonian.
 This form of the electric field relates to the following gauge potential, via $\vec{E} = -\partial_t \vec{A}$ as
 
@@ -39,18 +37,24 @@ where we shifted the constant energy out of the effective Hamiltonian and comple
 Here we can see the high-frequency expansion terms $H^{F(1)}$ and $H^{F(2)}$, as shown in \ref{app:quantum-floquet-theory}, introduce a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
 Finally, in the long wavelength, $Kx \ll 1$,
 
-\begin{equation}
-  \ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m^*} \left[ p_x^2 + \left(p_y - eB^{\text{2DEG}}x \right)^2  \right], \nonumber
+\begin{equation}\label{eq:Heff2deg}
+\ham_{\text{eff}}^{\text{2DEG}} &= \dfrac{1}{2m^*} \left[ p_x^2 + {\left(p_y - eB^{\text{2DEG}}x \right)}^2  \right],
 \end{equation}
 with $B^{\text{2DEG}} = \tfrac{K^2 e E^2 }{m^*\omega^3}$.
-Solving for the energy spectrum
-\begin{equation}
-  \epsilon_n^{\text{2DEG}} = \dfrac{\hbar K^2 e^2 E^2}{m^{*2}\omega^3} \left(n+\dfrac{1}{2}\right)
-  \label{eq:2DEGenergy}
+The energy spectrum values are
+\begin{equation}\label{eq:2DEGenergy}
+  \epsilon_n^{\text{2DEG}} = \dfrac{\hbar K^2 e^2 E^2}{m^{*2}\omega^3} \left(n+\dfrac{1}{2}\right),
 \end{equation}
 which is similar to 2DEG LLs spectrum.
+This is another highly degenerate LL-like spectrum due to an effective magnetic field induced by the combination of laser lights provided.
 
-We have shown one can achieve a highly degenerate Landau level-like spectrum and QHE in a 2DEG system with an effective magnetic field proportional to electric field  squared and inverserly proportional to the product of spatial period squared and angular frequency cubed $\propto (E^2/(d^2\omega^3))$.
-These factors of the laser lights can be tuned and be enhanced in such nonequilibrium systems.
-The effective magnetic field strength obtained for 2DEG is proportional to $ B \propto E^2/d^2\omega^3$.
-This allows for additional tunability of an effective magnetic field in nonequilibrium systems.
+The 2DEG system has the same ways to enhance its effective magnetic field and energy spectrum.
+First, the electric field is limited by the high-frequency expansion, we find $E \ll (8m^*\hbar\omega^3/e^2)^{1/2}$ to be a reasonable cutoff.
+The effective field $B^{\text{2DEG}} \propto \omega^2 \sin^2{(\theta_i)} / v_p^2$, similar to the Dirac system.
+Again, increasing the photon energy is one way to enhance the effective magnetic field, with the requirement of using shorter pulses as photon energy and electric field increase.
+In 2DEG systems, the enhancement to effective magnetic field due to incident angle and phase velocity is squared compared to the Dirac case having a product of Fermi velocity and phase velocity.
+
+%We have shown one can achieve a highly degenerate Landau level-like spectrum and QHE in a 2DEG system with an effective magnetic field proportional to electric field  squared and inverserly proportional to the product of spatial period squared and angular frequency cubed $\propto (E^2/(d^2\omega^3))$.
+%These factors of the laser lights can be tuned and be enhanced in such nonequilibrium systems.
+%The effective magnetic field strength obtained for 2DEG is proportional to $ B \propto E^2/d^2\omega^3$.
+%This allows for additional tunability of an effective magnetic field in nonequilibrium systems.

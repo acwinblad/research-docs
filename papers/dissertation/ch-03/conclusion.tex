@@ -1,37 +1,57 @@
 \section{Discussion and conclusion}
 
-Results can be explained with the help of existing experiments \cite{YHW, JWM} and can provide an estimate for the strength of the effective magnetic field to observe LLs and QHE.
-Analytical structure of Eq.~(\ref{eq:DiracEner}) and Eq.~(\ref{eq:2DEGenergy}) is primarily responsible for the LLs spectrum in both the Dirac and Schr\"{o}dinger systems, respectively.
-%Therefore, the effective magnetic field strength can be calculated with the help of parameters realized/used/ implemented in these experimental observations.
+We now examine the topology of both systems.
+Eqs. \eqref{eq:HeffDirac} and \eqref{eq:Heff2deg} are in LL Hamiltonian form, and typically would exhibit QHE.
+The two systems only have translational symmetry in the $y$-axis, so a Chern number based on periodicity in $k_x$ and $k_y$ is not applicable, though one can relate the center of mass of an electron to the Chern number as shown in Appendix \ref{chern-number}, which is related to the Laughlin pump.
+Considering the Laughlin pump argument, both systems have quantized Hall conductivity, since both have the same eigenstates as their respective LL Hamiltonian.
+A key difference to note about both systems is the $C$ term in Eq. \eqref{eq:HeffDirac}.
+This term will stay positive for the values of $E$ used in the high-frequency limit for the Dirac case.
+\Blue{A note, while beyond the limit, if $C=0$, there would be no QHE as there is no coupling between $x$ and $p_y$, and if $C<0$, the direction of chirality flips.}
+
+Using existing experiments \cite{YHW, JWM} we can provide an estimate for the strength of the effective magnetic field to observe LL-like spectrum and QHE.
+Analytical structure of Eq.~(\ref{eq:DiracEner}) and Eq.~(\ref{eq:2DEGenergy}) is primarily responsible for the LL-like spectrum in both the Dirac and 2DEG systems, respectively.
 Although such results are valid for other 2D materials or Schr\"{o}dinger systems, however, for simplicity, we will consider parameters realized for graphene or topological insulators \cite{YHW, JWM}.
-In these experiments \cite{YHW, JWM}, the strength of the electric field used is $1 \times 10^7$ V/m to $1 \times 10^8$ V/m and the frequency of the light varies from 120 meV to 191 meV.
+We will consider a similar range of mid-IR photon energies (or $\lambda = [3\mu $m$ , 10\mu $m$]$) as seen in graphene or topological insulators \cite{YHW, JWM} to match with recently proposed high refractive index metamaterial composites \cite{shimFundamentalLimits}.
+In these experiments \cite{YHW, JWM}, the strength of the electric field used is $1 \times 10^7$ V/m to $1 \times 10^8$ V/m, for the parameters used to estimate effective magnetic fields for both systems the largest electric field is around $1.4 \times 10^8$ V/m.
+As should be considered, the larger both photon energy and electric field become ultrafast pulses should be used to prevent thermal damage to materials, on the order of $500$ fs.
+To note, for the following results we assume a high oblique angle to let $\sin{(\theta_i)} \approx 1$.
 
-In case of Dirac electrons, a fixed value of the spatial period of 120 nm and frequency of laser light $\hbar \omega = 191$ meV, the strength of the effective magnetic field is $\approx$ 10 Tesla for electric field strength of $5 \times 10^7$ V/m \cite{JWM}.
-Moreover, by reducing the spatial period to 12 nm, we obtain the effective magnetic field $\approx$ 98 Tesla for fixed frequency ($\hbar \omega = 191 $ meV) and electric field ($5 \times 10^7$ V/m).
-This is due to the fact that effective magnetic field is directly proportional to electric field and inversely proportional to the spatial period of light according to Eq.~(\ref{eq:DiracEner}).
-Similarly, keeping the spatial period constant and increasing the electric field strength, we can increase the strength of the effective magnetic field for larger frequencies only.
-However, for the frequency $\hbar \omega = 191$ meV, we can not go beyond $5 \times 10^7$ V/m value of the electric field irrespective of the spatial period.
-This limitation is due to the factor "C" in Eq.~(\ref{eq:DiracEner}).
-Further, using lower light frequency ($\hbar \omega = 120$ meV) as realized in topological insulators experiments \cite{YHW}, the critical strength of the electric field is $2 \times 10^7$ V/m beyond which magnetic field will become negative.
-Additionally, for larger frequency of 220 meV, the maximum value of electric field $7 \times 10^7$ V/m can be used.
-It is also important and interesting to note that negative values of the effective magnetic field at larger strengths of light's electric field are fruitful.
-This is because positive or negative values of the effective magnetic field means (see Eq.~(\ref{eq:HeffB})) that magnetic field is applied either from positive z-axis or negative z-axis.
-\textbf{This estimate of parameters is equally valid for frequency space expansion results (Fig. 1) obtained numerically and degenerate perturbation (Fig. 2) analysis.}
+To enhance the effective magnetic field aside from using higher photon energy reducing the photon phase velocity can see a considerable increase for both systems.
+The refractive index materials can be set above graphene, or any Dirac material, such that the laser light can travel through to reduce its phase velocity.
+Germanium refractive index increases monotonically with increasing photon energy, we use a linear interpolation of the refractive index due the small change for the range of photon energies used.
+Al-composite metamaterials are monotonically decreasing with increasing photon energy, the data is roughly linear and we use a linear interpolation for it as well.
 
-In case of Schr\"{o}dinger electrons in conventional 2DEG systems, the effective magnetic field strength can be obtained using Eq.~(\ref{eq:Energy}).
-For a fixed value of the spatial period of 100 nm and light frequency of $\hbar \omega = 191$ meV, the strength of the effective magnetic field is 1 Tesla using electric field of $5 \times 10^7$ V/m.
-Further, by reducing the spatial period to 10 nm and keeping the electric field ($5 \times 10^7$ V/m) and frequency of light ($\hbar \omega = 191 $ meV) fixed, we obtain the effective magnetic field $\approx$ 106 Tesla.
-This can be understood from Eq.~(\ref{eq:Energy}).
-In contrast to Dirac case, by increasing the strength of electric field of light, we can increase the strength of the effective magnetic field values.
-For example, for fixed period of 100 nm and frequency ($\hbar \omega = 191 $ meV), the effective magnetic field is 17 Tesla for $2 \times 10^8$ V/m.
-Next, we see the impact of increasing or decreasing frequency and keeping period (100 nm) and electric field ($5 \times 10^7$ V/m) fixed.
-For decreasing frequency to 120 meV, we obtain larger effective magnetic field (4.3 Tesla) while increasing frequency leads to smaller effective magnetic field (0.7 Tesla at 220 meV light frequency).
-\textbf{This estimate of parameters is equally valid for frequency space expansion results (Fig. 1) obtained numerically and degenerate perturbation (Fig. 2) analysis.}
+In case of a Dirac system Fig. \ref{fig:dirac-bfield-energy} shows graphene with various refractive index materials to enhance the effective magnetic field and first order quasienergy of the LL-like spectrum.
+For mid-IR ranges of laser light, the effective magnetic field (cyan) can get up to $8.8$ mT for vacuum, $37.2$ mT for germanium, and $163$ mT for Al-composite metamaterial for $\hbar\omega=413$ meV and results in first order quasienergies (red) of $5.3$ meV, $11$ meV, and $23$ meV, respectively.
+As can be seen in \ref{fig:dirac-bfield-energy} as photon energy increases the Al-composite refractive index decreases quite a bit and if we used higher energy we would see the effective magentic field and quasienergies start to decrease, as will be seen with 2DEG.
+While the material has higher index of refraction overall, it would be better to find a material that increases refractive index with photon energy, like germanium can, for it can drastically increase for slightly higher photon energies before it dips \cite{germaniumthing}.
+
+\begin{figure}
+  \includegraphics[width=0.45\textwidth]{./figures/dirac-eff-bfield-energy.pdf}
+  \caption{Effective magnetic field (cyan) and first quasienergy (red) as a function of photon energy for various refractive materials: vacuum (triangles), germanium (squares), and  Al-composite metamaterial (circles).}
+  \label{fig:dirac-bfield-energy}
+\end{figure}
+
+For 2DEG systems Fig. \ref{fig:2deg-bfield-energy} shows GaAs and InSb materials with the same refractive materials used for graphene to enhance effective magnetic field and zeroth order quasienergy of the LL-like spectrum.
+The vacuum and germanium interfaces are scaled up by a factor of $10$ and $50$, respectively, to visually enhance and compare it to the Al-composite interface.
+GaAs is used as it is one of the most common 2DEG with relatively small effective electron mass, followed by InSb since it has the smallest effective electron mass found in 2DEG materials.
+For the GaAs system, effective magnetic field (cyan) can get up to $0.92$ mT for vacuum, $16.5$ mT for germanium, and $362$ mT for Al-composite metamaterial and achieves zeroth order quasienergies (red) of $0.8\ \mu$eV, $14.3\ \mu$eV, and $314\ \mu$eV, respectively.
+In the InSb system, effective magnetic field is the same as GaAs, since it has no dependence on effective mass, and achieves zeroth order quasienergies (red) of $3.8\ \mu$eV for vacuum, $68.2\ \mu$eV for germanium, and $1.5$ meV for Al-composite.
+As alluded to earlier, due to Al-composites large decrease in refractive index for increasing photon energy, it peaks earlier around $\hbar\omega=328$ mT, for 2DEG.
+Overall, we see large changes in 2DEG for both effective magnetic field, due to being proptional to refractive index squared and quasienergies, being inversely proportional to effective electron mass.
+
+\begin{figure}
+  \subfloat[]{\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-GaAs.pdf}}
+  \subfloat[]{\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-InSb.pdf}}
+  \caption{Effective magnetic field (cyan) and first quasienergy (red) as a function of photon energy for 2DEGs for various refractive materials: vacuum (triangles) scaled by a factor of 50, germanium (squares) scaled by a factor of 10, and Al-composite metamaterials. The 2DEG materials used are (a) GaAs and (b) InSb.}
+  \label{fig:2deg-bfield-energy}
+\end{figure}
 
 In conclusion, we have shown Floquet LLs and the QHE using two linearly polarized lights for graphene-like 2D and conventional 2DEG systems.
 While using these laser lights, we  need at least one or both polarized lights to be spatially inhomogeneous.
-We have presented results using frequency space expansion method, degenerate Floquet perturbation theory, tight binding models and numerical model calculations.
-All the results are agreed well to show Floquet LLs in experimentally accessible parameters range.
-Also, it is interesting to note that we are flexible to use different values of the electric field strength, frequency or spatial period of the light to realize QHE and control the strength of the effective magnetic field.
-Therefore, we believe that Floquet LLs and QHE can be observed in the experiments for moderate strength of the spatially inhomogeneous lights \textbf{as shown in Figs. 1 and 2.} Moreover, we expect the potential to host new nano-electronics in nonequilibrium systems.
+We have presented results using frequency space expansion method and degenerate Floquet perturbation theory.
+A tight-binding model capable of using ``low-frequency'' with a Peierls substitution can be found in appendix \ref{app:tbm-dirac} and \ref{app:tbm-2deg}, the results are difficult to interpret and currently not informative.
+The results agree well to show Floquet LL-like energies in experimentally accessible parameters range.
+Also, it is vital to note we are flexible to use different values of the electric field strength, photon energy, or phase velocity to realize QHE and control the strength of the effective magnetic field.
+Therefore, we believe that Floquet LL-like and QHE can be observed in the experiments for moderate strength of the spatially inhomogeneous lights \textbf{as shown in Figs. 1 and 2.} Moreover, we expect the potential to host new nano-electronics in nonequilibrium systems.
 
