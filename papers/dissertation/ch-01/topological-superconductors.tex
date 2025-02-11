@@ -1,32 +1,33 @@
 \section{Majorana fermions and topological superconductors}
 
-Before we define Majorana fermions we will discuss characteristics of fermions.
+We discuss here Majorana fermions and their connection to topological superconductors and the properties that can be exploited for topological quantum computing.
+%Before we define Majorana fermions we will discuss characteristics of fermions.
 There are three types of fermions: Dirac, Weyl, Majorana.
-Both Enrico Fermi and Paul Dirac derived Fermi-Dirac statistics, independently and roughly the same time in 1926.
 Fermions are particles that follow Fermi-Dirac statistics and the Pauli exclusion principle and have half-integer spin (spin 1/2, 3/2, etc.).
+In 1926, both Enrico Fermi and Paul Dirac derived Fermi-Dirac statistics, independently of one another.
 Dirac's equation led to the derivation of a (complex) wavefunction solution for spin-half fermions that have mass and charge, and an antiparticle, coined as the positron.
 A few years later, Hermann Weyl derived from Dirac's equation a simplified solution for describing massless fermions.
 Then, in 1937 Ettore Majorana hypothesized from Dirac's equation a (real) wavefunction solution that showed that these fermions were both particle and antiparticle and neutrally charged.
 
 Examples of observed fermions include electrons, neutrinos, neutrons, and protons.
-Weyl and Majorana fermions have yet to be observed.
+%Weyl and Majorana fermions have yet to be observed.
 The Standard Model does allow for neutrinos to potentially be Majorana fermions.
 The MAJORANA project: neutrinoless double beta decay, is one experiment for detecing neutrino Majorana fermions and has yielded negative results thus far.
-The particle physics community has not found either Weyl and Majorana fermions in any experiment yet.
+The particle physics community has yet to find either Weyl or Majorana fermions in experiments.
 There are, however, avenues for pursuing them as quasiparticles in condensed matter systems.
-For example, in 2011 Weyl fermions were theorized to be in topological semimetals then quickly observed by 2015 in TaAs semimetals using angle-resolved photoemission spectroscopy (ARPES)  ~\cite{wanTopologicalSemimetalFermiarc2011, xuDiscoveryWeylFermion2015, liWeylSemimetalTaAs2016}.
+For example, in 2011 Weyl fermions were theorized to be in topological semimetals then quickly observed as quasiparticles by 2015 in TaAs semimetals using angle-resolved photoemission spectroscopy (ARPES)  ~\cite{wanTopologicalSemimetalFermiarc2011, xuDiscoveryWeylFermion2015, liWeylSemimetalTaAs2016}.
 
-To understand where Majorana fermions come from lets look at what quasiparticles exist in superconductors.
-Since 2001 it has been hypothsized that Majorana fermions can be found on \textit{p}-wave superconductors in pairs of 2 and non-localized in half-quantum vortices and at the ends of wires  ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevUnpairedMajoranaFermions2001}.
-In conventional superconductors there are cooper pairs that make up the supercurrent.
+%To understand where Majorana fermions come from lets look at what quasiparticles exist in superconductors.
+Since 2001 it has been hypothesized that Majorana fermions can be found on \textit{p}-wave superconductors in pairs of 2 and non-localized in half-quantum vortices and at the ends of wires  ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001, kitaevUnpairedMajoranaFermions2001}.
+In conventional superconductors there are Cooper pairs that make up the supercurrent.
 These Cooper pairs are made up of two electrons (or holes) with opposite spin and momenta caused by the electron-phonon interaction, are bosonic and condensate, and are in a ground state with allowed excited states.
-A Bogoliubov quasiparticle is the first excited state of a Cooper pair condensate, this is when an electron and hole with opposite momenta become paired.
-This usually happens when the systems chemical potential allows the electron and hole bands to cross one another in the brillouin space and the superconducting order parameter, $\Delta$, dictates the type of spin coupling.
-For example, superconductors that are \textit{s}-wave pair electrons and holes with opposite spin, while \textit{p}-wave pairs electrons and holes that are spin-polarized or spinless.
-In a \textit{p}-wave superconductor if the Bogoliubov quasiparticle is a zero-energy excitation it can be written as a Majorana fermion and because of the particle-hole symmetry in the system they come in pairs.
-\Blue{Should I mention anything about singlets and triplets and mention a generalized 2$\times$2 d vector notation for order parameter?}
 
-\Blue{We have yet to physically realize a $p$-wave superconductor experimentally, however, we can use heterostructures in proximity to an $s$-wave superconductor to achieve an effective $p$-wave superconduting interface, which is explained and referenced in later chapters.}
+A Bogoliubov quasiparticle is the first excited state of a Cooper pair condensate, this is when an electron and hole with opposite momenta become paired.
+This usually happens when the systems chemical potential allows the electron and hole bands to cross one another in the Brillouin space and the superconducting order parameter, $\Delta$, dictates the type of spin coupling.
+For example, superconductors that are \textit{s}-wave pair electrons and holes with opposite spin, while \textit{p}-wave pairs electrons and holes that are spin-polarized.
+In a \textit{p}-wave superconductor if the Bogoliubov quasiparticle is a zero-energy excitation it can be written as a Majorana fermion and because of the particle-hole symmetry in the system they come in pairs.
+
+We have yet to physically realize a $p$-wave superconductor experimentally, however, we can use heterostructures in proximity to an $s$-wave superconductor to achieve an effective $p$-wave superconducting interface, which is explained and referenced in later chapters.}
 \Blue{Majorana fermions are dictated by non-Abelian exchange statistics, which allows for building a universal quantum computer, hence why they are highly sought after.}
 \Blue{Another boon of using a non-trivial topological superconductor is the ability to protect Majorana fermions from local perturbations.}
 
@@ -39,11 +40,11 @@ Start with a 1D spinless $p$-wave superconductor tight-binding Hamiltonian
 \begin{equation}
   \ham = \sum_j^{N-1} (-t \cc_j c_{j+1} + \Delta c_j c_{j+1} + h.c.) - \sum_j^{N} \mu \cc_j c_j,
 \end{equation}
-where $t$ is hopping amplitude, superconducting order parameter $\Delta = |\Delta|$ for simplicity, $\mu$ is chemical potential, and $\cc (c)$ is the creation (annihilation) operator for a complex fermion.
-We use a basis tranformation to convert to the Majorana fermion basis, where
+where $t$ is hopping amplitude, $\Delta = |\Delta|$ is the superconducting order parameter, $\mu$ is chemical potential, and $\cc (c)$ is the creation (annihilation) operator for a complex fermion.
+We use a basis transformation to convert to the Majorana fermion basis, where
 $\cc_j = \tfrac{1}{2} (a_j - i b_j)$, $\left\{ a^{\dagger}_j, a_{j'} \right\} = \left\{ a_j, a_{j'} \right\} = 2\delta_{j,j'}$
 since they are Majorana fermions, and $\left\{a_j,b_j'\right\} = 0$.
-After some algebra we arrive at
+The Hamiltonian becomes
 
 \begin{equation}
   \ham = \dfrac{i}{2} \sum_j \left( -\mu a_j b_j + (t+\Delta) b_j a_{j+1} + (-t+\Delta) a_j b_{j+1} \right).
@@ -58,10 +59,12 @@ For non-trivial topology phase, there are Majorana fermions present, $\mu = 0$, 
 \begin{equation}
   \ham = it \sum_j b_j a_{j+1}.
 \end{equation}
-Notice the terms $a_0$ and $b_N$ are missing in the non-trivial topology Hamiltonian, we can say there is a non-localized zero energy mode present in the system defined by $f = \tfrac{1}{2}(a_0 + i b_N)$, hence the name Majorana zero modes.
+Notice terms $a_0$ and $b_N$ are missing in the non-trivial topology Hamiltonian, we can state there is a non-localized zero energy mode present in the system defined by $f = \tfrac{1}{2}(a_0 + i b_N)$, hence the name Majorana zero modes.
 Figure ~\ref{fig:kitaev-chain} shows the wire in both topological phases.
-One quick note on terminology, sometimes non-trivial topology is referred to as the topological phase, for the purposes of this dissertation we will use the former option.
-Now, slightly outside the Kitaev limit for non-trivial topology, we can limit $|\mu| < 2t$ and $t = |\Delta| >0$ and still achieve non-trivial topology with Majorana zero modes at the interface of trivial and non-trivial topology.
+
+A quick note on terminology, sometimes non-trivial topology is referred to as the topological phase, for the purposes of this dissertation we will use the former option.
+Slightly outside the Kitaev limit, for non-trivial topology to persist, $|\mu| < 2t$ and $t = |\Delta| >0$.
+Majorana zero modes are hosted at the interface of trivial and non-trivial topology due to bulk-edge correspondence.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{./figures/kitaev-chain.pdf}
@@ -69,9 +72,9 @@ Now, slightly outside the Kitaev limit for non-trivial topology, we can limit $|
   \label{fig:kitaev-chain}
 \end{figure}
 
-To understand why this is still true we can determine the topological invariant for the system, also known as the Majorana number, a type of Winding number for 1D superconducting systems.
-While calculating the Majorana number is straight forward enough, its proof on the other hand is not, this can be found in the appendix REFERENCE appendix here.
-We write the Hamiltonian in the Majorana basis, $A = -iU \ham U^{\dagger}$, then take the sign of the Pfaffian,
+To prove this, calculate the topological invariant for the system, also known as the Majorana number, a type of Winding number for 1D superconducting systems.
+While calculating the Majorana number is straight forward enough, its proof on the other hand is not, this can be found in App. \ref{app:majorana-number}.
+Perform Majorana basis transformation on the Hamiltonian, $A = -iU \ham U^{\dagger}$, then take the sign of the Pfaffian,
 
 \begin{equation}
   \mathcal{M} = \text{sgn} [\text{Pf} (A)].
@@ -89,20 +92,19 @@ Employing the following symmetry $\epsilon(-k) = -\epsilon(k)$ we find there are
 where L is the number of lattice sites from our lattice Hamiltonian.
 We find that under the Kitaev limit, if $|\mu|< 2t$, then $\mathcal{M} = -1$, and if $|\mu| > 2t$, then $\mathcal{M} = 1$.
 When a section of the material is in a non-trivial topology and either the other material is trivial or vacuum, which is also trivial, Majorana zero modes will be localized at interfaces of differing topological number, this is also known as bulk-edge correspondence and will be used later in our topological quantum logic gate.
-As a last note, when $|\mu| = 2t$ this is a critical point and where the gap opens and closes, it is not an ideal region of parameter space for the band gap is too small ~\cite{kitaevUnpairedMajoranaFermions2001}.
-*Originally, Kitaev's proposal was to design topological quantum storage.
-
+As a last note, when $|\mu| = 2t$ this is a critical point and where the gap opens and closes, it is not an ideal region of parameter space for the band gap is too small.
+Originally, Kitaev's proposal was to design topological quantum storage ~\cite{kitaevUnpairedMajoranaFermions2001}.
 \subsection{Half-quantum vortices in \textit{p}-wave superconductors}
 We now transition back to Ivanov's derivation of MFs and begin to introduce \textit{braiding} for topological quantum computing as a key reason for hosting and manipulating MFs.
 It was proposed by Read and Green that the Pfaffian quantum Hall state derived by Moore and Read belongs to the same topological class as the BCS pairing state.
 Ivanov then verified this was the case for a BCS pairing state.
 Since the Pfaffian state was shown to exhibit non-Abelian statistics for half-quantum vortices the same is true for \textit{p}-wave superconductors.
-To answer why this is the case we need to understand how the superconducting order parameter acts for different pairing potentials composing of singlet or triplet states.
+To answer why this is the case we need to understand how the superconducting order parameter acts for different pairing potentials composing of singlet or triplet states ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 The superconducting order parameter, called order parameter or pairing potential for short, tells us the correlation between two fermionic operators in a superconductor and thus requires the state to be antisymmetric.
 These states are made up of a spatial and spin component.
-When the two electrons in a cooper pair are a spin-singlet the spin component is antisymmetric and requires the spatial component be symmetric; this occurs in \textit{s}- and \textit{d}-wave superconductors.
-If instead the electrons in a cooper pair are a spin-triplet the spin component is symmetric and requires the spatial component by antisymmetric; this occurs in \textit{p}- and \textit{f}-wave superconductors.
+When the two electrons in a Cooper pair are a spin-singlet the spin component is antisymmetric and requires the spatial component be symmetric; this occurs in \textit{s}- and \textit{d}-wave superconductors.
+If instead the electrons in a Cooper pair are a spin-triplet the spin component is symmetric and requires the spatial component by antisymmetric; this occurs in \textit{p}- and \textit{f}-wave superconductors.
 In terms of Pauli matrices we can in general encode the order parameter with
 
 \begin{equation}
@@ -111,11 +113,12 @@ In terms of Pauli matrices we can in general encode the order parameter with
 with the following antisymmetric definition $\Delta(\vec{k}) = \Delta^T(-\vec{k})$, we see $\Delta_0 (\vec{k})$ encodes spin-singlet components and $\vec{d}(\vec{k})$ encodes spin-triplet components, and at the end $\sigma_y$ is there to keep the matrix antisymmetric.
 The direction vector $\vec{d}$ needs to be a three dimsensional vector to ensure we account for the three spin configurations
 $|\uparrow\uparrow\rangle$, $|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle$, and $|\downarrow\downarrow\rangle$.
-To account for even-parity in the symmetric spatial component the momentum is of even powers proportional with the even spherical harmonics, while odd-parity in the antisymmetric component the momentum is of odd powers proportional to the odd spherical harmonics.
+To account for even-parity in the symmetric spatial component, the momentum is of even powers proportional with the even spherical harmonics.
+While odd-parity in the antisymmetric component, the momentum is of odd powers proportional to the odd spherical harmonics.
 For example, in \textit{s}-wave superconductors, $l=0$ and $Y_{0,0} = \text{const.}$ and has no momentum dependence and
 $\Delta_s (\vec{k}) = i\Delta_0 \sigma_y$.
 In the case of \textit{p}-wave superconductors, $l=1$ and $Y_{1,\pm1} \propto k_x \pm i k_y$ leading to linear dependence in momentum such that the order parameter becomes
-$\Delta_p(\vec{k}) = i\Delta (\vec{d} \cdot \bm{\sigma}) (k_x+ik_y) \sigma_y$.
+$\Delta_p(\vec{k}) = i\Delta (\vec{d} \cdot \bm{\sigma}) (k_x+ik_y) \sigma_y$ ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 \begin{figure}
   \includegraphics[width=0.4\textwidth]{./figures/half-quantum-vortex.pdf}
@@ -131,11 +134,11 @@ In Ivanov's case he picked a slightly different basis for the triplet-pairing or
 \end{equation}
 it still follows the antisymmetric definition
 $\Delta(\vec{k}) = -\Delta^T (-\vec{k})$.
-For a half-quantum vortex to exist, we must allow $\vec{d}$ to rotate in 3D or on a plane.
+For a half-quantum vortex to exist, we must allow $\vec{d}$ to rotate in 3D or in a plane.
 Additionally, the order parameter maps to itself, which requires the change of sign of $\vec{d}$ and shift in the phase $\varphi$ by $\pi$ simultaneously.
 This mapping is
 $(\varphi, \vec{d}) \mapsto (\varphi+\pi,-\vec{d})$
-and can be seen in Figure ~\ref{fig:half-quantum-vortex}.
+and can be seen in Figure ~\ref{fig:half-quantum-vortex} ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 We now reduce to a 2D superconductor, this forces $\vec{d}$ to point and rotate in the x-y plane and removes the coupling of spin-up and -down fermions from the order parameter.
 The order parameter can then be written in polar coordinates
@@ -169,13 +172,13 @@ The creation annihilation of the same fermion is related by the parameters $u$ a
 $\gamma^{\dagger}(E) = \gamma (E)$.
 It then leads to the zero-energy eigenstate being self-conjugate, a Majorana fermion,
 $\gamma^{\dagger}(E=0) = \gamma (E=0)$.
-The spinful nature eliminates the spin degree of freedom and shows the creation and annihilation operators are coupled due to superconductivity, making the Majorana fermion possible through self-conjugacy.
+The spinful nature eliminates the spin degree of freedom and shows the creation and annihilation operators are coupled due to superconductivity, making the Majorana fermion possible through self-conjugacy ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 \subsection{Braiding}
-Let us now talk about gauge symmetry.
+To speak on braiding it is important to start with gauge symmetry.
 Under \textit{U}(1) gauge transformation, if the superconducting gap is shifted by $\phi$, it is the same as rotating the creation annihilation operator by half the shift.
 Thus, $\Psi_{\alpha} \mapsto e^{i\phi/2} \Psi_{\alpha}$, which leads to the Majorana fermion operator weights transforming as $(u,v) \mapsto (ue^{i\phi/2}, v^{-i\phi/2})$.
-We can see with a change of superconducting order parameter by $2\pi$ the Majorana fermion changes sign, $\gamma \mapsto -\gamma$.
+We can see with a change of superconducting order parameter by $2\pi$ the Majorana fermion changes sign, $\gamma \mapsto -\gamma$ ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{./figures/pwave-braid.pdf}
@@ -197,7 +200,7 @@ We can define the braiding operators as the following
     \gamma_j \mapsto \gamma_j \quad\quad \text{for $j\neq i$ and $j\neq i+1$}.
   \end{cases}
 \end{equation}
-This leads us to the following braiding relations
+This leads to the following braiding relations
 
 \begin{figure}
   \includegraphics[width=0.33\textwidth]{./figures/braid.pdf}
@@ -210,13 +213,13 @@ This leads us to the following braiding relations
     T_i T_j T_i = T_j T_i T_j, \quad |i-j| = 1.
   \end{align*}
 \end{equation}
-Figure ~\ref{fig:braid} demonstrates three neighboring vortices and their braiding statistics having two means of achieving the same braiding exchange.
+Figure ~\ref{fig:braid} demonstrates three neighboring vortices with braiding statistics having two means of achieving the same braiding exchange.
 One can write the braiding operators in terms of fermionic operators with the following
 
 \begin{equation}
   \tau(T_i) = \exp\left(\dfrac{\pi}{4} \gamma_{i+1} \gamma_i\right) = \dfrac{1}{\sqrt{2}} \left(1+ \gamma_{i+1} \gamma_i\right).
 \end{equation}
-This can be further carried out for a number of Majorana fermions and builds a set of braiding operators for that system ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
+This can be further carried out for any number of Majorana fermions and builds a set of braiding operators for that system ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
 \subsection{T-junction qubit}
 The simplest qubit theorized for braiding Majorana fermions is on 1D wires connected in a T-junction, which can be extrapolated to a ladder junction for $2n$ Majorana fermions.
@@ -234,8 +237,8 @@ such that the site indices have the following definitions
   \item Increase moving $\rightarrow / \uparrow$ in the horizontal/vertical wires: $\phi = 0$,
   \item Decrease moving $\leftarrow / \downarrow$ in the horizontal/vertical wires: $\phi = \pi$.
 \end{itemize}
-The braiding of two Majorana fermions in a T-junction is achieved by adiabatically tuning the voltage gate, or chemical potential, of the wires which can be seen in Figure ~\ref{fig:t-junction-braid}
-Then we can extroplate to a ladder junction as shown in Figure ~\ref{fig:ladder-junction} ~\cite{aliceaNonAbelianStatisticsTopological2011}.
+The braiding of two Majorana fermions in a T-junction is achieved by adiabatically tuning the voltage gate, or chemical potential, of the wires which can be seen in Figure ~\ref{fig:t-junction-braid}.
+Then, extrapolate to a ladder junction as shown in Figure ~\ref{fig:ladder-junction} ~\cite{aliceaNonAbelianStatisticsTopological2011}.
 While this approach is simple in theory and being seriously pursued, it is difficult to build, manipulate, and read experimentally.
 Another difficulty for these wires is due to not having any truly \textit{p}-wave superconductors, currently they need to be built from heterostructures to make an effective \textit{p}-wave superconductor.
 
@@ -253,68 +256,63 @@ Another difficulty for these wires is due to not having any truly \textit{p}-wav
 
 \subsection{Effective \textit{p}-wave superconductors}
 There are several ways to build an effective \textit{p}-wave superconductor.
-We go over one example given by Sau et.\ al. ~\cite{sauGenericNewPlatform2010}.
-A zinc-blende semiconductor quantum well grown along the (100) direction is considered. We start with the relevant noninteracting Hamiltonian
+One example is given by Sau et.\ al.~\cite{sauGenericNewPlatform2010} where a zinc-blende semiconductor quantum well grown along the (100) direction is considered.
+We start with the relevant non-interacting Hamiltonian
 
 \begin{equation}
-  \ham_0 = \sum_{\vec{k}}  \cc_{\vec{k}} \left[\frac{k^2}{2m} - \mu + \alpha ( \sigma^x k_y - \sigma^y k_x) \right] c_{\vec{k}}
+  \ham_0 = \sum_{\vec{k}}  \cc_{\vec{k}} \left[\frac{\hbar^2 k^2}{2m} - \mu + \alpha ( \sigma^x k_y - \sigma^y k_x) \right] c_{\vec{k}}
 \end{equation}
-where $m$ is the effective mass, $\mu$ is the chemical potential, $\alpha$ is the Rashba spin-orbit(REFERENCED in Alicea's paper as ref 23) coupling strength, and $\sigma^i$ are the Pauli matrices that act on the spin degrees of freedom in $c_{\vec{k}}$. We have set $\hbar=1$ throughout.
+where $m$ is the effective mass, $\mu$ is the chemical potential, $\alpha$ is the Rashba spin-orbit coupling strength, and $\sigma^i$ are the Pauli matrices that act on the spin degrees of freedom in $c_{\vec{k}}$, and $\hbar=1$ throughout.
 
-We next introduce a ferromagnetic insulator and a magnetic field. The ferromagnetic insulator has magnetization pointing perpendicular to the 2D semiconductor.
+Next, introduce a ferromagnetic insulator to induce a Zeeman effect.
+The ferromagnetic insulator has magnetization pointing perpendicular to the 2D semiconductor with energy
 
 \begin{equation}
   \ham_Z = V_z \sum_{\vec{k}} \cc_{\vec{k}} \sigma^z c_{\vec{k}}
 \end{equation}
-but neglible orbital coupling. If we look at the combined Hamiltonian it becomes obvious there is a constant energy plus the energy eigenvalues of the Pauli matrices terms. We can easily solve the eigenvalue problem of
-
-\begin{equation}
-  \begin{bmatrix}
-    V_z & \alpha (k_y + i k_x) \\
-    \alpha (k_y -i k_x) & -V_z
-  \end{bmatrix}
-\end{equation}
-giving $\epsilon_{\pm}'(\vec{k}) = \pm \sqrt{V_z^2+\alpha^2 k^2}$ with eigenvectors
+but neglible orbital coupling.
+One can build an eigenbasis from the combined Hamiltonian with the following eigenenergies $\epsilon_{\pm}'(\vec{k}) = \pm \sqrt{V_z^2+\alpha^2 k^2}$ with eigenvectors
 
 \begin{align}
   u_+(\vec{k})  =
   \left( \begin{array}{l}
       A_\uparrow(\vec{k}) \\
       -A_\downarrow(\vec{k}) \dfrac{k_y - i k_x}{k}
-  \end{array} \right)
+  \end{array} \right),
   \\ \\
   u_-(\vec{k})  =
   \left( \begin{array}{l}
       B_\uparrow(\vec{k}) \dfrac{k_y + i k_x}{k}  \\
       B_\downarrow(\vec{k})
-  \end{array} \right)
+  \end{array} \right).
 \end{align}
-One can find $A_{\sigma}=A_{\sigma}^*$ and $B_{\sigma}=B_{\sigma}^*$ and the coefficients are
+Where $A_{\sigma}=A_{\sigma}^*$ and $B_{\sigma}=B_{\sigma}^*$ and the coefficients are
 
 \begin{align}
   A_{\uparrow}(\vec{k}) &= \dfrac{-\alpha k}{\sqrt{2\epsilon_+'(\vec{k})}} \sqrt{\dfrac{1}{\epsilon_+'(\vec{k})-V_z}} \\
 A_{\downarrow}(\vec{k}) &= \sqrt{\dfrac{\epsilon_+'(\vec{k})-V_z}{2\epsilon_+'(\vec{k})}} \\
 B_{\uparrow}(\vec{k}) &= \sqrt{\dfrac{\epsilon_-'(\vec{k})+V_z}{2\epsilon_-'(\vec{k})}} \\
-B_{\downarrow}(\vec{k}) &= \dfrac{\alpha k}{\sqrt{2\epsilon_-'(\vec{k})}} \sqrt{\dfrac{1}{\epsilon_-'(\vec{k})+V_z}}
+B_{\downarrow}(\vec{k}) &= \dfrac{\alpha k}{\sqrt{2\epsilon_-'(\vec{k})}} \sqrt{\dfrac{1}{\epsilon_-'(\vec{k})+V_z}}.
 \end{align}
-The expressions for $A_{\uparrow,\downarrow}$ and $B_{\uparrow,\downarrow}$ can be written in convenient terms as
+The expressions for $A_{\uparrow,\downarrow}$ and $B_{\uparrow,\downarrow}$ can be written as
 
 \begin{align}
   f_p(\vec{k}) &= A_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k}) = B_{\uparrow}(-\vec{k})B_{\downarrow}(\vec{k}) \\
-  &= \dfrac{-\alpha k}{2\epsilon_+'(\vec{k})}
+  &= \dfrac{-\alpha k}{2\epsilon_+'(\vec{k})}.
 \end{align}
 
-When putting the semiconductor in contact with an $s$-wave superconductor a pairing term is generated by the proximity effect. The full Hamiltonian becomes $\mathcal{H} = \mathcal{H}_0 + \mathcal{H}_Z + \mathcal{H}_{SC}$ with
+With the semiconductor in contact with an $s$-wave superconductor, a pairing term is generated by the proximity effect.
+The full Hamiltonian becomes $\mathcal{H} = \mathcal{H}_0 + \mathcal{H}_Z + \mathcal{H}_{SC}$ with
 
 \begin{align}
   \mathcal{H}_{SC} = \sum_{\vec{k}} \Delta c_{\uparrow,\vec{k}}^\dagger c_{\downarrow,-\vec{k}}^\dagger + H.c.
 \end{align}
 
-We now want to write the pairing potential in terms of $c_{\pm}$ using a basis transformation.
+Write the pairing potential in terms of $c_{\pm}$ using a basis transformation,
 
 \begin{align}
   c_{\uparrow,\vec{k}} &= \bra{\uparrow}\ket{u_+(\vec{k})} c_{\vec{k},+} + \bra{\uparrow}\ket{u_-(\vec{k})} c_{\vec{k},-} \\
-  &= A_{\uparrow}(\vec{k}) c_{\vec{k},+} + B_{\uparrow}(\vec{k})\dfrac{k_y+i k_x}{k} c_{\vec{k},-} \\
+  &= A_{\uparrow}(\vec{k}) c_{\vec{k},+} + B_{\uparrow}(\vec{k})\dfrac{k_y+i k_x}{k} c_{\vec{k},-}, \\
   c_{\downarrow,-\vec{k}} &= \bra{\downarrow}\ket{u_+(-\vec{k})} c_{-\vec{k},+} + \bra{\downarrow}\ket{u_-(-\vec{k})} c_{-\vec{k},-} \\
   &= A_{\downarrow}(-\vec{k})\dfrac{k_y-i k_x}{k} c_{-\vec{k},+} + B_{\downarrow}(-\vec{k}) c_{-\vec{k},-}
 \end{align}
@@ -322,27 +320,27 @@ with the adjoints being
 
 \begin{align}
   \cc_{\uparrow,\vec{k}} &= A_{\uparrow}(\vec{k}) \cc_{\vec{k},+} + B_{\uparrow}(\vec{k})\dfrac{k_y-i k_x}{k} \cc_{\vec{k},-} \\
-  \cc_{\downarrow,-\vec{k}} &= A_{\downarrow}(-\vec{k})\dfrac{k_y+i k_x}{k} \cc_{-\vec{k},+} + B_{\downarrow}(-\vec{k}) \cc_{-\vec{k},-}
+  \cc_{\downarrow,-\vec{k}} &= A_{\downarrow}(-\vec{k})\dfrac{k_y+i k_x}{k} \cc_{-\vec{k},+} + B_{\downarrow}(-\vec{k}) \cc_{-\vec{k},-}.
 \end{align}
-Continue reducing the pairing potential which becomes
+Reducing the pairing potential further becomes
 
 \begin{equation}
   \begin{split}
     \Delta \cc_{\uparrow,\vec{k}} \cc_{\downarrow,-\vec{k}} = \Delta [ & A_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k})\dfrac{k_y+i k_y}{k} \cc_{\vec{k},+} \cc_{-\vec{k},+} + B_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})\dfrac{k_y-i k_y}{k} \cc_{\vec{k},-} \cc_{-\vec{k},-} \\
-  + & \left(A_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})+B_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k}) \right) \cc_{\vec{k},+} \cc_{-\vec{k},-} ]
+    + & \left(A_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})+B_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k}) \right) \cc_{\vec{k},+} \cc_{-\vec{k},-} ].
   \end{split}
 \end{equation}
-We will use a more convenient notation by making the following substitutions
+We make the following substitutions
 
 \begin{align}
   \Delta_{++}(\vec{k}) &= \Delta f_p(\vec{k}) \dfrac{k_y +i k_x}{k} \\
   \Delta_{--}(\vec{k}) &= \Delta f_p(-\vec{k}) \dfrac{k_y -i k_y}{k} \\
-  \Delta_{+-}(\vec{k}) &= \Delta f_s(\vec{k})
+  \Delta_{+-}(\vec{k}) &= \Delta f_s(\vec{k}),
 \end{align}
-Where
+where
 
 \begin{align}
-  f_s(\vec{k}) = \left(A_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})+B_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k})\right)
+  f_s(\vec{k}) = \left(A_{\uparrow}(\vec{k})B_{\downarrow}(-\vec{k})+B_{\uparrow}(\vec{k})A_{\downarrow}(-\vec{k})\right).
 \end{align}
 The pairing potential Hamiltonian then becomes
 
@@ -352,10 +350,10 @@ The pairing potential Hamiltonian then becomes
 Writing the full Hamiltonian in matrix form we will use the following Nambu spinor
 
 \begin{align}
-  \Psi = (c_{\vec{k},+},\ c_{\vec{k},-},\ c_{-\vec{k},+}^{\dagger},\ c_{-\vec{k},-}^{\dagger} )^T
+  \Psi = (c_{\vec{k},+},\ c_{\vec{k},-},\ c_{-\vec{k},+}^{\dagger},\ c_{-\vec{k},-}^{\dagger} )^T.
 \end{align}
 
-Then we write the Hamiltonian as, where we have used the conventional BdG approach of applying the anticommutation relation and reindexing the momentum vetor of the second term to give
+Then, write the Hamiltonian using the conventional BdG approach of applying the anticommutation relation and reindexing the momentum vector of the second term to give
 
 \begin{align}
   \mathcal{H} = \dfrac{1}{2}\sum_{\vec{k}} \Psi^{\dagger}H_{BdG}\Psi
@@ -369,14 +367,14 @@ with
     0 & \epsilon_-(\vec{k}) & -\Delta_{+-}(-\vec{k}) & 2\Delta_{--}(\vec{k}) \\
     2\Delta_{++}^*(\vec{k}) & -\Delta_{+-}^*(-\vec{k}) & -\epsilon_+(-\vec{k}) & 0 \\
     \Delta_{+-}^*(\vec{k}) & 2\Delta_{--}^*(\vec{k}) & 0 & -\epsilon_-(-\vec{k}) \\
-  \end{bmatrix}
+  \end{bmatrix},
 \end{equation}
 where
 
 \begin{equation}
-  \epsilon_{\pm}(\vec{k}) = \dfrac{k^2}{2m} - \mu + \epsilon_{\pm}'(\vec{k})
+  \epsilon_{\pm}(\vec{k}) = \dfrac{k^2}{2m} - \mu + \epsilon_{\pm}'(\vec{k}).
 \end{equation}
-We can rearrange our matrix into a more block diagonal form with off terms to give
+Rearranging the matrix into a more block diagonal form of (++) and (--) gives
 
 \begin{equation}
   H_{BdG} =
@@ -385,21 +383,22 @@ We can rearrange our matrix into a more block diagonal form with off terms to gi
     2\Delta_{++}^* & -\epsilon_+(-\vec{k}) & -\Delta_{+-}^*(-\vec{k}) & 0 \\
     0 & -\Delta_{+-}(-\vec{k}) & \epsilon_-(\vec{k}) & 2\Delta_{--} \\
     \Delta_{+-}^*(\vec{k}) & 0 & 2\Delta_{--}^* & -\epsilon_-(-\vec{k}) \\
-  \end{bmatrix}
+  \end{bmatrix}.
 \end{equation}
-Upon studying $V_z \gg \alpha$ we see that near the fermi surface the interband pairing has little affect on the band gap. Scaling it's effect from $0 \to 1$ we see the intraband gap appears at a slightly smaller momentum as the interband pairing is turned off. We thus use the approximation $\Delta_{+-}(k_f) \approx 0$. We also set $\mu$ such that is only crosses the lower bands, thus allowing $c_+^{\dagger} \to 0$.
+Upon studying $V_z \gg \alpha$, near the fermi surface the interband pairing has little affect on the band gap.
+Scaling it's effect from $0 \to 1$ the intraband gap appears at a slightly smaller momentum as the interband pairing is turned off.
+We use the approximation $\Delta_{+-}(k_f) \approx 0$ and set $\mu$ such that it only crosses the lower bands, allowing $c_+^{\dagger} \to 0$, leaving
 
 \begin{equation}
   H_{BdG} =
   \begin{bmatrix}
     \epsilon_-(\vec{k}) & 2\Delta_{--}(\vec{k}) \\
     2\Delta_{--}^*(\vec{k}) & -\epsilon_-(-\vec{k}) \\
-  \end{bmatrix}
+  \end{bmatrix}.
 \end{equation}
-Solving for the dispersion relation of the system we arrive at
+Solving for the dispersion relation of the system
 
 \begin{align}
   E_{\pm}(\vec{k}) = \pm \sqrt{(\epsilon_-(\vec{k}))^2+4\abs{\Delta_{--}(\vec{k})}^2},
 \end{align}
-an effective \textit{p}-wave superconductor with opening and closing band gaps.
-
+ we arrive at an effective \textit{p}-wave superconductor with opening and closing band gaps.

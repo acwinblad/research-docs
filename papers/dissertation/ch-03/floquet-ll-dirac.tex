@@ -4,7 +4,7 @@ Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{./figures/fll-setup.pdf}
-  \caption{Schematic of two oblique (forward and backward) and one normal incident light on graphene or a 2DEG substrate with high refractive index material on top. Oblique laser has polarization in $y$-axis and normal incidence laser has polarization in the $x$-axis.}
+  \caption{Schematic of two oblique (forward and backward) and one normal incident light on graphene or a 2DEG substrate with high refractive index material on top. Oblique lasers have polarization in $y$-axis and travel in $xz$-plane and normal incidence laser has polarization in the $x$-axis and travel in $yz$-plane. With beam width large enough to cover the device fully.}
   \label{fig:fll-setup}
 \end{figure}
 
@@ -22,7 +22,7 @@ The relevant electric field components at the Dirac system interface are
 \vec{E}_{1} &= E\cos \omega t\ \hat{x}, \nonumber \\
 \vec{E}_{2} &= \vec{E}_2^f + \vec{E}_2^b = E\sin(Kx)\sin 2\omega t\ \hat{y},
 \end{align}
-Where $\omega$ is angular frequency of light with time $t$ and $K=2\pi /d$ with $d$ being the spatial period of the electric field with amplitude $E$.
+%Where $\omega$ is angular frequency of light with time $t$ and $K=2\pi /d$ with $d$ being the spatial period of the electric field with amplitude $E$.
 Where $\omega$ is angular frequency of light with time $t$ and $K = \omega \sin{(\theta_i)} / v_p$, with $\theta_i$ as incident angle of oblique light and $v_p$ is phase velocity of light.
 %Notice, the second electric field has twice frequency of the first, this is a requirement to make the Dirac Hamiltonian into a Landau level-like Hamiltonian, the derivation in REFERENCE APPENDIX can inform the reader of this choice.
 Notice, the second electric field has twice frequency of the first, this allows for the second gauge potentials $\sigma_y$ to have non-zero commutation with the first gauge potentials $\sigma_x$, and due to the high-frequency expansion used later, allows for the second gauge potential to return to a $\sigma_y$, as seen in \ref{fll-dirac-derivation}.
@@ -49,7 +49,7 @@ After applying the high-frequency approximation to first and second order expans
 
 \begin{equation} \label{eq:HDeff}
   H_{\text{eff}}= H_{0}-\sigma_y\frac{v_F^3 e^2 E^2 p_y}{\hbar^{2}\omega^{4}}
-  +\sigma_y\frac{v_F^3 e^3 E^{3}\sin{(Kx)}}{2\hbar^{2}\omega^{5}}
+  +\sigma_y\frac{v_F^3 e^3 E^{3}\sin{(Kx)}}{4\hbar^{2}\omega^{5}}
   -\sigma_x\frac{v_F^3 e^2 E^2 \left\{p_x, \sin^2{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
 \end{equation}
 The derivation can be found in the Appendix \ref{fll-dirac-derivation}.
@@ -58,7 +58,7 @@ This effective Hamiltonian can be simplified in the long wavelength limit, $Kx \
 
 \begin{align} \label{eq:HeffDirac}
   %\ham_{\text{eff}} &= v_F \sigma_x p_x + v_F \sigma_y \left[ \left( 1- \dfrac{v_F^2e^2E^2}{\hbar^2\omega^4} \right) p_y + \dfrac{K v_F^2 e^3 E^3}{4 \hbar^2 \omega^5} x \right] \nonumber \\
-  \ham_{\text{eff}}^D &= v_{F}\sigma_{x}p_{x}+v_F\sigma_{y} \left( C p_{y} + qB^Dx \right),
+  \ham_{\text{eff}}^D &= v_{F}\sigma_{x}p_{x}+v_F\sigma_{y} \left( C p_{y} + eB^Dx \right),
 \end{align}%
 where $C = 1-\left(\tfrac{v_{F}eE}{\hbar\omega^2}\right)^2$ and $B^D=\frac{Kv_F^2 e^2E^3}{4\hbar^{2}\omega^{5}}$.
 In accordance with Eqs.~\eqref{eq:HDeff} and ~\eqref{eq:HeffDirac}, there is least anisotropy in the Dirac spectrum in addition to zero gap.
@@ -74,7 +74,7 @@ From a classical point of view we call this a LL-like spectrum, the difference b
 There are several ways to enhance the effective magnetic field and directly LL-like energies for a Dirac system.
 Electric field strength can be increased within reason as we are limited by the photon energy to ensure the high-frequency expansion holds, $E \ll 2\hbar\omega^2/e v_F$, one can reasonably use electric field strengths up to 20\% of the limit due to photon energy.
 The lights wavenumber $K= \omega \sin{(\theta_i)} / v_p$ has a linear relationship to photon energy, too.
-Overall, the effective field $B^D \propto \omega^2 \sin{(\theta_i)} / (v_F v_p)$.
+Overall, considering the high-frequency limit on the electric field, the effective field $B^D \propto \omega^2 \sin{(\theta_i)} / (v_F v_p)$.
 Increasing photon energy is one way to enhance the effective magnetic field.
 As considered in previous literature, when photon energy and electric field are increased more energy is pumped into the system, shorter pulses are required to prevent damaging the system \cite{YHW, JWM}.
 Without too much consequence the incident angle can be increased up to $\pi/2$ and descreasing the phase velocity of light would enhance the effective magnetic field.

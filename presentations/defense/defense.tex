@@ -5,6 +5,7 @@
 \graphicspath{{../../images/}}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{caption}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -37,6 +38,7 @@
 \setbeamercolor{section in sidebar}{fg=UBCgreen}
 \setbeamercolor{section in sidebar}{fg=UBCgreen}
 \setbeamerfont{section in sidebar}{size=\small}
+\setbeamerfont{subsection in sidebar}{size=\scriptsize}
 \setbeamerfont{title in sidebar}{size=\tiny}
 \setbeamerfont{author in sidebar}{size=\tiny}
 \setbeamertemplate{page number in head/foot}[appendixframenumber]
@@ -107,7 +109,6 @@
 \date{\small October 26, 2024}
 
 \begin{document}
-
   \begin{frame}
   \titlepage
   \end{frame}
@@ -118,38 +119,75 @@
       \item \BD:
         \begin{itemize}
           \footnotesize
+          \item Topology and gauge potentials
           \item Majorana fermions in particle physics and condensed matter
-          \item Quantum information storage
+          \item Kitaev chain and Majorana number
         \end{itemize}
       \item \MO:
         \begin{itemize}
           \footnotesize
           \item Braiding in a 2D \textit{p}-wave SC
-          \item T-junctions
-          \item Triangular structures for braiding
+          \item T-junctions to triangular structures for braiding
+          \item Supercurrents as gauge potential
         \end{itemize}
-      \item \FO: Two Approaches
+      \item \RE: Two approaches
         \begin{itemize}
           \footnotesize
-          \item Topological phase diagram for linear vector potential on Kitaev chain
-          \item[] Bulk-edge correspondence for a double chain model
-          \item Vector potential on a triangular island in the Kitaev limit
-        \end{itemize}
-      \item \RE:
-        \begin{itemize}
-          \footnotesize
-          \item MCMs on 3 triangular structures
+          \item Exactly solvable miminal model
+          \item Hollow triangular islands \& bulk-edge correspondence
+          \item Braiding of 4 MF
         \end{itemize}
       \item \CO
-        \begin{itemize}
-          \footnotesize
-          \item Conclusions
-          \item Additional projects
-        \end{itemize}
+      \item Additional Research
     \end{itemize}
   \end{frame}
 
   \section{\BD}
+
+  \begin{frame}
+  \frametitle{Topology in Condensed Matter}
+
+  \begin{multicols}{2}
+  \centering Topology
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{./figures/topology.pdf}
+  \end{figure}
+  \pause
+  \vspace{10em}
+
+  \centering Topological States
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{./figures/topological-states.pdf}
+  \end{figure}
+
+  \end{multicols}
+
+
+
+  \end{frame}
+
+  \begin{frame}
+  \frametitle{Gauge Potentials in Hamiltonians}
+
+  %\begin{multicols}{2}
+  \centering Minimal Coupling
+  \begin{gather}
+    \vec{p}_{\text{can}} = \vec{p}_{\text{kin}} + q\vec{A} \\
+    \ham = \dfrac{1}{2m} {\left( \vec{p}_{\text{can}} - q\vec{A} \right)}^2 + qV
+  \end{gather}
+  \vspace{1em}
+  \pause
+
+  \centering Peierls Phase
+  \begin{gather}
+    \cc_j c_l \rightarrow \cc_j c_l \exp{\left[ \dfrac{iq}{\hbar} \int_{\vec{r}_j}^{\vec{r}_j} \vec{A}\cdot d\vec{l} \right]} = e^{i\phi_{jl}} \cc_j c_l \\
+    \ham = \sum_{\langle j, l \rangle} t e^{i\phi_{jl}} \cc_j c_l + h.c.
+  \end{gather}
+
+  %\end{multicols}
+
+  \end{frame}
+
 
   \begin{frame}{\BD: MFs in Particle Physics}
     \begin{multicols}{2}
@@ -304,37 +342,71 @@
     corresponds to zero energy. This is still true for $|\mu|< 2t$.
   \end{frame}
 
-  \begin{frame}{Effective \textit{p}-wave superconductor NEEDED?}
-    \begin{multicols}{2}
-      \centering
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.5\textwidth]{./figures/tunable-semiconductor.pdf}};
-        \node[inner sep=0pt] (reference) at (0,-3) {\small Alicea, \textit{PRB} \textbf{81}, 125318 (2010).};
-      \end{tikzpicture}
-      \small
-      \begin{equation}
-        c_j = (c_{j\uparrow}, c_{j\downarrow})^T
-      \end{equation}
-      \textit{s}-wave SC paring term:
-      \begin{equation}
-        \ham_{SC} = \sum_j \de \cc_{j\uparrow} \cc_{j\downarrow} + h.c.
-      \end{equation}
-      Quantum well:
-      \begin{equation}
-        \ham_0 = \sum_j (6t - \mu) \cc_j c_j - \sum_{\langle j,l \rangle} (t \cc_l c_j + h.c.)
-      \end{equation}
-      Rashba spin-orbit coupling:
-      \begin{equation}
-        \ham_R = -it_R \sum_{\langle j,l \rangle \alpha\beta} \cc_{l\alpha} (\bm{\sigma}_{\alpha\beta} \times \hat{r}_{lj}) \cdot \hat{z} c_{j\beta}
-      \end{equation}
-      Zeeman field:
-      \begin{equation}
-        \ham_Z = \sum_j \cc_j \vec{V} \cdot \bm{\sigma} c_j
-      \end{equation}
+  \begin{frame}{\BD: Majorana Number \& Bulk-Edge Correspondence}
+    Majorana number a.k.a Winding Number for 1D superconductors
 
-    \end{multicols}
+    Write Hamiltonian in Majorana Basis
+    \begin{equation}
+      A = -i U \ham U^{\dagger}
+    \end{equation}
+    Majorana number in general
+    \begin{equation}
+      \mathcal{M} = \text{sgn}[\text{Pf}(A)]
+    \end{equation}
+
+    \pause
+    %Particle-hole symmetry in momentum-space allows
+    %\begin{equation}
+    %  \mathcal{M} =
+    %  \begin{cases}
+    %    \text{sgn} [\text{Pf} (A_{k=0}) \text{Pf} (A_{k=\pi})], &\text{if L is even}      , \\
+    %    \text{sgn} [\text{Pf} (A_{k=0})], &\text{if L is odd},
+    %  \end{cases}
+    %\end{equation}
+
+    \begin{itemize}
+      \item If $|\mu| < 2t$, $\mathcal{M} = -1$, non-trivial topology
+      \item If $|\mu| > 2t$, $\mathcal{M} = 1$, trivial topology
+    \end{itemize}
+
+    \begin{figure}
+      \includegraphics[width = 0.6\textwidth]{./figures/bulk-edge.pdf}
+    \end{figure}
+
+
   \end{frame}
+
+%  \begin{frame}{Effective \textit{p}-wave superconductor NEEDED?}
+%    \begin{multicols}{2}
+%      \centering
+%      \begin{tikzpicture}
+%        \node[inner sep=0pt] (figure) at (0,0)
+%        {\includegraphics[width=0.5\textwidth]{./figures/tunable-semiconductor.pdf}};
+%        \node[inner sep=0pt] (reference) at (0,-3) {\small Alicea, \textit{PRB} \textbf{81}, 125318 (2010).};
+%      \end{tikzpicture}
+%      \small
+%      \begin{equation}
+%        c_j = (c_{j\uparrow}, c_{j\downarrow})^T
+%      \end{equation}
+%      \textit{s}-wave SC paring term:
+%      \begin{equation}
+%        \ham_{SC} = \sum_j \de \cc_{j\uparrow} \cc_{j\downarrow} + h.c.
+%      \end{equation}
+%      Quantum well:
+%      \begin{equation}
+%        \ham_0 = \sum_j (6t - \mu) \cc_j c_j - \sum_{\langle j,l \rangle} (t \cc_l c_j + h.c.)
+%      \end{equation}
+%      Rashba spin-orbit coupling:
+%      \begin{equation}
+%        \ham_R = -it_R \sum_{\langle j,l \rangle \alpha\beta} \cc_{l\alpha} (\bm{\sigma}_{\alpha\beta} \times \hat{r}_{lj}) \cdot \hat{z} c_{j\beta}
+%      \end{equation}
+%      Zeeman field:
+%      \begin{equation}
+%        \ham_Z = \sum_j \cc_j \vec{V} \cdot \bm{\sigma} c_j
+%      \end{equation}
+%
+%    \end{multicols}
+%  \end{frame}
 
   \begin{frame}{\BD: MFs in Condensed Matter}
     \begin{multicols}{2}
@@ -723,11 +795,135 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Additional projects}
+  \section{Additional Research}
 
+  \subsection{\MO}
+
+  \begin{frame}{\MO: Theory and Experiment}
+
+    \begin{figure}
+      \includegraphics[width=0.45\textwidth]{./figures/grushin.png}
+      \includegraphics[width=0.40\textwidth]{./figures/kandelaki.png}
+    \end{figure}
+      \vspace{1em}
+    \begin{figure}
+      \includegraphics[width=0.40\textwidth]{./figures/rudner.png}
+      \includegraphics[width=0.40\textwidth]{./figures/bielinski.png}
+    \end{figure}
+
+  \end{frame}
+
+  \begin{frame}{\MO: Experimental Findings}
+    \begin{figure}
+      \includegraphics[width=0.5\textwidth]{./figures/fqahe-dirac.png}
+      \caption*{\footnotesize McIver et.\ al., \textit{Nature Phys.} \textbf{16}, 38 (2020)}
+    \end{figure}
+  \end{frame}
+
+  \subsection{\FO}
+
+  \begin{frame}{\FO: Inhomogeneous laser light on 2D systems}
+    \begin{figure}
+      \includegraphics[width=0.33\textwidth]{./figures/fll-setup.pdf}
+    \end{figure}
+    Generalized electric field at substrate surface
+    \begin{align*}
+      \small
+      \vec{E}_1 &= E\cos{(a\omega t)} \hat{x},\\
+      \vec{E}_2 &= \vec{E}_2^f + \vec{E}_2^b = -E\cos{(Kx)}\sin{(b\omega t)} \hat{y}
+    \end{align*}
+    where
+    \begin{equation}
+      \small
+      K = \frac{\omega \sin{(\theta_i)}}{v_p}
+    \end{equation}
+
+  \end{frame}
+
+  \begin{frame}{\FO: Dirac Systems}
+
+    \begin{equation}
+      \small
+      \ham (t) = v_F \bm{\sigma} \cdot \left(\vec{p} + e \vec{A}(t)\right)
+    \end{equation}
+    \begin{align}
+      \small
+      \vec{E}_1 &= E\cos{(\omega t)} \hat{x}, \nonumber \\
+      \vec{E}_2 &= E\sin{(Kx)}\sin{(2\omega t)} \hat{y}
+    \end{align}
+    Perform Fourier time-transform, HF expansion, and the limit $Kx\ll1$
+
+    \begin{equation}
+      \small
+      \ham_{\text{eff}}^{D} = v_F \sigma_x p_x + v_F \sigma_y \left( C p_y + eB^Dx \right),
+    \end{equation}
+    where $C = 1 - {\left(\tfrac{v_F eE}{\hbar \omega^2}\right)}^2$ and
+    \begin{align}
+      \small
+      B^{D} &= \frac{K v_F^2 e^2 E^3}{4\hbar^2 \omega^5}, \\
+      %\epsilon_n^{D} &= \pm v_F^2 \sqrt{ \dfrac{n K e^3 E^3}{2 \hbar \omega^5} }
+      %\epsilon_n^{D} &= \pm v_F \sqrt{ 2 n \hbar e B^D }
+    \end{align}
+
+
+  \end{frame}
+
+  \begin{frame}{\FO: 2DEG Systems}
+
+    \begin{equation}
+      \small
+      \ham (t) = \dfrac{1}{2m^*} {\left( \vec{p} +e \vec{A}(t)\right)}^2
+    \end{equation}
+    \begin{align}
+      \small
+      \vec{E}_1 &= E\cos{(\omega t)} \hat{x},\nonumber \\
+      \vec{E}_2 &= -E\cos{(Kx)}\sin{(\omega t)} \hat{y}
+    \end{align}
+    Perform Fourier time-transform, HF expansion, apply periodic potential $V(x)$, and the limit $Kx\ll1$
+
+    \begin{equation}
+      \small
+      \ham_{\text{eff}}^{\text{2DEG}} = \frac{1}{2m^*} \left[ p_x^2 + {\left(p_y - eB^{\text{2DEG}}x \right)}^2\right],
+    \end{equation}
+    where
+    \begin{align}
+      \small
+      B^{\text{2DEG}} &= \frac{K^2 e E^2}{m^* \omega^3}, \\
+      %\epsilon_n^{\text{2DEG}} &= \dfrac{\hbar K^2 e^2 E^2}{m^{*2} \omega^3} \left( n+ \dfrac{1}{2}\right)
+      %\epsilon_n^{\text{2DEG}} &= \frac{\hbar eB^{\text{2DEG}}}{m^*} \left( n+ \frac{1}{2}\right)
+    \end{align}
+
+  \end{frame}
+
+  \subsection{\RE}
+
+  \begin{frame}{\RE: Dirac Effective Magnetic Field and Quasienergies}
+
+    \begin{figure}
+      \includegraphics[width=0.7\textwidth]{./figures/dirac-eff-bfield-energy.pdf}
+    \end{figure}
+
+  \end{frame}
+
+  \begin{frame}{\RE: 2DEG Effective Magnetic Field and Quasienergies}
+
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (fig1) at (-3,0)
+      {\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-GaAs.pdf}};
+      \node[inner sep=0pt] (fig2) at (4,0)
+      {\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-InSb.pdf}};
+      \node[inner sep=0pt] (GaAs) at (-3,2.3) {\small GaAs};
+      \node[inner sep=0pt] (InSb) at (4,2.3) {\small InSb};
+    \end{tikzpicture}
+
+  \end{frame}
+  \subsection{\CO}
+
+  \begin{frame}{\CO}
     \begin{itemize}
-      \item Using a semi-infinite tight binding model to find Floquet Landau levels for Graphene and 2DEGs using two linearly polarized lights.
-      \item Kitaev mapped spins to fermions using the Jordan-Wigner transformation. Can we achieve similar results using one of our triangular structures?
+      \item Oblique incident laser light induces QHE in Dirac and 2DEG systems.
+      \item Showed a non-equilibirum system exhibits equilibrium  results.
+      \item Effective magnetic field can be enhanced by several parameters.
     \end{itemize}
   \end{frame}
 
@@ -743,7 +939,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
   \end{frame}
 
   \begin{frame}
-  \frametitle{Majorana fermion notation and coupling isolations}
+  \frametitle{Majorana fermion notation and coupling isolation}
     The complex fermion operator can be written as a superposition of two Majorana fermions $c_j = \frac{1}{2} (a_j + i b_j)$.
     Due to the nature of Majorana fermions, $a^{\dagger}_j = a_j$, the creation operator is $\cc_j = \frac{1}{2} (a_j - i b_j)$.
     \begin{align*}
@@ -758,25 +954,60 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{align}
   \end{frame}
 
-  \begin{frame}
-    \frametitle{Triangular chain degeneracy}
+  \begin{frame}{\FO: Dirac Systems}
 
-    \begin{figure}
-      \includegraphics[width=0.8\textwidth]{../../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-1/mu-p0_0000/En00-B-0_1029.pdf}
-    \end{figure}
+    \begin{equation}
+      \small
+      \ham (t) = v_F \bm{\sigma} \cdot \left(\vec{p} + e \vec{A}(t)\right)
+    \end{equation}
+    \begin{align}
+      \small
+      \vec{E}_1 &= E\cos{(\omega t)} \hat{x}, \nonumber \\
+      \vec{E}_2 &= E\sin{(Kx)}\sin{(2\omega t)} \hat{y}
+    \end{align}
+    Perform Fourier time-transform, HF expansion, and the limit $Kx\ll1$
+
+    \begin{equation}
+      \small
+      \ham_{\text{eff}}^{D} = v_F \sigma_x p_x + v_F \sigma_y \left( C p_y + eB^Dx \right),
+    \end{equation}
+    where $C = 1 - {\left(\tfrac{v_F eE}{\hbar \omega^2}\right)}^2$ and
+    \begin{align}
+      \small
+      B^{D} &= \frac{K v_F^2 e^2 E^3}{4\hbar^2 \omega^5}, \\
+      \epsilon_n^{D} &= \pm v_F^2 \sqrt{ \dfrac{n K e^3 E^3}{2 \hbar \omega^5} }
+      %\epsilon_n^{D} &= \pm v_F \sqrt{ 2 n \hbar e B^D }
+    \end{align}
+
 
   \end{frame}
 
-  \begin{frame}
-    \frametitle{Hollow triangle degeneracy?}
+  \begin{frame}{\FO: 2DEG Systems}
 
-    \begin{figure}
-      \includegraphics[width=0.8\textwidth]{../../../research-code/mf-quantum-logic-gate-scripts/data/figures/linear-vector-potential/nr-25/w-3/mu-p0_0000/En01-B-0_1029.pdf}
-    \end{figure}
+    \begin{equation}
+      \small
+      \ham (t) = \dfrac{1}{2m^*} {\left( \vec{p} +e \vec{A}(t)\right)}^2
+    \end{equation}
+    \begin{align}
+      \small
+      \vec{E}_1 &= E\cos{(\omega t)} \hat{x},\nonumber \\
+      \vec{E}_2 &= -E\cos{(Kx)}\sin{(\omega t)} \hat{y}
+    \end{align}
+    Perform Fourier time-transform, HF expansion, apply periodic potential $V(x)$, and the limit $Kx\ll1$
+
+    \begin{equation}
+      \small
+      \ham_{\text{eff}}^{\text{2DEG}} = \frac{1}{2m^*} \left[ p_x^2 + {\left(p_y - eB^{\text{2DEG}}x \right)}^2\right],
+    \end{equation}
+    where
+    \begin{align}
+      \small
+      B^{\text{2DEG}} &= \frac{K^2 e E^2}{m^* \omega^3}, \\
+      \epsilon_n^{\text{2DEG}} &= \dfrac{\hbar K^2 e^2 E^2}{m^{*2} \omega^3} \left( n+ \dfrac{1}{2}\right)
+      %\epsilon_n^{\text{2DEG}} &= \frac{\hbar eB^{\text{2DEG}}}{m^*} \left( n+ \frac{1}{2}\right)
+    \end{align}
 
   \end{frame}
 
 
 \end{document}
-
-

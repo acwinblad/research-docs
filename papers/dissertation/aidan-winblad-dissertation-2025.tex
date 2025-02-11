@@ -19,6 +19,8 @@
 \usepackage{booktabs}
 \usepackage[pagetoc,toc,titletoc,title]{appendix}
 \usepackage{tocloft}
+\usepackage{lineno}
+\linenumbers
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarks=true,bookmarksopen=false}
 \usepackage{cleveref}
@@ -61,6 +63,7 @@
 \newcommand{\Blue}[1]{\textcolor{blue}{#1}}
 
 % reset vec and hat style to a bold type
+\let\oldhat\hat
 \let\op\hat
 \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
@@ -104,7 +107,6 @@ All Rights Reserved
 \abstract{\input{./ch-01/abstract.tex}}
 
 \acknowledgements{%
-I would like to thank the CSU Graduate Student Council and the CSU Graduate School for initiating, commissioning and supporting this project.  I would also like to thank Nicole Ramo for her support and ensuring that we followed through with this project to completion.  I would like to thank Leif Anderson, who created and supported the previous LaTeX template for a number of years.  Although I have never met Leif, his work was invaluable in the creation of this package and has helped many students get their thesis approved by the CSU graduate school.  Finally, I would like to thank everyone who helps to contribute to this package.  Your work will help many CSU graduate students to create professional, beautiful and compelling theses and dissertations using LaTex.  Last but not least, thank you to the creators and maintaners of \LaTeX{} for creating a fantastic typesetting tool.
 }
 
 \begin{document}
@@ -127,7 +129,7 @@ I would like to thank the CSU Graduate Student Council and the CSU Graduate Scho
     %\vspace{3em} % place at top
     \vfill % or center on page
 
-    \noindent \textit{I would like to dedicate this dissertation to my dog Zeta.}
+    \noindent \textit{I would like to dedicate this dissertation to my dog, Zeta.}
     \vfill % fill extra space at bottom
 \end{flatcenter}
 \newpage

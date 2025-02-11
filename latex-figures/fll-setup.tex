@@ -1,0 +1,26 @@
+\documentclass[]{article}
+\usepackage[active,floats,tightpage]{preview}
+\usepackage{tikz}
+
+% reset vec and hat style to a bold type
+\let\oldhat\hat % W: Could not find argument for command. (14)
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\begin{document}
+
+
+\begin{figure}
+  \begin{tikzpicture}
+    \node[inner sep=0pt] (figure) at (0,0)
+    {\includegraphics[width=\textwidth]{base-fll-setup.pdf}} \\
+
+    \node[inner sep=0pt] (E_2) at (-4.05,3.80) {\Large $\vec{E}_2^f$};
+    \node[inner sep=0pt] (E_2) at (4.05,3.80) {\Large $\vec{E}_2^b$};
+    \node[inner sep=0pt] (E_1) at (0.05,4.95) {\Large $\vec{E}_1$};
+    \node[inner sep=0pt] (refract) at (-1.65,-2.20) {\Large \bf High Refractive Index};
+    \node[inner sep=0pt] (substrate) at (-1.6,-3.75) {\Large \bf Dirac/2DEG Substrate};
+  \end{tikzpicture}
+\end{figure}
+
+\end{document}

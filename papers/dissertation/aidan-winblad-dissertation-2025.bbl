@@ -430,6 +430,11 @@ K.~v.~Klitzing, G.~Dorda, and M.~Pepper.
   constant based on quantized hall resistance.
 \newblock {\em Phys. Rev. Lett.}, 45(6):494--497, August 1980.
 
+\bibitem{QHE4}
+A.~H. Castro~Neto, F.~Guinea, N.~M.~R. Peres, K.~S. Novoselov, and A.~K. Geim.
+\newblock The electronic properties of graphene.
+\newblock {\em Rev. Mod. Phys.}, 81(1):109--162, January 2009.
+
 \bibitem{QHE2}
 K.~S. Novoselov, A.~K. Geim, S.~V. Morozov, D.~Jiang, M.~I. Katsnelson, I.~V.
   Grigorieva, Dubonos~S. V., and A.~A. Firsov.
@@ -441,11 +446,6 @@ Yuanbo Zhang, Yan-Wen Tan, Horst~L. Stormer, and Philip Kim.
 \newblock Experimental observation of the quantum {{Hall}} effect and
   {{Berry}}'s phase in graphene.
 \newblock {\em Nature Physics}, 438:201, 2005.
-
-\bibitem{QHE4}
-A.~H. Castro~Neto, F.~Guinea, N.~M.~R. Peres, K.~S. Novoselov, and A.~K. Geim.
-\newblock The electronic properties of graphene.
-\newblock {\em Rev. Mod. Phys.}, 81(1):109--162, January 2009.
 
 \bibitem{NHL}
 Netanel~H. Lindner, Gil Refael, and Victor Galitski.
@@ -483,6 +483,19 @@ J.~W. McIver, B.~Schulte, F.-U. Stein, T.~Matsuyama, G.~Jotzu, G.~Meier, and
   A.~Cavalleri.
 \newblock Light-induced anomalous {{Hall}} effect in graphene.
 \newblock {\em Nature Physics}, 11:123, 2019.
+
+\bibitem{merboldtObservationFloquetStates2024}
+Marco Merboldt, Michael Sch{\"u}ler, David Schmitt, Jan~Philipp Bange, Wiebke
+  Bennecke, Karun Gadge, Klaus Pierz, Hans~Werner Schumacher, Davood Momeni,
+  Daniel Steil, Salvatore~R. Manmana, Michael Sentef, Marcel Reutzel, and
+  Stefan Mathias.
+\newblock Observation of {{Floquet}} states in graphene, April 2024.
+
+\bibitem{choiDirectObservationFloquetBloch2024}
+Dongsung Choi, Masataka Mogi, Umberto~De Giovannini, Doron Azoury, Baiqing Lv,
+  Yifan Su, Hannes H{\"u}bener, Angel Rubio, and Nuh Gedik.
+\newblock Direct observation of {{Floquet-Bloch}} states in monolayer graphene,
+  April 2024.
 
 \bibitem{JHS}
 Jon~H. Shirley.
@@ -591,11 +604,20 @@ Adolfo~G. Grushin, {\'A}lvaro {G{\'o}mez-Le{\'o}n}, and Titus Neupert.
 \newblock Floquet fractional chern insulators.
 \newblock {\em Phys. Rev. Lett.}, 112(15):156801, April 2014.
 
-\bibitem{MSR}
+\bibitem{rudnerBandStructureEngineering2020}
 Mark~S. Rudner and Netanel~H. Lindner.
-\newblock Floquet topological insulators: From band structure engineering to
-  novel non-equilibrium quantum phenomena.
-\newblock {\em arxiv}.
+\newblock Band structure engineering and non-equilibrium dynamics in
+  {{Floquet}} topological insulators.
+\newblock {\em Nat Rev Phys}, 2(5):229--244, May 2020.
+
+\bibitem{bielinskiFloquetBlochManipulation2025}
+Nina Bielinski, Rajas Chari, Julian {May-Mann}, Soyeun Kim, Jack Zwettler,
+  Yujun Deng, Anuva Aishwarya, Subhajit Roychowdhury, Chandra Shekhar, Makoto
+  Hashimoto, Donghui Lu, Jiaqiang Yan, Claudia Felser, Vidya Madhavan, Zhi-Xun
+  Shen, Taylor~L. Hughes, and Fahad Mahmood.
+\newblock Floquet--{{Bloch}} manipulation of the {{Dirac}} gap in a topological
+  antiferromagnet.
+\newblock {\em Nat. Phys.}, pages 1--6, January 2025.
 
 \bibitem{EKM}
 Ervand Kandelaki and Mark~S. Rudner.
@@ -629,5 +651,17 @@ Jean Dalibard, Fabrice Gerbier, Gediminas Juzeli{\=u}{\=u}nas, and Patrik
 N~Goldman, G~Juzeli{\=u}nas, P~{\"O}hberg, and I~B Spielman.
 \newblock Light-induced gauge fields for ultracold atoms.
 \newblock {\em Reports on Progress in Physics}, 77(12):126401, November 2014.
+
+\bibitem{shimFundamentalLimitsRefractive2021}
+Hyungki Shim, Francesco Monticone, and Owen~D. Miller.
+\newblock Fundamental {{Limits}} to the {{Refractive Index}} of {{Transparent
+  Optical Materials}}.
+\newblock {\em Advanced Materials}, 33(43):2103946, 2021.
+
+\bibitem{amotchkinaCharacterizationEbeamEvaporated2020}
+Tatiana Amotchkina, Michael Trubetskov, Daniel Hahner, and Vladimir Pervak.
+\newblock Characterization of e-beam evaporated {{Ge}}, {{YbF3}}, {{ZnS}}, and
+  {{LaF3}} thin films for laser-oriented coatings.
+\newblock {\em Appl Opt}, 59(5):A40--A47, February 2020.
 
 \end{thebibliography}

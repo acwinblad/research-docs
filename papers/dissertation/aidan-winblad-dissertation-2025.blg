@@ -15,50 +15,48 @@ Warning--I didn't find a database entry for "DeGennes_book"
 Warning--I didn't find a database entry for "FU_2021"
 Warning--I didn't find a database entry for "Pandey_2023"
 Warning--I didn't find a database entry for "shimFundamentalLimits"
-Warning--I didn't find a database entry for "germaniumthing"
 Warning--empty author in supp
 Warning--empty title in supp
 Warning--empty year in supp
-Warning--empty year in MSR
-You've used 100 entries,
+You've used 105 entries,
             1791 wiz_defined-function locations,
-            1125 strings with 27914 characters,
-and the built_in function-call counts, 25758 in all, are:
-= -- 1996
-> -- 1641
-< -- 1
-+ -- 583
-- -- 483
-* -- 2432
-:= -- 4348
-add.period$ -- 298
-call.type$ -- 100
-change.case$ -- 99
+            1158 strings with 29785 characters,
+and the built_in function-call counts, 27325 in all, are:
+= -- 2094
+> -- 1792
+< -- 2
++ -- 635
+- -- 530
+* -- 2587
+:= -- 4619
+add.period$ -- 311
+call.type$ -- 105
+change.case$ -- 104
 chr.to.int$ -- 0
-cite$ -- 104
-duplicate$ -- 909
-empty$ -- 2269
-format.name$ -- 483
-if$ -- 5377
+cite$ -- 108
+duplicate$ -- 952
+empty$ -- 2386
+format.name$ -- 530
+if$ -- 5699
 int.to.chr$ -- 0
-int.to.str$ -- 100
-missing$ -- 102
-newline$ -- 500
-num.names$ -- 101
-pop$ -- 128
+int.to.str$ -- 105
+missing$ -- 105
+newline$ -- 523
+num.names$ -- 106
+pop$ -- 144
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 330
+skip$ -- 353
 stack$ -- 0
-substring$ -- 1834
-swap$ -- 109
-text.length$ -- 1
+substring$ -- 1917
+swap$ -- 119
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 225
-width$ -- 103
-write$ -- 1097
+warning$ -- 3
+while$ -- 237
+width$ -- 108
+write$ -- 1148
 (There was 1 error message)

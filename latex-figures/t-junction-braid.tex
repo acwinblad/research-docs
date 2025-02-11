@@ -1,0 +1,33 @@
+\documentclass[]{article}
+\usepackage[active,floats,tightpage]{preview}
+\usepackage{tikz}
+
+% reset vec and hat style to a bold type
+\let\oldhat\hat % W: Could not find argument for command. (14)
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\begin{document}
+
+
+\begin{figure}
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[width=\textwidth]{./base-t-junction.pdf}};
+      \node[inner sep=0pt] (a) at (0,10.85) {\Huge a};
+      \node[inner sep=0pt] (b) at (0,5.10) {\Huge b};
+      \node[inner sep=0pt] (c) at (0,-0.30) {\Huge c};
+      \node[inner sep=0pt] (d) at (0,-6.20) {\Huge d};
+      \node[inner sep=0pt] (g1) at (-3.4,10.85) {\Huge $\gamma_1$};
+      \node[inner sep=0pt] (g2) at (3.3,10.85) {\Huge $\gamma_2$};
+      \node[inner sep=0pt] (g1) at (0.85,0.75) {\Huge $\gamma_1$};
+      \node[inner sep=0pt] (g2) at (3.3,5.20) {\Huge $\gamma_2$};
+      \node[inner sep=0pt] (g1) at (0.85,-4.90) {\Huge $\gamma_1$};
+      \node[inner sep=0pt] (g2) at (-3.4,-0.40) {\Huge $\gamma_2$};
+      \node[inner sep=0pt] (g1) at (3.3,-6.10) {\Huge $\gamma_1$};
+      \node[inner sep=0pt] (g2) at (-3.4,-6.10) {\Huge $\gamma_2$};
+    \end{tikzpicture}
+
+\end{figure}
+
+\end{document}

@@ -1,16 +1,16 @@
 \section{Peierls phase in tight-binding models}
-When working with condensed matter systems we either work with free particles using Schrodinger's or Dirac's equation, most often, or tight-binding models describing how particles ``hop'' from one lattice to the next.
-There is typically no momentum term to use minimal coupling to introduce the gauge potential, but we can find a basis transformation that is equivalent.
+When working with condensed matter systems we often either work with free particles using Schrodinger's or Dirac's equation or tight-binding models describing how much energy is needed for a particle to ``hop'' from one lattice to the next.
+In tight-binding models there is typically no momentum term to use minimal coupling to introduce the gauge potential, but we can find a basis transformation that is equivalent.
 There are a few different names this can go by, Aharonov-Bohm effect, Berry phase, geometric phase, or Peierls phase.
 There are a few ways to derive Peierls phase and we will use the differential geometry approach.
-Before we showed minimal coupling and now we would like to express it in terms of a covariant derivative
+Before, we showed minimal coupling and now we would like to express it in terms of a covariant derivative
 
 \begin{equation}
   D_{\mu} = \partial_{\mu} - i A_{\mu}.
 \end{equation}
 Let us now envision how a wavefunction will evolve in the presence of a gauge potential field.
-Using the covariant derivative with the parallel transport along curves we can obtain an expression for the phase accumulation on the wave function.
-The covariant derivative should vanish if it has parallel transported along the curve $\mathcal{C}$ defined by points $x$ and $x' = x + v t$.
+Using the covariant derivative with parallel transport along curves we can obtain an expression for the phase accumulation on the wave function.
+The covariant derivative should vanish if it has been parallel transported along the curve $\mathcal{C}$ defined by points $x$ and $x' = x + v t$.
 The expression is as follows
 $\nabla_{v} s \rightarrow & t v^{\mu} D_{\mu} s_{x(t)} = 0$.
 This turns out to be a first order ordinary differential equation
@@ -22,7 +22,7 @@ with the following solution
 \begin{equation}
   s_{x(t)} = s_{x(0)} \exp \left[ i\int_{\mathcal{C}} dx^{\mu} A_{x(t'),\mu} \right]
 \end{equation}
-and in general we can rewrite it as the following expression $\psi(t) = \psi(0) \exp \left[ \tfrac{iq}{\hbar} \int_{\mathcal{C}} \vec{A}(\vec{r})\cdot d\vec{l} \right]$  ~\cite{altlandCondensedMatterField2023}.
+and in general rewrite it as the following expression $\psi(t) = \psi(0) \exp \left[ \tfrac{iq}{\hbar} \int_{\mathcal{C}} \vec{A}(\vec{r})\cdot d\vec{l} \right]$  ~\cite{altlandCondensedMatterField2023}.
 
 %\begin{align}
 %  \nabla_{v} s = 0 \rightarrow & t v^{\mu} D_{\mu} s_{x(t)} = 0 \\
@@ -39,10 +39,10 @@ Given the following tight-binding Hamiltonian
 \begin{equation}
   \ham_t = -t \sum_{\langle j, l \rangle} \cc_j c_{l} + h.c.,
 \end{equation}
-we can apply a gauge potential to a system making the following Peierls phase transform, a unitary transform, to its creation/annihilation operators
+a gauge potential is applied to the system making the following Peierls phase transform, a unitary transform, to its creation/annihilation operators
 
 \begin{align}
-  c_j \rightarrow c_j \exp \left[{\frac{iq}{\hbar} \int^{\vec{r}_j} \vec{A}\cdot d\vec{l}} \right] \nonumber \\
+  %c_j \rightarrow c_j \exp \left[{\frac{iq}{\hbar} \int^{\vec{r}_j} \vec{A}\cdot d\vec{l}} \right] \nonumber \\
   \cc_j c_l \rightarrow \cc_j c_l \exp \left[{\frac{iq}{\hbar} \int^{\vec{r}_l}_{\vec{r}_j} \vec{A}\cdot d\vec{l}} \right].
 \end{align}
 The Hamiltonian in the new basis takes the following form

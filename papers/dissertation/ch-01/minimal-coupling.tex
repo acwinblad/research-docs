@@ -1,25 +1,25 @@
 \section{Minimal coupling and Canonical momentum}
 With the gauge potentials and their invariance shown we next show how a gauge potential couples to the momentum operator, also known as minimal coupling.
-This occurs when a charged particle in a gauge potential field.
+This occurs when a charged particle is in a gauge potential field.
 Minimal coupling comes from the following substitution
 
 \begin{equation}
   -i\hbar\nabla \rightarrow -ih\nabla - q\vec{A},
 \end{equation}
-which can be derived from the canonical momentum operator when a charged particle is present in a vector potential field.
-In this case minimal coupling means the field is coupling the orbital and potential only, ignoring higher order multipole moments.
+which can be derived from the canonical momentum operator when a charged particle is present in a gauge potential.
+In this case, minimal coupling means the field is coupling the orbital and potential only, ignoring higher order multipole moments.
 This also allows the system to have a local gauge invariance under U(1) transformations, i.e.
 $\vec{A} \rightarrow \vec{A} + \nabla\lambda$  ~\cite{altlandCondensedMatterField2023}.
 
 Next, we derive the canonical momentum operator and demonstrate its gauge invariance.
-Start with the Lagrangian for charged particle in a scalar and vector potential field,
+Starting with the Lagrangian for charged particle in a scalar and gauge potential,
 
 \begin{align}
   \mathcal{L} &= T- U \nonumber \\
   \mathcal{L} &= \dfrac{1}{2} m \dot{r}^2 - qV + q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t),
 \end{align}
 where $T = \tfrac{1}{2} m \dot{r}^2$ and $U = qV - q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t)$.
-One recalls from classical mechanics that
+Recall from classical mechanics that
 
 \begin{align}
   \vec{p}_{\text{can}} &= \dfrac{\partial\mathcal{L}}{\partial \dot{\vec{r}}} \nonumber \\
@@ -28,8 +28,7 @@ One recalls from classical mechanics that
   \vec{p}_{\text{can}} &= \vec{p}_{\text{kin}} + q \vec{A}.
   \label{eq:canonical-momentum}
 \end{align}
-
-With the canonical momentum defined the Hamiltonian is
+With the canonical momentum defined, the Hamiltonian is
 
 \begin{align}
   \ham &= \vec{p}_{\text{can}} \cdot \dot{\vec{r}} - \mathcal{L} \nonumber \\
@@ -38,20 +37,21 @@ With the canonical momentum defined the Hamiltonian is
   %&= \dfrac{1}{2m}  \vec{p}_{kin}^2 + q V \nonumber \\
   \ham &= \dfrac{1}{2m} (\vec{p}_{can} - q \vec{A})^2 + q V.
 \end{align}
-Thus, we have shown that in the presence of a vector potential field we have the minimal coupling expression
+Thus, a charged particle in the presence of a gauge potential has the following minimal coupling,
 $i\hbar\nabla - q\vec{A}$.
 
-Just as before for electric and magnetic fields, we show the Hamiltonian is gauge invariant, albeit without a scalar field as it can be shown with the scalar potential but it is irrelevant for our purposes.
+Just as before for electric and magnetic fields, we will show the Hamiltonian is gauge invariant.
+It can be shown with a scalar potential in the Hamiltonian, but we do not since it is irrelevant for our purposes.
 Suppose
 $\ham|\psi \rangle = \epsilon |\psi \rangle$
-and that
+and
 $\vec{A}' = \vec{A}+\nabla\lambda$,
-the Hamiltonian acting on the wavevector is
+then the Hamiltonian acting on the wavevector is
 
 \begin{equation}
   \ham |\psi\rangle = \dfrac{1}{2m} (\hat{p} - q \vec{A}' + q \nabla \lambda)^2 |\psi\rangle = \epsilon |\psi\rangle.
 \end{equation}
-We also state
+We assert
 
 \begin{align}
   %\ham' |\psi'\rangle &= \dfrac{1}{2m} (\hat{p} - q \vec{A}')^2 |\psi'\rangle, \nonumber \\
@@ -65,7 +65,8 @@ Position and momentum expectation values should be the same under both gauge cho
 Starting with position operator we have
 
 \begin{align}
-  \langle \psi' | \hat{r} | \psi'\rangle &= \langle \psi | U^{\dagger} \hat{r} U | \psi\rangle = \langle \psi | \hat{r} | \psi\rangle \nonumber \\
+  \langle \psi' | \hat{r} | \psi'\rangle &= \langle \psi | U^{\dagger} \hat{r} U | \psi\rangle = \langle \psi | \hat{r} | \psi\rangle
+  %\langle \psi' | \hat{r} | \psi'\rangle &= \langle \psi | U^{\dagger} \hat{r} U | \psi\rangle = \langle \psi | \hat{r} | \psi\rangle \nonumber \\
   %U^{\dagger} \hat{r} U &= \hat{r} \nonumber \\
   %\hat{r} U &= U \hat{r} \nonumber \\
 \end{align}
@@ -76,7 +77,8 @@ $[\vec{A}{(\vec{r})},U] = 0$.
 With the momentum operator we find
 
 \begin{align}
-  \langle \psi' | \hat{p}-q \vec{A}' | \psi'\rangle &= \langle \psi | U^{\dagger} (\hat{p} - q \vec{A}') U | \psi\rangle = \langle \psi | \hat{p} - q \vec{A} | \psi\rangle \nonumber \\
+  \langle \psi' | \hat{p}-q \vec{A}' | \psi'\rangle &= \langle \psi | U^{\dagger} (\hat{p} - q \vec{A}') U | \psi\rangle = \langle \psi | \hat{p} - q \vec{A} | \psi\rangle
+  %\langle \psi' | \hat{p}-q \vec{A}' | \psi'\rangle &= \langle \psi | U^{\dagger} (\hat{p} - q \vec{A}') U | \psi\rangle = \langle \psi | \hat{p} - q \vec{A} | \psi\rangle \nonumber \\
   %U^{\dagger} \hat{p} U - U^{\dagger} q\vec{A}'U &= \hat{p} - q \vec{A} \nonumber \\
   %\hat{p} U - q\vec{A} U - q\nabla\lambda U &= U \hat{p} - U q \vec{A} \nonumber \\
 \end{align}
@@ -97,6 +99,6 @@ We see the local phase of the wavefunction is changed but it still represents th
 
 \begin{align}
   \langle \psi'| \ham' |\psi'\rangle &= \langle \psi | U^{\dagger} U \epsilon |\psi \rangle = \epsilon, \nonumber \\
-  \langle \psi | \ham |\psi \rangle &= \langle \psi | \epsilon |\psi \rangle = \epsilon, \end{align}
-in other words
+  \langle \psi | \ham |\psi \rangle &= \langle \psi | \epsilon |\psi \rangle = \epsilon. \end{align}
+In other words
 $U^{\dagger} \ham' U = \ham$  ~\cite{kittelIntroductionSolidState2018}.
