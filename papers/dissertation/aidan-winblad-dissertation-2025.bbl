@@ -380,6 +380,18 @@ Tudor~E. Pahomi, Manfred Sigrist, and Alexey~A. Soluyanov.
   superconductor.
 \newblock {\em Phys. Rev. Res.}, 2(3):032068, September 2020.
 
+\bibitem{zhangAllelectricallyTunableNetworks2020}
+Song-Bo Zhang, Alessio Calzona, and Bj{\"o}rn Trauzettel.
+\newblock All-electrically tunable networks of {{Majorana}} bound states.
+\newblock {\em Phys. Rev. B}, 102(10):100503, September 2020.
+
+\bibitem{zhangTopologicalHolonomicQuantum2020}
+Song-Bo Zhang, W.~B. Rui, Alessio Calzona, Sang-Jun Choi, Andreas~P. Schnyder,
+  and Bj{\"o}rn Trauzettel.
+\newblock Topological and holonomic quantum computation based on second-order
+  topological superconductors.
+\newblock {\em Phys. Rev. Res.}, 2(4):043025, October 2020.
+
 \bibitem{pietzschSpinResolvedElectronicStructure2006}
 O.~Pietzsch, S.~Okatov, A.~Kubetzka, M.~Bode, S.~Heinze, A.~Lichtenstein, and
   R.~Wiesendanger.
@@ -397,8 +409,36 @@ Kazuaki Takasan, Shuntaro Sumita, and Youichi Yanase.
 \newblock Supercurrent-induced topological phase transitions.
 \newblock {\em Phys. Rev. B}, 106(1):014508, July 2022.
 
+\bibitem{hyart_2013}
+T.~Hyart, B.~{van Heck}, I.~C. Fulga, M.~Burrello, A.~R. Akhmerov, and C.~W.~J.
+  Beenakker.
+\newblock Flux-controlled quantum computation with {{Majorana}} fermions.
+\newblock {\em Phys. Rev. B}, 88(3):035121, July 2013.
+
+\bibitem{dmytruk_2019}
+Olesia Dmytruk, Manisha Thakurathi, Daniel Loss, and Jelena Klinovaja.
+\newblock Majorana bound states in double nanowires with reduced {{Zeeman}}
+  thresholds due to supercurrents.
+\newblock {\em Phys. Rev. B}, 99(24):245416, June 2019.
+
+\bibitem{gennesSuperconductivityMetalsAlloys2018}
+P.~G.~De Gennes.
+\newblock {\em Superconductivity {{Of Metals And Alloys}}}.
+\newblock CRC Press, Boca Raton, March 2018.
+
 \bibitem{supp}
 {\em {See Supplemental Material at [url]}}.
+
+\bibitem{fengProbingRobustMajorana2022}
+Guan-Hao Feng and Hong-Hao Zhang.
+\newblock Probing robust {{Majorana}} signatures by crossed {{Andreev}}
+  reflection with a quantum dot.
+\newblock {\em Phys. Rev. B}, 105(3):035148, January 2022.
+
+\bibitem{pandeyMajoranaZeroModes2023}
+Bradraj Pandey, Nitin Kaushal, Gonzalo Alvarez, and Elbio Dagotto.
+\newblock Majorana zero modes in {{Y-shape}} interacting {{Kitaev}} wires.
+\newblock {\em npj Quantum Mater.}, 8(1):1--8, September 2023.
 
 \bibitem{liTopologicalSuperconductivityInduced2014}
 Jian Li, Hua Chen, Ilya~K. Drozdov, A.~Yazdani, B.~Andrei Bernevig, and A.~H.
@@ -417,12 +457,6 @@ G\'abor Sz\'echenyi and Andr\'as P\'alyi.
 \newblock Parity-to-charge conversion for readout of topological majorana
   qubits.
 \newblock {\em Phys. Rev. B}, 101:235441, Jun 2020.
-
-\bibitem{fengProbingRobustMajorana2022}
-Guan-Hao Feng and Hong-Hao Zhang.
-\newblock Probing robust {{Majorana}} signatures by crossed {{Andreev}}
-  reflection with a quantum dot.
-\newblock {\em Phys. Rev. B}, 105(3):035148, January 2022.
 
 \bibitem{QHE1}
 K.~v.~Klitzing, G.~Dorda, and M.~Pepper.
