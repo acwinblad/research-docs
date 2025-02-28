@@ -1,0 +1,89 @@
+\documentclass[12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{eso-pic}
+\usepackage{charter}
+
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\definecolor{gr}{RGB}{225,225,225}
+
+\input{../info}
+% Company information
+\newcommand{\position}{Remote 2D/3D Geometry Algorithm Developer}
+\newcommand{\company}{Scopic} % The company (e.g. "Microsoft Corporation")
+\newcommand{\street}{11 Apex Dr Ste 300A PMB 2021} % The company's street address (e.g. "1 Microsoft Way")
+\newcommand{\city}{Marlborough} % The company's city (e.g. "Redmond")
+\newcommand{\state}{MA} % The company's state prefix (e.g. "WA")
+\newcommand{\zip}{01752} % The company's zip code (e.g. "98052")
+
+\begin{document}
+
+% Shaded header banner
+\AddToShipoutPictureBG{%
+\color{gr}
+\AtPageUpperLeft{\rule[-1.4in]{\paperwidth}{1.3in}}
+}
+
+% Header
+\begin{center}
+{\fontsize{28}{0}\selectfont\scshape \myname}
+
+\faMapMarker\enspace\mylocation\hfill
+\href{mailto:\myemail}{\faEnvelope\enspace \myemail}\hfill
+\href{tel:\myphone}{\faPhone\enspace \myphone}\hfill
+\vspace{0.05in}
+\href{https://github.com/\mygithub}{\faGithubSquare\enspace github.com/\mygithub}\hfill
+\href{https://linkedin.com/in/\mylinkedin}{\faLinkedinIn\enspace linkedin.com/in/\mylinkedin}\hfill
+\end{center}
+
+\vspace{0.2in}
+
+% Opening block
+\today\\
+
+\vspace{-0.1in}\recipient\\
+\company\\
+\street\\
+\city, \state\ \zip\\
+
+\vspace{-0.1in}\greeting\ \recipient,\\
+
+% Body
+\vspace{-0.1in}\setlength\parindent{24pt}
+I am writing to express my interest in the \position\ position at \company.
+As a Ph.D. candidate in Physics, graduating in May 2025, I have dedicated over a decade to computational modeling and numerical analysis techniques.
+My research has primarily focused on topological phenomena in low-dimensional systems, lending me robust skills in theoretical and computational physics.
+
+In my doctoral research, I developed and optimized numerical methods to simulate quantum materials.
+This involved implementing large matrix eigensolvers and nearest-neighbor algorithms, where I utilized programming languages such as Python3 (including NumPy, SciPy, and Matplotlib libraries) and Mathematica.
+
+As a contractor at Engility I built practical skills, where I applied computational physics models to real-world challenges.
+I implemented a new ray tracing library for their in-house laser tissue interaction software, BTEC, built in C++.
+I worked on matching experimental data with theoretical models and developing a thermal hot spot tracker.
+This experience required interdisciplinary collaboration and adaptability.
+
+Aside from my technical expertise, I have a proven track record of effectively communicating complex physics.
+I have been published in peer-reviewed publications and presented my research at several conferences, tailoring my communication to various attendees.
+This showcases my ability to convey intricate details clearly and is essential in fostering collaboration and driving project success.
+
+I am drawn to \company\ due to your emphasis on collaborative, cross-functional teams and to contribute to CAD software development.
+My background in designing new features and optimizing performance in geometry-related applications positions me well to excel in this role.
+I am eager to contribute my expertise to your team.
+I am confident that my experience aligns well with your objectives at \company\, and I look forward to the opportunity to discuss how I can benefit your group with my skills and determination. Thank you for considering my application.
+
+% Closer
+\vspace{0.1in}
+\vfill
+
+\begin{flushright}
+\closer,
+
+\myname\\
+%\mytitle
+\end{flushright}
+
+\end{document}

@@ -3,7 +3,7 @@
 \usepackage{footnote}
 \usepackage{amsmath}
 \usepackage{amsthm,amsbsy,fourier}
-\usepackage{eucal}
+%\usepackage{eucal}
 \usepackage{physics}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -19,7 +19,7 @@
 \usepackage{booktabs}
 \usepackage[pagetoc,toc,titletoc,title]{appendix}
 \usepackage{tocloft}
-\usepackage{lineno}
+%\usepackage{lineno}
 \linenumbers
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarks=true,bookmarksopen=false}
@@ -84,14 +84,14 @@
 \newcommand{\de}{\Delta}
 
 \graphicspath{ {./figures} }
-\title{Emergent Topological Phenomena in Low-D Systems Induced by Gauge Potentials}
+\title{Emergent Topological Phenomena in Low-Dimensional Systems Induced by Gauge Potentials}
 \author{Aidan Winblad}
 % department name
 \email{acwinblad@gmail.com}
 \department{Department of Physics}
 
 % semester of completion
-\semester{Fall 2024}
+\semester{Spring 2025}
 
 % committee member names
 \advisor{Hua Chen}
@@ -100,7 +100,7 @@
 \committee{Olivier Pinaud}
 
 \mycopyright{%
-Copyright by Aidan Winblad 2024 \\
+Copyright by Aidan Winblad 2025 \\
 All Rights Reserved
 }
 
@@ -141,10 +141,12 @@ All Rights Reserved
 \mainmatter % starts thesis body
 
 \chapter{Introduction}
+\input{./ch-01/introduction.tex}
 \input{./ch-01/maxwell-theory-gauge-potentials.tex}
 \input{./ch-01/minimal-coupling.tex}
 \input{./ch-01/peierls-phase.tex}
 \input{./ch-01/topological-superconductors.tex}
+\input{./ch-01/effective-p-wave.tex}
 \input{./ch-01/landau-levels.tex}
 
 \chapter{Superconducting Triangular Islands as a Platform for Manipulating Majorana Zero Modes}
@@ -173,6 +175,7 @@ All Rights Reserved
 \input{./ch-app/kitaev-triangle-peierls-sub.tex}
 % the section above includes a more explicit version of the section below, so it has been commented out.
 %\input{./ch-app/conditions-for-mzm.tex}
+\input{./ch-app/effective-p-wave-derivation.tex}
 
 \chapter{Landau Level-Like Topological Floquet Hamiltonians}
 \input{./ch-app/quantum-harmonic-oscillator.tex}

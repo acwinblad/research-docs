@@ -10,45 +10,45 @@ I'm skipping whatever remains of this entry
 Warning--empty author in supp
 Warning--empty title in supp
 Warning--empty year in supp
-You've used 111 entries,
+You've used 110 entries,
             1791 wiz_defined-function locations,
-            1175 strings with 30857 characters,
-and the built_in function-call counts, 28732 in all, are:
-= -- 2203
-> -- 1875
+            1169 strings with 30697 characters,
+and the built_in function-call counts, 28490 in all, are:
+= -- 2178
+> -- 1871
 < -- 2
-+ -- 665
-- -- 554
-* -- 2717
-:= -- 4855
-add.period$ -- 329
-call.type$ -- 111
-change.case$ -- 109
++ -- 663
+- -- 553
+* -- 2696
+:= -- 4819
+add.period$ -- 326
+call.type$ -- 110
+change.case$ -- 108
 chr.to.int$ -- 0
-cite$ -- 114
-duplicate$ -- 1007
-empty$ -- 2517
-format.name$ -- 554
-if$ -- 5997
+cite$ -- 113
+duplicate$ -- 998
+empty$ -- 2491
+format.name$ -- 553
+if$ -- 5945
 int.to.chr$ -- 0
-int.to.str$ -- 111
-missing$ -- 112
-newline$ -- 553
-num.names$ -- 112
-pop$ -- 155
+int.to.str$ -- 110
+missing$ -- 111
+newline$ -- 548
+num.names$ -- 111
+pop$ -- 154
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 370
+skip$ -- 367
 stack$ -- 0
-substring$ -- 2002
-swap$ -- 125
+substring$ -- 1971
+swap$ -- 124
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 249
-width$ -- 114
-write$ -- 1214
+while$ -- 246
+width$ -- 113
+write$ -- 1203
 (There was 1 error message)

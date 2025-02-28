@@ -1,5 +1,5 @@
 \section{Floquet Landau level-like bands in Dirac systems}
-In this section we demonstrate a Dirac system in the presence of a standing non-uniform circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field that is composed of the electric field component of light.
+In this section we demonstrate a Dirac system in the presence of a standing, non-uniform, circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field that is composed of the electric field component of light.
 Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb monolayer in the presence of a gauge potential as
 
 \begin{figure}
@@ -34,9 +34,8 @@ This form of the electric field relates to the following gauge potential, via $\
 Substituting Eq.~\eqref{eq:ADirac} into Eq.~\eqref{eq:HDirac}, we arrive at%
 
 \begin{equation}\label{eq:HDtime}
-  \ham(t)=\ham_{0} - \sigma _{x} \dfrac{v_F eE}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F eE}{2\omega}\sin{(Kx)} \cos2\omega t,
+  \ham(t)= v_{F}\bm{\sigma}\cdot\vec{p} - \sigma _{x} \dfrac{v_F eE}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F eE}{2\omega}\sin{(Kx)} \cos2\omega t.
 \end{equation}%
-where $\ham_0 = v_{F}\bm{\sigma}\cdot\vec{p}$.
 Due to the laser light's time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:HDtime}.
 This introduces the quasienergy matrix $Q_{m,m+n} = H_n + m\hbar\omega\delta_{n0}$ after performing the Fourier time-transform of the Hamiltonian, given as
 
@@ -48,12 +47,12 @@ To use the high-frequency approximation we require $\hbar\omega \gg H_{\pm1,\pm2
 After applying the high-frequency approximation to first and second order expansion in $\hbar\omega$, it leads to the zeroth-mode effective Hamiltonian in Eq.~\eqref{eq:HDtime} as
 
 \begin{equation} \label{eq:HDeff}
-  H_{\text{eff}}= H_{0}-\sigma_y\frac{v_F^3 e^2 E^2 p_y}{\hbar^{2}\omega^{4}}
+  H_{\text{eff}}= v_{F}\bm{\sigma}\cdot\vec{p}-\sigma_y\frac{v_F^3 e^2 E^2 p_y}{\hbar^{2}\omega^{4}}
   +\sigma_y\frac{v_F^3 e^3 E^{3}\sin{(Kx)}}{4\hbar^{2}\omega^{5}}
   -\sigma_x\frac{v_F^3 e^2 E^2 \left\{p_x, \sin^2{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
 \end{equation}
 The derivation can be found in the Appendix \ref{fll-dirac-derivation}.
-In Eq. ~\eqref{eq:HDeff}, the first order term in $\hbar \omega$ leads to gap at the Dirac point in normally incident circularly polarized light experiments \cite{YHW, JWM} and is zero here due to the non-uniformity nature of incident laser lights.
+In Eq. ~\eqref{eq:HDeff}, the first order term in $\hbar \omega$ leads to gap at the Dirac point in normally incident, circularly polarized light experiments \cite{YHW, JWM} and is zero here due to the non-uniformity nature of incident laser lights.
 This effective Hamiltonian can be simplified in the long wavelength limit, $Kx \ll 1$ to
 
 \begin{align} \label{eq:HeffDirac}
@@ -69,15 +68,15 @@ Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffDirac}, we obtained the eigen
 \end{equation}
 which is similar to graphene LLs spectrum in the limit of equal velocities.
 The effective magnetic field in the Dirac Hamiltonian achieves a highly degenerate energy spectrum similar to LLs.
-From a classical point of view we call this a LL-like spectrum, the difference being electrons are not necessarily in cyclotron orbits but orbits, potentially more complicated, due to CPL producing a Coulumb force in the material's 2D plane.
+Unlike conventional LLs, the electron motion is not a cyclotron orbit but a potentially more complicated orbit, due to CPL inducing a Coulumb force in the material's 2D plane.
 
 There are several ways to enhance the effective magnetic field and directly LL-like energies for a Dirac system.
 Electric field strength can be increased within reason as we are limited by the photon energy to ensure the high-frequency expansion holds, $E \ll 2\hbar\omega^2/e v_F$, one can reasonably use electric field strengths up to 20\% of the limit due to photon energy.
 The lights wavenumber $K= \omega \sin{(\theta_i)} / v_p$ has a linear relationship to photon energy, too.
 Overall, considering the high-frequency limit on the electric field, the effective field $B^D \propto \omega^2 \sin{(\theta_i)} / (v_F v_p)$.
+Without too much consequence the incident angle can be increased up to $\pi/2$ and decreasing the phase velocity of light would enhance the effective magnetic field.
 Increasing photon energy is one way to enhance the effective magnetic field.
 As considered in previous literature, when photon energy and electric field are increased more energy is pumped into the system, shorter pulses are required to prevent damaging the system \cite{YHW, JWM}.
-Without too much consequence the incident angle can be increased up to $\pi/2$ and descreasing the phase velocity of light would enhance the effective magnetic field.
 
 %\Blue{This next paragraph should be in the discussion since it uses similar language and results as 2DEG?}
 %It is important to note, that this system experiences QHE for values of $C\neq0$ and can flip chirality when $C$ changes sign, more details in REFERENCE APPENDIX.

@@ -1,10 +1,8 @@
 \section{Maxwell's equations and gauge transformations}
 Here we give an overview of Maxwell's equations in relation to gauge potentials and transformations.
 The electric and magnetic fields, $\vec{E}$ and $\vec{B}$, respectively, are physical observables.
-While differing potential fields $V$ and $\vec{A}$ are not directly observable, both give the same electric and magnetic fields.
-A gauge potential and its transformation are not physical and are reflected under gauge invariance.
-Introducing a gauge potential into a condensed matter system allows us to manipulate it.
-To do so, we start with Maxwell's equations and aim to rewrite them in terms of potential fields.
+While different scalar potentials $V$ and gauge potentials $\vec{A}$ are not directly observable, they produce the same electric and magnetic fields, reflecting the principle of gauge invariance.
+To show this, we start with Maxwell's equations and aim to rewrite them in terms of potential fields.
 
 \begin{align}
   \nabla \cdot \vec{E} &= \dfrac{1}{\epsilon_0}\rho, \label{eq:maxwell1} \\
@@ -42,8 +40,8 @@ then $\beta = -\partial_t \lambda + k(t)$ and
   V' &= V - \partial_t \lambda + k (t),
 \end{align}
 which is a general gauge transformation of potentials.
-A change in $V$ and $\vec{A}$ does not alter the electric and magnetic fields, i.e.\ they are gauge invariant, and are tuned to adjust the divergence of $\vec{A}$.
-This allows one to solve the scalar and vector potentials readily depending on the gauge ~\cite{griffithsIntroductionElectrodynamics2024}.
+Thus $V$ and $\vec{A}$ are gauge invariant.
+This allows one to leverage gauge invariance to conveniently determine both scalar and gauge potentials for a system ~\cite{griffithsIntroductionElectrodynamics2024}.
 
 %\Blue{Probably unnecessary.}
 %One common example of gauge is the Coulomb gauge, which is used in magnetostatics.

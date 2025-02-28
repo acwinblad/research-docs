@@ -1,17 +1,16 @@
-\section{Minimal coupling and Canonical momentum}
-With the gauge potentials and their invariance shown we next show how a gauge potential couples to the momentum operator, also known as minimal coupling.
-This occurs when a charged particle is in a gauge potential field.
+\section{Minimal coupling and canonical momentum}
+With gauge potentials and their invariance shown we next review how a gauge potential couples to the momentum operator, also known as minimal coupling.
 Minimal coupling comes from the following substitution
 
 \begin{equation}
   -i\hbar\nabla \rightarrow -ih\nabla - q\vec{A},
 \end{equation}
 which can be derived from the canonical momentum operator when a charged particle is present in a gauge potential.
-In this case, minimal coupling means the field is coupling the orbital and potential only, ignoring higher order multipole moments.
+In this case, minimal coupling is defined by a field coupling orbital and potential only, ignoring higher order multipole moments.
 This also allows the system to have a local gauge invariance under U(1) transformations, i.e.
 $\vec{A} \rightarrow \vec{A} + \nabla\lambda$  ~\cite{altlandCondensedMatterField2023}.
 
-Next, we derive the canonical momentum operator and demonstrate its gauge invariance.
+Next, we derive the canonical momentum operator.
 Starting with the Lagrangian for charged particle in a scalar and gauge potential,
 
 \begin{align}
@@ -19,7 +18,7 @@ Starting with the Lagrangian for charged particle in a scalar and gauge potentia
   \mathcal{L} &= \dfrac{1}{2} m \dot{r}^2 - qV + q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t),
 \end{align}
 where $T = \tfrac{1}{2} m \dot{r}^2$ and $U = qV - q \dot{\vec{r}} \cdot \vec{A}(\vec{r},t)$.
-Recall from classical mechanics that
+Recalling
 
 \begin{align}
   \vec{p}_{\text{can}} &= \dfrac{\partial\mathcal{L}}{\partial \dot{\vec{r}}} \nonumber \\
@@ -28,7 +27,7 @@ Recall from classical mechanics that
   \vec{p}_{\text{can}} &= \vec{p}_{\text{kin}} + q \vec{A}.
   \label{eq:canonical-momentum}
 \end{align}
-With the canonical momentum defined, the Hamiltonian is
+With the canonical momentum defined, the Hamiltonian becomes
 
 \begin{align}
   \ham &= \vec{p}_{\text{can}} \cdot \dot{\vec{r}} - \mathcal{L} \nonumber \\
@@ -40,8 +39,8 @@ With the canonical momentum defined, the Hamiltonian is
 Thus, a charged particle in the presence of a gauge potential has the following minimal coupling,
 $i\hbar\nabla - q\vec{A}$.
 
-Just as before for electric and magnetic fields, we will show the Hamiltonian is gauge invariant.
-It can be shown with a scalar potential in the Hamiltonian, but we do not since it is irrelevant for our purposes.
+We will now show the Hamiltonian is gauge invariant.
+One can show it with a scalar potential in the Hamiltonian, but we do not since it is irrelevant for our purposes.
 Suppose
 $\ham|\psi \rangle = \epsilon |\psi \rangle$
 and
@@ -100,5 +99,5 @@ We see the local phase of the wavefunction is changed but it still represents th
 \begin{align}
   \langle \psi'| \ham' |\psi'\rangle &= \langle \psi | U^{\dagger} U \epsilon |\psi \rangle = \epsilon, \nonumber \\
   \langle \psi | \ham |\psi \rangle &= \langle \psi | \epsilon |\psi \rangle = \epsilon. \end{align}
-In other words
-$U^{\dagger} \ham' U = \ham$  ~\cite{kittelIntroductionSolidState2018}.
+Thus,
+$U^{\dagger} \ham' U = \ham$, and gauge invariance is shown ~\cite{kittelIntroductionSolidState2018}.
