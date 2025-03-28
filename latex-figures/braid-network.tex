@@ -1,0 +1,30 @@
+\documentclass[]{article}
+\usepackage[active,floats,tightpage]{preview}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart}
+
+% reset vec and hat style to a bold type
+\let\oldhat\hat % W: Could not find argument for command. (14)
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+
+\begin{document}
+
+
+\begin{figure}
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[width=\textwidth]{./base-braid-network.pdf}};
+      \node[rotate=90] (time) at (-5.5,0) {\large Time};
+      \node[align=center] (Qm) at (-3.2,4.05) {Quantum memory \\ $|\Psi_i\rangle$};
+      \node[align=center] (cp) at (-3.2,0) {Computation \\ (braiding)};
+      \node[align=center] (ro) at (-3.2,-4.15) {Readout \\ (fusion) \\ $|\Psi_f\rangle$};
+      \node[inner sep=0pt] (g1) at (-0.45,4.80) {qubit};
+      \node[inner sep=0pt] (g1) at (1.95,4.80) {qubit};
+      \node[inner sep=0pt] (g1) at (4.45,4.80) {qubit};
+    \end{tikzpicture}
+
+\end{figure}
+
+\end{document}

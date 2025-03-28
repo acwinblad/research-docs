@@ -40,16 +40,16 @@ Zhilin Li, Hongxiang Chen, Shifeng Jin, Di~Gan, Wenjun Wang, Liwei Guo, and
   {{Thermodynamics}}.
 \newblock {\em Crystal Growth \& Design}, 16(3):1172--1175, March 2016.
 
+\bibitem{kitaevUnpairedMajoranaFermions2001}
+A.~Yu Kitaev.
+\newblock Unpaired {{Majorana}} fermions in quantum wires.
+\newblock {\em Phys.-Usp.}, 44(10S):131, October 2001.
+
 \bibitem{ivanovNonAbelianStatisticsHalfQuantum2001}
 D.~A. Ivanov.
 \newblock Non-{{Abelian Statistics}} of {{Half-Quantum Vortices}} in p -{{Wave
   Superconductors}}.
 \newblock {\em Phys. Rev. Lett.}, 86(2):268--271, January 2001.
-
-\bibitem{kitaevUnpairedMajoranaFermions2001}
-A.~Yu Kitaev.
-\newblock Unpaired {{Majorana}} fermions in quantum wires.
-\newblock {\em Phys.-Usp.}, 44(10S):131, October 2001.
 
 \bibitem{aliceaNonAbelianStatisticsTopological2011}
 Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
@@ -427,7 +427,8 @@ P.~G.~De Gennes.
 \newblock CRC Press, Boca Raton, March 2018.
 
 \bibitem{supp}
-{\em {See Supplemental Material at [url]}}.
+{\em {See Supplemental Material in Chapter 2 of this dissertation for
+  additional technical details.}}
 
 \bibitem{fengProbingRobustMajorana2022}
 Guan-Hao Feng and Hong-Hao Zhang.

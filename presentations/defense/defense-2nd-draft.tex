@@ -1,6 +1,7 @@
 \documentclass[xcolor=dvipsnames,10pt,aspectratio=169]{beamer}
 %\usetheme[hideallsubsections]{Hannover}
-\usetheme[width=1.9cm]{Hannover} % plenty of themes to pick from
+%\usetheme[width=1.9cm]{Hannover} % plenty of themes to pick from
+%\usetheme{Fredericksburg}
 \usefonttheme[onlymath]{serif}
 \graphicspath{{../../images/}}
 \usepackage[utf8]{inputenc}
@@ -17,12 +18,16 @@
 \usepackage{tikz}
 \usepackage{verbatim}
 \usepackage{pgfplots}
-\usetikzlibrary{arrows,shapes}
+\usepackage{color}
+\usetikzlibrary{arrows,decorations.pathmorphing,shapes}
 \usecolortheme{crane} % plenty of color themes to pick from
 \useinnertheme{rectangles}
 
+\let\olditemize\itemize \renewcommand{\itemize}{\olditemize\itemsep5pt}
+
 \definecolor{UBCgreen}{RGB}{30, 77, 43} % UBC Blue (primary)
 \definecolor{UBCgold}{RGB}{200, 195, 114} % UBC Grey (secondary)
+
 
 \setbeamercolor{palette primary}{bg=UBCgreen,fg=white}
 \setbeamercolor{palette secondary}{bg=UBCgreen,fg=white}
@@ -47,17 +52,17 @@
 \setbeamertemplate{section in toc}[bullets]
 
 \addtobeamertemplate{title page}{}{%
-    \begin{textblock*}{100mm}(0.445\textwidth,-22.4em)
-      \includegraphics[width=1.5cm]{./figures/CSU-Ram-357-617.png}
+    \begin{textblock*}{100mm}(0.445\textwidth,-21.45em)
+      \includegraphics[width=1.35cm]{./figures/CSU-Ram-357-617.png}
     \end{textblock*}
     \begin{textblock*}{85em}(-1.0em,-12em)
       \includegraphics[width=0.18\textwidth]{./figures/spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_1.pdf}
     \end{textblock*}
-    \begin{textblock*}{75em}(24.0em,-12em)
+    \begin{textblock*}{75em}(26.0em,-12em)
       \includegraphics[width=0.19\textwidth]{./figures/GS-T-Square.pdf}
     \end{textblock*}
-    \begin{textblock*}{100em}(-4.8em,16em)
-      \tiny Powered by \LaTeX
+    \begin{textblock*}{100em}(-2.5em,1.8em)
+      \tiny Built in \LaTeX
     \end{textblock*}
 }
 
@@ -66,9 +71,16 @@
       \includegraphics[width=0.925cm]{./figures/CSU-Ram-357-617.png}
     \end{textblock*}
 }
+\useoutertheme[subsection=false]{miniframes}
 \makeatletter
-\setbeamertemplate{sidebar canvas \beamer@sidebarside}%
-                  [vertical shading][top=UBCgold,bottom=UBCgold]
+\newcommand\letbeamertemplate[2]{%
+  \csletcs{beamer@@tmpl@#1}{beamer@@tmpl@#2}%
+}
+%\setbeamertemplate{sidebar canvas \beamer@sidebarside}%
+                  %[vertical shading][top=UBCgold,bottom=UBCgold]
+\letbeamertemplate{footline}{headline}
+% Then, reset `headline`
+\setbeamertemplate{headline}[default]
 \makeatother
 
 %\addtobeamertemplate{sidebar left}{}{
@@ -77,10 +89,11 @@
 %  \includegraphics[align = l, width = 1cm]{./figures/CSU-Ram-357-617.png}
 %}
 
-%\setbeamertemplate{section in toc}{\hspace*{0em}\inserttocsection}
-%\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
+\setbeamertemplate{section in toc}{\hspace*{0em}\inserttocsection}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
 
 \let\oldhat\hat
+\let\op\hat
 \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
 
@@ -94,8 +107,8 @@
 \newcommand{\cc}{c^{\dagger}}
 \newcommand{\de}{\Delta}
 
-\newcommand{\TT}{Emergent Topological Phenomena in Low-D Systems Induced by Gauge Potentials}
-\newcommand{\ST}{Emergent topological phenomena in low-D systems induced by gauge potentials}
+\newcommand{\TT}{Emergent Topological Phenomena in Low-Dimensional Systems Induced by Gauge Potentials}
+\newcommand{\ST}{Emergent topological phenomena in low-dimensional systems induced by gauge potentials}
 \newcommand{\BD}{Background}
 \newcommand{\MO}{Motivation}
 \newcommand{\FO}{Formulation}
@@ -106,152 +119,155 @@
 \subtitle{}
 \author[Aidan Winblad]{Aidan Winblad \small \and\\ Hua Chen}
 \institute{Department of Physics \and\\ Colorado State University}
-\date{\small October 26, 2024}
+\date{\small March 14, 2025}
 
 \begin{document}
   \begin{frame}
   \titlepage
   \end{frame}
 
+  \begin{frame}{Presentation objectives}
+
+    Part I: Topological superconducting triangular islands
+    \begin{itemize}
+      \item Construct a new platform for topological quantum logic gates via:
+        \begin{itemize}
+          \item Triangular geometry
+          \item Applied gauge potentials
+        \end{itemize}
+    \end{itemize}
+    \vspace{5mm}
+    Part II: Floquet quantum Hall effect
+    \begin{itemize}
+      \item Induce quantum Hall effect with inhomogeneous, circularly polarized light via:
+        \begin{itemize}
+          \item Floquet theorem
+          \item High-frequency approximation
+        \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \section{I: \BD}
+
   \begin{frame}
-  \frametitle{Outline}
+  \frametitle{Part I: Topological superconducting triangular islands outline}
     \begin{itemize}
       \item \BD:
         \begin{itemize}
           \footnotesize
-          \item Majorana fermions in particle physics and condensed matter
-          \item Topological states
+          \item What does topology offer for quantum computing
+          \item What are Majorana fermions and where to find them
           \item Kitaev chain and Majorana number
         \end{itemize}
       \item \MO:
         \begin{itemize}
           \footnotesize
           \item Braiding and topological quantum computing
-          \item T-junctions to triangular structures for braiding
-          \item Supercurrents as gauge potential
+          \item T-junctions to triangular structures
         \end{itemize}
-      \item \RE: Two approaches
+      \item \RE:
         \begin{itemize}
           \footnotesize
-          \item Exactly solvable miminal model
-          \item Hollow triangular islands \& bulk-edge correspondence
-          \item Braiding of 4 Majorana zero modes
+          \item Minimal Kitaev triangle
+          \item Hollow triangular islands
+          \item Minimal braiding example
         \end{itemize}
       \item \CO
-      \item Additional Research
+      %\item Additional Research
+      %  \begin{itemize}
+      %    \footnotesize
+      %    \item Floquet quantum Hall effect
+      %  \end{itemize}
     \end{itemize}
   \end{frame}
 
-  \section{\BD}
+  \begin{frame}{What does topology offer for quantum computing?}
+    \begin{itemize}
+      \visible<1->{
+      \item Quantum computers have two prominent ``local'' errors (noise, perturbations).
+      %\item[]
+      \begin{itemize}
+        \item Classical error: flips a qubit from empty to occupied, $|0\rangle \rightarrow |1\rangle$, or vice versa.
+        %\item[]
+        \item Phase error: changes the sign of an occupied qubit, $|1\rangle \rightarrow -|1\rangle$.
+        %\item[]
+        \item Normal qubits have various means for reducing error and achieving fault-tolerance.
+      \end{itemize}
+      }
+      \visible<2->{
+      %\item[]
 
-  %\begin{frame}
-  %\frametitle{Gauge Potentials in Hamiltonians}
+      \item Topological qubits have fault-tolerance baked in.
+      \begin{itemize}
+        \item Their qubit information is stored ``non-locally'', making the above errors unlikely to occur.
+        \item What system allows for topological qubits?
+      \end{itemize}
+      }
+    \end{itemize}
 
-  %%\begin{multicols}{2}
-  %\centering Minimal Coupling
-  %\begin{gather}
-  %  \vec{p}_{\text{can}} = \vec{p}_{\text{kin}} + q\vec{A} \\
-  %  \ham = \dfrac{1}{2m} {\left( \vec{p}_{\text{can}} - q\vec{A} \right)}^2 + qV
-  %\end{gather}
-  %\vspace{1em}
-  %\pause
+    \vspace{1cm}
+    \centering
+    \visible<3>{
+    \textbf{Majorana fermions are candidates for building topological quantum computers.}}
 
-  %\centering Peierls Phase
-  %\begin{gather}
-  %  \cc_j c_l \rightarrow \cc_j c_l \exp{\left[ \dfrac{iq}{\hbar} \int_{\vec{r}_j}^{\vec{r}_j} \vec{A}\cdot d\vec{l} \right]} = e^{i\phi_{jl}} \cc_j c_l \\
-  %  \ham = \sum_{\langle j, l \rangle} t e^{i\phi_{jl}} \cc_j c_l + h.c.
-  %\end{gather}
+  \end{frame}
 
-  %%\end{multicols}
-
-  %\end{frame}
-
-
-  \begin{frame}{MFs in Particle Physics}
-    \begin{multicols}{2}
+  \begin{frame}{What are Majorana fermions?}
+    \begin{columns}
+      \column{0.5\textwidth}
       \centering
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (-1,0)
-        {\includegraphics[width=0.4\textwidth]{./figures/Fermi-Dirac.jpg}};
-        \node[inner sep=0pt] (Fermi) at (-2.35,-2.0) {\small Enrico Fermi};
-        \node[inner sep=0pt] (Dirac) at (0.35,-2.0) {\small Paul Dirac};
+      \begin{tikzpicture}[>=stealth',  pos=.8,photon/.style={decorate,decoration={snake,post length=1mm}}
+]
+        \visible<1->{\node[inner sep=0pt] (figure) at (-1.5,0)
+        {\includegraphics[height=0.3\textheight]{./figures/Ettore_Majorana.jpg}};}
+        \visible<1->{\node[inner sep=0pt] (Ettore) at (-1.5,1.55) {\small Ettore Majorana};}
+        %\visible<2>{\node[inner sep=0pt] (arrow) at (0,0.0) {$\rightarrow\ \leftarrow$};}
+        %\visible<2>{\node[inner sep=0pt] (figure) at (1.5,0)
+        %{\includegraphics[height=0.3\textheight]{./figures/Ettore_Majorana.jpg}};}
+        %\visible<2>{\node[inner sep=0pt] (Ettore) at (1.5,1.55) {\small Doppelganger};}
+
+        %\visible<3>{
+        %\draw[->,photon] (0,0) -- node[above left] {} (30:2);
+        %\draw[->,photon] (0,0) -- node[below left] {} (150:2);}
+
       \end{tikzpicture}
 
-      \vspace{1.0pt}
-
-      \centering
+      \vspace{1em}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.18\textwidth]{./figures/Ettore_Majorana.jpg}};
-        \node[inner sep=0pt] (Enrico) at (0,-1.65) {\small Ettore Majorana}
+        {\includegraphics[height=0.3\textheight]{./figures/majorana-experiment.png}};
+        \node[inner sep=0pt] (reference) at (0,-1.4) {\small MAJORANA project};
+      %\node[inner sep=0pt] (reference) at (0,-1.8) {\small neutrinoless double beta (0$\nu\beta\beta$) decay};
       \end{tikzpicture}
 
+      \column{0.5\textwidth}
       \begin{itemize}
         \setlength\itemsep{0pt}
-        \small
         \item Fermions
           \begin{itemize}
-            \item Dirac, Weyl, Majorana
             \item Fermi-Dirac statistics
+            \item Pauli exclusion principle
             \item Half-odd-integer spin
           \end{itemize}
       \end{itemize}
-      \begin{itemize}
-        \setlength\itemsep{0pt}
-        \small
-        \item  Dirac Fermions
-        \begin{itemize}
-          \item Particle $\neq$ Antiparticle
-          \item Charged, Massive
-        \end{itemize}
-      \end{itemize}
 
       \begin{itemize}
         \setlength\itemsep{0pt}
-        \small
-        \item  Weyl Fermions
-        \begin{itemize}
-          \item Particle $\neq$ Antiparticle
-          \item Charged, Massless
-        \end{itemize}
-      \end{itemize}
-
-      \begin{itemize}
-        \setlength\itemsep{0pt}
-        \small
         \item Majorana Fermions (MFs)
         \begin{itemize}
             \item Particle $=$ Antiparticle
             \item Neutral, Massive
-            \item SM candidates: Neutrino, Dark Matter
+            \item Negative results for Majorana particles as elementary particles
         \end{itemize}
       \end{itemize}
 
-    \end{multicols}
+    \end{columns}
 
   \end{frame}
 
-  \begin{frame}{MFs in Particle Physics}
-    \begin{multicols}{2}
-      \centering
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.5\textwidth]{./figures/majorana-experiment.png}};
-        \node[inner sep=0pt] (reference) at (0,-2.1) {\small MAJORANA project:};
-        \node[inner sep=0pt] (reference) at (0,-2.5) {\small neutrinoless double beta (0$\nu\beta\beta$) decay};
-      \end{tikzpicture}
-
-      \begin{itemize}
-          \item Are neutrinos MFs?
-          \item If yes, standard model is incomplete
-          \item Negative results for Majorana particles so far
-      \end{itemize}
-
-    \end{multicols}
-  \end{frame}
-
-  \begin{frame}{MFs in Condensed Matter}
-    \begin{multicols}{2}
+  \begin{frame}{Where to find Majorana fermions?}
+    \begin{columns}
+      \column{0.5\textwidth}
       \begin{itemize}
         \item Superconductors (SCs)
           \begin{itemize}
@@ -262,147 +278,80 @@
             \pause
             \item Bogoliubov quasiparticles
             \begin{itemize}
-              \item Excitation from ground state, pairs an electron to a hole with opposite momenta.
+              \item Excitation, pairs an electron to a hole with opposite momenta.
               \item[] \[ H_{BdG} = \begin{bmatrix} \epsilon(k) & \de(k) \\ \de^\ast(k) & -\epsilon(-k) \end{bmatrix} \]
-              \item Zero-energy excitations in \textit{p}-wave SC may be MFs.
+              \item Zero-energy excitations in non-tivial \textit{p}-wave SC may be MFs.
               \item Come in pairs.
             \end{itemize}
           \end{itemize}
       \end{itemize}
-      \vspace{30mm}
 
+      \column{0.5\textwidth}
       \begin{figure}
-        \includegraphics[width=0.50\textwidth]{./figures/p-wave-mu-p1_25.pdf}
+        \includegraphics[width=0.90\textwidth]{./figures/p-wave-mu-p1_25.pdf}
       \end{figure}
 
-    \end{multicols}
+    \end{columns}
 
   \end{frame}
 
-  %\begin{frame}
-  %\frametitle{Topology in Condensed Matter}
-
-  %\begin{multicols}{2}
-  %\centering Topology
-  %\begin{figure}
-  %  \includegraphics[width=0.5\textwidth]{./figures/topology.pdf}
-  %\end{figure}
-  %\pause
-  %\vspace{10em}
-
-  %\centering Topological States
-  %\begin{figure}
-  %  \includegraphics[width=0.5\textwidth]{./figures/topological-states.pdf}
-  %\end{figure}
-
-  %\end{multicols}
-  %\end{frame}
-
-  \begin{frame}{MFs in Condensed Matter}
+  \begin{frame}{Kitaev chain - 1D \textit{p}-wave superconducting wire}
+    \centering
     \begin{tikzpicture}
-      \only<1>{\node[inner sep=0pt] (f1) at (0,0) {\includegraphics[width=0.9\textwidth]{./figures/kitaev-chain-1.pdf}};}
-      \only<2>{\node[inner sep=0pt] (f2) at (0,0) {\includegraphics[width=0.9\textwidth]{./figures/kitaev-chain-2.pdf}};}
+      \node[inner sep=0pt] (f2) at (0,0) {\includegraphics[width=0.9\textwidth]{./figures/kitaev-chain.pdf}};
+      \visible<1>{\draw[draw=white, fill=white] (-5.5,0.5) rectangle (5.8,-3.5);}
+      \visible<2>{\draw[draw=white, fill=white] (-1.5,-2.7) rectangle (1.5,-3.5);}
+      \visible<3>{\draw[line width=2pt, draw=UBCgold] (-1.5,-2.7) rectangle (1.5,-3.5);}
     \end{tikzpicture}
   \end{frame}
 
-  %\begin{frame}{MFs in Condensed Matter}
-  %  \begin{figure}
-  %    \includegraphics[width=\textwidth]{./figures/kitaev-chain.pdf}
-  %  \end{figure}
+  \begin{frame}{Band gap and topological phase}
+    \begin{tikzpicture}
+      \visible<1->{
+      \node[inner sep=0pt] (tp) at (-4.6,0)
+      {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p2_25.pdf}};
+      \node[inner sep=0pt] (tp) at (-4.6,-2.0) {\footnotesize $\mu=2.25t$};
+      \node[inner sep=0pt] (Mtp) at (-4.6,-2.5) {\footnotesize $\mathcal{M}=1$};
+      \node[inner sep=0pt] (tp) at (-4.6,-3.0) {\footnotesize Trivial};
+      }
 
-  %  \vspace{20pt}
-  %  Complex fermion in Majorana fermion basis
-  %  \begin{equation}
-  %    c_j = \dfrac{1}{2}(a_j + i b_j).
-  %  \end{equation}
+      %\pause
+      \visible<2->{
+      \node[inner sep=0pt] (cp) at (0,0)
+      {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p2_00.pdf}};
+      \node[inner sep=0pt] (cp) at (0.0,-2.0) {\footnotesize $\mu_c=2t$};
+      }
 
-  %\end{frame}
+      %\pause
+      \visible<3->{
+      \node[inner sep=0pt] (ntp) at (4.6,0)
+      {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p1_75.pdf}};
+      \node[inner sep=0pt] (ntp) at (4.6,-2.0) {\footnotesize $\mu=1.75t$};
+      \node[inner sep=0pt] (Mntp) at (4.6,-2.5) {\footnotesize $\mathcal{M}=-1$};
+      \node[inner sep=0pt] (tp) at (4.6,-3.0) {\footnotesize Non-trivial};
+      }
 
-  %\begin{frame}{MFs in Condensed Matter}
-  %  Hamiltonian for a 1D tight-binding chain with spinless \textit{p}-wave superconductivity
-  %  \begin{equation}
-  %    \ham_{chain} = -\mu\sum_j^N \cc_j c_j -\sum_j^{N-1} t \cc_j c_{j+1} + |\de| c_j c_{j+1} + h.c.
-  %  \end{equation}
-  %  Hamiltonian in Majorana fermion basis
-  %  \begin{equation}
-  %    \ham_{chain} = \dfrac{i}{2} \sum_j -\mu a_j b_j + (t+|\de|) b_j a_{j+1} + (-t+|\de|) a_j b_{j+1}.
-  %  \end{equation}
-  %  $t=|\de|=0$ and $\mu<0$, trivial phase
-  %  \begin{equation}
-  %    \ham = -\dfrac{i\mu}{2} \sum_j a_j b_j.
-  %  \end{equation}
-  %  $t=|\de|>0$ and $\mu=0$, non-trivial (topological) phase
-  %  \begin{equation}
-  %    \ham = it \sum_j b_j a_{j+1}.
-  %  \end{equation}
+      %\pause
+      \visible<4->{
+      \node[inner sep=0pt] (ntp) at (0, -3.5) {\small \underline{Non-trivial phase}};
+      \node[inner sep=0pt] (ntp) at (0, -4.0) {\small larger band gap $\rightarrow$ more robust against local errors $\rightarrow$ stronger topological protection};
+    }
 
-  %\end{frame}
-
-  %\begin{frame}{MFs in Condensed Matter}
-  %  \begin{figure}
-  %    \includegraphics[width=\textwidth]{./figures/kitaev-chain.pdf}
-  %  \end{figure}
-
-  %  Intersite fermion representation
-  %  \begin{equation}
-  %    \tilde{c}_j = \dfrac{1}{2}(a_{j+1} + i b_j).
-  %  \end{equation}
-  %  The highly non-local fermion state
-  %  \begin{equation}
-  %    f = \dfrac{1}{2}(a_{1} + i b_N),
-  %  \end{equation}
-  %  corresponds to zero energy. This is still true for $|\mu|< 2t$.
-  %\end{frame}
-
-  \begin{frame}{Band Gaps and Topological Phase}
-    \centering
-    \begin{figure}
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (tp) at (-4.6,0)
-        {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p2_25.pdf}};
-        \node[inner sep=0pt] (tp) at (-4.6,-2.0) {\footnotesize $\mu=2.25t$};
-        \node[inner sep=0pt] (Mtp) at (-4.6,-2.5) {\footnotesize $\mathcal{M}=1$};
-        \node[inner sep=0pt] (tp) at (-4.6,-3.0) {\footnotesize Trivial};
-
-        \pause
-        \node[inner sep=0pt] (cp) at (0,0)
-        {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p2_00.pdf}};
-        \node[inner sep=0pt] (cp) at (0.0,-2.0) {\footnotesize $\mu_c=2t$};
-
-        \pause
-        \node[inner sep=0pt] (ntp) at (4.6,0)
-        {\includegraphics[width=0.33\textwidth]{./figures/p-wave-mu-p1_75.pdf}};
-        \node[inner sep=0pt] (ntp) at (4.6,-2.0) {\footnotesize $\mu=1.75t$};
-        \node[inner sep=0pt] (Mntp) at (4.6,-2.5) {\footnotesize $\mathcal{M}=-1$};
-        \node[inner sep=0pt] (tp) at (4.6,-3.0) {\footnotesize Non-trivial};
-
-
-      \end{tikzpicture}
-    \end{figure}
-    \visible<4>{
-    \small
-    \begin{itemize}
-      \centering
-      \item[] \underline{Non-trivial phase}
-      \item[] \vspace{10pt}
-      \begin{itemize}
-        \centering
-        \item[]Large band gap $\rightarrow$ Robust against local errors $\rightarrow$ Topologically protected
-      \end{itemize}
-    \end{itemize}}
+    \end{tikzpicture}
   \end{frame}
 
-  \begin{frame}{Majorana Number \& Bulk-Edge Correspondence}
+  \begin{frame}{Majorana number \& bulk-edge correspondence}
     %Majorana number topological invariant 1D SC
 
+    \small
     Transform to Majorana basis
-    \begin{equation}
+    \begin{equation*}
       A = -i U \ham U^{\dagger}
-    \end{equation}
+    \end{equation*}
     Majorana number
-    \begin{equation}
+    \begin{equation*}
       \mathcal{M} = \text{sgn}[\text{Pf}(A)]
-    \end{equation}
+    \end{equation*}
 
     %Particle-hole symmetry in momentum-space allows
     %\begin{equation}
@@ -417,190 +366,155 @@
       \item If $|\mu| > 2t$, $\mathcal{M} = +1$, trivial topology
       \item If $|\mu| < 2t$, $\mathcal{M} = -1$, non-trivial topology
     \end{itemize}
-    \pause
 
     \begin{figure}
+      \visible<2->{
       \includegraphics[width = 0.6\textwidth]{./figures/bulk-edge.pdf}
+      }
     \end{figure}
 
+    \centering
+    \visible<3>{
+    \textbf{Warning! There are no \textit{p}-wave SCs currently, but we can build effective \textit{p}-wave SCs!}
+    }
 
   \end{frame}
 
-%  \begin{frame}{Effective \textit{p}-wave superconductor NEEDED?}
-%    \begin{multicols}{2}
-%      \centering
-%      \begin{tikzpicture}
-%        \node[inner sep=0pt] (figure) at (0,0)
-%        {\includegraphics[width=0.5\textwidth]{./figures/tunable-semiconductor.pdf}};
-%        \node[inner sep=0pt] (reference) at (0,-3) {\small Alicea, \textit{PRB} \textbf{81}, 125318 (2010).};
-%      \end{tikzpicture}
-%      \small
-%      \begin{equation}
-%        c_j = (c_{j\uparrow}, c_{j\downarrow})^T
-%      \end{equation}
-%      \textit{s}-wave SC paring term:
-%      \begin{equation}
-%        \ham_{SC} = \sum_j \de \cc_{j\uparrow} \cc_{j\downarrow} + h.c.
-%      \end{equation}
-%      Quantum well:
-%      \begin{equation}
-%        \ham_0 = \sum_j (6t - \mu) \cc_j c_j - \sum_{\langle j,l \rangle} (t \cc_l c_j + h.c.)
-%      \end{equation}
-%      Rashba spin-orbit coupling:
-%      \begin{equation}
-%        \ham_R = -it_R \sum_{\langle j,l \rangle \alpha\beta} \cc_{l\alpha} (\bm{\sigma}_{\alpha\beta} \times \hat{r}_{lj}) \cdot \hat{z} c_{j\beta}
-%      \end{equation}
-%      Zeeman field:
-%      \begin{equation}
-%        \ham_Z = \sum_j \cc_j \vec{V} \cdot \bm{\sigma} c_j
-%      \end{equation}
-%
-%    \end{multicols}
-%  \end{frame}
-
-  \begin{frame}{MFs in Condensed Matter}
-    \begin{multicols}{2}
+  \begin{frame}{Experimental evidence of Majorana fermions I}
+    \begin{columns}
+      \column{0.5\textwidth}
       \centering
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.35\textwidth]{./figures/swave-superconductor.pdf}};
+        {\includegraphics[height=0.40\textheight]{./figures/swave-superconductor.pdf}};
       \end{tikzpicture}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.30\textwidth]{./figures/Mourik-dispersion.jpeg}};
+        {\includegraphics[height=0.40\textheight]{./figures/Mourik-dispersion.jpeg}};
       \end{tikzpicture}
       \vspace{40pt}
+      \column{0.5\textwidth}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.50\textwidth]{./figures/Mourik-didv-curve.png}};
-        \node[inner sep=0pt] (reference) at (0.25,-3) {\footnotesize Mourik et al., \textit{Science} \textbf{336}, 1003 (2012).};
+        {\includegraphics[width=1.00\textwidth]{./figures/Mourik-didv-curve.png}};
+        \draw[line width = 2pt, draw=red] (0.23, 0.12) ellipse (0.5 and 2.5);
+        \node[inner sep=0pt] (reference) at (0.0,-3) {\footnotesize Mourik et al., \textit{Science} \textbf{336}, 1003 (2012)};
       \end{tikzpicture}
-    \end{multicols}
+    \end{columns}
   \end{frame}
 
-  \begin{frame}{MFs in Condensed Matter}
+  \begin{frame}{Experimental evidence of Majorana fermions II}
     \begin{tikzpicture}
-      \node[inner sep=0pt] (figure) at (-4,0)
+      \node[inner sep=0pt] (figure) at (-3.6,0)
       {\includegraphics[width=0.5\textwidth]{./figures/Nadj-Perge-setup.png}};
-      \node[inner sep=0pt] (figure) at (2.75,0)
+      \node[inner sep=0pt] (figure) at (3.6,0)
       {\includegraphics[width=0.5\textwidth]{./figures/Nadj-Perge-results.png}};
-      \node[inner sep=0pt] (reference) at (2.75,-1.75) {\footnotesize Nadj-Perge et al., \textit{Science} \textbf{346}, 602 (2014).};
+      \draw[line width=2pt, draw=red] (2.95,1.40) rectangle (3.67, -1.10);
+      \node[inner sep=0pt] (reference) at (3.60,-1.75) {\footnotesize Nadj-Perge et al., \textit{Science} \textbf{346}, 602 (2014)};
     \end{tikzpicture}
   \end{frame}
 
-  \begin{frame}{MFs in Condensed Matter}
+  \begin{frame}{Experimental evidence of Majorana fermions III}
     \centering
     \begin{tikzpicture}
       \node[inner sep=0pt] (figure) at (0,0)
       {\includegraphics[width=\textwidth]{./figures/Schneider-results.pdf}};
       \node[inner sep=0pt] (reference) at (0,-3.00) {\footnotesize Mn atoms (red spheres) on top of superconducting Nb (brown spheres).};
-      \node[inner sep=0pt] (reference) at (0,-3.40) {\footnotesize Schneider et al., \textit{Nature Nanotechnology} \textbf{17}, 384 (2022).};
+      \draw[line width=2pt, draw=red] (-3.0,1.38) rectangle (6.7, 0.50);
+      \node[inner sep=0pt] (reference) at (0,-3.40) {\footnotesize Schneider et al., \textit{Nature Nanotechnology} \textbf{17}, 384 (2022)};
     \end{tikzpicture}
+
+    \centering
+    \visible<2>{
+      \textbf{Zero-energy states could be Andreev bound states. ``Braiding'' can distinguish them.}
+    }
   \end{frame}
 
+  \section{I: \MO}
 
-  \section{\MO}
+  \begin{frame}
+    \frametitle{What makes Majorana fermions so cool?}
+    \begin{columns}
+      \column{0.6\textwidth}
 
-  %\begin{frame}{Braiding in a 2D \textit{p}-wave SC}
-  %  \footnotesize
-  %  \begin{multicols}{2}
-  %    \begin{itemize}
-  %      \item \textit{p}-wave superconductors can exhibit half-quantum vortices.
-  %      \item Triplet pairing
-  %        \begin{equation*}
-  %          \vec{d}(\vec{k}) = \Delta e^{i\phi} \langle \cos \alpha, \sin \alpha, 0 \rangle(k_x + i k_y)
-  %        \end{equation*}
-  %      \item The order phase $\phi$ and angle $\alpha$ of $\vec{d}$ rotate by $\pi: (\phi,\vec{d}) \mapsto (\phi+\pi, -\vec{d})$.
-  %      \item The order parameter $\theta$ maps to itself, $(0,2\pi)$, under the simultaneous change of both \vec{d} and $\phi: \theta = \phi+\alpha$.
-  %    \end{itemize}
-  %    \begin{equation*}
-  %      \ham_{\Delta} = \int d^2\vec{r} \Delta \left[ \Psi^{\dagger} \left[ e^{i\theta} * (\partial_x + i\partial_y) \right] \Psi + h.c. \right]
-  %    \end{equation*}
-  %    %\vspace{20pt}
-
-  %    \centering
-  %    \begin{figure}
-  %      \includegraphics[width=0.45\textwidth]{./figures/half-quantum-vortex.pdf}
-  %    \end{figure}
-
-  %    \begin{itemize}
-  %      \item if overall phase shifts by $\theta:$ $\Psi_{\alpha} \mapsto e^{i\theta/2} \Psi_{\alpha}$.
-  %      \item $(u,v) \mapsto (u e^{i\theta/2}, v e^{-i\theta/2})$
-  %    \end{itemize}
-
-  %  \end{multicols}
-  %\end{frame}
-
-
-  %\begin{frame}{Braiding in a 2D \textit{p}-wave SC}
-  %  \begin{multicols}{2}
-  %    \begin{figure}
-  %      \includegraphics[width=0.5\textwidth]{./figures/pwave-braid.pdf}
-  %    \end{figure}
-
-  %    \begin{itemize}
-  %        \item Interchanging two MFs:
-  %        \begin{itemize}
-  %          \item[] $\gamma_1 \rightarrow \gamma_2$ \\
-  %          \item[] $\gamma_2 \rightarrow -\gamma_1$ \\
-  %        \end{itemize}
-  %        \item Exhibit Non-Abelian Statistics
-  %        \item $a \ast b \neq b \ast a$
-  %    \end{itemize}
-  %    \begin{equation*}
-  %    \end{equation*}
-  %    \vspace{20pt}
-
-  %    \centering
-  %    \begin{tikzpicture}
-  %      \node[inner sep=0pt] (figure) at (0,0)
-  %      {\includegraphics[width=0.45\textwidth]{./figures/braid.pdf}};
-  %      \node[inner sep=0pt] (math) at (-0.18, -2.5) {\small $T_i T_j = T_j T_i$};
-  %      \node[inner sep=0pt] (math) at (0, -3.0) {\small $T_i T_{i+1} T_i = T_{i+1} T_i T_{i+1}$};
-  %      \node[inner sep=0pt] (reference) at (0,-3.5) {\footnotesize Ivanov, \textit{PRL} \textbf{86}, 268 (2001).};
-  %    \end{tikzpicture}
-
-  %  \end{multicols}
-  %\end{frame}
-
-  \begin{frame}{Braiding in 2D \textit{p}-wave SC}
-    \small
-    \begin{itemize}
-      \item 2D \textit{p}-wave (triplet pairing) SC can exhibit half-quantum vortices.
-        \vspace{1em}
-      \pause
-      \item Allows for MF states to accumulate $e^{i\theta/2}$ phase.
-        \vspace{1em}
-      \pause
-      \item Braiding demonstrates non-Abelian statistics i.e.\ $A*B \neq B*A$,
         \begin{itemize}
-          \item[\rightarrow] Allows for a universal quantum computer.
+          \visible<1->{\item 2D \textit{p}-wave (triplet pairing) SC exhibit half-quantum vortices.}
+          \vspace{1em}
+          \visible<2->{\item  MF state accumulate $e^{i\theta/2}$ phase.}
+          \vspace{1em}
+          \visible<3->{
+          \item Braiding demonstrates non-Abelian statistics i.e.\ $A*B \neq B*A$,
+          \begin{itemize}
+            \item[\rightarrow] Allows for a universal quantum computer.
+          \end{itemize}
+          }
+          \vspace{1em}
+          \visible<4->{\item Combine with MFs topological protection,
+          \begin{itemize}
+            \item[\rightarrow] Topological quantum computer.
+            \item[\rightarrow] Benefits: fewer repeated operations compared to normal qubits.
+          \end{itemize}
+          }
         \end{itemize}
-        \vspace{1em}
-      \pause
-      \item Combine with MFs topological protection,
-        \begin{itemize}
-          \item[\rightarrow] Fewer qubits or operations required compared to modern qubits.
-        \end{itemize}
-    \end{itemize}
+      \column{0.4\textwidth}
+
+      \visible<2->{
+      \begin{align*}
+        \gamma_1 &\rightarrow -\gamma_2 \\
+        \gamma_2 &\rightarrow \gamma_1
+      \end{align*}
+      }
+      \vspace{-5mm}
+
+      \begin{tikzpicture}
+        \visible<1>{
+        \node[inner sep=0pt] (f1) at (0,0) {\includegraphics[width=\textwidth]{./figures/vortex.pdf}};
+        }
+
+        \visible<2->{
+        \node[inner sep=0pt] (f1) at (0,0) {\includegraphics[width=\textwidth]{./figures/braiding.pdf}};
+        \node[inner sep=0pt] (g1) at (-1.15,0.25) {$\gamma_1$};
+        \node[inner sep=0pt] (g2) at (1.15,0.25) {$\gamma_2$};
+        }
+      \end{tikzpicture}
+      \visible<3->{
+      \begin{equation*}
+        U_{12} = \exp\left(\pm\dfrac{\pi}{4} \gamma_1\gamma_2 \right)
+      \end{equation*}
+      }
+    \end{columns}
   \end{frame}
 
-  \begin{frame}{Braiding in a Topological Quantum Computer}
+  \begin{frame}{Braiding in a topological quantum computer}
+    \vspace{-10mm}
+    \begin{columns}
+      \column{0.55\textwidth}
       \begin{figure}
-        \includegraphics[width=0.65\textwidth]{./figures/braiding.jpg}
-        \caption*{\footnotesize Field et.\ al., \textit{Quantum Sci. Technol.} \textbf{3}, 045004 (2018).}
+        \includegraphics[height=1.0\textheight]{./figures/braid-network.pdf}
+      \end{figure}
+      \column{0.45\textwidth}
+      \small
+      Generalized braiding of two neighboring MFs
+      \begin{align*}
+        U_{nm} = \exp\left(\pm\dfrac{\pi}{4} \gamma_n\gamma_m \right) \\ \\
+      \end{align*}
+      Readout after braiding
+      \begin{align*}
+        |\Psi_f\rangle = U_{n'm'} \cdots U_{nm} |\Psi_i\rangle
+      \end{align*}
+    \end{columns}
+
+  \end{frame}
+
+  \begin{frame}{T-junction as a quantum logic gate}
+
+    \begin{columns}
+      \column{0.3\textwidth}
+      \begin{figure}
+        \includegraphics[height=0.85\textheight]{./figures/t-junction-braid.pdf}
       \end{figure}
 
-  \end{frame}
-
-  \begin{frame}{T-junction as a Quantum Logic Gate}
-
-    \begin{multicols}{3}
-    \begin{figure}
-      \includegraphics[width=0.30\textwidth]{./figures/t-junction-braid.pdf}
-    \end{figure}
-
-      \begin{minipage}{0.67\textwidth}
+      \column{0.7\textwidth}
       \small
       %\begin{equation}
       %  \ham_T = -\mu \sum_j \cc_j c_j - \sum_j t \cc_j c_{j+1} + |\de| e^{i\phi} c_j c_{j+1} + h.c.
@@ -608,123 +522,117 @@
       %\begin{equation}
       %  c_j = e^{-i(\phi/2)}(\gamma_{j+1,1} + i \gamma_{j,2})/2
       %\end{equation}
-      \vspace{4em}
       \begin{itemize}
-        \footnotesize
+        \small
         \item Take pairing term $|\de|e^{i\phi} c_j c_{j+1}$ such that the site indices:
         \item Increase moving $\rightarrow / \uparrow$ in the horizontal/vertical wires: $\phi=0$,
         \item Decrease moving $\leftarrow / \downarrow$ in the horizontal/vertical wires: $\phi=\pi$.
       \end{itemize}
-
       \centering
+
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.8\textwidth]{./figures/ladder-junction.pdf}};
+        {\includegraphics[width=0.75\textwidth]{./figures/ladder-junction.pdf}};
         \node[inner sep=0pt] (reference) at (0,-1.5) {\small Alicea et al., \textit{Nature Phys.} \textbf{7}, 412 (2011)}
       \end{tikzpicture}
-      \vspace{20cm}
-      \end{minipage}
 
-    \end{multicols}
+      \visible<2>{
+        \begin{itemize}
+          \item[] \textbf{Difficult to build, manipulate, and read.}
+          \item[] \textbf{Not a smooth connection between 1D and 2D SCs.}
+        \end{itemize}
+      }
+
+    \end{columns}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Triangular Structures for Braiding}
-    \begin{multicols}{2}
+    \frametitle{Triangular structures for braiding}
+    \begin{columns}
 
+    \column{0.5\textwidth}
     \begin{itemize}
-      \item Consider triangular islands, topologically similar to T-junctions.
-      \item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces.
-      \item Make a smooth connection from 1D to 2D superconductors.
+      \item T-junction $\rightarrow$ Triangle
+      \item[] 3 endpoints $\rightarrow$ 3 vertices
+      \visible<2->{\item Islands of three-fold rotational symmetry occur naturally in epitaxial growth on close-packed metal surfaces.}
+      \visible<3>{\item In plane gauge potentials can break a triangle's 3-fold symmetry.}
+      \visible<3>{\item Make a smoother connection between 1D and 2D superconductors.}
     \end{itemize}
     \newline
 
-    \begin{figure}
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (0,0)
-        {\includegraphics[width=0.4\textwidth]{./figures/triangular-islands.pdf}};
-        \node[inner sep=0pt] (caption) at (0,-2.8) {\scriptsize Triangular Co islands on Cu(111).};
-        \node[inner sep=0pt] (reference) at (0,-3.2) {\small Pietzsch et al., \textit{PRL} \textbf{96}, 237203 (2006)}
-        \end{tikzpicture}
-      \end{figure}
-    \end{multicols}
-
-  \end{frame}
-
-  \begin{frame}{Topological phase transition induced by a supercurrent}
+    \column{0.5\textwidth}
     \centering
     \begin{tikzpicture}
-      \node[inner sep=0pt] (figure) at (0.0,1.5)
-      {\includegraphics[width=0.6\textwidth]{./figures/Romito-setup.pdf}};
-      \node[inner sep=0pt] (figure2) at (0.0,-2.0)
-      {\includegraphics[width=0.6\textwidth]{./figures/Romito-topology-map2.pdf}};
-      \node[inner sep=0pt] (reference) at (0,-4.5) {\small Romito et al., \textit{PRB} \textbf{85}, 020502(R) (2012).};
-    \end{tikzpicture}
+      \visible<2->{
+      \node[inner sep=0pt] (figure) at (0,0)
+      {\includegraphics[height=0.7\textheight]{./figures/triangular-islands.pdf}};
+      \node[inner sep=0pt] (caption) at (0,-3.2) {\scriptsize Triangular Co islands on Cu(111).};
+      \node[inner sep=0pt] (reference) at (0,-3.6) {\small Pietzsch et al., \textit{PRL} \textbf{96}, 237203 (2006)};
+      }
+      \end{tikzpicture}
+    \end{columns}
+
   \end{frame}
 
-  \begin{frame}{Topological phase transition induced by a supercurrent}
-    \centering
-    \begin{tikzpicture}
-      \node[inner sep=0pt] (figure) at (-3.5,0)
-      {\includegraphics[width=0.4\textwidth]{./figures/Takasan-setup.pdf}};
-      \node[inner sep=0pt] (figure2) at (3.0,0.0)
-      {\includegraphics[width=0.5\textwidth]{./figures/Takasan-results.pdf}};
-      \node[inner sep=0pt] (reference) at (-3.5,-1.5) {\small Takasan et al., \textit{PRB} \textbf{106}, 014508 (2022).};
-    \end{tikzpicture}
-  \end{frame}
+  \section{I: \RE}
 
-  \section{\RE}
-
-  \begin{frame}{Two Proposals}
+  \begin{frame}{Two proposals}
     \begin{itemize}
-      \item Exactly solvable ``Kitaev Triangle''
+      \item Exactly solvable minimal ``Kitaev Triangle''
         \begin{itemize}
-          \item[]
-          \item Three fermion sites
-          \item[]
+          \item Three fermion sites compared to minimal four in T-junctions
           \item Three edges controlled by Peierls phase
         \end{itemize}
-      \item[]
+      %\item[]
       \pause
       \item Finite-size triangle with hollow interior
         \begin{itemize}
-          \item[]
-          \item Under uniform vector potential
-          \item[]
+          %\item[]
+          \item Uniform gauge potential
+          %\item[]
           \item Bulk-edge correspondence
         \end{itemize}
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Kitaev Triangle}
-    \footnotesize
-    \begin{multicols}{2}
+  \begin{frame}{Kitaev triangle}
+    \small
+    \begin{columns}
+      \column{0.4\textwidth}
+      \centering
       \begin{figure}
-        \includegraphics[width=0.4\textwidth]{./figures/3-point-triangle.pdf}
+        \includegraphics[width=1.25\textwidth]{./figures/3-point-triangle.pdf}
       \end{figure}
-      \begin{equation}
+
+      \column{0.6\textwidth}
+      \begin{align*}
         \vec{A} = \left[1-2\Theta(x) \right] \dfrac{2\pi}{3\sqrt{3}} \hat{y}
-      \end{equation}
-      \pause
-      \begin{align}
-        \cc_j c_l &\rightarrow \cc_j c_l \exp \left(\dfrac{i e}{\hbar} \int_{r_j}^{r_l} \vec{A} \cdot d\vec{l} \right) \nonumber \\
-        &\rightarrow \cc_j c_l e^{i \phi_{jl}}
-      \end{align}
-      \begin{equation} \label{eq: Peierls chain}
+      \end{align*}
+      \visible<2->{
+      \begin{align*}
+        \phi_{jl} = \frac{i e}{\hbar} \int_{r_j}^{r_l} \vec{A} \cdot d\vec{l}
+      \end{align*}
+      %\begin{align}
+      %  \cc_j c_l &\rightarrow \cc_j c_l e^{i \phi_{jl}}
+      %\end{align}
+      \begin{align*} \label{eq: Peierls chain}
         \ham = \sum_{\langle j,l\rangle} (-t e^{i\phi_{jl}} \cc_j c_l + \de \cc_j\cc_l + h.c.) - \mu \cc_j c_j
-      \end{equation}
-    \end{multicols}
+      \end{align*}
+      }
 
-    \pause
-    In Kitaev limit, $t=\de\neq0$ and $\mu=0$,
-    \begin{equation}
-      (\phi_{12}, \phi_{23}, \phi_{31}) = (0, -\tfrac{\pi}{3}, -\tfrac{\pi}{3}) = \bm\phi_1
-    \end{equation}
-    MZMs localized at sites 1 and 2
-
+      \visible<3>{
+      \centering
+      \vspace{1em}
+      In Kitaev limit, $t=\de\neq0$ and $\mu=0$,
+      \begin{align*}
+        (\phi_{12}, \phi_{23}, \phi_{31}) = (0, -\tfrac{\pi}{3}, -\tfrac{\pi}{3}) = \bm\phi_1
+      \end{align*}
+      MZMs localized at sites 1 and 2
+    }
+    \end{columns}
   \end{frame}
 
-  \begin{frame}{Kitaev Triangle Braiding}
+  \begin{frame}{Kitaev triangle braiding}
     \footnotesize
     A closed parameter path linearly interpolated between the following sets of $\phi_{jk}$:
     \begin{equation}
@@ -732,53 +640,55 @@
     \end{equation}
 
     \begin{tikzpicture}
-      \node[inner sep=0pt] (figure) at (-3.5,0.35)
+      \node[inner sep=0pt] (figure) at (-3.8,0.35)
       {\includegraphics[width=0.5\textwidth]{./figures/3eigval.pdf}};
-      \node[inner sep=0pt] (figure) at (3.6,0)
+      \node[inner sep=0pt] (figure) at (3.8,0)
       {\includegraphics[width=0.6\textwidth]{./figures/3eigvec.pdf}};
     \end{tikzpicture}
 
   \end{frame}
 
   \begin{frame}
-    \frametitle{Triangular Ribbon and Topological Phases}
+    \frametitle{Triangular ribbon and topological phases}
     % show spectral plot and wavefunction
 
-    \begin{multicols}{2}
-      \small
+    \begin{columns}
+      \column{0.5\textwidth}
+      \footnotesize
       \begin{equation*}
         \phi_{jl} = \dfrac{e}{\hbar}\int_{\vec{r}_j}^{\vec{r}_l} \vec{A} \cdot d\vec{l} = \vec{A}\cdot\vec{r}_{jl} = -\phi_{lj}
       \end{equation*}
-      \vspace{-08mm}
+      \vspace{-5mm}
       \begin{figure}
-        \includegraphics[width=0.30\textwidth]{./figures/hollow-triangle-constant-vector-potential.pdf}
+        \includegraphics[height=0.50\textheight]{./figures/hollow-triangle-constant-vector-potential.pdf}
       \end{figure}
 
-      \vspace{-15mm}
+      \vspace{-10mm}
       \begin{figure}
-        \includegraphics[width=0.3\textwidth]{./figures/triangular-lattice-finite-width-ribbon.pdf}
+        \includegraphics[height=0.30\textheight]{./figures/triangular-lattice-finite-width-ribbon.pdf}
       \end{figure}
 
+      \column{0.5\textwidth}
       \pause
 
       \begin{figure}
-        \includegraphics[width=0.4\textwidth]{./figures/topological-phase-diagram-1pi3-w-1.pdf} \\
+        \includegraphics[height=0.45\textheight]{./figures/topological-phase-diagram-1pi3-w-1.pdf} \\
         \hspace{-10mm}
         \pause
-        \includegraphics[width=0.34\textwidth]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}
+        \includegraphics[height=0.39\textheight]{./figures/spectral-flow-nr-50-w-1-mu-1_6.pdf}
       \end{figure}
-    \end{multicols}
+    \end{columns}
 
   \end{frame}
 
   \begin{frame}
-    \frametitle{Rotating MFs on a Triangular Chain (W=1)}
+    \frametitle{Braiding Majorana zero modes triangular chain (W=1)}
 
     \begin{figure}
       \begin{tikzpicture}
         \node[inner sep=0pt] (figure) at (-2.8,0){\includegraphics[width=0.4\textwidth]{./figures/topological-phase-diagram-w-1-mu-p1_1000.pdf}};
         \pause
-        \draw[line width=0.3mm, green] (-4.62,1) -- (-1.4,1);
+        \draw[line width=0.3mm, green] (-4.75,1.1) -- (-1.3,1.1);
         \pause
         \node[inner sep=0pt] (figure2) at (2.8,0){\includegraphics[width=0.4\textwidth]{./figures/spectral-flow-rotation-constant-vector-nr-50-w-1-mu-1_1.pdf}};
         \node[inner sep=0pt] (caption) at (0,-2.0) {\footnotesize $L=50$, $W=1$, $\mu=1.1$, $A=2.35$};
@@ -786,6 +696,7 @@
       \end{tikzpicture}
     \end{figure}
     \pause
+    \vspace{-2mm}
     \begin{figure}
       \includegraphics[height=80pt]{./figures/GS-T-Square.pdf}\hspace{-25pt}
       \pause
@@ -798,218 +709,389 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Rotating MFs on a Hollow Triangle (W=3)}
+    \frametitle{Braiding Majorana zero modes hollow triangle (W=3)}
 
     \begin{figure}
       \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (-4.4,0.0){\includegraphics[width=0.33\textwidth]{./figures/topological-phase-diagram-w-3-mu-p1_6000.pdf}};
+        \node[inner sep=0pt] (figure) at (-4.5,0.0){\includegraphics[width=0.33\textwidth]{./figures/topological-phase-diagram-w-3-mu-p1_6000.pdf}};
         \node[inner sep=0pt] (figure2) at (0,0){\includegraphics[width=0.33\textwidth]{./figures/band-gap-rotation-w-3-mu-p1_6000.pdf}};
-        \pause
-        \draw[line width = 0.2mm, green] (-5.9,-0.43) -- (-5.45,-0.51);
-        \draw[line width = 0.2mm, green] (-5.45,-0.51) -- (-5.01,-0.43);
-        \draw[line width = 0.2mm, green] (-5.01,-0.43) -- (-4.56,-0.51);
-        \draw[line width = 0.2mm, green] (-4.56,-0.51) -- (-4.13,-0.43);
-        \draw[line width = 0.2mm, green] (-4.13,-0.43) -- (-3.68,-0.51);
-        \draw[line width = 0.2mm, green] (-3.68,-0.51) -- (-3.25,-0.43);
-        \draw[line width = 0.2mm, green] (-1.50,-0.43) -- (-1.05,-0.51);
-        \draw[line width = 0.2mm, green] (-1.05,-0.51) -- (-0.56,-0.43);
-        \draw[line width = 0.2mm, green] (-0.56,-0.43) -- (-0.07,-0.51);
-        \draw[line width = 0.2mm, green] (-0.07,-0.51) -- (0.39,-0.43);
-        \draw[line width = 0.2mm, green] (0.39,-0.43) -- (0.86,-0.51);
-        \draw[line width = 0.2mm, green] (0.86,-0.51) -- (1.32,-0.43);
-        \pause
-        \node[inner sep=0pt] (figure3) at (4.4,0){\includegraphics[width=0.33\textwidth]{./figures/spectral-flow-rotation-nr-80-w-3-mu-p1_6000.pdf}};
+
+        \visible<2->{
+        \draw[line width = 0.2mm, green] (-6.10,-0.43) -- (-5.63,-0.55);
+        \draw[line width = 0.2mm, green] (-5.63,-0.55) -- (-5.16,-0.43);
+
+        \draw[line width = 0.2mm, green] (-5.16,-0.43) -- (-4.69,-0.55);
+        \draw[line width = 0.2mm, green] (-4.69,-0.55) -- (-4.22,-0.43);
+
+        \draw[line width = 0.2mm, green] (-4.22,-0.43) -- (-3.75,-0.55);
+        \draw[line width = 0.2mm, green] (-3.75,-0.55) -- (-3.28,-0.43);
+
+        \draw[line width = 0.2mm, green] (-1.60,-0.43) -- (-1.10,-0.55);
+        \draw[line width = 0.2mm, green] (-1.10,-0.55) -- (-0.59,-0.43);
+
+        \draw[line width = 0.2mm, green] (-0.59,-0.43) -- (-0.09,-0.55);
+        \draw[line width = 0.2mm, green] (-0.09,-0.55) -- (0.41,-0.43);
+
+        \draw[line width = 0.2mm, green] (0.41,-0.43) -- (0.92,-0.55);
+        \draw[line width = 0.2mm, green] (0.92,-0.55) -- (1.42,-0.43);
+        }
+
+        \visible<3->{
+        \node[inner sep=0pt] (figure3) at (4.5,0){\includegraphics[width=0.33\textwidth]{./figures/spectral-flow-rotation-nr-80-w-3-mu-p1_6000.pdf}};
         \node[inner sep=0pt] (caption) at (0,-2.0) {\footnotesize $L=80$, $W=3$, $\mu=1.6$, $(A,\varphi) = (0.83,0) \rightarrow (0.77,\tfrac{\pi}{6}) \rightarrow (0.83,\tfrac{\pi}{3}) \rightarrow (0.77, \tfrac{\pi}{2}) \dots$};
-        \onslide<1->
+        }
       \end{tikzpicture}
     \end{figure}
 
-    \pause
+    \visible<4>{
     \begin{figure}
       \includegraphics[height=80pt]{./figures/GS-T-Square-w-3.pdf}\hspace{-26pt}
       \includegraphics[height=80pt]{./figures/GS-T-Triangle-w-3.pdf}\hspace{-26pt}
       \includegraphics[height=80pt]{./figures/GS-T-Circle-w-3.pdf}\hspace{-26pt}
       \includegraphics[height=80pt]{./figures/GS-T-Diamond-w-3.pdf}
     \end{figure}
+    }
 
   \end{frame}
 
   \begin{frame}
-    \frametitle{Braiding Two of Four MFs}
+    \frametitle{Braiding Two of Four Majorana zero modes}
+    \vspace{-2mm}
     \begin{figure}
-      \begin{tikzpicture}
-        \node[inner sep=0pt] (figure) at (0,0) {\includegraphics[width=0.8\textwidth]{./figures/4-mf-swap-2-3.pdf}};
-
-         \node[inner sep=0pt] (gamma1) at (-4.3,0.75) {$\gamma_1$};
-         \node[inner sep=0pt] (gamma2) at (-3.0,0.75) {$\gamma_2$};
-         \node[inner sep=0pt] (gamma3) at (-1.7,0.75) {$\gamma_3$};
-         \node[inner sep=0pt] (gamma4) at (-0.4,0.75) {$\gamma_4$};
-
-         \node[inner sep=0pt] (gamma1) at (0.90,0.75) {$\gamma_1$};
-         \node[inner sep=0pt] (gamma2) at (2.20,0.75) {$\gamma_2$};
-         \node[inner sep=0pt] (gamma3) at (0.90,2.25) {$\gamma_3$};
-         \node[inner sep=0pt] (gamma4) at (4.80,0.75) {$\gamma_4$};
-
-h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
-         \node[inner sep=0pt] (gamma3) at (-4.3,-1.80) {$\gamma_3$};
-         \node[inner sep=0pt] (gamma2) at (-1.7,-3.35) {$\gamma_2$};
-         \node[inner sep=0pt] (gamma4) at (-0.4,-3.35) {$\gamma_4$};
-
-         \node[inner sep=0pt] (gamma1) at (0.90,-3.35) {$\gamma_1$};
-         \node[inner sep=0pt] (gamma3) at (2.20,-3.35) {$\gamma_3$};
-         \node[inner sep=0pt] (gamma2) at (3.50,-3.35) {$\gamma_2$};
-         \node[inner sep=0pt] (gamma4) at (4.80,-3.35) {$\gamma_4$};
-
-      \end{tikzpicture}
+      \includegraphics[height=0.9\textheight]{./figures/4-mf-swap-2-3.pdf}
     \end{figure}
   \end{frame}
 
+  %\section{\CO}
   \begin{frame}
-    \frametitle{Summary}
+    \frametitle{Part I: Summary}
 
-  \section{\CO}
     \begin{itemize}
-      \item Introduction of Peierls phase allows for a minimal Kitaev triangle, reducing fermionic sites down to 3.
-      \item Gauge potential field and its rotation allows additional tunability of topology.
-      \item MFs can be hosted and braided on a network of triangular islands.
+      \item A minimal Kitaev triangle can emerge as an effective theory for three fermionic sites and is sufficient for braiding.
+      \item Hollow triangles maintain 1D bulk-edge correspondence, gauge potential strength and rotation allows for additional topological tunability, and demonstrates braiding.
+      \item MZMs can be hosted and braided on a network of triangular islands.
+    \end{itemize}
+    \vspace{2em}
+    \centering
+    \small
+    Aidan Winblad and Hua Chen, \textit{PRB} \textbf{109}, 205158 (2024).
+  \end{frame}
+
+  \section{II: \BD }
+
+  \begin{frame}{Part II: Floquet quantum Hall effect outline}
+    \begin{itemize}
+      \item Background \& Motivation:
+      \begin{itemize}
+        \item Quantum Hall effect
+        \item Floquet engineering and nonequilibrium physics
+      \end{itemize}
+      \item Formulation:
+      \begin{itemize}
+        \item Floquet theorem and high-frequency approximation
+        \item Inhomogeneous, circularly polarized light
+      \end{itemize}
+      \item Results:
+      \begin{itemize}
+        \item Dirac and 2DEG systems
+      \end{itemize}
+      \item Summary
     \end{itemize}
   \end{frame}
 
-  \section{Additional Research}
+  \begin{frame}{Quantum Hall effect at the Hall effect Zoo}
+    \begin{columns}
+      \column{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \visible<1>{
+          \node[inner sep=0pt] (fig) at (0,0) {\includegraphics[height=0.75\textheight]{./figures/hall-effects.png}};
+          \node[inner sep=0pt] (ref) at (0,-3.45) {\footnotesize von Klitzing et al.\, \textit{Nat.\ Rev.\ Phys.} \textbf{2}, 397-401 (2020)};
+        }
+        \visible<2->{
+          \node[inner sep=0pt] (fig) at (0,2) {\includegraphics[height=0.4\textheight]{./figures/quantum-hall-effect.png}};
+        }
+        \visible<3->{
+          \node[inner sep=0pt] (fig) at (0,-1.5) {\includegraphics[height=0.45\textheight]{./figures/qhe-unfilled-bands.pdf}};
+        }
+        \visible<4->{
+          \node[inner sep=0pt] (fig) at (0,-1.5) {\includegraphics[height=0.45\textheight]{./figures/qhe-filled-bands.pdf}};
+        }
+      \end{tikzpicture}
 
-  \subsection{\MO}
+      \column{0.5\textwidth}
+      \visible<2->{
+        \small
+        \centering
+        %Dirac Hamiltonian with uniform magnetic field
+        \begin{equation*}
+          \text{Dirac: }
+          \begin{cases}
+            \ham^{D} = v_F \bm{\sigma}\cdot \left(\vec{p} + eBx\hat{y}\right) \\ \\
+            \epsilon_n^{D} = \pm v_F \sqrt{ 2 n \hbar e B }
+          \end{cases}
+        \end{equation*}
+        \newline
+      }
+      \visible<2->{
+        %2DEG Hamiltonian with uniform magnetic field
+        \begin{equation*}
+          \text{2DEG: }
+          \begin{cases}
+            \ham^{\text{2DEG}} = \dfrac{1}{2m^*} {\left(\vec{p} + eBx\hat{y}\right)}^2 \\ \\
+            \epsilon_n^{\text{2DEG}} = \dfrac{\hbar e B}{m^*} \left( n + \dfrac{1}{2} \right)
+          \end{cases}
+        \end{equation*}
+      }
+      \visible<4->{
+        \centering
+        \newline
+        \textbf{QHE has quantized Hall conductance:} \newline $\sigma_H = -\dfrac{Ce^2}{h}$
+      }
+    \end{columns}
+  \end{frame}
 
-  \begin{frame}{Theory and Experiment}
-
-    \begin{figure}
-      \includegraphics[width=0.45\textwidth]{./figures/grushin.png}
-      \includegraphics[width=0.40\textwidth]{./figures/kandelaki.png}
-    \end{figure}
-      \vspace{1em}
-    \begin{figure}
-      \includegraphics[width=0.40\textwidth]{./figures/rudner.png}
-      \includegraphics[width=0.40\textwidth]{./figures/bielinski.png}
-    \end{figure}
+  \begin{frame}{Floquet exhibit at the Hall effect Zoo}
+    \textbf{Pioneer research on nonequilibrium systems exhibiting equilibrium physics.}
+    \newline
+    \textbf{Circularly polarized light provides time periodicity to use Floquet theorem and high-frequency approximation.}
+    \newline
+    \begin{itemize}
+      \item Photovoltaic Hall effect in graphene
+      \begin{itemize}
+        \item \small Oka et al., \textit{PRB} \textbf{79}, 0814406(R) (2009)
+      \end{itemize}
+      \item Floquet topological insulator in semiconductor quantum wells
+      \begin{itemize}
+        \item \small Lindner et al., \textit{Nat. Phys.} \textbf{7}, 490-495 (2011)
+      \end{itemize}
+      \item Observations of Floquet-Bloch states on the surface of a topological insulator
+      \begin{itemize}
+        \item \small Wang et al., \textit{Science} \textbf{342}, 453-457 (2013)
+      \end{itemize}
+      \item Floquet Fractional Chern Insulators
+      \begin{itemize}
+        \item \small Grushin et al., \textit{PRL} \textbf{112}, 156801 (2014)
+      \end{itemize}
+    \end{itemize}
 
   \end{frame}
 
-  \begin{frame}{Experimental Findings}
-    \begin{figure}
-      \includegraphics[width=0.5\textwidth]{./figures/fqahe-dirac.png}
-      \caption*{\footnotesize McIver et.\ al., \textit{Nature Phys.} \textbf{16}, 38 (2020)}
-    \end{figure}
+  \begin{frame}{Floquet quantum anomalous Hall effect}
+    \begin{columns}
+      \column{0.5\textwidth}
+      \centering
+      \begin{figure}
+        \includegraphics[width=0.95\textwidth]{./figures/kitagawa-theory.png}
+        %\caption*{\footnotesize Transport properties of nonequilibrium systems under the application of light: photoinduced quantum Hall insulators without Landau levels. Kitagawa et.\ al., \textit{PRB} \textbf{84}, 235108 (2011)}
+        %\caption*{\footnotesize Photoinduced quantum Hall insulators without Landau levels. Kitagawa et.\ al., \textit{PRB} \textbf{84}, 235108 (2011)}
+        \caption*{\footnotesize Kitagawa et.\ al., \textit{PRB} \textbf{84}, 235108 (2011)}
+      \end{figure}
+
+      \column{0.5\textwidth}
+      \visible<2>{
+      \begin{figure}
+        \includegraphics[width=0.85\textwidth]{./figures/fqahe-dirac.png}
+        %\caption*{\footnotesize Light-induced anomalous Hall effect in graphene. McIver et.\ al., \textit{Nature Phys.} \textbf{16}, 38 (2020)}
+        \caption*{\footnotesize McIver et.\ al., \textit{Nature Phys.} \textbf{16}, 38 (2020)}
+      \end{figure}
+      }
+    \end{columns}
   \end{frame}
 
-  \subsection{\FO}
+  \section{II:\ \FO}
 
-  \begin{frame}{Inhomogeneous laser light on 2D systems}
+  \begin{frame}{Floquet Theorem}
+    \centering
+    \textbf{Analogous to Bloch's theorem}
+    \vspace{1em}
+    \begin{columns}
+      \column{0.5\textwidth}
+      \small
+      \centering
+      \visible<2->{
+        Exhibits discrete time translation symmetry
+        \begin{equation*}
+          H(t+T) = H(t)
+        \end{equation*}
+      }
+      \visible<3->{
+        For such a system, Floquet theorem must hold
+        \begin{gather*}
+          \psi_{\epsilon}(t) = e^{-i\epsilon t / \hbar} u_{\epsilon}(t) \\
+          u_{\epsilon}(t+T) = u_{\epsilon}(t)
+        \end{gather*}
+        Let wavefunction be an arbitrary wave approximation
+        \begin{gather*}
+          \psi(t) = \sum_{\epsilon} u_{\epsilon} e^{-i\epsilon t / \hbar}
+        \end{gather*}
+      }
+      \column{0.5\textwidth}
+      \small
+      \centering
+      \visible<4->{
+        Discrete time Fourier series of Hamiltonian
+        \begin{gather*}
+          H(t) = \sum_{n} H_n e^{in\omega t}
+        \end{gather*}
+
+        Where
+        \begin{gather*}
+          H_n = \frac{1}{T} \int_0^T H(t) e^{-in\omega t}
+        \end{gather*}
+      }
+      \visible<5->{
+        Then, $i\hbar \partial_t \psi(t) = H(t) \psi(t)$ becomes
+        \begin{gather*}
+          \bar Q_{m,m+n} = H_n - m\hbar\omega\delta_{n0}
+        \end{gather*}
+      }
+    %\vspace{5mm}
+    \end{columns}
+    \centering
+    \visible<6>{
+      \textbf{$\bar Q$ is an infinite quasienergy matrix! How do we handle such a matrix?}
+    }
+  \end{frame}
+
+  \begin{frame}{Quasienergy operator and high-frequency approximation}
+    \begin{columns}
+      \small
+      \column{0.45\textwidth}
+      \visible<1->{
+        \[
+        \bar Q =
+        \begin{bmatrix}
+          \ddots & \vdots & \vdots & \vdots & \reflectbox{$\ddots$} \\
+          \cdots &  H_0 - \hbar \omega  &  H_{-1} &  H_{-2} & \cdots \\
+          \cdots &  H_{1}  &  H_0 &  H_{-1} & \cdots \\
+          \cdots &  H_{2}  &  H_1 &  H_{0} + \hbar \omega & \cdots \\
+          \reflectbox{$\ddots$} & \vdots & \vdots & \vdots & \ddots \\
+        \end{bmatrix}
+        \]
+      }
+
+      \column{0.2\textwidth}
+      \centering
+      \visible<2->{
+        $\rightarrow$ \fcolorbox{red}{white}{$H_{\pm n} \ll \hbar \omega$} $\rightarrow$
+      }
+
+      \column{0.45\textwidth}
+      \visible<3->{
+        \begin{bmatrix}
+          \ddots & \vdots & \vdots & \vdots & \reflectbox{$\ddots$} \\
+          \cdots &  H_{\text{eff}} - \hbar \omega  & 0 & 0 & \cdots \\
+          \cdots & 0  &  H_{\text{eff}} & 0 & \cdots \\
+          \cdots & 0  & 0 &  H_{\text{eff}} + \hbar \omega & \cdots \\
+          \reflectbox{$\ddots$} & \vdots & \vdots & \vdots & \ddots \\
+        \end{bmatrix}
+      }
+    \end{columns}
+    \small
+    \centering
+    \visible<4->{
+      \begin{gather*}
+        H_{\text{eff}} = H^{F(1)} + H^{F(2)} + H^{F(3)} + \dots
+      \end{gather*}
+      \begin{align*}
+        H^{F(1)} &= H_0 \\
+        H^{F(2)} &= \sum_{m> 0} \frac{2[H_m, H_{-m}]}{m\hbar\omega} \\
+        H^{F(3)} &= \sum_{m> 0} \left( \frac{[H_{-m} , [H_0, H_m]] + h.c.}{2(m\hbar\omega)^2} + \sum_{m'\neq m} \frac{[H_{-m'}, [H_{m'-m}, H_m]] + h.c.}{3mm'(\hbar\omega)^2} \right)
+      \end{align*}
+    }
+  \end{frame}
+
+  \begin{frame}{Inhomogeneous, circularly polarized light on 2D systems}
     \begin{figure}
-      \includegraphics[width=0.33\textwidth]{./figures/fll-setup.pdf}
+      \includegraphics[height=0.4\textheight]{./figures/fll-setup.pdf}
     \end{figure}
     Generalized electric field at substrate surface
     \begin{align*}
       \small
-      \vec{E}_1 &= E\cos{(a\omega t)} \hat{x},\\
-      \vec{E}_2 &= \vec{E}_2^f + \vec{E}_2^b = -E\cos{(Kx)}\sin{(b\omega t)} \hat{y}
+      %\vec{E}_1 &= E\cos{(a\omega t)} \hat{x},\\
+      %\vec{E}_2 &= \vec{E}_2^f + \vec{E}_2^b = -E\cos{(Kx)}\sin{(b\omega t)} \hat{y}
+      %\vec{E}_2 &= -E\cos{(Kx)}\sin{(b\omega t)} \hat{y}
+      \vec{E} &= E \langle \cos{(a\omega t)},-\cos{(Kx)}\sin{(b\omega t)} \rangle
     \end{align*}
     where
-    \begin{equation}
+    \begin{equation*}
       \small
       K = \frac{\omega \sin{(\theta_i)}}{v_p}
-    \end{equation}
+    \end{equation*}
 
   \end{frame}
 
-  \begin{frame}{Dirac Systems}
+  \section{II:\ \RE}
 
-    \begin{equation}
-      \small
-      \ham (t) = v_F \bm{\sigma} \cdot \left(\vec{p} + e \vec{A}(t)\right)
-    \end{equation}
-    \begin{align}
-      \small
-      \vec{E}_1 &= E\cos{(\omega t)} \hat{x}, \nonumber \\
-      \vec{E}_2 &= E\sin{(Kx)}\sin{(2\omega t)} \hat{y}
-    \end{align}
-    Perform Fourier time-transform, HF expansion, and the limit $Kx\ll1$
+  \begin{frame}{Dirac systems}
 
-    \begin{equation}
-      \small
-      \ham_{\text{eff}}^{D} = v_F \sigma_x p_x + v_F \sigma_y \left( C p_y + eB^Dx \right),
-    \end{equation}
-    where $C = 1 - {\left(\tfrac{v_F eE}{\hbar \omega^2}\right)}^2$ and
-    \begin{align}
-      \small
-      B^{D} &= \frac{K v_F^2 e^2 E^3}{4\hbar^2 \omega^5}, \\
-      %\epsilon_n^{D} &= \pm v_F^2 \sqrt{ \dfrac{n K e^3 E^3}{2 \hbar \omega^5} }
-      %\epsilon_n^{D} &= \pm v_F \sqrt{ 2 n \hbar e B^D }
-    \end{align}
-
-
+    \visible<1->{
+    \begin{gather*}
+      \ham (t) = v_F \bm{\sigma} \cdot \left(\vec{p} + e \vec{A}(t)\right) \\
+      \vec{E} = E\langle \cos{(\omega t)}, \sin{(Kx)}\sin{(2\omega t)} \rangle
+    \end{gather*}
+    }
+    \visible<2->{
+    \centering
+    Use floquet theorem and high-frequency approximation, and in limit $Kx\ll1$
+    \begin{gather*}
+      \ham_{\text{eff}}^{D} = v_F \sigma_x p_x + v_F \sigma_y \left( C p_y + eB^Dx \right) \\
+      B^{D} = \frac{K v_F^2 e^2 E^3}{4\hbar^2 \omega^5}
+    \end{gather*}
+    }
+    %where $C = 1 - {\left(\tfrac{v_F eE}{\hbar \omega^2}\right)}^2$ and
   \end{frame}
 
-  \begin{frame}{2DEG Systems}
+  \begin{frame}{2DEG systems}
 
-    \begin{equation}
-      \small
-      \ham (t) = \dfrac{1}{2m^*} {\left( \vec{p} +e \vec{A}(t)\right)}^2
-    \end{equation}
-    \begin{align}
-      \small
-      \vec{E}_1 &= E\cos{(\omega t)} \hat{x},\nonumber \\
-      \vec{E}_2 &= -E\cos{(Kx)}\sin{(\omega t)} \hat{y}
-    \end{align}
-    Perform Fourier time-transform, HF expansion, apply periodic potential $V(x)$, and the limit $Kx\ll1$
-
-    \begin{equation}
-      \small
-      \ham_{\text{eff}}^{\text{2DEG}} = \frac{1}{2m^*} \left[ p_x^2 + {\left(p_y - eB^{\text{2DEG}}x \right)}^2\right],
-    \end{equation}
-    where
-    \begin{align}
-      \small
-      B^{\text{2DEG}} &= \frac{K^2 e E^2}{m^* \omega^3}, \\
-      %\epsilon_n^{\text{2DEG}} &= \dfrac{\hbar K^2 e^2 E^2}{m^{*2} \omega^3} \left( n+ \dfrac{1}{2}\right)
-      %\epsilon_n^{\text{2DEG}} &= \frac{\hbar eB^{\text{2DEG}}}{m^*} \left( n+ \frac{1}{2}\right)
-    \end{align}
-
+    \visible<1->{
+    \begin{gather*}
+      \ham (t) = \dfrac{1}{2m^*} {\left( \vec{p} +e \vec{A}(t)\right)}^2 \\
+      \vec{E} = E\langle\cos{(\omega t)}, -\cos{(Kx)}\sin{(\omega t)}\rangle
+    \end{gather*}
+    }
+    \visible<2->{
+      \centering
+      Use floquet theorem and high-frequency approximation, and in limit $Kx\ll1$
+    \begin{gather*}
+      \ham_{\text{eff}}^{\text{2DEG}} = \frac{1}{2m^*} \left[ p_x^2 + {\left(p_y - eB^{\text{2DEG}}x \right)}^2\right] \\
+      B^{\text{2DEG}} = \frac{K^2 e E^2}{m^* \omega^3}
+    \end{gather*}
+    }
+    \visible<3>{
+      \centering
+      \textbf{Effective Hamiltonians are approximations, energies and states are Landau level like.}
+    }
   \end{frame}
 
-  \subsection{\RE}
-
-  \begin{frame}{\RE: Dirac Effective Magnetic Field and Quasienergies}
-
-    \begin{figure}
-      \includegraphics[width=0.7\textwidth]{./figures/dirac-eff-bfield-energy.pdf}
-    \end{figure}
-
-  \end{frame}
-
-  \begin{frame}{\RE: 2DEG Effective Magnetic Field and Quasienergies}
-
-    \begin{tikzpicture}
-      \node[inner sep=0pt] (fig1) at (-3,0)
-      {\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-GaAs.pdf}};
-      \node[inner sep=0pt] (fig2) at (4,0)
-      {\includegraphics[width=0.45\textwidth]{./figures/2deg-eff-bfield-energy-InSb.pdf}};
-      \node[inner sep=0pt] (GaAs) at (-3,2.3) {\small GaAs};
-      \node[inner sep=0pt] (InSb) at (4,2.3) {\small InSb};
-    \end{tikzpicture}
-
-  \end{frame}
-  \subsection{\CO}
-
-  \begin{frame}{\CO}
+  \begin{frame}{Expected analytical values and tight-binding models}
+    \centering
     \begin{itemize}
-      \item Oblique, circularly polarized light induces QHE in Dirac and 2DEG systems.
-      \item Showed a non-equilibrium system exhibits equilibrium results.
+      \item Parameters from previous literature can produce effective magnetic fields on the order of mT to hundreds of mT in Dirac and 2DEG.
+      \item Tight-binding models were performed for both systems
+      \begin{itemize}
+        \item Strong agreement with high-frequency approximation.
+        \item Interpreting data of lower frequencies is difficult and inconclusive when modes overlap.
+      \end{itemize}
+    \end{itemize}
+
+  \end{frame}
+
+  \begin{frame}{Part II: \CO}
+    \begin{itemize}
+      \item Inhomogeneous, circularly polarized light induces QHE in Dirac and 2DEG systems.
+      \item Showed nonequilibrium systems exhibit equilibrium physics.
       \item Effective magnetic field can be enhanced by several parameters.
     \end{itemize}
+
   \end{frame}
 
+  \appendix
+  \section{Appendix}
 
-  \centering
   \begin{frame}{Acknowledgments}
+    \centering
     \begin{tikzpicture}
       \node[inner sep=0pt] (csu) at (-2,0)
       {\includegraphics[width=2.5cm]{./figures/CSU-Ram-357-617.png}};
@@ -1018,6 +1100,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{tikzpicture}
     \vspace{2em}
     \begin{itemize}
+      \small
       \item Advisor: Dr. Hua Chen
       \item Committee: Dr. Martin Gelfand, Dr. Richard Eykholt, Dr. Olivier Pinaud
       \item Informative Discussions: Chris Ard and Muhammad Tahir
@@ -1026,13 +1109,11 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{itemize}
   \end{frame}
 
-  \appendix
-
   \begin{frame}
     \frametitle{Additional results from Schneider et al.}
 
     \begin{figure}
-      \includegraphics[width=0.8\textwidth]{./figures/Schneider-additional-results.pdf}
+      \includegraphics[height=0.8\textheight]{./figures/Schneider-additional-results.pdf}
     \end{figure}
 
   \end{frame}
@@ -1053,7 +1134,130 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{align}
   \end{frame}
 
-  \begin{frame}{Dirac Systems}
+  \begin{frame}
+  \frametitle{Gauge potentials in Hamiltonians}
+
+  %\begin{multicols}{2}
+  \centering Minimal Coupling
+  \begin{gather}
+    \vec{p}_{\text{can}} = \vec{p}_{\text{kin}} + q\vec{A} \\
+    \ham = \dfrac{1}{2m} {\left( \vec{p}_{\text{can}} - q\vec{A} \right)}^2 + qV
+  \end{gather}
+  \vspace{1em}
+
+  \centering Peierls Phase
+  \begin{gather}
+    \cc_j c_l \rightarrow \cc_j c_l \exp{\left[ \dfrac{iq}{\hbar} \int_{\vec{r}_j}^{\vec{r}_j} \vec{A}\cdot d\vec{l} \right]} = e^{i\phi_{jl}} \cc_j c_l \\
+    \ham = \sum_{\langle j, l \rangle} t e^{i\phi_{jl}} \cc_j c_l + h.c.
+  \end{gather}
+
+  %\end{multicols}
+
+  \end{frame}
+
+  \begin{frame}{Braiding in a 2D \textit{p}-wave superconductor}
+    \footnotesize
+    \begin{multicols}{2}
+      \begin{itemize}
+        \item \textit{p}-wave superconductors can exhibit half-quantum vortices.
+        \item Triplet pairing
+          \begin{equation*}
+            \vec{d}(\vec{k}) = \Delta e^{i\phi} \langle \cos \alpha, \sin \alpha, 0 \rangle(k_x + i k_y)
+          \end{equation*}
+        \item The order phase $\phi$ and angle $\alpha$ of $\vec{d}$ rotate by $\pi: (\phi,\vec{d}) \mapsto (\phi+\pi, -\vec{d})$.
+        \item The order parameter $\theta$ maps to itself, $(0,2\pi)$, under the simultaneous change of both \vec{d} and $\phi: \theta = \phi+\alpha$.
+      \end{itemize}
+      \begin{equation*}
+        \ham_{\Delta} = \int d^2\vec{r} \Delta \left[ \Psi^{\dagger} \left[ e^{i\theta} * (\partial_x + i\partial_y) \right] \Psi + h.c. \right]
+      \end{equation*}
+      %\vspace{20pt}
+
+      \centering
+      \begin{figure}
+        \includegraphics[height=0.7\textheight]{./figures/half-quantum-vortex.pdf}
+      \end{figure}
+      \vspace{-10pt}
+      \begin{itemize}
+        \item if overall phase shifts by $\theta:$ $\Psi_{\alpha} \mapsto e^{i\theta/2} \Psi_{\alpha}$.
+        \item $(u,v) \mapsto (u e^{i\theta/2}, v e^{-i\theta/2})$
+      \end{itemize}
+
+    \end{multicols}
+  \end{frame}
+
+  \begin{frame}{Braiding in a 2D \textit{p}-wave superconductor}
+    \begin{multicols}{2}
+      \begin{figure}
+        \includegraphics[width=0.5\textwidth]{./figures/pwave-braid.pdf}
+      \end{figure}
+
+      \begin{itemize}
+          \item Interchanging two MFs:
+          \begin{itemize}
+            \item[] $\gamma_1 \rightarrow \gamma_2$ \\
+            \item[] $\gamma_2 \rightarrow -\gamma_1$ \\
+          \end{itemize}
+          \item Exhibit Non-Abelian Statistics
+          \item $a \ast b \neq b \ast a$
+      \end{itemize}
+      \begin{equation*}
+      \end{equation*}
+      %\vspace{20pt}
+
+      \centering
+      \begin{tikzpicture}
+        \node[inner sep=0pt] (figure) at (0,0)
+        {\includegraphics[height=0.6\textheight]{./figures/braid.pdf}};
+        \node[inner sep=0pt] (math) at (-0.18, -2.5) {\small $T_i T_j = T_j T_i$};
+        \node[inner sep=0pt] (math) at (0, -3.0) {\small $T_i T_{i+1} T_i = T_{i+1} T_i T_{i+1}$};
+        \node[inner sep=0pt] (reference) at (0,-3.5) {\footnotesize Ivanov, \textit{PRL} \textbf{86}, 268 (2001).};
+      \end{tikzpicture}
+
+    \end{multicols}
+  \end{frame}
+
+  \begin{frame}{Topological phase transition induced by a supercurrent}
+    \centering
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (0.0,1.5)
+      {\includegraphics[width=0.6\textwidth]{./figures/Romito-setup.pdf}};
+      \node[inner sep=0pt] (figure2) at (0.0,-2.0)
+      {\includegraphics[width=0.6\textwidth]{./figures/Romito-topology-map2.pdf}};
+      \node[inner sep=0pt] (reference) at (0,-4.5) {\small Romito et al., \textit{PRB} \textbf{85}, 020502(R) (2012).};
+    \end{tikzpicture}
+  \end{frame}
+
+  \begin{frame}{Topological phase transition induced by a supercurrent}
+    \centering
+    \begin{tikzpicture}
+      \node[inner sep=0pt] (figure) at (-3.5,0)
+      {\includegraphics[width=0.4\textwidth]{./figures/Takasan-setup.pdf}};
+      \node[inner sep=0pt] (figure2) at (3.0,0.0)
+      {\includegraphics[width=0.4\textwidth]{./figures/Takasan-results.pdf}};
+      \node[inner sep=0pt] (reference) at (-3.5,-1.5) {\small Takasan et al., \textit{PRB} \textbf{106}, 014508 (2022).};
+    \end{tikzpicture}
+  \end{frame}
+
+  \begin{frame}{Braiding 2 of 4 MZMs eigenstate and spectral flow}
+    \begin{columns}
+      \column{0.7\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-0_5236.pdf}
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-0_6283.pdf}
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-0_7330.pdf} \\
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-0_8378.pdf}
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-0_9425.pdf}
+        \includegraphics[width=0.32\textwidth]{./figures/GS-T-1_0472.pdf}
+
+      \end{figure}
+      \column{0.3\textwidth}
+      \begin{figure}
+        {\includegraphics[width=1.1\textwidth]{./figures/spectral-flow-braiding.pdf}} \\
+      \end{figure}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Dirac systems}
 
     \begin{equation}
       \small
@@ -1064,7 +1268,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
       \vec{E}_1 &= E\cos{(\omega t)} \hat{x}, \nonumber \\
       \vec{E}_2 &= E\sin{(Kx)}\sin{(2\omega t)} \hat{y}
     \end{align}
-    Perform Fourier time-transform, HF expansion, and the limit $Kx\ll1$
+    Perform Fourier time-transform, HF approximation, and the limit $Kx\ll1$
 
     \begin{equation}
       \small
@@ -1081,7 +1285,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
 
   \end{frame}
 
-  \begin{frame}{2DEG Systems}
+  \begin{frame}{2DEG systems}
 
     \begin{equation}
       \small
@@ -1092,7 +1296,7 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
       \vec{E}_1 &= E\cos{(\omega t)} \hat{x},\nonumber \\
       \vec{E}_2 &= -E\cos{(Kx)}\sin{(\omega t)} \hat{y}
     \end{align}
-    Perform Fourier time-transform, HF expansion, apply periodic potential $V(x)$, and the limit $Kx\ll1$
+    Perform Fourier time-transform, HF approximation, apply periodic potential $V(x)$, and the limit $Kx\ll1$
 
     \begin{equation}
       \small
@@ -1107,6 +1311,5 @@ h        \node[inner sep=0pt] (gamma1) at (-4.3,-3.35) {$\gamma_1$};
     \end{align}
 
   \end{frame}
-
 
 \end{document}

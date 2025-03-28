@@ -1,315 +1,383 @@
-Hello, thank you for the introduction.
+Thank you for the introduction, Hua.
 
-/// Outline
+/// Presentation Objectives
 
-Let's get started.
-This talk is outlined as follows.
-I'll talk about Majorana fermions in particle physics, condensed matter, and how it relates to quantum computing.
-Next the motivation for triangular islands is based off of p-wave superconductors hosting MF's, T-junctions and ease of growing triangular islands.
-As for hosting MF's on triangular islands I'll talk about 2 approaches to realizing them: bulk-edge correspondence and special case of Kitaev limit on a 3-point triangle with a vector potential.
-With that I'll go over the results of MF's hosting on 3 different triangular structures.
-I'll wrap up the presentations with some final thoughts and additional projects that'll be in my disseration.
+Today's defense is broken into two parts.
+Part I focuses on topological superconducting triangular islands where we build a new platform for topological quantum logic gates via triangular geometry and gauge potentials.
+Part II covers Floquet quantum hall effect.
+Here we will use inhomogeneous, circularly polarized light to induce quantum Hall effect and we will use floquet thoerem and a high frequency expansion to arrive out the effective Landau level like Hamiltonian.
 
-/// Background MFs in Particle Physics
-What are Majorana fermions?
-Let's first go back and mention Fermi and Dirac.
-Fermions are half-odd-integer spin particles that obey fermi-dirac statistics.
-Dirac showed that the electron has an antiparticle, the positron; later shown to work for any fermion.
-Overall we find that a Dirac fermion has spin, charge, and has an antiparticle.
-Majorana was able to show that one could get a neutral charge fermion that was also its own antiparticle from the Dirac equation.
-The question remains if MF's are neutrinos or dark matter.
+/// Part I outline
 
-/// Background MFs in Particle Physics
-In general if we find that neutrinos are MF's then the standard model needs revision.
-Over the years particle physicists have searched for MF's using neutrinoless double deta decay.
-The MAJORANA project is one such study.
-The results have been negative so far on the MAJORANA project.
+Part I is outlined as follows.
+Some background information on topological quantum computers and Majorana fermions.
+Motivation will cover braiding and its relation to TQC and why moving from t-junctions to triangular islands is advantageous.
+Then, I'll go over my results with two different models for hosting and braiding Majorana fermions.
+Finally, I'll summarize part I and then move on to part II.
 
-/// Transition
-Some particles are elusive in the real world, such as magnetic monopoles yet found in condensed matter systems as quasiparticles.
-We just need to find the right system to host MF's, such a p-wave superconductor.
 
-/// Background MFs in Condensed Matter
-We can recall that superconductors are perferct conductors and can have a supercurrent made of cooper pairs.
-The electron-phonon interaction facilitates two electrons with opposite spin and momenta to pair.
-Cooper pairs form a Bose-Einstein condensate.
-A Bogoliubov quasiparticle is described as a fermionic excitation of a Cooper pair.
-It is now an electron and hole with opposite momenta paired.
-One can describe this using a 2x2 BdG Hamiltonian with the order parameter mediating the pairing of an electron and a hole.
-Another way to understand this is to look at our figure to the right.
-It shows the mixing of the electron/hole energy bands.
-We also make the claim that a zero-energy excitation is a MF.
-And due to the Particle-hole symmetry of the BdG Hamiltonian they come in pairs.
+/// What does topology offer for quantum computing?
+Quantum computers that we are using today have two prominent "local" errors or noise/perturbations.
+They are classical error and phase error.
+Classical flips a qubit from empty to occupied or vice versa.
+Phase changes the sign of an occupied qubit.
+These qubits do have many ways to reduce the error or to correct for the error to achieve more fault-tolerance.
+
+Topology can offer baked in fault-tolerance.
+In a topological quantum logic gate the qubit information is stored "non-locally", making the previous kinds of error unlikely to occur.
+We will briefly go over why that is the case later in the talk.
+So now we ask, what system allows for topological qubits?
 
 /// Transition
-Let's start with the simplist model to find MF's in a superconductor.
+Majorana fermions are a prime candidate for building topological quantum logic gates!
 
-/// Background MFs in Condensed Matter
-Kitaev proposed  a 1D spinless p-wave superconductor chain to host MF's.
-This following figure has spoilers but let's explain what is happening with the top chain.
-We let each lattice site be represented by a fermion operator c_j (the blue boxes).
-Each fermion operator can be represented as a linear combination of two MF's on a single lattice site.
-These can be seen as the red spheres within each blue box.
-
-/// Transition
-This Majorana fermion basis is advantageous in finding a simple solution in the Hamiltonian as we will see next.
-
-/// Background MFs in Condensed Matter
-The Hamiltonian for a 1D spinless p-wave superconductor is written as follows.
-Here the mu is chemical potential, t is the hopping amplitude, and delta is the superconducting order parameter.
-In MF basis the Hamiltonian looks as such.
-Upon inspection Kitaev set t = delta = 0 and mu less than 0.
-This results in a Hamiltonian pairing same site MF's and called the trivial phase.
-For t = delta > 0 and mu = 0 he the Hamiltonian to have pairing between intersite MF's.
-Notice how the first and last MF a_1 and b_N are not to be found in the Hamiltonian.
-To have a state with a_1 and b_N costs zero energy, thus two isolated MF's lie at the ends of the chain.
+/// What are Majorana fermions?
+Majorana fermions were theorized by Ettore Majorana (point at photo).
+They are fermions which follow Fermi-Dirac statistics, Pauli exclusion principle, and have half-odd-integer spin.
+Their best known quality is that their particle is also it's own antiparticle and they're neutral in charge.
+As an elementary particle, the standard model allows for a neutrino to potentially be a Majorana fermion.
+The Majorana project (point to picture) is one experiment testing for Majorana fermions and has shown negative results so far.
+Now, mysteriously Majorana himself disappeared a few years after his publication.
+So what I think happened is he ran into his doppelganger and annihilated himself!
 
 /// Transition
-To get a better picture we'll look at our chain figure once more.
+So we haven't found Majorana fermions as elementary particles but we have some ideas on where they could be.
 
-/// Background MFs in Condensed Matter
-For the trivial phase we see the intrasite pairing of the MF's.
-For the non-trivial phase we see the intersite pairing of MF's, which can be represented with the tilde c_j's.
-We also see a_1 and b_n are isolated.
-They can be represented with the highly non-local fermion state f.
-The non-trivial phase can still be accomplished for values of mu < 2t as long as the wire is long enough for the MF wave functions to decay.
-Originally Kitaev saw this as a means for quantum information storage.
-
-/// Transition
-We have a model for hosting MF's however we have not found any p-wave superconductors as of yet.
-So we need to find a way of making an effective spinless p-wave superconductor that hosts MF's.
-
-/// Background MFs in Condensed Matter
-In 2012 Mourik et al. was able to fabricate one such heterostucture.
-They place a semiconducting wire with Rashba spin-orbit coupling against an s-save superconductor and apply a magnetic field parallel with the wire.
-The Rashba spin-orbit coupling shifts the spin up and down bands left and right and turning on the parallel magnetic field lifts the crossing between the bands at k=0.
-When the fermi level resides within this field-induced gap (the dotted line for mu) the wire appears 'spinless'.
-The s-wave superconductor provides a superconducting proximity effect, and we can project away the upper unoccupied band.
-To check for MF's they use look at DI/DV curves for varying magnetic field values, ranging from 0T to 490mT.
-The spikes at the center here show the presence of MF's at the end points.
-For the larger values of B we see the MF's disappear as the system transitions out of the topolgical phase.
-
-/// Background MFs in Condensed Matter
-In 2014 Nadj-Perge et al. showed that for a ferromagnetic chain on an strongly spin-orbit-coupled superconductor they could measure MF's at the end points, as shown in the figure to the right at 0 energy.
-
-/// Background MFs in Condensed Matter
-Within the most recent year Schneider et al. also showed they could achieve MF's at the end of a chian.
-In their setup they were able to individually place Manganese atoms on top of superconducting Niobium.
-They were able to measure MF's on short chain lengths.
-They additionally showed that only even number chains would host MF's while odd number chain lengths the MF's wave functions would hybridize causing a finite splitting (If you're interested I have their results in the appendix).
+/// Where to find Majorana fermions?
+Let's first remind ourselves that superconductors contain Cooper pairs, which are electrons paired together with opposite spin and momenta.
+This is a ground state and has an excited state where the particles are dubbed Bogoliubov quasiparticles.
+Here, an electron and hole with opposite momenta are paired.
+This introduces particle-hole symmetry into the system and is also described by this equation (point at equation).
+You can imagine the band structure in 1D with this (point at figure).
+Now, in a non-trivial p-wave SC we can find zero-energy Bogoliubov quasiparticles which may be Majorana fermions.
+Lastly, since we have particle-hole symmetry these zero-energy Majorana fermions are degenerate and in come pairs.
 
 /// Transition
-It looks like we are able build systems that are effective p-wave superconductors and they can host MF's.
-We now want to look at what we can do with these MF's.
-I'll now talk about the motivation for this project.
+Now that we know where we can find Majorana fermions lets discuss the simplest system and its properties for hosting Majorana fermions.
 
-/// Motivation Braiding in a 2D pwave SC
-Ivanov showed for a MF's in a vortex of a p-wave superconductor can exhibit Non-Abelian Statistics.
-I.e. operations a and b don't commute.
-This allows for a way to realize quantum computation in p-wave superconductors.
-In the figure to the right we can see a definition of an equivalent braid group in a Non-Abelian system.
+/// Kitaev chain
+So let's say we have a 1d spin-polarized pwave SC wire described in this figure at the top.
+We represent the wire in lattice space where each blue oval is a complex fermion.
+And within each fermionic site there are two majorana fermions.
+Now, if we tune the SC to have no hopping or pairing and a nonzero chemical potential we find that each majorana fermions pairs with its same site partner.
+Here each complex fermion is a linear superposition of its two majorana fermions, as described by this equation and by the dotted ovals around each pair of Majorana fermions.
+We call this the trivial phase and no singular majorana fermions exist.
 
-/// Transition
-Now that we have systems with MF's and braiding we want to develop some sort of quantu logic gate.
-A first attempt is given by Alicea.
-
-/// Motivation T-junction as a Quantum Logic Gate
-In 2011 Alicea came up with using t-junctions made of p-wave superconducting wires as a possible way to braid MF's trapped in 1D.
-Recall earlier I mentioned trivial and non-trivial states.
-We can control this topological phase transition using chemical potential.
-In the figure to the left we adiabatically tune small segments of the chain to be trivial and non-trivial to move gamma_1 to the bottom leg.
-We can continue this process to eventually move gamma_2 over an gamma_1 to the right, effectively braiding the MF's.
-In this system we have to make a few statements about the pairing potential's phase since it is direction dependent we make this quasi-1D assertions.
-The phase is zero for rightward and upwards motion while it is pi for leftward and downwards motion.
-With all that it's a simple matter to make a ladder network to host and braid the MF's in.
-There is one problem with this system, machining the voltage gates is a difficult task and has not yet been done.
+Now lets adjust some of the parameters.
+Let hopping and pairing be equal and nonzero while chemical potential is zero.
+We can see a change in how the majoranas are paired.
+Namely, a majorana from one site pairs to the next site.
+This leaves two unpaired majoranas at each end of the wire.
+They don't appear in the Hamiltonian and this lets us include them as a zero-energy state.
+We call this the non-trivial phase
+Finally, we can define the linear superposition of these two majoranas as 'f' (point at equation).
+This is the highly non-local fermion state, i.e.\ their data of the fermion is stored non-locally!
+Since this information is stored "non-locally" the phase error is unlikely to occur.
 
 /// Transition
-This leads us to ask what can we do similar and different?
-Instead of t-junctions what if we used triangles instead?
+Now the kitaev chain does have more parameter space to work with.
+We can adjust the chemical potential for a range of values and the system remains in a non-trivial phase.
+This depends on the band structure as we change the chemical potential.
 
-/// Motivation Triangular Stuctures for Braiding
-We can consider triangular islands topologically similar to t-junctions.
-We can easily use epitaxial growth to make these triangles.
-Instead of using Alicea's redfined braiding we can go based off of Ivanov's model.
-We also want to try and show a smooth connection from 1D to 2D superconductors.
-I.e. can we have the triangular islands host MF's along two vertices, effectively looking like a 1D chain in a 2D geometry.
+/// Band gap and topological phase
+Lets tune chemical potential just above 2t.
+We see there is a band gap and that the hole and electron bands aren't mixed and the phase is trivial.
+If we tune chemical potential to 2t, we see the band gap closes.
+As we decrease below 2t we see the band gap reopens and now the hole and electron bands are mixed and this state is non-trivial.
+So while in this non-trivial phase we can tune the band gap to be larger, which makes it more robust against local errors and have stronger topological protection.
+To explain this in other words, the majoranas are separated by some length and protected by having a superconducting band gap material between them.
+This can prevent classical error from occuring!
+You'll notice I have these M's equal to plus or minus 1.
+This tells us the Majorana number for the system and whether it is in a trivial or non-trivial phase, which I'll cover next.
 
-/// Transition
-I think we can now setout to develop our quantum logic gate using a triangular islands.
-As we dive into the formulation I want to mention the previous results I showed in my master's talk and where they failed.
-
-/// Previous Work Setup
-Before we tried using an in-plane magentic field on an effective p-wave superconductor heterostucture.
-Note here how the in-plane magnetic field is taken account for as a Zeeman field, we only considered its effects on spin.
-
-/// Previous Work Results
-As for the results of turning on an in-plane magnetic field we can see in momentum space the band gap shrinks.
-If we look at the eigenenergies of a finite triangle we see many edge states live within the band gap.
-If we plot the eigenstate for the ground state we did find our quasiparticles wanted to be hosted at the bottom vertices as we had expected.
-Two problems: First we don't have MF's in this system and second the ground state lives within a continuum of edge states and isn't safe and could potentially mix with the other edge states.
-
-/// Transition
-How do we get around this?
-We thought about using a supercurrent instead of a magnectic field.
-Looking through the literature we did find some previous work on the effects of a supercurrent inducing topological phase transitions in superconductors.
-
-/// Topological phase transition induced by a supercurrent.
-In 2012 Romito et al. used a semiconducting wire in proximity to a supercurrent with supercurrent flowing to compute a topological phase diagram.
-As can be seen in the diagram as long as the supercurrent is within this threshold the segment of the wire will stay in a non-trivial topology.
-Thus if we tune the individual segments of supercurrent we can have differing topologies meet.
-Here I'll mention bulk-edge correspondence: essentially when two differing topologies meet a MF will be forced to lie at the interface of the topologies.
-This can be seen in the top figure where the trivial meets the non-trivial phase a MF sits inbetween.
+/// Majorana number and bulk-edge correspondence
+So instead of only analyzing band gaps we can calculate the Majorana number for a system.
+All we have to do is transform our Hamiltonian to the majorana basis like so (point at equation) and then take the sign of its Pfaffian.
+This will return a value of plus or minus 1.
+In the case of the kitaev chain one finds that for mu outside 2t the system is in a trivial phase and when inside 2t it is non-trivial.
+Now, one more thing to mention is bulk-edge correspondence.
+When we put two different topological phases together majorana fermions will be hosted at their interface as seen here.
+We will use the majorana number and bulk-edge correspondence to our advantage later including band gap calculations.
 
 /// Transition
-Another group showed similar results, they did expand on it using d-wave but I'll show the results for a Kitaev chain.
+Before we proceed, one little note. It would be good to see if these exist in lab, yet we have not actually found any natural p-wave SCs experimentally, but we can build effective p-wave superconductors which I'll show now.
 
-/// Topological phase transition induced by a supercurrent
-Takasan's group used a similar setup as Romito et al.
-In the figure to the bottom right they compute the topological invariant or Majorana number for such a system.
-To calculate the MN you apply PBC to your system, this way it can count when a band gap closes and not worry about the potential MF at the edge.
-We can see in the diagram where the chain is trivial(white) and non-trivial(red).
-The remaining graphs show the nth eigenvalue with OBC and PBC with q values in trivial and non-trivial phases.
+/// Experimental evidence of Majorana fermions I
+Here is the first potential evidence for majorana fermions.
+Laying a 1d spin orbit coupling wire on a s-wave SC and applying a in plane magnetic field can make an effective p-wave superconductor.
+And we can see in the figure to the right at 0 energy and increasing magnetic field we get a signal in the di/dv curve which is indicative of majorana fermions.
 
 /// Transition
-This is promising news that a supercurrent can induce a topological phase transition.
-How do we expand on this idea?
-We take two approaches and generalize supercurrent to a vector potential
+We look at the next experiment
 
-/// Formulation two approaches
-We first found a linear vector potential on a triagular island could host MFs at the bottom vertices.
-We wanted a simplified model to compute the MN.
-We can map the vector potential of the top triangular edges to a 1D chain with linear vector potential along the axis.
-We then show we can induce topological phase transitions with a linear vector potential.
-With the Topological phase diagram we can use bulk-edge correspondence on a double chain model to force MF's at the end points.
-This just a deformed triangular chain.
-We then show another approach using generalized vector potentials on triangular islands to find critical fields and use of the Kitaev limit to host MF's at the bottom vertices of a triangular island.
+/// Experimental evidence of Majorana fermions II
+This time a 1d ferromagnet is on a s-wave superconductor.
+At zero energy we see another excitation in the di/dv curve at the end of the wire.
 
-/// Linear vector potential and Majorana number for Kitaev chain
-One way we can bring a vector potential into our model is to use a Peierls substitution.
-We choose a vector potential A to be linear in x with strength B.
-The creation and annihilation operators transform to have this form.
-This gives us a phase factor on the hopping amplitude only.
-To calculate the MN in this system we need a few things first.
-Since we don't have translation symmetry we can't go to momentum space.
-We must also transform to the Majorana basis, which can be down with this unitary operator U.
-Then we can arrive at a skew-symmetric matrix A.
-To calculate the the MN we take the sign of the Pfaffian of A.
+/// Now these two experiments only measured one end of the wire and remember majoranas come in pairs.
+
+/// Experimental evidence of Majorana fermions II
+We can see that is done here in this recent experiment.
+At zero-energy there is an excitation at both ends of the wire.
+Now in addition, this experiment also showed for small even number of lattice sites majorana fermions can exist, while small odd number of lattice sites no majorana exist.
+So far I've shown this evidence but it is still up to debate whether they are majoranas or Andreev bound states. We need "braiding" to further distinguish the particles as majorana.
 
 /// Transition
-Now lets take a look at the topological phase diagram
+What is braiding? Well this is what we're gonna talk about next.
 
-/// Topological phase transition due to a linear vector potential
-We see for varying mu and B values we can find trivial and non-trivial phase.
-In addition to the Majorana number we multiply each data point by the band gap energy.
-This helps tell us the strength of topology.
-The blue regions represent trivial phases and the red non-trivial phases.
-With this map we can make use of the bulk-edge correspondence to host MF's.
-Which brings me to a double chain toy model.
-Two chains are connected at the their end points and treat it as one dimensional, no y components for the pairing potential.
-The top chain will have the linear vector potential applied to it while the bottom chain does not, which makes it look like a Kitaev chain.
-
-/// Transition
-In the next slides I'll show you the ground states for fixed vector strengths and varying mu values
-
-/// Bulk-edge correspondence on a double chain
-Here I've set B = 0.16pi and we'll swing mu from 1.4t to 0.7t, also described by the line and points in the topological phase diagram.
-The bottom chain will have the same chemical potential as the top chain and will be in a non-trivial phase.
-First up we see for our first data point the top chain is in a trivial phase.
-We see it's ground state energies are zero and they are localized at the end points of the double chain as expected.
-Our second data point for mu=1.1t has a very small band gap.
-While the top chain may be non-trival it isn't robust enough, this leads to the ground state energies hybridizing and having a nonzero energy and thus no MF's.
-For the third data point, mu=0.7t, the top chain is now non-trivial, it still has a small band gap but we can see no MF's since we have a periodic chain of non-trivial topology.
+/// What makes Majorana fermions so cool?
+Let's now consider a 2D p-wave SC.
+Which exhibit half-quantum vortices.
+Majorana fermions are located at the center of that vortex.
+This is illustrated off to the right here (point at figure).
+Rotating a MF around another the state accumulates a phase.
+This results in the following exchange (reference MF sign flips).
+This exchange can be represented by a unitary transform and we call this a braiding operation.
+This braiding operation exhibits non-Abelian statistics.
+This is valuable as it allows for a universal quantum computer!
+Now, combined with MFs topological protection, we have a topological quantum computer.
+A big advantage of a topological quantum computer due to it's fault-tolerance is it allows for fewer repeated calculations or qubits to perform the same calculation of a normal quantum computer.
 
 /// Transition
-It might also be interesting to see what happens if we pick values in the blue spectral lines for a smaller vector strength
+With that I'll now show an example diagram of how a TQC would work with more qubits.
 
-/// Bulk-edge correspondence on a double chain
-Here I've set B=0.15pi adn we'll sweep through the same chemical potentials as before.
-In the first set we see trivial topology for the top chain.
-The ground state energies are zero and MF's at the ends of the chain as expected.
-In the second set we see similar results as before that the band gap is too small and not robust.
-In the third set we see the top chain should be trivial yet no MF's appear for the ground state wavefunction.
-This is due again to the band gap being too small, it's not robust enough to have MF's at the interface of the two topologies.
+/// Braiding in a topological quantum computer
+So first we initialize the quantum state or quantum memory.
+As time moves forward we can braid two neighboring majoranas, which is this computation phase.
+It is more apparent now why this is called braiding, like you would with hair or rope.
+Once we've finished our braiding (or computation) we can readout the final quantum state via fusion.
 
-/// Transition
-Now that we have this method down we will now look at another way to get MF's on triangular islands.
-
-/// Triangular p-wave superconductor with vector potential
-For a triangular p-wave superconductor with vector potential we arrive at this following equation.
-Notice that we have included a phase factor to the pairing potential, which is dependent on the angle of the sites nearest neighbor.
-Again phi is dependent on the line integral of the vector potential.
-It is hard to distinguish anything while in the fermion basis, but if we write it in MF basis our Hamiltonian takes this form.
+Off to the side here (point) we can generalize the braiding transform of two neighboring MFs.
+Then we can calculate the final quantum state by considering all braids in order.
 
 /// Transition
-While it doesn't look like an easy equation we can see many things about the nature of how MF's pair with its neighbors.
-Next I'll show a simple toy model to find conditions for MF's on a triangular island.
+Now that we know we can build a topological quantum computer out of MFs theoretically let's see how one could do it in practice.
 
-/// Conditions for MZM's on a triangular island.
-First we look at the Kitaev limit, t=delta>0 and mu=0.
-Our Hamiltonian has four parts that survive given here.
-If we think about a 3-pt triangle as shown to the right is it possible to get 2 isolated MF's?
-Let's make the condition that any term involving a_1 and b_2 have to go to zero.
-Due to the Kitaev limit we see the bottom row a_1 and b_2 are isolated from each other and their counterparts.
-If we look at the left edge we can find for phi31 = pi/3, a_1 doesn't pair with a_3 or b_3.
-And for phi23=pi/3, b_2 doesn't pair with a_3 or b_3.
-We find that some odd function vector potentials can achieve this critical condition for a triangle to host MF's on the bottom vertices.
-For the following results I show we will consider a linear vector potential dependent on x and poiting along the y-axis.
-This linear vector potential again can be mapped to a 1D chain.
+/// t-junction as a quantum logic gate
+We come back to our 1d wires and make t-junctions out of them.
+It is seen that we can braid or rotate two MFs on a t-junction by adjusting the gate voltage of each leg.
+This requires a redefinition of braiding for t-junctions with the following rules as can be seen.
+You can then build a ladder junction of wires for topological quantum computing.
 
 /// Transition
-Lets now see what happens if we apply a linear vector potential to a triangular island
+However, this is difficult to build, manipulate, and readout.
+It is also not a smooth connection between 1D and 2D SCs.
+Which leads us to our proposal.
 
-/// Triangular island
-The critical strength of a triangle of n_r rows is dependent on its size.
-We can extrapolate easily what the critical strength should be as shown here.
-In the bottom left picture I show the vector potential field to help illustrate the strength at each lattice point.
-I then plot a spectral flow of the energies as a function of the vector potential strength B.
-We can see in the top right graph as B reaches B_0 which is denoted as the dotted black line our energies appear to go to zero.
-We then plot the ground state wavefunction in the bottom right.
-Good news, as expected if we look at the bottom vertices we see MF's want to be hosted there.
-Another reason this is expected is we can think back to the double chain model, the top edges of the triangular can be thought of being in the trivial phase while the bottom edge is non-trivial and thus MFs want to be hosted at the interface of the two topologies.
-Bad news, it doesn't appear the MZM's live in a clean gap and live a continuum of edge states.
+/// Triangular structures for braiding
+We can consider triangular islands as similar to T-junctions.
+3 endpoints to 3 vertices.
+It may be easier to build triangles with epitaxial growth as shown in the figure to the right than building 1d wires using lithography.
+Then we can use lithography/ablation to remove the interiors.
+We think this allows a smoother transition from a 2D to 1D topological superconductor.
 
 /// Transition
-How do we get around this?
-Instead of an island what we could build a triangular chain?
+With this switch in geometry we now move on to our two proposals
 
-/// Triangular Chain
-For the same size triangle we just keep the outermost lattice sites.
-Looking at the spectral flow we see again MZM's appear at the critical strength, and the next energy state appears to be slightly smaller than 0.5t.
-We plot one of the ground state wavefunctions on the right and again we see MF's on the bottom vertices.
-There is however one problem not easily seen in the spectral flow graph.
-It is degenerate, so we have 4 MZM's.
+/// Two proposals
+We show an exactly solvable minimal kitaev triangle is capable of hosting and braiding MFs.
+This is a building block for the next proposal but can also realistically built.
+It can allow for three fermionic sites compared to a minimal four in a t-junction.
+Finally, each edge is controlled by peierls phase.
 
-/// Transition
-We've seen both extremes so lets try a compromise, a hollow triangular island.
+Our second proposal is to use a finite-size triangle with hollow interior using a uniform gauge potential and bulk-edge correspondence to host and braid MFs.
 
-/// Hollow Triangle
-For the same size triangle we now pick a width for the edges of the triangle.
-For these results we pick the width to be 3 lattice sites wide.
-In the spectral flow we zero energy is achieved for the critical strength again.
-It may appear degenerate but the next energy state is on the order of 10^-3 t.
-Overall the gap is looking cleaner.
-As for the ground state wavefunction we see as expected MF's at the bottom vertices.
 
 /// Transition
-That’s all the data I have for today.
-So I’ll go ahead and wrap this all up.
+
+/// Kitaev Triangle
+We start with our 3 lattice site model and apply the following gauge potential step function.
+This can be included as a peierls phase in the tight-binding Hamiltonian.
+In the kitaev limit we find that for the given phases between each lattice to be the following, this configuration localizes MZMs at sites 1 and 2.
+
+/// Transition
+From symmetry we can then easily find other phase configurations to host mzms on other combinations of vertices.
+Let us see if this suffices for braiding?
+
+/// Kitaev triangle braiding
+So we use a closed parameter path linearly interpolated between the following sets of phases phi.
+We see that the zero energy modes stay zero and no band gap closes throughout the braiding path.
+This is good, our information isn't destroyed in the braiding process.
+We can then see how the states evolves in the figure to the right.
+As we move clockwise through the panels we see the mzms rotate ccw.
+We also calculated the many-body Berry phase of the evolution and found two degenerate many-body ground states acquire a pi/2 difference in their Berry phases as expected.
+
+/// Transition
+In this approach we presented an exactably solvable minimal model without the need of any topology or bulk-edge correspondence.
+We now expand to larger systems to show in general MZM can be hosted and rotated via topology and bulk-edge correspondence.
+
+/// Triangular ribbon and topological phases
+To start we have the phase defined here again.
+And consider each of the edges of the triangle independently of each other.
+We use this figure on the bottom left for each edge.
+The gauge potential can be deflected at some angle var phi.
+We first consider a gauge potential pointing in the y-axis.
+Due to symmetry of the left and right edge, the gauge potential makes a 60 degree angle in both, so we will consider their edges together and call it the top edge.
+We then compute the Majorana number for the bottom edge and top edges of a triangular chain, a width of 1.
+Here is the topological phase diagram for mu vs A.
+To read this, the colors indicate which edges are in what topology.
+Black, top and bottom are trivial.
+Yellow, top and bottom are non-trivial.
+Purple, top is trivial and bottom is non-trivial.
+So we expect to see mzms at the bottom vertices due to bulk edge-correspondence.
+If we draw a line at mu = 1.6t in the diagram we can then plot the energy spectral flow here, and notice the zero energies line up with the purple regions of the topolgoical phase diagram.
+
+/// Transition
+Now that we can host mzms lets see if we can braid them by rotating the gauge potential.
+
+/// Braiding MZMs on a triangular chain (W=1)
+Still considering a triangular chain we compute the Majorana number for a constant mu with varying A values and rotation of the fields angle.
+Like the previous phase diagram the color will indicate which edges are in what topology.
+The color sequence from dark purple to orange-yellow represents a ccw crawl of topology.
+Let's look at an energy spectral flow for the given green line on the phase diagram.
+The following parameters were used to compute this spectral flow.
+We can clearly see zero energy modes through the whole path, so let's go ahead and look at some wavefunctions.
+At zero rotation, we are in the dark purple region, bottom edge is non-trivial, and we see MZM on the bottom two vertices as expected.
+Pi/12, we are in purple region, meaning bottom and right edges are non-trivial, and thus top and bottom left vertices host MZM.
+With the last two wavefunctions we can see their localizations match the topology in our phase diagram.
+
+/// Transition
+It is of further interest to see if we can recreate this with wider edges on a hollow triangle
+
+/// Rotating MZM on a Hollow Triangle (W=3)
+As before we create the phase diagram but now our ribbon has W=3.
+The gauge potential has a more complex effect on the energy spectrum here than that for the W = 1 case.
+We need to consider the band gap size in our topological phase diagram.
+You can see from this band gap diagram there are regions with relatively clean band gaps that match the topological phase diagram, we just need to vary the A strength as well as phi.
+The green line path was considered and we again look at its corresponding energy spectral flow, as seen here.
+The following parameters were used to compute this spectral flow.
+We can see zero energy modes throughout the green path in this spectral flow, so next we will look at the wavefunctions.
+At zero rotation we see the bottom edge is non-trivial, represented by the dark-purple region, corresponding with MZM at the bottom vertices.
+At pi/6 we see that bottom and left edge are non-trivial, and as expected the MZM are at the top and bottom right vertices.
+As we continue to rotate we clearly see the MZM at their respective vertices and they rotate cw around the triangle in accordance with the topological phase diagram.
+
+/// Transition
+Now that we shown two different triangular schematics that can succesfully host and manipulate two MZM on a single island we next show how to braid two of four MZM in a triangular network.
+
+/// Braiding Two of Four MZM
+For the following braid we need only consider 4 triangular islands as shown.
+We tune the islands to initiate the first state using chemical potentials and vector potential fields pointing in the y-axis.
+Next, adiabatically turn on the vector potential at phi=pi/6 for the middle island then at phi=0 for the top triangle.
+Rotate the middle island's vector potential to pi/3, this forces the second MZM to swap via the top edges to the right island.
+Finally, turn off the top island, followed by the middle island.
+This demonstrates a braid of gamma 2 and gamma 3.
+
+/// Part I summary
+Now we'll summarize.
+We showed a minimal kitaev triangle can emerge as an effective low-energy theory using three fermionic sites and is sufficient for braiding.
+Also, Hollow triangles maintain 1D bulk-edge correspondence under a gauge potential, the gauge potential strength and rotation allows for additional topological tunability, and also demonstrates braiding.
+Finally, mzms can be hosted and braiding on a network of triangular islands.
+
+/// Transition
+We've shown gauge potentials as an effective tool for producing topological phenomena.
+Next, we investigate topological phenomena in a nonequilibrium scheme using gauge potentials.
+
+/// Floquet quantum Hall effect outline
+I'll briefly go over Hall effects and Floquet topological insulators
+Then touch on Floquet theorem and high frequency approximation.
+Finally I'll go over the results for Dirac and 2DEG systems and summarize.
+
+/// Quantum Hall effect at the Hall effect Zoo
+We have many types of Hall effect in physics, here are the most well known ones (point at figure).
+For this part of the talk we will mostly focus on quantum Hall effect in Floquet systems.
+First lets define a few things.
+Quantum Hall effect occurs when you apply a uniform magnetic field perpendicular to a 2d material.
+The magnetic field produces a spatial dependence in the Hamiltonian and couples it to momentum.
+Here is an example for a Dirac system.
+This Hamiltonian produces flat band energies called Landau levels.
+They represent the cyclotron orbits in QHE as can be seen in the figure here.
+This is the 2DEG Hamiltonian and its Landau levels.
+Both systems exhibit QHE which means they have quantized Hall conductance defined by this equation, n is the number of filled Landau levels below the Fermi level.
+
+/// Transition
+We've only scratched the surface at the Hall effect Zoo.
+Let's check out one its new exhibits!
+
+/// Floquet exhibit at the Hall effect Zoo
+In the past 15 years there has been a push to study nonequilibrium systems using laser light that produce equilibrium physics.
+This requires the use of Floquet theorem which I will explain in a few slides.
+Each of these papers is describing different Hall effects and topological phenomena.
+
+/// Transition
+Now I want to show you literature that motivated us to explore Floquet QHE.
+
+/// Floquet quantum anomalous Hall effect
+This builds off of the photovoltaic hall effect in the last slide but by introducing a circularly polarized light on a dirac material we see it can open a band gap at the dirac point and there are edge states that live in between the gap.
+Which introduces the topological phenomena quantum anomalous hall effect.
+Instead of the magnetic field creating this gap it is the electric field component of the light!
+This was finally measured in 2020 as seen in the figure to the right.
+We can see as the electric field increases the band gap increases.
+And in the band gaps we see nearly quantized Hall conductance.
+
+All of these studies have only considered homogeneous components of light.
+This motivates us to try using inhomogeneous components.
+And recalling that QHE requires spatial dependence in the Hamiltonian, we think if we use an inhomogeneous, circularly polarized light we could induce QHE.
+
+/// Transition
+Before we can get to the results it is important to understand how one can use floquet theorem and derive and effective Hamiltonian under the influence of light.
+
+/// Floqeut theorem
+This is analogous to Bloch's theorem.
+So for any Hamiltonian that has time translation symmetry we can define the following for floquet theorem (point to equations).
+With the wavefunction defined we next define the our time fourier relations for the Hamiltonian, given here.
+Now, if we plug our relations into the time-dependent Hamiltonian we can arrive after many steps to the quasienergy operator Q.
+
+/// Transition
+Q is an infinite quasienergy matrix!
+How do we handle such a matrix?
+
+/// Quasienergy operator and high-frequency expansion
+We go ahead and write the quasienergy matrix Q as such.
+If we consider that the energy of light if much larger than the off-diagonal components of the Q matrix one can use perturbative theory to arrive at the following Q matrix.
+You'll notice that it becomes a diagonal matrix with copies of H_eff shifted by \hbar \omega.
+We can ignore the higher and lower energy states and just look at H_eff alone.
+I did say it used a perturbative theory, we can write the effective Hamiltonian as such (point at equations).
+Notice, they are in powers of hbar omega
+
+/// Transition
+Since we now have a way to build an effective Hamiltonian from floquet theory lets move onto our system setup.
+
+/// Inhomogeneous, circularly polarized light on 2D systems
+We have a Dirac or 2DEG substrate with three incident lights.
+One normally incident and the other two are oblique and mirrored to create a standing wave on the substrate.
+There is also a high refractive index place atop the substrate, this is to help enhance the effective magnetic field.
+The electric field component becomes the following.
+a and b are integer and can be equal.
+K is the wavenumber and can be determined by the following.
+
+/// Transition
+With our system setup we can now look at the results of a Dirac and 2deg system.
+
+/// Dirac systems
+We start with our Hamiltonian with a gauge potential and have the following electric field on the Dirac system.
+Notice one light component has twice the energy of the other.
+Then, using Floquet theory and HF approximation and in the limit that Kx is small, we arrive at the following effective Hamiltonian where the effective magnetic field is (point at equation).
+This form is the same as the Landau level Hamiltonian for QHE for a Dirac system.
+We expect it to have the same quantized Hall effect.
+We then plot some expected effective magnetic field and quasienergy values for our system.
+The energy of light on the x-axis is what is readily available in lab form the previous literature I showed earlier.
+Describe the different lines.
+This could then be directly compared to classic quantum Hall effect.
+
+/// Transition
+Now we move onto 2DEG
+
+/// Dirac systems
+We start with our Hamiltonian with a gauge potential and have the following electric field on the Dirac system.
+Here the light has the same energy for both components of light.
+Then, using Floquet theory and HF approximation and in the limit that Kx is small, we arrive at the following effective Hamiltonian where the effective magnetic field is (point at equation).
+This form is the same as the Landau level Hamiltonian for QHE for a 2deg system.
+We expect it to have the same quantized Hall effect.
+We then plot some expected effective magnetic field and quasienergy values for our system.
+The energy of light on the x-axis is what is readily available in lab form the previous literature I showed earlier.
+Describe the different lines.
+I have one last thing to note about these two systems and their energy.
+The effective Hamiltonian describes Landau-level like energies, where electron orbits are not necessarily cyclotron orbits
 
 /// Summary
-Within this talk I have shown that triangular islands with gapped interiors (chain and hollow triangle) can be promising platforms for hosting and manipulating MZM’s.
-Computing the MN for these triangular structures should give us enough intuition to find robust MZM’s outside the Kitaev limit.
-We will also reapply this methodology for a Rashba SC heterostucture.
-And once we have that we can develop a practical braiding scheme for these quantum logic gates.
+So in conclusion.
+I showed inhomogeneous, circularly polarized light induces QHE in both Dirac and 2DEG systems.
+And showed you can enhance the effective magnetic field and energies by several parameters.
 
-/// Transition
-With this project now wrapped up I’d like to mention additional projects that will be in my dissertation.
-
-/// Additional Projects
-I’ll have a section on searching for floquet landau levels in Graphene and 2DEG’s using two linearly polarized lights.
-Another project is trying to map spins to fermions in a triangular structure like Kitaev did with a honeycomb lattic using the Jordan-Wigner transformation.
-There is little literature on the 2D transformation but we will see what we can do.
-
-With that I’d like to thank my advisor and committee members.
-I’ll now take any questions you have.
+/// Acknowledgements
+Finally, I'd like to thank the following: wing it.
