@@ -1,11 +1,11 @@
 \section{Peierls phase in tight-binding models}
-When working with condensed matter systems we often either work with free particles using Schr\"{o}dinger's or Dirac's equation or tight-binding models describing how much energy is needed for a particle to ``hop'' from one lattice to the next.
+When working with condensed matter systems we often either work with free particles using Schr\"{o}dinger's or Dirac's equation or tight-binding models describing how much energy is needed for a particle to ``hop'' from one lattice site to the next.
 In tight-binding models there is typically no momentum term to use minimal coupling to introduce the gauge potential, but we can find a basis transformation that is equivalent.
 A few different names this can go by include: Aharonov-Bohm effect, Berry phase, geometric phase, or Peierls phase.
 There are a few ways to derive Peierls phase and we will use the differential geometry approach.
-We follow the following textbook reference ~\cite{altlandCondensedMatterField2023}.
+Below we follow~\cite{altlandCondensedMatterField2023}.
 
-Before, we showed minimal coupling and now we would like to express it in terms of a covariant derivative
+Before, we introduced minimal coupling and now we would like to express it in terms of a covariant derivative
 
 \begin{equation}
   D_{\mu} = \partial_{\mu} - i A_{\mu}.
@@ -41,7 +41,7 @@ Given the following tight-binding Hamiltonian
 \begin{equation}
   \ham_t = -t \sum_{\langle j, l \rangle} \cc_j c_{l} + h.c.,
 \end{equation}
-a gauge potential is applied to the system making the following Peierls phase transform, a unitary transform, to its creation/annihilation operators
+a gauge potential is applied to the system making the following Peierls phase transformation, a unitary transformation, to its creation/annihilation operators
 
 \begin{align}
   %c_j \rightarrow c_j \exp \left[{\frac{iq}{\hbar} \int^{\vec{r}_j} \vec{A}\cdot d\vec{l}} \right] \nonumber \\

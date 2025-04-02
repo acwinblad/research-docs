@@ -1,13 +1,12 @@
 \section{Majorana fermions and topological superconductors}
 
-We discuss here MFs and their connection to topological superconductors and the properties that can be exploited for topological quantum computing.
+We discuss here MFs, their connection to topological superconductors, and the properties that can be exploited for topological quantum computing.
 %Before we define Majorana fermions we will discuss characteristics of fermions.
-There are three types of fermions: Dirac, Weyl, and Majorana.
-Fermions are particles that follow Fermi-Dirac statistics and the Pauli exclusion principle and have half-integer spin (spin 1/2, 3/2, etc.).
-In 1926, both Enrico Fermi and Paul Dirac derived Fermi-Dirac statistics, independently of one another.
+Fermions are particles that follow Fermi-Dirac statistics and the Pauli exclusion principle and have half-integer spin (spin 1/2, 3/2, etc.). There are three types of fermions: Dirac, Weyl, and Majorana. 
+In 1926, both Enrico Fermi and Paul Dirac derived Fermi-Dirac statistics independently.
 Dirac's equation led to the derivation of a (complex) wavefunction solution for spin-half fermions that have mass and charge, and an antiparticle, coined as the positron.
 A few years later, Hermann Weyl derived from Dirac's equation a simplified solution for describing massless fermions.
-Then, in 1937 Ettore Majorana hypothesized from Dirac's equation a (real) wavefunction solution that showed that these fermions were both particle and antiparticle and neutrally charged.
+Then, in 1937 Ettore Majorana hypothesized from Dirac's equation a (real) wavefunction solution that showed that these fermions were their own antiparticles and neutrally charged.
 
 Examples of observed fermions include electrons, neutrinos, neutrons, and protons.
 %Weyl and Majorana fermions have yet to be observed.
@@ -16,30 +15,29 @@ The MAJORANA project: neutrinoless double beta decay, is one experiment for dete
 The particle physics community has yet to find either Weyl or MFs in experiments.
 There are, however, avenues for pursuing them as quasiparticles in condensed matter systems.
 For example, in 2011 Weyl fermions were theorized to be in topological semimetals then quickly observed as quasiparticles by 2015 in TaAs semimetals using angle-resolved photoemission spectroscopy (ARPES)  ~\cite{wanTopologicalSemimetalFermiarc2011, xuDiscoveryWeylFermion2015, liWeylSemimetalTaAs2016}.
-Since 2001 it has been hypothesized that MFs can be found on \textit{p}-wave superconductors in pairs of 2 and non-localized in half-quantum vortices and at the ends of wires.
+Since 2001 it has been hypothesized that MFs can be found in \textit{p}-wave superconductors in pairs, either at cores of half-quantum vortices or at the ends of wires.
 
-In conventional superconductors there are Cooper pairs that make up the supercurrent.
+In conventional superconductors there are Cooper pairs that support supercurrents.
 These Cooper pairs are made up of two electrons (or holes) with opposite spin and momenta caused by the electron-phonon interaction.
 A Bogoliubov quasiparticle is the first excited state of a Cooper pair condensate.
 This is when an electron and hole with opposite momenta become paired.
-When the systems chemical potential allows the electron and hole bands to cross one another in the Brillouin zone.
-The superconducting order parameter, $\Delta$, dictates the type of spin coupling for the Bogoliubov quasiparticles.
-For example, superconductors that are \textit{s}-wave, pair electrons and holes with opposite spin.
-While \textit{p}-wave, pairs electrons and holes that compose spin-triplets.
-In a \textit{p}-wave superconductor, if the Bogoliubov quasiparticle is a zero-energy excitation, then it can be written as a highly non-localized Majorana zero mode (MZM).
+Tuning the system's chemical potential allows the electron and hole bands to cross one another in the Brillouin zone.
+The superconducting order parameter, $\Delta$, dictates the type of spinful coupling for the Bogoliubov quasiparticles.
+For example, superconductors that are \textit{s}-wave, pair electrons and holes with opposite spin, while \textit{p}-wave ones pair electrons and holes that compose spin-triplets.
+In a \textit{p}-wave superconductor, if the Bogoliubov quasiparticle is a zero-energy excitation, it can be written as a highly non-local Majorana zero mode (MZM).
 MZMs come in pairs due to particle-hole symmetry of the system.
 
-Here are a few reasons why MFs are highly sought after.
+There are a few reasons why MFs are highly sought after:
 MFs are dictated by non-Abelian exchange statistics, which allows for building a universal quantum computer.
 Another perk of non-trivial topological superconductors, is the ability to protect MFs from local perturbations, also known as fault-tolerant.
-This reduces the error qubits can acquire when performing a braiding operation.
+This reduces the error that qubits can acquire when performing a braiding operation.
 The next few subsections will review these properties of MFs in topological superconductors.
 
 \subsection{Kitaev chain}
 We now review the Kitaev chain, a realization of MZMs, or MFs, on a 1D spinless \textit{p}-wave superconductor.
 The derivation can be found in the following reference ~\cite{kitaevUnpairedMajoranaFermions2001}.
 Originally, Kitaev's proposal was to design a topological quantum storage device.
-However, a Kitaev chain can be used for more than storage; it is a key building block in constructing topological quantum logic gates.
+However, a Kitaev chain can be used for more than storage: it is a key building block in constructing topological quantum logic gates.
 
 Start with a 1D spinless \textit{p}-wave superconductor tight-binding Hamiltonian
 
@@ -47,20 +45,18 @@ Start with a 1D spinless \textit{p}-wave superconductor tight-binding Hamiltonia
   \ham = \sum_j^{N-1} (-t \cc_j c_{j+1} + \Delta c_j c_{j+1} + h.c.) - \sum_j^{N} \mu \cc_j c_j,
 \end{equation}
 where $t$ is hopping amplitude, $\Delta = |\Delta|$ is the superconducting order parameter, $\mu$ is chemical potential, and $\cc (c)$ is the creation (annihilation) operator for a complex fermion.
-We use the following MF basis transformation, where
-$\cc_j = \tfrac{1}{2} (a_j - i b_j)$, $\left\{ a^{\dagger}_j, a_{j'} \right\} = \left\{ a_j, a_{j'} \right\} = 2\delta_{j,j'}$
-since they are MFs, and $\left\{a_j,b_{j'}\right\} = 0$.
+We use the following MF basis transformation: $\cc_j = \tfrac{1}{2} (a_j - i b_j)$, where $\left\{ a^{\dagger}_j, a_{j'} \right\} = \left\{ a_j, a_{j'} \right\} = 2\delta_{j,j'}$ and $\left\{a_j,b_{j'}\right\} = 0$.
 The Hamiltonian becomes
 
 \begin{equation}
   \ham = \dfrac{i}{2} \sum_j \left( -\mu a_j b_j + (t+\Delta) b_j a_{j+1} + (-t+\Delta) a_j b_{j+1} \right).
 \end{equation}
-In the trivial topology phase, there are no MFs, $\mu \neq 0$ and $t=\Delta=0$,
+A trivial topology phase, meaning there are no MFs at chain ends, can be achieved by having $\mu \neq 0$ and $t=\Delta=0$, leading to
 
 \begin{equation}
   \ham = -\mu\dfrac{1}{2} \sum_j a_j b_j.
 \end{equation}
-For non-trivial topology phase, there are MFs present, $\mu = 0$, and $t = \Delta > 0$,
+The non-trivial topology phase, in which there are MFs present at chain ends, can be realized by setting $\mu = 0$, and $t = \Delta > 0$:
 
 \begin{equation}
   \ham = it \sum_j b_j a_{j+1}.
@@ -69,24 +65,23 @@ Notice terms $a_1$ and $b_N$ are missing in the non-trivial topology Hamiltonian
 We define the non-localized zero energy mode present in the system as the following fermionic operator, $f = \tfrac{1}{2}(a_1 + i b_N)$.
 This state is composed of two well separated MZMs.
 Figure ~\ref{fig:kitaev-chain} shows the wire in both topological phases.
-A quick note on terminology, sometimes non-trivial topology is referred to as the topological phase, for the purposes of this dissertation we will use the former option.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{./figures/kitaev-chain.pdf}
-  \caption{The top chain represents the system in a trivial topology where each complex fermion $c_j = \tfrac{1}{2}(a_j + i b_j)$ is a linear combination of intraconnected MFs. The bottom chain represents the system in a non-trivial topology where each complex fermion $\tilde{c}_j = \tfrac{1}{2}(a_j + i b_{j+1})$ is a linear combination of interconnected MFs, leaving the non-localized complex fermion $f = \tfrac{1}{2}(a_0 + i b_N)$, and thus leaving one MF located at each end of the chain.}
+  \caption{The top chain represents the system in a trivial topology where each complex fermion $c_j = \tfrac{1}{2}(a_j + i b_j)$ is a linear combination of intraconnected MFs. The bottom chain represents the system in a non-trivial topology where each complex fermion $\tilde{c}_j = \tfrac{1}{2}(a_j + i b_{j+1})$ is a linear combination of interconnected MFs, leaving the non-localized complex fermion $f = \tfrac{1}{2}(a_1 + i b_N)$, and thus leaving one MF located at each end of the chain.}
   \label{fig:kitaev-chain}
 \end{figure}
 
 Slightly outside the Kitaev limit, a non-trivial topology persists if $|\mu| < 2t$ and $t = |\Delta| >0$.
 Due to bulk-edge correspondence, MZMs are localized at the interface between trivial and non-trivial segments.
 To formalize this, we calculate the topological invariant, known as the Majorana number.
-While calculating the Majorana number is straight forward enough, its proof on the other hand is not, this can be found in App. \ref{app:majorana-number}.
+While calculating the Majorana number is straightforward enough, its proof, shown in  App. \ref{app:majorana-number}, is not.
 To compute the Majorana number, we perform a MF basis transformation on the Hamiltonian, $A = -iU \ham U^{\dagger}$, then take the sign of the Pfaffian,
 
 \begin{equation}
   \mathcal{M} = \text{sgn} [\text{Pf} (A)].
 \end{equation}
-If the system has translational symmetry in $x$ and $y$, the Hamiltonian can be transformed into momentum space.
+If the system has translational symmetry in the chain direction, the Hamiltonian can be transformed into momentum space.
 Using the symmetry condition $\epsilon(-k) = -\epsilon(k)$, we find that for any given $k$, there are equal numbers of positive and negative eigenvalues.
 The Majorana number then simplifies to
 
@@ -104,34 +99,29 @@ This phenomena is a direct consequence of bulk-edge correspondence.
 
 Now that we have a way to distinguish topological states, we must consider the size of the systems band gap and robustness.
 When $|\mu| = 2t$, the system reaches a critical point where the band gap opens and closes, making this region of parameter space undesirable.
-The band gap is too small, allowing even minor local perturbations to reopen or close the gap, which compromises the stability and information of the MZMs.
-By tuning the chemical potential further from these critical points, the band gap enhances, increasing robustness against local perturbations (providing greater topological protection).
+A too small band gap allows even minor local perturbations to reopen or close it and therefore compromises the stability and information of the MZMs.
+By tuning the chemical potential further from these critical points, the band gap becomes larger, increasing robustness against local perturbations.
 
 
 But what are local perturbations and how do they contribute to error?
 There are two common types of error in quantum computers: classical and phase.
 Classical error flips the qubit state, $|1\rangle \rightarrow |0\rangle$ and vice versa.
-Phase error changes the sign of the occupied state, $|1\rangle \rightarrow -|1\rangle$, relative to the unoccupied state $|0\rangle$.
-
-To rid the system of classical error we envision the following.
-In a superconductor we can imagine an electron hopping from one site to another as two classical errors occurring simultaneously.
-If our fermionic qubit state has its information distributed non-locally with a band gap medium between its MZMs, then the possibility of an electron hopping between the two MZMs becomes exponentially small with separation distance.
-Simply put, the error must affect both MZMs at the same time but with large separation makes it highly unlikely to occur.
+Phase error changes the sign of the occupied state, $|1\rangle \rightarrow -|1\rangle$, relative to the unoccupied state $|0\rangle$. To get rid of the classical error we can envision the following: Imagine an electron hopping from one site to another, creating two classical errors simultaneously.
+If our fermionic qubit state has its information distributed non-locally in MZMs, the possibility of an electron hopping between the two MZMs becomes exponentially small with separation distance.
+Simply put, the error must affect both MZMs at the same time which is highly unlikely given a large separation.
 
 Phase error can be represented as $\cc_j c_j$, leading to different electron configurations acquiring different phases over time.
 Majorana operators as defined earlier give the following phase error operator $\cc_j c_j = \frac{1}{2} (1+ i a_j b_j)$.
-This would require the highly non-localized MZMs to share the same site to induce a phase error.
-In summary, non-trivial topology makes MZMs difficult to couple together due to their separation and a large finite band gap prevents excitations from occurring.
+This would require the highly non-local MZMs to share the same site to induce a phase error.
+In summary, non-trivial topology makes MZMs difficult to couple together due to their separation and a large band gap prevents excitations.
 ~\cite{kitaevUnpairedMajoranaFermions2001}.
 
 
 \subsection{Half-quantum vortices in \textit{p}-wave superconductors}
-We now transition to Ivanov's derivation of MFs and introduce \textit{braiding} for its topological quantum computing applications.
+We now transition to Ivanov's derivation of MFs \cite{ivanovNonAbelianStatisticsHalfQuantum2001} and introduce \textit{braiding} for their topological quantum computing applications.
 It was proposed by Read and Green that the Pfaffian quantum Hall state derived by Moore and Read belongs to the same topological class as the Bardeen-Cooper-Schrieffer (BCS) pairing state.
-Ivanov later verified this was the case for a BCS-paired state, demonstrating that the Pfaffian state exhibits non-Abelian statistics in the presence of half-quantum vortices.
-Since \textit{p}-wave superconductors share this topological structure, they also support non-Abelian statistics.
-To answer this, we need to understand how the superconducting order parameter acts under different pairing potentials composed of singlet or triplet states.
-The following reference was used for this section.
+Ivanov later verified that this was the case: BCS states in $p$-wave superconductors exhibit non-Abelian statistics in the presence of half-quantum vortices.
+To explicitly show this, we first need to understand how the superconducting order parameter acts under different pairing potentials composed of singlet or triplet states.
 
 The superconducting order parameter, also called order parameter or pairing potential for short, tells us the correlation between two fermionic operators in a superconductor and requires the state to be antisymmetric.
 The order parameter is made up of a spatial and spin component, with symmetry constraints dictating their relationship.
@@ -156,7 +146,7 @@ $\Delta_s (\vec{k}) = i\Delta_0 \sigma_y$.
 In contrast, for \textit{p}-wave superconductors $l=1$, the spherical harmonic $Y_{1,\pm1} \propto k_x \pm i k_y$, leading to linear dependence in momentum.
 This leads to the order parameter
 $\Delta_p(\vec{k}) = i\Delta (\vec{d} \cdot \bm{\sigma}) (k_x+ik_y) \sigma_y$.
-This shows symmetry of the superconducting state determines the structure of $\Delta(\vec{k})$ and how it influences the physical properties of the system.
+In a word, the symmetry of the superconducting state determines the structure of $\Delta(\vec{k})$ and how it influences the physical properties of the system.
 
 \begin{figure}
   \includegraphics[width=0.4\textwidth]{./figures/half-quantum-vortex.pdf}
@@ -164,20 +154,20 @@ This shows symmetry of the superconducting state determines the structure of $\D
   \label{fig:half-quantum-vortex}
 \end{figure}
 
-In Ivanov's proof, a slightly different basis for the triplet-pairing order parameter is used
+In Ivanov's proof \cite{ivanovNonAbelianStatisticsHalfQuantum2001}, a slightly different basis for the triplet-pairing order parameter is used
 
 \begin{equation}
   %\Delta (\vec{k}) = \Delta e^{i\phi} \left[ d_x \left(|\uparrow\uparrow\rangle + |\downarrow\downarrow\rangle \right) +i d_y \left(|\uparrow\uparrow\rangle - |\downarrow\downarrow\rangle \right) + d_z \left(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle \right) \right] (k_x + i k_y),
   \Delta (\vec{k}) = \Delta e^{i\varphi} \left[ d_x \sigma_0 + i d_y \sigma_z + d_z \sigma_x \right] (k_x + i k_y),
 \end{equation}
-and follows the antisymmetric definition $\Delta(\vec{k}) = -\Delta^T (-\vec{k})$.
+satisfying the antisymmetric relation $\Delta(\vec{k}) = -\Delta^T (-\vec{k})$.
 For a half-quantum vortex to exist, we must allow $\vec{d}$ to rotate in 3D or in a plane.
 Additionally, the order parameter maps to itself, which requires the change of sign of $\vec{d}$ and shift in the phase $\varphi$ by $\pi$, simultaneously.
 This mapping is
 $(\varphi, \vec{d}) \mapsto (\varphi+\pi,-\vec{d})$
 and can be seen in Figure ~\ref{fig:half-quantum-vortex}.
 
-We now reduce to a 2D superconductor, this forces $\vec{d}$ to point and rotate in the x-y plane and removes the coupling of spin-up and -down fermions from the order parameter.
+We now specialize to a 2D superconductor, force $\vec{d}$ to point and rotate in the $x-y$ plane, and remove the coupling of spin-up and -down fermions in the pairing term.
 The order parameter can then be written in polar coordinates
 
 \begin{align}
@@ -206,13 +196,13 @@ where $*$ is the symmetrized product
 One can diagonlize the Hamiltonian using the quasiparticle operator
 $\gamma^{\dagger} = u\Psi^{\dagger} + v\Psi$.
 The creation annihilation of the same fermion is related by the parameters $u$ and $v$, causing the energy eigenstates to be symmetric about zero-energy, restricting
-$\gamma^{\dagger}(E) = \gamma (E)$.
+$\gamma^{\dagger}(E) = \gamma (-E)$.
 %It then leads to the zero-energy eigenstate being self-conjugate, a Majorana fermion, $\gamma^{\dagger}(E=0) = \gamma (E=0)$.
 The spinful nature eliminates the spin degree of freedom and shows the creation and annihilation operators are coupled due to superconductivity, making MFs possible through self-conjugacy.
 
 \subsection{Braiding}
-To speak on braiding it is important to start with gauge symmetry.
-Under \textit{U}(1) gauge transformation, if the superconducting gap is shifted by $\phi$, it is the same as rotating the creation annihilation operator by half the shift.
+To discuss braiding, it is important to start with gauge transformations.
+Under \textit{U}(1) gauge transformation, if the phase of the superconducting gap is shifted by $\phi$, it is the same as rotating the creation annihilation operator by half the shift.
 Thus, $\Psi_{\alpha} \mapsto e^{i\phi/2} \Psi_{\alpha}$, which leads to the MF operator weights transforming as $(u,v) \mapsto (ue^{i\phi/2}, v^{-i\phi/2})$.
 We can see with a change of superconducting order parameter by $2\pi$ the MF changes sign, $\gamma \mapsto -\gamma$ ~\cite{ivanovNonAbelianStatisticsHalfQuantum2001}.
 
@@ -283,7 +273,7 @@ such that the site indices have the following definitions
   \item Decrease moving $\leftarrow / \downarrow$ in the horizontal/vertical wires: $\phi = \pi$.
 \end{itemize}
 The braiding of two MFs in a T-junction is achieved by adiabatically tuning the voltage gate, or chemical potential, of the wires which can be seen in Figure ~\ref{fig:t-junction-braid}.
-Then, extrapolate to a ladder junction as shown in Figure ~\ref{fig:t-junction-braid} ~\cite{aliceaNonAbelianStatisticsTopological2011}.
+The process can be extrapolated to a ladder junction as shown in Figure ~\ref{fig:t-junction-braid} ~\cite{aliceaNonAbelianStatisticsTopological2011}.
 While this approach is simple in theory and being seriously pursued, it is difficult to build, manipulate, and read experimentally.
-Another difficulty for these wires is due to not having any truly \textit{p}-wave superconductors, currently they need to be built from heterostructures to make an effective \textit{p}-wave superconductor.
+Another difficulty for these wires is that there are no pristine \textit{p}-wave superconductors known to date, while effective \textit{p}-wave superconductors made of heterostructures, to be introduced next, are prone to various artifacts.
 

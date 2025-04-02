@@ -2,21 +2,18 @@
 Here we give an overview of Maxwell's equations in relation to gauge potentials and transformations.
 The electric and magnetic fields, $\vec{E}$ and $\vec{B}$, respectively, are physical observables.
 While different scalar potentials $V$ and gauge potentials $\vec{A}$ are not directly observable, they produce the same electric and magnetic fields, reflecting the principle of gauge invariance.
-The following derivation can be found in many textbooks, we follow the following textbook ~\cite{griffithsIntroductionElectrodynamics2024}.
-To show this, we start with Maxwell's equations and aim to rewrite them in terms of potential fields.
+The following derivation can be found in many textbooks. Here we follow ~\cite{griffithsIntroductionElectrodynamics2024}.
 
+We start with Maxwell's equations
 \begin{align}
   \nabla \cdot \vec{E} &= \dfrac{1}{\epsilon_0}\rho, \label{eq:maxwell1} \\
   \nabla \cdot \vec{B} &= 0, \label{eq:maxwell2} \\
   \nabla \cross \vec{E} &= -\partial_t \vec{B}, \label{eq:maxwell3} \\
   \nabla \cross \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \partial_t \vec{E}, \label{eq:maxwell4}.
 \end{align}
-One can write Maxwell's equations as a function of potentials, $V$ and $\vec{A}$.
-Recall the magnetic field,
-$\vec{B} = \nabla \cross \vec{A}$,
-and electric field,
-$\vec{E} = -\nabla V - \partial_t \vec{A}$.
-Eq.~\eqref{eq:maxwell1} and \eqref{eq:maxwell4} provide the most information, which become
+One can write Maxwell's equations in terms of potentials, $V$ and $\vec{A}$ using $\vec{B} = \nabla \cross \vec{A}$,
+and $\vec{E} = -\nabla V - \partial_t \vec{A}$.
+Eq.~\eqref{eq:maxwell1} and \eqref{eq:maxwell4} provide the most relevant information, which become
 \begin{align}
   \dfrac{1}{\epsilon_0}\rho &= -\nabla^2 V - \partial_t \nabla \cdot \vec{A}, \label{eq:div-electric-as-potential} \\
   -\mu_0 \vec{J} &= \nabla^2 \vec{A} - \mu_0 \epsilon_0 \partial_t^2 \vec{A} - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \partial_t V \right). \label{eq:current-as-potential}
@@ -41,7 +38,7 @@ then $\beta = -\partial_t \lambda + k(t)$ and
   V' &= V - \partial_t \lambda + k (t),
 \end{align}
 which is a general gauge transformation of potentials.
-Thus $V$ and $\vec{A}$ are gauge invariant.
+Thus $V$ and $\vec{A}$ are gauge covariant.
 This allows one to leverage gauge invariance to conveniently determine both scalar and gauge potentials for a system.
 
 %\Blue{Probably unnecessary.}
