@@ -51,13 +51,6 @@ D.~A. Ivanov.
   Superconductors}}.
 \newblock {\em Phys. Rev. Lett.}, 86(2):268--271, January 2001.
 
-\bibitem{aliceaNonAbelianStatisticsTopological2011}
-Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
-  Fisher.
-\newblock Non-{{Abelian}} statistics and topological quantum information
-  processing in {{1D}} wire networks.
-\newblock {\em Nature Phys}, 7(5):412--417, May 2011.
-
 \bibitem{sauGenericNewPlatform2010}
 Jay~D. Sau, Roman~M. Lutchyn, Sumanta Tewari, and S.~Das~Sarma.
 \newblock Generic {{New Platform}} for {{Topological Quantum Computation Using
@@ -74,6 +67,13 @@ Chetan Nayak, Steven~H. Simon, Ady Stern, Michael Freedman, and Sankar
   Das~Sarma.
 \newblock Non-{{Abelian}} anyons and topological quantum computation.
 \newblock {\em Rev. Mod. Phys.}, 80(3):1083--1159, September 2008.
+
+\bibitem{aliceaNonAbelianStatisticsTopological2011}
+Jason Alicea, Yuval Oreg, Gil Refael, Felix {von Oppen}, and Matthew P.~A.
+  Fisher.
+\newblock Non-{{Abelian}} statistics and topological quantum information
+  processing in {{1D}} wire networks.
+\newblock {\em Nature Phys}, 7(5):412--417, May 2011.
 
 \bibitem{aasenMilestonesMajoranaBasedQuantum2016}
 David Aasen, Michael Hell, Ryan~V. Mishmash, Andrew Higginbotham, Jeroen Danon,
@@ -399,47 +399,9 @@ O.~Pietzsch, S.~Okatov, A.~Kubetzka, M.~Bode, S.~Heinze, A.~Lichtenstein, and
   Islands}} on {{Cu}}(111).
 \newblock {\em Phys. Rev. Lett.}, 96(23):237203, June 2006.
 
-\bibitem{romitoManipulatingMajoranaFermions2012}
-Alessandro Romito, Jason Alicea, Gil Refael, and Felix {von Oppen}.
-\newblock Manipulating {{Majorana}} fermions using supercurrents.
-\newblock {\em Phys. Rev. B}, 85(2):020502, January 2012.
-
-\bibitem{takasanSupercurrentinducedTopologicalPhase2022}
-Kazuaki Takasan, Shuntaro Sumita, and Youichi Yanase.
-\newblock Supercurrent-induced topological phase transitions.
-\newblock {\em Phys. Rev. B}, 106(1):014508, July 2022.
-
-\bibitem{hyart_2013}
-T.~Hyart, B.~{van Heck}, I.~C. Fulga, M.~Burrello, A.~R. Akhmerov, and C.~W.~J.
-  Beenakker.
-\newblock Flux-controlled quantum computation with {{Majorana}} fermions.
-\newblock {\em Phys. Rev. B}, 88(3):035121, July 2013.
-
-\bibitem{dmytruk_2019}
-Olesia Dmytruk, Manisha Thakurathi, Daniel Loss, and Jelena Klinovaja.
-\newblock Majorana bound states in double nanowires with reduced {{Zeeman}}
-  thresholds due to supercurrents.
-\newblock {\em Phys. Rev. B}, 99(24):245416, June 2019.
-
-\bibitem{gennesSuperconductivityMetalsAlloys2018}
-P.~G.~De Gennes.
-\newblock {\em Superconductivity {{Of Metals And Alloys}}}.
-\newblock CRC Press, Boca Raton, March 2018.
-
 \bibitem{supp}
 {\em {See Supplemental Material in Chapter 2 of this dissertation for
   additional technical details.}}
-
-\bibitem{fengProbingRobustMajorana2022}
-Guan-Hao Feng and Hong-Hao Zhang.
-\newblock Probing robust {{Majorana}} signatures by crossed {{Andreev}}
-  reflection with a quantum dot.
-\newblock {\em Phys. Rev. B}, 105(3):035148, January 2022.
-
-\bibitem{pandeyMajoranaZeroModes2023}
-Bradraj Pandey, Nitin Kaushal, Gonzalo Alvarez, and Elbio Dagotto.
-\newblock Majorana zero modes in {{Y-shape}} interacting {{Kitaev}} wires.
-\newblock {\em npj Quantum Mater.}, 8(1):1--8, September 2023.
 
 \bibitem{liTopologicalSuperconductivityInduced2014}
 Jian Li, Hua Chen, Ilya~K. Drozdov, A.~Yazdani, B.~Andrei Bernevig, and A.~H.
@@ -458,6 +420,12 @@ G\'abor Sz\'echenyi and Andr\'as P\'alyi.
 \newblock Parity-to-charge conversion for readout of topological majorana
   qubits.
 \newblock {\em Phys. Rev. B}, 101:235441, Jun 2020.
+
+\bibitem{fengProbingRobustMajorana2022}
+Guan-Hao Feng and Hong-Hao Zhang.
+\newblock Probing robust {{Majorana}} signatures by crossed {{Andreev}}
+  reflection with a quantum dot.
+\newblock {\em Phys. Rev. B}, 105(3):035148, January 2022.
 
 \bibitem{QHE1}
 K.~v.~Klitzing, G.~Dorda, and M.~Pepper.
@@ -603,13 +571,6 @@ F.~Casas, J.~A. Oteo, and J.~Ros.
 \newblock Floquet theory: Exponential perturbative treatment.
 \newblock {\em J. Phys. A}, 34:3379, 2001.
 
-\bibitem{TKO}
-Takuya Kitagawa, Takashi Oka, Arne Brataas, Liang Fu, and Eugene Demler.
-\newblock Transport properties of nonequilibrium systems under the application
-  of light: {{Photoinduced}} quantum {{Hall}} insulators without {{Landau}}
-  levels.
-\newblock {\em Phys. Rev. B}, 84(23):235108, December 2011.
-
 \bibitem{AKA}
 Andrei Kirilyuk, Alexey~V. Kimel, and Theo Rasing.
 \newblock Ultrafast optical manipulation of magnetic order.
@@ -680,17 +641,5 @@ Jean Dalibard, Fabrice Gerbier, Gediminas Juzeli{\=u}{\=u}nas, and Patrik
 N~Goldman, G~Juzeli{\=u}nas, P~{\"O}hberg, and I~B Spielman.
 \newblock Light-induced gauge fields for ultracold atoms.
 \newblock {\em Reports on Progress in Physics}, 77(12):126401, November 2014.
-
-\bibitem{shimFundamentalLimitsRefractive2021}
-Hyungki Shim, Francesco Monticone, and Owen~D. Miller.
-\newblock Fundamental {{Limits}} to the {{Refractive Index}} of {{Transparent
-  Optical Materials}}.
-\newblock {\em Advanced Materials}, 33(43):2103946, 2021.
-
-\bibitem{amotchkinaCharacterizationEbeamEvaporated2020}
-Tatiana Amotchkina, Michael Trubetskov, Daniel Hahner, and Vladimir Pervak.
-\newblock Characterization of e-beam evaporated {{Ge}}, {{YbF3}}, {{ZnS}}, and
-  {{LaF3}} thin films for laser-oriented coatings.
-\newblock {\em Appl Opt}, 59(5):A40--A47, February 2020.
 
 \end{thebibliography}
