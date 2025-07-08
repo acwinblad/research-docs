@@ -1,0 +1,180 @@
+\section{General framework of Floquet theory}\label{app:quantum-floquet-theory}
+
+In this section we review the basic results of the Floquet theory and how to recast it into a matrix diagonalization problem. 
+The discussion in this section is mostly following \cite{AEE}.
+
+For a time-periodic Hamiltonian $H(t) = H(t+T)$ with period $T$, the time evolution of a wavefunction governed by it is described by the Schr\"{o}dinger equation
+\begin{eqnarray}\label{eq:SchrHt}
+	i\hbar \partial_t \psi(t) = H(t) \psi(t).
+\end{eqnarray}
+Floquet theorem states that $\psi(t)$ must satisfy
+\begin{eqnarray}
+	\psi(t+T) = \psi(t) e^{-i \frac{\epsilon T}{\hbar}},
+\end{eqnarray}
+where $\epsilon$ is a real number of energy units, or equivalently
+\begin{eqnarray}
+	\psi(t) = e^{-i \frac{\epsilon t}{\hbar}} u_{\epsilon}(t),
+\end{eqnarray}
+where $u_{\epsilon}(t) = u_{\epsilon}(t+T)$.
+
+Here we give a proof that is closely analogous to that of the Bloch theorem, based on plane wave expansion. An arbitrary wavefunction can be expanded into plane waves
+\begin{eqnarray}
+	\psi(t) = \sum_{\epsilon} c_\epsilon e^{-i \frac{\epsilon t}{\hbar}},
+\end{eqnarray}
+where $\epsilon\in \mathbb{R}$, while a time-periodic function $H(t)$ can only be written as a discrete Fourier series
+\begin{eqnarray}
+	H(t) = \sum_n H_n e^{i n \omega t},
+\end{eqnarray}
+where $\omega = 2\pi /T$, and $H_n = \frac{1}{T} \int_0^T H(t) e^{-i n \omega t} dt$. Substituting the two expansions above into Eq.~\ref{eq:SchrHt} gives
+\begin{eqnarray}
+	0 &=& \sum_\epsilon \left[ \sum_n H_n e^{-i \frac{(\epsilon - n \hbar \omega) t}{\hbar}} c_\epsilon - \epsilon c_\epsilon  e^{-i \frac{\epsilon t}{\hbar}} \right] \\\nonumber
+	&=& \sum_\epsilon \left[ \sum_n H_n c_{\epsilon + n\hbar \omega} - \epsilon c_\epsilon  \right] e^{-i \frac{\epsilon t}{\hbar}},
+\end{eqnarray}
+which leads to
+\begin{eqnarray}\label{eq:cepseqn}
+	\sum_n H_n c_{\epsilon + n\hbar \omega} - \epsilon c_\epsilon = 0.
+\end{eqnarray}
+For an arbitrary $\epsilon\in \mathbb{R}$ we can define $\tilde{\epsilon} \in [-\hbar \omega /2, \hbar \omega /2)$ so that $\epsilon = \tilde{\epsilon} + m \hbar \omega$. It is apparent that Eq.~\ref{eq:cepseqn} only couples $c_{\tilde{\epsilon} + m\hbar \omega}$ belonging to the same $\tilde{\epsilon}$. We thus define
+\begin{eqnarray}
+	c_{\tilde{\epsilon} + m\hbar \omega} \equiv c_{m \tilde{\epsilon}},
+\end{eqnarray}
+so that Eq.~\ref{eq:cepseqn} becomes a set of coupled equations for $c_{m \tilde{\epsilon}}$, $m \in \mathbb{Z}$:
+\begin{eqnarray}\label{eq:cepsteqn}
+	\sum_n (H_n  - m\hbar \omega \delta_{n0} ) c_{m+n, \tilde{\epsilon}} = \tilde{\epsilon} c_{m \tilde{\epsilon}}.
+\end{eqnarray}
+Eq.~\ref{eq:cepseqn} is the eigenvalue problem of the infinite-dimensional matrix $\bar{Q}$ with the matrix elements
+\begin{eqnarray}
+	\bar{Q}_{m,m+n} = H_n - m \hbar \omega\delta_{n0},
+\end{eqnarray}
+which is also the quasienergy operator in \cite{AEE}. In practice the number of eigenvalues $\tilde{\epsilon}$ is determined by the dimension of $H(t)$. The solutions of Eq.~\ref{eq:SchrHt} are therefore
+\begin{eqnarray}\label{eq:psitildee}
+	\psi_{\tilde{\epsilon}} (t) = \sum_m c_{m \tilde{\epsilon}} e^{-i\frac{(\tilde{\epsilon} + m \hbar \omega)t}{\hbar}} = e^{-i\frac{\tilde{\epsilon} t}{\hbar}} \sum_m c_{m \tilde{\epsilon}} e^{-i m  \omega t} \equiv e^{-i\frac{\tilde{\epsilon} t}{\hbar}} u_{\tilde{\epsilon}}(t).
+\end{eqnarray}
+
+The proof above also gives a useful device for calculating the Floquet states $\psi_{\tilde{\epsilon}} (t) $ based on plane wave expansion. In general $H_n$ can be a complicated operator depending on, e.g. position, spin, etc., and $c_{m \tilde{\epsilon}}$ is a function depending on these quantum numbers. One can choose a representation that makes $H_0$ diagonal, such as the Bloch representation, leading to the eigenvalues $\epsilon_{n \bm k}$ of the time-averaged Hamiltonian ($H_0$). When $H_n$ is 0 for all $n \neq 0$, we have $\tilde{\epsilon} = \epsilon_{n \bm k} - m \hbar \omega$, $m \in \mathbb{Z}$. When $H_n$ is nonzero for any $n \neq 0$ there is in general no simple relationship between $\tilde{\epsilon}$ and $ \epsilon_{n \bm k}$. Nonetheless, when $H_n$, $n \neq 0$ can be viewed as perturbation the spectrum of $\tilde{\epsilon}$ is similar to that of $\epsilon_{n \bm k} - m \hbar \omega$, i.e., the eigenenergies $\epsilon_{n \bm k}$ together with infinite number of its copies shifted vertically by $m \hbar \omega$.
+
+The importance of $\tilde{\epsilon}$ is that it completely determines the stroboscopic motion of an arbitrary Floquet wavefunction, i.e.,
+\begin{eqnarray}
+	\psi_{\tilde{\epsilon}} (t + m T) = e^{-i \frac{\tilde{\epsilon} m T}{\hbar}} \psi_{\tilde{\epsilon}} (t),\,\, \forall m\in \mathbb{Z}.
+\end{eqnarray}
+Since $\{\psi_{\tilde{\epsilon}}(t)\}$ is a complete set at time $t$, the stroboscopic evolution of an arbitrary wavefunction governed by $H(t)$ is
+\begin{eqnarray}
+	\Psi(t + m T) = \sum_{\tilde{\epsilon}} C_{\tilde{\epsilon}} e^{-i \frac{\tilde{\epsilon} m T}{\hbar}} \psi_{\tilde{\epsilon}} (t),
+\end{eqnarray}
+where $\Psi(t) =  \sum_{\tilde{\epsilon}} C_{\tilde{\epsilon}} \psi_{\tilde{\epsilon}} (t)$. The full time-evolution operator $\hat{U}(t_1,t_0)$ is therefore
+\begin{eqnarray}\label{eq:Uevolve}
+	\hat{U}(t_1,t_0) = \sum_{\tilde{\epsilon}}|\psi_{\tilde{\epsilon}} (t_1)\rangle \langle \psi_{\tilde{\epsilon}} (t_0) | = \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_1)\rangle \langle u_{\tilde{\epsilon}} (t_0) | e^{-i\frac{\tilde{\epsilon}(t_1 - t_0)}{\hbar}}.
+\end{eqnarray}
+Now we introduce two operators
+\begin{eqnarray}\label{eq:UFt1t0}
+	\hat{U}^F(t_1,t_0) \equiv \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_1)\rangle \langle u_{\tilde{\epsilon}} (t_0) |,
+\end{eqnarray}
+and
+\begin{eqnarray}\label{eq:HFt0}
+	\hat{H}^F_{t_0} \equiv \sum_{\tilde{\epsilon}} |u_{\tilde{\epsilon}} (t_0)\rangle\tilde{\epsilon} \langle u_{\tilde{\epsilon}} (t_0) |,
+\end{eqnarray}
+which allows us to rewrite Eq.~\ref{eq:Uevolve} as
+\begin{eqnarray}
+	\hat{U}(t_1,t_0) = \hat{U}_F(t_1,t_0) \exp\left[ -i\frac{(t_1 - t_0)\hat{H}^F_{t_0} }{\hbar}  \right] = \exp\left[ -i\frac{(t_1 - t_0)\hat{H}^F_{t_1} }{\hbar}  \right] \hat{U}_F(t_1,t_0).
+\end{eqnarray}
+Namely, the full time evolution is separated into two parts: $\hat{H}^F_{t_0}$ governs the stroboscopic evolution \emph{with the starting time} $t_0$, since
+\begin{eqnarray}
+	\exp\left[ -i\frac{m T \hat{H}^F_{t_0} }{\hbar}  \right] \psi_{\tilde{\epsilon}}(t_0) = e^{-i\frac{m T \tilde{\epsilon}}{\hbar} } \psi_{\tilde{\epsilon}}(t_0) = \psi_{\tilde{\epsilon}}(t_0 + m T),
+\end{eqnarray}
+while $\hat{U}_F (t_1, t_0)$ evolves the periodic part of the Floquet wavefunctions. $\hat{H}^F_{t_0} $ and $\hat{U}_F (t_1, t_0)$ are respectively called the Floquet Hamiltonian and the micromotion operator.
+
+The most unsettling property of $\hat{H}^F_{t_0} $ is its dependence on $t_0$. To get rid of it we note that Eq.~\ref{eq:psitildee} implies
+\begin{eqnarray}
+	|u_{\tilde{\epsilon}}(t) \rangle =  \sum_{\alpha} \left(\sum_m c_{m \tilde{\epsilon}}^{\alpha} e^{-i m\omega t} \right)|\alpha\rangle \equiv\sum_\alpha  |\alpha\rangle U_{\alpha,\tilde{\epsilon}} (t) ,
+\end{eqnarray}
+where the time-independent basis $|\alpha\rangle$ spans the Hilbert space of $H(t)$, and $U (t)$ is a time-dependent unitary matrix satisfying $U(t+T) = U(t)$. Substituting this $|u_{\tilde{\epsilon}}(t) \rangle$ into Eq.~\ref{eq:SchrHt} gives
+\begin{eqnarray}
+	{\rm Diag}[\{\tilde{\epsilon}\}] = U^\dag H (t) U - i\hbar U^\dag \partial_t U = U^\dag \bar{Q} U,
+\end{eqnarray}
+where ${\rm Diag}[\{\tilde{\epsilon}\}]$ is a diagonal matrix with its eigenvalues being $\tilde{\epsilon}$. Comparing this with the effect of a time-dependent unitary transformation of the wavefunction $\psi' = U^\dag \psi$ in the Schr\"{o}dinger equation:
+\begin{eqnarray}
+	i\hbar \partial_t \psi' = (U^\dag H U - i\hbar U^\dag \partial_t U)\psi' \equiv H' \psi',
+\end{eqnarray}
+we can see that $U$ essentially transforms $H(t)$ to an effective Hamiltonian $H' = U^\dag \bar{Q}U$ which is time independent. The time evolution of $\psi$ can thus obtained as
+\begin{eqnarray}
+	\psi(t_1) &=& U(t_1) \psi'(t_1) = U(t_1) \exp\left[ -i \frac{H' (t_1 - t_0)}{\hbar}  \right] \psi'(t_0) \\\nonumber
+	&=&  U(t_1) \exp\left[ -i \frac{H' (t_1 - t_0)}{\hbar}  \right] U^\dag(t_0) \psi(t_0)\\\nonumber
+	&=&\hat{U}(t_1,t_0)\psi(t_0).
+\end{eqnarray}
+We therefore define
+\begin{eqnarray}
+	\hat{H}_F \equiv U^\dag \bar{Q} U = H'
+\end{eqnarray}
+as the Floquet effective Hamiltonian, which gives the time-evolution operator
+\begin{eqnarray}\label{eq:Ut1t0}
+	\hat{U}(t_1,t_0) =  U(t_1) \exp\left[ -i \frac{\hat{H}_F (t_1 - t_0)}{\hbar}  \right] U^\dag(t_0).
+\end{eqnarray}
+Intuitively, this means that the time evolution is obtained by first doing a gauge transformation to the time-independent gauge, evolving the system, and finally gauge-transforming back to the original gauge.
+
+Although we have been assuming that $U(t)$ diagonalizes $\bar{Q}$, this is not necessary. Any time-independent unitary transformation multiplied to $U(t)$ can still make $\hat{H}_F$ time independent. To make connection between the $t_0$ dependent Floquet Hamiltonian $\hat{H}^F_{t_0}$ in Eq.~\ref{eq:HFt0} and the effective Hamiltonian $\hat{H}_F$, we use a minimal $U(t)$ that is independent of the basis of $\hat{H}(t)$:
+\begin{eqnarray}
+	U_F(t) =\sum_m c_m e^{-im\omega t},
+\end{eqnarray}
+which is a time-dependent scalar function. In the matrix form of $\bar{Q}$, this $U_F(t)$ block-diagonalizes $\bar{Q}$. All the diagonal blocks have the form $H_F - m\hbar \omega \bf{1}$. Here we removed the hat of $H_F$ to indicate that it is a matrix written in certain representation instead of an operator. In this particular representation or gauge, $|\alpha(t)\rangle = |\alpha\rangle U_F(t)$. We thus have
+\begin{eqnarray}
+	\hat{H}_{t_0}^F = \sum_{\tilde{\epsilon}}|u_{\tilde{\epsilon}}(t_0)\rangle \tilde{\epsilon} \langle u_{\tilde{\epsilon}} (t_0)| = \sum_{\alpha\beta} U_F(t_0) |\alpha\rangle (H_F)_{\alpha\beta} \langle \beta | U_F^\dag(t_0).
+\end{eqnarray}
+Or loosely speaking $\hat{H}_{t_0}^F =  U_F(t_0) \hat{H}_F U_F^\dag(t_0)$. Therefore the $t_0$ dependence in $\hat{H}_{t_0}^F$ is only due to a gauge transformation and is not physical. The complete information of time evolution can be obtained from $H_F$ \emph{and} $U_F$ according to Eq.~\ref{eq:Ut1t0}.
+
+In practice, to obtain the quasienergy spectrum or $H_F$ we simply start from the eigenvalue problem Eq.~\ref{eq:cepseqn} for $\bar{Q}\equiv \bar{H} + \bar{Q}_0$, where $\bar{H}_{m,m+n} = H_n$ and $(\bar{Q}_0)_{m,m+n} = -m\hbar \omega \delta_{n0}$. We can either use perturbation theory and treat $\bar{H}$ as perturbation, which is accurate in the high-frequency limit, or directly diagonalize $\bar{Q}$ with a large enough cutoff. The first several terms in the perturbation series of $H_F$ are given in Eqs.~86-89 in \cite{AEE} ($m$ there should be $-m$ in our notation).
+
+\section{High Frequency (Van Vleck) expansion from degenerate perturbation theory}
+
+In order to understand the effects of coherent time-periodic modulation of quantum systems, we need an efficient method to obtain the Floquet
+Hamiltonian $\hat{H}^{F}$ for a given time-dependent Hamiltonian $\hat{H} (\tau )$. Generally, for the Floquet systems, one would like to obtain a
+suitable Hamiltonian $\hat{H}(\tau )$ given a desired static Hamiltonian $\hat{H}_{\rm eff}$. Usually the formal approach in making use of the
+full eigenstates of a time-dependent model Hamiltonian is not feasible in practice. Therefore, one requires an approximate scheme that still provides
+a valid description at least on the time-scales and energy-scales. Such an approach is provided by high-frequency approximations \cite{JHS,HSA,MGP,MBL,AEE,NGJ}.
+Using the Van Vleck expansion within the degenerate perturbation theory as shown in Ref. \cite{AEE}, we can write the explicit expressions for the first few terms with $n=0,1,2$ as required;
+
+\begin{eqnarray} \label{eq:44}
+&&\hat{H}^{F(0)}=0,  \\
+&&\hat{H}^{F(1)}=\hat{H}_{0},  \\
+&&\hat{H}^{F(2)} =\sum_{m\neq 0}\frac{[\hat{H}_{m},\hat{H}_{-m}]}{m\hbar \omega }
+\notag,\\
+&&\hat{H}^{F(3)}={\displaystyle\sum_{m\neq0}}
+\left(  \frac{[\hat{H}_{-m},[\hat{H}_{0},\hat{H}_{m}]]}{2(m\hbar\omega)^{2}
+}+{\displaystyle\sum_{m^{\prime}\neq0,m}}
+\frac{[\hat{H}_{-m^{\prime}},[\hat{H}_{m^{\prime}-m},\hat{H}_{m}
+]]}{3mm^{\prime}(\hbar\omega)^{2}}\right)\notag.
+\end{eqnarray}
+Expressions for higher orders can be found in the above equations and refs. \cite{JHS,HSA,MGP,MBL,AEE,NGJ}. From a practical
+point of view, and in the cases which we will be considering, one often engineers the time-dependent Hamiltonian in such a way that the approximate
+Floquet Hamiltonian $\hat{H}_{\rm eff}$ =$\sum_{n=0}^{m}H^{F(n)}$ corresponds to the desired model Hamiltonian of the effective systems.
+
+Some of the commutators are related by transpose or Hermitian conjugate.
+As an example in $H^{F(2)}$ the transpose reduces the sum down by
+
+\begin{align}
+  \dfrac{[H_m,H_{-m}]}{m\hbar \omega} + \dfrac{[H_{-m}, H_m]}{-m\hbar\omega} &= \dfrac{[H_m,H_{-m}]}{m\hbar \omega} + \dfrac{[H_m, H_{-m}]}{m\hbar\omega} \\
+  &= 2\dfrac{[H_m,H_{-m}]}{m\hbar \omega}
+\end{align}
+Additionally, an example in $H^{F(3)}$ the Hermitian conjugate reduces the sum down by
+
+\begin{align}
+  [H_{-m'},[H_{m'-m},H_m]]^{\dagger} &= [[H_{m'-m},H_m]^{\dagger}, H_{-m'}^{\dagger}] \nonumber \\
+  &= [ [H_m^{\dagger}, H_{m'-m}^{\dagger}], H_{m'}] \nonumber \\
+  &= [ [H_{-m}, H_{m-m'}], H_{m'}] \nonumber \\
+  &= [H_{m'}, [H_{m-m'}, H_{-m}]]
+\end{align}
+or in general the following identity
+
+\begin{equation}
+  [A,[B,C]]^{\dagger} = [A^{\dagger}, [B^{\dagger}, C^{\dagger}]].
+\end{equation}
+With the symmetry in modes we have the following simplification
+
+\begin{equation}
+  \dfrac{[H_{-m'},[H_{m'-m},H_m]]}{mm'(\hbar\omega)^2} + \dfrac{[H_{m'},[H_{m-m'},H_{-m}]]}{(-m)(-m')(\hbar\omega)^2} = \dfrac{[H_{-m'},[H_{m'-m},H_m]] + h.c.}{mm'(\hbar\omega)^2}
+\end{equation}
+
+We can reduce the second and third perturbation summation terms to
+\begin{align}
+  H^{F(2)} &= \sum_{m> 0} \dfrac{2[H_m, H_{-m}]}{m\hbar\omega} \\
+  H^{F(3)} &= \sum_{m> 0} \left( \dfrac{[H_{-m} , [H_0, H_m]] + h.c.}{2(m\hbar\omega)^2} + \sum_{m'\neq m} \dfrac{[H_{-m'}, [H_{m'-m}, H_m]] + h.c.}{3mm'(\hbar\omega)^2} \right)
+\end{align}

@@ -66,9 +66,7 @@ We elucidate the origin of the quantized Hall conductance and the Berry phase by
 
 \maketitle
 
-\section{Introduction}
-
-The quantum Hall effect (QHE) in conventional two-dimensional electron gas (2DEG) is one of the most remarkable phenomena in condensed matter physics \cite{QHE1}.
+\emph{Introduction.---} The quantum Hall effect (QHE) in conventional two-dimensional electron gas (2DEG) is one of the most remarkable phenomena in condensed matter physics \cite{QHE1}.
 This effect arises when a uniform external perpendicular magnetic field quantizes the electron energy spectrum into discrete Landau levels (LLs).
 Subject to a strong magnetic field, the diagonal (longitudinal) electric conductivity is vanishingly small, while the nondiagonal (Hall) conductivity is quantized.
 This happens when the Fermi energy lies in the gap between two LLs, referred to as integer QHE as the Hall conductivity takes values of $-Ce^2/h$ with integer $C$, being the number of occupied bands below the Fermi energy \cite{QHE4}.
@@ -78,7 +76,7 @@ Recent experimental realization of graphene has stimulated additional interest t
 This significant effect is important to explore in Floquet systems \cite{NHL, AEE} because one may observe new phases in an alternative venue that can be experimentally realized \cite{MCR, YHW, HZJ, JWM,merboldtObservationFloquetStates2024, choiDirectObservationFloquetBloch2025}.
 Time periodically modulated Floquet theory has been extensively studied and well established for a large class of systems \cite{JHS,HSA,MGP,MBL,AEE,NGJ}.
 One can then employ the high frequency expansions \cite{MBL,AEE,NGJ,SRI,API,TMS,ESM,TKT,ALA} such as the well known Floquet-Magnus expansion \cite{ESM,TKT,ALA,FCA} and Van Vleck expansion \cite{MBL,AEE}, to analyze these effects.
-The significant difference is the latter provides an explicit formula for the time evolution operator starting at initial time $t_{0}=0$ rather than former starting with finite time $t_{0}$, as seen in supplemental SUPPL.
+The significant difference is the latter provides an explicit formula for the time evolution operator starting at initial time $t_{0}=0$ rather than former starting with finite time $t_{0}$ \cite{supp}.
 In nonequilibrium systems, circularly polarized laser light can drive transitions that induce nontrivial topological phases, even in materials that are topologically trivial in equilibrium \cite{TKO}.
 %This mechanism for nonequilibrium physics resembles quantum Anomalous Hall effect proposed by Haldane \cite{Haldane} in equilibrium systems.
 
@@ -91,12 +89,11 @@ The role of spatially inhomogeneous laser light \cite{SWP1, SWP2, SWP3, SWP4, SW
 In this work, we demonstrate that QHE can be observed in Floquet systems without need of a uniform magnetic field.
 We show that three linearly polarized lights are an effective and versatile way of realizing QHE, both in graphene-like 2D systems or in conventional 2DEGs.
 Additionally, two of the lights need to be spatially inhomogeneous and mirror one another to create a standing wave on the material.
-Employing Floquet theory, we rely on the standard degenerate perturbation formalism and use the Van Vleck expansion \ref{app:quantum-floquet-theory} \cite{MBL, AEE} to derive an effective Hamiltonian and corresponding bandstructure in the long wavelength limit.
+Employing Floquet theory, we rely on the standard degenerate perturbation formalism and use the Van Vleck expansion \cite{MBL, AEE} to derive an effective Hamiltonian and corresponding bandstructure in the long wavelength limit.
 We leverage high-refractive index materials \cite{shimFundamentalLimitsRefractive2021} to enhance the effective magnetic fields and energy bandstructure.
 Our work provides new platforms for realizing QHE and related novel phases in nonequilibrium systems.
 
-\section{Floquet Landau level-like bands in Dirac systems}
-In this section we demonstrate a Dirac system in the presence of a standing, non-uniform, circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field that is composed of the electric field component of light.
+\emph{Floquet Landau level-like bands in Dirac systems.---} In this section we demonstrate a Dirac system in the presence of a standing, non-uniform, circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field that is composed of the electric field component of light.
 Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb monolayer in the presence of a gauge potential as
 
 \begin{figure}[h]
@@ -172,12 +169,11 @@ Electric field strength can be increased within reason as we are limited by the 
 One can reasonably use electric field strengths up to 20\% of the limit due to photon energy.
 The laser wavenumber $K= \omega \sin{(\theta_i)} / v_p$ has a linear relationship to photon energy, too.
 Overall, considering the high-frequency limit on the electric field, the effective field $B^D \propto \omega^2 \sin{(\theta_i)} / (v_F v_p)$.
-Without too much consequence the incident angle can be increased up to $\pi/2$ and decreasing the phase velocity of light would enhance the effective magnetic field.
+Without too much consequence, the incident angle can be increased up to $\pi/2$ and decreasing the phase velocity of light would enhance the effective magnetic field.
 Increasing photon energy is one way to enhance the effective magnetic field.
 As considered in previous literature, when photon energy and electric field are increased more energy is pumped into the system, shorter pulses are required to prevent damaging the system \cite{YHW, JWM}.
 
-\section{Floquet Landau level-like bands in 2DEG systems}
-In this section we show a 2DEG system with a standing, non-uniform, circularly polarized light becomes an effective 2DEG Hamiltonian with an effective magnetic field composed of the electric field component of light.
+\emph{Floquet Landau level-like bands in 2DEG systems.---} In this section we show a 2DEG system with a standing, non-uniform, circularly polarized light becomes an effective 2DEG Hamiltonian with an effective magnetic field composed of the electric field component of light.
 We consider the case of Schr\"{o}dinger charged particles in the presence of a gauge potential as
 \begin{equation}\label{eq:H2deg}
   \ham(t) = \dfrac{1}{2m^*} \left( \vec{p} + e \vec{A}(t)\right)^2
@@ -214,7 +210,7 @@ After applying the high-frequency approximation to first order in $\hbar \omega$
   &+ \dfrac{e^2 E^2 \cos^2{(Kx)}}{\omega^2}  - \dfrac{K^2 e^4 E^4 \sin{(Kx)}}{m^{*2}\omega^6} \Biggr]. \nonumber
 \end{align}
 where we shifted a constant energy out of the effective Hamiltonian and completed the square for the $p_y$ and $x$ terms.
-Here we can see the high-frequency expansion terms $H^{F(1)}$ and $H^{F(2)}$, as shown in SUPPL, introduces a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction.
+Here we can see the high-frequency expansion terms $H^{F(1)}$ and $H^{F(2)}$, introduces a periodic potential in the x-direction, this can be cancelled out by applying an external periodic potential of the same strength and wavenumber in the x-direction \cite{supp}.
 Finally, in the long wavelength, $Kx \ll 1$,
 
 \begin{equation}\label{eq:Heff2deg}
@@ -234,11 +230,9 @@ The effective field $B^{\text{2DEG}} \propto \omega^2 \sin^2{(\theta_i)} / v_p^2
 For a 2DEG system, the enhancement to the effective magnetic field follows a squared dependence on the incident angle and phase velocity, differing from the Dirac case, where it scales linearly and by Fermi velocity.
 Similarly, increasing the photon energy is one way to enhance the effective magnetic field, with the requirement of using shorter pulses as photon energy and electric field increase.
 
-\section{Conclusion}
-
-We now examine the topology of both systems.
+\emph{Conclusion.---} We now examine the topology of both systems.
 Eqs. \eqref{eq:HeffDirac} and \eqref{eq:Heff2deg} are in LL Hamiltonian form, and typically exhibit QHE.
-The two systems only have translational symmetry in the $y$-axis, so a Chern number based on periodicity in $k_x$ and $k_y$ is not applicable, though one can relate the center of mass of an electron to the Chern number as shown in Appendix \ref{chern-number}, which is related to the Laughlin pump.
+The two systems only have translational symmetry in the $y$-axis, so a Chern number based on periodicity in $k_x$ and $k_y$ is not applicable, though one can relate the center of mass of an electron to the Chern number \cite{supp}, which is related to the Laughlin pump.
 Considering the Laughlin pump argument, both systems have quantized Hall conductivity, since both have the same eigenstates as their respective LL Hamiltonian.
 A key difference to note about both systems is the $C$ term in Eq. \eqref{eq:HeffDirac}.
 This term will stay positive for the values of $E$ used in the high-frequency limit for the Dirac case.
@@ -284,16 +278,16 @@ Overall, we see large changes in 2DEG for both effective magnetic field, due to 
 
 There are a few items we did not consider for our calculations.
 First, we do not consider any effects due to a refractive index material in contact with a Dirac or 2DEG system.
-Secondly, while the high-frequency expansion limits the electric field applied to the materials one could still go beyond the limit of $\hbar \omega \ll H_{pm1}, H_{\pm2}$ to enhance the effective magnetic field by a few orders of magnitude with some error.
+Secondly, while the high-frequency expansion limits the electric field applied to the materials one could still go beyond the limit of $\hbar \omega \ll H_{\pm 1}, H_{\pm2}$ to enhance the effective magnetic field by a few orders of magnitude with some error.
 For example, if instead we use $\hbar\omega = H_{\pm1}, H_{\pm2}$, this would be multiplying the electric field by a factor of $5$ from our calculations presented, Dirac effective magnetic field would increase by a factor of $125$ while 2DEG effective magnetic field would increase by a factor of $25$.
-For Dirac systems with higher electric field strengths, if $C=0$, there would be no QHE as there is no coupling between $x$ and $p_y$, and if $C<0$, the direction of chirality flips.
+For Dirac systems with higher electric field strengths, if $C=0$, there would be no QHE as there is no coupling between $x$ and $p_y$, and if $C<0$, the direction of chirality reverses.
 
 In conclusion, we have shown Floquet LLs and the QHE using three linearly polarized lasers, two of them mutually mirrored and having oblique incidence, for Dirac and conventional 2DEG systems.
-We have presented results using frequency space expansion method and degenerate Floquet perturbation theory.
-A tight-binding model capable of using ``low-frequency'' with a Peierls substitution can be found in appendix \ref{app:tbm-dirac} and \ref{app:tbm-2deg}, although the results are currently difficult to interpret.
-The results indicate Floquet LL-like spectral features can appear in experimentally accessible parameters range.
+We have presented results using a frequency space expansion method and degenerate Floquet perturbation theory.
+A tight-binding model capable of using ``low-frequency'' with a Peierls substitution can be found in the supplemental material \cite{supp}, although these results are currently difficult to interpret.
+Out paper's results indicate Floquet LL-like spectral features can appear in experimentally accessible parameters range.
 Also, it is vital to note that we are flexible to use different values of the electric field strength, photon energy, or phase velocity to realize QHE and control the strength of the effective magnetic field.
-Therefore, we believe that Floquet LL-like spectra and QHE can be observed in experiments for moderate strength of the spatially inhomogeneous lasers, opening up new avenues for nanoelectronics in nonequilibrium systems.
+Therefore, we predict Floquet LL-like spectra and QHE can be observed in experiments for moderate strength of the spatially inhomogeneous lasers, opening up new avenues for nanoelectronics in nonequilibrium systems.
 
 \bibliography{ref}
 

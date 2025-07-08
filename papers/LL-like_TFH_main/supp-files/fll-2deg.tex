@@ -1,0 +1,51 @@
+\subsection{Non-uniform circularly polarized light on 2DEG} \label{fll-2deg-derivation}
+
+We start with the Schr\"{o}dinger equation in 2D with a gauge potential field
+
+\begin{equation}
+  \ham(t) = \dfrac{\left(\vec{p} + e\vec{A}(t) \right)^2}{2m^*}
+\end{equation}
+where $\vec{A}(t) = \tfrac{E}{\omega} \langle -\sin{\omega t} , \cos{(Kx)}\cos{\omega t} \rangle$.
+Which is made up of two electromagnetic wave sources.
+The time dependent Hamiltonian becomes
+
+\begin{equation}
+\begin{split}
+  \ham(t) = &\dfrac{1}{2m^*} \Big[ p_x^2 + p_y^2 + \dfrac{e^2 E^2}{2\omega^2}(1+\cos^2{(Kx)}) + \dfrac{e^2 E^2}{2\omega^2}\sin^2{(Kx)} \cos{2\omega t} \\
+  &+ \dfrac{2eE}{\omega} p_y \cos{(Kx)} \cos{\omega t} - \dfrac{2eE}{\omega} p_x \sin{\omega t} \Big]
+\end{split}
+\end{equation}
+
+Performing the Fourier time-transform from
+
+\begin{equation}
+  H_n = \dfrac{1}{T} \int_{0}^{T} \ham(t) e^{-in\omega t} dt
+\end{equation}
+gives the following terms
+
+\begin{align}
+  H_0 &= \dfrac{1}{2m^*} \left( p_x^2 + p_y^2 + \dfrac{e^2 E^2}{2 \omega^2} (1+\cos^2{(Kx)}) \right) \\
+  H_{\pm1} &= \dfrac{1}{2m^*} \dfrac{eE}{\omega}\left( \pm i p_x + p_y \cos{(Kx)} \right) \\
+  H_{\pm2} &= -\dfrac{1}{2m^*} \dfrac{e^2 E^2}{4\omega^2} \sin^2{(Kx)}
+\end{align}
+
+We compute the following Hermitian commutators for the high-frequency expansion
+
+\begin{align}
+  [H_{1}, H_{-1}] &= -\dfrac{1}{2m^*} \dfrac{\hbar K e^2 E^2}{\omega^2} p_y \sin{(Kx)} \\
+  [H_{2}, H_{-2}] &= 0
+\end{align}
+then
+
+\begin{equation}
+  H^{F(2)} = \dfrac{2[H_{1}, H_{-1}]}{\hbar \omega} = -\dfrac{1}{2m^*} \dfrac{2 K e^2 E^2}{\omega^3} p_y \sin{(Kx)} \\
+\end{equation}
+The full Hamiltonian to first order in $\hbar \omega$ becomes
+
+\begin{equation}
+  H_{\text{eff}} = \dfrac{1}{2m^*} \left( p_x^2 + p_y^2 + \dfrac{e^2 E^2}{2 \omega^2} (1+\cos^2{(Kx)}) - \dfrac{2 K e^2 E^2}{\omega^3} p_y \sin{(Kx)} \right).
+\end{equation}
+We can further manipulate by shifting the energy by a constant and completing the square w.r.t. $p_y$ and $\sin{(Kx)}$ terms to get
+\begin{equation}
+  H_{\text{eff}} = \dfrac{1}{2m^*} \left( p_x^2 + \left(p_y - \dfrac{ K e^2 E^2}{m^*\omega^3} \sin{(Kx)}\right)^2 + \dfrac{e^2 E^2}{2 \omega^2} \cos^2{(Kx)} - \dfrac{K^2 e^4 E^4}{m^{*2}\omega^6} \sin^2{(Kx)} \right).
+\end{equation}

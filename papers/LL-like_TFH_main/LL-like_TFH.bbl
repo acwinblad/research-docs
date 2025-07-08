@@ -319,15 +319,19 @@
   {} {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. A}\ }\textbf
   {\bibinfo {volume} {34}},\ \bibinfo {pages} {3379} (\bibinfo {year}
   {2001})}\BibitemShut {NoStop}%
+\bibitem [{sup()}]{supp}%
+  \BibitemOpen
+  \href@noop {} {\bibinfo  {journal} {{See Supplemental Material at [url]}}\
+  }\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kitagawa}\ \emph {et~al.}(2011)\citenamefont
   {Kitagawa}, \citenamefont {Oka}, \citenamefont {Brataas}, \citenamefont
   {Fu},\ and\ \citenamefont {Demler}}]{TKO}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Kitagawa}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Oka}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Brataas}}, \bibinfo
-  {author} {\bibfnamefont {L.}~\bibnamefont {Fu}},\ and\ \bibinfo {author}
-  {\bibfnamefont {E.}~\bibnamefont {Demler}},\ }\href
+\bibfield  {journal} {  }\bibfield  {author} {\bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Kitagawa}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Oka}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Brataas}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fu}},\ and\
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Demler}},\ }\href
   {https://doi.org/10.1103/PhysRevB.84.235108} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo
   {pages} {235108} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
@@ -487,20 +491,15 @@
   {\bibinfo  {journal} {Advanced Materials}\ }\textbf {\bibinfo {volume}
   {33}},\ \bibinfo {pages} {2103946} (\bibinfo {year} {2021})}\BibitemShut
   {NoStop}%
-\bibitem [{sup()}]{supp}%
-  \BibitemOpen
-  \href@noop {} {\bibinfo  {journal} {Supplemental Information}\ }\BibitemShut
-  {NoStop}%
 \bibitem [{\citenamefont {Amotchkina}\ \emph {et~al.}(2020)\citenamefont
   {Amotchkina}, \citenamefont {Trubetskov}, \citenamefont {Hahner},\ and\
   \citenamefont {Pervak}}]{amotchkinaCharacterizationEbeamEvaporated2020}%
   \BibitemOpen
-\bibfield  {journal} {  }\bibfield  {author} {\bibinfo {author} {\bibfnamefont
-  {T.}~\bibnamefont {Amotchkina}}, \bibinfo {author} {\bibfnamefont
-  {M.}~\bibnamefont {Trubetskov}}, \bibinfo {author} {\bibfnamefont
-  {D.}~\bibnamefont {Hahner}},\ and\ \bibinfo {author} {\bibfnamefont
-  {V.}~\bibnamefont {Pervak}},\ }\href {https://doi.org/10.1364/AO.59.000A40}
-  {\bibfield  {journal} {\bibinfo  {journal} {Appl Opt}\ }\textbf {\bibinfo
-  {volume} {59}},\ \bibinfo {pages} {A40} (\bibinfo {year} {2020})}\BibitemShut
-  {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Amotchkina}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Trubetskov}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Hahner}},\
+  and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Pervak}},\ }\href
+  {https://doi.org/10.1364/AO.59.000A40} {\bibfield  {journal} {\bibinfo
+  {journal} {Appl Opt}\ }\textbf {\bibinfo {volume} {59}},\ \bibinfo {pages}
+  {A40} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \end{thebibliography}%
