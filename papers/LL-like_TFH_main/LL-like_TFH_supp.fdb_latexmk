@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex LL-like_TFH_supp"] 1751996277.37454 "LL-like_TFH_supp.aux" "LL-like_TFH_supp.bbl" "LL-like_TFH_supp" 1751996278.93299 0
-  "./LL-like_TFH_suppNotes.bib" 1751996278 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+["bibtex LL-like_TFH_supp"] 1751996277.37454 "LL-like_TFH_supp.aux" "LL-like_TFH_supp.bbl" "LL-like_TFH_supp" 1751996912.04077 0
+  "./LL-like_TFH_suppNotes.bib" 1751996911 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "./ref.bib" 1751576564 28305 1931dafe24f8ab1e7aea15718dd3225b ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 1685674058 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "LL-like_TFH_supp.aux" 1751996278 5741 058d4d5ea8c488da194becd43a70bd74 "pdflatex"
+  "LL-like_TFH_supp.aux" 1751996911 5741 058d4d5ea8c488da194becd43a70bd74 "pdflatex"
   (generated)
   "LL-like_TFH_supp.bbl"
   "LL-like_TFH_supp.blg"
   (rewritten before read)
-["pdflatex"] 1751996277.56233 "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH_supp.tex" "LL-like_TFH_supp.pdf" "LL-like_TFH_supp" 1751996278.93362 0
+["pdflatex"] 1751996910.77941 "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH_supp.tex" "LL-like_TFH_supp.pdf" "LL-like_TFH_supp" 1751996912.04133 0
   "C:/Users/Aidan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1751575204 81760 910369822cd2d7c359b2482f4c0de4ca ""
   "C:/Users/Aidan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1751559353 13235207 0804399a65014d1b9ba9c4bbdaf65e11 ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -167,11 +167,11 @@
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
-  "LL-like_TFH_supp.aux" 1751996278 5741 058d4d5ea8c488da194becd43a70bd74 "pdflatex"
+  "LL-like_TFH_supp.aux" 1751996911 5741 058d4d5ea8c488da194becd43a70bd74 "pdflatex"
   "LL-like_TFH_supp.bbl" 1751996277 5586 4af1ee69003fb0a1e5ed03ff0f750c5a "bibtex LL-like_TFH_supp"
-  "LL-like_TFH_supp.out" 1751996278 2428 6c865ab7314fcac1d1515e4c5e6e64f3 "pdflatex"
-  "LL-like_TFH_supp.tex" 1751996252 16472 1b1980fe9e9413a86e464f86a941aa8c ""
-  "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH_supp.tex" 1751996252 16472 1b1980fe9e9413a86e464f86a941aa8c ""
+  "LL-like_TFH_supp.out" 1751996911 2428 6c865ab7314fcac1d1515e4c5e6e64f3 "pdflatex"
+  "LL-like_TFH_supp.tex" 1751996910 16460 1fd92a487ee526d963057be22a886790 ""
+  "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH_supp.tex" 1751996910 16460 1fd92a487ee526d963057be22a886790 ""
   "figures/dirac-floquet-unit-cell.pdf" 1751556804 32476 bdc01831d980476030600c81b459c070 ""
   "supp-files/chern-number.tex" 1751556804 17013 384eb776fc96138758dd46bf80852b62 ""
   "supp-files/fll-2deg.tex" 1751994699 2294 ede57c98c7ca423d495940b574aa1aaf ""

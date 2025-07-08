@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LL-like_TFH.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+The style file: apsrev4-2.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: LL-like_TFHNotes.bib
+Database file #2: ref.bib
+Warning--string name "april" is undefined
+--line 311 of file ref.bib
+Warning--I'm ignoring JWM's extra "publisher" field
+--line 325 of file ref.bib
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+Control: key (0) 
+Control: author (72) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--empty author in supp
+Warning--empty year in supp
+You've used 40 entries,
+            6079 wiz_defined-function locations,
+            1942 strings with 23464 characters,
+and the built_in function-call counts, 46240 in all, are:
+= -- 3140
+> -- 1424
+< -- 266
++ -- 436
+- -- 352
+* -- 7291
+:= -- 4197
+add.period$ -- 40
+call.type$ -- 40
+change.case$ -- 162
+chr.to.int$ -- 40
+cite$ -- 44
+duplicate$ -- 4056
+empty$ -- 3192
+format.name$ -- 833
+if$ -- 9534
+int.to.chr$ -- 1
+int.to.str$ -- 48
+missing$ -- 636
+newline$ -- 172
+num.names$ -- 117
+pop$ -- 1675
+preamble$ -- 1
+purify$ -- 199
+quote$ -- 0
+skip$ -- 1985
+stack$ -- 0
+substring$ -- 1034
+swap$ -- 4042
+text.length$ -- 176
+text.prefix$ -- 0
+top$ -- 8
+type$ -- 616
+warning$ -- 2
+while$ -- 115
+width$ -- 0
+write$ -- 366
+(There were 4 warnings)

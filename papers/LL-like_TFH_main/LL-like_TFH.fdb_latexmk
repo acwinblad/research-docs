@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex LL-like_TFH"] 1751995929.71674 "LL-like_TFH.aux" "LL-like_TFH.bbl" "LL-like_TFH" 1751996029.04336 0
-  "./LL-like_TFHNotes.bib" 1751996028 0 d41d8cd98f00b204e9800998ecf8427e ""
+["bibtex LL-like_TFH"] 1751998081.30822 "LL-like_TFH.aux" "LL-like_TFH.bbl" "LL-like_TFH" 1751998386.72138 0
+  "./LL-like_TFHNotes.bib" 1751998385 0 d41d8cd98f00b204e9800998ecf8427e ""
   "./ref.bib" 1751576564 28305 1931dafe24f8ab1e7aea15718dd3225b ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 1685674058 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "LL-like_TFH.aux" 1751996028 10967 138814dd3704563d6548f0c181194f1d "pdflatex"
+  "LL-like_TFH.aux" 1751998385 10967 afd16f0dfc578673a7fcaf56d254c1ce "pdflatex"
   (generated)
   "LL-like_TFH.bbl"
   "LL-like_TFH.blg"
   (rewritten before read)
-["pdflatex"] 1751996027.61903 "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH.tex" "LL-like_TFH.pdf" "LL-like_TFH" 1751996029.04392 0
+["pdflatex"] 1751998385.28184 "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH.tex" "LL-like_TFH.pdf" "LL-like_TFH" 1751998386.72193 0
   "C:/Users/Aidan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1751575204 81760 910369822cd2d7c359b2482f4c0de4ca ""
   "C:/Users/Aidan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1751559353 13235207 0804399a65014d1b9ba9c4bbdaf65e11 ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -227,10 +227,10 @@
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
   "C:/Users/Aidan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "LL-like_TFH.aux" 1751996028 10967 138814dd3704563d6548f0c181194f1d "pdflatex"
-  "LL-like_TFH.bbl" 1751995929 31242 e7ac429695465bde8d6e0c1526685484 "bibtex LL-like_TFH"
-  "LL-like_TFH.tex" 1751996026 26993 1886c419bccf88148e643e2e1688fa5d ""
-  "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH.tex" 1751996026 26993 1886c419bccf88148e643e2e1688fa5d ""
+  "LL-like_TFH.aux" 1751998385 10967 afd16f0dfc578673a7fcaf56d254c1ce "pdflatex"
+  "LL-like_TFH.bbl" 1751998081 31242 e7ac429695465bde8d6e0c1526685484 "bibtex LL-like_TFH"
+  "LL-like_TFH.tex" 1751998384 28021 806eebbb4befc753726a8ea560d563bd ""
+  "c:/Users/Aidan/Documents/research-docs/papers/LL-like_TFH_main/LL-like_TFH.tex" 1751998384 28021 806eebbb4befc753726a8ea560d563bd ""
   "figures/2deg-eff-bfield-energy-GaAs.pdf" 1751556804 18969 1c805d276af653296c0adfa7df1e52c1 ""
   "figures/2deg-eff-bfield-energy-InSb.pdf" 1751556804 18964 2628bc900ab173a319b7319a4056a6b4 ""
   "figures/dirac-eff-bfield-energy.pdf" 1751556804 17790 18c87c6f87e5042a9f68e62d6379daab ""
