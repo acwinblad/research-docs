@@ -83,23 +83,23 @@ This significant effect is important to explore in Floquet systems \cite{NHL, AE
 Time periodically modulated Floquet theory has been extensively studied and well established for a large class of systems \cite{JHS,HSA,MGP,MBL,AEE,NGJ}.
 One can then employ the high frequency expansions \cite{MBL,AEE,NGJ,SRI,API,TMS,ESM,TKT,ALA} such as the well known Floquet-Magnus expansion \cite{ESM,TKT,ALA,FCA} and Van Vleck expansion \cite{MBL,AEE}, to analyze these effects.
 The significant difference is the latter provides an explicit formula for the time evolution operator starting at initial time $t_{0}=0$ rather than former starting with finite time $t_{0}$ \cite{supp}.
-In nonequilibrium systems, circularly polarized laser light can drive transitions that induce nontrivial topological phases, even in materials that are topologically trivial in equilibrium \cite{TKO}.
+In nonequilibrium systems, circularly polarized laser beams can drive transitions that induce nontrivial topological phases, even in materials that are topologically trivial in equilibrium \cite{TKO}.
 %This mechanism for nonequilibrium physics resembles quantum Anomalous Hall effect proposed by Haldane \cite{Haldane} in equilibrium systems.
 
 Optical manipulation of electronic properties has been emerging as a promising way of exploring novel phases \cite{AKA, JHM}.
 This leads to Floquet-Bloch states exhibiting emerging physical properties that are otherwise inaccessible in equilibrium \cite{LST}.
 Examples include Floquet Chern insulator \cite{AGG}, Floquet topological insulators \cite{rudnerBandStructureEngineering2020}, Floquet notion of magnetic and other strongly-correlated phases\cite{rudnerBandStructureEngineering2020}, manipulation of topological antiferromagnet \cite{bielinskiFloquetBlochManipulation2025}, topological classifications, symmetry-breaking concept, and symmetry protected topological phases in nonequilibrium quantum many-body systems \cite{EKM, rudnerBandStructureEngineering2020}.
-However, it is important to note that these studies have been demonstrated in the presence of time-periodic homogeneous laser lights.
-The role of spatially inhomogeneous laser light \cite{SWP1, SWP2, SWP3, SWP4, SWP5} remains largely unexplored.
+However, it is important to note that these studies have been demonstrated in the presence of time-periodic homogeneous laser beams.
+The role of spatially inhomogeneous laser beams \cite{SWP1, SWP2, SWP3, SWP4, SWP5} remains largely unexplored.
 
 In this work, we demonstrate QHE can be observed in Floquet systems without need of a uniform magnetic field.
 We show three linearly polarized lights are an effective and versatile way of realizing QHE, both in graphene-like 2D systems or in conventional 2DEGs.
-Additionally, two of the lights need to be spatially inhomogeneous and mirror one another to create a standing wave on the material.
+Additionally, two of the lights need to be spatially inhomogeneous and mirror one another to create a standing wave on the 2D substrate.
 Employing Floquet theory, we rely on the standard degenerate perturbation formalism and use the Van Vleck expansion \cite{MBL, AEE} to derive an effective Hamiltonian and corresponding bandstructure in the long wavelength limit.
 We leverage high-refractive index materials \cite{shimFundamentalLimitsRefractive2021} to enhance the effective magnetic fields and energy bandstructure.
 Our work provides new platforms for realizing QHE and related novel phases in nonequilibrium systems.
 
-\emph{Floquet Landau level-like bands in Dirac systems.---} In this section we demonstrate a Dirac system in the presence of a standing, non-uniform, circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field composed of the electric field component of light.
+\emph{Floquet Landau level-like bands in Dirac systems.---} In this section we demonstrate a Dirac system in the presence of a standing, inhomogeneous, circularly polarized light becomes an effective Dirac Hamiltonian with a magnetic field composed of the electric field component of light.
 Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb monolayer in the presence of a gauge potential as
 
 \begin{figure}[h]
@@ -114,7 +114,7 @@ Dirac electrons can be represented with a generic model 2D Hamiltonian honeycomb
 where $\vec{A}$ is the gauge potential, $\vec{p}$ is the momentum operator, $v_F$ is the Fermi velocity of Dirac fermions, $e$ is electron charge, and $\vec{\sigma}$ the Pauli matrices vector in 2D.
 The light is made of three linearly polarized lasers, as shown in Fig. \ref{fig:fll-setup}.
 Where the first is normally incident in the $z$-axis with polarization in the $x$-axis.
-The second and third are of oblique incidence in the $xz$-plane, to acquire non-uniformity in the $x$-axis, with polarization in the $y$-axis, and mirrored about the $yz$-plane.
+The second and third are of oblique incidence in the $xz$-plane, to acquire inhomogeneity in the $x$-axis, with polarization in the $y$-axis, and mirrored about the $yz$-plane.
 This is to introduce $x$-dependence with the $p_y$ term of the Dirac Hamiltonian.
 The relevant electric field components at the Dirac system interface are
 
@@ -125,7 +125,7 @@ The relevant electric field components at the Dirac system interface are
 %Where $\omega$ is angular frequency of light with time $t$ and $K=2\pi /d$ with $d$ being the spatial period of the electric field with amplitude $E$.
 Where $\omega$ is angular frequency of the laser with time $t$ and $K = \omega \sin{(\theta_i)} / v_p$, with $\theta_i$ as incident angle of the oblique lasers and $v_p$ is phase velocity of the lasers.
 %Notice, the second electric field has twice frequency of the first, this is a requirement to make the Dirac Hamiltonian into a Landau level-like Hamiltonian, the derivation in REFERENCE APPENDIX can inform the reader of this choice.
-Notice, the second electric field has twice frequency of the first, this allows for the second gauge potentials $\sigma_y$ to have non-zero commutation with the first gauge potentials $\sigma_x$, and due to the high-frequency expansion used later, allows for the second gauge potential to return to a $\sigma_y$, as seen in \ref{fll-dirac-derivation}.
+Notice, the second electric field has twice frequency of the first, this allows for the second gauge potentials $\sigma_y$ to have non-zero commutation with the first gauge potentials $\sigma_x$, and due to the high-frequency expansion used later, allows for the second gauge potential to return to a $\sigma_y$.
 This form of the electric field relates to the following gauge potential, via $\vec{E} = -\partial_t \vec{A}$ as
 
 \begin{equation}\label{eq:ADirac}
@@ -136,22 +136,22 @@ Substituting Eq.~\eqref{eq:ADirac} into Eq.~\eqref{eq:HDirac}, we arrive at%
 \begin{equation}\label{eq:HDtime}
   \ham(t)= v_{F}\bm{\sigma}\cdot\vec{p} - \sigma _{x} \dfrac{v_F eE}{\omega} \sin {\omega t} - \sigma _{y} \dfrac{v_F eE}{2\omega}\sin{(Kx)} \cos2\omega t.
 \end{equation}%
-Due to the laser's time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply the Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:HDtime}.
-This introduces the quasienergy matrix $Q_{m,m+n} = H_n + m\hbar\omega\delta_{n0}$ after performing the Fourier time-transform of the Hamiltonian, given as
+Due to the laser's time-translation symmetry through $A(t+T)=A(t)$ with $T=2\pi /\omega $, one can apply Floquet theory \cite{AEE, MBL, supp} and obtain an effective Hamiltonian from Eq.~\eqref{eq:HDtime}.
+This introduces the quasienergy matrix $Q_{m,m+n} = H_n + m\hbar\omega\delta_{n0}$ after performing a Fourier time-transform of the Hamiltonian, given as
 
 \begin{equation} \label{eq:fourier-time-transform}
   H_n = \dfrac{1}{T} \int_{0}^{T} \ham(t) e^{-in\omega t} dt,
 \end{equation}
 then we are left with modes $m=0,\pm1,\pm2$.
 To use the high-frequency approximation we require $\hbar\omega \gg H_{\pm1,\pm2}$, the off-diagonal terms.
-After applying the high-frequency approximation to first and second order expansion in $\hbar\omega$, it leads to the zeroth-mode effective Hamiltonian in Eq.~\eqref{eq:HDtime} as
+After applying the high-frequency approximation to first and second order expansion in $\hbar\omega$ \cite{supp}, it leads to the zeroth-mode effective Hamiltonian from Eq.~\eqref{eq:HDtime} as
 
 \begin{align} \label{eq:HDeff}
   H_{\text{eff}}= &v_{F}\bm{\sigma}\cdot\vec{p}-\sigma_y\frac{v_F^3 e^2 E^2 p_y}{\hbar^{2}\omega^{4}}
   +\sigma_y\frac{v_F^3 e^3 E^{3}\sin{(Kx)}}{4\hbar^{2}\omega^{5}} \nonumber \\
   &-\sigma_x\frac{v_F^3 e^2 E^2 \left\{p_x, \sin^2{(Kx)} \right\} }{8\hbar^{2}\omega^{4}}.
 \end{align}
-The derivation can be found in the Appendix \ref{fll-dirac-derivation}.
+
 This effective Hamiltonian can be simplified in the long wavelength limit, $Kx \ll 1$ to
 
 \begin{align} \label{eq:HeffDirac}
@@ -168,7 +168,7 @@ Diagonalizing the Hamiltonian in Eq.~\eqref{eq:HeffDirac}, we obtained the eigen
 which is similar to graphene LLs spectrum in the limit of equal velocities.
 The effective magnetic field in the Dirac Hamiltonian achieves a highly degenerate energy spectrum similar to LLs.
 Unlike conventional LLs, the electron motion is not a cyclotron orbit but a potentially more complicated orbit, due to CPL inducing a Coulumb force in the material's 2D plane.
-In Eq. ~\eqref{eq:HDeff}, the first order term in $\hbar \omega$ leads to gap at the Dirac point in normally incident, circularly polarized light experiments \cite{YHW, JWM} and is zero here due to the non-uniformity nature of oblique incident lasers.
+In Eq. ~\eqref{eq:HDeff}, the first order term in $\hbar \omega$ leads to gap at the Dirac point in normally incident, circularly polarized light experiments \cite{YHW, JWM} and is zero here due to the inhomogeneous nature of oblique incident lasers.
 
 There are several ways to enhance the effective magnetic field and directly LL-like energies for a Dirac system.
 Electric field strength can be increased within reason as we are limited by the photon energy to ensure the high-frequency expansion holds, $E \ll 2\hbar\omega^2/e v_F$.
@@ -176,10 +176,10 @@ One can reasonably use electric field strengths up to 20\% of the limit due to p
 The laser wavenumber $K= \omega \sin{(\theta_i)} / v_p$ has a linear relationship to photon energy, too.
 Overall, considering the high-frequency limit on the electric field, the effective field $B^D \propto \omega^2 \sin{(\theta_i)} / (v_F v_p)$.
 Without too much consequence, the incident angle can be increased up to $\pi/2$ and decreasing the phase velocity of light would enhance the effective magnetic field.
-Increasing photon energy is one way to enhance the effective magnetic field.
-As considered in previous literature, when photon energy and electric field are increased more energy is pumped into the system, shorter pulses are required to prevent damaging the system \cite{YHW, JWM}.
+Increasing photon energy is another way to enhance the effective magnetic field.
+As considered in previous literature, when photon energy and electric field are increased more energy is pumped into the system, thus shorter pulses are required to prevent damaging the system \cite{YHW, JWM}.
 
-\emph{Floquet Landau level-like bands in 2DEG systems.---} In this section we show a 2DEG system with a standing, non-uniform, circularly polarized light becomes an effective 2DEG Hamiltonian with an effective magnetic field composed of the electric field component of light.
+\emph{Floquet Landau level-like bands in 2DEG systems.---} In this section we show a 2DEG system with a standing, inhomogeneous, circularly polarized light becomes an effective 2DEG Hamiltonian with an effective magnetic field composed of the electric field component of light.
 We consider the case of Schr\"{o}dinger charged particles in the presence of a gauge potential as
 \begin{equation}\label{eq:H2deg}
   \ham(t) = \dfrac{1}{2m^*} \left( \vec{p} + e \vec{A}(t)\right)^2
@@ -202,10 +202,10 @@ Substituting Eq. \eqref{eq:A2deg} into Eq. \eqref{eq:H2deg}, we arrive at
 
 \begin{align}\label{eq:H2time}
   \ham(t) = &\dfrac{p_x^2 + p_y^2}{2m^*} + \dfrac{e^2 E^2}{4m^* \omega^2}(1-\cos{2\omega t}) \nonumber \\
-  &+ \dfrac{e^2 E^2}{4m^*\omega^2}(1+\cos{4m^* \omega t}) \cos^2{(Kx)} \nonumber \\
-  &+\dfrac{2eE}{2m^* \omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right).
+  &+ \dfrac{e^2 E^2}{4m^*\omega^2}(1+\cos{2 \omega t}) \cos^2{(Kx)} \nonumber \\
+  &+\dfrac{eE}{m^* \omega} \left(p_y \cos{(Kx)}\cos{\omega t} -  p_x \sin{\omega t}\right).
 \end{align}
-Again, due to laser's time-translation symmetry we can apply the Floquet theory, which includes computing the Fourier time-transform using Eq. \eqref{eq:fourier-time-transform}.
+Again, due to time-translation symmetry for lasers we can apply the Floquet theory, which includes computing the Fourier time-transform using Eq. \eqref{eq:fourier-time-transform}.
 This leaves us with modes $m=0,\pm1,\pm2$.
 In the high-frequency expansion we still require $\hbar \omega \gg H_{\pm1,\pm2}$.
 After applying the high-frequency approximation to first order in $\hbar \omega$, it leads to the zeroth-mode effective Hamiltonian as
@@ -234,10 +234,10 @@ The 2DEG system has the same ways to enhance its effective magnetic field and en
 First, the electric field is limited by the high-frequency expansion, we find $E \ll (8m^*\hbar\omega^3/e^2)^{1/2}$ to be a reasonable cutoff.
 The effective field $B^{\text{2DEG}} \propto \omega^2 \sin^2{(\theta_i)} / v_p^2$, is similar to the Dirac system.
 For a 2DEG system, the enhancement to the effective magnetic field follows a squared dependence on the incident angle and phase velocity, differing from the Dirac case, where it scales linearly and by Fermi velocity.
-Similarly, increasing the photon energy is one way to enhance the effective magnetic field, with the requirement of using shorter pulses as photon energy and electric field increase.
+Similarly, increasing the photon energy can enhance the effective magnetic field, with the requirement of shorter pulses as photon energy and electric field increase.
 
 \emph{Conclusion.---} We now examine the topology of both systems.
-Eqs. \eqref{eq:HeffDirac} and \eqref{eq:Heff2deg} are in LL Hamiltonian form, and typically exhibit QHE.
+Eqs. \eqref{eq:HeffDirac} and \eqref{eq:Heff2deg} are in LL Hamiltonian form, and should exhibit QHE.
 The two systems only have translational symmetry in the $y$-axis, so a Chern number based on periodicity in $k_x$ and $k_y$ is not applicable, though one can relate the center of mass of an electron to the Chern number \cite{supp}, which is related to the Laughlin pump.
 Considering the Laughlin pump argument, both systems have quantized Hall conductivity, since both have the same eigenstates as their respective LL Hamiltonian.
 A key difference to note about both systems is the $C$ term in Eq. \eqref{eq:HeffDirac}.
@@ -263,8 +263,8 @@ Al-composite metamaterials refractive index is monotonically decreasing with inc
 \end{figure}
 
 In case of a Dirac system Fig. \ref{fig:dirac-bfield-energy} shows graphene with various refractive index materials to enhance the effective magnetic field and first order quasienergy of the LL-like spectrum.
-For mid-IR ranges of lasers, the effective magnetic field (cyan) can get up to $8.8$ mT for vacuum, $37.2$ mT for germanium, and $163$ mT for Al-composite metamaterial for $\hbar\omega=413$ meV and results in first order quasienergies (red) of $5.3$ meV, $11$ meV, and $23$ meV, respectively.
-As can be seen in \ref{fig:dirac-bfield-energy} as photon energy increases the Al-composite refractive index decreases quite a bit and if we used higher energy we would see the effective magnetic field and quasienergies start to decrease, as will be seen with 2DEG.
+For mid-IR ranges of laser energies the effective magnetic field (cyan) are calculated up to $8.8$ mT for vacuum, $37.2$ mT for germanium, and $163$ mT for Al-composite metamaterial at $\hbar\omega=413$ meV and results in first order quasienergies (red) of $5.3$ meV, $11$ meV, and $23$ meV, respectively.
+As seen in Fig. \ref{fig:dirac-bfield-energy}, when photon energy increases the Al-composite refractive index decreases quite a bit and if we used higher energy we would see the effective magnetic field and quasienergies start to decrease.
 While the material has higher index of refraction overall, it would be better to find a material that increases refractive index with photon energy, like germanium can, for it can drastically increase for slightly higher photon energies before effective magnetic field dips \cite{amotchkinaCharacterizationEbeamEvaporated2020}.
 
 \begin{figure}[h]
@@ -276,11 +276,11 @@ While the material has higher index of refraction overall, it would be better to
 
 For 2DEG systems Fig. \ref{fig:2deg-bfield-energy} shows GaAs and InSb materials with the same refractive materials used for graphene to enhance effective magnetic field and zeroth order quasienergy of the LL-like spectrum.
 The vacuum and germanium interfaces are scaled up by a factor of $10$ and $50$, respectively, to visually enhance and compare it to the Al-composite interface.
-GaAs is used as it is one of the most common 2DEG with relatively small effective electron mass, followed by InSb since it has the smallest effective electron mass found in 2DEG materials.
-For the GaAs system, effective magnetic field (cyan) can get up to $0.92$ mT for vacuum, $16.5$ mT for germanium, and $362$ mT for Al-composite metamaterial and achieves zeroth order quasienergies (red) of $0.8\ \mu$eV, $14.3\ \mu$eV, and $314\ \mu$eV, respectively.
+GaAs is used as it is one of the most common 2DEG with relatively small effective electron mass, followed by InSb since it one of the smallest effective electron masses among 2DEG materials.
+For the GaAs system, effective magnetic field (cyan) is calculated up to $0.92$ mT for vacuum, $16.5$ mT for germanium, and $362$ mT for Al-composite metamaterial and achieves zeroth order quasienergies (red) of $0.8\ \mu$eV, $14.3\ \mu$eV, and $314\ \mu$eV, respectively.
 In the InSb system, effective magnetic field is the same as GaAs, since it has no dependence on effective mass, and achieves zeroth order quasienergies (red) of $3.8\ \mu$eV for vacuum, $68.2\ \mu$eV for germanium, and $1.5$ meV for Al-composite.
 As alluded to earlier, due to Al-composites large decrease in refractive index for increasing photon energy, it peaks earlier around $\hbar\omega=328$ mT, for 2DEG.
-Overall, we see large changes in 2DEG for both effective magnetic field, due to being proportional to refractive index squared and quasienergies, being inversely proportional to effective electron mass.
+Overall, we see large changes in 2DEG for both effective magnetic field, being proportional to refractive index squared, and quasienergies, being inversely proportional to effective electron mass.
 
 There are a couple items we did not consider for our calculations.
 First, we do not consider any effects due to a refractive index material in contact with a Dirac or 2DEG system.
